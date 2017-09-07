@@ -1,0 +1,17 @@
+{
+    "extends": "./node_modules/eslint-config-ovh/configs/es6-browser.js",
+    "rules": {
+        "no-magic-numbers": "off",
+        "no-throw-literal": "off",
+        "no-shadow": "off",
+        "no-continue": "off",
+        "no-labels": "off",
+        "consistent-return": "off"
+    },
+    "globals": {
+        "module": true,
+        "require": true,
+        "punycode": true,
+        "CKEDITOR": true
+    }
+}

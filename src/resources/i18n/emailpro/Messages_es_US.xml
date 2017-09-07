@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translations>
+
+   <translation id="emailpro_dashboard_accounts" qtlid="374984">Cuentas Email Pro</translation>
+   <translation id="emailpro_dashboard_guides" qtlid="374997">¿Necesita ayuda para configurar su servicio Email Pro?</translation>
+   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Su servicio Email Pro está casi listo. Usted debe asociar un dominio al servicio. Si no tiene dominio, <a href="https://www.ovh.com:51043/fr/cgi-bin/newOrder/order.cgi" target="_blank">haga clic aquí</a> para adquirir uno.</translation>
+   <translation id="emailpro_tab_ALIAS_remove_alias_intro" qtlid="375023">¿Está seguro(a) de que desea eliminar el siguiente alias del servicio Email Pro?</translation>
+   <translation id="emailpro_tab_ALIAS_add_no_domains" qtlid="375036">Ningún dominio ha sido añadido o validado. <br/>Para crear un alias para su cuenta Email Pro, debe añadir un dominio y esperar a que el mismo sea validado.</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_limit_tooltip" qtlid="375049">Ha alcanzado el límite de 1000 alias por cuenta Email Pro.</translation>
+
+   <translation id="emailpro_resilitation_action_title" qtlid="375062">Cancelación del servicio Email Pro</translation>
+   <translation id="emailpro_resilitation_action_intro" qtlid="375075">¿Está seguro(a) de que desea cancelar el servicio Email Pro «{0}»? <br />Esta acción cancelará la renovación automática al finalizar el período de renovación, y el servicio se bloqueará.<br /><br /> Puede utilizar el servicio normalmente hasta esa fecha.</translation>
+   <translation id="emailpro_resilitation_action_confirmation" qtlid="375088">Atención: usted va a cancelar íntegramente el servicio «{0}», así como las {1} cuentas Email Pro asociadas. <br />¿Está seguro(a) de que desea continuar?</translation>
+   <translation id="emailpro_resilitation_action_success" qtlid="375101">El servicio Email Pro se eliminará en su fecha de expiración.</translation>
+   <translation id="emailpro_resilitation_action_failure" qtlid="375114">Se ha producido un error al eliminar el servicio Email Pro.</translation>
+   <translation id="emailpro_resilitation_cancel_action_success" qtlid="375127">El servicio Email Pro se renovará en su fecha de expiración.</translation>
+   <translation id="emailpro_resilitation_cancel_action_intro" qtlid="375140">La cancelación del servicio Email Pro «{0}» está programada en su fecha de expiración. <br /><br />¿Está seguro(a) de que desea cancelar esta operación? Si continúa, el servicio pasará a renovación automática.</translation>
+   <translation id="emailpro_tab_domain_no_domains_1" qtlid="375153">Añada un dominio para crear cuentas Email Pro. Haga clic</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam" qtlid="375166">Si utiliza el modo no autoritario (Email Pro + otro sistema de correo) con un sistema de correo no alojado en OVH:</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_antispam" qtlid="375179">Si utiliza el modo autoritario (solo Email Pro) o no autoritario con un sistema de correo alojado en OVH (correo en alojamiento compartido):</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_ovh" qtlid="375192">Si el dominio no es gestionado por el mismo ID de cliente que el servicio Email Pro, o si su dominio no está alojado en OVH, la configuración automática no es posible. En ese caso, deberá crear el registro MX en el dominio manualmente, introduciendo la información que se indica a continuación.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_no_ovh" qtlid="375205">Si el dominio no es gestionado por el mismo ID de cliente que el servicio Email Pro, o si su dominio no está alojado en OVH, la configuración automática no es posible. En ese caso, deberá crear el registro SRV en el dominio manualmente, introduciendo la información que se indica a continuación.</translation>
+   <translation id="emailpro_tab_domain_delete_domain" qtlid="375218">Retirar el dominio de los servicios Email Pro</translation>
+   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="375231">El dominio no puede eliminarse, pues aún está siendo utilizado en una o más cuentas Email Pro.</translation>
+   <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Contratar cuentas Email Pro</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_intro" qtlid="375257">Debe seleccionar el tipo de pago y el número de cuentas Email Pro que desea contratar.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_doing_message" qtlid="375270">Contratando cuentas Email Pro...</translation>
+   <translation id="emailpro_ACTION_order_accounts_per_account" qtlid="375283">por cuenta</translation>
+   <translation id="emailpro_ACTION_add_account_title" qtlid="375296">Añadir una cuenta Email Pro</translation>
+   <translation id="emailpro_ACTION_add_account_step1_option_fail" qtlid="375309">Se ha producido un error al cargar las opciones de la cuenta Email Pro.</translation>
+   <translation id="emailpro_ACTION_add_account_helpwizard_title" qtlid="375322">Creación de una cuenta Email Pro</translation>
+   <translation id="emailpro_ACTION_add_no_domains" qtlid="375335">Ningún dominio ha sido añadido o validado. <br/>Para crear una cuenta Email Pro, debe añadir un dominio y esperar a que este sea validado.</translation>
+   <translation id="emailpro_ACTION_add_account_error_message" qtlid="375348">Se ha producido un error al crear la cuenta Email Pro.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_contains_name" qtlid="375361">La contraseña no puede contener todo o parte del nombre mostrado o del usuario de Email Pro.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_exchange_guid_label" qtlid="375374">Email Pro GUID</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_title" qtlid="375387">Editar la cuenta Email Pro</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_intro" qtlid="375400">Puede modificar la política de seguridad de las cuentas Email Pro mediante la imposición, por ejemplo, de un nivel de complejidad mínimo para las contraseñas. <br/>Para ello, haga clic en <strong>«Gestionar la política de seguridad»</strong> en el panel de configuración de su servicio.</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_guid_title" qtlid="375374">Email Pro GUID</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_guid" qtlid="375413">Email Pro GUID es el identificador único interno de su cuenta de correo.</translation>
+   <translation id="emailpro_ACTION_update_account_success_message" qtlid="375426">La configuración de la cuenta Email Pro va a modificarse.</translation>
+   <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">No se ha podido personalizar la dirección de correo Email Pro. Es posible que ya exista una configuración compartida (correo, redirección, contestador) con el mismo nombre.</translation>
+   <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">La contraseña de la cuenta Email Pro va a modificarse.</translation>
+   <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Editar la cuenta Email Pro</translation>
+   <translation id="emailpro_tab_account_remove_title" qtlid="375465">¿Está seguro(a) de que desea eliminar la siguiente cuenta de su servicio Email Pro?</translation>
+   <translation id="emailpro_tab_account_remove_success" qtlid="375478">La cuenta va a eliminarse de su servicio Email Pro.</translation>
+
+   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritario (solo Email Pro)</translation>
+   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">No autoritario (Email Pro + otro servicio de correo)</translation>
+   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">El modo autoritario no permite el uso de otro sistema de correo simultáneamente a las cuentas Email Pro. Este modo permite activar el antispam Vade Secure.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">El modo no autoritario permite la combinación de Email Pro con otro servicio de correo. El antispam Vade Secure es compatible si las cuentas POP/IMAP están alojadas en OVH (MX Plan o correo en alojamiento compartido), en cuyo caso hay que indicar mx1.mail.ovh.net como servidor de correo de destino.</translation>
+   <translation id="emailpro_tab_domain_modify_title" qtlid="375543">¿Está seguro(a) de que desea cambiar el siguiente dominio de su servicio Email Pro?</translation>
+   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">Por defecto, al añadir un dominio al servicio Email Pro, se configura en modo autoritario, es decir que al enviar un mensaje de correo a la dirección del dominio gestionado en el servidor, este último solo mirará si la dirección está presente en el servidor Email Pro. <br /><br /> Por el contrario, si cambia el dominio a modo no autoritario, al enviar un mensaje de correo, primero comprobaremos si la dirección de correo está presente en el servidor Email Pro. Si no, este último redirigirá el mensaje al servidor MX que usted haya configurado. <br /><br />Puede utilizar el dominio en modo no autoritario si, por ejemplo, desea gestionar una parte de su correo en Email Pro y otra parte en un servidor externo. <br /><br />Atención: Si desea utilizar el servicio Email Pro y el servicio de correo en alojamiento compartido de OVH, debe introducir en el campo «Servidor de correo de destino» del formulario de la izquierda el valor <strong>mx1.ovh.net.</strong>.</translation>
+   <translation id="emailpro_tab_domain_remove_title" qtlid="375569">¿Está seguro(a) de que desea eliminar el siguiente dominio de su servicio Email Pro?</translation>
+   <translation id="emailpro_tab_domain_remove_success" qtlid="375582">El dominio va a eliminarse del servicio Email Pro.</translation>
+   <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Se ha producido un error al eliminar el dominio del servicio Email Pro.</translation>
+   <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Una delegación permite que otras cuentas Email Pro tengan determinados permisos sobre la cuenta {0}.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Usted puede crear una firma para cada dominio validado.<br /><br />Utilice las herramientas puestas a su disposición para personalizar y dar formato a su firma.<br /> Dicha firma se añadirá automáticamente al final de cada mensaje enviado desde las direcciones asociadas a su dominio Email Pro. <br /><br />También puede utilizar variables para personalizar la firma genérica con los datos de los distintos trabajadores. <br /><br /> Para añadir una imagen o logo, haga clic en «imagen» e insértela utilizando su URL.</translation>
+   <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">¿Está seguro(a) de que desea eliminar la siguiente firma de su servicio Email Pro?</translation>
+   <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">¿Está seguro(a) de que desea añadir la siguiente cuenta de recursos al servidor Email Pro?</translation>
+   <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Ningún dominio ha sido añadido o validado. <br/>Para crear una cuenta Email Pro, debe añadir un dominio y esperar a que este sea validado.</translation>
+   <translation id="emailpro_tab_RESOURCES_remove_resource_title" qtlid="375660">¿Desea eliminar la siguiente cuenta de recursos del servicio Email Pro?</translation>
+   <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">La cuenta de recursos va a eliminarse del servicio Email Pro.</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Una delegación permite que otras cuentas Email Pro tengan determinados permisos sobre el recurso {0}</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">La recepción no se afecta. El bloqueo de su cuenta por spam se puede ver en su servicio Email Pro, en la pestaña «Cuenta de correo». Aparecerá una etiqueta «SPAM». Haga clic en ella para ir al email de notificación del bloqueo.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSuspended_help" qtlid="375712">En ese caso, la suscripción ya no está activa, así como la recepción y el envío. Contacte con el soporte para reactivar el servicio.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isLocked_help1" qtlid="375725">Desde su servicio Email Pro usted puede establecer una política de seguridad. Es posible que la cuenta se bloquee temporalmente durante la configuración de esta política.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isLocked_help3" qtlid="375738">Si se bloquea por este motivo, usted puede esperar a que transcurra el período de tiempo indicado para que se desbloquee la cuenta, o contactar con el soporte creando una solicitud.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_connectiveOWA_help2" qtlid="375751">También puede actualizar la contraseña desde su servicio Email Pro, en la pestaña «Cuenta de correo», y volver a realizar el diagnóstico. Si el problema persiste, puede crear una solicitud de soporte.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help2" qtlid="375764">A continuación le ofrecemos la lista de servidores MX válidos para la solución Email Pro:</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li1" qtlid="375777">Solo Email Pro: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li2" qtlid="375790">Email Pro + Email POP/IMAP alojado en OVH: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li3" qtlid="375803">Email Pro + Email POP/IMAP no alojado en OVH: ex.mail.ovh.net o ex2.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help2" qtlid="375764">A continuación le ofrecemos la lista de servidores MX válidos para la solución Email Pro:</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li1" qtlid="375777">Solo Email Pro: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li2" qtlid="375790">Email Pro + Email POP/IMAP alojado en OVH: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li3" qtlid="375803">Email Pro + Email POP/IMAP no alojado en OVH: ex.mail.ovh.net o ex2.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSrvValid_help1" qtlid="375816">El registro SRV es necesario para la configuración automática de su cuenta Email Pro en un cliente de correo compatible.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSrvValid_help3" qtlid="375829">El registro SRV para la solución Email Pro es el siguiente:</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canSendEmail_help_li4" qtlid="375842">Incidencia en la infraestructura Email Pro</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_support_ticket_subject" qtlid="375855">Diagnóstico Email Pro</translation>
+   <translation id="emailpro_GROUPS_delegation_step1_intro" qtlid="375868">Las delegaciones otorgan a otras cuentas de Email Pro determinados permisos sobre el grupo {0}.</translation>
+   <translation id="emailpro_GROUPS_add_group_help_intro" qtlid="375881">Los grupos permiten que varios usuarios de Email Pro reciban los mensajes enviados a una única dirección: la del grupo. Dicha dirección debe ser única y los mensajes que se envíen a ella se transferirán a todos los miembros del grupo.</translation>
+   <translation id="emailpro_ACTION_configure_step2_intro" qtlid="375894">Resumen de configuración de su servicio Email Pro {0}</translation>
+   <translation id="emailpro_ACTION_configure_help_title" qtlid="375907">Configuración del servicio Email Pro</translation>
+   <translation id="emailpro_action_order_space_disk_tooltip" qtlid="375920">La capacidad indicada tiene en cuenta los backups y los archivos necesarios para el funcionamiento del sistema Email Pro.</translation>
+   <translation id="emailpro_tab_RESOURCES_wizard_intro" qtlid="375933">La función «cuentas de recursos» permite planificar las necesidades de sus trabajadores. <br /> Usted puede crear tantas cuentas de recursos como desee.</translation>
+   <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Contratar cuentas Email Pro</translation>
+   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="375946">¿Está seguro(a) de que desea añadir el dominio de abajo al servidor Email Pro?</translation>
+   <translation id="emailpro_tab_domain_add_success" qtlid="375959">El dominio va a añadirse a su servidor Email Pro.</translation>
+   <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Se ha producido un error al añadir el dominio a su servidor Email Pro.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
+   <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">El dominio introducido no es válido.</translation>
+
+</translations>

@@ -1,0 +1,35 @@
+{
+  "name": "ovh-module-emailpro",
+  "version": "2.0.0",
+  "description": "E-mail Pro module.",
+  "license": "BSD-3-Clause",
+  "author": "OVH SAS",
+  "repository": "ovh-ux/ovh-module-emailpro",
+  "scripts": {
+    "lint": "eslint src/. --ext .js --quiet",
+    "test": "grunt test"
+  },
+  "keywords": [
+    "angular",
+    "e-mail pro"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "bower": "~1.4.1",
+    "ejs": "~2.3.1",
+    "eslint": "^4.0.0",
+    "eslint-config-ovh": "^0.1.1",
+    "grunt": "~0.4.5",
+    "grunt-bump": "~0.5.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-eslint": "^20.0.0",
+    "grunt-ng-constant": "~1.1.0",
+    "ipaddr.js": "~1.0.1",
+    "jsontoxml": "latest",
+    "lodash": "~3.9.3",
+    "matchdep": "~0.3.0",
+    "properties": "latest"
+  }
+}

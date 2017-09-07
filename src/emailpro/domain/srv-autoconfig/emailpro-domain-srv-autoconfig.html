@@ -1,0 +1,38 @@
+<div data-ng-controller="EmailProDomainSrvAutoconfigCtrl as ctrl">
+    <div data-wizard
+         data-wizard-title="i18n.exchange_tab_domain_diagnostic_srv_title"
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="configSRV"
+         data-wizard-title-icon="'icon-add-domain-on-exchange'">
+
+        <div data-wizard-step
+             data-wizard-step-valid="getIsOVHDomain">
+
+            <div class="loader text-center" data-ng-if="ctrl.loading.step1"></div>
+
+            <div data-ng-if="!ctrl.loading.step1">
+                <strong data-ng-if="ctrl.domainDiag.isOvhDomain"
+                        data-ng-bind="tr('exchange_tab_domain_diagnostic_srv_intro_ovh', ctrl.domain.displayName)"></strong>
+                <strong
+                   data-ng-if="!ctrl.domainDiag.isOvhDomain"
+                   data-ng-bind="tr('exchange_tab_domain_diagnostic_srv_no_ovh')"></strong>
+                <dl class="dl-horizontal">
+                    <dt data-i18n-static="exchange_tab_domain_diagnostic_srv_label_champ"></dt>
+                    <dd data-ng-bind-html="tr('exchange_tab_domain_diagnostic_srv_config', [ctrl.domainDiag.srv.subDomain, ctrl.domainDiag.srv.priority, ctrl.domainDiag.srv.weight, ctrl.domainDiag.srv.port, ctrl.domainDiag.srv.target])"></dd>
+                </dl>
+            </div>
+        </div>
+
+        <div data-wizard-step>
+            <strong data-ng-bind-html="tr('exchange_tab_domain_diagnostic_srv_recap', ctrl.domainDiag.srv.subDomain)"></strong>
+
+            <dl class="dl-horizontal">
+                <dt data-i18n-static="exchange_tab_domain_domain"></dt>
+                <dd data-ng-bind="ctrl.domain.displayName"></dd>
+
+                <dt data-i18n-static="exchange_tab_domain_diagnostic_srv_label_champ"></dt>
+                <dd data-ng-bind-html="tr('exchange_tab_domain_diagnostic_srv_config', [ctrl.domainDiag.srv.subDomain, ctrl.domainDiag.srv.priority, ctrl.domainDiag.srv.weight, ctrl.domainDiag.srv.port, ctrl.domainDiag.srv.target])"></dd>
+            </dl>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="row" data-ng-controller="EmailProTabAliasCtrl">
+    <div class="col-md-9">
+
+        <div class="mb-3 d-flex align-items-center">
+            <button class="btn btn-default my-auto" type="button"
+                    data-ng-click="hideAliases()">
+                <span class="fa fa-chevron-left mr-2" aria-hidden="true"></span>
+                <span data-i18n-static="exchange_tab_ALIAS_back_button"></span>
+            </button>
+            <span class="ml-4" data-ng-bind-html="tr('exchange_tab_ALIAS_intro', selectedAccount.primaryEmailDisplayName)"></span>
+        </div>
+
+        <table class="table"
+               data-ng-class="{'table-hover table-striped': !aliasLoading && aliases.list.results.length > 0}">
+            <thead>
+                <tr>
+                    <th scope="col" data-i18n-static="exchange_tab_ALIAS_header" ></th>
+                    <th scope="col" class="min-width text-center"></th>
+                </tr>
+            </thead>
+
+            <tbody data-ng-if="aliasLoading">
+                <tr>
+                    <td class="loader text-center" colspan="2"></td>
+                </tr>
+            </tbody>
+
+            <tbody data-ng-if="!aliasLoading && !aliases.list.results.length">
+                <tr>
+                    <td colspan="2" data-i18n-static="exchange_tab_ALIAS_table_empty"></td>
+                </tr>
+            </tbody>
+
+            <tbody data-ng-if="!aliasLoading && aliases.list.results.length > 0">
+                <tr data-ng-repeat="alias in aliases.list.results">
+                    <th scope="row" data-ng-bind="alias.displayName"></th>
+                    <td class="text-center">
+                        <span class="label label-info"
+                              data-i18n-static="exchange_tab_ALIAS_state_TASK_ON_DOING"
+                              data-ng-if="alias.taskPendingId"
+                              data-uib-tooltip="{{i18n.exchange_tab_ALIAS_state_TASK_ON_DOING_tooltip}}"></span>
+                        <button class="btn btn-icon" type="button" title="{{alias.displayName}} {{table_delete_entry}}"
+                                data-ng-click="deleteAlias(alias)"
+                                data-ng-if="!alias.taskPendingId"
+                                data-uib-tooltip="{{i18n.exchange_tab_ALIAS_delete_tooltip}}">
+                            <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div data-ng-show="!aliasLoading && aliases.list.results.length > 0"
+             data-pagination-server-side="aliasTable"
+             data-pagination-server-side-function="getAliases"
+             data-pagination-server-side-paginated-stuff="aliases"
+             data-pagination-server-side-table-loading="aliasLoading">
+        </div>
+    </div>
+
+    <div class="col-md-3 mt-5 mt-lg-0">
+        <button class="btn btn-block btn-default" type="button"
+                data-i18n-static="exchange_tab_ALIAS_add_button"
+                data-ng-click="addAccountAlias()"
+                data-ng-disabled="selectedAccount.aliases >= aliasMaxLimit">
+        </button>
+    </div>
+</div>

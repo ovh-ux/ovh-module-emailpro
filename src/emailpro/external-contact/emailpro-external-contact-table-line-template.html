@@ -1,0 +1,31 @@
+<span data-paginated-table-cell data-ng-bind="element.externalEmailAddress"></span>
+
+<div data-paginated-table-cell style="text-align: center;">
+    <span data-ng-bind="element.displayName" style="text-align: center;"></span>
+</div>
+
+<div data-paginated-table-cell style="text-align: center;">
+    <span data-ng-bind="element.creationDate|date:'mediumDate'"></span>
+</div>
+
+<div data-paginated-table-cell style="text-align: center;">
+    <span data-ng-hide="element.state == 'OK'"
+        class="label"
+        data-ng-class="getStateClassFor(element.state)"
+        data-ng-bind="tr('exchange_tab_EXTERNAL_CONTACTS_table_headers_state_' + element.state)">
+    </span>
+    <span data-ng-show="element.state == 'OK' && element.taskPendingId"
+        class="label label-info"
+        data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING">
+    </span>
+</div>
+
+<div data-paginated-table-cell
+    data-linkedpopover="emailpro/external-contact/emailpro-external-contact-table.popover.html"
+    data-linkedpopover-placement="right"
+    data-linkedpopover-single="true"
+    data-linkedpopover-remote="true" style="text-align: center;">
+    <i class="icon icon-option pointer"></i>
+</div>
+
+<!-- To remove ? -->

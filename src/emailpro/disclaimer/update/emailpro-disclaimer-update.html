@@ -1,0 +1,51 @@
+<div data-ng-controller="EmailProUpdateDisclaimerCtrl">
+    <div data-wizard
+         data-wizard-on-cancel="resetAction"
+         data-wizard-title="i18n.exchange_ACTION_update_disclaimer_title"
+         data-wizard-title-icon="'icon-disclaimer-exchange'"
+         data-wizard-on-finish="saveDisclaimer"
+         class="platforms">
+
+        <div data-wizard-step
+             data-wizard-step-valid="data.content && data.content.length < 5000">
+
+            <div class="loader text-center" data-ng-if="loadingData"></div>
+
+            <div data-ng-if="!loadingData">
+                <strong data-ng-bind-html="tr('exchange_ACTION_update_disclaimer_info', [data.domain.displayName])"></strong>
+                <form class="form-inline my-3">
+                    <div class="form-group">
+                        <label for="variableSelect" class="sr-only" data-i18n-static="exchange_ACTION_disclaimer_insert"></label>
+                        <select class="form-control" id="variableSelect" name="variableSelect"
+                                data-ng-model="data.selectedAttribute"
+                                data-ng-options="tr('exchange_ACTION_add_disclaimer_option_' +variable) for variable in availableAttributes">
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="button"
+                                data-ng-click="insertAttribute()"
+                                data-i18n-static="exchange_ACTION_disclaimer_insert"
+                                data-ng-enabled="data.selectedAttribute">
+                        </button>
+                    </div>
+                </form>
+                <textarea id="update-disclaimer-editor" data-ckeditor data-ng-model="data.content">{{data.content}}</textarea>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" data-ng-model="data.outsideOnly">
+                        <span data-i18n-static="exchange_ACTION_add_disclaimer_outside"></span>
+                    </label>
+                </div>
+                <div class="alert alert-warning" role="alert"
+                     data-ng-if="data.content.length > 5000"
+                     data-i18n-static="exchange_ACTION_update_disclaimer_length_warning">
+                </div>
+            </div>
+
+            <div data-wizard-step-help>
+                <h3 data-i18n-static="exchange_ACTION_add_disclaimer_helpwizard_title"></h3>
+                <p data-ng-bind-html="tr('emailpro_ACTION_add_disclaimer_helpwizard_details')"></p>
+            </div>
+        </div>
+    </div>
+</div>

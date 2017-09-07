@@ -1,0 +1,18 @@
+<div data-ng-controller="EmailProRemoveAccountCtrl">
+    <div class="platforms"
+            data-wizard
+            data-wizard-bread-crumb
+            data-wizard-title="i18n.exchange_tab_account_remove_account"
+            data-wizard-on-cancel="resetAction"
+            data-wizard-on-finish="submit"
+            data-wizard-title-icon="'icon-delete-account-exchange'">
+
+        <div data-wizard-step>
+            <strong data-ng-bind-html="tr('emailpro_tab_account_remove_title')"></strong>
+            <dl class="dl-horizontal">
+                <dt data-i18n-static="exchange_tab_account_remove_email_label"></dt>
+                <dd data-ng-bind="account.primaryEmailDisplayName"></dd>
+            </dl>
+        </div>
+    </div>
+</div>

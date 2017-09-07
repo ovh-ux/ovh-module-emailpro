@@ -1,0 +1,109 @@
+<div class="container-fluid px-0" data-ng-controller="EmailProTabExternalContactsCtrl">
+    <div class="row">
+        <div class="col-md-9">
+
+            <div class="text-right mb-3">
+                <form class="form-inline">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="{{i18n.exchange_tab_EXTERNAL_CONTACTS_search_placeholder}}"
+                               data-ng-model="filter">
+                        <div class="input-group-btn"
+                             data-ng-if="filter">
+                            <button class="btn btn-default" type="button"
+                                    data-ng-click="emptySearch()">
+                                <span class="fa fa-times" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <span class="input-group-addon"
+                              data-ng-if="!filter">
+                            <span class="fa fa-search" aria-hidden="true"></span>
+                        </span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table"
+                       data-ng-class="{'table-hover table-striped': !contactsLoading && contacts.list.results.length > 0}">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_displayName"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_creationDate"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state"></th>
+                            <th class="min-width" scope="col"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody data-ng-if="contactsLoading">
+                        <tr>
+                            <td class="loader text-center" colspan="6"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody data-ng-if="!contactsLoading && !contacts.list.results.length">
+                        <tr>
+                            <td class="text-center" colspan="6"
+                                data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_empty"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody data-ng-if="!contactsLoading && contacts.list.results.length > 0">
+                        <tr data-ng-repeat="element in contacts.list.results track by $index">
+                            <th scope="row" data-ng-bind="element.externalEmailAddress"></th>
+
+                            <td class="text-center" data-ng-bind="element.displayName"></td>
+
+                            <td class="text-center" data-ng-bind="element.creationDate|date:'mediumDate'"></td>
+
+                            <td class="text-center">
+                                <span class="oui-icon oui-icon_small"
+                                      data-ng-class="{ 'oui-icon-success text-success': !element.hiddenFromGAL, 'oui-icon-error text-danger': element.hiddenFromGAL }"
+                                      data-uib-tooltip="{{tr('exchange_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_' + element.hiddenFromGAL)}}"
+                                      data-tooltip-placement="top">
+                                </span>
+                            </td>
+
+                            <td class="text-center">
+                                <span class="label"
+                                      data-ng-bind="tr('exchange_tab_EXTERNAL_CONTACTS_table_headers_state_' + element.state)"
+                                      data-ng-class="getStateClassFor(element.state)"
+                                      data-ng-if="element.state !== 'OK'">
+                                </span>
+                                <span class="label label-info"
+                                      data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING"
+                                      data-ng-if="element.state == 'OK' && element.taskPendingId">
+                                </span>
+                            </td>
+
+                            <td class="text-center">
+                                <button class="btn btn-icon" type="button" title="{{element.externalEmailAddress}} {{i18n.table_manage_entry}}"
+                                        data-linkedpopover="emailpro/external-contact/emailpro-external-contact-table.popover.html"
+                                        data-linkedpopover-placement="left"
+                                        data-linkedpopover-single="true"
+                                        data-linkedpopover-remote="true">
+                                    <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div data-ng-show="!contactsLoading && contacts.list.results.length > 0"
+                 data-pagination-server-side="externalContactsTable"
+                 data-pagination-server-side-function="loadContacts"
+                 data-pagination-server-side-paginated-stuff="contacts"
+                 data-pagination-server-side-table-loading="contactsLoading">
+            </div>
+        </div>
+
+        <div class="col-md-3 mt-5 mt-lg-0">
+            <button type="button" class="btn btn-block btn-default"
+                    data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_title_button"
+                    data-ng-click="setAction('emailpro/external-contact/add/emailpro-external-contact-add')">
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+<div data-ng-controller="EmailProOrderAccountCtrl">
+    <div data-wizard data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="addEmailProAccount"
+         data-wizard-confirm-button-text="i18n.wizard_pay"
+         data-wizard-title="i18n.emailpro_ACTION_order_accounts_title"
+         data-wizard-title-icon="'icon-add-account-exchange'"
+         data-wizard-bread-crumb
+         class="platforms">
+
+        <div data-wizard-step
+             data-wizard-step-valid="isValid()"
+             data-wizard-step-on-load="loadOrderList">
+
+            <div class="loader text-center" data-ng-if="!ordersList"></div>
+
+            <form name="orderAccountForm" class="form-horizontal"
+                  data-ng-if="ordersList">
+                <strong data-i18n-static="emailpro_ACTION_order_accounts_step1_intro"></strong>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"
+                           data-i18n-static="exchange_ACTION_order_accounts_step1_pay_type"></label>
+                    <div class="col-md-8">
+                        <div class="radio"
+                             data-ng-repeat="orderAvailable in ordersList track by $index">
+                            <label>
+                                <input type="radio" id="{{'duration'+$index}}" name="payTypeGroup"
+                                       data-ng-value="orderAvailable.duration.duration"
+                                       data-ng-model="accountsToAdd.duration">
+                                <span data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration) + ' ( <strong>'  + orderAvailable.unitaryMonthlyPrice.text + '</strong> ' + tr('emailpro_ACTION_order_accounts_per_account') + ')'"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group"
+                     data-ng-class="{ 'has-error' : orderAccountForm.accountNumber.$invalid }">
+                    <label class="col-md-4 control-label"
+                           data-i18n-static="exchange_ACTION_order_accounts_step1_number"></label>
+                    <div class="col-md-8">
+                        <input type="number" class="form-control" id="accountNumber" name="accountNumber" min="1" max="100" required
+                               data-ng-model="accountsToAdd.accountsNumber"
+                               data-ng-pattern="/^\d+$/"
+                               data-uib-tooltip="{{i18n.exchange_ACTION_order_accounts_step1_number_tooltip}}">
+                        <span class="help-block"
+                              data-ng-if="!orderAccountForm.accountNumber.$valid"
+                              data-i18n-static="exchange_ACTION_order_accounts_step1_number_not_valid"></span>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="legalWarning"
+                               data-ng-model="valid.legalWarning">
+                        <span data-ng-bind-html="tr('exchange_ACTION_add_account_legal_warning')"></span>
+                    </label>
+                </div>
+            </form>
+        </div>
+
+        <div data-wizard-step
+             data-wizard-step-on-load="order"
+             data-wizard-step-valid="previewOrder">
+
+            <div class="text-center"
+                 data-ng-if="!previewOrder">
+                <div class="loader"></div>
+                <strong data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></strong>
+            </div>
+            <form class="form-horizontal" name="previewOrderForm"
+                  data-ng-if="previewOrder">
+                <strong data-i18n-static="exchange_ACTION_order_accounts_step2_intro"></strong>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"
+                           data-i18n-static="exchange_ACTION_order_accounts_step2_pay_type"></label>
+                    <div class="col-md-8">
+                        <p class="form-control-static"
+                           data-ng-bind="tr('exchange_ACTION_order_accounts_step1_pay_type_' + accountsToAdd.duration)"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"
+                           data-i18n-static="exchange_ACTION_order_accounts_step2_number"></label>
+                    <div class="col-md-8">
+                        <p class="form-control-static"
+                           data-ng-bind="accountsToAdd.accountsNumber"></p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label"
+                           data-i18n-static="exchange_ACTION_order_accounts_step2_total"></label>
+                    <div class="col-md-7">
+                        <p class="form-control-static text-danger"
+                           data-ng-bind="tr('exchange_ACTION_order_accounts_step2_price', [previewOrder.prices.withoutTax.text, previewOrder.prices.withTax.text])">
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div data-wizard-step
+             data-wizard-step-valid="url">
+            <div class="text-center" data-ng-if="!url">
+                <div class="loader"></div>
+                <span data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></span>
+            </div>
+            <div data-ng-if="url">
+                <strong class="d-block mb-3" data-i18n-static="exchange_ACTION_order_accounts_step3_bc"></strong>
+                <p data-i18n-static="exchange_ACTION_order_accounts_step3_continue"></p>
+                <p data-i18n-static="exchange_ACTION_order_accounts_step3_explication2"></p>
+                <em data-i18n-static="exchange_ACTION_order_accounts_step3_explication"></em>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,211 @@
+<div class="container-fluid px-0" data-ng-controller="EmailProTabAccountsCtrl">
+    <div class="row" data-ng-if="!showAlias">
+        <div class="col-md-9">
+            <div class="alert alert-warning mt-3" role="alert"
+                 data-i18n-static="exchange_tab_ACCOUNTS_partial"
+                 data-ng-if="accounts && accounts.list.messages.length > 0 && !loading">
+            </div>
+            <div class="pull-left">
+                <strong data-i18n-static="exchange_tab_INFORMATIONS_webmail"></strong> :
+                <a data-ng-href="https://{{exchange.hostname}}" target="_blank" title="{{tr('exchange_tab_INFORMATIONS_webmail')}} ({{tr('exchange_dashboard_new_window')}})">
+                    <span data-ng-bind="'https://' + exchange.hostname"></span>
+                    <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="text-right mb-3">
+                <form class="form-inline" name="searchAccountForm">
+                    <div class="form-group"
+                         data-ng-if="exchange.serverDiagnostic.version === 14">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <span class="fa fa-filter" aria-hidden="true"></span>
+                            </span>
+                            <select class="form-control"
+                                    data-ng-change="setFilter()"
+                                    data-ng-model="filterType"
+                                    data-ng-options="tr('exchange_tab_ACCOUNTS_type_' + type) for type in accountTypes">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="searchAccount"
+                               data-ng-bind="i18n.table_filter + ' ' + i18n.exchange_tab_ACCOUNTS_table_email"></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="searchAccount" name="searchAccount" placeholder="{{i18n.exchange_tab_ACCOUNTS_table_email}}"
+                                   data-ng-disabled="loading"
+                                   data-ng-model="search.value"
+                                   data-ng-model-options="{debounce: 1000}">
+                            <div class="input-group-btn" data-ng-if="search.value">
+                                <button class="btn btn-default" type="button" aria-label="{{i18n.common_cancel}}"
+                                        data-ng-click="search.value = null">
+                                    <span class="fa fa-times" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <span class="input-group-addon"
+                                   data-ng-if="!search.value">
+                                <span class="fa fa-search" aria-hidden="true"></span>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="table-responsive">
+                <table class="table"
+                       data-ng-class="{ 'table-hover table-striped': !loading && (accounts.list.results.length > 0 || accounts.list.messages.length > 0) }">
+                    <thead>
+                        <tr>
+                            <th scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_email"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_type"
+                                data-ng-if="(exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted)"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_size"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_alias"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_status"></th>
+                            <th class="min-width text-center" scope="col"></th>
+                            <th class="min-width text-center" scope="col"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody data-ng-if="loading">
+                        <tr>
+                            <td class="loader text-center" colspan="8"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody data-ng-if="!loading && !accounts.list.results.length && !accounts.list.messages.length">
+                        <tr data-ng-if="!search.value">
+                            <td colspan="8">
+                                <span data-ng-if="!filterType || filterType === 'ALL'"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_table_empty"></span>
+                                <span data-ng-bind="tr('exchange_tab_ACCOUNTS_table_empty_type_' + filterType)"
+                                      data-ng-if="filterType && filterType !== 'ALL'"></span>
+                            </td>
+                        </tr>
+                        <tr data-ng-if="search.value">
+                            <td class="text-center" colspan="8" data-i18n-static="exchange_tab_ACCOUNTS_table_empty_search"></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody data-ng-if="!loading && (accounts.list.results.length > 0 || accounts.list.messages.length > 0)">
+                        <tr data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailAddress':false track by $index">
+                            <th scope="row" data-ng-bind="account.primaryEmailDisplayName"></th>
+
+                            <td data-ng-if="(exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted)"
+                                data-ng-bind="tr('exchange_tab_ACCOUNTS_type_' + account.accountLicense)"></td>
+
+                            <td>
+                                <div class="progress progress-text my-0"
+                                     data-ng-class="{'progress-success' : account.percentUse < 51, 'progress-warning' : account.percentUse > 50 && account.percentUse < 81, 'progress-danger' : account.percentUse > 80 }">
+                                    <div class="progress-bar progress-bar-text" data-ng-style="{'width': account.percentUse + '%'}"></div>
+                                    <span>{{::account.usedQuota.value}} {{tr('unit_size_' + account.usedQuota.unit)}} / {{::account.totalQuota.value}} {{tr('unit_size_' + account.totalQuota.unit)}}</span>
+                                </div>
+                            </td>
+                            <td class="text-center"
+                                data-ng-if="!account.partial">
+                                <span data-ng-if="!isConfigurable(account)"> - </span>
+                                <button class="btn btn-success btn-xs" type="button"
+                                        data-ng-if="isConfigurable(account)"
+                                        data-ng-bind="account.aliases"
+                                        data-ng-click="showAliases(account)">
+                                </button>
+                            </td>
+                            <td class="text-center">
+                                <span class="state-pending"
+                                   data-ng-if="account.state == stateTaskError"
+                                   data-uib-tooltip="{{tr('exchange_tab_ACCOUNTS_state_TASK_ON_ERROR')}}"></span>
+                                <span class="state-pending"
+                                   data-ng-if="account.state == stateTaskDoing"
+                                   data-uib-tooltip="{{tr('exchange_tab_ACCOUNTS_state_TASK_ON_DOING')}}"></span>
+
+                                <span class="badge"
+                                      data-ng-if="account.state == stateCreating"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_state_CREATING"></span>
+                                <span class="badge"
+                                      data-ng-if="account.state == stateDeleting"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_state_DELETING"></span>
+                                <span class="badge"
+                                      data-ng-if="account.state == stateSuspended"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_state_SUSPENDED"></span>
+                                <span class="badge"
+                                      data-ng-if="account.state == stateSuspending"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_state_SUSPENDING"></span>
+                                <span class="badge"
+                                      data-ng-if="account.state == stateReopening"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_state_REOPENING"></span>
+
+                                <span class="badge badge-important pointer"
+                                      data-ng-if="account.spamDetected && account.state === stateOk"
+                                      data-simplepopover="{{spamTooltipContent}}"
+                                      data-simplepopover-title="{{tr('exchange_tab_ACCOUNTS_popover_span_title')}}"
+                                      data-simplepopover-placement="top"
+                                      data-simplepopover-single="true"
+                                      data-i18n-static="exchange_tab_ACCOUNTS_state_SPAM">
+                                </span>
+                            </td>
+                            <td class="text-center">
+                                <div data-ng-if="!noDomainFlag">
+                                    <button type="button"
+                                            title="{{account.primaryEmailDisplayName}} {{i18n.table_modify_entry}}"
+                                            class="btn btn-icon"
+                                            data-ng-if="isEditable(account)"
+                                            data-ng-click="editAccount(account)">
+                                            <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
+                                    </button>
+                                    <span class="icon icon-pencil text-muted"
+                                          data-ng-if="!isEditable(account)"
+                                          aria-hidden="true"></span>
+                                </div>
+                                <span class="oui-icon oui-icon-pen_line oui-icon_small text-muted" aria-hidden="true"
+                                      data-ng-if="noDomainFlag"
+                                      data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_menu_account_no_domain_tooltip}}"></span>
+                            </td>
+
+                            <td class="text-center">
+                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{i18n.table_manage_entry}}"
+                                        data-ng-if="isConfigurable(account)"
+                                        data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_menu_account_tooltip}}"
+                                        data-tooltip-append-to-body="true"
+                                        data-linkedpopover="emailpro/account/emailpro-account.popover.html"
+                                        data-linkedpopover-placement="left"
+                                        data-linkedpopover-single="true"
+                                        data-linkedpopover-remote="true">
+                                    <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
+                                </button>
+                                <span class="oui-icon oui-icon-gear_line oui-icon_small text-muted" aria-hidden="true"
+                                      data-ng-if="!isConfigurable(account)"></span>
+                            </td>
+                        </tr>
+
+                        <tr data-ng-repeat="account in accounts.list.messages | orderBy:'id':false">
+                            <td colspan="8">
+                                <div class="alert alert-warning m-0">
+                                    <span data-ng-bind="account.primaryEmailAddress"></span> :
+                                    <span data-i18n-static="exchange_tab_ACCOUNTS_partial_account"></span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div data-ng-show="!loading && (accounts.list.results.length > 0 || accounts.list.messages.length > 0)"
+                 data-pagination-server-side="accountsTable"
+                 data-pagination-server-side-function="getAccounts"
+                 data-pagination-server-side-paginated-stuff="accounts"
+                 data-pagination-server-side-table-loading="loading">
+            </div>
+        </div>
+
+        <div class="col-md-3 mt-5 mt-lg-0">
+            <button class="btn btn-block btn-default" type="button"
+                    data-ng-click="newAccount()"
+                    data-ng-disabled="addAccountOptionNotAvailable()">
+                <span data-i18n-static="exchange_ACTION_order_accounts_button"
+                      data-ng-if="(exchange.serverDiagnostic.version == 14 && is25g()) || (exchange.serverDiagnostic.version == 14 && exchange.offer == exchangeTypeHosted ) || (exchange.serverDiagnostic.version == 15 && exchange.offer != exchangeTypeDedicated) "></span>
+                <span data-i18n-static="exchange_ACTION_add_account_button"
+                      data-ng-if="!is25g() && ((exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted) || (exchange.serverDiagnostic.version == 15 && exchange.offer == exchangeTypeDedicated))"></span>
+            </button>
+        </div>
+    </div>
+    <div data-ng-if="showAlias"
+         data-ng-include="'emailpro/account/alias/emailpro-account-alias.html'"></div>
+</div>

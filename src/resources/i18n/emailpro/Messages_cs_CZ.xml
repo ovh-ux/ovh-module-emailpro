@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translations>
+
+   <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro účty</translation>
+   <translation id="emailpro_dashboard_guides" qtlid="374997">Potřebujete pomoc s nastavením služby E-mail Pro?</translation>
+   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Vaše služba E-mail Pro je téměř připravena. Abyste službu mohli začít naplno využívat, musíte k ní nejdříve připojit doménu. Pokud žádnou doménu nevlastníte, můžete si ji pořídit <a href="https://www.ovh.cz:51043/cgi-bin/newOrder/order.cgi" target="_blank">zde</a>.</translation>
+   <translation id="emailpro_tab_ALIAS_remove_alias_intro" qtlid="375023">Opravdu si přejete smazat následující alias?</translation>
+   <translation id="emailpro_tab_ALIAS_add_no_domains" qtlid="375036">Ještě jste nepřipojili doménu nebo neproběhl ověřovací proces. <br/>Abyste pro svou službu E-mail Pro mohli vytvořit alias, musíte nejprve připojit doménu a následně počkat na dokončení ověřovacího procesu.</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_limit_tooltip" qtlid="375049">Dosáhli jste limitu 1 000 aliasů/účet E-mail Pro.</translation>
+
+   <translation id="emailpro_resilitation_action_title" qtlid="375062">Zrušení služby E-mail Pro</translation>
+   <translation id="emailpro_resilitation_action_intro" qtlid="375075">Opravdu chcete zrušit službu E-mail Pro "{0}"? Na základě této akce bude ke konci expiračního období zrušena automatická prolongace služby, v důsledku čehož dojde k jejímu zablokování. <br /><br /> Až do této doby budete moci službu i nadále používat.</translation>
+   <translation id="emailpro_resilitation_action_confirmation" qtlid="375088">Upozornění: právě se chystáte nadobro zrušit svou službu "{0}" a všechny asociované účty E-mail Pro {1}.&#13;
+<br />Přejete si pokračovat?</translation>
+   <translation id="emailpro_resilitation_action_success" qtlid="375101">Služba E-mail Pro bude ukončena k datu své expirace.</translation>
+   <translation id="emailpro_resilitation_action_failure" qtlid="375114">Při pokusu o zrušení služby E-mail Pro došlo k chybě.</translation>
+   <translation id="emailpro_resilitation_cancel_action_success" qtlid="375127">Služba E-mail Pro bude k datu expirace obnovena.</translation>
+   <translation id="emailpro_resilitation_cancel_action_intro" qtlid="375140">Ukončení služby E-mail Pro "{0}" je naplánováno na datum expirace. <br /><br />Opravdu chcete zrušit žádost na ukončení služby? Pokud ano, služba bude automaticky obnovena.</translation>
+   <translation id="emailpro_tab_domain_no_domains_1" qtlid="375153">Abyste mohli vytvářet účty E-mail Pro, musíte nejprve připojit doménu. Klikněte</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam" qtlid="375166">Pokud používáte neautoritativní režim (E-mail Pro + další řešení) s e-mailovým řešením hostovaným mimo OVH:</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_antispam" qtlid="375179">Pokud používáte autoritativní režim (pouze E-mail Pro) či neautoritativní režim s e-mailovým řešením hostovaným u OVH:</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_ovh" qtlid="375192">Automatická konfigurace je nedostupná, pokud: &#13;
+<br />1) doména není spravována stejným zákaznickým identifikátorem (NIC handle) jako služba E-mail Pro <br />2) doména není hostována u OVH. <br />V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (za použití níže uvedených údajů).</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_no_ovh" qtlid="375205">Automatická konfigurace je nedostupná, pokud: &#13;
+<br />1) doména není spravována stejným zákaznickým identifikátorem (NIC handle) jako služba E-mail Pro <br />2) doména není hostována u OVH. <br />V takovém případě prosím vytvořte SRV záznam pro svou doménu manuálně (za použití níže uvedených údajů).</translation>
+   <translation id="emailpro_tab_domain_delete_domain" qtlid="375218">Odebrat tuto doménu ze služby E-mail Pro</translation>
+   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="375231">Tuto doménu nelze odebrat, jelikož je stále využívána některými účty služby E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Objednat E-mail Pro účty</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_intro" qtlid="375257">Zvolte prosím způsob platby a požadovaný počet účtů.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_doing_message" qtlid="375270">Probíhá objednávka účtů...</translation>
+   <translation id="emailpro_ACTION_order_accounts_per_account" qtlid="375283">na účet</translation>
+   <translation id="emailpro_ACTION_add_account_title" qtlid="375296">Přidat E-mail Pro účet</translation>
+   <translation id="emailpro_ACTION_add_account_step1_option_fail" qtlid="375309">Při načítání možností účtu E-mail Pro došlo k chybě.</translation>
+   <translation id="emailpro_ACTION_add_account_helpwizard_title" qtlid="375322">Vytvoření účtu E-mail Pro</translation>
+   <translation id="emailpro_ACTION_add_no_domains" qtlid="375335">Ještě jste nepřipojili doménu nebo neproběhl ověřovací proces. <br/>Abyste mohli vytvořit účet E-mail Pro, musíte nejprve připojit doménu a následně počkat na dokončení ověřovacího procesu.</translation>
+   <translation id="emailpro_ACTION_add_account_error_message" qtlid="375348">Při vytváření účtu E-mail Pro došlo k chybě.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_contains_name" qtlid="375361">Heslo nesmí obsahovat zobrazovaný název (či jeho část) ani uživatelské jméno služby E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_exchange_guid_label" qtlid="375374">E-mail Pro GUID</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_title" qtlid="375387">Upravit účet E-mail Pro</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_intro" qtlid="375400">Bezpečnostní politiku vážící se k účtům služby E-mail Pro lze libovolně spravovat – například tím, že nastavíte minimální úroveň komplexity přístupových hesel. <br/>Stačí kliknout na tlačítko <strong>"Správa bezpečnostní politiky"</strong> na úvodní obrazovce služby.</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_guid_title" qtlid="375374">E-mail Pro GUID</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_guid" qtlid="375413">E-mail Pro GUID je unikátní identifikátor Vaší e-mailové schránky.</translation>
+   <translation id="emailpro_ACTION_update_account_success_message" qtlid="375426">Nastavení služby E-mail Pro bude aktualizováno.</translation>
+   <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">E-mailovou adresu nebylo možné upravit. Je možné, že již existuje jiná konfigurace (e-mail, přesměrování, autoresponder apod.) se stejným názvem. </translation>
+   <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Heslo k účtu E-mail Pro bude aktualizováno.</translation>
+   <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Upravit účet E-mail Pro</translation>
+   <translation id="emailpro_tab_account_remove_title" qtlid="375465">Opravdu si přejete následující účet odebrat ze služby E-mail Pro?</translation>
+   <translation id="emailpro_tab_account_remove_success" qtlid="375478">Účet bude odstraněn.</translation>
+
+   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritativní (pouze E-mail Pro)</translation>
+   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Neautoritativní (E-mail Pro + další e-mailová řešení)</translation>
+   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">V autoritativním režimu není dovoleno použití dalších e-mailových řešení. Tento režim umožňuje aktivaci antispamu Vade Secure.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Neautoritativní režim připouští koexistenci služby E-mail Pro a dalších e-mailových řešení. Antispam Vade Secure je kompatibilní za předpokladu, že jsou účty pop/imap hostovány u společnosti OVH (MX Plan či webhosting). V takovém případě je do kolonky "cílový server" zapotřebí zadat "mx1.mail.ovh.net".</translation>
+   <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Opravdu si na vybrané doméně přejete provést následující změny?</translation>
+   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">Doména je po připojení k serveru E-mail Pro defaultně nakonfigurována na autoritativní režim. To znamená, že kdykoli odešlete e-mail na adresu domény spravované na serveru, server bude ověřovat pouze to, zda se daná adresa nachází na serveru E-mail Pro.<br /><br /> Pokud doménu přepnete do neautoritativního režimu a odešlete na ni zprávu, server nejprve ověří, zda se daná adresa nachází na serveru E-mail Pro. Pokud zjistí, že nikoli, přesměruje zprávu na předem nakonfigurovaný MX server.<br /><br /> Doménu lze v neautoritativním režimu využívat například tehdy, když si přejete část e-mailů spravovat v rámci služby E-mail Pro a další část na externím serveru. <br /><br /> Upozornění: pokud si zároveň se službou E-mail Pro přejete používat i e-mailové řešení zahrnuté v hostingu OVH, musíte do kolonky "cílový server" zadat následující text: "mx1.mail.ovh.net". </translation>
+   <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Opravdu si přejete odebrat následující doménu ze služby E-mail Pro?</translation>
+   <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Doména bude ze služby E-mail Pro odstraněna.</translation>
+   <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Při odstraňování domény ze služby E-mail Pro došlo k chybě.</translation>
+   <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegace představuje způsob, jak ostatním účtům služby E-mail Pro přidělit určitá práva na účtu {0}.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Pro každou ověřenou doménu lze vytvořit jeden podpis.<br /><br />Pro úpravy a formátování podpisu použijte prosím dostupné nástroje.<br /> Tento podpis bude automaticky přidáván na konec každé zprávy odeslané z e-mailových adres asociovaných s Vaší E-mail Pro doménou.<br /><br />V podpisu je možné používat proměnné.<br /><br /> Pro přidání obrázku či loga klikněte na tlačítko "obrázek" a zadejte příslušnou URL adresu.</translation>
+   <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Opravdu chcete odstranit následující podpis?</translation>
+   <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Opravdu chcete k serveru E-mail Pro přidat následující zdrojový účet?</translation>
+   <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Ještě jste nepřipojili doménu nebo neproběhl ověřovací proces. <br/>Abyste mohli vytvořit účet E-mail Pro, musíte nejprve připojit doménu a následně počkat na dokončení ověřovacího procesu.</translation>
+   <translation id="emailpro_tab_RESOURCES_remove_resource_title" qtlid="375660">Opravdu chcete odstranit následující zdrojový účet?</translation>
+   <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">Zdrojový účet bude odstraněn.</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Delegace představuje způsob, jak ostatním účtům služby E-mail Pro přidělit určitá práva na zdroji {0}.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Přijímání e-mailů není ovlivněno. Kdykoli je Váš účet zablokován kvůli spamu, zobrazí se upozornění v sekci e-mailových účtů služby E-mail Pro. Upozornění na SPAM je aktivní. Kliknutím na něj budete přesměrováni na e-mail, který Vám byl zaslán v návaznosti na zablokování.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSuspended_help" qtlid="375712">V takovém případě již Vaše služba není aktivní. Funkce pro přijímání a odesílání e-mailů byly deaktivovány. Pro opětovné spuštění služby kontaktujte prosím zákaznickou podporu na telefonním čísle <strong>+420 246 030 899</strong>.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isLocked_help1" qtlid="375725">Bezpečnostní politiku lze upravovat přímo z rozhraní služby E-mail Pro. Váš účet může být po dobu realizace provedených úprav blokován.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isLocked_help3" qtlid="375738">Pokud je Váš účet v průběhu procesu blokován, můžete počkat na vypršení předpokládaného času blokace nebo nás kontaktovat prostřednictvím ticketu.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_connectiveOWA_help2" qtlid="375751">V rozhraní služby E-mail Pro (záložka E-mailové účty) můžete rovněž aktualizovat své heslo a obnovit diagnostiku. Pokud problém bude i nadále přetrvávat, založte prosím support ticket.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help2" qtlid="375764">MX servery kompatibilní s nabídkou E-mail Pro:</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li1" qtlid="375777">Samostatný E-mail Pro: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li2" qtlid="375790">E-mail Pro + pop/imap OVH: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li3" qtlid="375803">E-mail Pro + externí pop/imap: ex.mail.ovh.net nebo ex2.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help2" qtlid="375764">MX servery kompatibilní s nabídkou E-mail Pro:</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li1" qtlid="375777">Samostatný E-mail Pro: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li2" qtlid="375790">E-mail Pro + pop/imap OVH: mx1.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li3" qtlid="375803">E-mail Pro + externí pop/imap: ex.mail.ovh.net nebo ex2.mail.ovh.net</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSrvValid_help1" qtlid="375816">Pro automatickou konfiguraci účtu E-mail Pro na kompatibilním e-mailovém klientovi je zapotřebí SRV záznam.</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSrvValid_help3" qtlid="375829">SRV záznam potřebný pro službu E-mail Pro:</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_canSendEmail_help_li4" qtlid="375842">Incident na infrastruktuře E-mail Pro</translation>
+   <translation id="emailpro_DIAGNOSTICS_status_support_ticket_subject" qtlid="375855">E-mail Pro diagnostika</translation>
+   <translation id="emailpro_GROUPS_delegation_step1_intro" qtlid="375868">Delegace představuje způsob, jak ostatním účtům služby E-mail Pro přidělit určitá práva ve skupině {0}.</translation>
+   <translation id="emailpro_GROUPS_add_group_help_intro" qtlid="375881">V rámci skupiny může větší množství uživatelů služby E-mail Pro dostávat zprávy zaslané na skupinovou adresu. Skupinová adresa musí být unikátní. Zprávy zaslané na tuto adresu budou automaticky přeposílány všem členům dané skupiny.</translation>
+   <translation id="emailpro_ACTION_configure_step2_intro" qtlid="375894">Shrnutí konfigurace Vaší služby E-mail Pro {0}</translation>
+   <translation id="emailpro_ACTION_configure_help_title" qtlid="375907">Konfigurace služby E-mail Pro</translation>
+   <translation id="emailpro_action_order_space_disk_tooltip" qtlid="375920">Údaj zahrnuje zálohy a soubory potřebné pro správné fungování systému E-mail Pro. </translation>
+   <translation id="emailpro_tab_RESOURCES_wizard_intro" qtlid="375933">Funkce "zdrojový účet" nabízí snadnou organizaci potřeb Vašich spolupracovníků.<br /> Můžete vytvořit neomezený počet zdrojových účtů.</translation>
+   <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Objednat E-mail Pro účty</translation>
+   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="375946">Opravdu chcete následující doménu připojit ke svému E-mail Pro serveru?</translation>
+   <translation id="emailpro_tab_domain_add_success" qtlid="375959">Doména bude připojena k Vašemu E-mail Pro serveru.</translation>
+   <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Při přidávání domény došlo k chybě.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
+   <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Zadaná doména je neplatná.</translation>
+
+</translations>

@@ -1,0 +1,61 @@
+<div data-ng-controller="EmailProRemoveEmailProCtrl">
+    <div data-wizard
+         data-wizard-title="i18n.emailpro_resilitation_action_title"
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="submit"
+         data-wizard-title-icon="'icon-stop-service-exchange'"
+         data-wizard-confirm-button-text="getSubmitButtonLabel()">
+
+        <div data-wizard-step>
+
+            <div data-ng-if="!exchange.renewType.deleteAtExpiration">
+                <p data-ng-bind-html="tr('emailpro_resilitation_action_intro', [exchange.displayName])"></p>
+                <p data-i18n-static="exchange_resilitation_action_hosted_warning"></p>
+            </div>
+
+            <div data-ng-if="exchange.renewType.deleteAtExpiration">
+                <p data-ng-bind-html="tr('emailpro_resilitation_cancel_action_intro', [exchange.displayName])"></p>
+
+                <p class="mt-2" data-ng-bind-html="tr('exchange_update_billing_periode_intro')"></p>
+
+                <form class="form-inline">
+                    <span class="mr-3" data-i18n-static="exchange_update_billing_periode_label"></span>
+
+                    <label class="mr-2">
+                        <input class="my-0 mr-1"
+                               type="radio"
+                               id="MONTHLY"
+                               name="renewGroup"
+                               data-ng-model="exchange.renewPeriod"
+                               data-ng-value="'MONTHLY'">
+                        <span data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_monthly')"></span>
+                    </label>
+
+                    <label>
+                        <input class="my-0 mr-1"
+                               type="radio"
+                               id="YEARLY"
+                               name="renewGroup"
+                               data-ng-model="exchange.renewPeriod"
+                               data-ng-value="'YEARLY'">
+                        <span data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_yearly')"></span>
+                    </label>
+                </form>
+            </div>
+
+        </div>
+
+        <div data-wizard-step>
+            <div data-ng-if="!exchange.renewType.deleteAtExpiration">
+                <p data-ng-if="!exchange.deleteAtExpiration"
+                   data-ng-bind-html="tr('emailpro_resilitation_action_confirmation', [exchange.displayName, exchange.accountsNumber])"></p>
+                <p data-ng-if="exchange.deleteAtExpiration"
+                   data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName, exchange.accountsNumber])"></p>
+            </div>
+
+            <div data-ng-if="exchange.renewType.deleteAtExpiration">
+                <p data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName])"></p>
+            </div>
+        </div>
+    </div>
+</div>
