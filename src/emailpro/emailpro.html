@@ -25,17 +25,21 @@
     <div class="row">
         <div class="col-sm-9">
             <form name="formEditDisplayName" novalidate>
-                <h1 data-ng-show="!edit.active">
-                    <span data-ng-bind="exchange.displayName"></span>
-                    <button class="btn btn-icon" type="button" title="{{i18n.wizard_modify}}"
-                          data-ng-click="edit.active = !edit.active">
-                        <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
-                    </button>
-                    <small class="d-block font-italic"
-                           data-ng-bind="exchange.domain"
-                           data-ng-if="exchange.displayName != null && exchange.displayName !== exchange.domain"></small>
-                </h1>
-                <div class="form-group d-inline-block my-4" data-ng-show="edit.active"
+                <div class="mb-3" data-ng-show="!edit.active">
+                    <div class="d-flex">
+                        <h1 class="d-inline-block mb-0" data-ng-bind="exchange.displayName"></h1>
+                        <button class="btn btn-icon my-auto ml-2"
+                                type="button"
+                                title="{{i18n.wizard_modify}}"
+                                data-ng-click="edit.active = !edit.active">
+                            <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <span class="font-italic"
+                          data-ng-bind="exchange.domain"
+                          data-ng-if="exchange.displayName != null && exchange.displayName !== exchange.domain"></span>
+                </div>
+                <div class="form-group" data-ng-show="edit.active"
                      data-ng-class="{'has-error': formEditDisplayName.txtDisplayName.$dirty && formEditDisplayName.$invalid}">
                     <div class="input-group">
                         <input type="text" class="form-control input-lg" name="txtDisplayName" required
@@ -58,9 +62,9 @@
                     <div class="help-block"
                          data-ng-if="formEditDisplayName.txtDisplayName.$dirty"
                          data-ng-messages="formEditDisplayName.txtDisplayName.$error">
-                        <span data-ng-bind="::i18n.hosting_displayName_length"
+                        <span data-ng-bind="::i18n.emailpro_displayName_maxlength"
                               data-ng-message="maxlength"></span>
-                        <span data-ng-bind="::i18n.hosting_displayName_required"
+                        <span data-ng-bind="::i18n.emailpro_displayName_required"
                               data-ng-message="required"></span>
                     </div>
                 </div>
