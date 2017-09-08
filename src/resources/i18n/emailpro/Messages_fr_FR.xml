@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
-   <translation id="emailpro_tab_INFORMATION">Informations générales</translation>
+    <translation id="emailpro_tab_INFORMATION">Informations générales</translation>
+    <translation id="emailpro_displayName_maxlength" qtlid="260208">Le nom ne doit pas excéder 250 caractères.</translation>
+    <translation id="emailpro_displayName_required" qtlid="88293">Le nom ne peut pas être vide.</translation>
 
    <translation id="emailpro_dashboard_service_expired">Une erreur est survenue lors du chargement de votre compte E-mail Pro.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Comptes E-mail Pro</translation>
