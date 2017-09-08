@@ -32,17 +32,19 @@
             </tbody>
 
             <tbody data-ng-if="!aliasLoading && aliases.list.results.length > 0">
-                <tr data-ng-repeat="alias in aliases.list.results">
-                    <th scope="row" data-ng-bind="alias.displayName"></th>
+                <tr data-ng-repeat="alias in aliases.list.results track by $index">
+                    <th class="word-break" scope="row" data-ng-bind="alias.displayName"></th>
                     <td class="text-center">
                         <span class="label label-info"
                               data-i18n-static="exchange_tab_ALIAS_state_TASK_ON_DOING"
                               data-ng-if="alias.taskPendingId"
-                              data-uib-tooltip="{{i18n.exchange_tab_ALIAS_state_TASK_ON_DOING_tooltip}}"></span>
+                              data-uib-tooltip="{{i18n.exchange_tab_ALIAS_state_TASK_ON_DOING_tooltip}}"
+                              data-tooltip-append-to-body="true"></span>
                         <button class="btn btn-icon" type="button" title="{{alias.displayName}} {{table_delete_entry}}"
                                 data-ng-click="deleteAlias(alias)"
                                 data-ng-if="!alias.taskPendingId"
-                                data-uib-tooltip="{{i18n.exchange_tab_ALIAS_delete_tooltip}}">
+                                data-uib-tooltip="{{i18n.exchange_tab_ALIAS_delete_tooltip}}"
+                                data-tooltip-append-to-body="true">
                             <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
                         </button>
                     </td>
@@ -50,7 +52,8 @@
             </tbody>
         </table>
 
-        <div data-ng-show="!aliasLoading && aliases.list.results.length > 0"
+        <div class="clearfix"
+             data-ng-show="!aliasLoading && aliases.list.results.length > 0"
              data-pagination-server-side="aliasTable"
              data-pagination-server-side-function="getAliases"
              data-pagination-server-side-paginated-stuff="aliases"

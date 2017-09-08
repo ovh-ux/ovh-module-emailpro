@@ -43,22 +43,24 @@
                             <td class="text-center">
                                 <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_true"
                                       data-ng-if="disclaimer.outsideOnly"
-                                      data-uib-tooltip="{{i18n.exchange_tab_DISCLAIMER_disclaimer_outside_only_tooltip}}"></span>
+                                      data-uib-tooltip="{{i18n.exchange_tab_DISCLAIMER_disclaimer_outside_only_tooltip}}"
+                                      data-tooltip-append-to-body="true"></span>
                                 <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_false"
-                                      data-ng-if="!disclaimer.outsideOnly"
-                                      data-uib-tooltip="{{i18n.exchange_tab_DISCLAIMER_disclaimer_outside_only_tooltip}}"></span>
+                                      data-ng-if="!disclaimer.outsideOnly"></span>
                             </td>
                             <td class="text-center">
                                 <span class="fa fa-hourglass-half"
                                       data-ng-if="disclaimer.taskPendingId"
-                                      data-uib-tooltip="{{tr('exchange_tab_DISCLAIMER_state_doing_tooltip')}}"></span>
+                                      data-uib-tooltip="{{tr('exchange_tab_DISCLAIMER_state_doing_tooltip')}}"
+                                      data-tooltip-append-to-body="true"></span>
                             </td>
                             <td class="text-center">
                                 <button class="btn btn-icon" type="button"
                                         data-linkedpopover="emailpro/disclaimer/emailpro-disclaimer.popover.html"
                                         data-linkedpopover-placement="left"
                                         data-linkedpopover-single="true"
-                                        data-linkedpopover-remote="true">
+                                        data-linkedpopover-remote="true"
+                                        data-linkedpopover-title="{{i18n.common_actions}}">
                                     <span class="oui-icon oui-icon-gear_line _line oui-icon_small" aria-hidden="true"></span>
                                 </button>
                             </td>
@@ -67,7 +69,8 @@
                 </table>
             </div>
 
-            <div data-ng-show="!tableLoading && disclaimersList.list.results.length > 0"
+            <div class="clearfix"
+                 data-ng-show="!tableLoading && disclaimersList.list.results.length > 0"
                  data-pagination-server-side="disclaimersTable"
                  data-pagination-server-side-function="loadPaginated"
                  data-pagination-server-side-paginated-stuff="disclaimersList"

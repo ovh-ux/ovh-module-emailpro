@@ -1,14 +1,11 @@
 <div data-ng-controller="EmailProRemoveDisclaimerCtrl">
-    <div class="platforms"
-            data-wizard
-            data-wizard-bread-crumb
-            data-wizard-title="i18n.exchange_ACTION_delete_disclaimer_title"
-            data-wizard-on-cancel="resetAction"
-            data-wizard-on-finish="submit"
-            data-wizard-title-icon="'icon-delete-domain-on-exchange'">
+    <div data-wizard
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="submit"
+         data-wizard-title="i18n.exchange_ACTION_delete_disclaimer_title">
 
         <div data-wizard-step>
-            <strong data-i18n-static="emailpro_ACTION_delete_disclaimer_question"></strong>
+            <p data-i18n-static="emailpro_ACTION_delete_disclaimer_question"></p>
 
             <dl class="dl-horizontal mt-5">
                 <dt data-i18n-static="exchange_ACTION_disclaimer_associated_domains"></dt>

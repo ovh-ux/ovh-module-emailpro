@@ -1,11 +1,10 @@
 <div data-ng-controller="EmailProOrderAccountCtrl">
-    <div data-wizard data-wizard-on-cancel="resetAction"
-         data-wizard-on-finish="addEmailProAccount"
-         data-wizard-confirm-button-text="i18n.wizard_pay"
-         data-wizard-title="i18n.emailpro_ACTION_order_accounts_title"
-         data-wizard-title-icon="'icon-add-account-exchange'"
+    <div data-wizard
          data-wizard-bread-crumb
-         class="platforms">
+         data-wizard-confirm-button-text="i18n.wizard_pay"
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="addEmailProAccount"
+         data-wizard-title="i18n.emailpro_ACTION_order_accounts_title">
 
         <div data-wizard-step
              data-wizard-step-valid="isValid()"

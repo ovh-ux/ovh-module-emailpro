@@ -58,10 +58,12 @@
                             <td class="text-center" data-ng-bind="element.creationDate|date:'mediumDate'"></td>
 
                             <td class="text-center">
-                                <span class="oui-icon oui-icon_small"
-                                      data-ng-class="{ 'oui-icon-success text-success': !element.hiddenFromGAL, 'oui-icon-error text-danger': element.hiddenFromGAL }"
+                                <span class="btn btn-icon"
                                       data-uib-tooltip="{{tr('exchange_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_' + element.hiddenFromGAL)}}"
-                                      data-tooltip-placement="top">
+                                      data-tooltip-append-to-body="true">
+                                    <span class="oui-icon oui-icon_small"
+                                          data-ng-class="{ 'oui-icon-success text-success': !element.hiddenFromGAL, 'oui-icon-error text-danger': element.hiddenFromGAL }">
+                                    </span>
                                 </span>
                             </td>
 
@@ -73,7 +75,7 @@
                                 </span>
                                 <span class="label label-info"
                                       data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING"
-                                      data-ng-if="element.state == 'OK' && element.taskPendingId">
+                                      data-ng-if="element.state === 'OK' && element.taskPendingId">
                                 </span>
                             </td>
 
@@ -82,7 +84,8 @@
                                         data-linkedpopover="emailpro/external-contact/emailpro-external-contact-table.popover.html"
                                         data-linkedpopover-placement="left"
                                         data-linkedpopover-single="true"
-                                        data-linkedpopover-remote="true">
+                                        data-linkedpopover-remote="true"
+                                        data-linkedpopover-title="{{i18n.common_actions}}">
                                     <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
                                 </button>
                             </td>
@@ -91,7 +94,8 @@
                 </table>
             </div>
 
-            <div data-ng-show="!contactsLoading && contacts.list.results.length > 0"
+            <div class="clearfix"
+                 data-ng-show="!contactsLoading && contacts.list.results.length > 0"
                  data-pagination-server-side="externalContactsTable"
                  data-pagination-server-side-function="loadContacts"
                  data-pagination-server-side-paginated-stuff="contacts"
