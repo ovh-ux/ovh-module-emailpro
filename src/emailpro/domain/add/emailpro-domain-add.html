@@ -1,15 +1,14 @@
 <div data-ng-controller="EmailProAddDomainController">
 
     <div data-wizard
-         data-wizard-title="i18n.exchange_tab_domain_add_domain"
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="addDomain"
-         data-wizard-title-icon="'icon-add-domain-on-exchange'">
+         data-wizard-title="i18n.exchange_tab_domain_add_domain">
 
         <div data-wizard-step
-             data-wizard-step-valid="model.name && isNonOvhDomainValid()"
              data-wizard-step-on-load="loadDomainData"
-             data-wizard-step-on-next="checkDomain">
+             data-wizard-step-on-next="checkDomain"
+             data-wizard-step-valid="model.name && isNonOvhDomainValid()">
 
             <div class="loader text-center" data-ng-if="loading"></div>
 
@@ -141,10 +140,10 @@
              data-wizard-step-valid="model.type"
              data-wizard-step-on-previous="checkDomainType">
 
-            <strong data-ng-if="model.type === 'AUTHORITATIVE'"
-                    data-ng-bind-html="tr('exchange_tab_domain_add_step2_auth_intro', model.displayName)"></strong>
-            <strong data-ng-if="model.type === 'NON_AUTHORITATIVE'"
-                    data-ng-bind-html="tr('exchange_tab_domain_add_step2_non_auth_intro', model.displayName)"></strong>
+            <p data-ng-if="model.type === 'AUTHORITATIVE'"
+               data-ng-bind-html="tr('exchange_tab_domain_add_step2_auth_intro', model.displayName)"></p>
+            <p data-ng-if="model.type === 'NON_AUTHORITATIVE'"
+               data-ng-bind-html="tr('exchange_tab_domain_add_step2_non_auth_intro', model.displayName)"></p>
 
             <form name="emailProAddDomainStep3Form">
                 <div data-ng-if="model.domainType !== nonOvhDomain">
@@ -207,7 +206,7 @@
         </div>
 
         <div data-wizard-step>
-            <strong data-i18n-static="emailpro_tab_domain_add_step3_confirmation"></strong>
+            <p data-i18n-static="emailpro_tab_domain_add_step3_confirmation"></p>
             <dl class="dl-horizontal mt-3">
                 <dt data-i18n-static="exchange_tab_domain_domain"></dt>
                 <dd>

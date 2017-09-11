@@ -1,13 +1,12 @@
 <div data-ng-controller="EmailProExternalContactsModifyCtrl">
     <div data-wizard
-        data-wizard-on-cancel="resetAction"
-        data-wizard-on-finish="modifyContact"
-        data-wizard-title="i18n.exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_title"
-        data-wizard-title-icon="'icon-exchange-externalcontact-modify'"
-        data-wizard-bread-crumb>
+         data-wizard-bread-crumb
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="modifyContact"
+         data-wizard-title="i18n.exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_title">
 
         <div data-wizard-step
-            data-wizard-step-valid="accountIsValid()">
+             data-wizard-step-valid="accountIsValid()">
             <p class="mb-3" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_question"></p>
             <form class="form-horizontal" name="emailProExternalContactsModifyForm">
                 <p>

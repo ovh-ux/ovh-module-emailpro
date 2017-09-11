@@ -1,10 +1,10 @@
 <div data-ng-controller="EmailProRemoveEmailProCtrl">
     <div data-wizard
-         data-wizard-title="i18n.emailpro_resilitation_action_title"
+         data-wizard-bread-crumb
+         data-wizard-confirm-button-text="getSubmitButtonLabel()"
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="submit"
-         data-wizard-title-icon="'icon-stop-service-exchange'"
-         data-wizard-confirm-button-text="getSubmitButtonLabel()">
+         data-wizard-title="i18n.emailpro_resilitation_action_title">
 
         <div data-wizard-step>
 
@@ -53,9 +53,8 @@
                    data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName, exchange.accountsNumber])"></p>
             </div>
 
-            <div data-ng-if="exchange.renewType.deleteAtExpiration">
-                <p data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName])"></p>
-            </div>
+            <p data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName])"
+               data-ng-if="exchange.renewType.deleteAtExpiration"></p>
         </div>
     </div>
 </div>

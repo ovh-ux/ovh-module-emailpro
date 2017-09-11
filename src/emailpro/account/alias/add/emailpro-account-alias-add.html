@@ -1,9 +1,9 @@
 <div data-ng-controller="EmailProAddAccountAliasCtrl">
     <div data-wizard
          data-wizard-bread-crumb
-         data-wizard-title="i18n.exchange_tab_ALIAS_add_alias_title"
          data-wizard-on-cancel="resetAction"
-         data-wizard-on-finish="addAccountAlias">
+         data-wizard-on-finish="addAccountAlias"
+         data-wizard-title="i18n.exchange_tab_ALIAS_add_alias_title">
 
         <div data-wizard-step
              data-wizard-step-valid="aliasIsValid()"
@@ -12,9 +12,7 @@
             <div class="loader text-center" data-ng-if="!availableDomains"></div>
 
             <div data-ng-if="availableDomains">
-                <div class="form-group"
-                     data-ng-class="{'has-error': takenEmailError}"
-                     >
+                <div class="form-group" data-ng-class="{'has-error': takenEmailError}">
                     <label class="control-label" for="aliasInput"
                            data-ng-bind-html="tr('exchange_tab_ALIAS_add_alias_intro', selectedAccount.primaryEmailDisplayName)"></label>
                     <div class="input-group">

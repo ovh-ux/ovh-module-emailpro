@@ -21,7 +21,7 @@
                                     <span class="fa fa-times" aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <span class="input-group-addon disabled"
+                            <span class="input-group-addon"
                                   data-ng-if="!search.value">
                                 <span class="fa fa-search" aria-hidden="true"></span>
                             </span>
@@ -40,7 +40,7 @@
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_domain_accounts_count"></th>
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_domain_diagnostic"></th>
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_domain_status"></th>
-                            <th class="min-width text-center" scope="col"></th>
+                            <th class="min-width" scope="col"></th>
                         </tr>
                     </thead>
 
@@ -51,23 +51,23 @@
                     </tbody>
 
                     <tbody data-ng-if="!loading && !paginated.domains.length">
-                        <tr data-ng-if="!search.value">
+                        <tr>
                             <td class="text-center" colspan="6">
-                                <span data-i18n-static="emailpro_tab_domain_no_domains_1"></span>
-                                <button class="btn btn-link p-0" type="button"
-                                        data-i18n-static="exchange_tab_domain_no_domains_2"
-                                        data-ng-click="setAction('emailpro/domain/add/emailpro-domain-add')"></button>
-                                <span data-i18n-static="exchange_tab_domain_no_domains_3"></span>
+                                <div data-ng-if="!search.value">
+                                    <span data-i18n-static="emailpro_tab_domain_no_domains_1"></span>
+                                    <button class="btn btn-link p-0" type="button" style="font-size:inherit"
+                                            data-i18n-static="exchange_tab_domain_no_domains_2"
+                                            data-ng-click="setAction('emailpro/domain/add/emailpro-domain-add')"></button>
+                                    <span data-i18n-static="exchange_tab_domain_no_domains_3"></span>
+                                </div>
+                                <span data-i18n-static="exchange_tab_domain_table_empty_search" data-ng-if="search.value"></span>
                             </td>
-                        </tr>
-                        <tr data-ng-if="search.value">
-                            <td class="text-center" colspan="6" data-i18n-static="exchange_tab_domain_table_empty_search"></td>
                         </tr>
                     </tbody>
 
                     <tbody data-ng-if="!loading && paginated.domains.length > 0">
-                        <tr data-ng-repeat="domain in paginated.domains | orderBy:'formattedName':false"
-                            data-ng-class="{'warning': domain.partial}">
+                        <tr data-ng-repeat="domain in (paginated.domains | orderBy:'formattedName':false) track by $index"
+                            data-ng-class="{'text-warning': domain.partial}">
                             <td colspan="6" data-ng-if="domain.partial">
                                 <span class="fa fa-warning mr-2" aria-hidden="true"></span>
                                 <span data-ng-bind="domain.displayName"></span>
@@ -76,24 +76,26 @@
                                 data-ng-bind="domain.displayName"
                                 data-ng-if="!domain.partial"></th>
                             <td data-ng-if="!domain.partial && domain.domainValidated">
-                                <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state == stateOk && domain.type == domainTypeAuthoritative"
+                                <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state === stateOk && domain.type === domainTypeAuthoritative"
                                       data-ng-bind="tr('exchange_tab_domain_modify_in_progress', tr('exchange_tab_domain_inverse_NON_AUTHORITATIVE'))"
                                       data-ng-class="{'doing-grey': domain.taskInProgress}">
                                 </span>
-                                <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state == stateOk && domain.type == domainTypeNonAuthoritative"
+                                <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state === stateOk && domain.type === domainTypeNonAuthoritative"
                                       data-ng-bind="tr('exchange_tab_domain_modify_in_progress', tr('exchange_tab_domain_inverse_AUTHORITATIVE'))"
                                       data-ng-class="{'doing-grey': domain.taskInProgress}">
                                 </span>
-                                <span data-ng-if="!domain.partial && domain.state == 'DELETING'"
+                                <span data-ng-if="!domain.partial && domain.state === 'DELETING'"
                                       data-ng-bind="tr('exchange_tab_domain_' + domain.type)">
                                 </span>
-                                <span data-ng-if="!domain.taskInProgress || !domain.partial || domain.state == stateOk"
+                                <span data-ng-if="!domain.taskInProgress || !domain.partial || domain.state === stateOk"
                                       data-ng-bind="tr('exchange_tab_domain_' + domain.type)">
                                 </span>
                             </td>
                             <td colspan="2" data-ng-if="!domain.partial && !domain.domainValidated">
-                                <p data-i18n-static="exchange_tab_domain_validation_doing"></p>
-                                <p data-ng-if="domain.cname" data-i18n-static="exchange_tab_domain_validation_cname"></p>
+                                <span data-i18n-static="exchange_tab_domain_validation_doing"></span>
+                                <span class="d-block"
+                                      data-i18n-static="exchange_tab_domain_validation_cname"
+                                      data-ng-if="domain.cname"></span>
                             </td>
                             <td class="text-center"
                                 data-ng-hide="domain.partial || !domain.domainValidated"
@@ -133,9 +135,9 @@
                                         data-i18n-static="exchange_tab_domain_diagnostic_cname"
                                         data-ng-if="!domain.domainValidated && !domain.cname"
                                         data-simplepopover="{{tr('exchange_tab_domain_validation_cname_details', [domain.cname, domain.name, cnameRedirection])}}"
-                                        data-simplepopover-title="{{tr('exchange_tab_domain_validation_cname_title')}}"
                                         data-simplepopover-placement="top"
-                                        data-simplepopover-single="true">
+                                        data-simplepopover-single="true"
+                                        data-simplepopover-title="{{tr('exchange_tab_domain_validation_cname_title')}}">
                                  </button>
                             </td>
                             <td class="text-center" data-ng-if="!domain.partial">
@@ -147,36 +149,39 @@
                                           data-ng-if="domain.taskInProgress"
                                           data-i18n-static="exchange_tab_domain_task_in_progress"></span>
                                 </div>
-                                <div data-ng-if="domain.state == stateCreating || domain.state == stateDeleting">
-                                    <span class="label label-default"
+                                <div data-ng-if="domain.state === stateCreating || domain.state === stateDeleting">
+                                    <span class="label label-info"
                                           data-ng-if="domain.domainValidated == false && domain.cname"
                                           data-i18n-static="exchange_tab_domain_validation"></span>
-                                    <span class="label label-default"
-                                          data-ng-if="domain.state == stateCreating && domain.cname == null"
+                                    <span class="label label-info"
+                                          data-ng-if="domain.state === stateCreating && domain.cname == null"
                                           data-i18n-static="exchange_tab_ACCOUNTS_state_CREATING"></span>
                                     <span class="label label-danger"
-                                          data-ng-if="domain.state == stateDeleting"
+                                          data-ng-if="domain.state === stateDeleting"
                                           data-i18n-static="exchange_tab_ACCOUNTS_state_DELETING"></span>
                                 </div>
                             </td>
                             <td class="text-center text-nowrap" data-ng-if="!domain.partial">
-                                <button class="btn btn-icon" title="{{domain.displayName}}.&nbsp;{{::i18n.table_modify_entry}}"
+                                <button class="btn btn-icon" type="button" title="{{domain.displayName}}.&nbsp;{{::i18n.table_modify_entry}}"
                                         data-ng-click="updateDomain(domain)">
                                     <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
                                 </button>
-                                <button class="btn btn-icon" type="button" title="{{domain.displayName}}.&nbsp;{{::i18n.table_delete_entry}}"
-                                        data-ng-click="deleteDomain(domain)"
-                                        data-ng-disabled="isDeleteDisabled(domain)"
-                                        data-uib-tooltip="{{ getDeleteTooltip(domain) }}">
-                                    <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
-                                </button>
+                                <span data-uib-tooltip="{{ getDeleteTooltip(domain) }}"
+                                      data-tooltip-append-to-body="true">
+                                    <button class="btn btn-icon" type="button" title="{{domain.displayName}}.&nbsp;{{::i18n.table_delete_entry}}"
+                                            data-ng-click="deleteDomain(domain)"
+                                            data-ng-disabled="isDeleteDisabled(domain)">
+                                        <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
+                                    </button>
+                                </span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div data-ng-show="!loading && paginated.domains.length > 0"
+            <div class="clearfix"
+                 data-ng-show="!loading && paginated.domains.length > 0"
                  data-pagination-server-side="domainsTable"
                  data-pagination-server-side-function="getDomains"
                  data-pagination-server-side-paginated-stuff="paginated"

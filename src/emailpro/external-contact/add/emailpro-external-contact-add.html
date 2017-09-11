@@ -1,16 +1,16 @@
 <div data-ng-controller="EmailProAddExternalContactCtrl">
     <div data-wizard
-        data-wizard-on-cancel="resetAction"
-        data-wizard-on-finish="addContact"
-        data-wizard-title="i18n.exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_title"
-        data-wizard-title-icon="'icon-exchange-externalcontact-add'"
-        data-wizard-bread-crumb>
+         data-wizard-bread-crumb
+         data-wizard-on-cancel="resetAction"
+         data-wizard-on-finish="addContact"
+         data-wizard-title="i18n.exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_title">
 
         <div data-wizard-step
-            data-wizard-step-on-load="init"
-            data-wizard-step-valid="accountIsValid()">
+             data-wizard-step-on-load="init"
+             data-wizard-step-valid="accountIsValid()">
+
             <p class="mb-3" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question"></p>
-            <form class="form-horizontal">
+            <form class="form-horizontal" name="externalContactAddForm">
                 <p>
                     <small class="text-danger">*</small>
                     <small data-i18n-static="required_fields"></small>

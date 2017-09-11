@@ -56,24 +56,23 @@
                         <tr>
                             <th scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_email"></th>
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_type"
-                                data-ng-if="(exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted)"></th>
+                                data-ng-if="(exchange.serverDiagnostic.version === 14 && exchange.offer !== exchangeTypeHosted)"></th>
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_size"></th>
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_alias"></th>
                             <th class="text-center" scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_status"></th>
-                            <th class="min-width text-center" scope="col"></th>
                             <th class="min-width text-center" scope="col"></th>
                         </tr>
                     </thead>
 
                     <tbody data-ng-if="loading">
                         <tr>
-                            <td class="loader text-center" colspan="8"></td>
+                            <td class="loader text-center" colspan="6"></td>
                         </tr>
                     </tbody>
 
                     <tbody data-ng-if="!loading && !accounts.list.results.length && !accounts.list.messages.length">
                         <tr data-ng-if="!search.value">
-                            <td colspan="8">
+                            <td class="text-center" colspan="6">
                                 <span data-ng-if="!filterType || filterType === 'ALL'"
                                       data-i18n-static="exchange_tab_ACCOUNTS_table_empty"></span>
                                 <span data-ng-bind="tr('exchange_tab_ACCOUNTS_table_empty_type_' + filterType)"
@@ -81,27 +80,33 @@
                             </td>
                         </tr>
                         <tr data-ng-if="search.value">
-                            <td class="text-center" colspan="8" data-i18n-static="exchange_tab_ACCOUNTS_table_empty_search"></td>
+                            <td class="text-center" colspan="6" data-i18n-static="exchange_tab_ACCOUNTS_table_empty_search"></td>
                         </tr>
                     </tbody>
 
                     <tbody data-ng-if="!loading && (accounts.list.results.length > 0 || accounts.list.messages.length > 0)">
-                        <tr data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailAddress':false track by $index">
+                        <tr data-ng-repeat="account in (accounts.list.results | orderBy:'primaryEmailAddress':false) track by $index">
                             <th scope="row" data-ng-bind="account.primaryEmailDisplayName"></th>
 
                             <td data-ng-if="(exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted)"
                                 data-ng-bind="tr('exchange_tab_ACCOUNTS_type_' + account.accountLicense)"></td>
 
                             <td>
-                                <div class="progress progress-text my-0"
-                                     data-ng-class="{'progress-success' : account.percentUse < 51, 'progress-warning' : account.percentUse > 50 && account.percentUse < 81, 'progress-danger' : account.percentUse > 80 }">
-                                    <div class="progress-bar progress-bar-text" data-ng-style="{'width': account.percentUse + '%'}"></div>
-                                    <span>{{::account.usedQuota.value}} {{tr('unit_size_' + account.usedQuota.unit)}} / {{::account.totalQuota.value}} {{tr('unit_size_' + account.totalQuota.unit)}}</span>
+                                <div class="progress m-0">
+                                    <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{account.percentUse}}"
+                                         data-ng-class="{
+                                                    'progress-bar-success': account.percentUse < 51,
+                                                    'progress-bar-warning': account.percentUse > 50 && account.percentUse < 81,
+                                                    'progress-bar-danger': account.percentUse > 80
+                                                }"
+                                         data-ng-style="{'width': account.percentUse + '%'}">
+                                    </div>
+                                    <span class="progress-bar-label" data-ng-bind="(account.usedQuota.value + ' ' + tr('unit_size_' + account.usedQuota.unit)) + ' / ' + (account.totalQuota.value + ' ' + tr('unit_size_' + account.totalQuota.unit))"></span>
                                 </div>
                             </td>
                             <td class="text-center"
                                 data-ng-if="!account.partial">
-                                <span data-ng-if="!isConfigurable(account)"> - </span>
+                                <span data-ng-if="!isConfigurable(account)">-</span>
                                 <button class="btn btn-success btn-xs" type="button"
                                         data-ng-if="isConfigurable(account)"
                                         data-ng-bind="account.aliases"
@@ -109,85 +114,79 @@
                                 </button>
                             </td>
                             <td class="text-center">
-                                <span class="state-pending"
-                                   data-ng-if="account.state == stateTaskError"
-                                   data-uib-tooltip="{{tr('exchange_tab_ACCOUNTS_state_TASK_ON_ERROR')}}"></span>
-                                <span class="state-pending"
-                                   data-ng-if="account.state == stateTaskDoing"
-                                   data-uib-tooltip="{{tr('exchange_tab_ACCOUNTS_state_TASK_ON_DOING')}}"></span>
+                                <span class="fa fa-hourglass-half text-danger"
+                                      data-ng-if="account.state === stateTaskError"
+                                      data-uib-tooltip="{{tr('exchange_tab_ACCOUNTS_state_TASK_ON_ERROR')}}"
+                                      data-tooltip-append-to-body="true"></span>
+                                <span class="fa fa-hourglass-half text-info"
+                                      data-ng-if="account.state === stateTaskDoing"
+                                      data-uib-tooltip="{{tr('exchange_tab_ACCOUNTS_state_TASK_ON_DOING')}}"
+                                      data-tooltip-append-to-body="true"></span>
 
-                                <span class="badge"
-                                      data-ng-if="account.state == stateCreating"
+                                <span class="label label-info"
+                                      data-ng-if="account.state === stateCreating"
                                       data-i18n-static="exchange_tab_ACCOUNTS_state_CREATING"></span>
-                                <span class="badge"
-                                      data-ng-if="account.state == stateDeleting"
+                                <span class="label label-danger"
+                                      data-ng-if="account.state === stateDeleting"
                                       data-i18n-static="exchange_tab_ACCOUNTS_state_DELETING"></span>
-                                <span class="badge"
-                                      data-ng-if="account.state == stateSuspended"
+                                <span class="label label-warning"
+                                      data-ng-if="account.state === stateSuspended"
                                       data-i18n-static="exchange_tab_ACCOUNTS_state_SUSPENDED"></span>
-                                <span class="badge"
-                                      data-ng-if="account.state == stateSuspending"
+                                <span class="label label-info"
+                                      data-ng-if="account.state === stateSuspending"
                                       data-i18n-static="exchange_tab_ACCOUNTS_state_SUSPENDING"></span>
-                                <span class="badge"
-                                      data-ng-if="account.state == stateReopening"
+                                <span class="label label-info"
+                                      data-ng-if="account.state === stateReopening"
                                       data-i18n-static="exchange_tab_ACCOUNTS_state_REOPENING"></span>
 
-                                <span class="badge badge-important pointer"
-                                      data-ng-if="account.spamDetected && account.state === stateOk"
-                                      data-simplepopover="{{spamTooltipContent}}"
-                                      data-simplepopover-title="{{tr('exchange_tab_ACCOUNTS_popover_span_title')}}"
-                                      data-simplepopover-placement="top"
-                                      data-simplepopover-single="true"
-                                      data-i18n-static="exchange_tab_ACCOUNTS_state_SPAM">
-                                </span>
+                                <button class="btn btn-danger btn-xs" type="button"
+                                        data-i18n-static="exchange_tab_ACCOUNTS_state_SPAM"
+                                        data-ng-if="account.spamDetected && account.state === stateOk"
+                                        data-simplepopover="{{spamTooltipContent}}"
+                                        data-simplepopover-single="true"
+                                        data-simplepopover-title="{{tr('exchange_tab_ACCOUNTS_popover_span_title')}}"
+                                        data-simplepopover-placement="top">
+                                </button>
                             </td>
-                            <td class="text-center">
-                                <div data-ng-if="!noDomainFlag">
-                                    <button type="button"
-                                            title="{{account.primaryEmailDisplayName}} {{i18n.table_modify_entry}}"
-                                            class="btn btn-icon"
-                                            data-ng-if="isEditable(account)"
-                                            data-ng-click="editAccount(account)">
-                                            <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
-                                    </button>
-                                    <span class="icon icon-pencil text-muted"
-                                          data-ng-if="!isEditable(account)"
-                                          aria-hidden="true"></span>
-                                </div>
-                                <span class="oui-icon oui-icon-pen_line oui-icon_small text-muted" aria-hidden="true"
+                            <td class="text-nowrap">
+                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{i18n.table_modify_entry}}"
+                                        data-ng-click="editAccount(account)"
+                                        data-ng-disabled="!isEditable(account)"
+                                        data-ng-if="!noDomainFlag">
+                                    <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
+                                </button>
+                                <span class="btn btn-icon"
                                       data-ng-if="noDomainFlag"
-                                      data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_menu_account_no_domain_tooltip}}"></span>
-                            </td>
-
-                            <td class="text-center">
+                                      data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_menu_account_no_domain_tooltip}}"
+                                      data-tooltip-append-to-body="true">
+                                    <span class="oui-icon oui-icon-pen_line oui-icon_small text-muted" aria-hidden="true"></span>
+                                </span>
                                 <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{i18n.table_manage_entry}}"
-                                        data-ng-if="isConfigurable(account)"
+                                        data-ng-disabled="!isConfigurable(account)"
                                         data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_menu_account_tooltip}}"
                                         data-tooltip-append-to-body="true"
                                         data-linkedpopover="emailpro/account/emailpro-account.popover.html"
                                         data-linkedpopover-placement="left"
                                         data-linkedpopover-single="true"
-                                        data-linkedpopover-remote="true">
+                                        data-linkedpopover-remote="true"
+                                        data-linkedpopover-title="{{i18n.common_actions}}">
                                     <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
                                 </button>
-                                <span class="oui-icon oui-icon-gear_line oui-icon_small text-muted" aria-hidden="true"
-                                      data-ng-if="!isConfigurable(account)"></span>
                             </td>
                         </tr>
 
-                        <tr data-ng-repeat="account in accounts.list.messages | orderBy:'id':false">
-                            <td colspan="8">
-                                <div class="alert alert-warning m-0">
-                                    <span data-ng-bind="account.primaryEmailAddress"></span> :
-                                    <span data-i18n-static="exchange_tab_ACCOUNTS_partial_account"></span>
-                                </div>
+                        <tr data-ng-repeat="account in (accounts.list.messages | orderBy:'id':false) track by $index">
+                            <td class="text-center" colspan="6">
+                                <span data-ng-bind="account.primaryEmailAddress"></span> :
+                                <span data-i18n-static="exchange_tab_ACCOUNTS_partial_account"></span>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <div data-ng-show="!loading && (accounts.list.results.length > 0 || accounts.list.messages.length > 0)"
+            <div class="clearfix"
+                 data-ng-show="!loading && (accounts.list.results.length > 0 || accounts.list.messages.length > 0)"
                  data-pagination-server-side="accountsTable"
                  data-pagination-server-side-function="getAccounts"
                  data-pagination-server-side-paginated-stuff="accounts"

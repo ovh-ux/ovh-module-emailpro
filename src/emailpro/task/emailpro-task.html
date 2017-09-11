@@ -56,7 +56,8 @@
         </table>
     </div>
 
-    <div data-ng-show="!tableLoading && tasksList.list.results.length > 0"
+    <div class="clearfix"
+         data-ng-show="!tableLoading && tasksList.list.results.length > 0"
          data-pagination-server-side="tasksTable"
          data-pagination-server-side-function="loadPaginated"
          data-pagination-server-side-paginated-stuff="tasksList"

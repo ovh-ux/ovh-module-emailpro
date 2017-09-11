@@ -1,13 +1,14 @@
 <div data-ng-controller="EmailProUpdateRenewCtrl">
     <div data-wizard
+         data-wizard-bread-crumb
          data-wizard-on-cancel="reset"
          data-wizard-on-finish="submit"
-         data-wizard-title="i18n.exchange_update_billing_action_title"
-         data-wizard-title-icon="'icon-billing-config'">
+         data-wizard-title="i18n.exchange_update_billing_action_title">
 
-        <div data-wizard-step data-wizard-step-valid="buffer.hasChanged">
+        <div data-wizard-step
+             data-wizard-step-valid="buffer.hasChanged">
 
-            <strong data-ng-bind-html="tr('exchange_update_billing_periode_intro')"></strong>
+            <p data-ng-bind-html="tr('exchange_update_billing_periode_intro')"></p>
 
             <form class="my-3">
                 <div class="form-group">
@@ -41,9 +42,7 @@
                     <tr>
                         <th scope="col" data-i18n-static="exchange_tab_ACCOUNTS_table_email"></th>
                         <th scope="col" data-i18n-static="exchange_update_billing_expiration_date_label"></th>
-                        <th scope="col"
-                            class="nowrap"
-                            id="monthlyStateHeader"
+                        <th scope="col" id="monthlyStateHeader"
                             data-ng-hide="account.partial || exchange.offer === 'PROVIDER' && !is25g()">
                             <label class="m-0">
                                 <input class="m-0"
@@ -55,9 +54,7 @@
                                 <span data-i18n-static="exchange_update_billing_header_1M"></span>
                             </label>
                         </th>
-                        <th scope="col"
-                            class="nowrap"
-                            id="yearlyStateHeader">
+                        <th scope="col" id="yearlyStateHeader">
                             <label class="m-0">
                                 <input class="m-0" type="checkbox"
                                        data-tri-state-checkbox="yearlySelectAll"
@@ -67,9 +64,7 @@
                                 <span data-i18n-static="exchange_update_billing_header_1Y"></span>
                             </label>
                         </th>
-                        <th scope="col"
-                            class="nowrap"
-                            id="noneStateHeader">
+                        <th scope="col" id="noneStateHeader">
                             <label class="m-0">
                                 <input class="m-0" type="checkbox"
                                        data-tri-state-checkbox="deleteSelectAll"
@@ -88,67 +83,57 @@
                     </tr>
                 </tbody>
 
-                <tbody data-ng-if="bufferedAccounts.list.results.length === 0 && bufferedAccounts.list.messages.length === 0 && !loading && !search.value">
+                <tbody data-ng-if="bufferedAccounts.list.results.length === 0 && bufferedAccounts.list.messages.length === 0 && !loading">
                     <tr>
-                        <td colspan="5" data-i18n-static="exchange_tab_ACCOUNTS_table_empty"></td>
-                    </tr>
-                </tbody>
-
-                <tbody data-ng-if="bufferedAccounts.list.results.length === 0 && bufferedAccounts.list.messages.length === 0 && !loading && search.value">
-                    <tr>
-                        <td colspan="5" data-i18n-static="exchange_tab_ACCOUNTS_table_empty_search"></td>
+                        <td colspan="5">
+                            <span data-i18n-static="exchange_tab_ACCOUNTS_table_empty" data-ng-if="!search.value"></span>
+                            <span data-i18n-static="exchange_tab_ACCOUNTS_table_empty_search" data-ng-if="search.value"></span>
+                        </td>
                     </tr>
                 </tbody>
 
                 <tbody data-ng-if="!loading">
                     <tr data-ng-repeat="account in (bufferedAccounts.list.results | orderBy:'primaryEmailAddress':false) track by $index">
 
-                        <th id="primaryEmailDisplayName{{$index}}"
-                            scope="row"
-                            data-ng-bind="account.primaryEmailDisplayName | sliceContent:25"></th>
+                        <th class="word-break" id="primaryEmailDisplayName{{$index}}" scope="row"
+                            data-ng-bind="account.primaryEmailDisplayName | sliceContent:60"></th>
 
-                        <td data-ng-bind="account.expirationDate | date:'mediumDate'"></td>
+                        <td class="text-nowrap" data-ng-bind="account.expirationDate | date:'mediumDate'"></td>
 
                         <td class="text-center"
                             data-ng-hide="account.partial || exchange.offer === 'PROVIDER' && !is25g()">
-                            <input type="radio"
-                                   title="{{i18n.exchange_update_billing_header_1M}}"
-                                   aria-labelledby="monthlyStateHeader primaryEmailDisplayName{{$index}}"
+                            <input type="radio" title="{{i18n.exchange_update_billing_header_1M}}" aria-labelledby="monthlyStateHeader primaryEmailDisplayName{{$index}}"
                                    data-ng-change="trackSelected(account.primaryEmailAddress, account.renewPeriod);"
-                                   data-ng-value="'MONTHLY'"
-                                   data-ng-model="account.renewPeriod">
+                                   data-ng-model="account.renewPeriod"
+                                   data-ng-value="'MONTHLY'">
                         </td>
                         <td class="text-center"
                             data-ng-hide="account.partial">
-                            <input type="radio"
-                                   title="{{i18n.exchange_update_billing_header_1Y}}"
-                                   aria-labelledby="yearlyStateHeader primaryEmailDisplayName{{$index}}"
+                            <input type="radio" title="{{i18n.exchange_update_billing_header_1Y}}" aria-labelledby="yearlyStateHeader primaryEmailDisplayName{{$index}}"
                                    data-ng-change="trackSelected(account.primaryEmailAddress, account.renewPeriod);"
-                                   data-ng-value="'YEARLY'"
-                                   data-ng-model="account.renewPeriod">
+                                   data-ng-model="account.renewPeriod"
+                                   data-ng-value="'YEARLY'">
                         </td>
                         <td class="text-center">
-                            <input type="radio"
-                                   title="{{i18n.exchange_update_billing_header_terminate}}"
-                                   aria-labelledby="noneStateHeader primaryEmailDisplayName{{$index}}"
+                            <input type="radio" title="{{i18n.exchange_update_billing_header_terminate}}" aria-labelledby="noneStateHeader primaryEmailDisplayName{{$index}}"
                                    data-ng-change="trackSelected(account.primaryEmailAddress, account.renewPeriod);"
-                                   data-ng-value="'DELETE_AT_EXPIRATION'"
-                                   data-ng-model="account.renewPeriod">
+                                   data-ng-model="account.renewPeriod"
+                                   data-ng-value="'DELETE_AT_EXPIRATION'">
                         </td>
                     </tr>
 
-                    <tr data-ng-repeat="account in (bufferedAccounts.list.messages | orderBy:'id':false) track by $index"
-                        data-ng-class-odd="{'odd' : accounts.list.results.length%2 === 0, 'even' : accounts.list.results.length%2 > 0}"
-                        data-ng-class-even="{'even' : accounts.list.results.length%2 === 0, 'odd' : accounts.list.results.length%2 > 0}">
+                    <tr data-ng-repeat="account in (bufferedAccounts.list.messages | orderBy:'id':false) track by $index">
                         <td colspan="5">
-                            <span class="icon-warning-sign" aria-hidden="true"></span>
-                            <span data-ng-bind="account.id" data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_partial_account}}"></span>
+                            <span class="fa fa-exclamation-triangle mr-2" aria-hidden="true"></span>
+                            <span data-ng-bind="account.id"
+                                  data-uib-tooltip="{{i18n.exchange_tab_ACCOUNTS_partial_account}}"></span>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            <div data-pagination-server-side="accountsTable"
+            <div class="clearfix"
+                 data-pagination-server-side="accountsTable"
                  data-pagination-server-side-function="getAccounts"
                  data-pagination-server-side-paginated-stuff="bufferedAccounts"
                  data-pagination-server-side-table-loading="loading"></div>
@@ -158,7 +143,6 @@
                  data-ng-if="(exchange.offer === 'HOSTED' || exchange.offer === 'PROVIDER') && exchange.serverDiagnostic.version === 15 && !account.partial"
                  data-i18n-static="exchange_update_billing_periode_delete_warning">
             </div>
-
         </div>
 
         <div data-wizard-step>

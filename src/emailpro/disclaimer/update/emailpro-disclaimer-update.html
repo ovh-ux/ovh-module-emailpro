@@ -1,10 +1,8 @@
 <div data-ng-controller="EmailProUpdateDisclaimerCtrl">
     <div data-wizard
          data-wizard-on-cancel="resetAction"
-         data-wizard-title="i18n.exchange_ACTION_update_disclaimer_title"
-         data-wizard-title-icon="'icon-disclaimer-exchange'"
          data-wizard-on-finish="saveDisclaimer"
-         class="platforms">
+         data-wizard-title="i18n.exchange_ACTION_update_disclaimer_title">
 
         <div data-wizard-step
              data-wizard-step-valid="data.content && data.content.length < 5000">
