@@ -7,15 +7,13 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabDomainsCtrl
     $scope.stateDeleting = EmailPro.stateDeleting;
     $scope.stateOk = EmailPro.stateOk;
 
-    var init = function () {
+    const init = function () {
         $scope.loading = false;
         $scope.paginated = null;
         $scope.search = { value: null };
 
         EmailPro.getSelected().then((exchange) => {
             $scope.exchange = exchange;
-            $scope.isUpdateDisabledClass = $scope.domain.state !== $scope.stateOk ||
-                $scope.domain.taskInProgress || isReseller2010AuthInvalidMx(exchange) ? "disabled" : "";
             if ($scope.exchange.offer === "PROVIDER") {
                 $scope.cnameRedirection = "ex-mail.biz";
             } else {
@@ -24,22 +22,26 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabDomainsCtrl
         });
     };
 
-    function isReseller2010AuthInvalidMx (exchange) {
-        return exchange.offer === "PROVIDER" &&
-            exchange.serverDiagnostic.commercialVersion === "_2010" &&
-            $scope.domain.type === "AUTHORITATIVE" &&
-            !$scope.domain.mxValid;
+    function isReseller2010AuthInvalidMx (domain) {
+        return $scope.exchange.offer === "PROVIDER" &&
+            $scope.exchange.serverDiagnostic.commercialVersion === "_2010" &&
+            domain.type === "AUTHORITATIVE" &&
+            !domain.mxValid;
     }
 
     $scope.updateDomain = function (domain) {
-        if (domain.state === $scope.stateOk && !domain.taskInProgress && !isReseller2010AuthInvalidMx($scope.exchange)) {
+        if (domain.state === $scope.stateOk && !domain.taskInProgress && !isReseller2010AuthInvalidMx(domain)) {
             domain.domainTypes = $scope.domainTypes;
             $scope.setAction("emailpro/domain/update/emailpro-domain-update", angular.copy(domain));
         }
     };
 
+    $scope.isEditDisabled = function (domain) {
+        return domain.state !== $scope.stateOk || domain.taskInProgress || isReseller2010AuthInvalidMx(domain);
+    };
+
     $scope.isDeleteDisabled = function (domain) {
-        return domain.state !== $scope.stateOk || domain.accountsCount > 0 ? "disabled" : "";
+        return domain.state !== $scope.stateOk || domain.accountsCount > 0;
     };
 
     $scope.getDeleteTooltip = function (domain) {
@@ -102,7 +104,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabDomainsCtrl
     });
 
     $scope.containPartial = function () {
-        var i;
+        let i;
         if ($scope.paginated && $scope.paginated.domains && $scope.paginated.domains.length) {
             for (i = 0; i < $scope.paginated.domains.length; i++) {
                 if ($scope.paginated.domains[i].partial) {
