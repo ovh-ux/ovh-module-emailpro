@@ -170,15 +170,18 @@
                                         data-ng-click="updateDomain(domain)">
                                     <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
                                 </button>
-                                <span data-uib-tooltip="{{ getDeleteTooltip(domain) }}"
+                                <button class="btn btn-icon"
+                                        type="button"
+                                        title="{{domain.displayName}}.&nbsp;{{::i18n.table_delete_entry}}"
+                                        data-ng-click="deleteDomain(domain)"
+                                        data-ng-if="!isDeleteDisabled(domain)">
+                                    <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
+                                </button>
+                                <span class="btn btn-icon disabled"
+                                      data-ng-if="isDeleteDisabled(domain)"
+                                      data-uib-tooltip="{{i18n.emailpro_tab_domain_delete_domain_accounts_warning}}"
                                       data-tooltip-append-to-body="true">
-                                    <button class="btn btn-icon"
-                                            type="button"
-                                            title="{{domain.displayName}}.&nbsp;{{::i18n.table_delete_entry}}"
-                                            data-ng-click="deleteDomain(domain)"
-                                            data-ng-disabled="isDeleteDisabled(domain)">
-                                        <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
-                                    </button>
+                                    <span class="oui-icon oui-icon-trash_line oui-icon_small text-muted" aria-hidden="true"></span>
                                 </span>
                             </td>
                         </tr>

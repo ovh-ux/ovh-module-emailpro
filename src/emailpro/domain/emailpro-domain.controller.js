@@ -44,11 +44,6 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabDomainsCtrl
         return domain.state !== $scope.stateOk || domain.accountsCount > 0;
     };
 
-    $scope.getDeleteTooltip = function (domain) {
-        return domain.state !== $scope.stateOk ||
-            domain.accountsCount > 0 ? $scope.tr("emailpro_tab_domain_delete_domain_accounts_warning") : "";
-    };
-
     $scope.deleteDomain = function (domain) {
         if (domain.state === $scope.stateOk && domain.accountsCount === 0) {
             $scope.setAction("emailpro/domain/remove/emailpro-domain-remove", domain);
