@@ -6,14 +6,13 @@ angular
             this.OvhHttp = OvhHttp;
         }
 
-        removeContact (organization, serviceName, contactId) {
+        deletingContact (serviceName, externalEmailAddress) {
             return this.OvhHttp
-                .delete("/email/pro/{exchange}/externalContact/{externalEmailAddress}", {
+                .delete("/email/pro/{serviceName}/externalContact/{externalEmailAddress}", {
                     rootPath: "apiv6",
                     urlParams: {
-                        organization,
-                        exchange: serviceName,
-                        externalEmailAddress: contactId
+                        serviceName,
+                        externalEmailAddress
                     }
                 })
                 .then((data) => {
@@ -70,12 +69,11 @@ angular
                 });
         }
 
-        getContactOptions (organization, serviceName) {
+        retrievingContactOptions (serviceName) {
             return this.OvhHttp
                 .get("/email/pro/{serviceName}/domain", {
                     rootPath: "apiv6",
                     urlParams: {
-                        organization,
                         serviceName
                     },
                     params: {

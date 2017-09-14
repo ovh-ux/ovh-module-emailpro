@@ -22,7 +22,7 @@ angular
                 .getSelected()
                 .then((exchange) => {
                     if (exchange.serverDiagnostic.version === 14 && exchange.offer === this.EmailPro.accountTypeProvider) {
-                        this.EmailProExternalContacts.getContactOptions(this.$stateParams.organization, this.$stateParams.productId)
+                        this.EmailProExternalContacts.retrievingContactOptions(this.$stateParams.productId)
                             .then((data) => {
                                 this.availableMainDomains = data;
                                 this.attachOrganization2010 = this.availableMainDomains[0];
@@ -57,8 +57,6 @@ angular
         }
 
         submitting () {
-            this.$scope.resetAction();
-
             if (!_.isEmpty(this.attachOrganization2010)) {
                 this.model.organization2010 = this.attachOrganization2010.name;
             }
@@ -70,6 +68,9 @@ angular
                 })
                 .catch((failure) => {
                     this.Alerter.alertFromSWS(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail"), failure, this.$scope.alerts.dashboard);
+                })
+                .finally(() => {
+                    this.$scope.resetAction();
                 });
         }
 

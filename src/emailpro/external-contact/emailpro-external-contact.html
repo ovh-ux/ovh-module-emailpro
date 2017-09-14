@@ -1,21 +1,32 @@
-<div class="container-fluid px-0" data-ng-controller="EmailProTabExternalContactsCtrl">
+<div class="container-fluid px-0" data-ng-controller="EmailProTabExternalContactsCtrl as ctrl">
     <div class="row">
         <div class="col-md-9">
 
             <div class="text-right mb-3">
+                <label class="sr-only"
+                        for="externalContactsSearch"
+                        data-ng-bind="::i18n.common_search"></label>
                 <form class="form-inline">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="{{i18n.exchange_tab_EXTERNAL_CONTACTS_search_placeholder}}"
-                               data-ng-model="filter">
-                        <div class="input-group-btn"
-                             data-ng-if="filter">
-                            <button class="btn btn-default" type="button"
-                                    data-ng-click="emptySearch()">
+                        <input type="text"
+                               class="form-control"
+                               id="externalContactsSearch"
+                               maxlength="256"
+                               data-ng-disabled="ctrl.isLoading"
+                               data-ng-model="ctrl.searchValue"
+                               data-ng-change="ctrl.onSearchValueChanged()"
+                               placeholder="{{i18n.exchange_tab_EXTERNAL_CONTACTS_search_placeholder}}">
+                        <div class="input-group-btn" data-ng-if="ctrl.searchValue != null">
+                            <button class="btn btn-default"
+                                    type="button"
+                                    aria-label="{{i18n.exchange_reset_search_value}}"
+                                    data-ng-click="ctrl.resetSearch()"
+                                    data-ng-disabled="ctrl.isLoading">
+                                <span class="sr-only" data-i18n-static="table_delete_search"></span>
                                 <span class="fa fa-times" aria-hidden="true"></span>
                             </button>
                         </div>
-                        <span class="input-group-addon"
-                              data-ng-if="!filter">
+                        <span class="input-group-addon disabled" data-ng-if="ctrl.searchValue == null">
                             <span class="fa fa-search" aria-hidden="true"></span>
                         </span>
                     </div>
@@ -24,64 +35,67 @@
 
             <div class="table-responsive">
                 <table class="table"
-                       data-ng-class="{'table-hover table-striped': !contactsLoading && contacts.list.results.length > 0}">
+                       data-ng-class="{'table-hover table-striped': !ctrl.isLoading && ctrl.contacts.list.results.length > 0}">
                     <thead>
                         <tr>
                             <th scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_displayName"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_creationDate"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state"></th>
-                            <th class="min-width" scope="col"></th>
+                            <th scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_displayName"></th>
+                            <th scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_creationDate"></th>
+                            <th scope="col" class="text-center" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL"></th>
+                            <th scope="col" class="text-center" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state"></th>
+                            <th scope="col" class="min-width"></th>
                         </tr>
                     </thead>
 
-                    <tbody data-ng-if="contactsLoading">
+                    <tbody data-ng-if="ctrl.isLoading">
                         <tr>
                             <td class="loader text-center" colspan="6"></td>
                         </tr>
                     </tbody>
 
-                    <tbody data-ng-if="!contactsLoading && !contacts.list.results.length">
+                    <tbody data-ng-if="!ctrl.isLoading && ctrl.contacts.list.results.length === 0 && ctrl.searchValue == null">
                         <tr>
-                            <td class="text-center" colspan="6"
-                                data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_empty"></td>
+                            <td class="text-center" colspan="6" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_empty"></td>
                         </tr>
                     </tbody>
 
-                    <tbody data-ng-if="!contactsLoading && contacts.list.results.length > 0">
-                        <tr data-ng-repeat="element in contacts.list.results track by $index">
-                            <th scope="row" data-ng-bind="element.externalEmailAddress"></th>
+                    <tbody data-ng-if="!ctrl.isLoading && ctrl.contacts.list.results.length === 0 && ctrl.searchValue != null">
+                        <tr>
+                            <td class="text-center" colspan="6" data-i18n-static="exchange_tab_ACCOUNTS_table_empty_search"></td>
+                        </tr>
+                    </tbody>
 
-                            <td class="text-center" data-ng-bind="element.displayName"></td>
+                    <tbody data-ng-if="!ctrl.isLoading && ctrl.contacts.list.results.length > 0">
+                        <tr data-ng-repeat="contact in ctrl.contacts.list.results track by $index">
+                            <th scope="row" data-ng-bind="contact.externalEmailAddress"></th>
 
-                            <td class="text-center" data-ng-bind="element.creationDate|date:'mediumDate'"></td>
+                            <td data-ng-bind="contact.displayName"></td>
+
+                            <td data-ng-bind="contact.creationDate| date: 'mediumDate'"></td>
 
                             <td class="text-center">
                                 <span class="btn btn-icon"
-                                      data-uib-tooltip="{{tr('exchange_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_' + element.hiddenFromGAL)}}"
+                                      data-uib-tooltip="{{tr('exchange_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_' + contact.hiddenFromGAL)}}"
                                       data-tooltip-append-to-body="true">
-                                    <span class="oui-icon oui-icon_small"
-                                          data-ng-class="{ 'oui-icon-success text-success': !element.hiddenFromGAL, 'oui-icon-error text-danger': element.hiddenFromGAL }">
-                                    </span>
+                                    <span class="oui-icon oui-icon_small" data-ng-class="{
+                                            'oui-icon-success text-success': !contact.hiddenFromGAL,
+                                            'oui-icon-error text-danger': contact.hiddenFromGAL
+                                        }"></span>
                                 </span>
                             </td>
 
                             <td class="text-center">
                                 <span class="label"
-                                      data-ng-bind="tr('exchange_tab_EXTERNAL_CONTACTS_table_headers_state_' + element.state)"
-                                      data-ng-class="getStateClassFor(element.state)"
-                                      data-ng-if="element.state !== 'OK'">
-                                </span>
-                                <span class="label label-info"
-                                      data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING"
-                                      data-ng-if="element.state === 'OK' && element.taskPendingId">
+                                      data-ng-bind="tr('exchange_tab_EXTERNAL_CONTACTS_table_headers_state_' + contact.state)"
+                                      data-ng-class="ctrl.constructor.getStateClassFor(contact.state)">
                                 </span>
                             </td>
 
                             <td class="text-center">
-                                <button class="btn btn-icon" type="button" title="{{element.externalEmailAddress}} {{i18n.table_manage_entry}}"
-                                        data-linkedpopover="emailpro/external-contact/emailpro-external-contact-table.popover.html"
+                                <button class="btn btn-icon"
+                                        type="button"
+                                        title="{{contact.externalEmailAddress}} {{i18n.table_manage_entry}}"
+                                        data-linkedpopover="emailpro/external-contact/popover/emailpro-external-contact-popover.html"
                                         data-linkedpopover-placement="left"
                                         data-linkedpopover-single="true"
                                         data-linkedpopover-remote="true"
@@ -95,16 +109,17 @@
             </div>
 
             <div class="clearfix"
-                 data-ng-show="!contactsLoading && contacts.list.results.length > 0"
+                 data-ng-show="!ctrl.isLoading && ctrl.contacts.list.results.length > 0"
                  data-pagination-server-side="externalContactsTable"
-                 data-pagination-server-side-function="loadContacts"
-                 data-pagination-server-side-paginated-stuff="contacts"
-                 data-pagination-server-side-table-loading="contactsLoading">
+                 data-pagination-server-side-function="retrievingContacts"
+                 data-pagination-server-side-paginated-stuff="getContacts()"
+                 data-pagination-server-side-table-loading="getIsLoading()">
             </div>
         </div>
 
         <div class="col-md-3 mt-5 mt-lg-0">
-            <button type="button" class="btn btn-block btn-default"
+            <button type="button"
+                    class="btn btn-block btn-default"
                     data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_title_button"
                     data-ng-click="setAction('emailpro/external-contact/add/emailpro-external-contact-add')">
             </button>

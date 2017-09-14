@@ -41,8 +41,6 @@ angular
         }
 
         submitting () {
-            this.$scope.resetAction();
-
             return this.EmailProExternalContacts
                 .updatingContact(this.$stateParams.productId, this.previousModel.externalEmailAddress, this.model)
                 .then(() => {
@@ -50,6 +48,9 @@ angular
                 })
                 .catch((err) => {
                     this.Alerter.alertFromSWS(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail"), err, this.$scope.alerts.dashboard);
+                })
+                .finally(() => {
+                    this.$scope.resetAction();
                 });
         }
 

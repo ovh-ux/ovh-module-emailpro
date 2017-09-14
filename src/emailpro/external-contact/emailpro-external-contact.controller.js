@@ -1,19 +1,68 @@
+angular
+    .module("Module.emailpro.controllers")
+    .controller("EmailProTabExternalContactsCtrl", class EmailProTabExternalContactsCtrl {
+        constructor ($scope, $stateParams, EmailPro, EmailProExternalContacts, $timeout) {
+            this.$scope = $scope;
+            this.$stateParams = $stateParams;
+            this.EmailPro = EmailPro;
+            this.EmailProExternalContacts = EmailProExternalContacts;
+            this.$timeout = $timeout;
+        }
 
+        $onInit () {
+            this.isLoading = false;
+            this.contacts = null;
+            this.searchValue = null;
 
-angular.module("Module.emailpro.controllers").controller("EmailProExternalContactsDeleteCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts, Alerter) => {
-    "use strict";
+            this.$scope.$on(this.EmailPro.events.externalcontactsChanged, () => {
+                this.$scope.$broadcast("paginationServerSide.reload", "externalContactsTable");
+            });
 
-    $scope.model = {
-        externalEmailAddress: $scope.currentActionData
-    };
+            this.debouncedRetrievingContacts = _.debounce(this.retrievingContacts, 300);
 
-    $scope.deleteAccount = function () {
-        $scope.resetAction();
-        EmailProExternalContacts.removeContact($stateParams.organization, $stateParams.productId, $scope.model.externalEmailAddress).then((data) => {
-            Alerter.alertFromSWS($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success"), data, $scope.alerts.dashboard);
-        }, (data) => {
-            Alerter.alertFromSWS($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail"), data, $scope.alerts.dashboard);
-        });
-    };
+            this.$scope.retrievingContacts = (count, offet) => this.retrievingContacts(count, offet);
+            this.$scope.getContacts = () => this.contacts;
+            this.$scope.getIsLoading = () => this.isLoading;
+        }
 
-});
+        onSearchValueChanged () {
+            this.debouncedRetrievingContacts();
+        }
+
+        resetSearch () {
+            this.searchValue = null;
+            this.debouncedRetrievingContacts();
+        }
+
+        retrievingContacts (count, offset) {
+            this.isLoading = true;
+
+            return this.EmailProExternalContacts
+                .retrievingContacts(this.$stateParams.productId, count, offset, this.searchValue)
+                .then((contacts) => {
+                    this.contacts = contacts;
+                })
+                .catch((error) => {
+                    this.Alerter.alertFromSWS(this.translator.tr("emailpro_externalContacts_tab_retrieving_failure"), error, this.$scope.alerts.dashboard);
+                })
+                .finally(() => {
+                    this.isLoading = false;
+                });
+        }
+
+        static getStateClassFor (state) {
+            switch (state) {
+            case "OK":
+            case "MODIFYING":
+            case "CREATING":
+            case "REOPENING":
+                return "label-info";
+            case "DELETING":
+                return "label-warning";
+            case "SUSPENDED":
+            case "SUSPENDING":
+                return "label-error";
+            default:
+            }
+        }
+    });

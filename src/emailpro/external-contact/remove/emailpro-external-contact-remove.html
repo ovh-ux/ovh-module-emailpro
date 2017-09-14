@@ -1,14 +1,15 @@
-<div data-ng-controller="EmailProExternalContactsDeleteCtrl">
+<div data-ng-controller="EmailProExternalContactsDeleteCtrl as ctrl">
     <div data-wizard
          data-wizard-on-cancel="resetAction"
-         data-wizard-on-finish="deleteAccount"
+         data-wizard-on-finish="deleting"
          data-wizard-title="i18n.exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_title">
 
         <div data-wizard-step>
             <p data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_step1_question"></p>
-            <dl>
+
+            <dl class="dl-horizontal">
                 <dt data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_step1_contact"></dt>
-                <dd data-ng-bind="model.externalEmailAddress"></dd>
+                <dd data-ng-bind="ctrl.externalEmailAddress"></dd>
             </dl>
         </div>
     </div>
