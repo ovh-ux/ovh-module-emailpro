@@ -1,104 +1,116 @@
-angular.module("Module.emailpro.services").service("EmailProExternalContacts", function (EmailPro, OvhHttp) {
-    "use strict";
-
-    this.isAccountValid = function (account) {
-        if (!account || !EmailPro.isEmailValid(account.externalEmailAddress)) {
-            return false;
-        } else if (account.firstName &&
-                  account.firstName.length > 64) {
-            return false;
-        } else if (account.lastName &&
-                  account.lastName.length > 64) {
-            return false;
-        } else if (!account.displayName ||
-                  account.displayName.length === 0) {
-            return false;
-        } else if (account.displayName &&
-                  account.displayName.length > 255) {
-            return false;
-        }
-        return true;
-    };
-
-    this.removeContact = function (organization, serviceName, contactId) {
-        return OvhHttp.delete("/email/pro/{exchange}/externalContact/{externalEmailAddress}", {
-            rootPath: "apiv6",
-            urlParams: {
-                organization,
-                exchange: serviceName,
-                externalEmailAddress: contactId
-            }
-        }).then((data) => {
-            EmailPro.resetTabExternalContacts();
-            return data;
-        });
-    };
-
-    this.modifyContact = function (organization, serviceName, contactId, modifiedContact) {
-        modifiedContact.state = _.camelCase(modifiedContact.state);
-        return OvhHttp.put("/email/pro/{exchange}/externalContact/{externalEmailAddress}", {
-            rootPath: "apiv6",
-            urlParams: {
-                organization,
-                exchange: serviceName,
-                externalEmailAddress: contactId
-            },
-            data: modifiedContact
-        }).then((data) => {
-            EmailPro.resetTabExternalContacts();
-            return data;
-        });
-    };
-
-    this.addContact = function (organization, serviceName, newContact) {
-        return OvhHttp.post("/email/pro/{exchange}/externalContact", {
-            rootPath: "apiv6",
-            urlParams: {
-                organization,
-                exchange: serviceName
-            },
-            data: newContact
-        }).then((data) => {
-            EmailPro.resetTabExternalContacts();
-            return data;
-        });
-    };
-
-    this.getContacts = function (organization, serviceName, count, offset, filter) {
-        var params = {
-            count,
-            offset
-        };
-
-        if (filter) {
-            params.search = filter;
+angular
+    .module("Module.emailpro.services")
+    .service("EmailProExternalContacts", class EmailProExternalContacts {
+        constructor (EmailPro, OvhHttp) {
+            this.EmailPro = EmailPro;
+            this.OvhHttp = OvhHttp;
         }
 
-        return OvhHttp.get("/sws/emailpro/{exchange}/externalContacts", {
-            rootPath: "2api",
-            urlParams: {
-                organization,
-                exchange: serviceName
-            },
-            params
-        });
-    };
-
-    this.getContactOptions = function (organization, serviceName) {
-        return OvhHttp.get("/email/pro/{exchange}/domain", {
-            rootPath: "apiv6",
-            urlParams: {
-                organization,
-                exchange: serviceName
-            },
-            params: {
-                main: true,
-                state: "ok"
+        isAccountValid (account) {
+            if (!account || !this.EmailPro.isEmailValid(account.externalEmailAddress)) {
+                return false;
+            } else if (account.firstName &&
+                account.firstName.length > 64) {
+                return false;
+            } else if (account.lastName &&
+                account.lastName.length > 64) {
+                return false;
+            } else if (!account.displayName ||
+                account.displayName.length === 0) {
+                return false;
+            } else if (account.displayName &&
+                account.displayName.length > 255) {
+                return false;
             }
-        }).then((data) => data.map((d) => ({
-            name: d,
-            displayName: punycode.toUnicode(d),
-            formattedName: punycode.toUnicode(d)
-        })));
-    };
-});
+            return true;
+        }
+
+        removeContact (organization, serviceName, contactId) {
+            return this.OvhHttp
+                .delete("/email/pro/{exchange}/externalContact/{externalEmailAddress}", {
+                    rootPath: "apiv6",
+                    urlParams: {
+                        organization,
+                        exchange: serviceName,
+                        externalEmailAddress: contactId
+                    }
+                })
+                .then((data) => {
+                    this.EmailPro.resetTabExternalContacts();
+                    return data;
+                });
+        }
+
+        modifyContact (organization, serviceName, externalEmailAddress, modifiedContact) {
+            modifiedContact.state = _.camelCase(modifiedContact.state);
+
+            return this.OvhHttp
+                .put("/email/pro/{serviceName}/externalContact/{externalEmailAddress}", {
+                    rootPath: "apiv6",
+                    urlParams: {
+                        organization,
+                        serviceName,
+                        externalEmailAddress
+                    },
+                    data: modifiedContact
+                })
+                .then((data) => {
+                    this.EmailPro.resetTabExternalContacts();
+                    return data;
+                });
+        }
+
+        addingContact (organization, serviceName, newContact) {
+            return this.OvhHttp
+                .post("/email/pro/{serviceName}/externalContact", {
+                    rootPath: "apiv6",
+                    urlParams: {
+                        organization,
+                        serviceName
+                    },
+                    data: newContact
+                })
+                .then((data) => {
+                    this.EmailPro.resetTabExternalContacts();
+                    return data;
+                });
+        }
+
+        retrievingContacts (organization, serviceName, count, offset, search) {
+            return this.OvhHttp
+                .get("/sws/emailpro/{serviceName}/externalContacts", {
+                    rootPath: "2api",
+                    urlParams: {
+                        organization,
+                        serviceName
+                    },
+                    params: {
+                        count,
+                        offset,
+                        search
+                    }
+                });
+        }
+
+        getContactOptions (organization, serviceName) {
+            return this.OvhHttp
+                .get("/email/pro/{serviceName}/domain", {
+                    rootPath: "apiv6",
+                    urlParams: {
+                        organization,
+                        serviceName
+                    },
+                    params: {
+                        main: true,
+                        state: "ok"
+                    }
+                })
+                .then((data) =>
+                    data.map((d) => ({
+                        name: d,
+                        displayName: punycode.toUnicode(d),
+                        formattedName: punycode.toUnicode(d)
+                    }))
+                );
+        }
+    });
