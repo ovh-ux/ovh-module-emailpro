@@ -101,4 +101,9 @@
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Le domaine saisi n'est pas valide</translation>
 
+   <translation id="emailpro_externalContacts_add_displayName_errors_isEmpty">Champ obligatoire</translation>
+   <translation id="emailpro_externalContacts_add_displayName_errors_notValid">L'adresse e-mail ne peut contenir que des caractères alphanumériques ou les caractères <strong>.-_+</strong> (exemple: e_mail-3.addresse+abc@email.fr)</translation>
+   <translation id="emailpro_externalContacts_add_displayName_errors_alreadyTaken">Cette adresse e-mail est déjà utilisée</translation>
+   <translation id="emailpro_externalContacts_add_displayName_helper">Si aucune valeur n'est utilisée pour ce champ alors le <strong>nom à afficher</strong> sera la partie locale (avant le @) du <strong>compte e-mail</strong></translation>
+
 </translations>
