@@ -41,7 +41,7 @@ angular.module("Module.emailpro.controllers")
 
         $scope.loadContacts = function (count, offset) {
             $scope.contactsLoading = true;
-            EmailProExternalContacts.retrievingContacts($stateParams.organization, $stateParams.productId, count, offset, $scope.filter)
+            EmailProExternalContacts.retrievingContacts($stateParams.productId, count, offset, $scope.filter)
                 .then((contacts) => {
                     $scope.contacts = contacts;
                     $scope.contactsLoading = false;

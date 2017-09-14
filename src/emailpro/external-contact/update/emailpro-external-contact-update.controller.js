@@ -1,6 +1,6 @@
 angular
     .module("Module.emailpro.controllers")
-    .controller("EmailProAddExternalContactCtrl", class EmailProAddExternalContactCtrl {
+    .controller("EmailProExternalContactsModifyCtrl", class EmailProExternalContactsModifyCtrl {
         constructor ($scope, $stateParams, EmailPro, EmailProExternalContacts, Alerter, translator) {
             this.$scope = $scope;
             this.$stateParams = $stateParams;
@@ -11,32 +11,16 @@ angular
         }
 
         $onInit () {
-            this.model = {
-                hiddenFromGAL: false
-            };
+            this.previousModel = angular.copy(this.$scope.currentActionData);
+            this.model = angular.copy(this.$scope.currentActionData);
 
             this.isLoading = false;
             this.emailValidationRegex = "^[a-zA-Z0-9]+([\.+\-\w][a-zA-Z0-9]+)*@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$";
 
-            this.EmailPro
-                .getSelected()
-                .then((exchange) => {
-                    if (exchange.serverDiagnostic.version === 14 && exchange.offer === this.EmailPro.accountTypeProvider) {
-                        this.EmailProExternalContacts.getContactOptions(this.$stateParams.organization, this.$stateParams.productId)
-                            .then((data) => {
-                                this.availableMainDomains = data;
-                                this.attachOrganization2010 = this.availableMainDomains[0];
-                            })
-                            .catch((failure) => {
-                                this.$scope.resetAction();
-                                this.$scope.setMessage(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail"), failure.data);
-                            });
-                    }
-                });
-
             this.retrievingAlreadyTakenEmails();
 
             this.$scope.submitting = () => this.submitting();
+            this.$scope.modelHasChanged = () => this.modelHasChanged();
         }
 
         retrievingAlreadyTakenEmails () {
@@ -59,41 +43,37 @@ angular
         submitting () {
             this.$scope.resetAction();
 
-            if (!_.isEmpty(this.attachOrganization2010)) {
-                this.model.organization2010 = this.attachOrganization2010.name;
-            }
-
             return this.EmailProExternalContacts
-                .addingContact(this.$stateParams.productId, this.model)
+                .updatingContact(this.$stateParams.productId, this.previousModel.externalEmailAddress, this.model)
                 .then(() => {
-                    this.Alerter.success(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_success"), this.$scope.alerts.dashboard);
+                    this.Alerter.success(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success"), this.$scope.alerts.dashboard);
                 })
-                .catch((failure) => {
-                    this.Alerter.alertFromSWS(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail"), failure, this.$scope.alerts.dashboard);
+                .catch((err) => {
+                    this.Alerter.alertFromSWS(this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail"), err, this.$scope.alerts.dashboard);
                 });
         }
 
         isCurrentEmailAlreadyTaken () {
-            return this.alreadyTakenEmails.includes(this.model.externalEmailAddress);
+            return this.model.externalEmailAddress !== this.previousModel.externalEmailAddress && this.alreadyTakenEmails.includes(this.model.externalEmailAddress);
         }
 
         getEmailErrorMessage () {
-            this.externalContactAddForm.emailAddress.$setValidity("email", true);
+            this.emailProExternalContactsModifyForm.emailAddress.$setValidity("email", true);
 
-            if (this.externalContactAddForm.emailAddress.$dirty && this.externalContactAddForm.emailAddress.$error.required) {
+            if (this.emailProExternalContactsModifyForm.emailAddress.$dirty && this.emailProExternalContactsModifyForm.emailAddress.$error.required) {
                 return this.translator.tr("emailpro_externalContacts_add_displayName_errors_isEmpty");
             }
 
-            if (this.externalContactAddForm.emailAddress.$dirty && this.externalContactAddForm.emailAddress.$error.pattern) {
+            if (this.emailProExternalContactsModifyForm.emailAddress.$dirty && this.emailProExternalContactsModifyForm.emailAddress.$error.pattern) {
                 return this.translator.tr("emailpro_externalContacts_add_displayName_errors_notValid");
             }
 
-            if (this.externalContactAddForm.emailAddress.$dirty && (this.isCurrentEmailAlreadyTaken() || this.externalContactAddForm.emailAddress.$error.email)) {
-                this.externalContactAddForm.emailAddress.$setValidity("email", false);
+            if (this.emailProExternalContactsModifyForm.emailAddress.$dirty && (this.isCurrentEmailAlreadyTaken() || this.emailProExternalContactsModifyForm.emailAddress.$error.email)) {
+                this.emailProExternalContactsModifyForm.emailAddress.$setValidity("email", false);
                 return this.translator.tr("emailpro_externalContacts_add_displayName_errors_alreadyTaken");
             }
 
-            if (this.externalContactAddForm.emailAddress.$dirty && this.externalContactAddForm.emailAddress.$invalid) {
+            if (this.emailProExternalContactsModifyForm.emailAddress.$dirty && this.emailProExternalContactsModifyForm.emailAddress.$invalid) {
                 return this.translator.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_invalid");
             }
 
@@ -106,5 +86,9 @@ angular
             const lastName = _.isEmpty(this.model.lastName) ? "" : this.model.lastName;
 
             this.model.displayName = `${firstName}${separator}${lastName}`;
+        }
+
+        modelHasChanged () {
+            return !_.isEqual(this.previousModel, this.model);
         }
     });
