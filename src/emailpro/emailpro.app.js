@@ -10,7 +10,6 @@ angular.module("Module.emailpro", ["ovh-utils-angular", "ngRoute", "ui.bootstrap
             templateUrl: "emailpro/emailpro.html",
             controller: "EmailProCtrl",
             reloadOnSearch: false,
-            piwikActionName: "Email pro configuration",
             resolve: {
                 navigationInformations: ["Navigator", "$rootScope", (Navigator, $rootScope) => {
                     $rootScope.currentSectionInformation = "email_pro";
