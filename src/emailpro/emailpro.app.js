@@ -5,7 +5,7 @@ angular.module("Module.emailpro", ["ovh-utils-angular", "ngRoute", "ui.bootstrap
     .config(["$stateProvider", function ($stateProvider) {
         "use strict";
 
-        $stateProvider.state("app.email-pro", {
+        $stateProvider.state("web.email-pro", {
             url: "/configuration/email_pro/:productId?tab",
             templateUrl: "emailpro/emailpro.html",
             controller: "EmailProCtrl",
