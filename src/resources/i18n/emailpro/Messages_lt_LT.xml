@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
+   <translation id="emailpro_tab_INFORMATION" qtlid="27115">Pagrindinė informacija</translation>
+   <translation id="emailpro_displayName_maxlength" qtlid="260208">Pavadinimas neturi viršyti 250 simbolių.</translation>
+   <translation id="emailpro_displayName_required" qtlid="88293">Vardo laukelis negali būti tuščias.</translation>
 
+   <translation id="emailpro_dashboard_service_expired" qtlid="433706">Įvyko klaida keičiant jūsų E-mail Pro paskyrą.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro paskyros</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Reikia pagalbos konfigūruojant E-mail Pro paslaugą?</translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Jūsų E-mail Pro paslauga beveik paruošta. Jūs turite priskirti domeną savo paslaugai. Jei dar neturite domeno, <a href="https://www.ovh.lt/cgi-bin/newOrder/order.cgi" target="_blank">spauskite čia</a>, kad įsigytumėte.</translation>
@@ -43,6 +47,12 @@
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Keisti E-mail Pro paskyrą</translation>
    <translation id="emailpro_tab_account_remove_title" qtlid="375465">Ar iš tiesų norite pašalinti šią paskyrą iš savo E-mail Pro paslaugos?</translation>
    <translation id="emailpro_tab_account_remove_success" qtlid="375478">Paskyra bus pašalinta iš jūsų E-mail Pro paslaugos.</translation>
+
+<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
+Anti-spam Vade Secure paslauga yra suderinama su Non-authorative režimu (tik jeigu jūsų pop/imap el. paštas yra talpinamas OVH). Tokiu atveju rekomenduojama naudoti: <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> ir <strong qtlid="292228">{3}</strong>
+<br/><br/> Jeigu naudosite Non-authoritative režimą el. pašto dėžutėms, talpinamoms OVH, tuomet jūs turėtumėte naudoti: <strong qtlid="416436">{4}</strong> (peržiūrėti susijusių domenų skiltį)
+</translation>
+   <translation id="emailpro_tab_domain_manage" qtlid="404395">: valdyti</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (tik E-mail Pro paskyra)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-authoritative (E-mail Pro + kitos el. pašto paslaugos)</translation>

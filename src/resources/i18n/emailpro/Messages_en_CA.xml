@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
+   <translation id="emailpro_tab_INFORMATION" qtlid="27115">General information</translation>
+   <translation id="emailpro_displayName_maxlength" qtlid="260208">The name must not exceed 250 characters.</translation>
+   <translation id="emailpro_displayName_required" qtlid="88293">The name cannot be empty.</translation>
 
+   <translation id="emailpro_dashboard_service_expired" qtlid="433706">An error occurred loading your Email Pro account. </translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Email Pro accounts </translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Do you need help configuring your Email Pro service? </translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Your Email Pro service is almost ready. You have to attach a domain to your service. If you don't have one, <a href="https://www.ovh.co.uk/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to buy one.</translation>
@@ -43,6 +47,12 @@
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Change the Email Pro account </translation>
    <translation id="emailpro_tab_account_remove_title" qtlid="375465">Are you sure you want to delete the following Email Pro account?</translation>
    <translation id="emailpro_tab_account_remove_success" qtlid="375478">The account will be deleted from your Email Pro service.</translation>
+
+<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
+The Vade Secure anti-spam solution is compatible with non-authoritative mode (only if your POP/IMAP accounts are hosted by OVH). In this case, we recommend that you use: <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> and <strong qtlid="292228">{3}</strong>
+<br/><br/> If you use non-authoritative mode with your email accounts that are not hosted by OVH, you must use: <strong qtlid="416436">{4}</strong> (see associated domains section)
+</translation>
+   <translation id="emailpro_tab_domain_manage" qtlid="404395">: manage</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (Only Email Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-authoritative (Email Pro + another email service)</translation>
