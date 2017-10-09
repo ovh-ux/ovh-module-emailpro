@@ -1,0 +1,14 @@
+<div class="popover-menu" data-ng-controller="EmailProExternalContactsPopoverCtrl as ctrl">
+    <button class="btn btn-link btn-block text-left"
+            type="button"
+            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_actions_menu_modify"
+            data-ng-click="ctrl.updateExternalContact(contact)"
+            data-ng-disabled="contact.taskPendingId !== 0">
+    </button>
+    <button class="btn btn-link btn-block text-left"
+            type="button"
+            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_actions_menu_delete"
+            data-ng-click="ctrl.deleteExternalContact(contact)"
+            data-ng-disabled="contact.taskPendingId !== 0">
+    </button>
+</div>

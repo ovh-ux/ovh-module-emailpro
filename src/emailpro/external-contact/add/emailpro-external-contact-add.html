@@ -1,66 +1,99 @@
-<div data-ng-controller="EmailProAddExternalContactCtrl">
+<div data-ng-controller="EmailProAddExternalContactCtrl as ctrl">
     <div data-wizard
          data-wizard-bread-crumb
          data-wizard-on-cancel="resetAction"
-         data-wizard-on-finish="addContact"
+         data-wizard-on-finish="submitting"
          data-wizard-title="i18n.exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_title">
 
         <div data-wizard-step
-             data-wizard-step-on-load="init"
-             data-wizard-step-valid="accountIsValid()">
+             data-wizard-step-valid="ctrl.externalContactAddForm.emailAddress.$dirty && ctrl.externalContactAddForm.emailAddress.$valid">
 
-            <p class="mb-3" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question"></p>
-            <form class="form-horizontal" name="externalContactAddForm">
+            <div class="loader text-center" data-ng-if="ctrl.isLoading"></div>
+
+            <form class="form-horizontal" name="ctrl.externalContactAddForm" data-ng-if="!ctrl.isLoading">
                 <p>
                     <small class="text-danger">*</small>
                     <small data-i18n-static="required_fields"></small>
                 </p>
-                <div class="form-group" data-ng-class="getPasswordInvalidClass()">
-                    <label for="emailAddress" class="control-label col-md-3 required"
+
+                <div class="form-group" data-ng-class="{'has-error': ctrl.externalContactAddForm.emailAddress.$dirty && ctrl.externalContactAddForm.emailAddress.$invalid}">
+                    <label for="emailAddress"
+                           class="control-label col-md-3 required"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label"></label>
                     <div class="col-md-9">
-                        <input class="form-control" id="emailAddress" type="text"
-                               data-ng-model="model.newAccount.externalEmailAddress">
-                        <span class="help-block text-danger"
-                              data-ng-if="!isEmailValid() && model.newAccount.externalEmailAddress"
-                              data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_invalid"></span>
+                        <input class="form-control"
+                               id="emailAddress"
+                               name="emailAddress"
+                               type="text"
+                               min="0" data-ng-min="0"
+                               max="255" data-ng-max="255"
+                               required
+                               aria-describedby="emailError"
+                               data-ng-pattern="ctrl.emailValidationRegex"
+                               data-ng-model="ctrl.model.externalEmailAddress">
+                            <p id="emailError"
+                               class="help-block"
+                               data-ng-bind-html="ctrl.getEmailErrorMessage()"></p>
                     </div>
                 </div>
-                <div class="form-group" data-ng-if="availableMainDomains">
-                    <label for="availableMainDomain" class="control-label col-md-3 required"
+                <div class="form-group" data-ng-if="ctrl.availableMainDomains != null">
+                    <label for="availableMainDomain"
+                           class="control-label col-md-3 required"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label"></label>
                     <div class="col-md-9">
-                        <select class="form-control input-group-addon" id="availableMainDomain" required
-                                data-ng-options="domain.displayName for domain in availableMainDomains"
-                                data-ng-model="model.attachOrganization2010">
+                        <select class="form-control input-group-addon"
+                                id="availableMainDomain"
+                                name="availableMainDomain"
+                                required
+                                data-ng-options="domain.displayName for domain in ctrl.availableMainDomains"
+                                data-ng-model="ctrl.model.attachOrganization2010">
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="displayName" class="control-label col-md-3 required"
-                           data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_display_name_label"></label>
-                    <div class="col-md-9">
-                        <input type="text" class="form-control" id="displayName" required
-                               data-ng-model="model.newAccount.displayName"
-                               data-ng-change="updateDisplayNameFlag()">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="firstName" class="control-label col-md-3"
+                    <label for="firstName"
+                           class="control-label col-md-3"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label"></label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="firstName" max="64"
-                               data-ng-model="model.newAccount.firstName"
-                               data-ng-change="updateDisplayName()">
+                        <input type="text"
+                               class="form-control"
+                               id="firstName"
+                               name="firstName"
+                               max="64" data-ng-max="64"
+                               data-ng-model="ctrl.model.firstName"
+                               data-ng-change="ctrl.updateDisplayName()">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lastName" class="control-label col-md-3"
+                    <label for="lastName"
+                           class="control-label col-md-3"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label"></label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="lastName" max="64"
-                               data-ng-model="model.newAccount.lastName"
-                               data-ng-change="updateDisplayName()">
+                        <input type="text"
+                               class="form-control"
+                               id="lastName"
+                               name="lastName"
+                               max="64" data-ng-max="64"
+                               data-ng-model="ctrl.model.lastName"
+                               data-ng-change="ctrl.updateDisplayName()">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="displayName"
+                           class="control-label col-md-3"
+                           data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_display_name_label"></label>
+                    <div class="col-md-9">
+                        <input type="text"
+                               class="form-control"
+                               id="displayName"
+                               name="displayName"
+                               aria-describedby="displayNameHelper"
+                               min="0" data-ng-min="0"
+                               max="255" data-ng-max="255"
+                               data-ng-model="ctrl.model.displayName">
+                            <p id="displayNameHelper"
+                               class="help-block"
+                               data-ng-bind-html="tr('emailpro_externalContacts_add_displayName_helper')"></p>
                     </div>
                 </div>
             </form>
@@ -73,18 +106,19 @@
 
         <div data-wizard-step>
             <p data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_question"></p>
+
             <dl class="dl-horizontal">
                 <dt data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_email_label"></dt>
-                <dd data-ng-bind="model.newAccount.externalEmailAddress"></dd>
+                <dd data-ng-bind="ctrl.model.externalEmailAddress"></dd>
 
-                <dt data-ng-if="model.newAccount.firstName" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_first_name_label"></dt>
-                <dd data-ng-if="model.newAccount.firstName" data-ng-bind="model.newAccount.firstName"></dd>
+                <dt data-ng-if="ctrl.model.firstName" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_first_name_label"></dt>
+                <dd data-ng-if="ctrl.model.firstName" data-ng-bind="ctrl.model.firstName"></dd>
 
-                <dt data-ng-if="model.newAccount.lastName" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_last_name_label"></dt>
-                <dd data-ng-if="model.newAccount.lastName" data-ng-bind="model.newAccount.lastName"></dd>
+                <dt data-ng-if="ctrl.model.lastName" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_last_name_label"></dt>
+                <dd data-ng-if="ctrl.model.lastName" data-ng-bind="ctrl.model.lastName"></dd>
 
-                <dt data-ng-if="model.newAccount.displayName" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_display_name_label"></dt>
-                <dd data-ng-if="model.newAccount.displayName" data-ng-bind="model.newAccount.displayName"></dd>
+                <dt data-ng-if="ctrl.model.displayName" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_display_name_label"></dt>
+                <dd data-ng-if="ctrl.model.displayName" data-ng-bind="ctrl.model.displayName"></dd>
             </dl>
         </div>
 
