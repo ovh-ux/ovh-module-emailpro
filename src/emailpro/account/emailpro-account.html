@@ -7,7 +7,9 @@
             </div>
             <div class="pull-left">
                 <strong data-i18n-static="exchange_tab_INFORMATIONS_webmail"></strong> :
-                <a data-ng-href="https://{{exchange.hostname}}" target="_blank" title="{{tr('exchange_tab_INFORMATIONS_webmail')}} ({{tr('exchange_dashboard_new_window')}})">
+                <a target="_blank"
+                   data-ng-href="https://{{exchange.hostname}}" 
+                   title="{{tr('exchange_tab_INFORMATIONS_webmail')}} ({{tr('exchange_dashboard_new_window')}})">
                     <span data-ng-bind="'https://' + exchange.hostname"></span>
                     <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
                 </a>

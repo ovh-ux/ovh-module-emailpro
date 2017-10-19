@@ -7,7 +7,9 @@
         <div data-wizard-step
              data-wizard-step-valid="data.content && data.content.length < 5000">
 
-            <div class="loader text-center" data-ng-if="loadingData"></div>
+            <div class="text-center" data-ng-if="loadingData">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <div data-ng-if="!loadingData">
                 <strong data-ng-bind-html="tr('exchange_ACTION_update_disclaimer_info', [data.domain.displayName])"></strong>

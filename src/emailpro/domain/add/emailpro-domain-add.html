@@ -10,7 +10,9 @@
              data-wizard-step-on-next="checkDomain"
              data-wizard-step-valid="model.name && isNonOvhDomainValid()">
 
-            <div class="loader text-center" data-ng-if="loading"></div>
+            <div class="text-center" data-ng-if="loading">
+              <oui-loader inline="true"></oui-loader>
+            </div>
 
             <div class="alert alert-info" role="alert"
                  data-ng-if="!loading && noDomainAttached"

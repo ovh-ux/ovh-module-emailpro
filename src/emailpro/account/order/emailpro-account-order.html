@@ -10,7 +10,9 @@
              data-wizard-step-valid="isValid()"
              data-wizard-step-on-load="loadOrderList">
 
-            <div class="loader text-center" data-ng-if="!ordersList"></div>
+            <div class="text-center" data-ng-if="!ordersList">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <form name="orderAccountForm" class="form-horizontal"
                   data-ng-if="ordersList">
@@ -60,8 +62,10 @@
 
             <div class="text-center"
                  data-ng-if="!previewOrder">
-                <div class="loader"></div>
-                <strong data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></strong>
+                <oui-loader inline="true"></oui-loader>
+                <div>
+                    <span data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></span>
+                </div>
             </div>
             <form class="form-horizontal" name="previewOrderForm"
                   data-ng-if="previewOrder">
@@ -97,8 +101,10 @@
         <div data-wizard-step
              data-wizard-step-valid="url">
             <div class="text-center" data-ng-if="!url">
-                <div class="loader"></div>
-                <span data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></span>
+                <oui-loader inline="true"></oui-loader>
+                <div>
+                    <span data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></span>
+                </div>
             </div>
             <div data-ng-if="url">
                 <strong class="d-block mb-3" data-i18n-static="exchange_ACTION_order_accounts_step3_bc"></strong>

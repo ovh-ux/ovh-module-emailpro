@@ -9,7 +9,9 @@
              data-wizard-step-valid="aliasIsValid()"
              data-wizard-step-on-load="loadDomainData">
 
-            <div class="loader text-center" data-ng-if="!availableDomains"></div>
+            <div class="text-center" data-ng-if="!availableDomains">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <div data-ng-if="availableDomains">
                 <div class="form-group" data-ng-class="{'has-error': takenEmailError}">
