@@ -1,14 +1,12 @@
 <div class="row" data-ng-controller="EmailProTabAliasCtrl">
     <div class="col-md-9">
 
-        <div class="mb-3 d-flex align-items-center">
-            <button class="btn btn-default my-auto" type="button"
-                    data-ng-click="hideAliases()">
-                <span class="fa fa-chevron-left mr-2" aria-hidden="true"></span>
-                <span data-i18n-static="exchange_tab_ALIAS_back_button"></span>
-            </button>
-            <span class="ml-4" data-ng-bind-html="tr('exchange_tab_ALIAS_intro', selectedAccount.primaryEmailDisplayName)"></span>
-        </div>
+        <button class="oui-button oui-button_link oui-button_icon-left" 
+                type="button" data-ng-click="hideAliases()">
+            <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
+            <span data-i18n-static="common_back"></span>
+        </button>
+        <h2 class="ml-4" data-ng-bind-html="tr('exchange_tab_ALIAS_intro', selectedAccount.primaryEmailDisplayName)"></h2>
 
         <table class="table table-hover">
             <thead>

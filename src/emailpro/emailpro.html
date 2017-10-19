@@ -43,23 +43,21 @@
                 </div>
                 <div class="form-group" data-ng-show="edit.active"
                      data-ng-class="{'has-error': formEditDisplayName.txtDisplayName.$dirty && formEditDisplayName.$invalid}">
-                    <div class="input-group">
-                        <input type="text" class="form-control input-lg" name="txtDisplayName" required
+                    <div class="oui-input-group">
+                        <input type="text" class="form-control" name="txtDisplayName" required
                                data-event-blur="newDisplayName.value = ''"
                                data-ng-minlength="5"
                                data-ng-maxlength="250"
                                data-ng-model="newDisplayName.value">
-                        <div class="input-group-btn">
-                            <button class="btn btn-success btn-lg" type="submit" title="{{i18n.common_confirm}}"
-                                    data-ng-click="saveDisplayName()"
-                                    data-ng-disabled="formEditDisplayName.$invalid">
-                                <span class="fa fa-check" aria-hidden="true"></span>
-                            </button>
-                            <button class="btn btn-danger btn-lg" type="button" title="{{i18n.common_cancel}}"
-                                    data-ng-click="edit.active = false">
-                                <span class="fa fa-remove" aria-hidden="true"></span>
-                            </button>
-                        </div>
+                        <button class="oui-button oui-button_small-width" type="submit" title="{{i18n.common_confirm}}"
+                                data-ng-click="saveDisplayName()"
+                                data-ng-disabled="formEditDisplayName.$invalid">
+                            <span class="oui-icon oui-icon-success oui-icon_small" aria-hidden="true"></span>
+                        </button>
+                        <button class="oui-button oui-button_small-width" type="button" title="{{i18n.common_cancel}}"
+                                data-ng-click="edit.active = false">
+                            <span class="oui-icon oui-icon-error oui-icon_small" aria-hidden="true"></span>
+                        </button>
                     </div>
                     <div class="help-block"
                          data-ng-if="formEditDisplayName.txtDisplayName.$dirty"
@@ -74,9 +72,12 @@
         </div>
         <div class="col-sm-3 text-right">
             <div class="btn-group mt-4">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" 
+                        class="oui-button oui-button_dropdown mb-0" 
+                        data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">
                     <span data-i18n-static="common_actions"></span>
-                    <span class="caret ml-2" aria-hidden="true"></span>
+                    <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right m-0 p-0">
                   <li>
