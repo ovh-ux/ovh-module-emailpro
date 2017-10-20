@@ -19,7 +19,7 @@
                     <label for="emailAddress" class="control-label col-md-3 required"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label"></label>
                     <div class="col-md-9">
-                        <input class="form-control" id="emailAddress" type="text"
+                        <input class="oui-input" id="emailAddress" type="text"
                                data-ng-model="model.newAccount.externalEmailAddress">
                         <span class="help-block text-danger"
                               data-ng-if="!isEmailValid() && model.newAccount.externalEmailAddress"
@@ -40,7 +40,7 @@
                     <label for="displayName" class="control-label col-md-3 required"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_display_name_label"></label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="displayName" required
+                        <input type="text" class="oui-input" id="displayName" required
                                data-ng-model="model.newAccount.displayName"
                                data-ng-change="updateDisplayNameFlag()">
                     </div>
@@ -49,7 +49,7 @@
                     <label for="firstName" class="control-label col-md-3"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label"></label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="firstName" max="64"
+                        <input type="text" class="oui-input" id="firstName" max="64"
                                data-ng-model="model.newAccount.firstName"
                                data-ng-change="updateDisplayName()">
                     </div>
@@ -58,7 +58,7 @@
                     <label for="lastName" class="control-label col-md-3"
                            data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label"></label>
                     <div class="col-md-9">
-                        <input type="text" class="form-control" id="lastName" max="64"
+                        <input type="text" class="oui-input" id="lastName" max="64"
                                data-ng-model="model.newAccount.lastName"
                                data-ng-change="updateDisplayName()">
                     </div>
