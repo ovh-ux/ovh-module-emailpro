@@ -1,22 +1,3 @@
-<div data-ovh-alert="{{alerts.dashboard}}"></div>
-
-<div class="alert m-0"
-     role="alert"
-     data-ng-class="alertType"
-     data-ng-if="!loadingEmailProError && message">
-    <span class="fa fa-times pull-right" data-ng-click="resetMessages()"></span>
-    <span data-ng-bind-html="message"></span>
-    <div data-ng-show="messageDetails"
-         data-linkedpopover="emailpro/emailpro-error-messages.popover.html"
-         data-linkedpopover-placement="bottom"
-         data-linkedpopover-single="false"
-         data-linkedpopover-remote="true">
-        <strong class="pointer underline"
-                data-i18n-static="exchange_dashboard_message_see_more"
-                data-ng-if="messageDetails.length > 0"></strong>
-    </div>
-</div>
-
 <div class="text-center"
      data-ng-if="loadingEmailProInformations && !loadingEmailProError">
     <oui-loader size="l" inline="true"></oui-loader>
@@ -122,6 +103,22 @@
               tr="tr"
               menu="tabMenu"></ovh-tabs>
     <div class="tab-content">
+        <div class="alert"
+             role="alert"
+             data-ng-class="alertType"
+             data-ng-if="!loadingEmailProError && message">
+            <span class="fa fa-times pull-right" data-ng-click="resetMessages()"></span>
+            <span data-ng-bind-html="message"></span>
+            <div data-ng-show="messageDetails"
+                 data-linkedpopover="emailpro/emailpro-error-messages.popover.html"
+                 data-linkedpopover-placement="bottom"
+                 data-linkedpopover-single="false"
+                 data-linkedpopover-remote="true">
+                <strong class="pointer underline"
+                        data-i18n-static="exchange_dashboard_message_see_more"
+                        data-ng-if="messageDetails.length > 0"></strong>
+            </div>
+        </div>
         <div class="tab-pane active platform"
              data-ng-include="selectedTab && 'emailpro/' + kebabCase(selectedTab) + '/emailpro-' + kebabCase(selectedTab) + '.html'"></div>
     </div>
@@ -144,8 +141,6 @@
         </div>
     </div>
 </div>
-
-<div data-ovh-alert></div>
 
 <!-- Migration to Exchange 2016. Display a link to follow the status of the migration -->
 <div class="alert alert-warning mt-5 mx-5" role="alert"

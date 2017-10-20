@@ -138,8 +138,8 @@ angular.module("Module.emailpro.controllers")
             $scope.accountToAdd.completeDomain = undefined;
             $scope.accountToAdd.login = $scope.accountToAdd.login.toLowerCase();
 
-            EmailPro.addEmailProAccount($stateParams.productId, $scope.accountToAdd).then((data) => {
-                $scope.setMessage($scope.tr("exchange_ACTION_add_account_success_message"), data);
+            EmailPro.addEmailProAccount($stateParams.productId, $scope.accountToAdd).then(() => {
+                $scope.setMessage($scope.tr("exchange_ACTION_add_account_success_message"), { status: "success" });
             }, (failure) => {
                 $scope.setMessage($scope.tr("emailpro_ACTION_add_account_error_message"), failure.data);
             });
@@ -189,7 +189,7 @@ angular.module("Module.emailpro.controllers")
 
         $scope.getSelectedPaymentPrice = function () {
             if ($scope.ordersList) {
-                var selected = $.grep($scope.ordersList, (e) => $scope.accountsToAdd.duration === e.duration.duration);
+                const selected = $.grep($scope.ordersList, (e) => $scope.accountsToAdd.duration === e.duration.duration);
                 return selected ? selected[0] : null;
             }
             return null;

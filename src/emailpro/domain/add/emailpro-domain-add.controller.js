@@ -1,11 +1,11 @@
-angular.module("Module.emailpro.controllers").controller("EmailProAddDomainController", ($rootScope, $scope, $timeout, $stateParams, EmailPro, EmailProDomains, Alerter, Validator) => {
+angular.module("Module.emailpro.controllers").controller("EmailProAddDomainController", ($rootScope, $scope, $timeout, $stateParams, EmailPro, EmailProDomains, Validator) => {
     "use strict";
 
-    var Punycode = window.punycode;
+    const Punycode = window.punycode;
 
-    var timeout = null;
+    let timeout = null;
 
-    var init = function () {
+    const init = function () {
         $scope.noDomainAttached = $scope.currentActionData ? $scope.currentActionData.noDomainAttached : false;
         $scope.loading = false;
         $scope.ovhDomain = "ovh-domain";
@@ -21,7 +21,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddDomainContr
         };
     };
 
-    var prepareData = function (data) {
+    const prepareData = function (data) {
         $scope.loading = false;
         $scope.availableDomains = data.availableDomains;
         $scope.availableDomainsBuffer = data.availableDomains;
@@ -36,7 +36,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddDomainContr
         }
     };
 
-    var check2010Provider = function () {
+    const check2010Provider = function () {
         if ($scope.exchange && $scope.availableMainDomains &&
                $scope.exchange.offer === EmailPro.accountTypeProvider &&
                $scope.exchange.serverDiagnostic.version === EmailPro.EmailPro2010Code) {
@@ -51,7 +51,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddDomainContr
         }
     };
 
-    var prepareModel = function () {
+    const prepareModel = function () {
         if ($scope.setOrganization2010) {
             if ($scope.model.main) {
                 delete $scope.model.organization2010;
@@ -78,7 +78,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddDomainContr
                 check2010Provider();
             }, (failure) => {
                 $scope.resetAction();
-                Alerter.alertFromSWS($scope.tr("emailpro_tab_domain_add_failure"), failure);
+                $scope.setMessage($scope.tr("emailpro_tab_domain_add_failure"), failure);
             });
 
         EmailPro.getSelected()
@@ -115,9 +115,9 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddDomainContr
 
         EmailProDomains.addDomain($scope.model)
             .then(() => {
-                $scope.setMessage($scope.tr("emailpro_tab_domain_add_success"), "true");
+                $scope.setMessage($scope.tr("emailpro_tab_domain_add_success"), { status: "success" });
             }, (failure) => {
-                Alerter.alertFromSWS($scope.tr("emailpro_tab_domain_add_failure"), failure);
+                $scope.setMessage($scope.tr("emailpro_tab_domain_add_failure"), failure);
             });
     };
 

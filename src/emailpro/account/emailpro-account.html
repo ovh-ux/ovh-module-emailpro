@@ -2,8 +2,9 @@
     <div class="row" data-ng-if="!showAlias">
         <div class="col-md-9">
             <div class="alert alert-warning mt-3" role="alert"
-                 data-i18n-static="exchange_tab_ACCOUNTS_partial"
                  data-ng-if="accounts && accounts.list.messages.length > 0 && !loading">
+                <strong data-i18n-static="exchange_tab_ACCOUNTS_warning"></strong>
+                <span data-i18n-static="exchange_tab_ACCOUNTS_partial"></span>
             </div>
             <div class="pull-left">
                 <strong data-i18n-static="exchange_tab_INFORMATIONS_webmail"></strong> :

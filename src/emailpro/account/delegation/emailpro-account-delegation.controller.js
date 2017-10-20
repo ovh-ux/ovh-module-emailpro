@@ -139,7 +139,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAccountDelegat
 
     $scope.updateDelegationRight = function () {
         $scope.resetAction();
-        $scope.setMessage($scope.tr("exchange_ACTION_delegation_doing_message"));
+        $scope.setMessage($scope.tr("exchange_ACTION_delegation_doing_message"), { status: "success" });
 
         EmailPro.updateAccountDelegationRights($stateParams.productId, getChanges()
         ).then((data) => {
