@@ -23,9 +23,8 @@
                 <!-- Lockout Threshold -->
                 <div class="form-group"
                      data-ng-class="{
-                        'has-error': serviceForm.lockoutThreshold.$invalid && serviceForm.lockoutThreshold.$dirty,
-                        'has-success': serviceForm.lockoutThreshold.$valid && serviceForm.lockoutThreshold.$dirty
-                    }">
+                        'has-error': serviceForm.lockoutThreshold.$invalid && serviceForm.lockoutThreshold.$dirty
+                     }">
                     <label for="lockoutThreshold" class="control-label"
                            data-i18n-static="exchange_ACTION_configure_services_label_lockoutThreshold"
                            data-uib-tooltip="{{i18n['exchange_ACTION_configure_services_help_lockoutThreshold']}}"
@@ -47,9 +46,9 @@
                 <!-- Lockout Observation Window -->
                 <div class="form-group"
                      data-ng-class="{
-                        'has-error': serviceForm.lockoutObservationWindow.$invalid && (serviceForm.lockoutDuration.$dirty || serviceForm.lockoutObservationWindow.$dirty) && service.lockoutThreshold !== 0,
-                        'has-success': serviceForm.lockoutObservationWindow.$valid && serviceForm.lockoutObservationWindow.$dirty && service.lockoutThreshold !== 0
-                    }">
+                        'has-error': serviceForm.lockoutObservationWindow.$invalid && (serviceForm.lockoutDuration.$dirty || serviceForm.lockoutObservationWindow.$dirty) && service.lockoutThreshold !== 0
+                     }"
+                     data-ng-if="service.lockoutThreshold !== 0 && service.lockoutThreshold != null">
                     <label for="lockoutObservationWindow" class="control-label"
                            data-i18n-static="exchange_ACTION_configure_services_label_lockoutObservationWindow"></label>
                     <input type="number" class="form-control" id="lockoutObservationWindow" name="lockoutObservationWindow" min="1" max="90"
@@ -68,9 +67,9 @@
                 <!-- Lockout Duration -->
                 <div class="form-group"
                      data-ng-class="{
-                        'has-error': serviceForm.lockoutDuration.$invalid && (serviceForm.lockoutDuration.$dirty || serviceForm.lockoutObservationWindow.$dirty) && service.lockoutThreshold !== 0,
-                        'has-success': serviceForm.lockoutDuration.$valid && serviceForm.lockoutDuration.$dirty && service.lockoutThreshold !== 0
-                    }">
+                        'has-error': serviceForm.lockoutDuration.$invalid && (serviceForm.lockoutDuration.$dirty || serviceForm.lockoutObservationWindow.$dirty) && service.lockoutThreshold !== 0
+                     }"
+                     data-ng-if="service.lockoutThreshold !== 0 && service.lockoutThreshold != null">
                     <label for="lockoutDuration" class="control-label"
                            data-i18n-static="exchange_ACTION_configure_services_label_lockoutDuration"></label>
                     <input type="number" class="form-control" id="lockoutDuration" name="lockoutDuration" min="{{service.lockoutObservationWindow}}" max="90"
@@ -87,19 +86,25 @@
                     </span>
                 </div>
                 <!-- Complexity Enabled -->
-                <div class="checbox mb-3">
-                    <label>
-                        <input type="checkbox" name="complexityEnabled"
-                               data-ng-model="service.complexityEnabled">
-                        <span data-i18n-static="exchange_ACTION_configure_services_label_complexityEnabled"></span>
+                <div class="oui-checkbox">
+                    <input type="checkbox" name="complexityEnabled" id="complexityEnabled"
+                           data-ng-model="service.complexityEnabled"
+                           class="oui-checkbox__input">
+                    <label class="oui-checkbox__label-container" for="complexityEnabled">
+                        <span class="oui-checkbox__label" 
+                              data-i18n-static="exchange_ACTION_configure_services_label_complexityEnabled"></span>
+                        <span class="oui-checkbox__icon">
+                            <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                            <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                            <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                        </span>
                     </label>
                 </div>
                 <!-- Min password Age -->
                 <div class="form-group"
                      data-ng-class="{
-                        'has-error': serviceForm.minPasswordAge.$invalid && serviceForm.minPasswordAge.$dirty,
-                        'has-success': serviceForm.minPasswordAge.$valid && serviceForm.minPasswordAge.$dirty
-                    }">
+                        'has-error': serviceForm.minPasswordAge.$invalid && serviceForm.minPasswordAge.$dirty
+                     }">
                     <label for="minPasswordAge" class="control-label"
                            data-i18n-static="exchange_ACTION_configure_services_label_minPasswordAge"
                            data-uib-tooltip="{{i18n['exchange_ACTION_configure_services_help_minPasswordAge']}}"
@@ -122,9 +127,8 @@
                 <!-- Max password Age -->
                 <div class="form-group"
                      data-ng-class="{
-                        'has-error': serviceForm.maxPasswordAge.$invalid && serviceForm.maxPasswordAge.$dirty,
-                        'has-success': serviceForm.maxPasswordAge.$valid && serviceForm.maxPasswordAge.$dirty
-                    }">
+                        'has-error': serviceForm.maxPasswordAge.$invalid && serviceForm.maxPasswordAge.$dirty
+                     }">
                     <label for="maxPasswordAge" class="control-label"
                            data-i18n-static="exchange_ACTION_configure_services_label_maxPasswordAge"
                            data-uib-tooltip="{{i18n['exchange_ACTION_configure_services_help_maxPasswordAge']}}"
@@ -147,9 +151,8 @@
                 <!-- Min password Length -->
                 <div class="form-group"
                      data-ng-class="{
-                        'has-error': serviceForm.minPasswordLength.$invalid && serviceForm.minPasswordLength.$dirty,
-                        'has-success': serviceForm.minPasswordLength.$valid && serviceForm.minPasswordLength.$dirty
-                    }">
+                        'has-error': serviceForm.minPasswordLength.$invalid && serviceForm.minPasswordLength.$dirty
+                     }">
                     <label for="minPasswordLength" class="control-label"
                            data-i18n-static="exchange_ACTION_configure_services_label_minPasswordLength"
                            data-uib-tooltip="{{i18n['exchange_ACTION_configure_services_help_minPasswordLength']}}"
