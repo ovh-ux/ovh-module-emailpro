@@ -31,7 +31,7 @@
             <tbody data-ng-if="!aliasLoading && aliases.list.results.length > 0">
                 <tr data-ng-repeat="alias in aliases.list.results track by $index">
                     <th class="word-break" scope="row" data-ng-bind="alias.displayName"></th>
-                    <td class="text-center">
+                    <td class="text-center text-nowrap">
                         <span class="label label-info"
                               data-i18n-static="exchange_tab_ALIAS_state_TASK_ON_DOING"
                               data-ng-if="alias.taskPendingId"
