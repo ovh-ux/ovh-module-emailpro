@@ -11,9 +11,7 @@
                 <div class="mb-3" data-ng-show="!edit.active">
                     <div class="d-flex">
                         <h1 class="d-inline-block mb-0" data-ng-bind="exchange.displayName"></h1>
-                        <button class="btn btn-icon my-auto ml-2"
-                                type="button"
-                                title="{{i18n.wizard_modify}}"
+                        <button class="btn btn-icon my-auto ml-2" type="button" title="{{i18n.wizard_modify}}"
                                 data-ng-click="edit.active = !edit.active">
                             <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
                         </button>
@@ -53,10 +51,8 @@
         </div>
         <div class="col-sm-3 text-right">
             <div class="btn-group mt-4">
-                <button type="button" 
-                        class="oui-button oui-button_dropdown mb-0" 
-                        data-toggle="dropdown" 
-                        aria-haspopup="true" aria-expanded="false">
+                <button class="oui-button oui-button_dropdown mb-0" type="button" aria-haspopup="true" aria-expanded="false"
+                        data-toggle="dropdown">
                     <span data-i18n-static="common_actions"></span>
                     <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                 </button>
@@ -82,16 +78,6 @@
             </div>
         </div>
     </div>
-
-    <div data-ng-if="displayGuides !== null && !loadingEmailProInformations && !loadingEmailProError">
-        <span data-i18n-static="emailpro_dashboard_guides"></span>
-        <a data-ng-href="{{ displayGuides }}"
-           target="_blank"
-           title="{{tr('exchange_dashboard_guides_url')}} ({{tr('exchange_dashboard_new_window')}})">
-             <span data-i18n-static="exchange_dashboard_guides_url"></span>
-             <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
-        </a>
-    </div>
 </div>
 
 <div data-ng-controller="EmailProTabsCtrl"
@@ -103,11 +89,10 @@
               tr="tr"
               menu="tabMenu"></ovh-tabs>
     <div class="tab-content">
-        <div class="alert"
-             role="alert"
+        <div class="alert alert-dismissible" role="alert"
              data-ng-class="alertType"
              data-ng-if="!loadingEmailProError && message">
-            <span class="fa fa-times pull-right" data-ng-click="resetMessages()"></span>
+            <button class="close" type="button" data-ng-click="resetMessages()"></button>
             <span data-ng-bind-html="message"></span>
             <div data-ng-show="messageDetails"
                  data-linkedpopover="emailpro/emailpro-error-messages.popover.html"

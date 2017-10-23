@@ -18,7 +18,7 @@
                                 <li data-ng-if="exchange.serverDiagnostic.version === 15"
                                     class="oui-tile__item">
                                     <div class="oui-tile__definition">
-                                        <strong class="d-block" 
+                                        <strong class="d-block"
                                                 data-i18n-static="exchange_dashboard_diag"></strong>
                                         <span class="mt-2 d-inline-block pointer">
                                             <span data-ng-if="!exchange.offer == !accountTypeProvider"
@@ -192,6 +192,15 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div data-ng-if="displayGuides !== null && !loadingEmailProInformations && !loadingEmailProError">
+                <span data-i18n-static="emailpro_dashboard_guides"></span>
+                <a data-ng-href="{{ displayGuides }}"
+                   target="_blank"
+                   title="{{tr('exchange_dashboard_guides_url')}} ({{tr('exchange_dashboard_new_window')}})">
+                    <span data-i18n-static="exchange_dashboard_guides_url"></span>
+                    <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
+                </a>
             </div>
         </div>
     </div>
