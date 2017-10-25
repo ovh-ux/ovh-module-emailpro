@@ -205,30 +205,32 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             if (failure) {
                 if (failure.message) {
                     messageDetails.push({ id: failure.id, message: failure.message });
-                    switch (failure.type) {
-                    case "ERROR" :
+                    const type = failure.type.toLowerCase();
+                    switch (type) {
+                    case "error" :
                         alertType = "alert alert-danger";
                         break;
-                    case "WARNING" :
+                    case "warning" :
                         alertType = "alert";
                         break;
-                    case "INFO" :
+                    case "info" :
                         alertType = "alert alert-success";
                         break;
                     default:
                     }
                 } else if (failure.messages) {
                     if (failure.messages.length > 0) {
-                        switch (failure.state) {
-                        case "ERROR" :
+                        const state = failure.state.toLowerCase();
+                        switch (state) {
+                        case "error" :
                             alertType = "alert alert-danger";
                             messageToSend = message.ERROR;
                             break;
-                        case "PARTIAL" :
+                        case "partial" :
                             alertType = "alert alert-warning";
                             messageToSend = message.PARTIAL;
                             break;
-                        case "OK" :
+                        case "ok" :
                             alertType = "alert alert-success";
                             messageToSend = message.OK;
                             break;
@@ -241,28 +243,20 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                         }, messageDetails);
                     }
                 } else if (failure.status) {
-                    switch (failure.status) {
-                    case "BLOCKED":
+                    const status = failure.status.toLowerCase();
+                    switch (status) {
                     case "blocked":
-                    case "CANCELLED":
                     case "cancelled":
-                    case "PAUSED":
                     case "paused":
-                    case "ERROR":
                     case "error":
                         alertType = "alert alert-danger";
                         break;
-                    case "WAITING_ACK":
                     case "waitingAck":
-                    case "WARNING":
                     case "warning":
-                    case "DOING":
                     case "doing":
                         alertType = "alert alert-warning";
                         break;
-                    case "TODO":
                     case "todo":
-                    case "DONE":
                     case "done":
                     case "success":
                         alertType = "alert alert-success";

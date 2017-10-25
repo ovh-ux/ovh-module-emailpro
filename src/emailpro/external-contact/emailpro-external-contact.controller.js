@@ -96,7 +96,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProExternalContac
             .then(() => {
                 $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success"), { status: "success" });
             }, (err) => {
-                err.status = "error";
+                _.set(err, "status", err.status || "error");
                 $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail"), err);
             });
     };
@@ -143,7 +143,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProExternalContac
         EmailProExternalContacts.removeContact($stateParams.organization, $stateParams.productId, $scope.model.externalEmailAddress).then(() => {
             $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success"), { status: "success" });
         }, (err) => {
-            err.status = "error";
+            _.set(err, "status", err.status || "error");
             $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail"), err);
         });
     };

@@ -20,8 +20,7 @@
                           data-ng-bind="exchange.domain"
                           data-ng-if="exchange.displayName != null && exchange.displayName !== exchange.domain"></span>
                 </div>
-                <div class="form-group" data-ng-show="edit.active"
-                     data-ng-class="{'has-error': formEditDisplayName.txtDisplayName.$dirty && formEditDisplayName.$invalid}">
+                <div class="form-group" data-ng-show="edit.active">
                     <div class="oui-input-group">
                         <input type="text" class="form-control" name="txtDisplayName" required
                                data-event-blur="newDisplayName.value = ''"
