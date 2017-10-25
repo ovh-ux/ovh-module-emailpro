@@ -251,7 +251,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                     case "error":
                         alertType = "alert alert-danger";
                         break;
-                    case "waitingack"
+                    case "waitingack":
                     case "waiting_ack":
                     case "warning":
                     case "doing":
