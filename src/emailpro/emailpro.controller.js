@@ -195,7 +195,8 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
          *   PARTIAL: 'message to display when partial success',
          *   ERROR: 'message to display when fail'
          * }
-         * @param data : the data from SWS
+         * @param message
+         * @param failure
          */
         $scope.setMessage = function (message, failure) {
             let messageToSend = message;
@@ -205,7 +206,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             if (failure) {
                 if (failure.message) {
                     messageDetails.push({ id: failure.id, message: failure.message });
-                    const type = failure.type.toLowerCase();
+                    const type = _.get(failure, "type", "").toLowerCase();
                     switch (type) {
                     case "error" :
                         alertType = "alert alert-danger";
@@ -220,7 +221,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                     }
                 } else if (failure.messages) {
                     if (failure.messages.length > 0) {
-                        const state = failure.state.toLowerCase();
+                        const state = _.get(failure, "state", "").toLowerCase();
                         switch (state) {
                         case "error" :
                             alertType = "alert alert-danger";
@@ -243,7 +244,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                         }, messageDetails);
                     }
                 } else if (failure.status) {
-                    const status = failure.status.toLowerCase();
+                    const status = _.get(failure, "status", "").toLowerCase();
                     switch (status) {
                     case "blocked":
                     case "cancelled":
