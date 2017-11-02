@@ -6,7 +6,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProRemoveDomainCt
         $scope.resetAction();
         EmailProDomains.removeDomain($stateParams.productId, $scope.domain.name)
             .then(() => {
-                $scope.setMessage($scope.tr("emailpro_tab_domain_remove_success"), "true");
+                $scope.setMessage($scope.tr("emailpro_tab_domain_remove_success"), { status: "success" });
             }, (failure) => {
                 $scope.setMessage($scope.tr("emailpro_tab_domain_remove_failure"), {
                     code: null,

@@ -4,14 +4,14 @@ angular.module("Module.emailpro.controllers").controller("EmailProLicenseHistory
     $scope.loading = false;
     $scope.selectedPeriod = { period: "LASTMONTH" };
 
-    var parseItem = function (item) {
-        var d = moment(item.time, "YYYY-MM-DDTHH:mm:dd.SSSZZ").toDate();
+    const parseItem = function (item) {
+        const d = moment(item.time, "YYYY-MM-DDTHH:mm:dd.SSSZZ").toDate();
         return [Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()), item.value];
     };
 
-    var parseSerie = function (serie) {
+    const parseSerie = function (serie) {
         serie.name = $scope.tr(`exchange_action_license_history_type_${serie.name}`);
-        var rawData = []; // data buffer
+        const rawData = []; // data buffer
         angular.forEach(serie.data, (obj2) => {
             rawData.push(parseItem(obj2));
         });
@@ -19,7 +19,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProLicenseHistory
     };
 
     $scope.loadMonitoring = function (periodParam) {
-        var period = periodParam;
+        let period = periodParam;
         $scope.loading = true;
         period = period || $scope.selectedPeriod.period;
         $scope.licenseHistory = null;

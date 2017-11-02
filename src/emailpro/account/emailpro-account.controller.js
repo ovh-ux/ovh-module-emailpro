@@ -22,7 +22,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAccountsCtr
         $scope.$broadcast("paginationServerSide.loadPage", 1, "accountsTable");
     };
 
-    var init = function () {
+    const init = function () {
         $scope.loading = false;
         $scope.accounts = null;
         $scope.displayAccounts();
@@ -80,8 +80,8 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAccountsCtr
                 $scope.loading = false;
                 $scope.accounts = accounts;
 
-                var act;
-                for (var i = 0, c = accounts.list.results.length; i < c; i++) {
+                let act;
+                for (let i = 0, c = accounts.list.results.length; i < c; i++) {
                     act = accounts.list.results[i];
                     /* eslint-disable no-restricted-properties */
                     act.percentUse = Math.round(((act.currentUsage / Math.pow(1024, 2)) * 100) / act.quota);
@@ -128,7 +128,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAccountsCtr
     };
 
     $scope.editAccount = function (account) {
-        var populateAccount = angular.copy(account);
+        const populateAccount = angular.copy(account);
 
         populateAccount.is25g = $scope.is25g();
 
@@ -164,8 +164,8 @@ angular.module("Module.emailpro.controllers").controller("EmailProRemoveAccountC
     $scope.submit = function () {
         $scope.resetAction();
         EmailPro.removeAccount($stateParams.productId, $scope.account.primaryEmailAddress)
-            .then((success) => {
-                $scope.setMessage($scope.tr("emailpro_tab_account_remove_success"), success);
+            .then(() => {
+                $scope.setMessage($scope.tr("emailpro_tab_account_remove_success"), { status: "success" });
             }, (failure) => {
                 $scope.setMessage($scope.tr("emaipro_tab_account_remove_failure"), failure);
             });

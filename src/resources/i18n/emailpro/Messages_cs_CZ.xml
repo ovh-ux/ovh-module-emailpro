@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
+   <translation id="emailpro_tab_INFORMATION" qtlid="27115">Základní informace</translation>
+   <translation id="emailpro_displayName_maxlength" qtlid="260208">Délka jména nesmí přesáhnout 250 znaků.</translation>
+   <translation id="emailpro_displayName_required" qtlid="88293">Příjmení nesmí být prázdné.</translation>
 
+   <translation id="emailpro_dashboard_service_expired" qtlid="433706">Při načítání Vašeho účtu E-mail Pro došlo k chybě.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro účty</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Potřebujete pomoc s nastavením služby E-mail Pro?</translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Vaše služba E-mail Pro je téměř připravena. Abyste službu mohli začít naplno využívat, musíte k ní nejdříve připojit doménu. Pokud žádnou doménu nevlastníte, můžete si ji pořídit <a href="https://www.ovh.cz:51043/cgi-bin/newOrder/order.cgi" target="_blank">zde</a>.</translation>
@@ -20,9 +24,11 @@
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam" qtlid="375166">Pokud používáte neautoritativní režim (E-mail Pro + další řešení) s e-mailovým řešením hostovaným mimo OVH:</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_antispam" qtlid="375179">Pokud používáte autoritativní režim (pouze E-mail Pro) či neautoritativní režim s e-mailovým řešením hostovaným u OVH:</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_ovh" qtlid="375192">Automatická konfigurace je nedostupná, pokud: &#13;
-<br />1) doména není spravována stejným zákaznickým identifikátorem (NIC handle) jako služba E-mail Pro <br />2) doména není hostována u OVH. <br />V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (za použití níže uvedených údajů).</translation>
+1) doména není spravována stejným zákaznickým identifikátorem (NIC handle) jako služba E-mail Pro &#13;
+2) doména není hostována u OVH. &#13;
+V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (za použití níže uvedených údajů).</translation>
    <translation id="emailpro_tab_domain_diagnostic_srv_no_ovh" qtlid="375205">Automatická konfigurace je nedostupná, pokud: &#13;
-<br />1) doména není spravována stejným zákaznickým identifikátorem (NIC handle) jako služba E-mail Pro <br />2) doména není hostována u OVH. <br />V takovém případě prosím vytvořte SRV záznam pro svou doménu manuálně (za použití níže uvedených údajů).</translation>
+1) doména není spravována stejným zákaznickým identifikátorem (NIC handle) jako služba E-mail Pro 2) doména není hostována u OVH. V takovém případě prosím vytvořte SRV záznam pro svou doménu manuálně (za použití níže uvedených údajů).</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="375218">Odebrat tuto doménu ze služby E-mail Pro</translation>
    <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="375231">Tuto doménu nelze odebrat, jelikož je stále využívána některými účty služby E-mail Pro.</translation>
    <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Objednat E-mail Pro účty</translation>
@@ -46,6 +52,12 @@
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Upravit účet E-mail Pro</translation>
    <translation id="emailpro_tab_account_remove_title" qtlid="375465">Opravdu si přejete následující účet odebrat ze služby E-mail Pro?</translation>
    <translation id="emailpro_tab_account_remove_success" qtlid="375478">Účet bude odstraněn.</translation>
+
+<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
+Anti-spam Vade Secure je kompatibilní s autoritativním režimem (pouze pokud jsou Vaše účty pop/imap hostovány u OVH). V takovém případě je vhodné použít: <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> a <strong qtlid="292228">{3}</strong>
+<br/><br/> Pokud používáte neautoritativní režim s e-mailovými účty, které nejsou hostovány u OVH, je potřeba použít: <strong qtlid="416436">{4}</strong> (viz sekce asociované domény)
+</translation>
+   <translation id="emailpro_tab_domain_manage" qtlid="404395">: spravovat</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritativní (pouze E-mail Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Neautoritativní (E-mail Pro + další e-mailová řešení)</translation>

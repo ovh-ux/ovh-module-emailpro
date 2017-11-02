@@ -48,7 +48,7 @@ angular
                 .addZoneDnsField(this.services.$stateParams.productId, this.prepareModel())
                 .then((success) => {
                     if (success.state === "OK") {
-                        this.services.$scope.setMessage($scope.tr("exchange_tab_domain_diagnostic_add_field_success"), { status: "done" });
+                        this.services.$scope.setMessage($scope.tr("exchange_tab_domain_diagnostic_add_field_success"), { status: "success" });
                     } else {
                         this.services.$scope.setMessage($scope.tr("exchange_tab_domain_diagnostic_add_field_failure"), { status: "error" });
                     }

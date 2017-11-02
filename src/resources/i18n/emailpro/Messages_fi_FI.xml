@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
+   <translation id="emailpro_tab_INFORMATION" qtlid="27115">Yleiset tiedot</translation>
+   <translation id="emailpro_displayName_maxlength" qtlid="260208">Nimen pituus ei saa ylittää 250 merkkiä.</translation>
+   <translation id="emailpro_displayName_required" qtlid="88293">Nimi-kenttä ei voi olla tyhjä.</translation>
 
+   <translation id="emailpro_dashboard_service_expired" qtlid="433706">Tapahtui virhe E-mail Pro -tilisi lataamisessa.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro -tilit</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Tarvitsetko apua E-mail Pro -palvelun konfiguroinnissa?</translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">E-mail Pro -palvelusi on melkein valmis. Palveluusi on lisättävä verkkotunnus. Mikäli et omista sellaista voit ostaa sellaisen <a href="https://www.ovh-hosting.fi/cgi-bin/newOrder/order.cgi" target="_blank">klikkaamalla tästä</a>.</translation>
@@ -43,6 +47,12 @@
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Muokkaa E-mail Pro -tiliä</translation>
    <translation id="emailpro_tab_account_remove_title" qtlid="375465">Haluatko varmasti poistaa seuraavan tilin E-mail Pro -palvelustasi?</translation>
    <translation id="emailpro_tab_account_remove_success" qtlid="375478">Tili poistetaan E-mail Pro -palvelustasi.</translation>
+
+<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
+Vade Secure -roskapostisuodatin on yhteensopiva ei-autoritatiivisen tilan kanssa (ainoastaan jos POP-/IMAP-tilit ovat OVH:lla). Tässä tapauksessa suosittelemme käytettäväksi: <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> ja <strong qtlid="292228">{3}</strong>
+<br/><br/> Mikäli OVH:n ulkopuolisia sähköpostitilejä käytetään ei-autoritatiivisessa tilassa, käytä: <strong qtlid="416436">{4}</strong> (katso osiosta liittyvät verkkotunnukset)
+</translation>
+   <translation id="emailpro_tab_domain_manage" qtlid="404395">: hallinnoi</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritatiivinen (Vain E-mail Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Ei-autoritatiivinen (E-mail Pro + muu sähköpostipalvelu)</translation>

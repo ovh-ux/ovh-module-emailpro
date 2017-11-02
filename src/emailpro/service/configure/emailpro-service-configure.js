@@ -1,7 +1,7 @@
-angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Api.EmailPro", "EmailPro", "Alerter", "translator", function ($scope, APIEmailPro, EmailPro, Alerter, Translator) {
+angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Api.EmailPro", "EmailPro", "translator", function ($scope, APIEmailPro, EmailPro, Translator) {
     "use strict";
 
-    var exchange = $scope.currentActionData.exchange;
+    const exchange = $scope.currentActionData.exchange;
 
     $scope.loaders = {
         details: true,
@@ -61,11 +61,12 @@ angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Ap
             $scope.resetAction();
             EmailPro.resetAccounts();
             $scope.loaders.put = false;
-            Alerter.set("alert-success", Translator.tr("exchange_ACTION_configure_success"), "");
+            $scope.setMessage(Translator.tr("exchange_ACTION_configure_success"), { status: "success" });
         }, (reason) => {
             $scope.resetAction();
             $scope.loaders.put = false;
-            Alerter.set("alert-error", Translator.tr("exchange_ACTION_configure_error"), reason.data || "");
+            _.assign(reason.data, { type: "ERROR" });
+            $scope.setMessage(Translator.tr("exchange_ACTION_configure_error"), reason.data);
         });
     };
 
@@ -109,8 +110,8 @@ angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Ap
     };
 
     this.minPasswordAgeCheck = function (input) {
-        var intValue;
-        var value = input.$viewValue;
+        let intValue;
+        const value = input.$viewValue;
 
         input.$setValidity("mustBeInteger", true);
         input.$setValidity("min", true);
@@ -139,8 +140,8 @@ angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Ap
     };
 
     this.maxPasswordAgeCheck = function (input) {
-        var intValue;
-        var value = input.$viewValue;
+        let intValue;
+        const value = input.$viewValue;
 
         input.$setValidity("mustBeInteger", true);
         input.$setValidity("min", true);
@@ -169,8 +170,8 @@ angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Ap
     };
 
     this.lockoutThresholdCheck = function (input) {
-        var intValue;
-        var value = input.$viewValue;
+        let intValue;
+        const value = input.$viewValue;
 
         input.$setValidity("mustBeInteger", true);
         input.$setValidity("min", true);
@@ -196,8 +197,8 @@ angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Ap
     };
 
     this.lockoutObservationWindowCheck = function (input) {
-        var intValue;
-        var value = input.$viewValue;
+        let intValue;
+        const value = input.$viewValue;
 
         input.$setValidity("mustBeInteger", true);
         input.$setValidity("min", true);
@@ -232,8 +233,8 @@ angular.module("App").controller("EmailProServicesConfigureCtrl", ["$scope", "Ap
     };
 
     this.lockoutDurationCheck = function (input) {
-        var intValue;
-        var value = input.$viewValue;
+        let intValue;
+        const value = input.$viewValue;
 
         input.$setValidity("min", true);
         input.$setValidity("max", true);

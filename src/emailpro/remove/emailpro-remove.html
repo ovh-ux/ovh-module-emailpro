@@ -21,25 +21,31 @@
                 <form class="form-inline">
                     <span class="mr-3" data-i18n-static="exchange_update_billing_periode_label"></span>
 
-                    <label class="mr-2">
-                        <input class="my-0 mr-1"
+                    <div class="oui-radio oui-radio_inline">
+                        <input class="oui-radio__input"
                                type="radio"
                                id="MONTHLY"
                                name="renewGroup"
                                data-ng-model="exchange.renewPeriod"
                                data-ng-value="'MONTHLY'">
-                        <span data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_monthly')"></span>
-                    </label>
+                        <label class="oui-radio__label-container" for="MONTHLY">
+                            <span class="oui-radio__label" 
+                                  data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_monthly')"></span>
+                        </label>
+                    </div>
 
-                    <label>
-                        <input class="my-0 mr-1"
+                    <div class="oui-radio oui-radio_inline">
+                        <input class="oui-radio__input"
                                type="radio"
                                id="YEARLY"
                                name="renewGroup"
                                data-ng-model="exchange.renewPeriod"
                                data-ng-value="'YEARLY'">
-                        <span data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_yearly')"></span>
-                    </label>
+                        <label class="oui-radio__label-container" for="YEARLY">
+                            <span class="oui-radio__label" 
+                                  data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_yearly')"></span>
+                        </label>
+                    </div>
                 </form>
             </div>
 

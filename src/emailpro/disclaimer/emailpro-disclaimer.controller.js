@@ -3,7 +3,7 @@ angular.module("Module.emailpro.controllers")
         "use strict";
 
         function hasEmptySlot (list) {
-            var result = false;
+            let result = false;
             angular.forEach(list,
                             (value) => {
                                 if (value.emptySlotFlag) {
@@ -13,7 +13,7 @@ angular.module("Module.emailpro.controllers")
             return result;
         }
         function hasFullSlot (list) {
-            var result = false;
+            let result = false;
             angular.forEach(list,
                             (value) => {
                                 if (!value.emptySlotFlag) {
@@ -58,7 +58,7 @@ angular.module("Module.emailpro.controllers")
         });
 
         $scope.newDisclaimersDisabled = function () {
-            var result = false;
+            let result = false;
             if ($scope.disclaimersList) {
                 result = hasEmptySlot($scope.disclaimersList.list.results);
             }
@@ -79,7 +79,7 @@ angular.module("Module.emailpro.controllers")
 angular.module("Module.emailpro.controllers")
     .controller("EmailProAddDisclaimerCtrl", ($scope, $stateParams, EmailPro) => {
         "use strict";
-        var mceId = "add-disclaimer-editor";
+        const mceId = "add-disclaimer-editor";
 
         $scope.data = {
             content: "",
@@ -112,15 +112,15 @@ angular.module("Module.emailpro.controllers")
         $scope.loadAvailableDomains();
 
         $scope.saveDisclaimer = function () {
-            var model = {
+            const model = {
                 domain: $scope.data.completeDomain.name,
                 externalEmailsOnly: $scope.data.outsideOnly,
                 content: $scope.data.content
             };
 
-            $scope.setMessage($scope.tr("exchange_dashboard_action_doing"));
-            EmailPro.saveDisclaimer($stateParams.productId, model).then((data) => {
-                $scope.setMessage($scope.tr("exchange_ACTION_add_disclaimer_success_message"), data);
+            $scope.setMessage($scope.tr("exchange_dashboard_action_doing"), { status: "success" });
+            EmailPro.saveDisclaimer($stateParams.productId, model).then(() => {
+                $scope.setMessage($scope.tr("exchange_ACTION_add_disclaimer_success_message"), { status: "success" });
             }, (failure) => {
                 $scope.setMessage($scope.tr("exchange_ACTION_add_disclaimer_error_message"), failure.data);
             });
@@ -131,7 +131,7 @@ angular.module("Module.emailpro.controllers")
 angular.module("Module.emailpro.controllers")
     .controller("EmailProUpdateDisclaimerCtrl", ($scope, $stateParams, EmailPro) => {
         "use strict";
-        var mceId = "update-disclaimer-editor";
+        const mceId = "update-disclaimer-editor";
 
         function loadOptions () {
             $scope.loadingData = true;
@@ -152,7 +152,7 @@ angular.module("Module.emailpro.controllers")
         loadOptions();
 
         $scope.getCompleteDomain = function (domainName) {
-            var result;
+            let result;
             angular.forEach($scope.availableDomains, (value) => {
                 if (value.name === domainName) {
                     result = value;
@@ -169,15 +169,15 @@ angular.module("Module.emailpro.controllers")
         };
 
         $scope.saveDisclaimer = function () {
-            var model = {
+            const model = {
                 domain: $scope.data.domain.name,
                 externalEmailsOnly: $scope.data.outsideOnly,
                 content: $scope.data.content
             };
 
             $scope.setMessage($scope.tr("exchange_dashboard_action_doing"));
-            EmailPro.updateDisclaimer($stateParams.productId, model).then((data) => {
-                $scope.setMessage($scope.tr("exchange_ACTION_update_disclaimer_success_message"), data);
+            EmailPro.updateDisclaimer($stateParams.productId, model).then(() => {
+                $scope.setMessage($scope.tr("exchange_ACTION_update_disclaimer_success_message"), { status: "success" });
             }, (failure) => {
                 $scope.setMessage($scope.tr("exchange_ACTION_update_disclaimer_error_message"), failure.data);
             });
@@ -194,10 +194,10 @@ angular.module("Module.emailpro.controllers")
 
         $scope.disclaimer = $scope.currentActionData;
         $scope.submit = function () {
-            $scope.setMessage($scope.tr("exchange_dashboard_action_doing"));
+            $scope.setMessage($scope.tr("exchange_dashboard_action_doing"), { status: "success" });
             EmailPro.deleteDisclaimer($stateParams.productId, $scope.disclaimer.domain.name)
-                .then((success) => {
-                    $scope.setMessage($scope.tr("exchange_ACTION_delete_disclaimer_success"), success);
+                .then(() => {
+                    $scope.setMessage($scope.tr("exchange_ACTION_delete_disclaimer_success"), { status: "success" });
                 }, (failure) => {
                     $scope.setMessage($scope.tr("exchange_ACTION_delete_disclaimer_failure"), failure.data);
                 });

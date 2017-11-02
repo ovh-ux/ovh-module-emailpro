@@ -7,7 +7,9 @@
         <div data-wizard-step
              data-wizard-step-valid="getIsOVHDomain">
 
-            <div class="loader text-center" data-ng-if="ctrl.loading.step1"></div>
+            <div class="text-center" data-ng-if="ctrl.loading.step1">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <div data-ng-if="!ctrl.loading.step1">
                 <p data-ng-if="ctrl.domainDiag.isOvhDomain"
