@@ -19,6 +19,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAliasCtrl",
                     $scope.aliases = data;
                 }, (failure) => {
                     $scope.aliasLoading = false;
+                    _.set(failure, "data.type", failure.data.type || "ERROR");
                     $scope.setMessage($scope.tr("exchange_tab_ALIAS_error_message"), failure.data);
                 });
         }
@@ -54,7 +55,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAliasCtrl",
 /**
  *
  */
-angular.module("Module.emailpro.controllers").controller("EmailProAddAccountAliasCtrl", ($scope, $stateParams, EmailPro, Alerter) => {
+angular.module("Module.emailpro.controllers").controller("EmailProAddAccountAliasCtrl", ($scope, $stateParams, EmailPro) => {
     "use strict";
 
     $scope.selectedAccount = $scope.currentActionData;
@@ -66,7 +67,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddAccountAlia
         EmailPro.getNewAliasOptions($stateParams.productId, $scope.selectedAccount.primaryEmailAddress, "ACCOUNT")
             .then((data) => {
                 if (data.availableDomains.length === 0) {
-                    $scope.setMessage($scope.tr("emailpro_tab_ALIAS_add_no_domains"));
+                    $scope.setMessage($scope.tr("emailpro_tab_ALIAS_add_no_domains"), { status: "success" });
                     $scope.resetAction();
                 } else {
                     $scope.availableDomains = data.availableDomains;
@@ -74,6 +75,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddAccountAlia
                     $scope.model.domain = $scope.availableDomains[0];
                 }
             }, (failure) => {
+                _.set(failure, "data.type", failure.data.type || "ERROR");
                 $scope.setMessage($scope.tr("exchange_tab_ALIAS_domain_loading_failure"), failure.data);
                 $scope.resetAction();
             });
@@ -91,11 +93,11 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddAccountAlia
     $scope.addAccountAlias = function () {
         $scope.resetAction();
         EmailPro.addAlias($stateParams.productId, $scope.selectedAccount.primaryEmailAddress, $scope.model)
-            .then((data) => {
-                Alerter.success($scope.tr("exchange_tab_ALIAS_add_alias_success_message"), data);
+            .then(() => {
+                $scope.setMessage($scope.tr("exchange_tab_ALIAS_add_alias_success_message"), { status: "success" });
             }, (failure) => {
-                failure.type = "ERROR";
-                Alerter.alertFromSWS($scope.tr("exchange_tab_ALIAS_add_alias_error_message"), failure);
+                _.set(failure, "type", failure.type || "ERROR");
+                $scope.setMessage($scope.tr("exchange_tab_ALIAS_add_alias_error_message"), failure);
             });
     };
 
@@ -107,7 +109,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddAccountAlia
 /**
  *
  */
-angular.module("Module.emailpro.controllers").controller("EmailProRemoveAliasCtrl", ($scope, $stateParams, EmailPro, Alerter) => {
+angular.module("Module.emailpro.controllers").controller("EmailProRemoveAliasCtrl", ($scope, $stateParams, EmailPro) => {
     "use strict";
 
     $scope.account = $scope.currentActionData.account;
@@ -118,10 +120,10 @@ angular.module("Module.emailpro.controllers").controller("EmailProRemoveAliasCtr
 
         EmailPro.deleteAlias($stateParams.productId, $scope.account.primaryEmailAddress, $scope.alias.alias)
             .then(() => {
-                Alerter.success($scope.tr("exchange_tab_ALIAS_delete_success_message"));
+                $scope.setMessage($scope.tr("exchange_tab_ALIAS_delete_success_message"), { status: "success" });
             }, (failure) => {
-                failure.type = "ERROR";
-                Alerter.alertFromSWS($scope.tr("exchange_tab_ALIAS_delete_error_message"), failure);
+                _.set(failure, "type", failure.type || "ERROR");
+                $scope.setMessage($scope.tr("exchange_tab_ALIAS_delete_error_message"), failure);
             });
     };
 });
@@ -147,6 +149,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabGroupAliasC
                     $scope.aliases = data;
                 }, (failure) => {
                     $scope.aliasLoading = false;
+                    _.set(failure, "type", failure.type || "ERROR");
                     $scope.setMessage($scope.tr("exchange_tab_ALIAS_error_message"), failure);
                 });
         }
@@ -194,7 +197,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddGroupAliasC
         EmailPro.getNewAliasOptions($scope.selectedMailingList.mailingListName, "MAILING_LIST")
             .then((data) => {
                 if (data.availableDomains.length === 0) {
-                    $scope.setMessage($scope.tr("emailpro_tab_ALIAS_add_no_domains"));
+                    $scope.setMessage($scope.tr("emailpro_tab_ALIAS_add_no_domains"), { status: "success" });
                     $scope.resetAction();
                 } else {
                     $scope.availableDomains = data.availableDomains;
@@ -202,6 +205,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddGroupAliasC
                     $scope.model.domain = data.availableDomains[0];
                 }
             }, (failure) => {
+                _.set(failure, "data.type", failure.data.type || "ERROR");
                 $scope.setMessage($scope.tr("exchange_tab_ALIAS_domain_loading_failure"), failure.data);
                 $scope.resetAction();
             });
@@ -219,9 +223,10 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddGroupAliasC
     $scope.addGroupAlias = function () {
         $scope.resetAction();
         EmailPro.addGroupAlias($stateParams.productId, $scope.selectedMailingList.mailingListName, $scope.model)
-            .then((data) => {
-                $scope.setMessage($scope.tr("exchange_tab_ALIAS_add_alias_success_message"), data);
+            .then(() => {
+                $scope.setMessage($scope.tr("exchange_tab_ALIAS_add_alias_success_message"), { status: "success" });
             }, (failure) => {
+                _.set(failure, "data.type", failure.data.type || "ERROR");
                 $scope.setMessage($scope.tr("exchange_tab_ALIAS_add_alias_error_message"), failure.data);
             });
     };
@@ -244,9 +249,10 @@ angular.module("Module.emailpro.controllers").controller("EmailProRemoveGroupAli
         $scope.resetAction();
 
         EmailPro.deleteGroupAlias($stateParams.productId, $scope.selectedGroup.mailingListAddress, $scope.alias.alias)
-            .then((success) => {
-                $scope.setMessage($scope.tr("exchange_tab_ALIAS_delete_success_message"), success);
+            .then(() => {
+                $scope.setMessage($scope.tr("exchange_tab_ALIAS_delete_success_message"), { status: "success" });
             }, (failure) => {
+                _.set(failure, "data.type", failure.data.type || "ERROR");
                 $scope.setMessage($scope.tr("exchange_tab_ALIAS_delete_error_message"), failure.data);
             });
     };

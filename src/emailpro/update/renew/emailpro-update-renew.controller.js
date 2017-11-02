@@ -12,7 +12,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
         ids: []
     };
 
-    var setMonthly = function (account) {
+    const setMonthly = function (account) {
         account.renewPeriod = "MONTHLY";
         if ($scope.buffer.selectedMonthly.indexOf(account.primaryEmailAddress) === -1) {
             $scope.buffer.selectedMonthly.push(account.primaryEmailAddress);
@@ -21,7 +21,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
         _.remove($scope.buffer.selectedDelete, (num) => num === account.primaryEmailAddress);
     };
 
-    var setYearly = function (account) {
+    const setYearly = function (account) {
         account.renewPeriod = "YEARLY";
         if ($scope.buffer.selectedYearly.indexOf(account.primaryEmailAddress) === -1) {
             $scope.buffer.selectedYearly.push(account.primaryEmailAddress);
@@ -30,7 +30,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
         _.remove($scope.buffer.selectedDelete, (num) => num === account.primaryEmailAddress);
     };
 
-    var setDeleteAtExpiration = function (account) {
+    const setDeleteAtExpiration = function (account) {
         account.renewPeriod = "DELETE_AT_EXPIRATION";
         if ($scope.buffer.selectedDelete.indexOf(account.primaryEmailAddress) === -1) {
             $scope.buffer.selectedDelete.push(account.primaryEmailAddress);
@@ -39,8 +39,8 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
         _.remove($scope.buffer.selectedYearly, (num) => num === account.primaryEmailAddress);
     };
 
-    var bufferChanges = function (account) {
-        var buffer = _.find($scope.buffer.changes, { primaryEmailAddress: account.primaryEmailAddress });
+    const bufferChanges = function (account) {
+        const buffer = _.find($scope.buffer.changes, { primaryEmailAddress: account.primaryEmailAddress });
         if (!buffer) {
             $scope.buffer.changes.push({
                 primaryEmailAddress: account.primaryEmailAddress,
@@ -53,11 +53,11 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
         }
     };
 
-    var checkForChanges = function () {
+    const checkForChanges = function () {
         $scope.displayDeleteWarning = false;
         $scope.bufferedAccounts.list.results
             .forEach((buffer, index) => {
-                var newValue = $scope.accounts.list.results[index];
+                const newValue = $scope.accounts.list.results[index];
                 if (buffer.renewPeriod !== newValue.renewPeriod) {
                     bufferChanges(buffer);
                     if (buffer.renewPeriod === "DELETE_AT_EXPIRATION" || newValue.renewPeriod === "DELETE_AT_EXPIRATION") {
@@ -87,7 +87,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
                 // roll previous buffered changes
                 if ($scope.buffer.hasChanged) {
                     $scope.bufferedAccounts.list.results.forEach((account) => {
-                        var buffer = _.find($scope.buffer.changes, { primaryEmailAddress: account.primaryEmailAddress });
+                        const buffer = _.find($scope.buffer.changes, { primaryEmailAddress: account.primaryEmailAddress });
                         if (buffer) {
                             account.renewPeriod = buffer.renewPeriod;
                         }
@@ -128,7 +128,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
     };
 
     $scope.trackSelected = function (primaryEmailAddress, value) {
-        var account = _.find($scope.bufferedAccounts.list.results, { primaryEmailAddress });
+        const account = _.find($scope.bufferedAccounts.list.results, { primaryEmailAddress });
         if (account) {
             if (value === "MONTHLY") {
                 setMonthly(account);
@@ -163,7 +163,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateRenewCtr
 
         EmailPro.updateRenew($stateParams.productId, $scope.buffer.changes)
             .then((data) => {
-                var updateRenewMessages = {
+                const updateRenewMessages = {
                     OK: $scope.tr("exchange_update_billing_periode_success"),
                     PARTIAL: $scope.tr("exchange_update_billing_periode_partial"),
                     ERROR: $scope.tr("exchange_update_billing_periode_failure")

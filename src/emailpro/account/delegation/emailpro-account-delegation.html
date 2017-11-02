@@ -49,7 +49,7 @@
                             data-i18n-static="exchange_ACTION_delegation_step1_send_header"></th>
                         <th scope="col" class="text-center"
                             data-i18n-static="exchange_ACTION_delegation_step1_sendOnBehalfTo_header"></th>
-                        <th scope="col" class="text-center"
+                        <th scope="col" class="text-center min-width"
                             data-i18n-static="exchange_ACTION_delegation_step1_full_header"></th>
                     </tr>
                 </thead>
@@ -129,7 +129,7 @@
                                        data-ng-model="account.newSendOnBehalfToValue">
                             </div>
                         </td>
-                        <td class="text-center">
+                        <td class="text-center text-nowrap">
                             <div data-ng-if="account.fullAccessOnDoing"
                                  data-uib-tooltip="{{i18n.exchange_ACTION_delegation_step1_task_on_doing}}">
                                 <input type="checkbox"

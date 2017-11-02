@@ -8,7 +8,9 @@
              data-wizard-step-valid="accountIsValid()"
              data-wizard-step-on-load="loadAccountOptions">
 
-            <div class="loader text-center" data-ng-if="!newAccountOptions"></div>
+            <div class="text-center" data-ng-if="!newAccountOptions">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <form class="form-horizontal" name="emailProAddAccountForm">
                 <div class="form-group"

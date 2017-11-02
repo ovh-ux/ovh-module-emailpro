@@ -7,41 +7,55 @@
         <div data-wizard-step
              data-wizard-step-valid="data.completeDomain && data.content && data.content.length < 5000">
 
-            <div class="loader text-center" data-ng-if="loadingData"></div>
+            <div class="text-center" data-ng-if="loadingData">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <div data-ng-if="!loadingData">
                 <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-md-3 control-label"
-                               data-i18n-static="exchange_ACTION_disclaimer_associated_domains"></label>
-                        <div class="col-md-9">
-                            <select class="form-control" required
-                                    data-ng-model="data.completeDomain"
-                                    data-ng-options="domain.displayName for domain in availableDomains | orderBy:'formattedName'">
-                            </select>
-                        </div>
+                    <label class="oui-label" for="completeDomain"
+                           data-i18n-static="exchange_ACTION_disclaimer_associated_domains"></label>
+                    <div class="oui-select">
+                        <select class="oui-select__input" required
+                                name="completeDomain" id="completeDomain"
+                                data-ng-model="data.completeDomain"
+                                data-ng-options="domain.displayName for domain in availableDomains | orderBy:'formattedName'">
+                        </select>
+                        <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                     </div>
                 </form>
                 <form class="form-inline my-3">
-                    <div class="form-group">
-                        <select class="form-control" id="variableSelect"
-                                data-ng-model="data.selectedAttribute"
-                                data-ng-options="tr('exchange_ACTION_add_disclaimer_option_' +variable) for variable in availableAttributes">
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary" type="button"
-                                data-ng-click="insertVariable()"
-                                data-i18n-static="exchange_ACTION_disclaimer_insert"
-                                data-ng-enabled="data.selectedAttribute">
-                        </button>
+                    <div class="oui-field">
+                        <label for="variableSelect" class="oui-field__label oui-label"
+                               data-i18n-static="exchange_ACTION_disclaimer_insert"></label>
+                        <div class="oui-field__content">
+                            <div class="oui-select">
+                                <select class="oui-select__input" id="variableSelect" name="variableSelect"
+                                        data-ng-model="data.selectedAttribute"
+                                        data-ng-options="tr('exchange_ACTION_add_disclaimer_option_' +variable) for variable in availableAttributes">
+                                </select>
+                                <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
+                            </div>
+                            <button class="oui-button oui-button_secondary" type="button"
+                                    data-ng-click="insertVariable()"
+                                    data-i18n-static="exchange_ACTION_disclaimer_insert"
+                                    data-ng-enabled="data.selectedAttribute">
+                            </button>
+                        </div>
                     </div>
                 </form>
                 <textarea id="add-disclaimer-editor" data-ckeditor data-ng-model="data.content">{{data.content}}</textarea>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" data-ng-model="data.outsideOnly">
-                        <span data-i18n-static="exchange_ACTION_add_disclaimer_outside"></span>
+                <div class="oui-checkbox">
+                    <input type="checkbox" data-ng-model="data.outsideOnly"
+                           class="oui-checkbox__input"
+                           name="outsideOnly" id="outsideOnly">
+                    <label class="oui-checkbox__label-container" for="outsideOnly">
+                        <span class="oui-checkbox__label" data-i18n-static="exchange_ACTION_add_disclaimer_outside"></span>
+                        <span class="oui-checkbox__icon">
+                            <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
+                            <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
+                            <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
+                        </span>
                     </label>
                 </div>
                 <div class="alert alert-warning" role="alert"

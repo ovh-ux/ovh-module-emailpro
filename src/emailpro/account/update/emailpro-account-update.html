@@ -8,7 +8,9 @@
              data-wizard-step-valid="needsUpdate()"
              data-wizard-step-on-load="loadAccountOptions">
 
-            <div class="loader text-center" data-ng-if="!newAccountOptions"></div>
+            <div class="text-center" data-ng-if="!newAccountOptions">
+                <oui-loader inline="true"></oui-loader>
+            </div>
 
             <div class="alert" role="alert"
                  data-ng-class="alertType"

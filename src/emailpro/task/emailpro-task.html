@@ -5,8 +5,10 @@
          data-i18n-static="exchange_tab_TASKS_partial">
     </div>
 
-    <div class="loader text-center" aria-label="{{i18n.common_loading}}"
-         data-ng-if="tableLoading"></div>
+    <div class="text-center"
+         data-ng-if="tableLoading">
+        <oui-loader size="l" inline="true"></oui-loader>
+    </div>
 
     <div class="alert alert-info" role="alert"
          data-i18n-static="exchange_tab_TASKS_table_empty"
@@ -14,7 +16,7 @@
 
     <div class="table-responsive"
          data-ng-if="!tableLoading && tasksList.list.results.length > 0">
-        <table class="table table-hover table-striped">
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th scope="col" data-i18n-static="exchange_tab_TASKS_table_function"></th>

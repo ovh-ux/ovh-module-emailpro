@@ -43,7 +43,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             $scope.changeOwnerUrl = link;
         });
 
-        var loadATooltip = function (exchange) {
+        const loadATooltip = function (exchange) {
             if (exchange.serverDiagnostic.ip && exchange.serverDiagnostic.isAValid) {
                 exchange.serverDiagnostic.aTooltip = $scope.tr("exchange_dashboard_diag_a_tooltip_ok");
             } else {
@@ -51,7 +51,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             }
         };
 
-        var loadAaaaTooltip = function (exchange) {
+        const loadAaaaTooltip = function (exchange) {
             if (exchange.serverDiagnostic.ipV6 && exchange.serverDiagnostic.isAaaaValid) {
                 exchange.serverDiagnostic.aaaaTooltip = $scope.tr("exchange_dashboard_diag_aaaa_tooltip_ok");
             } else {
@@ -59,14 +59,14 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             }
         };
 
-        var loadPtrTooltip = function (exchange) {
+        const loadPtrTooltip = function (exchange) {
             if (exchange.serverDiagnostic.isPtrValid) {
                 exchange.serverDiagnostic.ptrTooltip = $scope.tr("exchange_dashboard_diag_ptr_tooltip_ok");
             } else {
                 exchange.serverDiagnostic.ptrTooltip = $scope.tr("exchange_dashboard_diag_ptr_tooltip_error");
             }
         };
-        var loadPtrv6Tooltip = function (exchange) {
+        const loadPtrv6Tooltip = function (exchange) {
             if (exchange.serverDiagnostic.isPtrV6Valid) {
                 exchange.serverDiagnostic.ptrv6Tooltip = $scope.tr("exchange_dashboard_diag_ptrv6_tooltip_ok");
             } else {
@@ -74,7 +74,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             }
         };
 
-        var loadEmailPro = function () {
+        const loadEmailPro = function () {
             User.getUser().then((data) => {
                 /* eslint-disable no-unused-vars */
                 try {
@@ -122,8 +122,8 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                     $scope.loadingEmailProInformations = false;
                     $scope.loadingEmailProError = true;
                     if (failure) {
-                        var response = failure.data || failure;
-                        var data = {
+                        const response = failure.data || failure;
+                        const data = {
                             status: "ERROR",
                             messages: [{ type: "ERROR", message: response.message, id: response.id }]
                         };
@@ -155,7 +155,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             return false;
         };
 
-        var parseLocationForEmailProData = function () {
+        const parseLocationForEmailProData = function () {
             // expect something like "/configuration/exchange_dedicated/organization-ss51633-1/exchange-ss51631-001?action=billing&tab=DOMAINS"
             // extract "exchange_dedicated"
             // var locationSplit = $location.url().replace("/configuration/", "").split("/");
@@ -164,7 +164,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             };
         };
 
-        var init = function () {
+        const init = function () {
             if ($location.search().action === "billing") {
                 $timeout(() => {
                     $rootScope.$broadcast("leftNavigation.selectProduct.fromName", parseLocationForEmailProData());
@@ -195,40 +195,43 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
          *   PARTIAL: 'message to display when partial success',
          *   ERROR: 'message to display when fail'
          * }
-         * @param data : the data from SWS
+         * @param message
+         * @param failure
          */
         $scope.setMessage = function (message, failure) {
-            var messageToSend = message;
-            var messageDetails = [];
-            var alertType = "alert";
+            let messageToSend = message;
+            let messageDetails = [];
+            let alertType = "alert";
 
             if (failure) {
                 if (failure.message) {
                     messageDetails.push({ id: failure.id, message: failure.message });
-                    switch (failure.type) {
-                    case "ERROR" :
-                        alertType = "alert alert-error";
+                    const type = _.get(failure, "type", "").toLowerCase();
+                    switch (type) {
+                    case "error" :
+                        alertType = "alert alert-danger";
                         break;
-                    case "WARNING" :
+                    case "warning" :
                         alertType = "alert";
                         break;
-                    case "INFO" :
+                    case "info" :
                         alertType = "alert alert-success";
                         break;
                     default:
                     }
                 } else if (failure.messages) {
                     if (failure.messages.length > 0) {
-                        switch (failure.state) {
-                        case "ERROR" :
-                            alertType = "alert alert-error";
+                        const state = _.get(failure, "state", "").toLowerCase();
+                        switch (state) {
+                        case "error" :
+                            alertType = "alert alert-danger";
                             messageToSend = message.ERROR;
                             break;
-                        case "PARTIAL" :
-                            alertType = "alert alert-error";
+                        case "partial" :
+                            alertType = "alert alert-warning";
                             messageToSend = message.PARTIAL;
                             break;
-                        case "OK" :
+                        case "ok" :
                             alertType = "alert alert-success";
                             messageToSend = message.OK;
                             break;
@@ -241,29 +244,23 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                         }, messageDetails);
                     }
                 } else if (failure.status) {
-                    switch (failure.status) {
-                    case "BLOCKED":
+                    const status = _.get(failure, "status", "").toLowerCase();
+                    switch (status) {
                     case "blocked":
-                    case "CANCELLED":
                     case "cancelled":
-                    case "PAUSED":
                     case "paused":
-                    case "ERROR":
                     case "error":
                         alertType = "alert alert-danger";
                         break;
-                    case "WAITING_ACK":
-                    case "waitingAck":
-                    case "WARNING":
+                    case "waitingack":
+                    case "waiting_ack":
                     case "warning":
-                    case "DOING":
                     case "doing":
                         alertType = "alert alert-warning";
                         break;
-                    case "TODO":
                     case "todo":
-                    case "DONE":
                     case "done":
+                    case "success":
                         alertType = "alert alert-success";
                         break;
                     default:
@@ -352,7 +349,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
 
         $scope.saveDisplayName = function () {
             if ($scope.newDisplayName.value && $scope.newDisplayName.value.length >= 5) {
-                var dataToSend = { displayName: $scope.newDisplayName.value };
+                const dataToSend = { displayName: $scope.newDisplayName.value };
                 APIEmailPro.put("/{exchangeService}", {
                     urlParams: {
                         exchangeService: $scope.exchange.domain
@@ -383,8 +380,8 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
 angular.module("Module.emailpro.controllers").controller("EmailProRemoveEmailProCtrl", ($scope, $stateParams, EmailPro) => {
     "use strict";
 
-    var getModel = function (exchange) {
-        var model = {
+    const getModel = function (exchange) {
+        const model = {
             exchangeType: exchange.offer,
             automatic: exchange.renewType.automatic,
             deleteAtExpiration: !exchange.renewType.deleteAtExpiration, // switch the actual value
@@ -404,7 +401,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProRemoveEmailPro
 
     $scope.submit = function () {
         EmailPro.updateDeleteAtExpiration($stateParams.productId, getModel($scope.exchange)).then((success) => {
-            var updateRenewMessages;
+            let updateRenewMessages;
 
             if ($scope.exchange.renewType.deleteAtExpiration) {
                 updateRenewMessages = {

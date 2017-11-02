@@ -10,13 +10,13 @@ angular.module("Module.emailpro.services").service("EmailPro", [
     function ($rootScope, Products, $http, $q, constants, cache, OvhHttp) {
         "use strict";
 
-        var tasksCache = cache("UNIVERS_WEB_EMAIL_PRO_TASKS");
-        var delegationRightsCache = cache("UNIVERS_WEB_EMAIL_PRO_DELEGATION_RIGHTS");
-        var disclaimersCache = cache("UNIVERS_WEB_EMAIL_PRO_DISCLAIMERS");
-        var requests = {
+        const tasksCache = cache("UNIVERS_WEB_EMAIL_PRO_TASKS");
+        const delegationRightsCache = cache("UNIVERS_WEB_EMAIL_PRO_DELEGATION_RIGHTS");
+        const disclaimersCache = cache("UNIVERS_WEB_EMAIL_PRO_DISCLAIMERS");
+        const requests = {
             exchangeDetails: null
         };
-        var that = this;
+        const that = this;
 
         this.exchangeCache = cache("UNIVERS_WEB_EMAIL_PRO");
         this.domainsCache = cache("UNIVERS_WEB_EMAIL_PRO_DOMAINS");
@@ -70,7 +70,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
                 that.resourcesCache.removeAll();
                 that.publicFolderCache.removeAll();
                 disclaimersCache.removeAll();
-                for (var request in requests) {
+                for (const request in requests) {
                     if (requests.hasOwnProperty(request)) {
                         requests[request] = null;
                     }
@@ -164,7 +164,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
             }
             return Products.getSelectedProduct(true).then((product) => {
                 if (product) {
-                    var selectedEmailPro = that.exchangeCache.get("exchange");
+                    const selectedEmailPro = that.exchangeCache.get("exchange");
                     if (!selectedEmailPro) {
                         if (requests.exchangeDetails === null) {
                             requests.exchangeDetails = OvhHttp.get("/sws/emailpro/{exchange}", {
@@ -239,11 +239,11 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * @param configurableOnlyParam - Integer value: "0" to get all, "1" to filter out dummy accounts and creating/deleting ones
          */
         this.getAccountsForEmailPro = function (exchange, cache, pageSizeParam, offsetParam, searchParam, configurableOnlyParam, typeParam, timeout) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
-            var configurableOnly = configurableOnlyParam || 0;
-            var type = typeParam || "";
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
+            const configurableOnly = configurableOnlyParam || 0;
+            const type = typeParam || "";
 
             return OvhHttp.get("/sws/emailpro/{exchange}/accounts", {
                 rootPath: "2api",
@@ -270,10 +270,10 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * @param configurableOnlyParam - Integer value: "0" to get all, "1" to filter out dummy accounts and creating/deleting ones
          */
         this.getAccountsAndContacts = function (serviceName, pageSizeParam, offsetParam, searchParam, configurableOnlyParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
-            var configurableOnly = configurableOnlyParam || 0;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
+            const configurableOnly = configurableOnlyParam || 0;
             return OvhHttp.get("/sws/emailpro/{exchange}/accounts/contacts", {
                 rootPath: "2api",
                 urlParams: {
@@ -305,7 +305,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          */
         this.addEmailProAccount = function (serviceName, accountToAdd) {
             // Format from play to api
-            var data = angular.copy(accountToAdd);
+            const data = angular.copy(accountToAdd);
             data.license = _.camelCase(data.accountLicense);
             delete data.accountLicense;
             data.outlookLicense = _.camelCase(data.outlook);
@@ -344,10 +344,10 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          */
         this.orderAccounts = function (serviceName, accountsToAdd) {
             // From play to apiv6
-            var data = angular.copy(accountsToAdd);
+            const data = angular.copy(accountsToAdd);
             data.number = data.accountsNumber;
             delete data.accountsNumber;
-            var duration = data.duration;
+            const duration = data.duration;
             delete data.duration;
             delete data.accountLicense;
             return OvhHttp.post("/order/email/pro/{exchange}/account/{duration}", {
@@ -365,19 +365,19 @@ angular.module("Module.emailpro.services").service("EmailPro", [
         };
 
         this.updateAccount = function (serviceName, account) {
-            var accountToUpdate = angular.copy(account);
+            const accountToUpdate = angular.copy(account);
             accountToUpdate.outlookLicense = accountToUpdate.outlook;
             delete accountToUpdate.outlook;
             accountToUpdate.deleteOutlookAtExpiration = accountToUpdate.deleteOutlook;
             delete accountToUpdate.deleteOutlook;
 
             accountToUpdate.displayName = account.displayName ? account.displayName.trim() : undefined;
-            var password = accountToUpdate.password;
+            const password = accountToUpdate.password;
             delete accountToUpdate.password;
             if (accountToUpdate.accountLicense) {
                 accountToUpdate.accountLicense = _.camelCase(accountToUpdate.accountLicense);
             }
-            var promises = [
+            const promises = [
                 OvhHttp.put("/email/pro/{exchange}/account/{primaryEmailAddress}", {
                     rootPath: "apiv6",
                     urlParams: {
@@ -453,9 +453,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get EmailPro accounts delegation rights
          */
         this.getAccountDelegationRight = function (serviceName, account, pageSizeParam, offsetParam, searchParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
             return OvhHttp.get("/sws/emailpro/{exchange}/accounts/{account}/rights", {
                 rootPath: "2api",
                 urlParams: {
@@ -496,8 +496,8 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get EmailPro accounts aliases
          */
         this.getAliases = function (serviceName, account, pageSizeParam, offsetParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
             return OvhHttp.get("/sws/emailpro/{exchange}/accounts/{account}/alias", {
                 rootPath: "2api",
                 urlParams: {
@@ -515,7 +515,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Data necessary for new alias creation
          */
         this.getNewAliasOptions = function (serviceName, emailParam, type) {
-            var email = emailParam || null;
+            const email = emailParam || null;
             return OvhHttp.get("/sws/emailpro/{exchange}/aliasOptions", {
                 rootPath: "2api",
                 urlParams: {
@@ -535,7 +535,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Add an account alias
          */
         this.addAlias = function (serviceName, account, aliasModel) {
-            var completeAlias = `${aliasModel.alias}@${aliasModel.domain.name}`;
+            const completeAlias = `${aliasModel.alias}@${aliasModel.domain.name}`;
             return OvhHttp.post("/email/pro/{exchange}/account/{primaryEmailAddress}/alias", {
                 rootPath: "apiv6",
                 urlParams: {
@@ -574,9 +574,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get groups this EmailPro account belongs to
          */
         this.getGroups = function (serviceName, pageSizeParam, offsetParam, searchParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
             return OvhHttp.get("/sws/emailpro/{exchange}/groups", {
                 rootPath: "2api",
                 clearCache: true,
@@ -595,9 +595,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get EmailPro mailing list delegation rights
          */
         this.getMailingListDelegationRights = function (serviceName, mailinglist, pageSizeParam, offsetParam, searchParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
 
             return OvhHttp.get("/sws/emailpro/{exchange}/groups/{mailinglist}/rights", {
                 rootPath: "2api",
@@ -683,9 +683,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get accounts by group
          */
         this.getAccountsByGroup = function (serviceName, groupName, pageSizeParam, offsetParam, searchParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
             return OvhHttp.get("/sws/emailpro/{exchange}/groups/{mailinglist}/accounts", {
                 rootPath: "2api",
                 clearCache: true,
@@ -705,9 +705,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get managers by group
          */
         this.getManagersByGroup = function (serviceName, groupName, pageSizeParam, offsetParam, searchParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
             return OvhHttp.get("/sws/emailpro/{exchange}/groups/{mailinglist}/managers", {
                 rootPath: "2api",
                 clearCache: true,
@@ -727,9 +727,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get managers by group
          */
         this.getMembersByGroup = function (serviceName, groupName, pageSizeParam, offsetParam, searchParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
-            var search = searchParam || undefined;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
+            const search = searchParam || undefined;
             return OvhHttp.get("/sws/emailpro/{exchange}/groups/{mailinglist}/members", {
                 rootPath: "2api",
                 clearCache: true,
@@ -784,7 +784,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Remove an EmailPro group member
          */
         this.removeMember = function (serviceName, groupName, accountId, type) {
-            var url = "/email/pro/{exchange}/mailingList/{mailingListAddress}/member";
+            let url = "/email/pro/{exchange}/mailingList/{mailingListAddress}/member";
             switch (type) {
             case "ACCOUNT":
                 url += "/account/{accountId}";
@@ -827,8 +827,8 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get group aliases
          */
         this.getGroupAliasList = function (serviceName, groupName, pageSizeParam, offsetParam) {
-            var pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
-            var offset = offsetParam || 0;
+            const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
+            const offset = offsetParam || 0;
 
             return OvhHttp.get("/sws/emailpro/{exchange}/group/{group}/alias", {
                 rootPath: "2api",
@@ -848,7 +848,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Add a group alias
          */
         this.addGroupAlias = function (serviceName, groupName, aliasModel) {
-            var completeAlias = `${aliasModel.alias}@${aliasModel.domain.name}`;
+            const completeAlias = `${aliasModel.alias}@${aliasModel.domain.name}`;
             return OvhHttp.post("/email/pro/{exchange}/mailingList/{mailingListAddress}/alias", {
                 rootPath: "apiv6",
                 urlParams: {
@@ -887,8 +887,8 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Return disclaimers list for a given EmailPro service
          */
         this.getDisclaimers = function (serviceName, pageSizeParam, offsetParam) {
-            var pageSize = pageSizeParam || 10;
-            var offset = offsetParam || 0;
+            const pageSize = pageSizeParam || 10;
+            const offset = offsetParam || 0;
             return OvhHttp.get("/sws/emailpro/{exchange}/disclaimers", {
                 rootPath: "2api",
                 urlParams: {
@@ -1002,7 +1002,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
          * Get exchange license history
          */
         this.getEmailProLicenseHistory = function (serviceName, period) {
-            var fromDate = moment();
+            let fromDate = moment();
             switch (period) {
             case "LASTWEEK":
                 fromDate = moment().subtract(1, "weeks");
@@ -1029,8 +1029,8 @@ angular.module("Module.emailpro.services").service("EmailPro", [
                     toDate: new Date()
                 }
             }).then((data) => {
-                var series = [];
-                var outlookSerie = {
+                const series = [];
+                const outlookSerie = {
                     name: "outlook",
                     data: []
                 };
@@ -1047,9 +1047,9 @@ angular.module("Module.emailpro.services").service("EmailPro", [
 
                 ["basic", "entreprise", "standard"].forEach((currentLicense) => {
                     data.forEach((d) => {
-                        var time = moment(d.date);
-                        var license = _.find(series, { name: currentLicense });
-                        var exists = true;
+                        const time = moment(d.date);
+                        let license = _.find(series, { name: currentLicense });
+                        let exists = true;
                         if (!license) {
                             license = {
                                 name: currentLicense,
@@ -1077,7 +1077,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
                     });
                 });
 
-                var stats = {
+                const stats = {
                     periods: ["LASTWEEK", "LASTMONTH", "LAST3MONTHS", "LASTYEAR"],
                     series
                 };
@@ -1108,8 +1108,8 @@ angular.module("Module.emailpro.services").service("EmailPro", [
         };
 
         this.prepareForCsv = function (serviceName, opts, offset, timeout) {
-            var queue = [];
-            var self = this;
+            const queue = [];
+            const self = this;
             return this.getAccounts(serviceName, opts.count, offset, opts.search, false, opts.filter, timeout).then((accounts) => {
                 angular.forEach(accounts.list.results, (account) => {
                     if (account.aliases > 0) {

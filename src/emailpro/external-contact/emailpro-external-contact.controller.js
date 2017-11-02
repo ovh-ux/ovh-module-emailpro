@@ -1,4 +1,4 @@
-angular.module("Module.emailpro.controllers").controller("EmailProAddExternalContactCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts, Alerter) => {
+angular.module("Module.emailpro.controllers").controller("EmailProAddExternalContactCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts) => {
     "use strict";
 
     $scope.model = {
@@ -37,15 +37,16 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddExternalCon
         }
 
         EmailProExternalContacts.addContact($stateParams.organization, $stateParams.productId, $scope.model.newAccount).then(() => {
-            Alerter.success($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_success"), $scope.alerts.dashboard);
+            $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_success"), { status: "success" });
         }, (failure) => {
-            Alerter.alertFromSWS($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail"), failure, $scope.alerts.dashboard);
+            failure.status = "error";
+            $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail"), failure);
         });
     };
 
     $scope.updateDisplayName = function () {
         if ($scope.model.newAccount && !$scope.model.hasDisplayNameBeenModified) {
-            var result = "";
+            let result = "";
             if ($scope.model.newAccount.firstName) {
                 result = $scope.model.newAccount.firstName;
                 if ($scope.model.newAccount.lastName) {
@@ -72,7 +73,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProAddExternalCon
     };
 });
 
-angular.module("Module.emailpro.controllers").controller("EmailProExternalContactsModifyCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts, Alerter) => {
+angular.module("Module.emailpro.controllers").controller("EmailProExternalContactsModifyCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts) => {
     "use strict";
 
     $scope.model = {
@@ -93,15 +94,16 @@ angular.module("Module.emailpro.controllers").controller("EmailProExternalContac
         $scope.resetAction();
         EmailProExternalContacts.modifyContact($stateParams.organization, $stateParams.productId, $scope.model.currentAccount.externalEmailAddress, $scope.model.newAccount)
             .then(() => {
-                Alerter.success($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success"), $scope.alerts.dashboard);
+                $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success"), { status: "success" });
             }, (err) => {
-                Alerter.alertFromSWS($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail"), err, $scope.alerts.dashboard);
+                _.set(err, "status", err.status || "error");
+                $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail"), err);
             });
     };
 
     $scope.updateDisplayName = function () {
         if ($scope.model.newAccount && !$scope.model.hasDisplayNameBeenModified) {
-            var result = "";
+            let result = "";
             if ($scope.model.newAccount.firstName) {
                 result = $scope.model.newAccount.firstName;
                 if ($scope.model.newAccount.lastName) {
@@ -129,7 +131,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProExternalContac
 
 });
 
-angular.module("Module.emailpro.controllers").controller("EmailProExternalContactsDeleteCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts, Alerter) => {
+angular.module("Module.emailpro.controllers").controller("EmailProExternalContactsDeleteCtrl", ($scope, $stateParams, EmailPro, EmailProExternalContacts) => {
     "use strict";
 
     $scope.model = {
@@ -138,10 +140,11 @@ angular.module("Module.emailpro.controllers").controller("EmailProExternalContac
 
     $scope.deleteAccount = function () {
         $scope.resetAction();
-        EmailProExternalContacts.removeContact($stateParams.organization, $stateParams.productId, $scope.model.externalEmailAddress).then((data) => {
-            Alerter.alertFromSWS($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success"), data, $scope.alerts.dashboard);
-        }, (data) => {
-            Alerter.alertFromSWS($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail"), data, $scope.alerts.dashboard);
+        EmailProExternalContacts.removeContact($stateParams.organization, $stateParams.productId, $scope.model.externalEmailAddress).then(() => {
+            $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success"), { status: "success" });
+        }, (err) => {
+            _.set(err, "status", err.status || "error");
+            $scope.setMessage($scope.tr("exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail"), err);
         });
     };
 
