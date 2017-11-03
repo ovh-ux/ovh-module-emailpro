@@ -114,7 +114,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProUpdateAccountC
             $scope.simplePasswordFlag = !EmailProPassword.passwordSimpleCheck(selectedAccount.password, true, $scope.newAccountOptions.minPasswordLength);
 
             /*
-                see the password complexity requirements of M$ Windows Server (like EmailPro)
+                see the password complexity requirements of Microsoft Windows Server (like EmailPro)
                 https://technet.microsoft.com/en-us/library/hh994562%28v=ws.10%29.aspx
             */
             if ($scope.newAccountOptions.passwordComplexityEnabled) {
