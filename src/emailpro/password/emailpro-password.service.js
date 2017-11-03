@@ -202,7 +202,7 @@ angular.module("Module.emailpro.services").service("EmailProPassword", [function
         var containsName;
         var splittedDisplayName;
 
-        /* M$ documentation update: "Both checks are not case sensitive." */
+        /* Microsoft documentation update: "Both checks are not case sensitive." */
         if (typeof password === "string") {
             password = password.toLowerCase();
         }
