@@ -47,11 +47,7 @@
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Modifier le compte E-mail Pro</translation>
    <translation id="emailpro_tab_account_remove_title" qtlid="375465">Voulez-vous réellement supprimer le compte suivant de votre service E-mail Pro ?</translation>
    <translation id="emailpro_tab_account_remove_success" qtlid="375478">Le compte va être supprimé de votre service E-mail Pro.</translation>
-
-<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
-L'antispam Vade Secure est compatible avec le mode non autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> et <strong qtlid="292228">{3}</strong>
-<br/><br/> Si vous utilisez le mode non autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong qtlid="416436">{4}</strong> (voir section domaines associés)
-</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397">L'antispam Vade Secure est compatible avec le mode non autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gérer</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritatif (E-mail Pro uniquement)</translation>
