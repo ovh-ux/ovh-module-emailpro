@@ -45,11 +45,11 @@
                     <tr>
                         <th scope="col"
                             data-i18n-static="exchange_ACTION_delegation_step1_email_header"></th>
-                        <th scope="col" class="text-center"
+                        <th scope="col" class="text-center text-wrap"
                             data-i18n-static="exchange_ACTION_delegation_step1_send_header"></th>
-                        <th scope="col" class="text-center"
+                        <th scope="col" class="text-center text-wrap"
                             data-i18n-static="exchange_ACTION_delegation_step1_sendOnBehalfTo_header"></th>
-                        <th scope="col" class="text-center min-width"
+                        <th scope="col" class="text-center text-wrap min-width"
                             data-i18n-static="exchange_ACTION_delegation_step1_full_header"></th>
                     </tr>
                 </thead>
@@ -68,7 +68,8 @@
 
                 <tbody data-ng-if="!loading">
                     <tr	data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailDisplayName':false">
-                        <th scope="row" data-ng-bind="account.primaryEmailDisplayName"></th>
+                        <th class="word-break" scope="row"
+                            data-ng-bind="account.primaryEmailDisplayName"></th>
                         <td class="text-center">
                             <!-- A task is on doing (activation or deactivation, sendAs or sendOnBehalf)-->
                             <div data-ng-if="account.sendAsOnDoing || account.sendOnBehalfToOnDoing">
