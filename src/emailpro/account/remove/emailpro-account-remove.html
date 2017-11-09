@@ -1,15 +1,18 @@
-<div data-ng-controller="EmailProRemoveAccountCtrl">
+<div data-ng-controller="EmailProRemoveAccountCtrl as ctrl">
     <div data-wizard
          data-wizard-on-cancel="resetAction"
-         data-wizard-on-finish="submit"
-         data-wizard-title="i18n.exchange_tab_account_remove_account">
+         data-wizard-on-finish="removeAccount"
+         data-wizard-title="i18n.emailpro_tab_account_reset_account">
 
         <div data-wizard-step>
-            <p data-ng-bind-html="tr('emailpro_tab_account_remove_title')"></p>
+            <p data-i18n-static="emailpro_tab_account_reset_title"></p>
             <dl class="dl-horizontal">
-                <dt data-i18n-static="exchange_tab_account_remove_email_label"></dt>
-                <dd data-ng-bind="account.primaryEmailDisplayName"></dd>
+                <dt data-i18n-static="emailpro_tab_account_reset_account_label"></dt>
+                <dd data-ng-bind="ctrl.account.primaryEmailDisplayName"></dd>
             </dl>
+            <div class="alert alert-info" role="alert"
+                 data-i18n-static="emailpro_tab_account_reset_account_info">
+            </div>
         </div>
     </div>
 </div>
