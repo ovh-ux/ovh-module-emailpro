@@ -146,8 +146,8 @@
         </div>
 
         <div data-wizard-step>
-            <strong data-i18n-static="exchange_ACTION_update_account_step2_confirmation_intro"></strong>
-            <dl class="dl-horizontal">
+            <p data-i18n-static="exchange_ACTION_update_account_step2_confirmation_intro"></p>
+            <dl class="dl-horizontal dl-lg">
                 <dt data-i18n-static="exchange_ACTION_update_account_step2_email_label"></dt>
                 <dd data-ng-bind="selectedAccount.login + '@' + selectedAccount.completeDomain.displayName"></dd>
 
@@ -157,16 +157,19 @@
                 </div>
 
                 <dt data-i18n-static="exchange_ACTION_update_account_step2_first_name_label"></dt>
-                <dd data-ng-if="selectedAccount.firstName" data-ng-bind="selectedAccount.firstName"></dd>
+                <dd data-ng-if="selectedAccount.firstName"
+                    data-ng-bind="selectedAccount.firstName"></dd>
                 <dd data-ng-if="!selectedAccount.firstName">-</dd>
 
                 <dt data-i18n-static="exchange_ACTION_update_account_step2_last_name_label"></dt>
-                <dd data-ng-if="selectedAccount.lastName" data-ng-bind="selectedAccount.lastName"></dd>
+                <dd data-ng-if="selectedAccount.lastName"
+                    data-ng-bind="selectedAccount.lastName"></dd>
                 <dd data-ng-if="!selectedAccount.lastName">-</dd>
 
                 <dt data-i18n-static="exchange_ACTION_update_account_step2_display_name_label"></dt>
-                <dd data-ng-if="selectedAccount.displayName" data-ng-bind="selectedAccount.displayName"></dd>
-                <dd data-ng-hide="selectedAccount.displayName">-</dd>
+                <dd data-ng-if="selectedAccount.displayName"
+                    data-ng-bind="selectedAccount.displayName"></dd>
+                <dd data-ng-if="!selectedAccount.displayName">-</dd>
 
                 <dt data-i18n-static="exchange_ACTION_update_account_step2_password_label"
                     data-ng-if="selectedAccount.password"></dt>
