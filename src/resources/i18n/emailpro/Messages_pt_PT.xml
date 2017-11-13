@@ -2,7 +2,7 @@
 <translations>
    <translation id="emailpro_tab_INFORMATION" qtlid="27115">Informações gerais</translation>
    <translation id="emailpro_displayName_maxlength" qtlid="260208">O nome não deve exceder os 250 caracteres</translation>
-   <translation id="emailpro_displayName_required" qtlid="88293">O espaço do nome não pode estar vazio</translation>
+   <translation id="emailpro_displayName_required" qtlid="88293">O espaço tem que ser preenchido</translation>
 
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Ocorreu um erro durante o carregamento da sua conta E-mail Pro. </translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Contas E-mail Pro</translation>
