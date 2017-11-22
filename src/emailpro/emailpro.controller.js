@@ -206,16 +206,16 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
             if (failure) {
                 if (failure.message) {
                     messageDetails.push({ id: failure.id, message: failure.message });
-                    const type = _.get(failure, "type", "").toLowerCase();
+                    const type = _.get(failure, "type", "warning").toLowerCase();
                     switch (type) {
-                    case "error" :
+                    case "error":
                         alertType = "alert alert-danger";
                         break;
-                    case "warning" :
-                        alertType = "alert";
-                        break;
-                    case "info" :
+                    case "info":
                         alertType = "alert alert-success";
+                        break;
+                    case "warning":
+                        alertType = "alert alert-warning";
                         break;
                     default:
                     }
@@ -264,6 +264,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProCtrl", [
                         alertType = "alert alert-success";
                         break;
                     default:
+                        alertType = "alert alert-warning";
                     }
                 } else if (failure === "true") {
                     alertType = "alert alert-success";
