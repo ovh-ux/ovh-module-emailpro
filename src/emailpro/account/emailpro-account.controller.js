@@ -155,19 +155,3 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAccountsCtr
 
     init();
 });
-
-angular.module("Module.emailpro.controllers").controller("EmailProRemoveAccountCtrl", ($scope, $stateParams, EmailPro) => {
-    "use strict";
-
-    $scope.account = $scope.currentActionData;
-
-    $scope.submit = function () {
-        $scope.resetAction();
-        EmailPro.removeAccount($stateParams.productId, $scope.account.primaryEmailAddress)
-            .then(() => {
-                $scope.setMessage($scope.tr("emailpro_tab_account_remove_success"), { status: "success" });
-            }, (failure) => {
-                $scope.setMessage($scope.tr("emaipro_tab_account_remove_failure"), failure);
-            });
-    };
-});

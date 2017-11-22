@@ -1,34 +1,28 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabDomainsCtrl">
     <div class="row">
         <div class="col-md-9">
-            <div class="alert alert-warning"
-                 role="alert"
-                 data-ng-if="containPartial()"
-                 data-i18n-static="exchange_tab_domain_partial"></div>
+            <div class="alert alert-warning" role="alert"
+                 data-i18n-static="exchange_tab_domain_partial"
+                 data-ng-if="containPartial()"></div>
             <div class="text-right mb-3">
                 <form class="form-inline" name="searchDomainForm">
                     <div class="form-group">
-                        <label class="sr-only"
-                               for="searchDomain"
+                        <label class="sr-only" for="searchDomain"
                                data-i18n-static="common_search"></label>
                         <div class="input-group">
-                            <input type="text"
-                                   class="form-control"
-                                   id="searchDomain"
-                                   name="searchDomain"
-                                   placeholder="{{::i18n.exchange_tab_domain_search}}"
+                            <input type="text" class="form-control" id="searchDomain" name="searchDomain" placeholder="{{::i18n.exchange_tab_domain_search}}"
+                                   data-ng-disabled="loading || paginated.domains.length === 0"
                                    data-ng-model="search.value"
-                                   data-ng-model-options="{debounce: 800}"
-                                   data-ng-disabled="loading || paginated.domains.length === 0">
-                            <div class="input-group-btn" data-ng-if="search.value">
-                                <button class="btn btn-default"
-                                        type="button"
-                                        aria-label="{{i18n.common_cancel}}"
+                                   data-ng-model-options="{debounce: 800}">
+                            <div class="input-group-btn"
+                                 data-ng-if="search.value">
+                                <button class="btn btn-default" type="button" aria-label="{{i18n.common_cancel}}"
                                         data-ng-click="search.value = null">
                                     <span class="fa fa-times" aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <span class="input-group-addon" data-ng-if="!search.value">
+                            <span class="input-group-addon"
+                                  data-ng-if="!search.value">
                                 <span class="fa fa-search" aria-hidden="true"></span>
                             </span>
                         </div>
@@ -42,10 +36,10 @@
                         <tr>
                             <th scope="col" data-i18n-static="exchange_tab_domain_domain"></th>
                             <th scope="col" data-i18n-static="exchange_tab_domain_type"></th>
-                            <th scope="col" data-i18n-static="exchange_tab_domain_accounts_count" class="text-center" ></th>
-                            <th scope="col" data-i18n-static="exchange_tab_domain_diagnostic" class="text-center" ></th>
-                            <th scope="col" data-i18n-static="exchange_tab_domain_status" class="text-center" ></th>
-                            <th scope="col" class="min-width"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_domain_accounts_count"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_domain_diagnostic"></th>
+                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_domain_status"></th>
+                            <th class="min-width" scope="col"></th>
                         </tr>
                     </thead>
 
@@ -75,7 +69,8 @@
                     <tbody data-ng-if="!loading && paginated.domains.length > 0">
                         <tr data-ng-repeat="domain in (paginated.domains | orderBy:'formattedName':false) track by $index"
                             data-ng-class="{'text-warning': domain.partial}">
-                            <td colspan="6" data-ng-if="domain.partial">
+                            <td colspan="6"
+                                data-ng-if="domain.partial">
                                 <span class="fa fa-warning mr-2" aria-hidden="true"></span>
                                 <span data-ng-bind="domain.displayName"></span>
                             </td>
@@ -94,61 +89,64 @@
                                 <span data-ng-if="!domain.taskInProgress || !domain.partial || domain.state === stateOk"
                                       data-ng-bind="tr('exchange_tab_domain_' + domain.type)"></span>
                             </td>
-                            <td colspan="2" data-ng-if="!domain.partial && !domain.domainValidated">
+                            <td colspan="2"
+                                data-ng-if="!domain.partial && !domain.domainValidated">
                                 <span data-i18n-static="exchange_tab_domain_validation_doing"></span>
                                 <span class="d-block"
                                       data-i18n-static="exchange_tab_domain_validation_cname"
                                       data-ng-if="domain.cname"></span>
                             </td>
                             <td class="text-center"
-                                data-ng-hide="domain.partial || !domain.domainValidated"
-                                data-ng-bind="domain.accountsCount"></td>
-                            <td class="text-center" data-ng-hide="domain.partial">
+                                data-ng-bind="domain.accountsCount"
+                                data-ng-if="!domain.partial && domain.domainValidated"></td>
+                            <td class="text-center"
+                                data-ng-if="!domain.partial">
                                 <div data-ng-if="domain.domainValidated">
-                                    <button class="btn btn-danger btn-xs"
-                                            type="button"
-                                            data-ng-if="domain.mxValid === false"
+                                    <button class="btn btn-danger btn-xs" type="button"
+                                            data-i18n-static="exchange_tab_domain_diagnostic_mx"
                                             data-ng-click="setAction('emailpro/domain/mx-autoconfig/emailpro-domain-mx-autoconfig', domain)"
-                                            data-i18n-static="exchange_tab_domain_diagnostic_mx"></button>
-                                    <button class="btn btn-success btn-xs"
-                                           type="button"
+                                            data-ng-if="domain.mxValid === false">
+                                    </button>
+                                    <button class="btn btn-success btn-xs" type="button"
+                                            data-i18n-static="exchange_tab_domain_diagnostic_mx"
                                             data-ng-if="domain.mxValid"
                                             data-simplepopover="{{domain.mxTooltip}}"
                                             data-simplepopover-title="{{tr('exchange_tab_domain_diagnostic_mx_title')}}"
                                             data-simplepopover-placement="top"
-                                            data-simplepopover-single="true"
-                                            data-i18n-static="exchange_tab_domain_diagnostic_mx"></button>
-                                    <button class="btn btn-danger btn-xs"
-                                            type="button"
-                                            data-ng-if="domain.srvValid === false"
+                                            data-simplepopover-single="true">
+                                    </button>
+                                    <button class="btn btn-danger btn-xs" type="button"
                                             data-i18n-static="exchange_tab_domain_diagnostic_srv"
-                                            data-ng-click="setAction('emailpro/domain/srv-autoconfig/emailpro-domain-srv-autoconfig', domain)"></button>
-                                    <button class="btn btn-success btn-xs"
-                                            type="button"
+                                            data-ng-click="setAction('emailpro/domain/srv-autoconfig/emailpro-domain-srv-autoconfig', domain)"
+                                            data-ng-if="domain.srvValid === false">
+                                    </button>
+                                    <button class="btn btn-success btn-xs" type="button"
+                                            data-i18n-static="exchange_tab_domain_diagnostic_srv"
                                             data-ng-if="domain.srvValid"
-                                            data-i18n-static="exchange_tab_domain_diagnostic_srv"
                                             data-simplepopover="{{domain.srvTooltip}}"
                                             data-simplepopover-title="{{tr('exchange_tab_domain_diagnostic_srv_title')}}"
                                             data-simplepopover-placement="top"
-                                            data-simplepopover-single="true"></button>
+                                            data-simplepopover-single="true">
+                                    </button>
                                 </div>
-                                <button class="btn btn-danger btn-xs"
-                                        type="button"
+                                <button class="btn btn-danger btn-xs" type="button"
                                         data-i18n-static="exchange_tab_domain_diagnostic_cname"
                                         data-ng-if="!domain.domainValidated && domain.cname"
                                         data-simplepopover="{{tr('exchange_tab_domain_validation_cname_details', [domain.cname, domain.name, cnameRedirection])}}"
                                         data-simplepopover-placement="top"
                                         data-simplepopover-single="true"
-                                        data-simplepopover-title="{{tr('exchange_tab_domain_validation_cname_title')}}"></button>
+                                        data-simplepopover-title="{{tr('exchange_tab_domain_validation_cname_title')}}">
+                                </button>
                             </td>
-                            <td class="text-center" data-ng-if="!domain.partial">
+                            <td class="text-center"
+                                data-ng-if="!domain.partial">
                                 <div data-ng-if="domain.state === stateOk">
                                     <span class="label label-success"
-                                          data-ng-if="!domain.taskInProgress"
-                                          data-i18n-static="global_OK"></span>
+                                          data-i18n-static="global_OK"
+                                          data-ng-if="!domain.taskInProgress"></span>
                                     <span class="label label-info"
-                                          data-ng-if="domain.taskInProgress"
-                                          data-i18n-static="exchange_tab_domain_task_in_progress"></span>
+                                          data-i18n-static="exchange_tab_domain_task_in_progress"
+                                          data-ng-if="domain.taskInProgress"></span>
                                 </div>
                                 <div data-ng-if="domain.state === stateCreating || domain.state === stateDeleting">
                                     <span class="label label-info"
@@ -162,17 +160,14 @@
                                           data-i18n-static="exchange_tab_ACCOUNTS_state_DELETING"></span>
                                 </div>
                             </td>
-                            <td class="text-center text-nowrap" data-ng-if="!domain.partial">
-                                <button class="btn btn-icon"
-                                        data-ng-disabled="isEditDisabled(domain)"
-                                        type="button"
-                                        title="{{domain.displayName}}.&nbsp;{{::i18n.table_modify_entry}}"
-                                        data-ng-click="updateDomain(domain)">
+                            <td class="text-center text-nowrap"
+                                data-ng-if="!domain.partial">
+                                <button class="btn btn-icon" type="button" title="{{domain.displayName}}. {{::i18n.table_modify_entry}}"
+                                        data-ng-click="updateDomain(domain)"
+                                        data-ng-disabled="isEditDisabled(domain)">
                                     <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
                                 </button>
-                                <button class="btn btn-icon"
-                                        type="button"
-                                        title="{{domain.displayName}}.&nbsp;{{::i18n.table_delete_entry}}"
+                                <button class="btn btn-icon" type="button" title="{{domain.displayName}}. {{::i18n.table_delete_entry}}"
                                         data-ng-click="deleteDomain(domain)"
                                         data-ng-if="!isDeleteDisabled(domain)">
                                     <span class="oui-icon oui-icon-trash_line oui-icon_small" aria-hidden="true"></span>
@@ -194,14 +189,15 @@
                  data-pagination-server-side="domainsTable"
                  data-pagination-server-side-function="getDomains"
                  data-pagination-server-side-paginated-stuff="paginated"
-                 data-pagination-server-side-table-loading="loading"></div>
+                 data-pagination-server-side-table-loading="loading">
+            </div>
         </div>
 
         <div class="col-md-3 mt-5 mt-lg-0">
-            <button class="btn btn-block btn-default"
-                    type="button"
+            <button class="btn btn-block btn-default" type="button"
                     data-i18n-static="exchange_tab_domain_add_domain"
-                    data-ng-click="setAction('emailpro/domain/add/emailpro-domain-add', {})"></button>
+                    data-ng-click="setAction('emailpro/domain/add/emailpro-domain-add', {})">
+            </button>
         </div>
     </div>
 </div>

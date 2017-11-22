@@ -8,9 +8,8 @@
             </div>
             <div class="pull-left">
                 <strong data-i18n-static="exchange_tab_INFORMATIONS_webmail"></strong> :
-                <a target="_blank"
-                   data-ng-href="https://{{exchange.hostname}}" 
-                   title="{{tr('exchange_tab_INFORMATIONS_webmail')}} ({{tr('exchange_dashboard_new_window')}})">
+                <a target="_blank" title="{{tr('exchange_tab_INFORMATIONS_webmail')}} ({{tr('exchange_dashboard_new_window')}})"
+                   data-ng-href="https://{{exchange.hostname}}">
                     <span data-ng-bind="'https://' + exchange.hostname"></span>
                     <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
                 </a>
@@ -28,7 +27,7 @@
                                     data-ng-model="filterType"
                                     data-ng-options="tr('exchange_tab_ACCOUNTS_type_' + type) for type in accountTypes">
                             </select>
-                            <span class="oui-icon oui-icon-chevron-down" aria-hidden="true">
+                            <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                         </div>
                     </div>
                     <div class="form-group">
@@ -128,22 +127,22 @@
 
                                 <span class="label label-info"
                                       data-ng-if="account.state === stateCreating"
-                                      data-i18n-static="exchange_tab_ACCOUNTS_state_CREATING"></span>
+                                      data-i18n-static="emailpro_tab_account_state_CREATING"></span>
                                 <span class="label label-danger"
                                       data-ng-if="account.state === stateDeleting"
-                                      data-i18n-static="exchange_tab_ACCOUNTS_state_DELETING"></span>
+                                      data-i18n-static="emailpro_tab_account_state_DELETING"></span>
                                 <span class="label label-warning"
                                       data-ng-if="account.state === stateSuspended"
-                                      data-i18n-static="exchange_tab_ACCOUNTS_state_SUSPENDED"></span>
+                                      data-i18n-static="emailpro_tab_account_state_SUSPENDED"></span>
                                 <span class="label label-info"
                                       data-ng-if="account.state === stateSuspending"
-                                      data-i18n-static="exchange_tab_ACCOUNTS_state_SUSPENDING"></span>
+                                      data-i18n-static="emailpro_tab_account_state_SUSPENDING"></span>
                                 <span class="label label-info"
                                       data-ng-if="account.state === stateReopening"
-                                      data-i18n-static="exchange_tab_ACCOUNTS_state_REOPENING"></span>
+                                      data-i18n-static="emailpro_tab_account_state_REOPENING"></span>
 
                                 <button class="btn btn-danger btn-xs" type="button"
-                                        data-i18n-static="exchange_tab_ACCOUNTS_state_SPAM"
+                                        data-i18n-static="emailpro_tab_account_state_SPAM"
                                         data-ng-if="account.spamDetected && account.state === stateOk"
                                         data-simplepopover="{{spamTooltipContent}}"
                                         data-simplepopover-single="true"

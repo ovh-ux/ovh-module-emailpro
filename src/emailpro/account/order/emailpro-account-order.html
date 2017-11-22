@@ -27,8 +27,8 @@
                                     type="radio" id="{{'duration'+$index}}" name="payTypeGroup"
                                     data-ng-value="orderAvailable.duration.duration"
                                     data-ng-model="accountsToAdd.duration">
-                            <label class="oui-radio__label-container" id="{{'duration'+$index}}">
-                                <span class="oui-radio__label" 
+                            <label class="oui-radio__label-container" for="{{'duration'+$index}}">
+                                <span class="oui-radio__label"
                                       data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration) + ' ( <strong>'  + orderAvailable.unitaryMonthlyPrice.text + '</strong> ' + tr('emailpro_ACTION_order_accounts_per_account') + ')'"></span>
                             </label>
                         </div>
@@ -53,7 +53,7 @@
                            type="checkbox" id="legalWarning"
                            data-ng-model="valid.legalWarning">
                     <label class="oui-checkbox__label-container" for="legalWarning">
-                        <span class="oui-checkbox__label" 
+                        <span class="oui-checkbox__label"
                               data-ng-bind-html="tr('exchange_ACTION_add_account_legal_warning')"></span>
                         <span class="oui-checkbox__icon">
                             <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
