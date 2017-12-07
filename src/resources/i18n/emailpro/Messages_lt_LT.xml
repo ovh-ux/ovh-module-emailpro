@@ -45,13 +45,22 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">E-mail Pro el. pašto adresas negali būti pritaikytas asmeniniam naudojimui. Tikėtina, kad toks pavadinimas jau priskirtas susijusiai konfigūracijai (el. pašto adresui, nukreipimui, automatiniam atsakikliui).</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">E-mail Pro paskyros slaptažodis bus pakeistas.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Keisti E-mail Pro paskyrą</translation>
-   <translation id="emailpro_tab_account_remove_title" qtlid="375465">Ar iš tiesų norite pašalinti šią paskyrą iš savo E-mail Pro paslaugos?</translation>
-   <translation id="emailpro_tab_account_remove_success" qtlid="375478">Paskyra bus pašalinta iš jūsų E-mail Pro paslaugos.</translation>
-
-<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
-Anti-spam Vade Secure paslauga yra suderinama su Non-authorative režimu (tik jeigu jūsų pop/imap el. paštas yra talpinamas OVH). Tokiu atveju rekomenduojama naudoti: <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> ir <strong qtlid="292228">{3}</strong>
-<br/><br/> Jeigu naudosite Non-authoritative režimą el. pašto dėžutėms, talpinamoms OVH, tuomet jūs turėtumėte naudoti: <strong qtlid="416436">{4}</strong> (peržiūrėti susijusių domenų skiltį)
-</translation>
+   <translation id="emailpro_ACTION_account_error_pattern">Le compte comporte des caractères invalides</translation>
+   <translation id="emailpro_ACTION_account_error_required">Le compte est obligatoire</translation>
+   <translation id="emailpro_tab_account_state_CREATING">Création</translation>
+   <translation id="emailpro_tab_account_state_DELETING">Réinitialisation</translation>
+   <translation id="emailpro_tab_account_state_REOPENING">Ouverture en cours</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDED">Suspendu</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDING">Suspension en cours</translation>
+   <translation id="emailpro_tab_account_state_SPAM">Spam</translation>
+   <translation id="emailpro_tab_account_popover_reset">Réinitialiser ce compte</translation>
+   <translation id="emailpro_tab_account_reset_account">Réinitialiser un compte</translation>
+   <translation id="emailpro_tab_account_reset_title">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
+   <translation id="emailpro_tab_account_reset_account_label">Compte</translation>
+   <translation id="emailpro_tab_account_reset_account_info">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, celui-ci est toujours facturé. Si vous ne souhaitez plus être facturé, cliquez sur "mode de facturation", puis cochez "Aucun" pour le compte concerné et validez.</translation>
+   <translation id="emailpro_tab_account_reset_success">Le compte de votre service E-mail Pro va être réinitialisé.</translation>
+   <translation id="emailpro_tab_account_reset_failure">Une erreur est survenue lors de la réinitialisation du compte de votre service E-mail Pro.</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: valdyti</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (tik E-mail Pro paskyra)</translation>
