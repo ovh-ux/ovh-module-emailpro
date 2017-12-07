@@ -14,26 +14,31 @@
 
             <form class="form-horizontal" name="emailProAddAccountForm">
                 <div class="form-group"
-                     data-ng-class="{ 'has-error': takenEmailError }">
+                     data-ng-class="{ 'has-error': emailProAddAccountForm.login.$dirty && (emailProAddAccountForm.login.$invalid || takenEmailError) }">
                     <label class="col-md-12 control-label text-left required" for="login"
                            data-i18n-static="exchange_ACTION_add_account_step1_email_label"></label>
                     <div class="col-md-12">
                         <div class="input-group">
                             <input type="text" class="form-control" id="login" name="login"
+                                   data-ng-change="checkTakenEmails()"
                                    data-ng-model="accountToAdd.login"
-                                   data-ng-pattern="/^[-_a-zA-Z0-9]+((\.|\+)[-_a-zA-Z0-9]+)*$/"
-                                   data-ng-change="checkTakenEmails()">
+                                   data-ng-pattern="/^[-_a-zA-Z0-9]+((\.|\+)[-_a-zA-Z0-9]+)*$/">
                             <span class="input-group-addon">@</span>
                             <select class="form-control" required
-                                    data-ng-options="domain.displayName for domain in newAccountOptions.availableDomains | orderBy:'formattedName'"
-                                    data-ng-model="accountToAdd.completeDomain"
+                                    data-ng-change="checkTakenEmails()"
                                     data-ng-disabled="newAccountOptions == null"
-                                    data-ng-change="checkTakenEmails()">
+                                    data-ng-model="accountToAdd.completeDomain"
+                                    data-ng-options="domain.displayName for domain in newAccountOptions.availableDomains | orderBy:'formattedName'">
                             </select>
                         </div>
-                        <span class="help-block"
-                              data-ng-if="takenEmailError"
-                              data-i18n-static="exchange_tab_ALIAS_taken_error_message"></span>
+                        <small class="help-block"
+                               data-i18n-static="exchange_tab_ALIAS_taken_error_message"
+                               data-ng-if="takenEmailError">
+                        </small>
+                        <small class="help-block"
+                               data-ng-repeat="(error, value) in emailProAddAccountForm.login.$error"
+                               data-ng-bind="i18n['emailpro_ACTION_account_error_' + error] || error">
+                        </small>
                     </div>
                 </div>
                 <div class="form-group" data-ng-if="newAccountOptions.availableTypes.length > 1" >

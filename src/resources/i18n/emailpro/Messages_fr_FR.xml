@@ -45,6 +45,8 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">L'adresse e-mail E-mail Pro n'a pas pu être personnalisée. Il est possible qu'une configuration mutualisée (mail, redirection, répondeur) existe avec le même nom.</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Le mot de passe du compte E-mail Pro va être modifié.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Modifier le compte E-mail Pro</translation>
+   <translation id="emailpro_ACTION_account_error_pattern">Le compte comporte des caractères invalides</translation>
+   <translation id="emailpro_ACTION_account_error_required">Le compte est obligatoire</translation>
    <translation id="emailpro_tab_account_state_CREATING">Création</translation>
    <translation id="emailpro_tab_account_state_DELETING">Réinitialisation</translation>
    <translation id="emailpro_tab_account_state_REOPENING">Ouverture en cours</translation>
