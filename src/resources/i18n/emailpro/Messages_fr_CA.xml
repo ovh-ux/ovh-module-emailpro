@@ -45,19 +45,28 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">L'adresse e-mail E-mail Pro n'a pas pu être personnalisée. Il est possible qu'une configuration mutualisée (mail, redirection, répondeur) existe avec le même nom.</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Le mot de passe du compte E-mail Pro va être modifié.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Modifier le compte E-mail Pro</translation>
-   <translation id="emailpro_tab_account_remove_title" qtlid="375465">Voulez-vous réellement supprimer le compte suivant de votre service E-mail Pro ?</translation>
-   <translation id="emailpro_tab_account_remove_success" qtlid="375478">Le compte va être supprimé de votre service E-mail Pro.</translation>
-
-<translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="416397;416410;416410;169498;416423;416449">
-L'antispam Vade Secure est compatible avec le mode non autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong qtlid="266365">{0}</strong>, <strong qtlid="78906">{1}</strong>, <strong qtlid="183112">{2}</strong> et <strong qtlid="292228">{3}</strong>
-<br/><br/> Si vous utilisez le mode non autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong qtlid="416436">{4}</strong> (voir section domaines associés)
-</translation>
+   <translation id="emailpro_ACTION_account_error_pattern">Le compte comporte des caractères invalides</translation>
+   <translation id="emailpro_ACTION_account_error_required">Le compte est obligatoire</translation>
+   <translation id="emailpro_tab_account_state_CREATING">Création</translation>
+   <translation id="emailpro_tab_account_state_DELETING">Réinitialisation</translation>
+   <translation id="emailpro_tab_account_state_REOPENING">Ouverture en cours</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDED">Suspendu</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDING">Suspension en cours</translation>
+   <translation id="emailpro_tab_account_state_SPAM">Spam</translation>
+   <translation id="emailpro_tab_account_popover_reset">Réinitialiser ce compte</translation>
+   <translation id="emailpro_tab_account_reset_account">Réinitialiser un compte</translation>
+   <translation id="emailpro_tab_account_reset_title">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
+   <translation id="emailpro_tab_account_reset_account_label">Compte</translation>
+   <translation id="emailpro_tab_account_reset_account_info">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, celui-ci est toujours facturé. Si vous ne souhaitez plus être facturé, cliquez sur "mode de facturation", puis cochez "Aucun" pour le compte concerné et validez.</translation>
+   <translation id="emailpro_tab_account_reset_success">Le compte de votre service E-mail Pro va être réinitialisé.</translation>
+   <translation id="emailpro_tab_account_reset_failure">Une erreur est survenue lors de la réinitialisation du compte de votre service E-mail Pro.</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gérer</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritatif (E-mail Pro uniquement)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non autoritatif (E-mail Pro + autre service de messagerie)</translation>
+   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-autoritatif (E-mail Pro + autre service de messagerie)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Le mode autoritatif ne permet pas l'usage d'un autre système de messagerie avec des comptes E-mail Pro. Ce mode permet l'activation de l'antispam Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Le mode non autoritatif permet une cohabitation entre E-mail Pro et un autre service de messagerie. L'antispam Vade Secure est compatible si les comptes pop/imap sont hébergés chez OVH (mxplan ou offre mutualisée), il faut indiquer dans ce cas mx1.mail.ovh.net en serveur e-mail cible.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Le mode non-autoritatif permet une cohabitation entre E-mail Pro et un autre service de messagerie. L'antispam Vade Secure est compatible si les comptes pop/imap sont hébergés chez OVH (mxplan ou offre mutualisée), il faut indiquer dans ce cas mx1.mail.ovh.net en serveur e-mail cible.</translation>
    <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Etes-vous sûr de vouloir modifier le domaine suivant de votre service E-mail Pro ?</translation>
    <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">Par défaut, lorsque vous ajoutez votre domaine sur le serveur E-mail Pro, il se trouve en mode autoritatif. C'est-à-dire que lorsque vous envoyez un e-mail à l'adresse du domaine géré sur le serveur, ce dernier va regarder exclusivement sur le serveur E-mail Pro si l'adresse est présente. <br /><br /> En revanche, si vous basculez le domaine en mode non-autoritatif, lors de l'envoi du e-mail, nous allons vérifier dans un premier temps si l'adresse e-mail est présente sur le serveur E-mail Pro, et si ce n'est pas le cas, ce dernier relayera votre message sur le serveur MX que vous avez défini. <br /><br />Le domaine en mode non-autoritatif peut être utilisé si vous souhaitez, par exemple, gérer une partie de vos e-mails sur E-mail Pro et une autre partie sur un serveur externe. <br /><br />Attention, si vous souhaitez utiliser le service E-mail Pro et le service e-mail mutualisé OVH, vous devez dans le champ "Serveur e-mail cible" du formulaire de gauche renseigner cette valeur : <strong>mx1.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Etes-vous sûr de vouloir réellement supprimer le domaine suivant de votre service E-mail Pro ?</translation>
