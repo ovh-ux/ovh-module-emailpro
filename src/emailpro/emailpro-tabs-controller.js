@@ -28,7 +28,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabsCtrl", ($s
                 type: "SEPARATOR"
             },
             {
-                label: $scope.tr("exchange_action_configuration"),
+                label: $scope.tr("emailpro_configuration_action_title"),
                 type: "ACTION",
                 fn () {
                     $scope.setAction("emailpro/service/configure/emailpro-service-configure", { exchange: $scope.exchange });
