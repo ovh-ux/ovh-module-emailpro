@@ -11,7 +11,7 @@
              data-wizard-step-valid="model.name && isNonOvhDomainValid()">
 
             <div class="text-center" data-ng-if="loading">
-              <oui-loader inline="true"></oui-loader>
+              <oui-spinner class="d-inline-block"></oui-spinner>
             </div>
 
             <div class="alert alert-info" role="alert"
@@ -27,7 +27,7 @@
                            data-ng-change="resetName()"
                            class="oui-radio__input">
                     <label class="oui-radio__label-container" for="addOption1">
-                        <span class="oui-radio__label" 
+                        <span class="oui-radio__label"
                               data-i18n-static="exchange_tab_domain_add_step1_select_domain_option"></span>
                     </label>
                 </div>
@@ -126,7 +126,7 @@
                            data-ng-model="model.type"
                            class="oui-radio__input">
                     <label class="oui-radio__label-container" for="domainType-NA">
-                        <span class="oui-radio__label" 
+                        <span class="oui-radio__label"
                               data-i18n-static="emailpro_tab_domain_mode_NON_AUTHORITATIVE"></span>
                     </label>
                 </div>

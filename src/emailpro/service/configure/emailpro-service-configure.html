@@ -10,11 +10,11 @@
 
             <div data-ng-if="loaders.details == true && loaders.put == false"
                  data-i18n-static="exchange_ACTION_loading">
-                <oui-loader size="s" inline="true"></oui-loader>
+                <oui-spinner size="s" class="d-inline-block"></oui-spinner>
             </div>
             <div data-ng-if="loaders.details == false && loaders.put == true"
                  data-i18n-static="exchange_ACTION_sending">
-                <oui-loader size="s" inline="true"></oui-loader>
+                <oui-spinner size="s" class="d-inline-block"></oui-spinner>
             </div>
             <form name="serviceForm"
                   novalidate="novalidate"

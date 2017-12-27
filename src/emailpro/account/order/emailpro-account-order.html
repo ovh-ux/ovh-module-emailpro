@@ -11,7 +11,7 @@
              data-wizard-step-on-load="loadOrderList">
 
             <div class="text-center" data-ng-if="!ordersList">
-                <oui-loader inline="true"></oui-loader>
+                <oui-spinner class="d-inline-block"></oui-spinner>
             </div>
 
             <form name="orderAccountForm" class="form-horizontal"
@@ -71,7 +71,7 @@
 
             <div class="text-center"
                  data-ng-if="!previewOrder">
-                <oui-loader inline="true"></oui-loader>
+                <oui-spinner class="d-inline-block"></oui-spinner>
                 <div data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></div>
             </div>
             <form class="form-horizontal" name="previewOrderForm"
@@ -108,7 +108,7 @@
         <div data-wizard-step
              data-wizard-step-valid="url">
             <div class="text-center" data-ng-if="!url">
-                <oui-loader inline="true"></oui-loader>
+                <oui-spinner class="d-inline-block"></oui-spinner>
                 <div data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></div>
             </div>
             <div data-ng-if="url">
