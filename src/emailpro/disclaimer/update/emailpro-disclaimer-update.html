@@ -34,19 +34,10 @@
                     </div>
                 </form>
                 <textarea id="update-disclaimer-editor" data-ckeditor data-ng-model="data.content">{{data.content}}</textarea>
-                <div class="oui-checkbox">
-                    <input type="checkbox" data-ng-model="data.outsideOnly"
-                           class="oui-checkbox__input"
-                           name="outsideOnly" id="outsideOnly">
-                    <label class="oui-checkbox__label-container" for="outsideOnly">
-                        <span class="oui-checkbox__label" data-i18n-static="exchange_ACTION_add_disclaimer_outside"></span>
-                        <span class="oui-checkbox__icon">
-                            <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
-                            <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
-                            <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
-                        </span>
-                    </label>
-                </div>
+                <oui-checkbox id="outsideOnly" name="outsideOnly"
+                    model="data.outsideOnly"
+                    text="{{::i18n.exchange_ACTION_add_disclaimer_outside}}">
+                </oui-checkbox>
                 <div class="alert alert-warning" role="alert"
                      data-ng-if="data.content.length > 5000"
                      data-i18n-static="exchange_ACTION_update_disclaimer_length_warning">

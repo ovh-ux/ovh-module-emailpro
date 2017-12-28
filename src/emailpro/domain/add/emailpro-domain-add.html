@@ -158,40 +158,18 @@
 
             <form name="emailProAddDomainStep3Form">
                 <div data-ng-if="model.domainType !== nonOvhDomain">
-                    <div class="oui-checkbox">
-                        <input type="checkbox"
-                               name="srvParam" id="srvParam"
-                               data-ng-model="model.srvParam"
-                               class="oui-checkbox__input">
-                        <label class="oui-checkbox__label-container" for="srvParam">
-                            <span class="oui-checkbox__label"
-                                  data-i18n-static="exchange_tab_domain_add_step2_srv_checkbox"></span>
-                            <span class="oui-checkbox__icon">
-                                <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
-                                <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
-                                <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
-                            </span>
-                        </label>
-                    </div>
+                    <oui-checkbox id="srvParam" name="srvParam"
+                        model="model.srvParam"
+                        text="{{::i18n.exchange_tab_domain_add_step2_srv_checkbox}}">
+                    </oui-checkbox>
                     <div class="alert alert-info" role="alert"
                          data-ng-if="model.srvParam"
                          data-i18n-static="exchange_tab_domain_add_step2_srv_tooltip">
                     </div>
-                    <div class="oui-checkbox">
-                        <input type="checkbox"
-                                name="mxParam" id="mxParam"
-                                data-ng-model="model.mxParam"
-                                class="oui-checkbox__input">
-                        <label class="oui-checkbox__label-container" for="mxParam">
-                            <span class="oui-checkbox__label"
-                                  data-i18n-static="exchange_tab_domain_add_step2_mx_checkbox"></span>
-                            <span class="oui-checkbox__icon">
-                                <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
-                                <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
-                                <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
-                            </span>
-                        </label>
-                    </div>
+                    <oui-checkbox id="mxParam" name="mxParam"
+                        model="model.mxParam"
+                        text="{{::i18n.exchange_tab_domain_add_step2_mx_checkbox}}">
+                    </oui-checkbox>
                     <div class="alert alert-warning" role="alert"
                           data-ng-if="model.mxParam"
                           data-i18n-static="exchange_tab_domain_add_step2_mx_tooltip">
