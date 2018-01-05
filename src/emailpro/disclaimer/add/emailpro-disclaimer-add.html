@@ -8,7 +8,7 @@
              data-wizard-step-valid="data.completeDomain && data.content && data.content.length < 5000">
 
             <div class="text-center" data-ng-if="loadingData">
-                <oui-spinner class="d-inline-block"></oui-spinner>
+                <oui-spinner></oui-spinner>
             </div>
 
             <div data-ng-if="!loadingData">
@@ -46,8 +46,8 @@
                 </form>
                 <textarea id="add-disclaimer-editor" data-ckeditor data-ng-model="data.content">{{data.content}}</textarea>
                 <oui-checkbox id="outsideOnly" name="outsideOnly"
-                    model="data.outsideOnly"
-                    text="{{::i18n.exchange_ACTION_add_disclaimer_outside}}">
+                    data-model="data.outsideOnly"
+                    data-text="{{::i18n.exchange_ACTION_add_disclaimer_outside}}">
                 </oui-checkbox>
                 <div class="alert alert-warning" role="alert"
                      data-ng-show="data.content.length > 5000"

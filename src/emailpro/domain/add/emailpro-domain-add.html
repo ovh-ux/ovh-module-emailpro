@@ -11,7 +11,7 @@
              data-wizard-step-valid="model.name && isNonOvhDomainValid()">
 
             <div class="text-center" data-ng-if="loading">
-              <oui-spinner class="d-inline-block"></oui-spinner>
+              <oui-spinner></oui-spinner>
             </div>
 
             <div class="alert alert-info" role="alert"
@@ -159,16 +159,16 @@
             <form name="emailProAddDomainStep3Form">
                 <div data-ng-if="model.domainType !== nonOvhDomain">
                     <oui-checkbox id="srvParam" name="srvParam"
-                        model="model.srvParam"
-                        text="{{::i18n.exchange_tab_domain_add_step2_srv_checkbox}}">
+                        data-model="model.srvParam"
+                        data-text="{{::i18n.exchange_tab_domain_add_step2_srv_checkbox}}">
                     </oui-checkbox>
                     <div class="alert alert-info" role="alert"
                          data-ng-if="model.srvParam"
                          data-i18n-static="exchange_tab_domain_add_step2_srv_tooltip">
                     </div>
                     <oui-checkbox id="mxParam" name="mxParam"
-                        model="model.mxParam"
-                        text="{{::i18n.exchange_tab_domain_add_step2_mx_checkbox}}">
+                        data-model="model.mxParam"
+                        data-text="{{::i18n.exchange_tab_domain_add_step2_mx_checkbox}}">
                     </oui-checkbox>
                     <div class="alert alert-warning" role="alert"
                           data-ng-if="model.mxParam"

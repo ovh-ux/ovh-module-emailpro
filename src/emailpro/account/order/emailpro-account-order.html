@@ -11,7 +11,7 @@
              data-wizard-step-on-load="loadOrderList">
 
             <div class="text-center" data-ng-if="!ordersList">
-                <oui-spinner class="d-inline-block"></oui-spinner>
+                <oui-spinner></oui-spinner>
             </div>
 
             <form name="orderAccountForm" class="form-horizontal"
@@ -49,8 +49,8 @@
                     </div>
                 </div>
                 <oui-checkbox id="legalWarning"
-                    model="valid.legalWarning"
-                    text="{{::tr('exchange_ACTION_add_account_legal_warning')}}">
+                    data-model="valid.legalWarning"
+                    data-text="{{::tr('exchange_ACTION_add_account_legal_warning')}}">
                 </oui-checkbox>
             </form>
         </div>
@@ -61,7 +61,7 @@
 
             <div class="text-center"
                  data-ng-if="!previewOrder">
-                <oui-spinner class="d-inline-block"></oui-spinner>
+                <oui-spinner></oui-spinner>
                 <div data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></div>
             </div>
             <form class="form-horizontal" name="previewOrderForm"
@@ -98,7 +98,7 @@
         <div data-wizard-step
              data-wizard-step-valid="url">
             <div class="text-center" data-ng-if="!url">
-                <oui-spinner class="d-inline-block"></oui-spinner>
+                <oui-spinner></oui-spinner>
                 <div data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></div>
             </div>
             <div data-ng-if="url">

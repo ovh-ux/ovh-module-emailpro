@@ -10,11 +10,11 @@
 
             <div data-ng-if="loaders.details == true && loaders.put == false"
                  data-i18n-static="exchange_ACTION_loading">
-                <oui-spinner size="s" class="d-inline-block"></oui-spinner>
+                <oui-spinner data-size="s"></oui-spinner>
             </div>
             <div data-ng-if="loaders.details == false && loaders.put == true"
                  data-i18n-static="exchange_ACTION_sending">
-                <oui-spinner size="s" class="d-inline-block"></oui-spinner>
+                <oui-spinner data-size="s"></oui-spinner>
             </div>
             <form name="serviceForm"
                   novalidate="novalidate"
@@ -87,8 +87,8 @@
                 </div>
                 <!-- Complexity Enabled -->
                 <oui-checkbox id="complexityEnabled" name="complexityEnabled"
-                    model="service.complexityEnabled"
-                    text="{{::i18n.exchange_ACTION_configure_services_label_complexityEnabled}}">
+                    data-model="service.complexityEnabled"
+                    data-text="{{::i18n.exchange_ACTION_configure_services_label_complexityEnabled}}">
                 </oui-checkbox>
                 <!-- Min password Age -->
                 <div class="form-group"
