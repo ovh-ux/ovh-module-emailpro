@@ -45,28 +45,28 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">We kunnen het E-mail Pro e-mailadres niet aanpassen. Mogelijk is er een andere configuratie (e-mail, omleiding, antwoordapparaat) met dezelfde naam.</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Het wachtwoord voor het E-mail Pro account zal gewijzigd worden. </translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">E-mail Pro account wijzigen</translation>
-   <translation id="emailpro_ACTION_account_error_pattern">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required">Le compte est obligatoire</translation>
-   <translation id="emailpro_tab_account_state_CREATING">Création</translation>
-   <translation id="emailpro_tab_account_state_DELETING">Réinitialisation</translation>
-   <translation id="emailpro_tab_account_state_REOPENING">Ouverture en cours</translation>
-   <translation id="emailpro_tab_account_state_SUSPENDED">Suspendu</translation>
-   <translation id="emailpro_tab_account_state_SUSPENDING">Suspension en cours</translation>
-   <translation id="emailpro_tab_account_state_SPAM">Spam</translation>
-   <translation id="emailpro_tab_account_popover_reset">Réinitialiser ce compte</translation>
-   <translation id="emailpro_tab_account_reset_account">Réinitialiser un compte</translation>
-   <translation id="emailpro_tab_account_reset_title">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
-   <translation id="emailpro_tab_account_reset_account_label">Compte</translation>
-   <translation id="emailpro_tab_account_reset_account_info">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, celui-ci est toujours facturé. Si vous ne souhaitez plus être facturé, cliquez sur "mode de facturation", puis cochez "Aucun" pour le compte concerné et validez.</translation>
-   <translation id="emailpro_tab_account_reset_success">Le compte de votre service E-mail Pro va être réinitialisé.</translation>
-   <translation id="emailpro_tab_account_reset_failure">Une erreur est survenue lors de la réinitialisation du compte de votre service E-mail Pro.</translation>
-   <translation id="emailpro_tab_domain_modify_domain_tooltip">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
+   <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Creatie</translation>
+   <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Reset</translation>
+   <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Opening wordt uitgevoerd</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDED" qtlid="136100">Vervallen</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDING" qtlid="171201">Schorsing wordt uitgevoerd</translation>
+   <translation id="emailpro_tab_account_state_SPAM" qtlid="70409">Spam</translation>
+   <translation id="emailpro_tab_account_popover_reset" qtlid="376011">Dit account resetten</translation>
+   <translation id="emailpro_tab_account_reset_account" qtlid="376024">Een account resetten</translation>
+   <translation id="emailpro_tab_account_reset_title" qtlid="447911">Weet u zeker dat u het volgende account op uw Email Pro dienst wilt resetten?</translation>
+   <translation id="emailpro_tab_account_reset_account_label" qtlid="33862">Account</translation>
+   <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">Het resetten van een account verwijdert de data en bijbehorende naam maar u zult wel voor dit account gefactureerd worden. </translation>
+   <translation id="emailpro_tab_account_reset_success" qtlid="447924">Het account op uw Email Pro zal worden gereset.</translation>
+   <translation id="emailpro_tab_account_reset_failure" qtlid="447937">Er is een fout opgetreden bij het opnieuw instellen van het account op uw Email Pro.</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Vade Secure anti-spam is compatibel met de niet-autoritieve modus (alleen als uw POP/IMAP-accounts worden gehost bij OVH). Als dit het geval is, raden we u aan: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> en <strong>{3}</strong> <br/><br/>Als u de niet-autoritieve modus gebruikt met e-mailaccounts die niet worden gehost bij OVH, moet u het volgende gebruiken: <strong>{4}</strong> (zie het gedeelte over bijbehorende domeinen)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: beheer</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (enkel E-mail Pro)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-authoritative (E-mail Pro + andere e-maildienst)</translation>
+   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Niet-autoritief (E-mail Pro + andere e-maildienst)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Authoritative modus houdt in dat u geen ander e-mailsysteem met E-mail Pro accounts kunt gebruiken. Deze modus schakelt anti-spam Vade Secure activatie in. </translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Met de non-authoritative modus kan E-mail Pro met een andere e-maildienst gelijktijdige gebruikt worden. De anti-spam oplossing Vade Secure verenigbaar indien aan de POP / IMAP-accounts worden gehost bij OVH (MX plan of een gedeelde e-mail). In dit geval moet u mx1.mail.ovh.net invoeren als de target server.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Met de niet-autoritieve modus kan E-mail Pro met een andere e-maildienst gelijktijdige gebruikt worden. De anti-spam oplossing Vade Secure verenigbaar indien aan de POP / IMAP-accounts worden gehost bij OVH (MX plan of een gedeelde e-mail). In dit geval moet u mx1.mail.ovh.net invoeren als de target server.</translation>
    <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Weet u zeker dat u het volgende domein wilt wijzigen voor uw E-mail Pro? </translation>
    <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">Als u een domein toevoegt aan de E-mail Pro server dan wordt deze standaard ingesteld in de authoritative modus. Dit betekent dat wanneer u een e-mail stuurt naar het adres van het domein dat op de server wordt beheerd, de server alleen zal controleren of het adres op de E-mail Pro server is. <br /><br /> Aan de andere kant, als u het domein omleidt naar een non-authoritative modus, zullen we eerst controleren of het adres op de E-mail Pro server is en wanneer dit niet het geval is dan zal de E-mail Pro server het bericht doorsturen naar de MX server die u hebt geconfigureerd. <br /><br /> U kunt het domein gebruiken in de non-authoritative modus als u bijvoorbeeld een deel van uw e-mail wilt beheren op de E-mail Pro dienst en een ander onderdeel op een externe server. <br /><br /> Let op, als u de E-mail Pro dienst en de OVH e-mail hosting dienst wilt gebruiken, moet u de waarde <strong> mx1.ovh.net invoeren. </strong> in het "Target email server" veld "in het vak aan de linkerkant van dit bericht.</translation>
    <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Weet u zeker dat u het volgende domein wilt verwijderen van uw E-mail Pro?</translation>
