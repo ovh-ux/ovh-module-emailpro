@@ -11,7 +11,7 @@
              data-wizard-step-on-load="loadOrderList">
 
             <div class="text-center" data-ng-if="!ordersList">
-                <oui-loader inline="true"></oui-loader>
+                <oui-spinner></oui-spinner>
             </div>
 
             <form name="orderAccountForm" class="form-horizontal"
@@ -48,20 +48,10 @@
                               data-i18n-static="exchange_ACTION_order_accounts_step1_number_not_valid"></span>
                     </div>
                 </div>
-                <div class="oui-checkbox">
-                    <input class="oui-checkbox__input"
-                           type="checkbox" id="legalWarning"
-                           data-ng-model="valid.legalWarning">
-                    <label class="oui-checkbox__label-container" for="legalWarning">
-                        <span class="oui-checkbox__label"
-                              data-ng-bind-html="tr('exchange_ACTION_add_account_legal_warning')"></span>
-                        <span class="oui-checkbox__icon">
-                            <span class="oui-icon oui-icon-checkbox-unchecked" aria-hidden="true"></span>
-                            <span class="oui-icon oui-icon-checkbox-checked" aria-hidden="true"></span>
-                            <span class="oui-icon oui-icon-checkbox-checkmark" aria-hidden="true"></span>
-                        </span>
-                    </label>
-                </div>
+                <oui-checkbox id="legalWarning"
+                    data-model="valid.legalWarning"
+                    data-text="{{::tr('exchange_ACTION_add_account_legal_warning')}}">
+                </oui-checkbox>
             </form>
         </div>
 
@@ -71,7 +61,7 @@
 
             <div class="text-center"
                  data-ng-if="!previewOrder">
-                <oui-loader inline="true"></oui-loader>
+                <oui-spinner></oui-spinner>
                 <div data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></div>
             </div>
             <form class="form-horizontal" name="previewOrderForm"
@@ -108,7 +98,7 @@
         <div data-wizard-step
              data-wizard-step-valid="url">
             <div class="text-center" data-ng-if="!url">
-                <oui-loader inline="true"></oui-loader>
+                <oui-spinner></oui-spinner>
                 <div data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></div>
             </div>
             <div data-ng-if="url">
