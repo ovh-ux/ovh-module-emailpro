@@ -3,21 +3,23 @@ angular.module("Module.emailpro.controllers")
         "use strict";
 
         $scope.tasksList = null;
-        $scope.tableLoading = false;
         $scope.stateDoing = "DOING";
         $scope.stateError = "ERROR";
         $scope.stateDone = "DONE";
         $scope.stateCancelled = "CANCELLED";
         $scope.stateTodo = "TODO";
 
-        $scope.loadPaginated = function (count, offset) {
-            $scope.tableLoading = true;
-            EmailPro.getTasks($stateParams.productId, count, offset)
+        $scope.loadPaginated = function ({ pageSize, offset }) {
+            return EmailPro.getTasks($stateParams.productId, pageSize, offset - 1)
                 .then((tasks) => {
-                    $scope.tableLoading = false;
                     $scope.tasksList = tasks;
-                }, (failure) => {
-                    $scope.tableLoading = false;
+                    return {
+                        data: tasks.list.results,
+                        meta: {
+                            totalCount: tasks.count
+                        }
+                    };
+                }).catch((failure) => {
                     $scope.setMessage($scope.tr("exchange_tab_TASKS_error_message"), failure.data);
                 });
         };

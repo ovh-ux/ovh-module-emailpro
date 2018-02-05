@@ -1,68 +1,35 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabTasksCtrl">
 
     <div class="alert alert-warning" role="alert"
-         data-ng-if="!tableLoading && tasksList && tasksList.list.messages.length > 0"
+         data-ng-if="tasksList && tasksList.list.messages.length > 0"
          data-i18n-static="exchange_tab_TASKS_partial">
     </div>
 
-    <div class="text-center"
-         data-ng-if="tableLoading">
-        <oui-spinner data-size="l"></oui-spinner>
-    </div>
-
-    <div class="alert alert-info" role="alert"
-         data-i18n-static="exchange_tab_TASKS_table_empty"
-         data-ng-if="!tableLoading && !tasksList.list.results.length"></div>
-
-    <div class="table-responsive"
-         data-ng-if="!tableLoading && tasksList.list.results.length > 0">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th scope="col" data-i18n-static="exchange_tab_TASKS_table_function"></th>
-                    <th scope="col" class="text-center"
-                        data-i18n-static="exchange_tab_TASKS_table_state"></th>
-                    <th scope="col" data-i18n-static="exchange_tab_TASKS_table_start_date"></th>
-                    <th scope="col" data-i18n-static="exchange_tab_TASKS_table_finish_date"></th>
-                    <th class="min-width text-center" scope="col">
-                        <button class="btn btn-icon" type="button" title="{{i18n.refresh}}"
-                                data-ng-click="refreshTable()">
-                            <span class="fa fa-refresh" aria-hidden="true"></span>
-                        </button>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr data-ng-repeat="task in tasksList.list.results | orderBy:'todoDate':true track by $index">
-                    <th scope="row" data-ng-bind-html="tr('exchange_tab_TASKS_'+ task.function)"></th>
-                    <td class="text-center">
-                        <div data-ng-if="task.status == stateDoing || task.status == stateTodo">
-                            <span class="fa fa-hourglass-half text-info" aria-hidden="true"></span>
-                            <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ task.status)"></span>
-                        </div>
-                        <div data-ng-if="task.status == stateError">
-                            <span class="fa fa-times-circle text-danger" aria-hidden="true"></span>
-                            <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ task.status)"></span>
-                        </div>
-                        <div data-ng-if="task.status == stateCancelled">
-                            <span class="fa fa-ban text-muted" aria-hidden="true"></span>
-                            <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ task.status)"></span>
-                        </div>
-                        <span data-ng-if="task.status == stateDone"
-                              data-ng-bind-html="tr('exchange_tab_TASKS_'+ task.status)"></span>
-                    </td>
-                    <td data-ng-bind="::task.todoDate|date:'short'"></td>
-                    <td colspan="2" data-ng-bind="::task.finishDate|date:'short'"></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div class="clearfix"
-         data-ng-show="!tableLoading && tasksList.list.results.length > 0"
-         data-pagination-server-side="tasksTable"
-         data-pagination-server-side-function="loadPaginated"
-         data-pagination-server-side-paginated-stuff="tasksList"
-         data-pagination-server-side-table-loading="tableLoading">
-    </div>
+    <oui-datagrid data-rows-loader="loadPaginated($config)">
+        <oui-column data-title="tr('exchange_tab_TASKS_table_function')" data-property="function">
+            <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.function)"></span>
+        </oui-column>
+        <oui-column data-title="tr('exchange_tab_TASKS_table_state')" data-property="status">
+            <div data-ng-if="$row.status == stateDoing || $row.status == stateTodo">
+                <span class="fa fa-hourglass-half text-info" aria-hidden="true"></span>
+                <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+            </div>
+            <div data-ng-if="$row.status == stateError">
+                <span class="fa fa-times-circle text-danger" aria-hidden="true"></span>
+                <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+            </div>
+            <div data-ng-if="$row.status == stateCancelled">
+                <span class="fa fa-ban text-muted" aria-hidden="true"></span>
+                <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+            </div>
+            <span data-ng-if="$row.status == stateDone"
+                  data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+        </oui-column>
+        <oui-column data-title="tr('exchange_tab_TASKS_table_start_date')" data-property="todoDate" data-sortable="desc">
+            <span data-ng-bind="::$row.todoDate|date:'short'"></span>
+        </oui-column>
+        <oui-column data-title="tr('exchange_tab_TASKS_table_finish_date')" data-property="finishDate">
+            <span data-ng-bind="::$row.finishDate|date:'short'"></span>
+        </oui-column>
+    </oui-datagrid>
 </div>
