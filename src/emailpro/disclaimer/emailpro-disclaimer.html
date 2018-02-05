@@ -2,12 +2,8 @@
     <div class="row">
         <div class="col-md-9">
 
-            <div class="text-center" data-ng-if="tableLoading">
-                <oui-spinner data-size="l"></oui-spinner>
-            </div>
-
             <div class="alert alert-warning" role="alert"
-                 data-ng-if="!tableLoading && tasksList && tasksList.list.messages.length > 0">
+                 data-ng-if="tasksList && tasksList.list.messages.length > 0">
                 <strong data-i18n-static="exchange_tab_TASKS_warning"></strong>
                 <span data-i18n-static="exchange_tab_TASKS_partial"></span>
             </div>
@@ -17,67 +13,35 @@
                  data-ng-if="addDomainMessageFlag">
             </div>
 
-            <div class="alert alert-info" role="alert"
-                 data-i18n-static="exchange_tab_DISCLAIMER_table_empty"
-                 data-ng-if="noDisclaimerMessageFlag">
-            </div>
-
-            <div class="table-responsive"
-                 data-ng-if="!tableLoading && disclaimersList.list.results.length > 0">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col" data-i18n-static="exchange_tab_DISCLAIMER_associated_domains"></th>
-                            <th scope="col" data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_content"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_DISCLAIMER_state_header"></th>
-                            <th class="text-center min-width" scope="col"></th>
-                        </tr>
-                    </thead>
-
-                    <tbody data-ng-if="!tableLoading && disclaimersList.list.results.length > 0">
-                        <tr data-ng-repeat="disclaimer in disclaimersList.list.results | filter:{'emptySlotFlag':false} | orderBy:'domain.formattedName'">
-                            <th scope="row" data-ng-bind="disclaimer.domain.displayName"></th>
-                            <td>
-                                <span data-ng-bind-html="disclaimer.strippedContent | sliceContent:60"
-                                      data-uib-tooltip-html="{{disclaimer.strippedContent | sliceContent:250}}"></span>
-                            </td>
-                            <td class="text-center">
-                                <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_true"
-                                      data-ng-if="disclaimer.outsideOnly"
-                                      data-uib-tooltip="{{i18n.exchange_tab_DISCLAIMER_disclaimer_outside_only_tooltip}}"
-                                      data-tooltip-append-to-body="true"></span>
-                                <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_false"
-                                      data-ng-if="!disclaimer.outsideOnly"></span>
-                            </td>
-                            <td class="text-center">
-                                <span class="fa fa-hourglass-half"
-                                      data-ng-if="disclaimer.taskPendingId"
-                                      data-uib-tooltip="{{tr('exchange_tab_DISCLAIMER_state_doing_tooltip')}}"
-                                      data-tooltip-append-to-body="true"></span>
-                            </td>
-                            <td class="text-center text-nowrap">
-                                <button class="btn btn-icon" type="button"
-                                        data-linkedpopover="emailpro/disclaimer/emailpro-disclaimer.popover.html"
-                                        data-linkedpopover-placement="left"
-                                        data-linkedpopover-single="true"
-                                        data-linkedpopover-remote="true"
-                                        data-linkedpopover-title="{{i18n.common_actions}}">
-                                    <span class="oui-icon oui-icon-gear_line _line oui-icon_small" aria-hidden="true"></span>
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="clearfix"
-                 data-ng-show="!tableLoading && disclaimersList.list.results.length > 0"
-                 data-pagination-server-side="disclaimersTable"
-                 data-pagination-server-side-function="loadPaginated"
-                 data-pagination-server-side-paginated-stuff="disclaimersList"
-                 data-pagination-server-side-table-loading="tableLoading">
-            </div>
+            <oui-datagrid data-rows-loader="loadPaginated($config)">
+                <oui-column data-title="tr('exchange_tab_DISCLAIMER_associated_domains')" data-property="domain.displayName"></oui-column>
+                <oui-column data-title="tr('exchange_tab_DISCLAIMER_disclaimer_content')" data-property="strippedContent">
+                    <span data-ng-bind-html="$row.strippedContent | sliceContent:60"
+                          data-uib-tooltip-html="{{$row.strippedContent | sliceContent:250}}"></span>
+                </oui-column>
+                <oui-column data-title="tr('exchange_tab_DISCLAIMER_disclaimer_outside_only')">
+                    <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_true"
+                          data-ng-if="$row.outsideOnly"
+                          data-uib-tooltip="{{i18n.exchange_tab_DISCLAIMER_disclaimer_outside_only_tooltip}}"
+                          data-tooltip-append-to-body="true"></span>
+                    <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_false"
+                          data-ng-if="!$row.outsideOnly"></span>
+                </oui-column>
+                <oui-column data-title="tr('exchange_tab_DISCLAIMER_state_header')">
+                    <span class="fa fa-hourglass-half"
+                          data-ng-if="$row.taskPendingId"
+                          data-uib-tooltip="{{tr('exchange_tab_DISCLAIMER_state_doing_tooltip')}}"
+                          data-tooltip-append-to-body="true"></span>
+                </oui-column>
+                <oui-action-menu data-align="end" data-compact>
+                    <oui-action-menu-item data-text="{{i18n.exchange_tab_DISCLAIMER_menu_settings}}"
+                                          data-on-click="updateDisclaimer($row)"
+                                          data-disabled="$row.taskPendingId"></oui-action-menu-item>
+                    <oui-action-menu-item data-text="{{i18n.exchange_tab_DISCLAIMER_menu_delete}}"
+                                          data-on-click="deleteDisclaimer($row)"
+                                          data-disabled="$row.taskPendingId"></oui-action-menu-item>
+                </oui-action-menu>
+            </oui-datagrid>
         </div>
         <div class="col-md-3 mt-5 mt-lg-0">
             <button class="btn btn-block btn-default" type="button"

@@ -24,21 +24,29 @@ angular.module("Module.emailpro.controllers")
         }
 
         $scope.disclaimersList = null;
-        $scope.loading = true;
-        $scope.tableLoading = false;
 
-        $scope.loadPaginated = function (count, offset) {
-            $scope.tableLoading = true;
-            EmailPro.getDisclaimers($stateParams.productId, count, offset)
+        $scope.loadPaginated = function ({ pageSize, offset }) {
+            return EmailPro.getDisclaimers($stateParams.productId, pageSize, offset - 1)
                 .then((disclaimers) => {
-                    $scope.tableLoading = false;
                     $scope.disclaimersList = disclaimers;
                     $scope.setMessagesFlags(disclaimers);
-
-                }, (data) => {
-                    $scope.tableLoading = false;
+                    return {
+                        data: disclaimers.list.results,
+                        meta: {
+                            totalCount: disclaimers.count
+                        }
+                    };
+                }).catch((data) => {
                     $scope.setMessage($scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
                 });
+        };
+
+        $scope.updateDisclaimer = function (disclaimer) {
+            $scope.setAction("emailpro/disclaimer/update/emailpro-disclaimer-update", angular.copy(disclaimer));
+        };
+
+        $scope.deleteDisclaimer = function (disclaimer) {
+            $scope.setAction("emailpro/disclaimer/remove/emailpro-disclaimer-remove", angular.copy(disclaimer));
         };
 
         $scope.setMessagesFlags = function (disclaimersList) {
