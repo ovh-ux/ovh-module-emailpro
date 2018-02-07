@@ -548,6 +548,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
             }).then((data) => {
                 that.resetAccounts();
                 that.resetTasks();
+                data.displayName = completeAlias;
                 return data;
             });
         };
@@ -566,6 +567,7 @@ angular.module("Module.emailpro.services").service("EmailPro", [
             }).then((data) => {
                 that.resetAccounts();
                 that.resetTasks();
+                data.displayName = alias;
                 return data;
             });
         };
