@@ -42,11 +42,11 @@ angular.module("Module.emailpro.controllers")
         };
 
         $scope.updateDisclaimer = function (disclaimer) {
-            $scope.setAction("emailpro/disclaimer/update/emailpro-disclaimer-update", angular.copy(disclaimer));
+            $scope.setAction("emailpro/disclaimer/update/emailpro-disclaimer-update", disclaimer);
         };
 
         $scope.deleteDisclaimer = function (disclaimer) {
-            $scope.setAction("emailpro/disclaimer/remove/emailpro-disclaimer-remove", angular.copy(disclaimer));
+            $scope.setAction("emailpro/disclaimer/remove/emailpro-disclaimer-remove", disclaimer);
         };
 
         $scope.setMessagesFlags = function (disclaimersList) {

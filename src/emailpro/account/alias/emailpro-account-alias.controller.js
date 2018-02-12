@@ -10,7 +10,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAliasCtrl",
         offset: null
     };
 
-    $scope.$on(EmailPro.events.accountsChanged, () => $scope.getAliases($scope.getAliasesParams));
+    $scope.$on(EmailPro.events.accountsChanged, () => $scope.refreshList());
 
     $scope.getAliases = function ({ pageSize, offset }) {
         $scope.getAliasesParams.pageSize = pageSize;
@@ -18,7 +18,7 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAliasCtrl",
         if ($scope.selectedAccount) {
             return EmailPro.getAliases($stateParams.productId, $scope.selectedAccount.primaryEmailAddress, pageSize, offset - 1)
                 .then((data) => {
-                    $scope.aliases = data;
+                    $scope.aliases = data.list.results;
                     return {
                         data: data.list.results,
                         meta: {
@@ -32,6 +32,22 @@ angular.module("Module.emailpro.controllers").controller("EmailProTabAliasCtrl",
                 });
         }
     };
+
+    $scope.refreshList  = function () {
+            EmailPro.getAliases($stateParams.productId, $scope.selectedAccount.primaryEmailAddress, $scope.getAliasesParams.pageSize, $scope.getAliasesParams.offset - 1)
+                .then((data) => {
+                    for (let i = 0; i < data.list.results.length; i++) {
+                        this.aliases.splice(i, 1, data.list.results[i]);
+                    }
+                    for (let i = data.list.results.length; i < this.aliases.length; i++) {
+                        this.aliases.splice(i, 1);
+                    }
+                })
+                .catch((failure) => {
+                    _.set(failure, "data.type", failure.data.type || "ERROR");
+                    $scope.setMessage($scope.tr("exchange_tab_ALIAS_error_message"), failure.data);
+                });
+        }
 
     $scope.hideAliases = function () {
         $scope.$emit("showAccounts");
