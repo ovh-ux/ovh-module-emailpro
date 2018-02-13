@@ -29,9 +29,9 @@ angular.module("Module.emailpro.controllers")
             return EmailPro.getDisclaimers($stateParams.productId, pageSize, offset - 1)
                 .then((disclaimers) => {
                     $scope.disclaimersList = disclaimers;
-                    $scope.setMessagesFlags(disclaimers);
+                    const disclaimersFilteredList = _.filter(disclaimers.list.results, (disclaimer) => !disclaimer.emptySlotFlag);
                     return {
-                        data: disclaimers.list.results,
+                        data: disclaimersFilteredList,
                         meta: {
                             totalCount: disclaimers.count
                         }
