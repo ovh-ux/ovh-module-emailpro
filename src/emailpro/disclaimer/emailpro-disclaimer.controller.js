@@ -24,14 +24,32 @@ angular.module("Module.emailpro.controllers")
         }
 
         $scope.disclaimersList = null;
+        $scope.loadParams = {};
+
+        $scope.refreshList = function () {
+            EmailPro.getDisclaimers($stateParams.productId, $scope.loadParams.pageSize, $scope.loadParams.offset - 1)
+                .then((data) => {
+                    for (let i = 0; i < data.list.results.length; i++) {
+                        $scope.disclaimersFilteredList.splice(i, 1, data.list.results[i]);
+                    }
+                    for (let i = data.list.results.length; i < $scope.disclaimersFilteredList.length; i++) {
+                        $scope.disclaimersFilteredList.splice(i, 1);
+                    }
+                })
+                .catch((data) => {
+                    $scope.setMessage($scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
+                });
+        };
 
         $scope.loadPaginated = function ({ pageSize, offset }) {
+            $scope.loadParams.pageSize = pageSize;
+            $scope.loadParams.offset = offset;
             return EmailPro.getDisclaimers($stateParams.productId, pageSize, offset - 1)
                 .then((disclaimers) => {
                     $scope.disclaimersList = disclaimers;
-                    const disclaimersFilteredList = _.filter(disclaimers.list.results, (disclaimer) => !disclaimer.emptySlotFlag);
+                    $scope.disclaimersFilteredList = _.filter(disclaimers.list.results, (disclaimer) => !disclaimer.emptySlotFlag);
                     return {
-                        data: disclaimersFilteredList,
+                        data: $scope.disclaimersFilteredList,
                         meta: {
                             totalCount: disclaimers.count
                         }
@@ -62,7 +80,7 @@ angular.module("Module.emailpro.controllers")
         };
 
         $scope.$on(EmailPro.events.disclaimersChanged, () => {
-            $scope.$broadcast("paginationServerSide.reload", "disclaimersTable");
+            $scope.refreshList();
         });
 
         $scope.newDisclaimersDisabled = function () {
