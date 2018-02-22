@@ -24,21 +24,46 @@ angular.module("Module.emailpro.controllers")
         }
 
         $scope.disclaimersList = null;
-        $scope.loading = true;
-        $scope.tableLoading = false;
+        $scope.loadParams = {};
 
-        $scope.loadPaginated = function (count, offset) {
-            $scope.tableLoading = true;
-            EmailPro.getDisclaimers($stateParams.productId, count, offset)
-                .then((disclaimers) => {
-                    $scope.tableLoading = false;
-                    $scope.disclaimersList = disclaimers;
-                    $scope.setMessagesFlags(disclaimers);
-
-                }, (data) => {
-                    $scope.tableLoading = false;
+        $scope.refreshList = function () {
+            EmailPro.getDisclaimers($stateParams.productId, $scope.loadParams.pageSize, $scope.loadParams.offset - 1)
+                .then((data) => {
+                    for (let i = 0; i < data.list.results.length; i++) {
+                        $scope.disclaimersList.list.results.splice(i, 1, data.list.results[i]);
+                    }
+                    for (let i = data.list.results.length; i < $scope.disclaimersList.list.results.length; i++) {
+                        $scope.disclaimersList.list.results.splice(i, 1);
+                    }
+                })
+                .catch((data) => {
                     $scope.setMessage($scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
                 });
+        };
+
+        $scope.loadPaginated = function ({ pageSize, offset }) {
+            $scope.loadParams.pageSize = pageSize;
+            $scope.loadParams.offset = offset;
+            return EmailPro.getDisclaimers($stateParams.productId, pageSize, offset - 1)
+                .then((disclaimers) => {
+                    $scope.disclaimersList = disclaimers;
+                    return {
+                        data: disclaimers.list.results,
+                        meta: {
+                            totalCount: disclaimers.count
+                        }
+                    };
+                }).catch((data) => {
+                    $scope.setMessage($scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
+                });
+        };
+
+        $scope.updateDisclaimer = function (disclaimer) {
+            $scope.setAction("emailpro/disclaimer/update/emailpro-disclaimer-update", disclaimer);
+        };
+
+        $scope.deleteDisclaimer = function (disclaimer) {
+            $scope.setAction("emailpro/disclaimer/remove/emailpro-disclaimer-remove", disclaimer);
         };
 
         $scope.setMessagesFlags = function (disclaimersList) {
@@ -54,7 +79,7 @@ angular.module("Module.emailpro.controllers")
         };
 
         $scope.$on(EmailPro.events.disclaimersChanged, () => {
-            $scope.$broadcast("paginationServerSide.reload", "disclaimersTable");
+            $scope.refreshList();
         });
 
         $scope.newDisclaimersDisabled = function () {
@@ -65,9 +90,9 @@ angular.module("Module.emailpro.controllers")
             return !result;
         };
 
-        $scope.addDisclaimer = function () {
+        $scope.addDisclaimer = function (disclaimer) {
             if (!$scope.newDisclaimersDisabled()) {
-                $scope.setAction("emailpro/disclaimer/add/emailpro-disclaimer-add");
+                $scope.setAction("emailpro/disclaimer/add/emailpro-disclaimer-add", disclaimer);
             }
         };
 
@@ -77,7 +102,7 @@ angular.module("Module.emailpro.controllers")
     });
 
 angular.module("Module.emailpro.controllers")
-    .controller("EmailProAddDisclaimerCtrl", ($scope, $stateParams, EmailPro) => {
+    .controller("EmailProAddDisclaimerCtrl", ($scope, $stateParams, EmailPro, navigation) => {
         "use strict";
         const mceId = "add-disclaimer-editor";
 
@@ -97,8 +122,8 @@ angular.module("Module.emailpro.controllers")
             return EmailPro.getNewDisclaimerOptions($stateParams.productId).then((data) => {
                 $scope.loadingData = false;
                 if (data.availableDomains) {
-                    $scope.data.completeDomain = data.availableDomains[0];
                     $scope.availableDomains = data.availableDomains;
+                    $scope.selectCurrentDomain();
 
                     $scope.data.selectedAttribute = data.availableAttributes[0];
                     $scope.availableAttributes = data.availableAttributes;
@@ -109,6 +134,16 @@ angular.module("Module.emailpro.controllers")
                 return $scope.data;
             });
         };
+
+        $scope.selectCurrentDomain = function () {
+            if (_.get(navigation, "currentActionData.domain.name")) {
+                $scope.data.completeDomain = _.find($scope.availableDomains, "name", navigation.currentActionData.domain.name);
+            }
+            if (!$scope.data.completeDomain) {
+                $scope.data.completeDomain = $scope.availableDomains[0];
+            }
+        };
+
         $scope.loadAvailableDomains();
 
         $scope.saveDisclaimer = function () {
