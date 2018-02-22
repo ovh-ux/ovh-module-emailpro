@@ -63,6 +63,8 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gérer</translation>
 
+   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
+
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritatif (E-mail Pro uniquement)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-autoritatif (E-mail Pro + autre service de messagerie)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Le mode autoritatif ne permet pas l'usage d'un autre système de messagerie avec des comptes E-mail Pro. Ce mode permet l'activation de l'antispam Vade Secure.</translation>
