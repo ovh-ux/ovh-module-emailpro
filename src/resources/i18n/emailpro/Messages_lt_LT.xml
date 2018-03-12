@@ -45,35 +45,41 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">E-mail Pro el. pašto adresas negali būti pritaikytas asmeniniam naudojimui. Tikėtina, kad toks pavadinimas jau priskirtas susijusiai konfigūracijai (el. pašto adresui, nukreipimui, automatiniam atsakikliui).</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">E-mail Pro paskyros slaptažodis bus pakeistas.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Keisti E-mail Pro paskyrą</translation>
-   <translation id="emailpro_ACTION_account_error_pattern">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required">Le compte est obligatoire</translation>
-   <translation id="emailpro_tab_account_state_CREATING">Création</translation>
-   <translation id="emailpro_tab_account_state_DELETING">Réinitialisation</translation>
-   <translation id="emailpro_tab_account_state_REOPENING">Ouverture en cours</translation>
-   <translation id="emailpro_tab_account_state_SUSPENDED">Suspendu</translation>
-   <translation id="emailpro_tab_account_state_SUSPENDING">Suspension en cours</translation>
-   <translation id="emailpro_tab_account_state_SPAM">Spam</translation>
-   <translation id="emailpro_tab_account_popover_reset">Réinitialiser ce compte</translation>
-   <translation id="emailpro_tab_account_reset_account">Réinitialiser un compte</translation>
-   <translation id="emailpro_tab_account_reset_title">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
-   <translation id="emailpro_tab_account_reset_account_label">Compte</translation>
-   <translation id="emailpro_tab_account_reset_account_info">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, celui-ci est toujours facturé. Si vous ne souhaitez plus être facturé, cliquez sur "mode de facturation", puis cochez "Aucun" pour le compte concerné et validez.</translation>
-   <translation id="emailpro_tab_account_reset_success">Le compte de votre service E-mail Pro va être réinitialisé.</translation>
-   <translation id="emailpro_tab_account_reset_failure">Une erreur est survenue lors de la réinitialisation du compte de votre service E-mail Pro.</translation>
-   <translation id="emailpro_tab_domain_modify_domain_tooltip">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
+   <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Kuriama</translation>
+   <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Iš naujo</translation>
+   <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Atidaroma</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDED" qtlid="136100">Pristabdytas</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDING" qtlid="171201">Pristabdoma</translation>
+   <translation id="emailpro_tab_account_state_SPAM" qtlid="70409">Spam</translation>
+   <translation id="emailpro_tab_account_popover_reset" qtlid="376011">Nustatyti šią paskyrą iš naujo</translation>
+   <translation id="emailpro_tab_account_reset_account" qtlid="376024">Nustatyti paskyrą iš naujo</translation>
+   <translation id="emailpro_tab_account_reset_title" qtlid="447911">Ar tikrai norite atkurti šią paskyrą, susietą su jūsų E-mail Pro paslauga?</translation>
+   <translation id="emailpro_tab_account_reset_account_label" qtlid="33862">Paskyra</translation>
+   <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">Paskyros nustatymas iš naujo - tai duomenų ir priskirto pavadinimo pašalinimas, toliau taikant apmokėjimą. Jei nebenorite gauti sąskaitų, spauskite apmokėjimo priemonę, pažymėkite "Jokios" pasirinktai paskyrai ir patvirtinkite. </translation>
+   <translation id="emailpro_tab_account_reset_success" qtlid="447924">Jūsų E-mail Pro paslaugos paskyra bus atkurta.</translation>
+   <translation id="emailpro_tab_account_reset_failure" qtlid="447937">Įvyko klaida atkuriant jūsų E-mail Pro paslaugos paskyrą.</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Anti-spam Vade Secure parinktis suderinama su Non-authoritative režimu (tik jei pop/imap el. pašto dėžutės talpinamos OVH). Šiuo atveju, rekomenduojame naudoti: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> ir <strong>{3}</strong><br/><br/> Jei jūs naudojate Non-authoritative režimą su el. pašto dėžutėmis, talpinamomis ne OVH, jūs turite naudoti: <strong>{4}</strong> (žr. susietų domenų skiltį)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: valdyti</translation>
+
+   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (tik E-mail Pro paskyra)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-authoritative (E-mail Pro + kitos el. pašto paslaugos)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Authoritative režimas: negalima naudoti kitų el. pašto sistemų, leidžiamos tik E-mail Pro paskyros. Šis režimas taip pat leidžia įjungti anti-spam Vade Secure parinktį.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Non-authoritative režimas: be E-mail Pro paslaugos, galima naudoti ir kitus el. pašto sprendimus. Anti-spam Vade Secure parinktis yra suderinama, jeigu pop/imap el. pašto dėžutės yra talpinamos OVH (naudojant mxplan ar svetainių talpinimo plano el. paštą). Šiuo atveju, būtina nurodyti mx1.mail.ovh.net pašto serverį.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Non-authoritative režimas: be E-mail Pro paslaugos, galima naudoti ir kitus el. pašto sprendimus. Anti-spam Vade Secure parinktis yra suderinama, jeigu pop/imap el. pašto dėžutės yra talpinamos OVH (naudojant mxplan ar svetainių talpinimo plano el. paštą). Šiuo atveju, būtina nurodyti mx1.mail.ovh.net el. pašto serverį.</translation>
    <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Ar iš tiesų norite keisti šį domeną E-mail Pro  paslaugai?</translation>
    <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">Pridedant domeną į E-mail Pro serverį, jis būna sukonfigūruotas Authorative režimu. Taigi, siunčiant el. paštą į šį domeną, serveris tik patikrins, ar toks adresas yra E-mail Pro paslaugos serveryje. <br /><br /> Tačiau, pasirinkus Non-autoritative režimą, pirmiausiai serveris patikrins, ar toks adresas yra E-mail Pro serveryje ir, jeigu jo nėra, el. laiškas bus persiųstas į kitą jūsų nurodytą serverį. <br /><br />Domeno el. pašto Non-authoritative režimas gali būti naudojamas, jeigu jūs, pavyzdžiui, norėtumėte valdyti dalį el. pašto dėžučių E-mail Pro paslaugoje, o kitą dalį kitame serveryje. <br /><br />Dėmesio: jeigu norite naudoti E-mail Pro paslaugą ir svetainių talpinimo plano el. paštą, laukelyje „Tikslinis el. pašto serveris“ (kairėje) turėtumėte nurodyti: <strong>mx1.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Ar iš tiesų norite pašalinti domeną iš savo E-mail Pro paslaugos?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Domenas bus pašalintas iš jūsų E-mail Pro paslaugos.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Šalinant domeną iš E-mail Pro paslaugos įvyko klaida.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegavimas suteikia kitoms E-mail Pro paskyroms tam tikras šios {0} paskyros valdymo teises</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Jūs galite sukurti parašą patvirtintam domenui.<br /><br />Naudokitės prieinamomis priemonėmis kurdami parašą.<br /> Šis parašas bus automatiškai pridedamas kiekvieno iš jūsų E-mail Pro domeno siunčiamo pranešimo pabaigoje. <br /><br />Galima naudoti kintamuosius, tai leidžia sukurti skirtingus parašus kiekvienam darbuotojui. <br /><br /> Norėdami pridėti paveikslėlį ar logotipą, spauskite „image“ ir nurodykite jo URL adresą.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1">Vous pouvez créer une signature par domaine validé.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Ar iš tiesų norite ištrinti savo E-mail Pro paslaugos parašą?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Ar iš tiesų norite pridėti žemiau nurodytą resursų paskyrą į E-mail Pro serverį?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Jūs dar nepridėjote domeno ar jis dar nebuvo patvirtintas. <br/>Pirmiausiai turite pridėti domeną ir luktelėti, kol jis bus patvirtintas, po to galėsite sukurti E-mail Pro paskyrą.</translation>

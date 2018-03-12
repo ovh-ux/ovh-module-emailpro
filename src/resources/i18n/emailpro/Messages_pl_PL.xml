@@ -7,7 +7,7 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Wystąpił błąd podczas pobierania konta E-mail Pro.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Konta E-mail Pro</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Potrzebujesz pomocy w skonfigurowaniu usługi E-mail Pro?</translation>
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Twoja usługa E-mail Pro jest prawie gotowa. Musisz przypisać domenę do swojej usługi. Jeśli nie masz domeny, możesz ją zamówić <a href="https://www.ovh.pl/cgi-bin/newOrder/order.cgi" target="_blank">tutaj</a>.</translation>
+   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Twoja usługa E-mail Pro jest prawie gotowa. Musisz przypisać domenę do swojej usługi. Jeśli nie masz domeny, możesz ją zamówić <a href="https://www.ovh.pl:51043/cgi-bin/newOrder/order.cgi" target="_blank">tutaj</a>.</translation>
    <translation id="emailpro_tab_ALIAS_remove_alias_intro" qtlid="375023">Czy chcesz usunąć ten alias z usługi E-mail Pro?</translation>
    <translation id="emailpro_tab_ALIAS_add_no_domains" qtlid="375036">Nie dodałeś jeszcze domeny lub nie została ona potwierdzona. <br/> Najpierw należy dodać domenę i poczekać na jej potwierdzenie, aby móc utworzyć alias do konta E-mail Pro.</translation>
    <translation id="emailpro_tab_ALIAS_add_alias_limit_tooltip" qtlid="375049">Osiągnąłeś limit 1000 aliasów na konto E-mail Pro.</translation>
@@ -48,35 +48,41 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">Adres e-mail E-mail Pro nie mógł zostać spersonalizowany. Możliwe, że dla tej samej nazwy istnieje konfiguracja na hostingu (e-mail, przekierowanie, autoresponder).</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Hasło do konta E-mail Pro zostanie zmienione.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Zmodyfikuj konto E-mail Pro</translation>
-   <translation id="emailpro_ACTION_account_error_pattern">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required">Le compte est obligatoire</translation>
-   <translation id="emailpro_tab_account_state_CREATING">Création</translation>
-   <translation id="emailpro_tab_account_state_DELETING">Réinitialisation</translation>
-   <translation id="emailpro_tab_account_state_REOPENING">Ouverture en cours</translation>
-   <translation id="emailpro_tab_account_state_SUSPENDED">Suspendu</translation>
-   <translation id="emailpro_tab_account_state_SUSPENDING">Suspension en cours</translation>
-   <translation id="emailpro_tab_account_state_SPAM">Spam</translation>
-   <translation id="emailpro_tab_account_popover_reset">Réinitialiser ce compte</translation>
-   <translation id="emailpro_tab_account_reset_account">Réinitialiser un compte</translation>
-   <translation id="emailpro_tab_account_reset_title">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
-   <translation id="emailpro_tab_account_reset_account_label">Compte</translation>
-   <translation id="emailpro_tab_account_reset_account_info">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, celui-ci est toujours facturé. Si vous ne souhaitez plus être facturé, cliquez sur "mode de facturation", puis cochez "Aucun" pour le compte concerné et validez.</translation>
-   <translation id="emailpro_tab_account_reset_success">Le compte de votre service E-mail Pro va être réinitialisé.</translation>
-   <translation id="emailpro_tab_account_reset_failure">Une erreur est survenue lors de la réinitialisation du compte de votre service E-mail Pro.</translation>
-   <translation id="emailpro_tab_domain_modify_domain_tooltip">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Konto zawiera niedozwolone znaki</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Wymagane jest konto</translation>
+   <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Utworzenie</translation>
+   <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Reset</translation>
+   <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Trwa otwieranie</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDED" qtlid="136100">Zawieszone</translation>
+   <translation id="emailpro_tab_account_state_SUSPENDING" qtlid="171201">Trwa zawieszanie</translation>
+   <translation id="emailpro_tab_account_state_SPAM" qtlid="70409">Spam</translation>
+   <translation id="emailpro_tab_account_popover_reset" qtlid="376011">Zresetuj to konto</translation>
+   <translation id="emailpro_tab_account_reset_account" qtlid="376024">Zresetuj konto</translation>
+   <translation id="emailpro_tab_account_reset_title" qtlid="447911">Czy na pewno chcesz zresetować następujące konto usługi E-mail Pro?</translation>
+   <translation id="emailpro_tab_account_reset_account_label" qtlid="33862">Konto</translation>
+   <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">Reset konta polega na usunięciu danych i przypisanej nazwy. Konto pozostaje odpłatne. Jeśli nie chcesz ponosić kosztów, kliknij na "tryb płatności" i zaznacz "Brak" dla wybranego konta oraz zatwierdź.</translation>
+   <translation id="emailpro_tab_account_reset_success" qtlid="447924">Twoje konto przypisane do usługi E-mail Pro zostanie zresetowane.</translation>
+   <translation id="emailpro_tab_account_reset_failure" qtlid="447937">Wystąpił błąd podczas resetowania konta przypisanego do usługi E-mail Pro.</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Ochrona antyspamowa Vade Secure jest kompatybilna z trybem nieautorytatywnym (wyłącznie jeśli Twoje konta pop/imap są zainstalowane w OVH). W tym przypadku zalecane jest użycie: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> i <strong>{3}</strong><br/><br/>. Jeśli stosujesz tryb nieautorytatywny dla kont nieobsługiwanych przez OVH, powinieneś użyć: <strong>{4}</strong> (patrz sekcja powiązane domeny)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: zarządzaj</translation>
+
+   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autorytatywny (tylko E-mail Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Nieautorytatywny (E-mail Pro + inna usługa poczty elektronicznej)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Tryb autorytatywny nie pozwala na korzystanie z innego systemu poczty elektronicznej z kontami E-mail Pro. Tryb ten pozwala na aktywację systemu antyspamowego Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Tryb nieautorytatywny pozwala na współpracę między usługą E-mail Pro i inną usługą poczty elektronicznej. System antyspamowy Vade Secure jest kompatybilny, jeśli konta pop/imap są zainstalowane w OVH (mxplan lub oferta hostingu). W tym przypadku należy wskazać mx1.mail.ovh.net, jako docelowy serwer e-mail.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">Tryb nieautorytatywny pozwala na równoczesne korzystanie z usługi E-mail Pro i innej usługi poczty elektronicznej. Ochrona antyspamowa Vade Secure jest kompatybilna, jeśli konta pop/imap są zainstalowane w OVH (mxplan lub oferta hostingu). W tym przypadku należy wskazać mx1.mail.ovh.net, jako docelowy serwer e-mail.</translation>
    <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Czy chcesz zmodyfikować tę domenę w usłudze  E-mail Pro?</translation>
    <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">Domyślnie domena dodawana na serwer E-mail Pro znajduje się w trybie autorytatywnym. Oznacza to, że jeśli wysyłasz e-mail na adres domeny zarządzanej na serwerze, serwer ten będzie sprawdzał tylko serwer E-mail Pro, jeśli adres istnieje. <br /><br /> Jeśli przełączysz domenę w tryb nie autorytatywny, podczas wysyłania e-maila w pierwszej kolejności będziemy sprawdzać, czy adres e-mail istnieje na serwerze E-mail Pro i jeśli tak nie będzie, serwer przekieruje wiadomość na serwer MX, który zdefiniowałeś. <br /><br />Domena w trybie nie autorytatywnym może być używana w ten sposób, że część e-maili jest zarządzana na serwerze E-mail Pro a pozostała część na serwerze zewnętrznym. <br /><br />Uwaga: Jeśli chcesz korzystać z usługi E-mail pro i z usługi e-mail na hostingu OVH, w polu "Docelowy serwer mail" wpisz tę wartość: <strong>mx1.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Czy chcesz usunąć tę domenę z usługi E-mail Pro?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Domena zostanie usunięta z usługi E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Wystąpił błąd podczas usuwania domeny z usługi E-mail Pro.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegacja pozwala innym kontom E-mail Pro na posiadanie pewnych uprawnień do konta {0}.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Możesz utworzyć podpis dla potwierdzonej domeny.<br /><br />Skorzystaj z dostępnych narzędzi do personalizacji podpisu.<br /> Podpis ten będzie automatycznie dodawany w dolnej części każdej wiadomości wysłanej z adresów przypisanych do domeny E-mail Pro. <br /><br />Dostępne są również zmienne pozwalające na pobieranie danych poszczególnych pracowników. <br /><br /> Aby dodać obrazek lub logo, podaj adres URL po kliknięciu na przycisk "obrazek".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1">Vous pouvez créer une signature par domaine validé.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Czy chcesz usunąć ten podpis z usługi E-mail Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Czy chcesz dodać konto zasobów do serwera E-mail Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Nie dodałeś jeszcze domeny lub nie została ona jeszcze potwierdzona. <br/>Musisz najpierw dodać domenę i poczekać na jej potwierdzenie, aby móc utworzyć konto E-mail Pro.</translation>
