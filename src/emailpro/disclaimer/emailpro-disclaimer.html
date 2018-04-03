@@ -1,4 +1,4 @@
-<div class="container-fluid px-0" data-ng-controller="EmailProDisclaimerCtrl">
+<div class="container-fluid px-0" data-ng-controller="EmailProDisclaimerCtrl as ctrl">
     <div class="alert alert-warning" role="alert"
          data-ng-if="tasksList && tasksList.list.messages.length > 0">
         <strong data-i18n-static="exchange_tab_TASKS_warning"></strong>
@@ -7,10 +7,10 @@
 
     <div class="alert alert-info" role="alert"
          data-i18n-static="exchange_tab_DISCLAIMER_table_no_domain"
-         data-ng-if="addDomainMessageFlag">
+         data-ng-if="ctrl.addDomainMessageFlag">
     </div>
 
-    <oui-datagrid data-rows-loader="loadPaginated($config)">
+    <oui-datagrid data-rows-loader="ctrl.loadPaginated($config)">
         <oui-column data-title="tr('exchange_tab_DISCLAIMER_associated_domains')" data-property="domain.displayName"></oui-column>
         <oui-column data-title="tr('exchange_tab_DISCLAIMER_disclaimer_content')" data-property="strippedContent">
             <span data-ng-bind-html="$row.strippedContent | sliceContent:60"
@@ -35,15 +35,15 @@
         </oui-column>
         <oui-action-menu data-align="end" data-compact>
             <oui-action-menu-item data-text="{{i18n.exchange_tab_DISCLAIMER_menu_settings}}"
-                                  data-on-click="updateDisclaimer($row)"
+                                  data-on-click="ctrl.updateDisclaimer($row)"
                                   data-ng-if="!$row.emptySlotFlag"
                                   data-disabled="$row.taskPendingId"></oui-action-menu-item>
             <oui-action-menu-item data-text="{{i18n.exchange_tab_DISCLAIMER_menu_delete}}"
-                                  data-on-click="deleteDisclaimer($row)"
+                                  data-on-click="ctrl.deleteDisclaimer($row)"
                                   data-ng-if="!$row.emptySlotFlag"
                                   data-disabled="$row.taskPendingId"></oui-action-menu-item>
             <oui-action-menu-item data-text="{{i18n.common_configure}}"
-                                  data-on-click="addDisclaimer($row)"
+                                  data-on-click="ctrl.addDisclaimer($row)"
                                   data-ng-if="$row.emptySlotFlag"></oui-action-menu-item>
         </oui-action-menu>
     </oui-datagrid>

@@ -1,18 +1,18 @@
-<div data-ng-controller="EmailProUpdateDisclaimerCtrl">
+<div data-ng-controller="EmailProUpdateDisclaimerCtrl as ctrl">
     <div data-wizard
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="saveDisclaimer"
          data-wizard-title="i18n.exchange_ACTION_update_disclaimer_title">
 
         <div data-wizard-step
-             data-wizard-step-valid="data.content && data.content.length < 5000">
+             data-wizard-step-valid="ctrl.data.content && ctrl.data.content.length < 5000">
 
-            <div class="text-center" data-ng-if="loadingData">
+            <div class="text-center" data-ng-if="ctrl.loadingData">
                 <oui-spinner></oui-spinner>
             </div>
 
-            <div data-ng-if="!loadingData">
-                <strong data-ng-bind-html="tr('exchange_ACTION_update_disclaimer_info', [data.domain.displayName])"></strong>
+            <div data-ng-if="!ctrl.loadingData">
+                <strong data-ng-bind-html="tr('exchange_ACTION_update_disclaimer_info', [ctrl.data.domain.displayName])"></strong>
                 <form class="form-inline my-3">
                     <div class="oui-field">
                         <label for="variableSelect" class="oui-field__label oui-label"
@@ -20,26 +20,26 @@
                         <div class="oui-field__content">
                             <div class="oui-select">
                                 <select class="oui-select__input" id="variableSelect" name="variableSelect"
-                                        data-ng-model="data.selectedAttribute"
-                                        data-ng-options="tr('exchange_ACTION_add_disclaimer_option_' +variable) for variable in availableAttributes">
+                                        data-ng-model="ctrl.data.selectedAttribute"
+                                        data-ng-options="tr('exchange_ACTION_add_disclaimer_option_' +variable) for variable in ctrl.availableAttributes">
                                 </select>
                                 <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                             </div>
                             <button class="oui-button oui-button_secondary" type="button"
-                                    data-ng-click="insertAttribute()"
+                                    data-ng-click="ctrl.insertAttribute()"
                                     data-i18n-static="exchange_ACTION_disclaimer_insert"
-                                    data-ng-enabled="data.selectedAttribute">
+                                    data-ng-enabled="ctrl.data.selectedAttribute">
                             </button>
                         </div>
                     </div>
                 </form>
-                <textarea id="update-disclaimer-editor" data-ckeditor data-ng-model="data.content">{{data.content}}</textarea>
+                <textarea id="update-disclaimer-editor" data-ckeditor data-ng-model="ctrl.data.content">{{ctrl.data.content}}</textarea>
                 <oui-checkbox id="outsideOnly" name="outsideOnly"
                     data-model="data.outsideOnly"
                     data-text="{{::i18n.exchange_ACTION_add_disclaimer_outside}}">
                 </oui-checkbox>
                 <div class="alert alert-warning" role="alert"
-                     data-ng-if="data.content.length > 5000"
+                     data-ng-if="ctrl.data.content.length > 5000"
                      data-i18n-static="exchange_ACTION_update_disclaimer_length_warning">
                 </div>
             </div>

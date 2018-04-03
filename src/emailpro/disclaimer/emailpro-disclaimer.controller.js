@@ -1,8 +1,23 @@
 angular.module("Module.emailpro.controllers")
-    .controller("EmailProDisclaimerCtrl", ($scope, $stateParams, EmailPro) => {
-        "use strict";
+    .controller("EmailProDisclaimerCtrl", class EmailProDisclaimerCtrl {
+        constructor ($scope, $stateParams, EmailPro) {
+            this.$scope = $scope;
+            this.$stateParams = $stateParams;
+            this.EmailPro = EmailPro;
 
-        function hasEmptySlot (list) {
+            this.disclaimersList = null;
+            this.loadParams = {};
+
+            $scope.$on(this.EmailPro.events.disclaimersChanged, () => {
+                this.refreshList();
+            });
+
+            $scope.$on(this.EmailPro.events.disclaimersChanged, () => {
+                $scope.$broadcast("paginationServerSide.reload", "disclaimersTable");
+            });
+        }
+
+        static hasEmptySlot (list) {
             let result = false;
             angular.forEach(list,
                             (value) => {
@@ -12,7 +27,8 @@ angular.module("Module.emailpro.controllers")
                             });
             return result;
         }
-        function hasFullSlot (list) {
+
+        static hasFullSlot (list) {
             let result = false;
             angular.forEach(list,
                             (value) => {
@@ -23,30 +39,27 @@ angular.module("Module.emailpro.controllers")
             return result;
         }
 
-        $scope.disclaimersList = null;
-        $scope.loadParams = {};
-
-        $scope.refreshList = function () {
-            EmailPro.getDisclaimers($stateParams.productId, $scope.loadParams.pageSize, $scope.loadParams.offset - 1)
+        refreshList () {
+            this.EmailPro.getDisclaimers(this.$stateParams.productId, this.loadParams.pageSize, this.loadParams.offset - 1)
                 .then((data) => {
                     for (let i = 0; i < data.list.results.length; i++) {
-                        $scope.disclaimersList.list.results.splice(i, 1, data.list.results[i]);
+                        this.disclaimersList.list.results.splice(i, 1, data.list.results[i]);
                     }
-                    for (let i = data.list.results.length; i < $scope.disclaimersList.list.results.length; i++) {
-                        $scope.disclaimersList.list.results.splice(i, 1);
+                    for (let i = data.list.results.length; i < this.disclaimersList.list.results.length; i++) {
+                        this.disclaimersList.list.results.splice(i, 1);
                     }
                 })
                 .catch((data) => {
-                    $scope.setMessage($scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
+                    this.$scope.setMessage(this.$scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
                 });
-        };
+        }
 
-        $scope.loadPaginated = function ({ pageSize, offset }) {
-            $scope.loadParams.pageSize = pageSize;
-            $scope.loadParams.offset = offset;
-            return EmailPro.getDisclaimers($stateParams.productId, pageSize, offset - 1)
+        loadPaginated ({ pageSize, offset }) {
+            this.loadParams.pageSize = pageSize;
+            this.loadParams.offset = offset;
+            return this.EmailPro.getDisclaimers(this.$stateParams.productId, pageSize, offset - 1)
                 .then((disclaimers) => {
-                    $scope.disclaimersList = disclaimers;
+                    this.disclaimersList = disclaimers;
                     return {
                         data: disclaimers.list.results,
                         meta: {
@@ -54,49 +67,41 @@ angular.module("Module.emailpro.controllers")
                         }
                     };
                 }).catch((data) => {
-                    $scope.setMessage($scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
+                    this.$scope.setMessage(this.$scope.tr("exchange_tab_DISCLAIMER_error_message"), data.data);
                 });
-        };
+        }
 
-        $scope.updateDisclaimer = function (disclaimer) {
-            $scope.setAction("emailpro/disclaimer/update/emailpro-disclaimer-update", disclaimer);
-        };
+        updateDisclaimer (disclaimer) {
+            this.$scope.setAction("emailpro/disclaimer/update/emailpro-disclaimer-update", disclaimer);
+        }
 
-        $scope.deleteDisclaimer = function (disclaimer) {
-            $scope.setAction("emailpro/disclaimer/remove/emailpro-disclaimer-remove", disclaimer);
-        };
+        deleteDisclaimer (disclaimer) {
+            this.$scope.setAction("emailpro/disclaimer/remove/emailpro-disclaimer-remove", disclaimer);
+        }
 
-        $scope.setMessagesFlags = function (disclaimersList) {
-            $scope.addDomainMessageFlag = false;
-            $scope.noDisclaimerMessageFlag = false;
+        setMessagesFlags (disclaimersList) {
+            this.addDomainMessageFlag = false;
+            this.noDisclaimerMessageFlag = false;
 
             if (disclaimersList.list.results.length === 0 ||
-            (!hasEmptySlot(disclaimersList.list.results) && !hasFullSlot(disclaimersList.list.results))) {
-                $scope.addDomainMessageFlag = true;
-            } else if (hasEmptySlot(disclaimersList.list.results) && !hasFullSlot(disclaimersList.list.results)) {
-                $scope.noDisclaimerMessageFlag = true;
+            (!this.constructor.hasEmptySlot(disclaimersList.list.results) && !this.constructor.hasFullSlot(disclaimersList.list.results))) {
+                this.addDomainMessageFlag = true;
+            } else if (this.constructor.hasEmptySlot(disclaimersList.list.results) && !this.constructor.hasFullSlot(disclaimersList.list.results)) {
+                this.noDisclaimerMessageFlag = true;
             }
-        };
+        }
 
-        $scope.$on(EmailPro.events.disclaimersChanged, () => {
-            $scope.refreshList();
-        });
-
-        $scope.newDisclaimersDisabled = function () {
+        newDisclaimersDisabled () {
             let result = false;
-            if ($scope.disclaimersList) {
-                result = hasEmptySlot($scope.disclaimersList.list.results);
+            if (this.disclaimersList) {
+                result = this.constructor.hasEmptySlot(this.disclaimersList.list.results);
             }
             return !result;
-        };
+        }
 
-        $scope.addDisclaimer = function (disclaimer) {
-            if (!$scope.newDisclaimersDisabled()) {
-                $scope.setAction("emailpro/disclaimer/add/emailpro-disclaimer-add", disclaimer);
+        addDisclaimer (disclaimer) {
+            if (!this.newDisclaimersDisabled()) {
+                this.$scope.setAction("emailpro/disclaimer/add/emailpro-disclaimer-add", disclaimer);
             }
-        };
-
-        $scope.$on(EmailPro.events.disclaimersChanged, () => {
-            $scope.$broadcast("paginationServerSide.reload", "disclaimersTable");
-        });
+        }
     });

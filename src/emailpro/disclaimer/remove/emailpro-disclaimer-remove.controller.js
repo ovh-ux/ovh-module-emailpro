@@ -1,19 +1,24 @@
-/**
- *
- */
-angular.module("Module.emailpro.controllers")
-    .controller("EmailProRemoveDisclaimerCtrl", ($scope, $stateParams, EmailPro) => {
-        "use strict";
+angular
+    .module("Module.emailpro.controllers")
+    .controller("EmailProRemoveDisclaimerCtrl", class EmailProRemoveDisclaimerCtrl {
+        constructor ($scope, $stateParams, EmailPro) {
+            this.$scope = $scope;
+            this.$stateParams = $stateParams;
+            this.EmailPro = EmailPro;
 
-        $scope.disclaimer = $scope.currentActionData;
-        $scope.submit = function () {
-            $scope.setMessage($scope.tr("exchange_dashboard_action_doing"), { status: "success" });
-            EmailPro.deleteDisclaimer($stateParams.productId, $scope.disclaimer.domain.name)
+            this.disclaimer = $scope.currentActionData;
+
+            $scope.submit = () => this.submit();
+        }
+
+        submit () {
+            this.$scope.setMessage(this.$scope.tr("exchange_dashboard_action_doing"), { status: "success" });
+            this.EmailPro.deleteDisclaimer(this.$stateParams.productId, this.disclaimer.domain.name)
                 .then(() => {
-                    $scope.setMessage($scope.tr("exchange_ACTION_delete_disclaimer_success"), { status: "success" });
+                    this.$scope.setMessage(this.$scope.tr("exchange_ACTION_delete_disclaimer_success"), { status: "success" });
                 }, (failure) => {
-                    $scope.setMessage($scope.tr("exchange_ACTION_delete_disclaimer_failure"), failure.data);
+                    this.$scope.setMessage(this.$scope.tr("exchange_ACTION_delete_disclaimer_failure"), failure.data);
                 });
-            $scope.resetAction();
-        };
+            this.$scope.resetAction();
+        }
     });
