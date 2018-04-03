@@ -20,7 +20,7 @@
     "Gruntfile.js"
   ],
   "dependencies": {
-    "ckeditor": "^4.7.2",
+    "ckeditor": "^4.9.1",
     "ng-ckeditor": "^0.2.1",
     "punycode": "~1.2.4"
   }
