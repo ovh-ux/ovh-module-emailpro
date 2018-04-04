@@ -18,25 +18,11 @@ angular.module("Module.emailpro.controllers")
         }
 
         static hasEmptySlot (list) {
-            let result = false;
-            angular.forEach(list,
-                            (value) => {
-                                if (value.emptySlotFlag) {
-                                    result = true;
-                                }
-                            });
-            return result;
+            return _.some(list, "emptySlotFlag");
         }
 
         static hasFullSlot (list) {
-            let result = false;
-            angular.forEach(list,
-                            (value) => {
-                                if (!value.emptySlotFlag) {
-                                    result = true;
-                                }
-                            });
-            return result;
+            return _.some(list, "emptySlotFlag", false);
         }
 
         refreshList () {

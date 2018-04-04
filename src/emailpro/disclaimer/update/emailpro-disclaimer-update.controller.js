@@ -27,13 +27,7 @@ angular.module("Module.emailpro.controllers")
         }
 
         getCompleteDomain (domainName) {
-            let result;
-            angular.forEach(this.availableDomains, (value) => {
-                if (value.name === domainName) {
-                    result = value;
-                }
-            });
-            return result;
+            return _.some(this.availableDomains, { name: domainName });
         }
 
         /**
