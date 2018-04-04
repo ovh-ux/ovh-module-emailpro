@@ -25,13 +25,15 @@
                   data-ng-if="!$row.outsideOnly"></span>
         </oui-column>
         <oui-column data-title="tr('exchange_tab_DISCLAIMER_state_header')">
-            <span class="fa fa-hourglass-half"
+            <span class="label label-success"
                   data-ng-if="$row.taskPendingId"
-                  data-uib-tooltip="{{tr('exchange_tab_DISCLAIMER_state_doing_tooltip')}}"
-                  data-tooltip-append-to-body="true"></span>
+                  data-i18n-static="global_doing"></span>
             <span class="label label-warning"
                   data-i18n-static="common_not_configurated"
                   data-ng-if="$row.emptySlotFlag"></span>
+            <span class="label label-success"
+                  data-i18n-static="global_OK"
+                  data-ng-if="!$row.emptySlotFlag && !$row.taskPendingId"></span>
         </oui-column>
         <oui-action-menu data-align="end" data-compact>
             <oui-action-menu-item data-text="{{i18n.exchange_tab_DISCLAIMER_menu_settings}}"
