@@ -95,7 +95,7 @@ angular.module("Module.emailpro", ["ovh-utils-angular", "ngRoute", "ui.bootstrap
                     EN: "https://docs.ovh.com/gb/en/web/emails-pro",
                     ES: "https://docs.ovh.com/gb/en/web/emails-pro",
                     FI: "https://docs.ovh.com/gb/en/web/emails-pro",
-                    FR: "https://docs.ovh.com/fr/web/emails-pro",
+                    FR: "https://docs.ovh.com/fr/emails-pro",
                     GB: "https://docs.ovh.com/gb/en/web/emails-pro",
                     IE: "https://docs.ovh.com/gb/en/web/emails-pro",
                     IT: "https://docs.ovh.com/gb/en/web/emails-pro",
