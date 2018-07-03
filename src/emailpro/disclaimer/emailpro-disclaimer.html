@@ -13,8 +13,7 @@
     <oui-datagrid data-rows-loader="loadPaginated($config)">
         <oui-column data-title="tr('exchange_tab_DISCLAIMER_associated_domains')" data-property="domain.displayName"></oui-column>
         <oui-column data-title="tr('exchange_tab_DISCLAIMER_disclaimer_content')" data-property="strippedContent">
-            <span data-ng-bind-html="$row.strippedContent | sliceContent:60"
-                  data-uib-tooltip-html="{{$row.strippedContent | sliceContent:250}}"></span>
+            <span data-ng-bind="$row.strippedContent | sliceContent:60"></span>
         </oui-column>
         <oui-column data-title="tr('exchange_tab_DISCLAIMER_disclaimer_outside_only')">
             <span data-i18n-static="exchange_tab_DISCLAIMER_disclaimer_outside_only_true"
