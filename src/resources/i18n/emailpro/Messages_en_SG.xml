@@ -63,7 +63,7 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Vade Secure anti-spam is compatible with nonauthoritative mode (only if your POP/IMAP accounts are hosted at OVH). If this is the case, we would recommend that you use: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> and <strong>{3}</strong><br/><br/> If you use nonauthoritative mode with email accounts that are not hosted at OVH, you must use: <strong>{4}</strong> (see associated domains section)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: manage</translation>
 
-   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Configure your Exchange services </translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (Only Email Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Nonauthoritative mode (Email Pro + another email service)</translation>
@@ -75,11 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">The domain will be deleted from your Email Pro service. </translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">An error has occurred deleting the domain from your Email Pro service. </translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegation grants other Email Pro accounts some rights on the {0} account </translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1">Vous pouvez créer une signature par domaine validé.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Vous pouvez créer une signature par domaine validé.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Are you sure you want to delete the following Email Pro signature?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Are you sure you want to add the resource account below to the Email Pro server?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">You have not yet added a domain, or it has not yet been validated. <br/>First, you need to add a domain, and then wait for it to be validated in order to create an Email Pro account. </translation>

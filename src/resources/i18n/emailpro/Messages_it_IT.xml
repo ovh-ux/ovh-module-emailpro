@@ -52,7 +52,7 @@
    <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Nell'account sono presenti alcuni caratteri non validi</translation>
    <translation id="emailpro_ACTION_account_error_required" qtlid="447885">L'account è obbligatorio</translation>
    <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Crea</translation>
-   <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Reinizializza</translation>
+   <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Ripristino</translation>
    <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Apertura in corso</translation>
    <translation id="emailpro_tab_account_state_SUSPENDED" qtlid="136100">Sospeso</translation>
    <translation id="emailpro_tab_account_state_SUSPENDING" qtlid="171201">Sospensione in corso</translation>
@@ -67,7 +67,7 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">L'Antispam Vade Secure è compatibile con la modalità non autoritativa solo se i tuoi account POP/IMAP sono ospitati in OVH. In questo caso, ti consigliamo di utilizzare <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> e <strong>{3}</strong><br/><br/>. Se utilizzi la modalità non autoritativa con account email non ospitati in OVH, è necessario utilizzare <strong>{4}</strong> (vedi la sezione relativa ai domini associati).</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gestisci</translation>
 
-   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Gestisci la politica di sicurezza</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritativo (solo Email Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non autoritativo (Email Pro + altro servizio di posta elettronica)</translation>
@@ -91,11 +91,11 @@
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Una delega permette ad altri account Email Pro di avere alcuni diritti sull'account {0}&#13;
 &#13;
 </translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1">Vous pouvez créer une signature par domaine validé.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Vous pouvez créer une signature par domaine validé.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Vuoi davvero eliminare questa firma dal tuo servizio Email Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Vuoi davvero aggiungere il seguente account risorsa al tuo server Email Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Il dominio non è stato ancora aggiunto o non è stato convalidato. <br/>Per creare un account Email Pro, è necessario aggiungere un dominio e attendere che venga convalidato.</translation>

@@ -63,7 +63,7 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Vade Secure -roskapostintorjunta on yhteensopiva ei-autoritatiivisen tilan kanssa ainoastaan, jos pop/imap-tilit ovat OVH:n ylläpitämiä (mxplan tai jaettu sähköposti). Tässä tapauksessa on suositeltavaa käyttää näitä: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> ja <strong>{3}</strong><br/><br/> Jos käytät ei-autoritatiivista tilaa toisen palveluntarjoajan ylläpitämän sähköpostitiin kanssa, käytä: <strong>{4}</strong> (ks. liitetyt verkkotunnukset)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: hallinnoi</translation>
 
-   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Turvapolitiikan hallinnointi</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritatiivinen (Vain E-mail Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Ei-autoritatiivinen (E-mail Pro + muu sähköpostipalvelu)</translation>
@@ -75,11 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Verkkotunnus poistetaan E-mail Pro -palvelustasi.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Tapahtui virhe poistettaessa verkkotunnusta E-mail Pro -palvelustasi.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Oikeuksien jakaminen antaa toisille E-mail Pro -tileille tiettyjä oikeuksia tiliin {0}</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1">Vous pouvez créer une signature par domaine validé.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Voit luoda yhden allekirjoituksen vahvistettua verkkotunnusta kohti.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Käytä saatavilla olevia työkaluja allekirjoituksen personointiin sekä muotoiluun.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Tämä allekirjoitus lisätään automaattisesti jokaisen E-mail Pro -verkkotunnukseesi lisätystä sähköpostiosoitteesta lähetetyn viestin alaosaan.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Lisäksi saatavilla on muuttujia yleisen allekirjoituksen personointiin sekä eri kollegoiden yhteystietoja.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Voit lisätä kuvan tai logon klikkaamalla ensin painiketta "image" ja liittämällä sitten kuvan/logon URL.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Haluatko varmasti poistaa seuraavan allekirjoituksen E-mail Pro -palvelustasi?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Haluatko varmasti lisätä alla olevan resurssitilin E-mail Pro -palvelimelle?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Et ole lisännyt vielä verkkotunnusta tai sitä ei ole vielä vahvistettu. <br/>Lisää ensin verkkotunnus ja odota sen vahvistamista, jotta voit luoda E-mail Pro -tilin.</translation>
