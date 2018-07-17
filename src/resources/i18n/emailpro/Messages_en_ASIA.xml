@@ -75,11 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">The domain will be deleted from your Email Pro service. </translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">An error has occurred deleting the domain from your Email Pro service. </translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegation grants other Email Pro accounts some rights on the {0} account </translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Vous pouvez créer une signature par domaine validé.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">You can create one signature per validated domain.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Please use the formatting tools in the toolbar above the text box to customise and format your signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">This signature will be included automatically at the bottom of all emails sent from email addresses associated with your Email Pro domain.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">You can also use variables to customise the generic signature, with details for individual employees.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">To add an image or logo, click on the "image" button (landscape icon in the toolbar), and insert the URL of the image or logo.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Are you sure you want to delete the following Email Pro signature?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Are you sure you want to add the resource account below to the Email Pro server?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">You have not yet added a domain, or it has not yet been validated. <br/>First, you need to add a domain, and then wait for it to be validated in order to create an Email Pro account. </translation>

@@ -75,11 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Het domein zal worden verwijderd van uw E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Er is een fout opgetreden tijdens het verwijderen van het domein van uw E-mail Pro.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegatie verstrekt andere E-mail Pro accounts bepaalde rechten op het {0} account </translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Vous pouvez créer une signature par domaine validé.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">U kunt één handtekening per gevalideerd domein maken.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Gebruik beschikbare resources om de handtekening en opmaak te personaliseren.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Deze handtekening wordt automatisch toegevoegd aan de onderkant van het bericht dat u wordt toegestuurd vanaf het e-mailadres dat u hebt toegevoegd aan uw E-mail Pro domein.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Daarnaast zijn er variabelen beschikbaar voor het aanpassen van een algemene handtekening en contactgegevens voor verschillende collega's.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">U kunt een afbeelding of logo toevoegen door eerst op de knop "afbeelding" te klikken en vervolgens de URL van de afbeelding of het logo toe te voegen.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Weet u zeker dat u de E-mail Pro handtekening wilt verwijderen?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Weet u zeker dat u het onderstaande resource account wilt toevoegen aan de E-mail Pro server? </translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">U heeft nog geen domein toegevoegd of het is nog niet gevalideerd. <br/>U moet eerst een domein toevoegen en wachten tot het gevalideerd is om een E-mail Pro account te maken.</translation>
