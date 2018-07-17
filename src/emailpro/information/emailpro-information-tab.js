@@ -1,7 +1,7 @@
-angular.module("Module.emailpro.controllers").controller("EmailProTabInformationCtrl", [
+angular.module('Module.emailpro.controllers').controller('EmailProTabInformationCtrl', [
 
-    function () {
-        "use strict";
-    }
+  function () {
+
+  },
 
 ]);
