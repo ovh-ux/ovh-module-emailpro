@@ -67,26 +67,24 @@
                     </tbody>
 
                     <tbody data-ng-if="!loading && paginated.domains.length > 0">
-                        <tr data-ng-repeat="domain in (paginated.domains | orderBy:'formattedName':false) track by $index"
-                            data-ng-class="{'text-warning': domain.partial}">
-                            <td colspan="6"
-                                data-ng-if="domain.partial">
+                        <tr data-ng-repeat="domain in (paginated.domains | orderBy:'formattedName':false) track by $index">
+                            <td colspan="6" data-ng-if="domain.partial">
                                 <span class="fa fa-warning mr-2" aria-hidden="true"></span>
                                 <span data-ng-bind="domain.displayName"></span>
                             </td>
-                            <th scope="row"
+                            <th class="word-break"
+                                scope="row"
                                 data-ng-bind="domain.displayName"
                                 data-ng-if="!domain.partial"></th>
+
                             <td data-ng-if="!domain.partial && domain.domainValidated">
                                 <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state === stateOk && domain.type === domainTypeAuthoritative"
-                                      data-ng-bind="tr('exchange_tab_domain_modify_in_progress', tr('exchange_tab_domain_inverse_NON_AUTHORITATIVE'))"
-                                      data-ng-class="{'doing-grey': domain.taskInProgress}"></span>
+                                      data-ng-bind="tr('exchange_tab_domain_modify_in_progress', tr('exchange_tab_domain_inverse_NON_AUTHORITATIVE'))"></span>
                                 <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state === stateOk && domain.type === domainTypeNonAuthoritative"
-                                      data-ng-bind="tr('exchange_tab_domain_modify_in_progress', tr('exchange_tab_domain_inverse_AUTHORITATIVE'))"
-                                      data-ng-class="{'doing-grey': domain.taskInProgress}"></span>
-                                <span data-ng-if="!domain.partial && domain.state === 'DELETING'"
+                                      data-ng-bind="tr('exchange_tab_domain_modify_in_progress', tr('exchange_tab_domain_inverse_AUTHORITATIVE'))"></span>
+                                <span data-ng-if="!domain.partial && (domain.state === 'DELETING' || domain.state === 'CREATING')"
                                       data-ng-bind="tr('exchange_tab_domain_' + domain.type)"></span>
-                                <span data-ng-if="!domain.taskInProgress || !domain.partial || domain.state === stateOk"
+                                <span data-ng-if="!domain.taskInProgress && !domain.partial && domain.state === stateOk"
                                       data-ng-bind="tr('exchange_tab_domain_' + domain.type)"></span>
                             </td>
                             <td colspan="2"
