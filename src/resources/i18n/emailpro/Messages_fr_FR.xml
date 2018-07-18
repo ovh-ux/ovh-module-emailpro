@@ -63,7 +63,7 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes pop/imap sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gérer</translation>
 
-   <translation id="emailpro_configuration_action_title">Gérer la politique de sécurité</translation>
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Gérer la politique de sécurité</translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritatif (E-mail Pro uniquement)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Non-autoritatif (E-mail Pro + autre service de messagerie)</translation>
@@ -75,7 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Le domaine va être supprimé de votre service E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Une erreur est survenue lors de la suppression du domaine de votre service E-mail Pro.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur le compte {0}</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Vous pouvez créer une signature par domaine validé.<br /><br />Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.<br /> Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro. <br /><br />Des variables sont aussi disponible pour personnaliser la signature générique avec les coordonnées des différents collaborateurs. <br /><br /> Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliquer sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Vous pouvez créer une signature par domaine validé.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Etes-vous sûr de vouloir supprimer la signature suivante de votre service E-mail Pro ?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Etes-vous sûr de vouloir ajouter le compte de ressource ci-dessous au serveur E-mail Pro ?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Vous n'avez pas encore ajouté de domaine ou il n'a pas encore été validé. <br/>Vous devez d'abord ajouter un domaine et attendre qu'il soit validé pour créer un compte E-mail Pro.</translation>

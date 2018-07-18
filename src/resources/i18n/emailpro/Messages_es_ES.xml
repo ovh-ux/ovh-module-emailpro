@@ -45,8 +45,8 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">No se ha podido personalizar la dirección de correo Email Pro. Es posible que ya exista una configuración compartida (correo, redirección, contestador) con el mismo nombre.</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">La contraseña de la cuenta Email Pro va a modificarse.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Editar la cuenta Email Pro</translation>
-   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">La cuenta incluye caracteres no autorizados.</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">La cuenta es obligatoria.</translation>
    <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Creación</translation>
    <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Reinicio</translation>
    <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Abriendo...</translation>
@@ -63,6 +63,8 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">El antispam Vade Secure es compatible con el modo no autoritario (solo si sus cuentas POP/IMAP están alojadas en OVH). En ese caso, le aconsejamos que utilice: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> y <strong>{3}</strong><br/><br/>. Si utiliza el modo no autoritario con cuentas de correo no alojadas en OVH, deberá utilizar <strong>{4}</strong> (ver dominios asociados). </translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gestionar</translation>
 
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Editar la política de seguridad</translation>
+
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritario (solo Email Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">No autoritario (Email Pro + otro servicio de correo)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">El modo autoritario no permite utilizar otro sistema de correo simultáneamente a las cuentas Email Pro. Este modo permite activar el antispam Vade Secure.</translation>
@@ -73,7 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">El dominio va a eliminarse del servicio Email Pro.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Se ha producido un error al eliminar el dominio del servicio Email Pro.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Una delegación permite que otras cuentas Email Pro tengan determinados permisos sobre la cuenta {0}.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Puede crear una firma para cada dominio validado.<br /><br />Utilice las herramientas puestas a su disposición para personalizar y dar formato a su firma.<br /> Dicha firma se añadirá automáticamente al final de cada mensaje enviado desde las direcciones asociadas a su dominio Email Pro. <br /><br />También puede utilizar variables para personalizar la firma genérica con los datos de los distintos trabajadores. <br /><br /> Para añadir una imagen o logo, haga clic en el botón «imagen» e insértela utilizando su URL.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Puede crear una firma por dominio validado.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilice las herramientas disponibles para personalizar y dar formato a su firma.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Dicha firma se añadirá automáticamente al final de todos los mensajes enviados desde las direcciones asociadas a su dominio Email Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">También puede utilizar variables para personalizar la firma genérica con los datos de los distintos trabajadores.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Para añadir una imagen o un logo, haga clic en el icono con forma de imagen e introduzca la URL correspondiente.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">¿Seguro que quiere eliminar la siguiente firma de su servicio Email Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">¿Seguro que quiere añadir la siguiente cuenta de recursos al servidor Email Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Todavía no ha añadido ningún dominio, o este aún no ha sido validado. <br/>Para crear una cuenta Email Pro, es necesario añadir un dominio y esperar a que sea validado.</translation>

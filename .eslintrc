@@ -1,0 +1,14 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "browser": true
+    },
+    "globals": {
+        "_": true,
+        "$": true,
+        "angular": true,
+        "CKEDITOR": true,
+        "moment": true,
+        "punycode": true
+    }
+}

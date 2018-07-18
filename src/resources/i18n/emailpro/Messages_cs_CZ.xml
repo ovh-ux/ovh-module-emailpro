@@ -50,8 +50,8 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">E-mailovou adresu nebylo možné upravit. Je možné, že již existuje jiná konfigurace (e-mail, přesměrování, autoresponder apod.) se stejným názvem. </translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Heslo k účtu E-mail Pro bude aktualizováno.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Upravit účet E-mail Pro</translation>
-   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Účet obsahuje neplatné znaky</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Účet je povinný</translation>
    <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Vytvoření</translation>
    <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Resetování</translation>
    <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Otevírání...</translation>
@@ -68,6 +68,8 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Antispam Vade Secure je kompatibilní s neautoritativním režimem (pouze pokud jsou Vaše pop/imap účty hostovány u OVH). V takovém případě doporučujeme použít následující mailové servery: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> a <strong>{3}</strong><br/><br/> Pokud chcete neautoritativní režim používat s e-mailovými účty, které nejsou hostovány u OVH, musíte použít následující mailový server: <strong>{4}</strong> (viz sekce "asociované domény").</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: spravovat</translation>
 
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Nastavení služeb Exchange</translation>
+
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autoritativní (pouze E-mail Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Neautoritativní (E-mail Pro + další e-mailové řešení)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">V autoritativním režimu není dovoleno použití dalších e-mailových řešení. Tento režim umožňuje aktivaci antispamu Vade Secure.</translation>
@@ -78,7 +80,11 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Doména bude ze služby E-mail Pro odstraněna.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Při odstraňování domény ze služby E-mail Pro došlo k chybě.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegace představuje způsob, jak ostatním účtům služby E-mail Pro přidělit určitá práva na účtu {0}.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Pro každou ověřenou doménu lze vytvořit jeden podpis.<br /><br />Pro úpravy a formátování podpisu použijte prosím dostupné nástroje.<br /> Tento podpis bude automaticky přidáván na konec každé zprávy odeslané z e-mailových adres asociovaných s Vaší E-mail Pro doménou.<br /><br />V podpisu je možné používat proměnné.<br /><br /> Pro přidání obrázku či loga klikněte na tlačítko "obrázek" a zadejte příslušnou URL adresu.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Pro svou doménu můžete vytvořit automatický podpis.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Pro přizpůsobení svého podpisu máte k dispozici textový editor.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Podpis bude automaticky připojen na konec každého e-mailu odeslaného z e-mailových účtů asociovaných s Vaší doménou.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Pro vytvoření generického podpisu pracujícího s kontaktními informacemi několika osob jsou Vám k dispozici proměnné hodnoty.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Za účelem vložení obrázku či loga firmy klikněte na "tlačítko pro přidání obrázku" a následně vložte jeho URL adresu.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Opravdu chcete odstranit následující podpis?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Opravdu chcete k serveru E-mail Pro přidat následující zdrojový účet?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Ještě jste nepřipojili doménu nebo neproběhl ověřovací proces. <br/>Abyste mohli vytvořit účet E-mail Pro, musíte nejprve připojit doménu a následně počkat na dokončení ověřovacího procesu.</translation>

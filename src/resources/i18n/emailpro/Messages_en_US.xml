@@ -4,7 +4,7 @@
    <translation id="emailpro_displayName_maxlength" qtlid="260208">The name must not exceed 250 characters.</translation>
    <translation id="emailpro_displayName_required" qtlid="88293">The name cannot be empty.</translation>
 
-   <translation id="emailpro_dashboard_service_expired" qtlid="433706">There was an error loading your Email Pro account. </translation>
+   <translation id="emailpro_dashboard_service_expired" qtlid="433706">An error has occurred loading your Email Pro account. </translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Email Pro accounts </translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Do you need help configuring your Email Pro service? </translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Your Email Pro service is almost ready. You have to attach a domain to your service. If you don't have one, <a href="https://www.ovh.co.uk:51043/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to buy one.</translation>
@@ -14,9 +14,9 @@
 
    <translation id="emailpro_resilitation_action_title" qtlid="375062">Cancellation of your Email Pro service </translation>
    <translation id="emailpro_resilitation_action_intro" qtlid="375075">Are you sure you want to delete the "{0}" Email Pro service? <br />If you do so, automatic renewal will be cancelled at the end of the expiry period, which means the solution will be blocked .<br /><br /> You can continue to use this service as normal until this date. </translation>
-   <translation id="emailpro_resilitation_action_confirmation" qtlid="375088">Warning, you are about to cancel your "{0}" service as well as the attached {1} Email Pro accounts. <br />Are you sure you want to do this?</translation>
+   <translation id="emailpro_resilitation_action_confirmation" qtlid="375088">Warning: you are about to cancel your "{0}" service as well as the attached {1} Email Pro accounts. <br />Are you sure you want to do this?</translation>
    <translation id="emailpro_resilitation_action_success" qtlid="375101">The Email Pro service will be deleted on the expiry date. </translation>
-   <translation id="emailpro_resilitation_action_failure" qtlid="375114">Error when deleting your Email Pro service. </translation>
+   <translation id="emailpro_resilitation_action_failure" qtlid="375114">An error has occurred deleting your Email Pro service. </translation>
    <translation id="emailpro_resilitation_cancel_action_success" qtlid="375127">Email Pro service will be renewed on the expiry date. </translation>
    <translation id="emailpro_resilitation_cancel_action_intro" qtlid="375140">Cancellation of the "{0}" Email Pro service is planned for the expiry date. <br /><br />Are you sure that you no longer wish to cancel? The service will then go into automatic renewal. </translation>
    <translation id="emailpro_tab_domain_no_domains_1" qtlid="375153">Add a domain to create Email Pro accounts. Click </translation>
@@ -31,10 +31,10 @@
    <translation id="emailpro_ACTION_order_accounts_step2_doing_message" qtlid="375270">Ordering Email Pro accounts...</translation>
    <translation id="emailpro_ACTION_order_accounts_per_account" qtlid="375283">per account </translation>
    <translation id="emailpro_ACTION_add_account_title" qtlid="375296">Add an Email Pro account </translation>
-   <translation id="emailpro_ACTION_add_account_step1_option_fail" qtlid="375309">Error when loading Email Pro account options.</translation>
+   <translation id="emailpro_ACTION_add_account_step1_option_fail" qtlid="375309">An error has occurred loading Email Pro account options.</translation>
    <translation id="emailpro_ACTION_add_account_helpwizard_title" qtlid="375322">Creating Email Pro account </translation>
-   <translation id="emailpro_ACTION_add_no_domains" qtlid="375335">You have not yet added a domain or it has not yet been validated. <br/>You first have to add a domain and then wait for it to be validated in order to create an Email Pro account. </translation>
-   <translation id="emailpro_ACTION_add_account_error_message" qtlid="375348">Error when creating Email Pro account </translation>
+   <translation id="emailpro_ACTION_add_no_domains" qtlid="375335">You have not yet added a domain, or it has not yet been validated. <br/>First, you need to add a domain, and then wait for it to be validated in order to create an Email Pro account. </translation>
+   <translation id="emailpro_ACTION_add_account_error_message" qtlid="375348">An error has occurred creating the Email Pro account </translation>
    <translation id="emailpro_ACTION_update_account_step1_password_contains_name" qtlid="375361">The password must not contain all or part of the display name or Email Pro username.  </translation>
    <translation id="emailpro_ACTION_update_account_step1_exchange_guid_label" qtlid="375374">Email Pro GUID</translation>
    <translation id="emailpro_ACTION_update_account_helpwizard_title" qtlid="375387">Change the Email Pro account </translation>
@@ -45,8 +45,8 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">We were unable to customise the Email Pro email address. There could be another configuration (email, redirection, answering machine) with the same name. </translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">The password for the Email Pro account will change.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Change the Email Pro account </translation>
-   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">The account contains invalid characters</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">The account is mandatory</translation>
    <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Creation</translation>
    <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Reset</translation>
    <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Opening...</translation>
@@ -57,11 +57,13 @@
    <translation id="emailpro_tab_account_reset_account" qtlid="376024">Reset an account </translation>
    <translation id="emailpro_tab_account_reset_title" qtlid="447911">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
    <translation id="emailpro_tab_account_reset_account_label" qtlid="33862">Account</translation>
-   <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">Resetting an account deletes the data and associated name but you will continue to be charged for this account. If you no longer want to be billed, click "billing mode", then click "none" for the account in question and confirm. </translation>
+   <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">Resetting an account deletes the data and associated name, but you will continue to be charged for this account. If you no longer want to be billed, click "billing mode", then click "none" for the account in question, and confirm. </translation>
    <translation id="emailpro_tab_account_reset_success" qtlid="447924">The account on your Email Pro service will be reset.</translation>
    <translation id="emailpro_tab_account_reset_failure" qtlid="447937">An error has occurred resetting the account on your Email Pro service.</translation>
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Vade Secure anti-spam is compatible with nonauthoritative mode (only if your POP/IMAP accounts are hosted at OVH). If this is the case, we would recommend that you use: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> and <strong>{3}</strong><br/><br/> If you use nonauthoritative mode with email accounts that are not hosted at OVH, you must use: <strong>{4}</strong> (see associated domains section)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: manage</translation>
+
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Configure your Exchange services </translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (Only Email Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Nonauthoritative mode (Email Pro + another email service)</translation>
@@ -71,16 +73,20 @@
    <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">By default, when adding a domain to the Email Pro server, it is configured in authoritative mode. This means that when you send an email to the address of the domain managed on the server, the server will only look to see if the address is on the Email Pro server. <br /><br />On the other hand, if you switch the domain to nonauthoritative mode, when you send an email, we will first check if the address is on the Email Pro server, and if it isn't, the Email Pro server will redirect the message to the MX server that you have configured. <br /><br /> You can use the domain in nonauthoritarian mode if, for example, you want to manage one part of your email on the Email Pro service and another part on an external server. <br /><br />Please note, If you want to use the Email Pro service and the OVH email hosting service, you must enter the value <strong>mx1.ovh.net.</strong> in the "Target email server" field in the box to the left of this message. </translation>
    <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Are you sure you want to delete the following domain from your Email Pro service?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">The domain will be deleted from your Email Pro service. </translation>
-   <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Error when deleting domain from your Email Pro service. </translation>
+   <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">An error has occurred deleting the domain from your Email Pro service. </translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegation grants other Email Pro accounts some rights on the {0} account </translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />You can create one signature per validated domain.<br /><br />Use the available tools to customise and format your signature<br /> This signature will automatically be added to the end of each message sent from the addresses attached to your Email Pro domain. <br /><br />Variables are also available so you can customise the generic signature with your different associates' details. <br /><br /> To add an image or a logo, click the "image" button and insert its URL.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">You can create one signature per validated domain.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Please use the formatting tools in the toolbar above the text box to customise and format your signature.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">This signature will be included automatically at the bottom of all emails sent from email addresses associated with your Email Pro domain.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">You can also use variables to customise the generic signature, with details for individual employees.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">To add an image or logo, click on the "image" button (landscape icon in the toolbar), and insert the URL of the image or logo.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Are you sure you want to delete the following Email Pro signature?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Are you sure you want to add the resource account below to the Email Pro server?</translation>
-   <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">You have not yet added a domain or it has not yet been validated. <br/>You first have to add a domain and then wait for it to be validated in order to create an Email Pro account. </translation>
+   <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">You have not yet added a domain, or it has not yet been validated. <br/>First, you need to add a domain, and then wait for it to be validated in order to create an Email Pro account. </translation>
    <translation id="emailpro_tab_RESOURCES_remove_resource_title" qtlid="375660">Do you want to delete the following resource account from your Email Pro service?</translation>
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">The resource account will be deleted from your Email Pro service. </translation>
    <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">A delegation allows other Email Pro accounts to have certain rights to a {0} resource</translation>
-   <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Email reception is not impacted. When your account is blocked due to spam, this is visible in the email account section or your Email Pro service. A SPAM tag is displayed. Click on it to be redirected to the email received following the block. </translation>
+   <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Email reception is not affected. When your account is blocked due to spam, this is visible in the email account section or your Email Pro service. A SPAM tag is displayed. Click on it to be redirected to the email received following the block. </translation>
    <translation id="emailpro_DIAGNOSTICS_status_isSuspended_help" qtlid="375712">In this instance your subscription is no longer active, email delivery and reception is disabled. Please contact our Email Pro support team on <strong>0333 370 0425</strong> to re-enable the service. </translation>
    <translation id="emailpro_DIAGNOSTICS_status_isLocked_help1" qtlid="375725">You can set up a security policy from your Email Pro service. Your account may be blocked for a certain time period while this policy is being configured. </translation>
    <translation id="emailpro_DIAGNOSTICS_status_isLocked_help3" qtlid="375738">If your account is blocked during this process, you can either wait until the specified time has elapsed so that the account is unblocked or contact our Email Pro support by creating a support request.</translation>
@@ -106,7 +112,7 @@
    <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Order Email Pro accounts </translation>
    <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="375946">Are you sure you want to add the domain below to your Email Pro server? </translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="375959">The domain will be added to your Email Pro server. </translation>
-   <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Error when adding domain to your Email Pro server. </translation>
+   <translation id="emailpro_tab_domain_add_failure" qtlid="375972">An error has occurred adding the domain to your Email Pro server. </translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">The domain entered is not valid </translation>
 
