@@ -48,8 +48,8 @@
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">Adres e-mail E-mail Pro nie mógł zostać spersonalizowany. Możliwe, że dla tej samej nazwy istnieje konfiguracja na hostingu (e-mail, przekierowanie, autoresponder).</translation>
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">Hasło do konta E-mail Pro zostanie zmienione.</translation>
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Zmodyfikuj konto E-mail Pro</translation>
-   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
-   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
+   <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Konto zawiera niedozwolone znaki</translation>
+   <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Wymagane jest konto</translation>
    <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Utworzenie</translation>
    <translation id="emailpro_tab_account_state_DELETING" qtlid="447898">Reset</translation>
    <translation id="emailpro_tab_account_state_REOPENING" qtlid="171188">Trwa otwieranie</translation>
@@ -66,6 +66,8 @@
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Ochrona antyspamowa Vade Secure jest kompatybilna z trybem nieautorytatywnym (wyłącznie jeśli Twoje konta pop/imap są zainstalowane w OVH). W tym przypadku zalecane jest użycie: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> i <strong>{3}</strong><br/><br/>. Jeśli stosujesz tryb nieautorytatywny dla kont nieobsługiwanych przez OVH, powinieneś użyć: <strong>{4}</strong> (patrz sekcja powiązane domeny)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: zarządzaj</translation>
 
+   <translation id="emailpro_configuration_action_title" qtlid="136243">Zarządzaj polityką bezpieczeństwa</translation>
+
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Autorytatywny (tylko E-mail Pro)</translation>
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Nieautorytatywny (E-mail Pro + inna usługa poczty elektronicznej)</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Tryb autorytatywny nie pozwala na korzystanie z innego systemu poczty elektronicznej z kontami E-mail Pro. Tryb ten pozwala na aktywację systemu antyspamowego Vade Secure.</translation>
@@ -76,7 +78,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">Domena zostanie usunięta z usługi E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Wystąpił błąd podczas usuwania domeny z usługi E-mail Pro.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegacja pozwala innym kontom E-mail Pro na posiadanie pewnych uprawnień do konta {0}.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details" qtlid="375621"><br />Możesz utworzyć podpis dla potwierdzonej domeny.<br /><br />Skorzystaj z dostępnych narzędzi do personalizacji podpisu.<br /> Podpis ten będzie automatycznie dodawany w dolnej części każdej wiadomości wysłanej z adresów przypisanych do domeny E-mail Pro. <br /><br />Dostępne są również zmienne pozwalające na pobieranie danych poszczególnych pracowników. <br /><br /> Aby dodać obrazek lub logo, podaj adres URL po kliknięciu na przycisk "obrazek".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Możesz utworzyć podpis dla każdej zatwierdzonej domeny.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Użyj dostępnych narzędzi, aby dostosować i sformatować Twój podpis.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Podpis będzie automatycznie dodawany na końcu wszystkich wiadomości e-mail wysyłanych z kont e-mail powiązanych z Twoją domeną E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Możesz także użyć zmiennych, aby spersonalizować ogólny podpis i wstawić dane poszczególnych pracowników.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Aby dodać obraz lub logo, kliknij ikonkę "obraz" i wprowadź odpowiedni adres URL.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Czy chcesz usunąć ten podpis z usługi E-mail Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Czy chcesz dodać konto zasobów do serwera E-mail Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Nie dodałeś jeszcze domeny lub nie została ona jeszcze potwierdzona. <br/>Musisz najpierw dodać domenę i poczekać na jej potwierdzenie, aby móc utworzyć konto E-mail Pro.</translation>

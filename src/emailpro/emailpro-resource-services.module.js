@@ -1,1 +1,1 @@
-angular.module("Module.emailpro.services", []);
+angular.module('Module.emailpro.services', []);
