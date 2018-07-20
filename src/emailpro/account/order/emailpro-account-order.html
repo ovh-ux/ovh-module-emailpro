@@ -28,8 +28,19 @@
                                     data-ng-value="orderAvailable.duration.duration"
                                     data-ng-model="accountsToAdd.duration">
                             <label class="oui-radio__label-container" for="{{'duration'+$index}}">
-                                <span class="oui-radio__label"
-                                      data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration) + ' ( <strong>'  + orderAvailable.unitaryMonthlyPrice.text + '</strong> ' + tr('emailpro_ACTION_order_accounts_per_account') + ')'"></span>
+                                <span class="oui-radio__label">
+                                    <span data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration)"></span>
+                                    (<strong>
+                                        <span data-ng-if="!ctrl.isGermanSubsidiary"
+                                              data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price', [ orderAvailable.unitaryMonthlyPrice.text, orderAvailable.unitaryMonthlyPriceWithTax.text ])">
+                                        </span>
+                                        <span data-ng-if="ctrl.isGermanSubsidiary"
+                                              data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price_germany', [ orderAvailable.unitaryMonthlyPriceWithTax.localizedText ])">
+                                        </span>
+                                    </strong>
+                                    <span data-ng-bind="tr('emailpro_ACTION_order_accounts_per_account')"></span>
+                                    )
+                                </span>
                             </label>
                         </div>
                     </div>

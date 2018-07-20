@@ -161,12 +161,17 @@ angular.module('Module.emailpro.controllers')
   });
 
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, EmailPro) => {
+  .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, EmailPro, User) => {
     // default values
     $scope.accountsToAdd = {
       duration: '12',
       accountsNumber: 1,
     };
+
+    User.getUser()
+      .then((currentUser) => {
+          this.isGermanSubsidiary = currentUser.ovhSubsidiary === "DE";
+      });
 
     $scope.valid = { legalWarning: false };
     if ($scope.worldPart === 'CA') {
@@ -191,6 +196,12 @@ angular.module('Module.emailpro.controllers')
     $scope.loadOrderList = function () {
       EmailPro.getOrderList($stateParams.productId).then((data) => {
         $scope.ordersList = data;
+        _.forEach($scope.ordersList, (orderAvailable) => {
+          orderAvailable.unitaryMonthlyPrice.localizedText = (parseFloat(orderAvailable.duration.duration) * orderAvailable.unitaryMonthlyPrice.value)
+            .toLocaleString("de-DE", { style: "currency", currency: orderAvailable.unitaryMonthlyPrice.currencyCode });
+          orderAvailable.unitaryMonthlyPriceWithTax.localizedText = (parseFloat(orderAvailable.duration.duration) * orderAvailable.unitaryMonthlyPriceWithTax.value)
+            .toLocaleString("de-DE", { style: "currency", currency: orderAvailable.unitaryMonthlyPriceWithTax.currencyCode });
+        });
       }, (failure) => {
         $scope.setMessage($scope.tr('exchange_ACTION_order_accounts_step1_loading_error'), failure.data);
         $scope.resetAction();
