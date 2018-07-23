@@ -171,6 +171,9 @@ angular.module('Module.emailpro.controllers')
     User.getUser()
       .then((currentUser) => {
           this.isGermanSubsidiary = currentUser.ovhSubsidiary === "DE";
+      })
+      .catch(() => {
+          this.isGermanSubsidiary = false;
       });
 
     $scope.valid = { legalWarning: false };
