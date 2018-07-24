@@ -31,10 +31,10 @@
                                 <span class="oui-radio__label">
                                     <span data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration)"></span>
                                     (<strong>
-                                        <span data-ng-if="!ctrl.isGermanSubsidiary"
+                                        <span data-ng-if="ctrl.ovhSubsidiary != 'DE'"
                                               data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price', [ orderAvailable.unitaryMonthlyPrice.text, orderAvailable.unitaryMonthlyPriceWithTax.text ])">
                                         </span>
-                                        <span data-ng-if="ctrl.isGermanSubsidiary"
+                                        <span data-ng-if="ctrl.ovhSubsidiary == 'DE'"
                                               data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price_germany', [ orderAvailable.unitaryMonthlyPriceWithTax.localizedText ])">
                                         </span>
                                     </strong>

@@ -169,11 +169,12 @@ angular.module('Module.emailpro.controllers')
     };
 
     User.getUser()
-      .then((currentUser) => {
-          this.isGermanSubsidiary = currentUser.ovhSubsidiary === "DE";
+      .then(({ ovhSubsidiary }) => {
+        $scope.ovhSubsidiary = ovhSubsidiary;
       })
-      .catch(() => {
-          this.isGermanSubsidiary = false;
+      .catch((failure) => {
+        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_user_error'), failure.data);
+        $scope.ovhSubsidiary = "FR";
       });
 
     $scope.valid = { legalWarning: false };
@@ -200,10 +201,11 @@ angular.module('Module.emailpro.controllers')
       EmailPro.getOrderList($stateParams.productId).then((data) => {
         $scope.ordersList = data;
         _.forEach($scope.ordersList, (orderAvailable) => {
-          orderAvailable.unitaryMonthlyPrice.localizedText = (parseFloat(orderAvailable.duration.duration) * orderAvailable.unitaryMonthlyPrice.value)
-            .toLocaleString("de-DE", { style: "currency", currency: orderAvailable.unitaryMonthlyPrice.currencyCode });
-          orderAvailable.unitaryMonthlyPriceWithTax.localizedText = (parseFloat(orderAvailable.duration.duration) * orderAvailable.unitaryMonthlyPriceWithTax.value)
-            .toLocaleString("de-DE", { style: "currency", currency: orderAvailable.unitaryMonthlyPriceWithTax.currencyCode });
+          orderAvailable.unitaryMonthlyPriceWithTax.localizedText = EmailPro.getLocalizedPrice(
+            $scope.ovhSubsidiary,
+            parseFloat(orderAvailable.duration.duration) * orderAvailable.unitaryMonthlyPriceWithTax.value,
+            orderAvailable.unitaryMonthlyPriceWithTax.currencyCode
+          );
         });
       }, (failure) => {
         $scope.setMessage($scope.tr('exchange_ACTION_order_accounts_step1_loading_error'), failure.data);
