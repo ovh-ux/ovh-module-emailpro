@@ -175,6 +175,15 @@ angular.module('Module.emailpro.controllers')
       .catch((failure) => {
         $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_user_error'), failure.data);
         $scope.ovhSubsidiary = "FR";
+      })
+      .then(() => {
+        switch ($scope.ovhSubsidiary) {
+          case "DE":
+            $scope.showPriceWithTaxOnly = true;
+            break;
+          default:
+            $scope.showPriceWithTaxOnly = false;
+        }
       });
 
     $scope.valid = { legalWarning: false };

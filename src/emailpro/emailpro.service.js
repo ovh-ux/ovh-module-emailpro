@@ -1199,15 +1199,7 @@ angular.module('Module.emailpro.services').service('EmailPro', [
     };
 
     this.getLocalizedPrice = function (ovhSubsidiary, price, currencyCode) {
-      let localizedPrice = "";
-      switch (ovhSubsidiary) {
-        case "DE":
-          localizedPrice = price.toLocaleString("de-DE", { style: "currency", currency: currencyCode });
-          break;
-        default:
-          localizedPrice = price.toLocaleString(ovhSubsidiary, { style: "currency", currency: currencyCode });
-      }
-      return localizedPrice;
+      return price.toLocaleString(ovhSubsidiary, { style: "currency", currency: currencyCode });
     }
   },
 ]);
