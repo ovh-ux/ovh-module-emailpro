@@ -75,11 +75,11 @@
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">O domínio vai ser eliminado do seu serviço E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">Ocorreu um erro na eliminação do domínio do seu serviço E-mail Pro.</translation>
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">A delegação permite que outras contas E-mail Pro disponham de algumas permissões de acesso à conta {0}</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Vous pouvez créer une signature par domaine validé.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilisez les outils à votre disposition pour personnaliser et mettre en forme votre signature.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail Pro.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Des variables sont aussi disponibles pour personnaliser la signature générique avec les coordonnées des différents collaborateurs.</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Pour ajouter une image ou un logo, utilisez son URL en l'insérant après avoir cliqué sur le bouton "image".</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">Você pode criar uma assinatura por domínio validado.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Utilize as ferramentas à sua disposição para personalizar e formatar sua assinatura.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">Essa assinatura será automaticamente integrada na parte inferior de cada mensagem enviada dos endereços associados ao seu domínio do E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">Você também pode usar variáveis para personalizar a assinatura genérica, com detalhes para funcionários individuais.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">Para adicionar uma imagem ou logotipo, clique no botão "imagem" (ícone de paisagem na barra de ferramentas) e insira o URL da imagem ou logotipo.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Têm a certeza de que deseja eliminar a seguinte assinatura do seu serviço E-mail Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Têm a certeza de que deseja adicionar a conta de recursos em baixo ao servidor E-mail Pro?</translation>
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">Não adicionou ainda nenhum domínio ou o mesmo não foi ainda validado. <br/>Deve adicionar um domínio e deve aguardar que o mesmo seja validado para que possa criar uma conta bE-mail Pro.</translation>
