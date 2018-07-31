@@ -132,13 +132,6 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddDomainContr
   $scope.checkDomain = function () {
     if ($scope.model.domainType === $scope.nonOvhDomain) {
       $scope.model.srvParam = false;
-      $rootScope.$broadcast('wizard-goToStep', 3);
-    }
-  };
-
-  $scope.checkDomainType = function () {
-    if ($scope.model.domainType === $scope.nonOvhDomain) {
-      $rootScope.$broadcast('wizard-goToStep', 1);
     }
   };
 
