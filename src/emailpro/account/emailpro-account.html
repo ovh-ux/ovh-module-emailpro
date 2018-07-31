@@ -102,8 +102,10 @@
                                                     'progress-bar-danger': account.percentUse > 80
                                                 }"
                                          data-ng-style="{'width': account.percentUse + '%'}">
+                                        <span class="progress-bar-label"
+                                              data-ng-bind="(account.usedQuota.value + ' ' + tr('unit_size_' + account.usedQuota.unit)) + ' / ' + (account.totalQuota.value + ' ' + tr('unit_size_' + account.totalQuota.unit))">
+                                        </span>
                                     </div>
-                                    <span class="progress-bar-label" data-ng-bind="(account.usedQuota.value + ' ' + tr('unit_size_' + account.usedQuota.unit)) + ' / ' + (account.totalQuota.value + ' ' + tr('unit_size_' + account.totalQuota.unit))"></span>
                                 </div>
                             </td>
                             <td class="text-center"
