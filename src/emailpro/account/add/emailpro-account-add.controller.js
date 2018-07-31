@@ -177,13 +177,7 @@ angular.module('Module.emailpro.controllers')
         $scope.ovhSubsidiary = "FR";
       })
       .then(() => {
-        switch ($scope.ovhSubsidiary) {
-          case "DE":
-            $scope.showPriceWithTaxOnly = true;
-            break;
-          default:
-            $scope.showPriceWithTaxOnly = false;
-        }
+        $scope.showPriceWithTaxOnly = _.includes(["DE"], $scope.ovhSubsidiary);
       });
 
     $scope.valid = { legalWarning: false };
