@@ -174,10 +174,10 @@ angular.module('Module.emailpro.controllers')
       })
       .catch((failure) => {
         $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_user_error'), failure.data);
-        $scope.ovhSubsidiary = "FR";
+        $scope.ovhSubsidiary = 'FR';
       })
       .then(() => {
-        $scope.showPriceWithTaxOnly = _.includes(["DE"], $scope.ovhSubsidiary);
+        $scope.showPriceWithTaxOnly = _.includes(['DE'], $scope.ovhSubsidiary);
       });
 
     $scope.valid = { legalWarning: false };
@@ -203,13 +203,16 @@ angular.module('Module.emailpro.controllers')
     $scope.loadOrderList = function () {
       EmailPro.getOrderList($stateParams.productId).then((data) => {
         $scope.ordersList = data;
-        _.forEach($scope.ordersList, (orderAvailable) => {
+        let orderIndex;
+        for (orderIndex = 0; orderIndex < $scope.ordersList.length; orderIndex += 1) {
+          const orderAvailable = $scope.ordersList[orderIndex];
           orderAvailable.unitaryMonthlyPriceWithTax.localizedText = EmailPro.getLocalizedPrice(
             $scope.ovhSubsidiary,
-            parseFloat(orderAvailable.duration.duration) * orderAvailable.unitaryMonthlyPriceWithTax.value,
-            orderAvailable.unitaryMonthlyPriceWithTax.currencyCode
+            parseFloat(orderAvailable.duration.duration)
+              * orderAvailable.unitaryMonthlyPriceWithTax.value,
+            orderAvailable.unitaryMonthlyPriceWithTax.currencyCode,
           );
-        });
+        }
       }, (failure) => {
         $scope.setMessage($scope.tr('exchange_ACTION_order_accounts_step1_loading_error'), failure.data);
         $scope.resetAction();
