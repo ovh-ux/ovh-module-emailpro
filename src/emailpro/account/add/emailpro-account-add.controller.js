@@ -202,17 +202,16 @@ angular.module('Module.emailpro.controllers')
 
     $scope.loadOrderList = function () {
       EmailPro.getOrderList($stateParams.productId).then((data) => {
-        $scope.ordersList = data;
-        let orderIndex;
-        for (orderIndex = 0; orderIndex < $scope.ordersList.length; orderIndex += 1) {
-          const orderAvailable = $scope.ordersList[orderIndex];
+        $scope.ordersList = _.map(data, (datum) => {
+          const orderAvailable = _.cloneDeep(datum);
           orderAvailable.unitaryMonthlyPriceWithTax.localizedText = EmailPro.getLocalizedPrice(
             $scope.ovhSubsidiary,
             parseFloat(orderAvailable.duration.duration)
               * orderAvailable.unitaryMonthlyPriceWithTax.value,
             orderAvailable.unitaryMonthlyPriceWithTax.currencyCode,
           );
-        }
+          return orderAvailable;
+        });
       }, (failure) => {
         $scope.setMessage($scope.tr('exchange_ACTION_order_accounts_step1_loading_error'), failure.data);
         $scope.resetAction();
