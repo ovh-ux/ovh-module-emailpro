@@ -115,8 +115,8 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Une erreur est survenue lors de l'ajout du domaine à votre serveur E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Le domaine saisi n'est pas valide</translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_price">{0} HT ({1} TTC)</translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only">{0} ({0} TTC)</translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_user_error">Erreur lors de la récupération des informations de l'utilisateur</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} HT ({1} TTC)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only" qtlid="499930">{0} ({0} TTC)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">Erreur lors de la récupération des informations de l'utilisateur</translation>
 
 </translations>
