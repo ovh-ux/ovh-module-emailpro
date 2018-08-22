@@ -115,5 +115,8 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Er is een fout opgetreden tijdens het toevoegen van het domein aan uw E-mail Pro server. </translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Het ingevoerde domein is niet geldig</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price">{0} HT ({1} TTC)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only">{0} ({0} TTC)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_user_error">Erreur lors de la récupération des informations de l'utilisateur</translation>
 
 </translations>
