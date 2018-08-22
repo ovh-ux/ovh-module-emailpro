@@ -1,12 +1,9 @@
 <div class="row" data-ng-controller="EmailProTabAliasCtrl">
     <div class="col-md-9">
 
-        <button class="oui-button oui-button_link oui-button_icon-left" 
-                type="button" data-ng-click="hideAliases()">
-            <span class="oui-icon oui-icon-chevron-left" aria-hidden="true"></span>
-            <span data-i18n-static="common_back"></span>
-        </button>
-        <h2 class="ml-4" data-ng-bind-html="tr('exchange_tab_ALIAS_intro', selectedAccount.primaryEmailDisplayName)"></h2>
+        <oui-back-button data-on-click="hideAliases()">
+            <span data-i18n-static="exchange_tab_ACCOUNTS_popover_alias"></span>
+        </oui-back-button>
 
         <oui-datagrid data-rows-loader="getAliases($config)">
             <oui-column data-title="tr('exchange_tab_ALIAS_header')" data-property="displayName"></oui-column>
