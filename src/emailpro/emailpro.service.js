@@ -1197,5 +1197,9 @@ angular.module('Module.emailpro.services').service('EmailPro', [
         params: opts.params,
       });
     };
+
+    this.getLocalizedPrice = function (ovhSubsidiary, price, currencyCode) {
+      return price.toLocaleString(ovhSubsidiary, { style: 'currency', currency: currencyCode });
+    };
   },
 ]);
