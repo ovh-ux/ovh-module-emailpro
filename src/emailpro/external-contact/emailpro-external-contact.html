@@ -5,7 +5,7 @@
             <div class="text-right mb-3">
                 <form class="form-inline">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="{{i18n.exchange_tab_EXTERNAL_CONTACTS_search_placeholder}}"
+                        <input type="text" class="form-control" placeholder="{{i18n.emailpro_tab_EXTERNAL_CONTACTS_search_placeholder}}"
                                data-ng-model="filter">
                         <div class="input-group-btn"
                              data-ng-if="filter">
@@ -26,11 +26,11 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_displayName"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_creationDate"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL"></th>
-                            <th class="text-center" scope="col" data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state"></th>
+                            <th scope="col" data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress"></th>
+                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_headers_displayName"></th>
+                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_headers_creationDate"></th>
+                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL"></th>
+                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state"></th>
                             <th class="min-width" scope="col"></th>
                         </tr>
                     </thead>
@@ -44,7 +44,7 @@
                     <tbody data-ng-if="!contactsLoading && !contacts.list.results.length">
                         <tr>
                             <td class="text-center" colspan="6"
-                                data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_empty"></td>
+                                data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_empty"></td>
                         </tr>
                     </tbody>
 
@@ -58,7 +58,7 @@
 
                             <td class="text-center">
                                 <span class="btn btn-icon"
-                                      data-uib-tooltip="{{tr('exchange_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_' + element.hiddenFromGAL)}}"
+                                      data-uib-tooltip="{{tr('emailpro_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_' + element.hiddenFromGAL)}}"
                                       data-tooltip-append-to-body="true">
                                     <span class="oui-icon oui-icon_small"
                                           data-ng-class="{ 'oui-icon-success text-success': !element.hiddenFromGAL, 'oui-icon-error text-danger': element.hiddenFromGAL }">
@@ -68,12 +68,12 @@
 
                             <td class="text-center">
                                 <span class="label"
-                                      data-ng-bind="tr('exchange_tab_EXTERNAL_CONTACTS_table_headers_state_' + element.state)"
+                                      data-ng-bind="tr('emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_' + element.state)"
                                       data-ng-class="getStateClassFor(element.state)"
                                       data-ng-if="element.state !== 'OK'">
                                 </span>
                                 <span class="label label-info"
-                                      data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING"
+                                      data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING"
                                       data-ng-if="element.state === 'OK' && element.taskPendingId">
                                 </span>
                             </td>
@@ -104,7 +104,7 @@
 
         <div class="col-md-3 mt-5 mt-lg-0">
             <button type="button" class="btn btn-block btn-default"
-                    data-i18n-static="exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_title_button"
+                    data-i18n-static="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_title_button"
                     data-ng-click="setAction('emailpro/external-contact/add/emailpro-external-contact-add')">
             </button>
         </div>

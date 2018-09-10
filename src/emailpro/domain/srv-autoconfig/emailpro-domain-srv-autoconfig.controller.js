@@ -27,7 +27,7 @@ angular
           (data) => { this.domainDiag = data; },
           (failure) => {
             this.services.$scope.resetAction();
-            this.services.$scope.setMessage(this.services.$scope.tr('exchange_tab_domain_diagnostic_add_field_failure'), failure);
+            this.services.$scope.setMessage(this.services.$scope.tr('emailpro_tab_domain_diagnostic_add_field_failure'), failure);
           },
         )
         .finally(() => {
@@ -50,10 +50,10 @@ angular
         .addZoneDnsField(this.services.$stateParams.productId, this.prepareModel())
         .then((success) => {
           if (success.state === 'OK') {
-            this.services.$scope.setMessage(this.services.$scope.tr('exchange_tab_domain_diagnostic_add_field_success'), { status: 'success' });
+            this.services.$scope.setMessage(this.services.$scope.tr('emailpro_tab_domain_diagnostic_add_field_success'), { status: 'success' });
           } else {
-            this.services.$scope.setMessage(this.services.$scope.tr('exchange_tab_domain_diagnostic_add_field_failure'), { status: 'error' });
+            this.services.$scope.setMessage(this.services.$scope.tr('emailpro_tab_domain_diagnostic_add_field_failure'), { status: 'error' });
           }
-        }, failure => this.services.$scope.setMessage(this.services.$scope.tr('exchange_tab_domain_diagnostic_add_field_failure'), failure));
+        }, failure => this.services.$scope.setMessage(this.services.$scope.tr('emailpro_tab_domain_diagnostic_add_field_failure'), failure));
     }
   });

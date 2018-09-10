@@ -105,7 +105,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateRenewCtr
       }, (failure) => {
         $scope.loading = false;
         if (failure) {
-          $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure.data);
+          $scope.setMessage($scope.tr('emailpro_tab_ACCOUNTS_error_message'), failure.data);
           $scope.resetAction();
         }
       });
@@ -168,14 +168,14 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateRenewCtr
     EmailPro.updateRenew($stateParams.productId, $scope.buffer.changes)
       .then((data) => {
         const updateRenewMessages = {
-          OK: $scope.tr('exchange_update_billing_periode_success'),
-          PARTIAL: $scope.tr('exchange_update_billing_periode_partial'),
-          ERROR: $scope.tr('exchange_update_billing_periode_failure'),
+          OK: $scope.tr('emailpro_update_billing_periode_success'),
+          PARTIAL: $scope.tr('emailpro_update_billing_periode_partial'),
+          ERROR: $scope.tr('emailpro_update_billing_periode_failure'),
         };
         $scope.setMessage(updateRenewMessages, data);
         $scope.resetAction();
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_update_billing_periode_failure'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_update_billing_periode_failure'), failure.data);
         $scope.resetAction();
       });
   };

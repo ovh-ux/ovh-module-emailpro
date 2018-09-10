@@ -43,7 +43,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
           $scope.orderOutlookDisabled = false;
         }
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure);
+        $scope.setMessage($scope.tr('emailpro_tab_ACCOUNTS_error_message'), failure);
       });
 
     EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
@@ -55,7 +55,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     });
   };
 
-  $scope.spamTooltipContent = $scope.tr('exchange_tab_ACCOUNTS_popover_span_text', [
+  $scope.spamTooltipContent = $scope.tr('emailpro_tab_ACCOUNTS_popover_span_text', [
     `#/ticket?serviceName=${$stateParams.productId}`,
   ]);
 
@@ -85,7 +85,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
         }
       }, (failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure);
+        $scope.setMessage($scope.tr('emailpro_tab_ACCOUNTS_error_message'), failure);
       });
   };
 

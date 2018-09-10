@@ -2,33 +2,33 @@
 
     <div class="alert alert-warning" role="alert"
          data-ng-if="tasksList && tasksList.list.messages.length > 0"
-         data-i18n-static="exchange_tab_TASKS_partial">
+         data-i18n-static="emailpro_tab_TASKS_partial">
     </div>
 
     <oui-datagrid data-rows-loader="loadPaginated($config)">
-        <oui-column data-title="tr('exchange_tab_TASKS_table_function')" data-property="function">
-            <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.function)"></span>
+        <oui-column data-title="tr('emailpro_tab_TASKS_table_function')" data-property="function">
+            <span data-ng-bind-html="tr('emailpro_tab_TASKS_'+ $row.function)"></span>
         </oui-column>
-        <oui-column data-title="tr('exchange_tab_TASKS_table_state')" data-property="status">
+        <oui-column data-title="tr('emailpro_tab_TASKS_table_state')" data-property="status">
             <div data-ng-if="$row.status == stateDoing || $row.status == stateTodo">
                 <span class="fa fa-hourglass-half text-info" aria-hidden="true"></span>
-                <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+                <span data-ng-bind-html="tr('emailpro_tab_TASKS_'+ $row.status)"></span>
             </div>
             <div data-ng-if="$row.status == stateError">
                 <span class="fa fa-times-circle text-danger" aria-hidden="true"></span>
-                <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+                <span data-ng-bind-html="tr('emailpro_tab_TASKS_'+ $row.status)"></span>
             </div>
             <div data-ng-if="$row.status == stateCancelled">
                 <span class="fa fa-ban text-muted" aria-hidden="true"></span>
-                <span data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+                <span data-ng-bind-html="tr('emailpro_tab_TASKS_'+ $row.status)"></span>
             </div>
             <span data-ng-if="$row.status == stateDone"
-                  data-ng-bind-html="tr('exchange_tab_TASKS_'+ $row.status)"></span>
+                  data-ng-bind-html="tr('emailpro_tab_TASKS_'+ $row.status)"></span>
         </oui-column>
-        <oui-column data-title="tr('exchange_tab_TASKS_table_start_date')" data-property="todoDate" data-sortable="desc">
+        <oui-column data-title="tr('emailpro_tab_TASKS_table_start_date')" data-property="todoDate" data-sortable="desc">
             <span data-ng-bind="::$row.todoDate | date:'short'"></span>
         </oui-column>
-        <oui-column data-title="tr('exchange_tab_TASKS_table_finish_date')" data-property="finishDate">
+        <oui-column data-title="tr('emailpro_tab_TASKS_table_finish_date')" data-property="finishDate">
             <span data-ng-bind="::$row.finishDate | date:'short'"></span>
         </oui-column>
     </oui-datagrid>

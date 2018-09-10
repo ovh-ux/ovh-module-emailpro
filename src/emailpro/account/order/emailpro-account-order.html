@@ -19,7 +19,7 @@
                 <strong data-i18n-static="emailpro_ACTION_order_accounts_step1_intro"></strong>
                 <div class="form-group">
                     <label class="col-md-4 control-label"
-                           data-i18n-static="exchange_ACTION_order_accounts_step1_pay_type"></label>
+                           data-i18n-static="emailpro_ACTION_order_accounts_step1_pay_type"></label>
                     <div class="col-md-8">
                         <div class="oui-radio"
                              data-ng-repeat="orderAvailable in ordersList track by $index">
@@ -29,7 +29,7 @@
                                     data-ng-model="accountsToAdd.duration">
                             <label class="oui-radio__label-container" for="{{'duration'+$index}}">
                                 <span class="oui-radio__label">
-                                    <span data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration)"></span>
+                                    <span data-ng-bind-html="tr('emailpro_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration)"></span>
                                     (<strong>
                                         <span data-ng-if="!showPriceWithTaxOnly"
                                               data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price', [ orderAvailable.unitaryMonthlyPrice.text, orderAvailable.unitaryMonthlyPriceWithTaxes.text ])">
@@ -48,20 +48,20 @@
                 <div class="form-group"
                      data-ng-class="{ 'has-error' : orderAccountForm.accountNumber.$invalid }">
                     <label class="col-md-4 control-label"
-                           data-i18n-static="exchange_ACTION_order_accounts_step1_number"></label>
+                           data-i18n-static="emailpro_ACTION_order_accounts_step1_number"></label>
                     <div class="col-md-8">
                         <input type="number" class="oui-input oui-input_inline" id="accountNumber" name="accountNumber" min="1" max="100" required
                                data-ng-model="accountsToAdd.accountsNumber"
                                data-ng-pattern="/^\d+$/"
-                               data-uib-tooltip="{{i18n.exchange_ACTION_order_accounts_step1_number_tooltip}}">
+                               data-uib-tooltip="{{i18n.emailpro_ACTION_order_accounts_step1_number_tooltip}}">
                         <span class="help-block"
                               data-ng-if="!orderAccountForm.accountNumber.$valid"
-                              data-i18n-static="exchange_ACTION_order_accounts_step1_number_not_valid"></span>
+                              data-i18n-static="emailpro_ACTION_order_accounts_step1_number_not_valid"></span>
                     </div>
                 </div>
                 <oui-checkbox id="legalWarning"
                     data-model="valid.legalWarning"
-                    data-text="{{::tr('exchange_ACTION_add_account_legal_warning')}}">
+                    data-text="{{::tr('emailpro_ACTION_add_account_legal_warning')}}">
                 </oui-checkbox>
             </form>
         </div>
@@ -73,22 +73,22 @@
             <div class="text-center"
                  data-ng-if="!previewOrder">
                 <oui-spinner></oui-spinner>
-                <div data-i18n-static="exchange_ACTION_order_accounts_step2_loader"></div>
+                <div data-i18n-static="emailpro_ACTION_order_accounts_step2_loader"></div>
             </div>
             <form class="form-horizontal" name="previewOrderForm"
                   data-ng-if="previewOrder">
-                <strong data-i18n-static="exchange_ACTION_order_accounts_step2_intro"></strong>
+                <strong data-i18n-static="emailpro_ACTION_order_accounts_step2_intro"></strong>
                 <div class="form-group">
                     <label class="col-md-4 control-label"
-                           data-i18n-static="exchange_ACTION_order_accounts_step2_pay_type"></label>
+                           data-i18n-static="emailpro_ACTION_order_accounts_step2_pay_type"></label>
                     <div class="col-md-8">
                         <p class="form-control-static"
-                           data-ng-bind="tr('exchange_ACTION_order_accounts_step1_pay_type_' + accountsToAdd.duration)"></p>
+                           data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_pay_type_' + accountsToAdd.duration)"></p>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-4 control-label"
-                           data-i18n-static="exchange_ACTION_order_accounts_step2_number"></label>
+                           data-i18n-static="emailpro_ACTION_order_accounts_step2_number"></label>
                     <div class="col-md-8">
                         <p class="form-control-static"
                            data-ng-bind="accountsToAdd.accountsNumber"></p>
@@ -96,10 +96,10 @@
                 </div>
                 <div class="form-group">
                     <label class="col-md-4 control-label"
-                           data-i18n-static="exchange_ACTION_order_accounts_step2_total"></label>
+                           data-i18n-static="emailpro_ACTION_order_accounts_step2_total"></label>
                     <div class="col-md-7">
                         <p class="form-control-static text-danger"
-                           data-ng-bind="tr('exchange_ACTION_order_accounts_step2_price', [previewOrder.prices.withoutTax.text, previewOrder.prices.withTax.text])">
+                           data-ng-bind="tr('emailpro_ACTION_order_accounts_step2_price', [previewOrder.prices.withoutTax.text, previewOrder.prices.withTax.text])">
                         </p>
                     </div>
                 </div>
@@ -110,13 +110,13 @@
              data-wizard-step-valid="url">
             <div class="text-center" data-ng-if="!url">
                 <oui-spinner></oui-spinner>
-                <div data-i18n-static="exchange_ACTION_order_accounts_step3_generation_bc"></div>
+                <div data-i18n-static="emailpro_ACTION_order_accounts_step3_generation_bc"></div>
             </div>
             <div data-ng-if="url">
-                <strong class="d-block mb-3" data-i18n-static="exchange_ACTION_order_accounts_step3_bc"></strong>
-                <p data-i18n-static="exchange_ACTION_order_accounts_step3_continue"></p>
-                <p data-i18n-static="exchange_ACTION_order_accounts_step3_explication2"></p>
-                <em data-i18n-static="exchange_ACTION_order_accounts_step3_explication"></em>
+                <strong class="d-block mb-3" data-i18n-static="emailpro_ACTION_order_accounts_step3_bc"></strong>
+                <p data-i18n-static="emailpro_ACTION_order_accounts_step3_continue"></p>
+                <p data-i18n-static="emailpro_ACTION_order_accounts_step3_explication2"></p>
+                <em data-i18n-static="emailpro_ACTION_order_accounts_step3_explication"></em>
             </div>
         </div>
 
