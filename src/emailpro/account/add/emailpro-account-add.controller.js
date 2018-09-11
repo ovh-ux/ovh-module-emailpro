@@ -204,11 +204,11 @@ angular.module('Module.emailpro.controllers')
       EmailPro.getOrderList($stateParams.productId).then((data) => {
         $scope.ordersList = _.map(data, (datum) => {
           const orderAvailable = _.cloneDeep(datum);
-          orderAvailable.unitaryMonthlyPriceWithTax.localizedText = EmailPro.getLocalizedPrice(
+          orderAvailable.unitaryMonthlyPriceWithTaxes.localizedText = EmailPro.getLocalizedPrice(
             $scope.ovhSubsidiary,
             parseFloat(orderAvailable.duration.duration)
-              * orderAvailable.unitaryMonthlyPriceWithTax.value,
-            orderAvailable.unitaryMonthlyPriceWithTax.currencyCode,
+              * orderAvailable.unitaryMonthlyPriceWithTaxes.value,
+            orderAvailable.unitaryMonthlyPriceWithTaxes.currencyCode,
           );
           return orderAvailable;
         });
