@@ -18,7 +18,7 @@ angular.module('Module.emailpro.controllers')
             },
           };
         }).catch((failure) => {
-          $scope.setMessage($scope.tr('exchange_tab_TASKS_error_message'), failure.data);
+          $scope.setMessage($scope.tr('emailpro_tab_TASKS_error_message'), failure.data);
         });
     };
 

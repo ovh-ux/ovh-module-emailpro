@@ -68,10 +68,10 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
         }
       } else if (messages[0].message === EmailPro.updateAccountAction) {
         updateAccountMessages.PARTIAL = $scope.tr('emailpro_ACTION_update_account_success_message');
-        updateAccountMessages.PARTIAL += ` ${$scope.tr('exchange_ACTION_change_password_account_error_message_linked')}`;
+        updateAccountMessages.PARTIAL += ` ${$scope.tr('emailpro_ACTION_change_password_account_error_message_linked')}`;
       } else {
         updateAccountMessages.PARTIAL = $scope.tr('emailpro_ACTION_change_password_account_success_message');
-        updateAccountMessages.PARTIAL += ` ${$scope.tr('exchange_ACTION_update_account_error_message_linked')}`;
+        updateAccountMessages.PARTIAL += ` ${$scope.tr('emailpro_ACTION_update_account_error_message_linked')}`;
       }
     }
     return updateAccountMessages;
@@ -148,7 +148,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
           && selectedAccount.password.indexOf(selectedAccount.samaccountName) !== -1) {
           if (!$scope.containsSamAccountNameLabel) {
             $scope.containsSamAccountNameLabel = $scope
-              .tr('exchange_ACTION_update_account_step1_password_contains_samaccount_name',
+              .tr('emailpro_ACTION_update_account_step1_password_contains_samaccount_name',
                 [selectedAccount.samaccountName]);
           }
           $scope.containsSamAccountNameFlag = true;
@@ -195,7 +195,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
   };
 
   $scope.getPasswordPlaceholder = function () {
-    return $scope.selectedAccount.canBeConfigured ? $scope.tr('exchange_ACTION_update_account_step1_password_placeholder') : ' ';
+    return $scope.selectedAccount.canBeConfigured ? $scope.tr('emailpro_ACTION_update_account_step1_password_placeholder') : ' ';
   };
 
   $scope.getCompleteDomain = function (domainName) {
@@ -240,12 +240,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
       }
 
       $scope.passwordTooltip = $scope.newAccountOptions.passwordComplexityEnabled
-        ? $scope.tr('exchange_ACTION_update_account_step1_complex_password_tooltip',
+        ? $scope.tr('emailpro_ACTION_update_account_step1_complex_password_tooltip',
           [$scope.newAccountOptions.minPasswordLength])
-        : $scope.tr('exchange_ACTION_update_account_step1_simple_password_tooltip',
+        : $scope.tr('emailpro_ACTION_update_account_step1_simple_password_tooltip',
           [$scope.newAccountOptions.minPasswordLength]);
     }, (failure) => {
-      $scope.setMessage($scope.tr('exchange_ACTION_add_account_option_fail'), failure.data);
+      $scope.setMessage($scope.tr('emailpro_ACTION_add_account_option_fail'), failure.data);
       $scope.resetAction();
     });
   };
@@ -256,7 +256,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
 
   $scope.updateExchangeAccount = function () {
     $scope.resetAction();
-    $scope.setMessage($scope.tr('exchange_dashboard_action_doing'));
+    $scope.setMessage($scope.tr('emailpro_dashboard_action_doing'));
 
     if ($scope.needsUpdate()) {
       EmailPro

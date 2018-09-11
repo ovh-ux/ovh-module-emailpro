@@ -115,5 +115,579 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Įvyko klaida pridedant domeną į jūsų E-mail Pro serverį.</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Įvestas domenas negaliojantis</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} be PVM ({1} su PVM)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only" qtlid="499930">{0} ({0} su PVM)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">Klaida atkuriant naudotojo duomenis</translation>
 
+
+   <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Sukurti abonementą</translation>
+   <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Sutinku, kad OVH pradės teikti paslaugą nedelsiant nuo mano užsakymo patvirtinimo momento, todėl negalėsiu pasinaudoti paslaugos atsisakymo teise.</translation>
+   <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Klaida įkeliant domenus.</translation>
+   <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_ACTION_add_account_step1_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_ACTION_add_account_step1_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_ACTION_add_account_step1_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_ACTION_add_account_step2_confirmation_intro" qtlid="136841">Jūsų paskyra:</translation>
+   <translation id="emailpro_ACTION_add_account_step2_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_ACTION_add_account_step2_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_ACTION_add_account_step2_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_ACTION_add_account_step2_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_content" qtlid="152271">Turinys</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_error_message" qtlid="152375">Klaida kuriant parašą.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_helpwizard_title" qtlid="152531">Parašas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_no_domains" qtlid="155274">Negalite sukurti parašo patvirtinam domenui. Visi Jūsų patvirtinti domenai jau yra su parašais.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_City" qtlid="33310">Miestas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Company" qtlid="49022">Entreprise</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Country" qtlid="25171">Šalis</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Department" qtlid="30706">Departamentas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_DisplayName" qtlid="80922">Rodomas vardas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Email" qtlid="69509">El. paštas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_FaxNumber" qtlid="152388">Fakso numeris</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_FirstName" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_HomePhoneNumber" qtlid="152401">Namų tel. nr.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Initials" qtlid="152414">Inicialai</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_LastName" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Manager" qtlid="152427">Atsakingas asmuo</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_MobileNumber" qtlid="152440">Mob. tel. nr.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Name" qtlid="109614">Visas vardas / pavadinimas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Notes" qtlid="69389">Pastabos</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Office" qtlid="59555">Darbo</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_OtherFaxNumber" qtlid="152453">Faksas 2</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_OtherHomePhoneNumber" qtlid="152466">Kitas namų adresas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_OtherPhoneNumber" qtlid="152479">Kitas tel. nr.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_PagerNumber" qtlid="152492">Pranešimų gaviklis</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_PhoneNumber" qtlid="152505">Telefono nr.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_State" qtlid="32434">Regionas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Street" qtlid="152518">Gatvė</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Title" qtlid="16469">Pavadinimas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_UserLogonName" qtlid="46792">Identifikatorius</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_ZipCode" qtlid="30346">Pašto kodas</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_outside" qtlid="152349">Įjungti parašą tik siunčiant į išorę</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_success_message" qtlid="152362">Parašas bus sukurtas.</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_title" qtlid="152206">Priskirti parašą</translation>
+   <translation id="emailpro_ACTION_change_password_account_error_message_linked" qtlid="148279">Klaida keičiant slaptažodį.</translation>
+   <translation id="emailpro_ACTION_configure_error" qtlid="178276">Užklausos klaida, keitimai nebus atlikti</translation>
+   <translation id="emailpro_ACTION_configure_help_complexityEnabled_text" qtlid="178692">Šis saugumo parametras nurodo, kokius saugumo reikalavimus turi atitikti slaptažodžiai.<br/>Jeigu parinktis aktyvi, slaptažodžiai turi atitikti šiuos minimalius reikalavimus: <ul><li>Negali būti dalis ar visas paskyros pavadinimas</li> <li>Turi būti ne trumpesni nei 6 simboliai</li> <li>Turi būti sudaryti naudojant tris iš keturių simbolių kategorijų: <ol><li>Didžiosios raidės (A - Z)</li> <li>Mažosios raidės (a - z)</li> <li>Skaičiai 10 (0 - 9)</li> <li>Specialūs simboliai (pvz., !, $, #, %)</li></ol></li> </ul>Saugos reikalavimai taikomi slaptažodžio kūrimo ir keitimo metu.</translation>
+   <translation id="emailpro_ACTION_configure_help_complexityEnabled_title" qtlid="178003">Sudėtingumo reikalavimai</translation>
+   <translation id="emailpro_ACTION_configure_help_lockoutDuration_text" qtlid="178653">Šis parametras nurodo, kiek laiko bus blokuojama paskyra. Galima blokuoti nuo 1 iki 90 minučių.<br/>Jeigu nustatytas blokavimo slenkstis, paskyrų blokavimo trukmė turi viršyti ar būti lygi skaitiklio atstatymo laikui.</translation>
+   <translation id="emailpro_ACTION_configure_help_lockoutDuration_title" qtlid="178640">Paskyrų blokavimo trukmė</translation>
+   <translation id="emailpro_ACTION_configure_help_lockoutObservationWindow_text" qtlid="178679">Šis saugumo parametras nurodo laiką minutėmis, kuris turi praeiti, kad skaitiklis būtų atstatytas. Galimas laikas yra nuo 1 iki 90 minučių.<br/>Jeigu nustatytas blokavimo slenkstis, skaitiklio atstatymo trukmė turi būti mažesnė ar lygi blokavimo trukmei.</translation>
+   <translation id="emailpro_ACTION_configure_help_lockoutObservationWindow_title" qtlid="178666">Blokavimo skaitiklio atstatymo laikas</translation>
+   <translation id="emailpro_ACTION_configure_help_lockoutThreshold_text" qtlid="178627">Šis saugumo parametras nustato nesėkmingų bandymų jungtis skaičių, prieš užblokuojant paskyrą. Blokuojamos paskyros nebus galima naudoti, kol jos neatblokuos administratorius arba nepasibaigs blokavimo laikas. Galite nustatyti nuo 1 iki 14 nesėkmingų bandymų. Jeigu nurodysite 0, paskyra nebus blokuojama.</translation>
+   <translation id="emailpro_ACTION_configure_help_lockoutThreshold_title" qtlid="177990">Paskyros blokavimo slenkstis</translation>
+   <translation id="emailpro_ACTION_configure_help_maxPasswordAge_text" qtlid="181578">Ši saugumo priemonė nustato periodą (dienomis), kiek laiko galios slaptažodis, kol sistema paprašys jį pakeisti. Galite nustatyti laikotarpį nuo 1 iki 90 dienų arba galite įrašyti 0 ir slaptažodis neturės galiojimo laiko. Jeigu yra nustatytas maksimalus slaptažodžio galiojimo laikas, trumpiausias slaptažodžio galiojimo laikas turi būti mažesnis. Jeigu maksimalus slaptažodžio laikas yra 0 (nesibaigia galiojimas) trumpiausias galiojimo laikas gali būti nuo 0 iki 90 dienų. </translation>
+   <translation id="emailpro_ACTION_configure_help_maxPasswordAge_title" qtlid="178731">Maksimali slaptažodžio galiojimo trukmė</translation>
+   <translation id="emailpro_ACTION_configure_help_minPasswordAge_text" qtlid="178718">Šis parametras nustato trukmę (dienomis), kiek galima naudoti slaptažodį iki kol jį būtina pakeisti. Galima nustatyti nuo 1 iki 90 dienų, taip pat galite nurodyti 0 ir slaptažodis neturės galiojimo laiko.</translation>
+   <translation id="emailpro_ACTION_configure_help_minPasswordAge_title" qtlid="178705">Minimali slaptažodžio galiojimo trukmė</translation>
+   <translation id="emailpro_ACTION_configure_help_minPasswordLength_text" qtlid="178757">Šis parametras nustato mažiausią slaptažodžio simbolių skaičių. Galite nustatyti nuo 3 iki 14 simbolių skaičių, taip pat galite nustatyti, kad toks reikalavimas nebūtų taikomas: tiesiog įrašykite 0.</translation>
+   <translation id="emailpro_ACTION_configure_help_minPasswordLength_title" qtlid="174828">Didžiausias slaptažodžio ilgis</translation>
+   <translation id="emailpro_ACTION_configure_services_help_lockoutThreshold" qtlid="178549">Jeigu įvesite "0", paskyra nebus blokuojama.</translation>
+   <translation id="emailpro_ACTION_configure_services_help_maxPasswordAge" qtlid="178588">Jeigu įvesite "0", slaptažodis visada galios.</translation>
+   <translation id="emailpro_ACTION_configure_services_help_minPasswordAge" qtlid="178575">Jeigu įvesite "0", leisite keisti slaptažodį iškart.</translation>
+   <translation id="emailpro_ACTION_configure_services_help_minPasswordLength" qtlid="178601">Jeigu įvesite "0", nereikės įvesti slaptažodžio</translation>
+   <translation id="emailpro_ACTION_configure_services_label_complexityEnabled" qtlid="178003">Sudėtingumo reikalavimai</translation>
+   <translation id="emailpro_ACTION_configure_services_label_lockoutDuration" qtlid="179706">Blokavimo trukmė</translation>
+   <translation id="emailpro_ACTION_configure_services_label_lockoutObservationWindow" qtlid="179719">Pakartotinio inicijavimo trukmė</translation>
+   <translation id="emailpro_ACTION_configure_services_label_lockoutThreshold" qtlid="179732">Blokavimo slenkstis</translation>
+   <translation id="emailpro_ACTION_configure_services_label_maxPasswordAge" qtlid="179745">Didžiausia slaptažodžio galiojimo trukmė</translation>
+   <translation id="emailpro_ACTION_configure_services_label_minPasswordAge" qtlid="376089">Blokuoti slaptažodžio keitimą</translation>
+   <translation id="emailpro_ACTION_configure_services_label_minPasswordLength" qtlid="174828">Didžiausias slaptažodžio ilgis</translation>
+   <translation id="emailpro_ACTION_configure_services_tooltip_days" qtlid="179771">Dienomis</translation>
+   <translation id="emailpro_ACTION_configure_services_tooltip_minutes" qtlid="179784">minutėmis</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_complexityEnabled" qtlid="178393">Slaptažodžio sudėtingumo reikalavimai:</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_lockoutDuration" qtlid="178302">Paskyros blokavimo trukmė:</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_lockoutObservationWindow" qtlid="178341">Paskyrų blokavimo stebėjimo langas:</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_lockoutThreshold" qtlid="178328">Paskyros blokavimo slenkstis:</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_maxPasswordAge" qtlid="178354">Ilgiausias slaptažodžio galiojimo laikas:</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_minPasswordAge" qtlid="178367">Blokuoti slaptažodžio keitimą:</translation>
+   <translation id="emailpro_ACTION_configure_step2_label_minPasswordLength" qtlid="178380">Trumpiausias slaptažodžio ilgis:</translation>
+   <translation id="emailpro_ACTION_configure_success" qtlid="176700">Keitimai bus išsaugoti</translation>
+   <translation id="emailpro_ACTION_delegation_behalf_tooltip" qtlid="181513">Prašome išjungti siuntimo teisę.</translation>
+   <translation id="emailpro_ACTION_delegation_doing_message" qtlid="144266">Paskyrimo teisių atnaujinimas atliktas.</translation>
+   <translation id="emailpro_ACTION_delegation_error_message" qtlid="144279">Klaida atnaujinant paskyrimo teises.</translation>
+   <translation id="emailpro_ACTION_delegation_partial_message" qtlid="156758">Klaida atnaujinant paskyrimo teises.</translation>
+   <translation id="emailpro_ACTION_delegation_sendas_tooltip" qtlid="181539">Prašome išjungti dalies siuntimo teisę.</translation>
+   <translation id="emailpro_ACTION_delegation_step1_email_header" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_ACTION_delegation_step1_full_header" qtlid="181500">Prieigos teisė</translation>
+   <translation id="emailpro_ACTION_delegation_step1_sendOnBehalfTo_header" qtlid="181487">Teisė siųsti iš</translation>
+   <translation id="emailpro_ACTION_delegation_step1_send_header" qtlid="181474">Teisė siųsti</translation>
+   <translation id="emailpro_ACTION_delegation_step1_task_on_doing" qtlid="201458">Užduotis vykdoma</translation>
+   <translation id="emailpro_ACTION_delegation_step2_email_header" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_ACTION_delegation_step2_full_header" qtlid="144253">Prieigos teisės</translation>
+   <translation id="emailpro_ACTION_delegation_step2_intro" qtlid="434564">Delegavimo teisės, susietos su paskyra <strong>{0}</strong>:</translation>
+   <translation id="emailpro_ACTION_delegation_step2_right_true" qtlid="34776">Taip</translation>
+   <translation id="emailpro_ACTION_delegation_step2_sendOnBehalfTo_header" qtlid="181487">Teisė siųsti iš</translation>
+   <translation id="emailpro_ACTION_delegation_step2_send_header" qtlid="143798">Teisė siųsti</translation>
+   <translation id="emailpro_ACTION_delegation_success_message" qtlid="144266">Paskyrimo teisių atnaujinimas atliktas.</translation>
+   <translation id="emailpro_ACTION_delegation_title" qtlid="143733">Paskyrimo konfigūravimas</translation>
+   <translation id="emailpro_ACTION_delegation_wait_behalf_tooltip" qtlid="181526">Prašome palaukti, kol išsijungs siuntimo teisės.</translation>
+   <translation id="emailpro_ACTION_delegation_wait_sendas_tooltip" qtlid="181552">Prašome palaukti, kol įsigalios siuntimo teisės.</translation>
+   <translation id="emailpro_ACTION_delete_disclaimer_failure" qtlid="152583">Klaida trinant parašą.</translation>
+   <translation id="emailpro_ACTION_delete_disclaimer_success" qtlid="152570">Parašas bus ištrintas.</translation>
+   <translation id="emailpro_ACTION_delete_disclaimer_title" qtlid="152219">Ištrinti parašą</translation>
+   <translation id="emailpro_ACTION_disclaimer_associated_domains" qtlid="133110">Susietas domenas </translation>
+   <translation id="emailpro_ACTION_disclaimer_insert" qtlid="152336">Įterpti kintamąjį</translation>
+   <translation id="emailpro_ACTION_loading" qtlid="75954">Kraunama...</translation>
+   <translation id="emailpro_ACTION_order_accounts_button" qtlid="139169">Užsakyti paskyras</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_loading_error" qtlid="135294">Įvyko klaida keičiant duomenis.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_number" qtlid="139338">Paskyrų kiekis:</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_number_tooltip" qtlid="144110">Įveskite skaičių nuo 1 iki 100</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_number_not_valid" qtlid="144123">Įveskite teisingą skaičių</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_pay_type" qtlid="139325">Mokėjimo tipas:</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_pay_type_01" qtlid="79530">mėnesinis</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_pay_type_12" qtlid="79542">metinis</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_error_message" qtlid="139468">Įvyko klaida vykdant užsakymą.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_intro" qtlid="139403">Jūsų užsakymo santrauka</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_loader" qtlid="139377">Tikrinami užsakymo parametrai </translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_number" qtlid="139338">Paskyrų kiekis:</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_pay_type" qtlid="139325">Mokėjimo tipas:</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_pay_type_monthly" qtlid="79530">mėnesinis</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_pay_type_yearly" qtlid="79542">metinis</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} be PVM ({1} su PVM)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_total" qtlid="139429">Bendra suma:</translation>
+   <translation id="emailpro_ACTION_order_accounts_step3_bc" qtlid="169524">Užsakymas sėkmingai sugeneruotas.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step3_continue" qtlid="169537">Užsakymą patvirtinsite spragtelėję "valdyti".</translation>
+   <translation id="emailpro_ACTION_order_accounts_step3_explication" qtlid="139481">Atkreipkite dėmesį, kad patvirtinus jūsų mokėjimą, paskyra bus sukurta per 10 minučių.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step3_explication2" qtlid="144175">Atsidarys nauja kortelė ir būsite automatiškai nukreipti į OVH apmokėjimų puslapį.</translation>
+   <translation id="emailpro_ACTION_order_accounts_step3_generation_bc" qtlid="169511">Užsakymo generavimas...</translation>
+   <translation id="emailpro_ACTION_sending" qtlid="71009">Siunčiama...</translation>
+   <translation id="emailpro_ACTION_update_account_error_message_linked" qtlid="157421">Klaida keičiant kitus paskyros parametrus.</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_password_title" qtlid="2270">Slaptažodis</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_password" qtlid="171240">Slaptažodis turi atitikti šiuos reikalavimus:<br/><br/>- Negali būti dalis ar visas paskyros pavadinimas<br/>- Būti mažiausiai 8 simbolių ilgio<br/>- Turi turėti bent trijų kategorijų (iš keturių galimų) simbolius:<br/><ul><li>Didžiosios raidės(A - Z)<br/></li><li>Mažosios raidės (a - z)<br/></li><li>Skaičiai (0 - 9)<br/></li><li>Specialūs simboliai (pavyzdžiui: !, $, #, %)<br/></li></ul></translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_password_simple" qtlid="195139">Slaptažodis turi būti mažiausiai {0} simbolių ilgio</translation>
+   <translation id="emailpro_ACTION_update_account_step1_complex_password_tooltip" qtlid="178822">Mažiausiai {0} skaitmeniniai, raidiniai ar specialūs simboliai.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_ACTION_update_account_step1_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_ACTION_update_account_step1_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_confirmation_label" qtlid="9983">Patvirtinimas</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_contains_samaccount_name" qtlid="254869">Slaptažodžio pavadinime negali būti "{0}", samaccountName, vidaus identifikatoriaus.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_different" qtlid="139637">Slaptažodžiai nesutampa</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_label" qtlid="2270">Slaptažodis</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_placeholder" qtlid="156745">Palikti seną</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_weak" qtlid="139624">Per daug paprastas slaptažodis</translation>
+   <translation id="emailpro_ACTION_update_account_step1_quota_label" qtlid="6874">Kvota</translation>
+   <translation id="emailpro_ACTION_update_account_step1_simple_password_tooltip" qtlid="137595">Mažiausiai simboliai.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_type_label" qtlid="191057">Paskyros tipas</translation>
+   <translation id="emailpro_ACTION_update_account_step1_type_STANDARD" qtlid="48998">Standard</translation>
+   <translation id="emailpro_ACTION_update_account_step1_type_BASIC" qtlid="48986">Basic</translation>
+   <translation id="emailpro_ACTION_update_account_step1_type_ENTERPRISE" qtlid="49022">Entreprise</translation>
+   <translation id="emailpro_ACTION_update_account_step1_type_cant_change" qtlid="486243">Paskyros tipas negali būti pakeistas, kol Outlook licencija susieta su šia paskyra.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_exchange_guid_label" qtlid="174633">Exchange GUID</translation>
+   <translation id="emailpro_ACTION_update_account_step2_confirmation_intro" qtlid="136841">Jūsų paskyra:</translation>
+   <translation id="emailpro_ACTION_update_account_step2_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_ACTION_update_account_step2_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_ACTION_update_account_step2_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_ACTION_update_account_step2_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_ACTION_update_account_step2_password_label" qtlid="139650">Slaptažodis</translation>
+   <translation id="emailpro_ACTION_update_disclaimer_error_message" qtlid="152635">Klaida keičiant parašą.</translation>
+   <translation id="emailpro_ACTION_update_disclaimer_info" qtlid="152609">Keisti parašą, susietą su domenu {0}</translation>
+   <translation id="emailpro_ACTION_update_disclaimer_length_warning" qtlid="152648">Parašas negali viršyti 5000 simbolių, taip pat negalima naudoti lokalaus paveikslėlio.</translation>
+   <translation id="emailpro_ACTION_update_disclaimer_success_message" qtlid="152622">Parašas bus pakeistas.</translation>
+   <translation id="emailpro_ACTION_update_disclaimer_title" qtlid="152596">Konfigūruoti parašą</translation>
+   <translation id="emailpro_GROUPS_delegation_doing_message" qtlid="144266">Paskyrimo teisių atnaujinimas atliktas.</translation>
+   <translation id="emailpro_GROUPS_delegation_error_message" qtlid="144279">Klaida atnaujinant paskyrimo teises.</translation>
+   <translation id="emailpro_GROUPS_delegation_success_message" qtlid="144266">Paskyrimo teisių atnaujinimas atliktas.</translation>
+   <translation id="emailpro_GROUPS_partial_account" qtlid="191161">Įvyko klaida įkeliant duomenis: {0}</translation>
+
+   <translation id="emailpro_action_license_history_fail" qtlid="169641">Klaida įkeliant stebėjimo informaciją.</translation>
+   <translation id="emailpro_action_license_history_type_outlook" qtlid="193111">Outlook licencijos </translation>
+   <translation id="emailpro_action_order_space_disk" qtlid="191668">Užsakyti papildomą disko vietą</translation>
+
+   <translation id="emailpro_dashboard_2016_migration" qtlid="287072">Peržiūrėti migravimo į Exchange 2016 planus.</translation>
+   <translation id="emailpro_dashboard_action_doing" qtlid="149787">Vykdoma...</translation>
+   <translation id="emailpro_dashboard_diag" qtlid="136230">Serverio diagnostika </translation>
+   <translation id="emailpro_dashboard_diag_a_label" qtlid="23803">Kam</translation>
+   <translation id="emailpro_dashboard_diag_a_tooltip_error" qtlid="209151">Jeigu jūsų domenas talpinamas OVH, sukurkite A lauką pasirinkę reikiamą domeną, vėliau Eksperto režimas -> DNS zona -> Pridėti įrašą. Nurodykite: <br /> Lauko tipą: <span class="bold">A</span> <br /> Subdomeną: <span class="bold">{0}</span> <br /> Paskirtį: <span class="bold">{1}</span> <br /><br /> Jeigu jūsų domenas talpinamas kitur, sukurkite A lauką šiam domenui savo tiekėjo valdymo sąsajoje pateikdami tuos pačius duomenis.</translation>
+   <translation id="emailpro_dashboard_diag_a_tooltip_ok" qtlid="137491">Atliktas automatinis konfigūravimas </translation>
+   <translation id="emailpro_dashboard_diag_a_tooltip_title" qtlid="143251">A laukas</translation>
+   <translation id="emailpro_dashboard_diag_aaaa_label" qtlid="129823">AAAA</translation>
+   <translation id="emailpro_dashboard_diag_aaaa_tooltip_error" qtlid="209164">Jeigu jūsų domenas talpinamas OVH, sukurkite AAAA lauką pasirinkę reikiamą domeną, vėliau Eksperto režimas -> DNS zona -> Pridėti įrašą. Nurodykite: <br /> Lauko tipą: <span class="bold">AAAA</span> <br /> Subdomeną: <span class="bold">{0}</span> <br /> Paskirtį: <span class="bold">{1}</span> <br /><br /> Jeigu jūsų domenas talpinamas kitur, sukurkite AAAA lauką šiam domenui savo tiekėjo valdymo sąsajoje pateikdami tuos pačius duomenis.</translation>
+   <translation id="emailpro_dashboard_diag_aaaa_tooltip_ok" qtlid="137491">Atliktas automatinis konfigūravimas </translation>
+   <translation id="emailpro_dashboard_diag_aaaa_tooltip_title" qtlid="143277">IPv6 AAAA laukas</translation>
+   <translation id="emailpro_dashboard_diag_ptr_label" qtlid="143303">PTR</translation>
+   <translation id="emailpro_dashboard_diag_ptr_tooltip_error" qtlid="143316">Atvirkštinis (inverse) jūsų IPv6 adreso tikrinimas grąžino klaidą. Susisiekite su pagalbos tarnyba.</translation>
+   <translation id="emailpro_dashboard_diag_ptr_tooltip_ok" qtlid="137491">Atliktas automatinis konfigūravimas </translation>
+   <translation id="emailpro_dashboard_diag_ptr_tooltip_title" qtlid="143303">PTR</translation>
+   <translation id="emailpro_dashboard_diag_ptrv6_label" qtlid="143329">PTR v6</translation>
+   <translation id="emailpro_dashboard_diag_ptrv6_tooltip_error" qtlid="143342">Atvirkštinis (inverse) jūsų IPv6 adreso tikrinimas grąžino klaidą. Susisiekite su pagalbos tarnyba.</translation>
+   <translation id="emailpro_dashboard_diag_ptrv6_tooltip_ok" qtlid="137491">Atliktas automatinis konfigūravimas </translation>
+   <translation id="emailpro_dashboard_diag_ptrv6_tooltip_title" qtlid="143329">PTR v6</translation>
+   <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operacija atšaukta. Reikia įvesti bent 5 simbolius</translation>
+   <translation id="emailpro_dashboard_domains" qtlid="276298">Susiję domenai</translation>
+   <translation id="emailpro_dashboard_expiration" qtlid="168172">Atnaujinimas</translation>
+   <translation id="emailpro_dashboard_guides_url" qtlid="156732">Skaityti gidus internete.</translation>
+   <translation id="emailpro_dashboard_loading_error" qtlid="168120">Klaida įkeliant duomenis.</translation>
+   <translation id="emailpro_dashboard_message_see_more" qtlid="91645">Peržiūrėti detales</translation>
+   <translation id="emailpro_dashboard_name" qtlid="136165">Serveris</translation>
+   <translation id="emailpro_dashboard_new_window" qtlid="222176">Naujas langas</translation>
+   <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">SSL galiojimo pabaiga</translation>
+   <translation id="emailpro_dashboard_tasks" qtlid="136217">Paskutinės užduotys</translation>
+
+
+   <translation id="emailpro_resilitation_action_button" qtlid="48646">Atsisakyti</translation>
+   <translation id="emailpro_resilitation_action_button_cancel" qtlid="211567">Atšaukti šalinimą</translation>
+   <translation id="emailpro_resilitation_action_hosted_warning" qtlid="209073">Pasibaugus galiojimo laikotarpiui jūsų paskyros bus sustabdytos.</translation>
+   <translation id="emailpro_resilitation_action_partial" qtlid="191031">Įvyko klaida keičiant automatinio atnaujinimo laikotarpį.</translation>
+   <translation id="emailpro_resilitation_cancel_action_button" qtlid="4070">Tęsti</translation>
+   <translation id="emailpro_resilitation_cancel_action_confirmation" qtlid="201380">Tuojau atšauksite paslaugos "{0}" naikinimą. <br />Ar norite tęsti? <br /> Patvirtinus paslauga bus atnaujinama automatiškai.</translation>
+   <translation id="emailpro_resilitation_cancel_action_failure" qtlid="211580">Atšaukiant paslaugos šalinimą įvyko klaida.</translation>
+   <translation id="emailpro_resilitation_cancel_action_partial" qtlid="191031">Įvyko klaida keičiant automatinio atnaujinimo laikotarpį.</translation>
+   <translation id="emailpro_tab_ACCOUNTS_error_message" qtlid="143915">Klaida įkeliant paskyras.</translation>
+
+   <translation id="emailpro_tab_ACCOUNTS_menu_account_tooltip" qtlid="19075">Daugiau operacijų</translation>
+   <translation id="emailpro_tab_ACCOUNTS_partial" qtlid="143889">Kai kurios paskyros nebuvo teisingai įkeltos. Prašome atnaujinti puslapį, kad panaikintumėte problemą.</translation>
+   <translation id="emailpro_tab_ACCOUNTS_partial_account" qtlid="139208">Ši paskyra nebuvo tinkamai įkelta.</translation>
+   <translation id="emailpro_tab_ACCOUNTS_popover_alias" qtlid="21499">Alias valdymas</translation>
+   <translation id="emailpro_tab_ACCOUNTS_popover_delegation" qtlid="143434">Valdyti paskyrimus</translation>
+   <translation id="emailpro_tab_ACCOUNTS_popover_span_text" qtlid="277689">El. laiškų siuntimas iš šios paskyros užblokuotas dėl SPAM. <br />Norėdami atblokuoti paskyrą, atsakykite į atitinkamą kvitą.<br /><br /><a href="{0}" class="link pull-right">Atsakyti į kvitą</a><br /></translation>
+   <translation id="emailpro_tab_ACCOUNTS_popover_span_title" qtlid="277676">Dėl SPAM užblokuota paskyra</translation>
+   <translation id="emailpro_tab_ACCOUNTS_pwderror" qtlid="137296">Neteisingas patvirtinimas </translation>
+   <translation id="emailpro_tab_ACCOUNTS_state_CREATING" qtlid="146632">Kuriama</translation>
+   <translation id="emailpro_tab_ACCOUNTS_state_DELETING" qtlid="146645">Trinama</translation>
+   <translation id="emailpro_tab_ACCOUNTS_state_TASK_ON_DOING" qtlid="485632">Užduotis suplanuota arba jau yra vykdoma</translation>
+   <translation id="emailpro_tab_ACCOUNTS_state_TASK_ON_ERROR" qtlid="485788">Klaida vykdant užduotį</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_alias" qtlid="9466">Alias</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_email" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_empty" qtlid="149800">Jūs neturite paskyrų</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_empty_type_BASIC" qtlid="190810">Jūs neturite Basic paskyros</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_empty_type_STANDARD" qtlid="190823">Jūs neturite Standard paskyros</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_empty_type_ENTERPRISE" qtlid="190836">Jūs neturite Entreprise paskyros</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_empty_search" qtlid="149813">Nėra paieškos kriterijus atitinkančių paskyrų</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_size" qtlid="7726">Dydis</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_status" qtlid="26443">Būsena</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_type" qtlid="2642">Tipas</translation>
+   <translation id="emailpro_tab_ACCOUNTS_type_ALL" qtlid="69173">Visi</translation>
+   <translation id="emailpro_tab_ACCOUNTS_type_BASIC" qtlid="48986">Basic</translation>
+   <translation id="emailpro_tab_ACCOUNTS_type_STANDARD" qtlid="48998">Standard</translation>
+   <translation id="emailpro_tab_ACCOUNTS_type_ENTERPRISE" qtlid="49022">Entreprise</translation>
+   <translation id="emailpro_tab_ACCOUNTS_warning" qtlid="108456">Dėmesio!</translation>
+
+   <translation id="emailpro_tab_ALIAS_add_alias_error_message" qtlid="143681">Klaida kuriant alias.</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_intro" qtlid="416579">Sukurti alias <span class="bold">{0}</span> grupei</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_placeholder" qtlid="9466">Alias</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_step2_account_label" qtlid="143603">Paskyra susieta</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_step2_alias_label" qtlid="9466">Alias</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_step2_intro" qtlid="144006">Ar tikrai norite sukurti šį alias?</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_success_message" qtlid="144032">Alias bus sukurtas.</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_title" qtlid="143616">Sukurti alias</translation>
+   <translation id="emailpro_tab_ALIAS_add_alias_valid" qtlid="171747">Dėmesio, kai kurių simbolių negalima naudoti alias pavadinime, pvz.: + ? / () [] ;</translation>
+   <translation id="emailpro_tab_ALIAS_add_button" qtlid="143538">Sukurti alias</translation>
+   <translation id="emailpro_tab_ALIAS_delete_error_message" qtlid="143577">Klaida trinant alias.</translation>
+   <translation id="emailpro_tab_ALIAS_delete_success_message" qtlid="143564">Jūsų alias ištrintas.</translation>
+   <translation id="emailpro_tab_ALIAS_delete_tooltip" qtlid="178848">Ištrinti šį alias</translation>
+   <translation id="emailpro_tab_ALIAS_domain_loading_failure" qtlid="144045">Klaida įkeliant domenus.</translation>
+   <translation id="emailpro_tab_ALIAS_error_message" qtlid="143980">Klaida įkeliant alias.</translation>
+   <translation id="emailpro_tab_ALIAS_header" qtlid="9466">Alias</translation>
+   <translation id="emailpro_tab_ALIAS_remove_account_label" qtlid="143603">Paskyra susieta</translation>
+   <translation id="emailpro_tab_ALIAS_remove_alias_label" qtlid="9466">Alias</translation>
+   <translation id="emailpro_tab_ALIAS_remove_alias_title" qtlid="9550">Ištrinti alias</translation>
+   <translation id="emailpro_tab_ALIAS_state_TASK_ON_DOING" qtlid="26383">Vykdoma</translation>
+   <translation id="emailpro_tab_ALIAS_state_TASK_ON_DOING_tooltip" qtlid="143967">Su šiuo alias susijusi užduotis suplanuota arba jau vykdoma</translation>
+   <translation id="emailpro_tab_ALIAS_state_TASK_ON_DOING_tooltip" qtlid="143967">Su šiuo alias susijusi užduotis suplanuota arba jau vykdoma</translation>
+   <translation id="emailpro_tab_ALIAS_taken_error_message" qtlid="190849">Toks el. pašto adresas jau yra.</translation>
+
+   <translation id="emailpro_tab_DISCLAIMER" qtlid="276324">Puslapio apačia</translation>
+   <translation id="emailpro_tab_DISCLAIMER_table_empty" qtlid="152258">Jūs neturite parašo.</translation>
+   <translation id="emailpro_tab_DISCLAIMER_associated_domains" qtlid="133110">Susietas domenas </translation>
+   <translation id="emailpro_tab_DISCLAIMER_disclaimer_content" qtlid="152271">Turinys</translation>
+   <translation id="emailpro_tab_DISCLAIMER_disclaimer_outside_only" qtlid="152284">Tik į išorę</translation>
+   <translation id="emailpro_tab_DISCLAIMER_disclaimer_outside_only_false" qtlid="34788">Ne</translation>
+   <translation id="emailpro_tab_DISCLAIMER_disclaimer_outside_only_tooltip" qtlid="152297">Parašas naudojamas tik siuntimui į užsienį</translation>
+   <translation id="emailpro_tab_DISCLAIMER_disclaimer_outside_only_true" qtlid="34776">Taip</translation>
+   <translation id="emailpro_tab_DISCLAIMER_error_message" qtlid="152245">Klaida įkeliant parašus.</translation>
+   <translation id="emailpro_tab_DISCLAIMER_menu_delete" qtlid="2414">Trinti</translation>
+   <translation id="emailpro_tab_DISCLAIMER_menu_settings" qtlid="37875">Keisti</translation>
+   <translation id="emailpro_tab_DISCLAIMER_state_doing_tooltip" qtlid="143863">Užduotis suplanuota ar vykdoma</translation>
+   <translation id="emailpro_tab_DISCLAIMER_state_header" qtlid="26443">Būsena</translation>
+   <translation id="emailpro_tab_DISCLAIMER_table_no_domain" qtlid="152310">Norėdami sukurti parašą, įtraukite domeną ir palaukite, kol jis bus patvirtintas.</translation>
+
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail" qtlid="171461">Klaida kuriant išorinį kontaktą.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_invalid" qtlid="171370">Neteisingas el. pašto adresas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label" qtlid="32278">Organizacija</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question" qtlid="171357">Galite sukurti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_content" qtlid="174659">Išoriniai kontaktai turi atitikti šiuos reikalavimus:<br/><br/>- Pavardė ir vardas turi būt iš ne daugiau kaip 64 simbolių.<br/>- Rodomas vardas turi būti sudarytas iš ne daugiau kaip 255 simbolių.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_title" qtlid="171383">Išorinių kontaktų sąlygos</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_question" qtlid="171435">Ar tikrai norite sukurti šį išorinį kontaktą?</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_success" qtlid="171448">Išorinio kontakto įtraukimas užregistruotas. Jis bus aktyvus po kelių minučių.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_title" qtlid="136334">Pridėti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_title_button" qtlid="136334">Pridėti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail" qtlid="171591">Klaida bandant ištrinti išorinį kontaktą.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_step1_contact" qtlid="171565">Išorinis kontaktas:</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_step1_question" qtlid="171552">Ar tikrai norite ištrinti šį išorinį kontaktą?</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success" qtlid="171578">Išorinio kontakto trynimas užregistruotas. Trynimas bus atliktas per kelias minutes.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_title" qtlid="171539">Ištrinti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail" qtlid="171526">Klaida redaguojant išorinį kontaktą.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_invalid" qtlid="171370">Neteisingas el. pašto adresas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_question" qtlid="171487">Išorinio kontakto redagavimas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_wizardhelp_requirements_content" qtlid="174659">Išoriniai kontaktai turi atitikti šiuos reikalavimus:<br/><br/>- Pavardė ir vardas turi būt iš ne daugiau kaip 64 simbolių.<br/>- Rodomas vardas turi būti sudarytas iš ne daugiau kaip 255 simbolių.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_wizardhelp_requirements_title" qtlid="171383">Išorinių kontaktų sąlygos</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_display_name_label" qtlid="23515">Rodomas vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_email_label" qtlid="137244">El. pašto paskyra</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_first_name_label" qtlid="23323">Vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_last_name_label" qtlid="3818">Pavadinimas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_question" qtlid="171500">Ar tikrai norite redaguoti šį išorinį kontaktą?</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success" qtlid="171513">Išorinio kontakto keitimai išsaugoti. Jie bus efektyvūs po kelių minučių.</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_title" qtlid="171474">Redaguoti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_search_placeholder" qtlid="171344">Kontaktų paieška</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_actions_menu_delete" qtlid="2414">Trinti</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_actions_menu_modify" qtlid="37875">Keisti</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_empty" qtlid="171331">Neturite sukonfigūruoto išorinio kontakto</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_creationDate" qtlid="4358">Sukurta</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_displayName" qtlid="80922">Rodomas vardas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress" qtlid="30430">Adresas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL" qtlid="28483">Katalogas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state" qtlid="26443">Būsena</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_CREATING" qtlid="26227">Kuriama</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_DELETING" qtlid="133929">Šalinama</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_REOPENING" qtlid="171279">Atidaroma iš naujo</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_SUSPENDED" qtlid="136100">Pristabdytas</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_SUSPENDING" qtlid="171292">Pristabdyta</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING" qtlid="174646">Redaguojama</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_OK" qtlid="433745">OK</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING" qtlid="174646">Redaguojama</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_false" qtlid="184906">Adresas bus matomas Outlook</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_tooltip_GAL_true" qtlid="184919">Adresas nebus matomas Outlook</translation>
+
+   <translation id="emailpro_tab_GROUPS_error_message" qtlid="150138">Klaida įkeliant Jūsų grupes.</translation>
+
+   <translation id="emailpro_tab_INFORMATIONS_connexion" qtlid="55925">Jungtis</translation>
+   <translation id="emailpro_tab_INFORMATIONS_messaging" qtlid="276363">El. pranešimų siuntumo klientas</translation>
+   <translation id="emailpro_tab_INFORMATIONS_service_url" qtlid="319414">Plačiau apie susietą SharePoint </translation>
+   <translation id="emailpro_tab_INFORMATIONS_sharepoint" qtlid="319401">Susieta SharePoint paskyra</translation>
+   <translation id="emailpro_tab_INFORMATIONS_sharepoint_url" qtlid="297930">URL tikrinimui</translation>
+   <translation id="emailpro_tab_INFORMATIONS_stats" qtlid="26671">Statistika</translation>
+   <translation id="emailpro_tab_INFORMATIONS_summary" qtlid="4082">Santrauka</translation>
+   <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">Laukiama įjungimo</translation>
+   <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="485697">Webmail:</translation>
+
+   <translation id="emailpro_tab_TASKS" qtlid="136217">Paskutinės užduotys</translation>
+   <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">Jūs neturite užduočių</translation>
+   <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Užduotis</translation>
+   <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Būsena</translation>
+   <translation id="emailpro_tab_TASKS_DOING" qtlid="26383">Vykdoma</translation>
+   <translation id="emailpro_tab_TASKS_CANCELLED" qtlid="27631">Atšaukta</translation>
+   <translation id="emailpro_tab_TASKS_DONE" qtlid="8662">Baigta</translation>
+   <translation id="emailpro_tab_TASKS_ERROR" qtlid="45508">Klaida</translation>
+   <translation id="emailpro_tab_TASKS_TODO" qtlid="37455">Suplanuota</translation>
+   <translation id="emailpro_tab_TASKS_ADD_ACCOUNT" qtlid="137309">Pridėti paskyrą</translation>
+   <translation id="emailpro_tab_TASKS_ADD_ALIAS" qtlid="144071">Alias kūrimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DOMAIN" qtlid="137335">Pridėti domeną</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DOMAIN_DISCLAIMER" qtlid="152206">Priskirti parašą</translation>
+   <translation id="emailpro_tab_TASKS_ADD_EXTERNAL_CONTACT" qtlid="137348">Pridėti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_TASKS_ADD_FULL_ACCESS" qtlid="137361">Pridėti prieigos teises</translation>
+   <translation id="emailpro_tab_TASKS_addFullAccess" qtlid="137361">Pridėti prieigos teises</translation>
+   <translation id="emailpro_tab_TASKS_ADD_SEND_AS" qtlid="181370">Paskyros siuntimo teisių kūrimas</translation>
+   <translation id="emailpro_tab_TASKS_CHANGE_PASSWORD" qtlid="16721">Slaptažodžio keitimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_ACCOUNT" qtlid="136516">Paskyros šalinimas </translation>
+   <translation id="emailpro_tab_TASKS_DELETE_ALIAS" qtlid="136529">Alias šalinimas </translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DOMAIN" qtlid="136542">Domeno šalinimas </translation>
+   <translation id="emailpro_tab_TASKS_DELETE_EXTERNAL_CONTACT" qtlid="137387">Pašalinti išorinį kontaktą</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_FULL_ACCESS" qtlid="137400">Pašalinti prieigos teises </translation>
+   <translation id="emailpro_tab_TASKS_deleteFullAccess" qtlid="137400">Pašalinti prieigos teises </translation>
+   <translation id="emailpro_tab_TASKS_DELETE_SEND_AS" qtlid="181383">Paskyros siuntimo teisių trynimas</translation>
+   <translation id="emailpro_tab_TASKS_UPDATE_ACCOUNT" qtlid="136594">Paskyros keitimas </translation>
+   <translation id="emailpro_tab_TASKS_SET_ACCOUNT" qtlid="136594">Paskyros keitimas </translation>
+   <translation id="emailpro_tab_TASKS_SET_DNS" qtlid="149826">DNS keitimas</translation>
+   <translation id="emailpro_tab_TASKS_INSTALL_SSL" qtlid="149839">SSL sertifikato diegimas</translation>
+   <translation id="emailpro_tab_TASKS_CONFIGURE_EXCHANGE_CUSTOMER" qtlid="143355">Serverio konfigūracija</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DISTRIBUTION_GROUP" qtlid="149865">Grupės įtraukimas</translation>
+   <translation id="emailpro_tab_TASKS_addDistributionGroup" qtlid="149865">Grupės įtraukimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DISTRIBUTION_GROUP_MANAGER" qtlid="149878">Priskirti grupės administratorių</translation>
+   <translation id="emailpro_tab_TASKS_addDistributionGroupManager" qtlid="149878">Priskirti grupės administratorių</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DISTRIBUTION_GROUP_MEMBER" qtlid="149891">Įtraukti grupės kontaktą</translation>
+   <translation id="emailpro_tab_TASKS_addDistributionGroupMember" qtlid="149891">Įtraukti grupės kontaktą</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DISTRIBUTION_GROUP" qtlid="149904">Grupės šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_deleteDistributionGroup" qtlid="149904">Grupės šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DISTRIBUTION_GROUP_MANAGER" qtlid="149917">Grupės administratoriaus šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_deleteDistributionGroupManager" qtlid="149930">Grupės administratoriaus šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DISTRIBUTION_GROUP_MEMBER" qtlid="149943">Grupės kontakto šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_deleteDistributionGroupMember" qtlid="149956">Grupės kontakto šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DISTRIBUTION_GROUP_SEND_ON_BEHALF_TO" qtlid="180226">Siuntimo teisių trynimas</translation>
+   <translation id="emailpro_tab_TASKS_SET_DISTRIBUTION_GROUP" qtlid="149969">Grupės keitimas</translation>
+   <translation id="emailpro_tab_TASKS_setDistributionGroup" qtlid="149969">Grupės keitimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DOMAIN_DISCLAIMER" qtlid="152219">Ištrinti parašą</translation>
+   <translation id="emailpro_tab_TASKS_SET_DOMAIN_DISCLAIMER" qtlid="152232">Keisti parašą</translation>
+   <translation id="emailpro_tab_TASKS_GENERATE_OUTLOOK_URL" qtlid="150021">Outlook nuorodos generavimas</translation>
+   <translation id="emailpro_tab_TASKS_SET_DOMAIN" qtlid="136607">Domeno keitimas </translation>
+   <translation id="emailpro_tab_TASKS_SET_ALIAS" qtlid="148214">Alias keitimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_RESOURCE_ACCOUNT" qtlid="156134">Resursų paskyros įtraukimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_RESOURCE_DELEGATE" qtlid="195126">Teisių suteikimas resursams</translation>
+   <translation id="emailpro_tab_TASKS_SET_RESOURCE_ACCOUNT" qtlid="156147">Resursų paskyros keitimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_RESOURCE_DELEGATE" qtlid="209086">Teisių šalinimas resursui</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_RESOURCE_ACCOUNT" qtlid="156160">Resursų paskyros šalinimas</translation>
+   <translation id="emailpro_tab_TASKS_SET_EXTERNAL_CONTACT" qtlid="177938">Išorinio kontakto redagavimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_SEND_ON_BEHALF_TO" qtlid="181396">Paskyros siuntimo teisių kūrimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_SEND_ON_BEHALF_TO" qtlid="181409">Paskyros siuntimo teisių trynimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DISTRIBUTION_GROUP_SEND_ON_BEHALF_TO" qtlid="181422">Siuntimo teisių grupėms kūrimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DISTRIBUTION_GROUP_SEND_ON_BEHALF_TO" qtlid="181435">Siuntimo teisių grupėms trynimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_DISTRIBUTION_GROUP_SEND_AS" qtlid="181448">Siuntimo teisių kūrimas grupėms</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_DISTRIBUTION_GROUP_SEND_AS" qtlid="181461">Siuntimo teisių grupėms trynimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_EXPORT_PST_REQUEST" qtlid="190862">.pst failo tikrinimas</translation>
+   <translation id="emailpro_tab_TASKS_GENERATE_PST_URL" qtlid="190875">.pst failo generavimas</translation>
+   <translation id="emailpro_tab_TASKS_SET_PUBLIC_FOLDER_PERMISSION" qtlid="201250">Bendro naudojimo teisių keitimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_PUBLIC_FOLDER_PERMISSION" qtlid="201263">Bendro naudojimo teisių kūrimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_PUBLIC_FOLDER_PERMISSION" qtlid="201276">Bendro naudojimo teisių trynimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_PUBLIC_FOLDER" qtlid="201289">Sukurti bendrą naudojimą</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_PUBLIC_FOLDER" qtlid="201302">Bendro naudojimo trynimas</translation>
+   <translation id="emailpro_tab_TASKS_SET_PUBLIC_FOLDER" qtlid="201315">Bendro naudojimo redagavimas</translation>
+   <translation id="emailpro_tab_TASKS_EXPAND_DRIVE" qtlid="191759">Pridėti disko vietą </translation>
+   <translation id="emailpro_tab_TASKS_ADD_SHARED_ACCOUNT" qtlid="215208">Bendro naudojimo paskyros įtraukimas</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_SHARED_ACCOUNT" qtlid="215221">Bendro naudojimo paskyros pašalinimas</translation>
+   <translation id="emailpro_tab_TASKS_SET_SHARED_ACCOUNT" qtlid="215234">Bendro naudojimo paskyros keitimas</translation>
+   <translation id="emailpro_tab_TASKS_ADD_SHARED_ACCOUNT_FULL_ACCESS" qtlid="215247">Prieigos teisių pridėjimas bendro naudojimo paskyrai</translation>
+   <translation id="emailpro_tab_TASKS_ADD_SHARED_ACCOUNT_SEND_AS" qtlid="215260">Siuntimo teisių pridėjimas bendro naudojimo paskyrai</translation>
+   <translation id="emailpro_tab_TASKS_ADD_SHARED_ACCOUNT_SEND_ON_BEHALF_TO" qtlid="215273">Siuntimo pagal įgaliojimą teisių pridėjimas bendro naudojimo paskyrai</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_SHARED_ACCOUNT_FULL_ACCESS" qtlid="215286">Prieigos teisių pašalinimas bendro naudojimo paskyrai</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_SHARED_ACCOUNT_SEND_AS" qtlid="215299">Siuntimo teisių pašalinimas bendro naudojimo paskyrai</translation>
+   <translation id="emailpro_tab_TASKS_DELETE_SHARED_ACCOUNT_SEND_ON_BEHALF_TO" qtlid="215312">Siuntimo pagal įgaliojimą teisių pašalinimas bendro naudojimo paskyrai</translation>
+   <translation id="emailpro_tab_TASKS_table_start_date" qtlid="201328">Pradžia</translation>
+   <translation id="emailpro_tab_TASKS_table_finish_date" qtlid="201341">Pabaiga</translation>
+   <translation id="emailpro_tab_TASKS_warning" qtlid="136347">Dėmesio!</translation>
+   <translation id="emailpro_tab_TASKS_partial" qtlid="137426">Paskelbtas ne visas sąrašas, kai kurios užduotys negalėjo būti teisingai įkeltos.</translation>
+   <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Klaida įkeliant užduotis.</translation>
+   <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Paskyrų saugumo politika</translation>
+
+   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Jūsų Exchange paslauga beveik paruošta. Pridėkite paslaugos veikimui reikalingą domeną. Jeigu neturite domeno užsakykite jį, <a href="https://www.ovh.lt/cgi-bin/newOrder/order.cgi" target="_blank">spragtelėję čia</a>.</translation>
+   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Norėdami sukurti Exchange el. pašto paskyras, pridėkite domeną. Spragtelėkite</translation>
+   <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">čia</translation>
+   <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">norėdami pridėti naują domeną.</translation>
+   <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Neturite domenų, atitinkančių paieškos kriterijų</translation>
+   <translation id="emailpro_tab_domain_search" qtlid="136633">Domeno paieška</translation>
+   <translation id="emailpro_tab_domain_domain" qtlid="170434">Domenas</translation>
+   <translation id="emailpro_tab_domain_type" qtlid="15713">Būdas</translation>
+   <translation id="emailpro_tab_domain_accounts_count" qtlid="28363">Abonementai</translation>
+   <translation id="emailpro_tab_domain_popover_delete" qtlid="210267">Pašalinti šį domeną</translation>
+   <translation id="emailpro_tab_domain_popover_update" qtlid="4406">Konfigūracija</translation>
+   <translation id="emailpro_tab_domain_diagnostic" qtlid="95059">Diagnostika</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx" qtlid="23779">MX</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_title" qtlid="137478">MX diagnostika </translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_toolbox_ok" qtlid="137491">Atliktas automatinis konfigūravimas </translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_intro_ovh" qtlid="192890">Jūsų domenas talpinamas OVH, domeno {0} MX lauką galite konfigūruoti taip</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_label_champ" qtlid="192903">MX laukas</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_label_champs" qtlid="46780">MX laukai</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam" qtlid="447664">Jeigu naudojate non-authoritative režimą (Exchange + akita pašto sistema) si pranešimų sistema, kuri nėra OVH:</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="192929">Pirmenybė: <strong>{0}</strong>; paskirtis: <strong>{1}</strong></translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_antispam" qtlid="447677">Jeigu naudojate autoritative režimą (tik Exchange) arba non-authoritative su OVH svetainių talpinimo pašto paslauga:</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_antispam_config" qtlid="192955">Pirmenybė: <strong>{0}</strong>; paskirtis: <strong>{1}</strong><br /> Pirmenybė: <strong>{2}</strong>; paskirtis: <strong>{3}</strong><br /> Pirmenybė: <strong>{4}</strong>; paskirtis: <strong>{5}</strong><br /> Pirmenybė: <strong>{6}</strong>; paskirtis: <strong>{7}</strong><br /></translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_no_ovh" qtlid="349101">Jeigu domenas nėra administruojamas to paties kliento, kaip ir Exchange paslauga, arba jeigu jūsų domenas nėra registruotas OVH, automatinis konfigūravimas nėra galimas. Prašome sukurti MX tipo lauką rankiniu būdu, įvedę žemiau pateiktą informaciją.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_mx_recap" qtlid="192981">MX laukas bus įtrauktas į Jūsų domeno DNS zoną. Dėmesio: anksčiau sukurti MX laukai bus ištrinti.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_add_field_success" qtlid="316905">Atliktas DNS zonos keitimas. Duomenų paskelbimas ir diagnostikos atnaujinimas gali užtrukti iki kelių valandų. </translation>
+   <translation id="emailpro_tab_domain_diagnostic_add_field_failure" qtlid="193007">Įvyko klaida keičiant jūsų DNS zoną.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_intro_ovh" qtlid="193020">Jūsų domenas yra OVH, domeno {0} SRV lauką galite nustatyti taip:</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_label_champ" qtlid="193033">SRV laukas </translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_config" qtlid="193046">Subdomenas: <strong>{0}</strong><br /> Pirmenybė: <strong>{1}</strong><br /> Svarba: <strong>{2}</strong><br /> Prievadas: <strong>{3}</strong><br /> Paskirtis: <strong>{4}</strong></translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_no_ovh" qtlid="349114">Jeigu domenas nėra administruojamas to paties kliento, kaip ir Exchange paslauga, arba jeigu jūsų domenas nėra registruotas OVH, automatinis konfigūravimas nėra galimas. Prašome sukurti SRV tipo lauką rankiniu būdu, įvedę žemiau pateiktą informaciją.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_recap" qtlid="256191">Jūsų domeno zonoje bus sukurtas SRV laukas. Dėmesio, jau esantis subdomeno "{0}" SRV laukas bus ištrintas.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv" qtlid="130003">SRV</translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_title" qtlid="137517">SRV diagnostika </translation>
+   <translation id="emailpro_tab_domain_diagnostic_srv_toolbox_ok" qtlid="137491">Atliktas automatinis konfigūravimas </translation>
+   <translation id="emailpro_tab_domain_error_message" qtlid="144045">Klaida įkeliant domenus.</translation>
+   <translation id="emailpro_tab_domain_diagnostic_cname" qtlid="129847">CNAME</translation>
+   <translation id="emailpro_tab_domain_status" qtlid="26443">Būsena</translation>
+   <translation id="emailpro_tab_domain_task_in_progress" qtlid="2690">Užduotis vykdoma</translation>
+   <translation id="emailpro_tab_domain_validation" qtlid="33802">Patvirtinimas</translation>
+   <translation id="emailpro_tab_domain_validation_doing" qtlid="136646">Domenas tvirtinamas </translation>
+   <translation id="emailpro_tab_domain_validation_cname" qtlid="139260">Prašome sukurti CNAME įrašą.</translation>
+   <translation id="emailpro_tab_domain_validation_cname_title" qtlid="139273">Savininko tikrinimas</translation>
+   <translation id="emailpro_tab_domain_validation_cname_details" qtlid="363401">Siekiant patvirtinti jūsų domeno nuosavybę, prašome sukurti ši CNAME tipo įrašą: <br /><br /><span class="bold">{0}.{1}</span> į <span class="bold">{2}</span>.<br /><br /> Jums tai reikia atlikti per 48 valandas.</translation>
+   <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Pridėti domeną</translation>
+   <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Pašalinti šį domeną iš Exchange paslaugų </translation>
+   <translation id="emailpro_tab_domain_creating" qtlid="26791">Kuriama</translation>
+   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Šis domenas negali būti ištrintas, nes jis naudojamas su viena ar keliomis Exchange paskyromis.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Non-autoritative</translation>
+   <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
+   <translation id="emailpro_tab_domain_warning" qtlid="136347">Dėmesio!</translation>
+   <translation id="emailpro_tab_domain_partial" qtlid="137569">Kai kurie domenai negalėjo būti teisingai įkelti. Norėdami išspręsti problemą atnaujinkite puslapį.</translation>
+   <translation id="emailpro_tab_domain_add_step1_select_domain_option" qtlid="136971">Pasirinkti domeną iš sąrašo</translation>
+   <translation id="emailpro_tab_domain_add_step1_user_owned_option" qtlid="397533">Įvesti domeną, nevaldomą jūsų OVH paskyroje</translation>
+   <translation id="emailpro_tab_domain_add_step1_user_owned_info" qtlid="397546">Dėmesio: įsitikinkite, kad pasirinkto domeno DNS zona gali būti keičiama administratoriaus </translation>
+   <translation id="emailpro_tab_domain_add_step1_order_domain_option" qtlid="136997">Užsisakyti domeną </translation>
+   <translation id="emailpro_tab_domain_add_step1_domain_none" qtlid="434538">Nerasta jokio rezultato</translation>
+   <translation id="emailpro_tab_domain_add_step3_cover_guide" qtlid="139572">Video medžiagos peržiūra</translation>
+   <translation id="emailpro_tab_domain_add_step1_main_domain" qtlid="191070">Pagrindinis organizacijos domenas</translation>
+   <translation id="emailpro_tab_domain_add_step1_main_domain_tooltip" qtlid="191083">Pagrindinis organizacijos domenas</translation>
+   <translation id="emailpro_tab_domain_add_step1_new_organization_intro" qtlid="447716">Jūsų organizacijos domenas bus <strong>{0}</strong></translation>
+   <translation id="emailpro_tab_domain_add_step1_new_organization_placeholder" qtlid="191109">Organizacijos pavadinimas</translation>
+   <translation id="emailpro_tab_domain_add_step2_main_domain" qtlid="191122">Pagrindinis domenas</translation>
+   <translation id="emailpro_tab_domain_add_step2_organization" qtlid="32278">Organizacija</translation>
+   <translation id="emailpro_tab_domain_add_step2_main_domain_true" qtlid="34776">Taip</translation>
+   <translation id="emailpro_tab_domain_add_step2_main_domain_false" qtlid="34788">Ne</translation>
+   <translation id="emailpro_tab_domain_add_step2_mx_replay" qtlid="316931">Paskirties el. pašto serveris</translation>
+   <translation id="emailpro_tab_domain_add_step2_mx_replay_tooltip" qtlid="210293">El. laiškai su nerastais gavėjais bus nukreipiami į šį serverį</translation>
+   <translation id="emailpro_tab_domain_add_step1_attach_organization_intro" qtlid="191135">Domenas bus įskaičiuotas į šią organizaciją:</translation>
+   <translation id="emailpro_tab_domain_add_set_auto_display" qtlid="416488">Pažymėkite varnelę, kad išvengtumėte pakartotinio lango atvertimo.</translation>
+   <translation id="emailpro_tab_domain_add_goToWizardButton" qtlid="449388">Noriu naudoti <br />konfigūravimo asistentą</translation>
+   <translation id="emailpro_tab_domain_add_step1_order_domain_desc1" qtlid="167873">Norėdami patvirtinti užklausą ir pereiti prie valdymo, spragtelėkite mygtuką "Užsakyti".</translation>
+   <translation id="emailpro_tab_domain_add_step1_order_domain_desc2" qtlid="144175">Atsidarys nauja kortelė ir būsite automatiškai nukreipti į OVH apmokėjimų puslapį.</translation>
+   <translation id="emailpro_tab_domain_step1_helpwizard_subdomain_title" qtlid="137881">Naudoti subdomeną</translation>
+   <translation id="emailpro_tab_domain_step1_helpwizard_subdomain" qtlid="397559">Norėdami pridėti subdomeną vienam iš OVH domenų, pažymėkite varnele „Įvesti domeną, nevaldomą OVH kliento paskyroje“ ir įveskite jį atitinkamame lauke.</translation>
+   <translation id="emailpro_tab_domain_add_step2_which_domain_type" qtlid="137998">Koks tai domenas <span class="italic">{0}</span>?</translation>
+   <translation id="emailpro_tab_domain_add_step2_auth_intro" qtlid="140859">Jūsų domenas <span class="italic">{0}</span> bus sukonfigūruotas privaloma tvarka.</translation>
+   <translation id="emailpro_tab_domain_add_step2_non_auth_intro" qtlid="447729">Jūsų domenas <span class="italic">{0}</span> bus sukonfigūruotas kaip non-autoritative.</translation>
+   <translation id="emailpro_tab_domain_add_step2bis_intro" qtlid="316944">Pasirinkite domeno režimą:</translation>
+   <translation id="emailpro_tab_domain_add_step2_srv_checkbox" qtlid="138011">Automatiškai konfigūruoti SRV (autodiscover)</translation>
+   <translation id="emailpro_tab_domain_add_step2_mx_checkbox" qtlid="139585">Automatiškai konfigūruoti MX (el. laiškų gavimas)</translation>
+   <translation id="emailpro_tab_domain_add_step2_mx_tooltip" qtlid="140209">Dėmesio, automatinis MX konfigūravimas turės įtakos anksčiau sukonfigūruotam laiškų gavimui.</translation>
+   <translation id="emailpro_tab_domain_add_step2_srv_tooltip" qtlid="447742">Šis pasirinkimas leis pašto programoms, pvz., Outlook ar Mail, autoatiškai gauti prisijungimo duomenis.</translation>
+   <translation id="emailpro_tab_domain_add_step3_srv_confirmation" qtlid="137816">SRV konfigūravimas </translation>
+   <translation id="emailpro_tab_domain_add_step3_mx_confirmation" qtlid="137829">MX konfigūravimas </translation>
+   <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Paskirties el. pašto serveris</translation>
+   <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatiškai </translation>
+   <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Ne</translation>
+   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Ar tikrai pageidaujate įtraukti šį domeną į Exchange serverį?</translation>
+   <translation id="emailpro_tab_domain_add_success" qtlid="137868">Į jūsų Exchange serverį bus įtrauktas domenas.</translation>
+   <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Įvyko klaida pridedant domeną prie jūsų Exchange serverio.</translation>
+   <translation id="emailpro_tab_domain_modify_success" qtlid="137907">Domenas bus atnaujintas.</translation>
+   <translation id="emailpro_tab_domain_modify_failure" qtlid="137075">Įvyko klaida atnaujinant domeną.</translation>
+   <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Pereinama prie {0} </translation>
+   <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
+   <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non-authoritative</translation>
+   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Authoritative (tik Exchange)</translation>
+   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Non-authoritative (Exchange + kita pašto paslauga)</translation>
+   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Jei įjungtas režimas yra authoritative, kita pranešimų siuntimo sistema negali būti naudojama su Exchange paskyromis. Šis režimas leidžia įjungti Anti-spam Vade Secure apsaugą.</translation>
+   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">Non-authoritative režimu Exchange veiks kartu su kita el. pašto paslauga. Vade Secure suderinama su  pop/imap paskyromis, esančiomis OVH (mxplan ar svetainių talpinimo pašto). Tokiu atveju MX pašto serverį nurodykite mx1.mail.ovh.net.</translation>
+   <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Paskirties el. pašto serveris</translation>
+   <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">MX ir SRV įrašai bus keičiami rankiniu būdu jūsų DNS zonoje. Visa būtina informacija bus matoma susijusių domenų skiltyje, iš karto po CNAME patvirtinimo.</translation>
+   <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Domeno konfigūravimas</translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="444667">Anti-spam Vade Secure parinktis yra suderinama su non-authoritative režimu (tik jeigu jūsų POP/IMAP el. pašto dėžutės yra talpinamos OVH). Tokiu atveju yra rekomenduojama naudoti: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> ir <strong>{3}</strong><br/><br/> Jeigu jūs norite naudoti non-authoritative režimą su el. pašto dėžutėmis, kurios nėra talpinamos OVH, jūs turite naudoti: <strong>{4}</strong> (žiūrėkite atitinkamų domenų skiltis)</translation>
+   <translation id="emailpro_tab_domain_modify_title" qtlid="137920">Ar tikrai pageidaujate pakeisti šį jūsų Exchange paskyros domeną?</translation>
+   <translation id="emailpro_tab_domain_modify_loop_warning" qtlid="210319">Dėmesio: begalinis ciklas!</translation>
+   <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Negaliojantis domenas.</translation>
+   <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Dėmesio: daugiausiai 255 simboliai!</translation>
+   <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Authoritative / Not authoritative: Ką turėčiau rinktis?</translation>
+   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Pagal nutylėjimą, jums pridedant domeną prie Exchange serverio, jam priskirtas režimas yra Authoritative. T.y., jums siunčiant el. laišką serveryje valdomo domeno adresu, adreso bus ieškoma tik Exchange serveryje. <br /><br /> Tačiau jums pakeitus režimą į Non-authoritative, el. laiško siuntimo metu, mes visų pirma patikrinsime el. pašto adreso buvimą Exchange serveryje, ir jei tokio adreso nėra, jūsų pranešimas bus perduotas jūsų apibrėžtam MX serveriui. <br /><br />Jei domenui pasirinktas režimas yra Non-authoritative, jūs galite, naudodami šį domeną, valdyti dalį savo el. laiškų Exchange, o kitą dalį išoriniame serveryje. <br /><br />Dėmesio: jei norite naudoti Exchange paslaugą kartu su OVH svetainių talpinimo plano el. paštu, kairėje esančios formos „Paskirties el. pašto serveris“ laukelyje jūs turite nurodyti šią vertę: <strong>mx1.mail.ovh.net.</strong></translation>
+   <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Pašalinti domeną </translation>
+   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Ar tikrai pageidaujate pašalinti šį domeną iš jūsų Exchange paslaugos?</translation>
+   <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Domenas bus pašalintas iš jūsų Exchange paslaugos.</translation>
+   <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Įvyko klaida šalinant domeną iš jūsų Exchange paslaugos.</translation>
+
+   <translation id="emailpro_update_billing_action_title" qtlid="98324">Atnaujinimo periodas</translation>
+   <translation id="emailpro_update_billing_button_title" qtlid="190953">Apmokėjimo būdas</translation>
+   <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Galioja iki</translation>
+   <translation id="emailpro_update_billing_header_1M" qtlid="60378">Mėnesio</translation>
+   <translation id="emailpro_update_billing_header_1Y" qtlid="60390">Metams</translation>
+   <translation id="emailpro_update_billing_header_new_periode" qtlid="190992">Naujas laikotarpis</translation>
+   <translation id="emailpro_update_billing_header_terminate" qtlid="209177">None</translation>
+   <translation id="emailpro_update_billing_periode_delete_warning" qtlid="211593">Dėmesio! Paslauga nustos galioti numatytą galiojimo pabaigos datą, po kurios visi duomenys bus pašalinti. Jūs nebegalėsite atkurti paskyros duomenų.</translation>
+   <translation id="emailpro_update_billing_periode_failure" qtlid="191044">Įvyko klaida įkeliant automatinio atnaujinimo laikotarpį.</translation>
+   <translation id="emailpro_update_billing_periode_intro" qtlid="190966">Pasirinkite pageidaujamą periodiškumą automatiniam kiekvienos paskyros atnaujinimui. <br />Šis laikotarpis įsigalios nuo kito atnaujinimo datos.</translation>
+   <translation id="emailpro_update_billing_periode_label" qtlid="168172">Atnaujinimas</translation>
+   <translation id="emailpro_update_billing_periode_partial" qtlid="191031">Įvyko klaida keičiant automatinio atnaujinimo laikotarpį.</translation>
+   <translation id="emailpro_update_billing_periode_resume" qtlid="191005">Jūs keisite savo paskyrų atnaujinimo laikotarpį:</translation>
+   <translation id="emailpro_update_billing_periode_success" qtlid="191018">Automatinio atnaujinimo laikotarpis sėkmingai pakeistas.</translation>
+   <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">metinis</translation>
+   <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">mėnesinis</translation>
+   <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Nustos galioti pagal galiojimo laiką</translation>
 </translations>

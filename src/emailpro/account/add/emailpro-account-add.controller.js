@@ -55,7 +55,7 @@ angular.module('Module.emailpro.controllers')
             if (!$scope.containsSamAccountNameLabel) {
               $scope.containsSamAccountNameLabel = $scope
                 .tr(
-                  'exchange_ACTION_update_account_step1_password_contains_samaccount_name',
+                  'emailpro_ACTION_update_account_step1_password_contains_samaccount_name',
                   [selectedAccount.samaccountName],
                 );
             }
@@ -75,8 +75,8 @@ angular.module('Module.emailpro.controllers')
     $scope.getPasswordTooltip = function () {
       if ($scope.newAccountOptions) {
         return $scope.newAccountOptions.passwordComplexityEnabled
-          ? $scope.tr('exchange_ACTION_update_account_step1_complex_password_tooltip', [$scope.newAccountOptions.minPasswordLength])
-          : $scope.tr('exchange_ACTION_update_account_step1_simple_password_tooltip', [$scope.newAccountOptions.minPasswordLength]);
+          ? $scope.tr('emailpro_ACTION_update_account_step1_complex_password_tooltip', [$scope.newAccountOptions.minPasswordLength])
+          : $scope.tr('emailpro_ACTION_update_account_step1_simple_password_tooltip', [$scope.newAccountOptions.minPasswordLength]);
       }
       return null;
     };
@@ -109,16 +109,16 @@ angular.module('Module.emailpro.controllers')
 
         $scope.passwordTooltip = $scope.newAccountOptions.passwordComplexityEnabled
           ? $scope.tr(
-            'exchange_ACTION_update_account_step1_complex_password_tooltip',
+            'emailpro_ACTION_update_account_step1_complex_password_tooltip',
             [$scope.newAccountOptions.minPasswordLength],
           )
           : $scope.tr(
-            'exchange_ACTION_update_account_step1_simple_password_tooltip',
+            'emailpro_ACTION_update_account_step1_simple_password_tooltip',
             [$scope.newAccountOptions.minPasswordLength],
           );
       }, (failure) => {
         $scope.resetAction();
-        $scope.setMessage($scope.tr('exchange_ACTION_add_account_option_fail'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_ACTION_add_account_option_fail'), failure.data);
       });
     };
 
@@ -152,7 +152,7 @@ angular.module('Module.emailpro.controllers')
       $scope.accountToAdd.login = $scope.accountToAdd.login.toLowerCase();
 
       EmailPro.addEmailProAccount($stateParams.productId, $scope.accountToAdd).then(() => {
-        $scope.setMessage($scope.tr('exchange_ACTION_add_account_success_message'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_ACTION_add_account_success_message'), { status: 'success' });
       }, (failure) => {
         $scope.setMessage($scope.tr('emailpro_ACTION_add_account_error_message'), failure.data);
       });
@@ -161,12 +161,24 @@ angular.module('Module.emailpro.controllers')
   });
 
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, EmailPro) => {
+  .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, EmailPro, User) => {
     // default values
     $scope.accountsToAdd = {
       duration: '12',
       accountsNumber: 1,
     };
+
+    User.getUser()
+      .then(({ ovhSubsidiary }) => {
+        $scope.ovhSubsidiary = ovhSubsidiary;
+      })
+      .catch((failure) => {
+        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_user_error'), failure.data);
+        $scope.ovhSubsidiary = 'FR';
+      })
+      .then(() => {
+        $scope.showPriceWithTaxOnly = _.includes(['DE'], $scope.ovhSubsidiary);
+      });
 
     $scope.valid = { legalWarning: false };
     if ($scope.worldPart === 'CA') {
@@ -183,16 +195,25 @@ angular.module('Module.emailpro.controllers')
         $scope.previewOrder = data;
         $scope.url = data.url;
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_ACTION_order_accounts_step2_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step2_error_message'), failure.data);
         $scope.resetAction();
       });
     };
 
     $scope.loadOrderList = function () {
       EmailPro.getOrderList($stateParams.productId).then((data) => {
-        $scope.ordersList = data;
+        $scope.ordersList = _.map(data, (datum) => {
+          const orderAvailable = _.cloneDeep(datum);
+          orderAvailable.unitaryMonthlyPriceWithTaxes.localizedText = EmailPro.getLocalizedPrice(
+            $scope.ovhSubsidiary,
+            parseFloat(orderAvailable.duration.duration)
+              * orderAvailable.unitaryMonthlyPriceWithTaxes.value,
+            orderAvailable.unitaryMonthlyPriceWithTaxes.currencyCode,
+          );
+          return orderAvailable;
+        });
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_ACTION_order_accounts_step1_loading_error'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_loading_error'), failure.data);
         $scope.resetAction();
       });
     };

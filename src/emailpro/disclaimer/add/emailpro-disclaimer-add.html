@@ -2,7 +2,7 @@
     <div data-wizard
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="saveDisclaimer"
-         data-wizard-title="i18n.exchange_ACTION_add_disclaimer_title">
+         data-wizard-title="i18n.emailpro_ACTION_add_disclaimer_title">
 
         <div data-wizard-step
              data-wizard-step-valid="data.completeDomain && data.content && data.content.length < 5000">
@@ -14,7 +14,7 @@
             <div data-ng-if="!loadingData">
                 <form class="form-horizontal">
                     <label class="oui-label" for="completeDomain"
-                           data-i18n-static="exchange_ACTION_disclaimer_associated_domains"></label>
+                           data-i18n-static="emailpro_ACTION_disclaimer_associated_domains"></label>
                     <div class="oui-select">
                         <select class="oui-select__input" required
                                 name="completeDomain" id="completeDomain"
@@ -27,18 +27,18 @@
                 <form class="form-inline my-3">
                     <div class="oui-field">
                         <label for="variableSelect" class="oui-field__label oui-label"
-                               data-i18n-static="exchange_ACTION_disclaimer_insert"></label>
+                               data-i18n-static="emailpro_ACTION_disclaimer_insert"></label>
                         <div class="oui-field__content">
                             <div class="oui-select">
                                 <select class="oui-select__input" id="variableSelect" name="variableSelect"
                                         data-ng-model="data.selectedAttribute"
-                                        data-ng-options="tr('exchange_ACTION_add_disclaimer_option_' +variable) for variable in availableAttributes">
+                                        data-ng-options="tr('emailpro_ACTION_add_disclaimer_option_' +variable) for variable in availableAttributes">
                                 </select>
                                 <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                             </div>
                             <button class="oui-button oui-button_secondary" type="button"
                                     data-ng-click="insertVariable()"
-                                    data-i18n-static="exchange_ACTION_disclaimer_insert"
+                                    data-i18n-static="emailpro_ACTION_disclaimer_insert"
                                     data-ng-enabled="data.selectedAttribute">
                             </button>
                         </div>
@@ -47,16 +47,16 @@
                 <textarea id="add-disclaimer-editor" data-ckeditor data-ng-model="data.content">{{data.content}}</textarea>
                 <oui-checkbox id="outsideOnly" name="outsideOnly"
                     data-model="data.outsideOnly"
-                    data-text="{{::i18n.exchange_ACTION_add_disclaimer_outside}}">
+                    data-text="{{::i18n.emailpro_ACTION_add_disclaimer_outside}}">
                 </oui-checkbox>
                 <div class="alert alert-warning" role="alert"
                      data-ng-show="data.content.length > 5000"
-                     data-i18n-static="exchange_ACTION_update_disclaimer_length_warning">
+                     data-i18n-static="emailpro_ACTION_update_disclaimer_length_warning">
                 </div>
             </div>
 
             <div data-wizard-step-help>
-                <h3 data-i18n-static="exchange_ACTION_add_disclaimer_helpwizard_title"></h3>
+                <h3 data-i18n-static="emailpro_ACTION_add_disclaimer_helpwizard_title"></h3>
                 <p data-ng-bind-html="tr('emailpro_ACTION_add_disclaimer_helpwizard_details1')"></p>
                 <p>
                     <span data-ng-bind-html="tr('emailpro_ACTION_add_disclaimer_helpwizard_details2')"></span>

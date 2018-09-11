@@ -52,16 +52,16 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
 
   const constructResult = function (data) {
     const mainMessage = {
-      OK: $scope.tr('exchange_ACTION_delegation_success_message'),
-      PARTIAL: $scope.tr('exchange_ACTION_delegation_partial_message'),
-      ERROR: $scope.tr('exchange_ACTION_delegation_error_message'),
+      OK: $scope.tr('emailpro_ACTION_delegation_success_message'),
+      PARTIAL: $scope.tr('emailpro_ACTION_delegation_partial_message'),
+      ERROR: $scope.tr('emailpro_ACTION_delegation_error_message'),
     };
     let state = 'OK';
     let errors = 0;
 
     angular.forEach(data, (task) => {
       if (task.status === 'ERROR') {
-        _.set(task, 'message', $scope.tr(`exchange_tab_TASKS_${task.function}`));
+        _.set(task, 'message', $scope.tr(`emailpro_tab_TASKS_${task.function}`));
         _.set(task, 'type', 'ERROR');
         state = 'PARTIAL';
         errors += 1;
@@ -126,7 +126,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
       })
       .catch((failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ACCOUNTS_error_message'), failure.data);
       });
   };
 
@@ -146,12 +146,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
 
   $scope.updateDelegationRight = function () {
     $scope.resetAction();
-    $scope.setMessage($scope.tr('exchange_ACTION_delegation_doing_message'), { status: 'success' });
+    $scope.setMessage($scope.tr('emailpro_ACTION_delegation_doing_message'), { status: 'success' });
 
     EmailPro.updateAccountDelegationRights($stateParams.productId, getChanges()).then((data) => {
       constructResult(data);
     }, (failure) => {
-      $scope.setMessage($scope.tr('exchange_ACTION_delegation_error_message'), failure.data);
+      $scope.setMessage($scope.tr('emailpro_ACTION_delegation_error_message'), failure.data);
     });
   };
 
@@ -233,7 +233,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProMailingListDel
       })
       .catch((failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('exchange_tab_GROUPS_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_GROUPS_error_message'), failure.data);
       });
   };
 
@@ -253,15 +253,15 @@ angular.module('Module.emailpro.controllers').controller('EmailProMailingListDel
 
   $scope.updateDelegationRight = function () {
     $scope.resetAction();
-    $scope.setMessage($scope.tr('exchange_GROUPS_delegation_doing_message'));
+    $scope.setMessage($scope.tr('emailpro_GROUPS_delegation_doing_message'));
 
     EmailPro
       .updateMailingListDelegationRights($stateParams.productId, getChanges())
       .then((data) => {
-        $scope.setMessage($scope.tr('exchange_GROUPS_delegation_success_message'), data);
+        $scope.setMessage($scope.tr('emailpro_GROUPS_delegation_success_message'), data);
       })
       .catch((failure) => {
-        $scope.setMessage($scope.tr('exchange_GROUPS_delegation_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_GROUPS_delegation_error_message'), failure.data);
       });
   };
 

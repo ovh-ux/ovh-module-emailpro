@@ -67,7 +67,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProDelegationSett
       })
       .catch((failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ACCOUNTS_error_message'), failure.data);
       });
   };
 
@@ -83,12 +83,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProDelegationSett
 
   $scope.updateDelegationRight = function () {
     $scope.resetAction();
-    $scope.setMessage($scope.tr('exchange_ACTION_delegation_doing_message'));
+    $scope.setMessage($scope.tr('emailpro_ACTION_delegation_doing_message'));
 
     EmailPro.updateDelegationRight(getChanges()).then((data) => {
-      $scope.setMessage($scope.tr('exchange_ACTION_delegation_success_message'), data);
+      $scope.setMessage($scope.tr('emailpro_ACTION_delegation_success_message'), data);
     }, (failure) => {
-      $scope.setMessage($scope.tr('exchange_ACTION_delegation_error_message'), failure.data);
+      $scope.setMessage($scope.tr('emailpro_ACTION_delegation_error_message'), failure.data);
     });
   };
 

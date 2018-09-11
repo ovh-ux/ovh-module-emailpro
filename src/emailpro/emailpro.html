@@ -61,7 +61,7 @@
                     <button class="btn btn-link" type="button"
                               data-ng-if="exchange.renewOptionAvailable || is25g()"
                               data-ng-click="setAction('emailpro/update/renew/emailpro-update-renew', exchange)"
-                              data-i18n-static="exchange_update_billing_button_title">
+                              data-i18n-static="emailpro_update_billing_button_title">
                     </button>
                   </li>
                   <li class="dropdown-divider">
@@ -69,8 +69,8 @@
                       <button class="btn btn-link" type="button"
                               data-ng-if="exchange.deleteOptionAvailable"
                               data-ng-click="setAction('emailpro/remove/emailpro-remove', exchange)">
-                          <span data-i18n-static="exchange_resilitation_action_button" data-ng-if="!exchange.renewType.deleteAtExpiration"></span>
-                          <span data-i18n-static="exchange_resilitation_action_button_cancel" data-ng-if="exchange.renewType.deleteAtExpiration"></span>
+                          <span data-i18n-static="emailpro_resilitation_action_button" data-ng-if="!exchange.renewType.deleteAtExpiration"></span>
+                          <span data-i18n-static="emailpro_resilitation_action_button_cancel" data-ng-if="exchange.renewType.deleteAtExpiration"></span>
                       </button>
                   </li>
                 </ul>
@@ -99,7 +99,7 @@
                  data-linkedpopover-single="false"
                  data-linkedpopover-remote="true">
                 <strong class="pointer underline"
-                        data-i18n-static="exchange_dashboard_message_see_more"
+                        data-i18n-static="emailpro_dashboard_message_see_more"
                         data-ng-if="messageDetails.length > 0"></strong>
             </div>
         </div>
@@ -120,7 +120,7 @@
              data-linkedpopover-single="false"
              data-linkedpopover-remote="true">
             <strong class="pointer underline"
-                    data-i18n-static="exchange_dashboard_message_see_more"
+                    data-i18n-static="emailpro_dashboard_message_see_more"
                     data-ng-if="messageDetails.length > 0"></strong>
         </div>
     </div>
@@ -130,8 +130,8 @@
 <div class="alert alert-warning mt-5 mx-5" role="alert"
      data-ng-if="exchange.serverDiagnostic.individual2010"
      data-ng-show="!loadingEmailProInformations && !loadingEmailProError">
-    <a href="http://migrationstatus.mail.ovh.net" target="_blank" title="{{tr('exchange_dashboard_2016_migration')}} ({{tr('exchange_dashboard_new_window')}})">
-        <span data-i18n-static="exchange_dashboard_2016_migration"></span>
+    <a href="http://migrationstatus.mail.ovh.net" target="_blank" title="{{tr('emailpro_dashboard_2016_migration')}} ({{tr('emailpro_dashboard_new_window')}})">
+        <span data-i18n-static="emailpro_dashboard_2016_migration"></span>
         <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
     </a>
 </div>
