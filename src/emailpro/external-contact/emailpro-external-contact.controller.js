@@ -18,7 +18,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddExternalCon
           })
           .catch((failure) => {
             $scope.resetAction();
-            $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail'), failure.data);
+            $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail'), failure.data);
           });
       }
     });
@@ -43,11 +43,11 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddExternalCon
     EmailProExternalContacts
       .addContact($stateParams.organization, $stateParams.productId, $scope.model.newAccount)
       .then(() => {
-        $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_success'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_success'), { status: 'success' });
       })
       .catch((failure) => {
         _.set(failure, 'status', 'error');
-        $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail'), failure);
+        $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail'), failure);
       });
   };
 
@@ -107,10 +107,10 @@ angular.module('Module.emailpro.controllers').controller('EmailProExternalContac
         $scope.model.newAccount,
       )
       .then(() => {
-        $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success'), { status: 'success' });
       }, (err) => {
         _.set(err, 'status', err.status || 'error');
-        $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail'), err);
+        $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail'), err);
       });
   };
 
@@ -158,11 +158,11 @@ angular.module('Module.emailpro.controllers').controller('EmailProExternalContac
         $scope.model.externalEmailAddress,
       )
       .then(() => {
-        $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_success'), { status: 'success' });
       })
       .catch((err) => {
         _.set(err, 'status', err.status || 'error');
-        $scope.setMessage($scope.tr('exchange_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail'), err);
+        $scope.setMessage($scope.tr('emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_delete_fail'), err);
       });
   };
 });

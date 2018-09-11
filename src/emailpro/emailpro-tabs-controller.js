@@ -13,12 +13,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($s
     title: $scope.tr('navigation_more'),
     items: [
       {
-        label: $scope.tr('exchange_tab_DISCLAIMER'),
+        label: $scope.tr('emailpro_tab_DISCLAIMER'),
         target: 'DISCLAIMER',
         type: 'SWITCH_TABS',
       },
       {
-        label: $scope.tr('exchange_tab_TASKS'),
+        label: $scope.tr('emailpro_tab_TASKS'),
         target: 'TASK',
         type: 'SWITCH_TABS',
       },

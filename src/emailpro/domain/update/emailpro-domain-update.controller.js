@@ -104,12 +104,12 @@ angular.module('Module.emailpro.controllers')
       EmailProDomains
         .updateDomain($stateParams.organization, $stateParams.productId, $scope.selectedDomain)
         .then(() => {
-          $scope.setMessage($scope.tr('exchange_tab_domain_modify_success'), 'true');
+          $scope.setMessage($scope.tr('emailpro_tab_domain_modify_success'), 'true');
         })
         .catch((failure) => {
           // Make sure the type in the select widget is reset to its initial value
           $rootScope.$broadcast(EmailPro.events.domainsChanged);
-          $scope.setMessage($scope.tr('exchange_tab_domain_modify_failure'), failure.data);
+          $scope.setMessage($scope.tr('emailpro_tab_domain_modify_failure'), failure.data);
         });
     };
 

@@ -32,7 +32,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAliasCtrl',
         })
         .catch((failure) => {
           _.set(failure, 'data.type', failure.data.type || 'ERROR');
-          $scope.setMessage($scope.tr('exchange_tab_ALIAS_error_message'), failure.data);
+          $scope.setMessage($scope.tr('emailpro_tab_ALIAS_error_message'), failure.data);
         });
     }
     return null;
@@ -56,7 +56,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAliasCtrl',
       })
       .catch((failure) => {
         _.set(failure, 'data.type', failure.data.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_error_message'), failure.data);
       });
   };
 
@@ -106,7 +106,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddAccountAlia
         }
       }, (failure) => {
         _.set(failure, 'data.type', failure.data.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_domain_loading_failure'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_domain_loading_failure'), failure.data);
         $scope.resetAction();
       });
   };
@@ -125,12 +125,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddAccountAlia
     EmailPro
       .addAlias($stateParams.productId, $scope.selectedAccount.primaryEmailAddress, $scope.model)
       .then((data) => {
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_add_alias_success_message'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_add_alias_success_message'), { status: 'success' });
         return data;
       })
       .catch((failure) => {
         _.set(failure, 'type', failure.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_add_alias_error_message'), failure);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_add_alias_error_message'), failure);
       });
   };
 
@@ -152,12 +152,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveAliasCtr
     EmailPro
       .deleteAlias($stateParams.productId, $scope.account.primaryEmailAddress, $scope.alias.alias)
       .then((data) => {
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_delete_success_message'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_delete_success_message'), { status: 'success' });
         return data;
       })
       .catch((failure) => {
         _.set(failure, 'type', failure.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_delete_error_message'), failure);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_delete_error_message'), failure);
       });
   };
 });
@@ -189,7 +189,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabGroupAliasC
         .catch((failure) => {
           $scope.aliasLoading = false;
           _.set(failure, 'type', failure.type || 'ERROR');
-          $scope.setMessage($scope.tr('exchange_tab_ALIAS_error_message'), failure);
+          $scope.setMessage($scope.tr('emailpro_tab_ALIAS_error_message'), failure);
         });
     }
   };
@@ -242,7 +242,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddGroupAliasC
         }
       }, (failure) => {
         _.set(failure, 'data.type', failure.data.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_domain_loading_failure'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_domain_loading_failure'), failure.data);
         $scope.resetAction();
       });
   };
@@ -265,11 +265,11 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddGroupAliasC
         $scope.model,
       )
       .then(() => {
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_add_alias_success_message'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_add_alias_success_message'), { status: 'success' });
       })
       .catch((failure) => {
         _.set(failure, 'data.type', failure.data.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_add_alias_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_add_alias_error_message'), failure.data);
       });
   };
 
@@ -295,11 +295,11 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveGroupAli
         $scope.alias.alias,
       )
       .then(() => {
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_delete_success_message'), { status: 'success' });
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_delete_success_message'), { status: 'success' });
       })
       .catch((failure) => {
         _.set(failure, 'data.type', failure.data.type || 'ERROR');
-        $scope.setMessage($scope.tr('exchange_tab_ALIAS_delete_error_message'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_tab_ALIAS_delete_error_message'), failure.data);
       });
   };
 });

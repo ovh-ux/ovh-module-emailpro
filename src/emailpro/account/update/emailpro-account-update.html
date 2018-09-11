@@ -24,7 +24,7 @@
                 <div class="form-group"
                      data-ng-class="{ 'has-error': emailProUpdateAccountForm.login.$dirty && (emailProUpdateAccountForm.login.$invalid || takenEmailError) }">
                     <label for="login" class="col-md-12 control-label text-left required"
-                           data-i18n-static="exchange_ACTION_add_account_step1_email_label"></label>
+                           data-i18n-static="emailpro_ACTION_add_account_step1_email_label"></label>
                     <div class="col-md-12">
                         <div class="input-group">
                             <input type="text" class="form-control" id="login" name="login" required
@@ -41,7 +41,7 @@
                             </select>
                         </div>
                         <small class="help-block"
-                               data-i18n-static="exchange_tab_ALIAS_taken_error_message"
+                               data-i18n-static="emailpro_tab_ALIAS_taken_error_message"
                                data-ng-if="takenEmailError">
                         </small>
                         <small class="help-block"
@@ -53,10 +53,10 @@
                 <div class="form-group"
                      data-ng-show="!selectedAccount.is25g && newAccountOptions.availableTypes.length > 1">
                     <label for="accountLicense" class="col-md-3 control-label"
-                           data-i18n-static="exchange_ACTION_update_account_step1_type_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_type_label"></label>
                     <div class="col-md-9">
                         <select class="form-control" id="accountLicense" name="accountLicense"
-                                data-ng-options="tr('exchange_ACTION_update_account_step1_type_' + type) for type in newAccountOptions.availableTypes"
+                                data-ng-options="tr('emailpro_ACTION_update_account_step1_type_' + type) for type in newAccountOptions.availableTypes"
                                 data-ng-model="selectedAccount.accountLicense"
                                 data-required>
                         </select>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="form-group">
                     <label for="firstname" class="col-md-3 control-label"
-                           data-i18n-static="exchange_ACTION_update_account_step1_first_name_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_first_name_label"></label>
                     <div class="col-md-9">
                         <input type="text" class="form-control" id="firstname" name="firstname" maxlength="64"
                                data-ng-model="selectedAccount.firstName"
@@ -73,7 +73,7 @@
                 </div>
                 <div class="form-group">
                     <label for="lastname" class="col-md-3 control-label"
-                           data-i18n-static="exchange_ACTION_update_account_step1_last_name_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_last_name_label"></label>
                     <div class="col-md-9">
                         <input type="text" class="form-control" id="lastname" name="lastname" maxlength="64"
                                data-ng-model="selectedAccount.lastName"
@@ -82,7 +82,7 @@
                 </div>
                 <div class="form-group">
                     <label for="displayname" class="col-md-3 control-label"
-                           data-i18n-static="exchange_ACTION_update_account_step1_display_name_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_display_name_label"></label>
                     <div class="col-md-9">
                         <input type="text" class="form-control" id="displayname" name="displayname"
                                data-ng-model="selectedAccount.displayName"
@@ -93,7 +93,7 @@
                      data-ng-class="{ 'has-error': simplePasswordFlag || containsNameFlag || containsSamAccountNameFlag }">
                     <label for="password" class="col-md-3 control-label"
                            data-ng-class="{ 'required': !selectedAccount.canBeConfigured }"
-                           data-i18n-static="exchange_ACTION_update_account_step1_password_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_password_label"></label>
                     <div class="col-md-9">
                         <input type="password" class="form-control" id="password" name="password"
                                placeholder="{{getPasswordPlaceholder()}}"
@@ -101,7 +101,7 @@
                                data-ng-change="setPasswordsFlag(selectedAccount)"
                                data-uib-tooltip="{{passwordTooltip}}">
                         <span class="help-block" data-ng-if="simplePasswordFlag"
-                              data-i18n-static="exchange_ACTION_update_account_step1_password_weak"></span>
+                              data-i18n-static="emailpro_ACTION_update_account_step1_password_weak"></span>
                         <span class="help-block" data-ng-if="containsNameFlag"
                              data-i18n-static="emailpro_ACTION_update_account_step1_password_contains_name"></span>
                         <span class="help-block" data-ng-if="containsSamAccountNameFlag"
@@ -112,7 +112,7 @@
                      data-ng-class="{ 'has-error': selectedAccount.passwordConfirmation && differentPasswordFlag }">
                     <label for="passwordConfirmation" class="col-md-3 control-label"
                            data-ng-class="{ 'required': !selectedAccount.canBeConfigured }"
-                           data-i18n-static="exchange_ACTION_update_account_step1_password_confirmation_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_password_confirmation_label"></label>
                     <div class="col-md-9">
                         <input type="password" class="form-control" id="passwordConfirmation" name="passwordConfirmation"
                                 placeholder="{{getPasswordPlaceholder()}}"
@@ -121,13 +121,13 @@
                                 data-uib-tooltip="{{passwordTooltip}}">
                         <span class="help-block"
                               data-ng-if="selectedAccount.passwordConfirmation && differentPasswordFlag"
-                              data-i18n-static="exchange_ACTION_update_account_step1_password_different"></span>
+                              data-i18n-static="emailpro_ACTION_update_account_step1_password_different"></span>
                     </div>
                 </div>
                 <div class="form-group"
                      data-ng-show="!selectedAccount.is25g && newAccountOptions && exchange.offer == accountTypeProvider">
                     <label for="quota" class="col-md-3 control-label"
-                           data-i18n-static="exchange_ACTION_update_account_step1_quota_label"></label>
+                           data-i18n-static="emailpro_ACTION_update_account_step1_quota_label"></label>
                     <div class="col-md-9">
                         <select class="form-control w-75 pull-left" id="quota" required
                                 data-ng-options="quota for quota in newAccountOptions.quotaArray"
@@ -141,47 +141,47 @@
             <div data-wizard-step-help>
                 <h3 data-i18n-static="emailpro_ACTION_update_account_helpwizard_title"></h3>
                 <p data-ng-bind-html="tr('emailpro_ACTION_update_account_helpwizard_intro')"></p>
-                <strong data-i18n-static="exchange_ACTION_update_account_helpwizard_password_title"></strong>
+                <strong data-i18n-static="emailpro_ACTION_update_account_helpwizard_password_title"></strong>
                 <p data-ng-show="newAccountOptions.passwordComplexityEnabled"
-                   data-ng-bind-html="tr('exchange_ACTION_update_account_helpwizard_password', [newAccountOptions.minPasswordLength])"></p>
+                   data-ng-bind-html="tr('emailpro_ACTION_update_account_helpwizard_password', [newAccountOptions.minPasswordLength])"></p>
                 <p data-ng-hide="newAccountOptions.passwordComplexityEnabled"
-                   data-ng-bind-html="tr('exchange_ACTION_update_account_helpwizard_password_simple', [newAccountOptions.minPasswordLength])"></p>
+                   data-ng-bind-html="tr('emailpro_ACTION_update_account_helpwizard_password_simple', [newAccountOptions.minPasswordLength])"></p>
             </div>
         </div>
 
         <div data-wizard-step>
-            <p data-i18n-static="exchange_ACTION_update_account_step2_confirmation_intro"></p>
+            <p data-i18n-static="emailpro_ACTION_update_account_step2_confirmation_intro"></p>
             <dl class="dl-horizontal dl-lg">
-                <dt data-i18n-static="exchange_ACTION_update_account_step2_email_label"></dt>
+                <dt data-i18n-static="emailpro_ACTION_update_account_step2_email_label"></dt>
                 <dd data-ng-bind="selectedAccount.login + '@' + selectedAccount.completeDomain.displayName"></dd>
 
                 <div data-ng-if="newAccountOptions.availableTypes.length > 1">
-                    <dt data-i18n-static="exchange_ACTION_update_account_step1_type_label"></dt>
-                    <dd data-ng-bind="tr('exchange_ACTION_update_account_step1_type_' + selectedAccount.accountLicense)"></dd>
+                    <dt data-i18n-static="emailpro_ACTION_update_account_step1_type_label"></dt>
+                    <dd data-ng-bind="tr('emailpro_ACTION_update_account_step1_type_' + selectedAccount.accountLicense)"></dd>
                 </div>
 
-                <dt data-i18n-static="exchange_ACTION_update_account_step2_first_name_label"></dt>
+                <dt data-i18n-static="emailpro_ACTION_update_account_step2_first_name_label"></dt>
                 <dd data-ng-if="selectedAccount.firstName"
                     data-ng-bind="selectedAccount.firstName"></dd>
                 <dd data-ng-if="!selectedAccount.firstName">-</dd>
 
-                <dt data-i18n-static="exchange_ACTION_update_account_step2_last_name_label"></dt>
+                <dt data-i18n-static="emailpro_ACTION_update_account_step2_last_name_label"></dt>
                 <dd data-ng-if="selectedAccount.lastName"
                     data-ng-bind="selectedAccount.lastName"></dd>
                 <dd data-ng-if="!selectedAccount.lastName">-</dd>
 
-                <dt data-i18n-static="exchange_ACTION_update_account_step2_display_name_label"></dt>
+                <dt data-i18n-static="emailpro_ACTION_update_account_step2_display_name_label"></dt>
                 <dd data-ng-if="selectedAccount.displayName"
                     data-ng-bind="selectedAccount.displayName"></dd>
                 <dd data-ng-if="!selectedAccount.displayName">-</dd>
 
-                <dt data-i18n-static="exchange_ACTION_update_account_step2_password_label"
+                <dt data-i18n-static="emailpro_ACTION_update_account_step2_password_label"
                     data-ng-if="selectedAccount.password"></dt>
                 <dd data-ng-if="selectedAccount.password">
                     <span data-ng-repeat="x in selectedAccount.password track by $index">*</span>
                 </dd>
 
-                <dt data-i18n-static="exchange_ACTION_update_account_step1_quota_label"
+                <dt data-i18n-static="emailpro_ACTION_update_account_step1_quota_label"
                     data-ng-if="!selectedAccount.is25g && exchange.offer == accountTypeProvider"></dt>
                 <dd data-ng-if="!selectedAccount.is25g && exchange.offer == accountTypeProvider">
                     <span data-ng-bind="selectedAccount.quota"></span> <span data-i18n-static="unit_size_GB"></span>

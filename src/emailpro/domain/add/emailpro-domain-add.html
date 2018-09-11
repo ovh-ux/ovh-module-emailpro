@@ -3,7 +3,7 @@
     <div data-wizard
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="addDomain"
-         data-wizard-title="i18n.exchange_tab_domain_add_domain">
+         data-wizard-title="i18n.emailpro_tab_domain_add_domain">
 
         <div data-wizard-step
              data-wizard-step-on-load="loadDomainData"
@@ -28,12 +28,12 @@
                            class="oui-radio__input">
                     <label class="oui-radio__label-container" for="addOption1">
                         <span class="oui-radio__label"
-                              data-i18n-static="exchange_tab_domain_add_step1_select_domain_option"></span>
+                              data-i18n-static="emailpro_tab_domain_add_step1_select_domain_option"></span>
                     </label>
                 </div>
                 <div class="form-group" data-ng-if="model.domainType === ovhDomain">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="{{i18n.exchange_tab_domain_search}}"
+                        <input type="text" class="form-control" placeholder="{{i18n.emailpro_tab_domain_search}}"
                                data-ng-model="search.value"
                                data-ng-change="resetName()">
                         <div class="input-group-btn" data-ng-if="search.value">
@@ -60,7 +60,7 @@
                         </button>
                     </li>
                     <li data-ng-if="availableDomains.length === 0 && search.value"
-                        data-i18n-static="exchange_tab_domain_add_step1_domain_none">
+                        data-i18n-static="emailpro_tab_domain_add_step1_domain_none">
                     </li>
                 </ul>
                 <div class="oui-radio">
@@ -72,7 +72,7 @@
                     <label class="oui-radio__label-container" for="addOption2">
                         <span id="nonOvhDomain"
                               class="oui-radio__label"
-                              data-i18n-static="exchange_tab_domain_add_step1_user_owned_option"></span>
+                              data-i18n-static="emailpro_tab_domain_add_step1_user_owned_option"></span>
                     </label>
                 </div>
                 <div class="form-group"
@@ -80,7 +80,7 @@
                     data-ng-if="model.domainType === nonOvhDomain">
                     <input type="text"
                            class="form-control"
-                           placeholder="{{i18n.exchange_tab_domain_domain}}"
+                           placeholder="{{i18n.emailpro_tab_domain_domain}}"
                            aria-labelledby="nonOvhDomain"
                            data-ng-model="model.displayName"
                            data-ng-change="changeName()">
@@ -88,15 +88,15 @@
                           data-ng-if="!isNonOvhDomainValid()"
                           data-i18n-static="emailpro_ACTION_add_domain_invalid_domain"></span>
                     <div class="alert alert-warning mt-4" role="alert"
-                         data-i18n-static="exchange_tab_domain_add_step1_user_owned_info">
+                         data-i18n-static="emailpro_tab_domain_add_step1_user_owned_info">
                     </div>
                 </div>
             </form>
 
             <div data-wizard-step-help>
-                <h3 data-i18n-static="exchange_tab_TASKS_ADD_DOMAIN"></h3>
-                <h4 data-i18n-static="exchange_tab_domain_step1_helpwizard_subdomain_title"></h4>
-                <p data-ng-bind-html="tr('exchange_tab_domain_step1_helpwizard_subdomain')"></p>
+                <h3 data-i18n-static="emailpro_tab_TASKS_ADD_DOMAIN"></h3>
+                <h4 data-i18n-static="emailpro_tab_domain_step1_helpwizard_subdomain_title"></h4>
+                <p data-ng-bind-html="tr('emailpro_tab_domain_step1_helpwizard_subdomain')"></p>
             </div>
         </div>
 
@@ -104,7 +104,7 @@
              data-wizard-step-valid="model.type === 'AUTHORITATIVE' || (model.mxRelay && model.type === 'NON_AUTHORITATIVE')">
 
             <form name="emailProAddDomainStep2Form">
-                <p data-i18n-static="exchange_tab_domain_add_step2bis_intro"></p>
+                <p data-i18n-static="emailpro_tab_domain_add_step2bis_intro"></p>
                 <div class="oui-radio">
                     <input type="radio"
                            name="domainType" id="domainType-A"
@@ -132,7 +132,7 @@
                 </div>
                 <div class="form-group">
                     <label class="sr-only" for="targetMailServer"
-                           data-i18n-static="exchange_tab_domain_target_mail_server_label"></label>
+                           data-i18n-static="emailpro_tab_domain_target_mail_server_label"></label>
                     <input type="text"
                            name="targetMailServer"
                            class="form-control"
@@ -151,33 +151,33 @@
              data-wizard-step-valid="model.type">
 
             <p data-ng-if="model.type === 'AUTHORITATIVE'"
-               data-ng-bind-html="tr('exchange_tab_domain_add_step2_auth_intro', model.displayName)"></p>
+               data-ng-bind-html="tr('emailpro_tab_domain_add_step2_auth_intro', model.displayName)"></p>
             <p data-ng-if="model.type === 'NON_AUTHORITATIVE'"
-               data-ng-bind-html="tr('exchange_tab_domain_add_step2_non_auth_intro', model.displayName)"></p>
+               data-ng-bind-html="tr('emailpro_tab_domain_add_step2_non_auth_intro', model.displayName)"></p>
 
             <form name="emailProAddDomainStep3Form">
                 <div data-ng-if="model.domainType !== nonOvhDomain">
                     <oui-checkbox id="srvParam" name="srvParam"
                         data-model="model.srvParam"
-                        data-text="{{::i18n.exchange_tab_domain_add_step2_srv_checkbox}}">
+                        data-text="{{::i18n.emailpro_tab_domain_add_step2_srv_checkbox}}">
                     </oui-checkbox>
                     <div class="alert alert-info" role="alert"
                          data-ng-if="model.srvParam"
-                         data-i18n-static="exchange_tab_domain_add_step2_srv_tooltip">
+                         data-i18n-static="emailpro_tab_domain_add_step2_srv_tooltip">
                     </div>
                     <oui-checkbox id="mxParam" name="mxParam"
                         data-model="model.mxParam"
-                        data-text="{{::i18n.exchange_tab_domain_add_step2_mx_checkbox}}">
+                        data-text="{{::i18n.emailpro_tab_domain_add_step2_mx_checkbox}}">
                     </oui-checkbox>
                     <div class="alert alert-warning" role="alert"
                           data-ng-if="model.mxParam"
-                          data-i18n-static="exchange_tab_domain_add_step2_mx_tooltip">
+                          data-i18n-static="emailpro_tab_domain_add_step2_mx_tooltip">
                     </div>
                 </div>
                 <div class="alert alert-warning mt-3" role="alert"
                      data-ng-if="model.domainType === nonOvhDomain">
-                    <span data-i18n-static="exchange_tab_domain_noovh_mx_info"></span>
-                    <span data-i18n-static="exchange_tab_domain_add_step2_mx_tooltip"></span>
+                    <span data-i18n-static="emailpro_tab_domain_noovh_mx_info"></span>
+                    <span data-i18n-static="emailpro_tab_domain_add_step2_mx_tooltip"></span>
                 </div>
                 <div class="form-group" data-ng-if="setOrganization2010">
                     <div class="checkbox">
@@ -185,14 +185,14 @@
                             <input type="checkbox"
                                    name="mainDomain"
                                    data-ng-model="model.main">
-                            <span data-i18n-static="exchange_tab_domain_add_step1_main_domain"
-                                  data-uib-tooltip="{{i18n.exchange_tab_domain_add_step1_main_domain_tooltip}}"></span>
+                            <span data-i18n-static="emailpro_tab_domain_add_step1_main_domain"
+                                  data-uib-tooltip="{{i18n.emailpro_tab_domain_add_step1_main_domain_tooltip}}"></span>
                         </label>
                     </div>
                     <div class="form-group" data-ng-if="!model.main">
                         <label class="required"
                                for="mainDomainAttached"
-                               data-i18n-static="exchange_tab_domain_add_step1_attach_organization_intro">
+                               data-i18n-static="emailpro_tab_domain_add_step1_attach_organization_intro">
                         </label>
                         <select class="form-control"
                                 id="mainDomainAttached"
@@ -202,7 +202,7 @@
                         </select>
                     </div>
                     <p data-ng-if="model.main"
-                       data-ng-bind="tr('exchange_tab_domain_add_step1_new_organization_intro', [model.displayName])"></p>
+                       data-ng-bind="tr('emailpro_tab_domain_add_step1_new_organization_intro', [model.displayName])"></p>
                 </div>
             </form>
         </div>
@@ -210,32 +210,32 @@
         <div data-wizard-step>
             <p data-i18n-static="emailpro_tab_domain_add_step3_confirmation"></p>
             <dl class="dl-horizontal mt-3">
-                <dt data-i18n-static="exchange_tab_domain_domain"></dt>
+                <dt data-i18n-static="emailpro_tab_domain_domain"></dt>
                 <dd>
                     <span data-ng-bind="model.displayName"></span>
                     <span data-ng-if="model.isUTF8Domain"> (<span data-ng-bind="model.name"></span>)</span>
                 </dd>
 
-                <dt data-i18n-static="exchange_tab_domain_type"></dt>
-                <dd data-ng-bind="tr('exchange_tab_domain_' + model.type)"></dd>
+                <dt data-i18n-static="emailpro_tab_domain_type"></dt>
+                <dd data-ng-bind="tr('emailpro_tab_domain_' + model.type)"></dd>
 
                 <dt data-ng-if="model.domainType !== nonOvhDomain"
-                    data-i18n-static="exchange_tab_domain_add_step3_mx_confirmation"></dt>
+                    data-i18n-static="emailpro_tab_domain_add_step3_mx_confirmation"></dt>
                 <dd data-ng-if="model.domainType !== nonOvhDomain"
-                    data-ng-bind="tr('exchange_tab_domain_add_step3_configuration_' + model.mxParam)"></dd>
+                    data-ng-bind="tr('emailpro_tab_domain_add_step3_configuration_' + model.mxParam)"></dd>
 
                 <dt data-ng-if="model.domainType !== nonOvhDomain"
-                    data-i18n-static="exchange_tab_domain_add_step3_srv_confirmation"></dt>
+                    data-i18n-static="emailpro_tab_domain_add_step3_srv_confirmation"></dt>
                 <dd data-ng-if="model.domainType !== nonOvhDomain"
-                    data-ng-bind="tr('exchange_tab_domain_add_step3_configuration_' + model.srvParam)"></dd>
+                    data-ng-bind="tr('emailpro_tab_domain_add_step3_configuration_' + model.srvParam)"></dd>
 
                 <dt data-ng-if="setOrganization2010"
-                    data-i18n-static="exchange_tab_domain_add_step2_main_domain"></dt>
+                    data-i18n-static="emailpro_tab_domain_add_step2_main_domain"></dt>
                 <dd data-ng-if="setOrganization2010"
-                    data-ng-bind="tr('exchange_tab_domain_add_step2_main_domain_' + model.main)"></dd>
+                    data-ng-bind="tr('emailpro_tab_domain_add_step2_main_domain_' + model.main)"></dd>
 
                 <dt data-ng-if="setOrganization2010"
-                    data-i18n-static="exchange_tab_domain_add_step2_organization"></dt>
+                    data-i18n-static="emailpro_tab_domain_add_step2_organization"></dt>
                 <dd data-ng-if="setOrganization2010 && model.main && model.organization2010"
                     data-ng-bind="model.organization2010"></dd>
                 <dd data-ng-if="setOrganization2010 && model.main && !model.organization2010"

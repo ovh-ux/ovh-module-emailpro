@@ -8,7 +8,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProLicenseHistory
   };
 
   const parseSerie = function (serie) {
-    _.set(serie, 'name', $scope.tr(`exchange_action_license_history_type_${serie.name}`));
+    _.set(serie, 'name', $scope.tr(`emailpro_action_license_history_type_${serie.name}`));
     const rawData = []; // data buffer
     angular.forEach(serie.data, (obj2) => {
       rawData.push(parseItem(obj2));
@@ -32,7 +32,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProLicenseHistory
       }, (failure) => {
         $scope.resetAction();
         $scope.loading = false;
-        $scope.setMessage($scope.tr('exchange_action_license_history_fail'), failure.data);
+        $scope.setMessage($scope.tr('emailpro_action_license_history_fail'), failure.data);
       });
   };
 
