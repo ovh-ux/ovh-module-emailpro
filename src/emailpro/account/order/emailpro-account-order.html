@@ -32,10 +32,10 @@
                                     <span data-ng-bind-html="tr('exchange_ACTION_order_accounts_step1_pay_type_' + orderAvailable.duration.duration)"></span>
                                     (<strong>
                                         <span data-ng-if="!showPriceWithTaxOnly"
-                                              data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price', [ orderAvailable.unitaryMonthlyPrice.text, orderAvailable.unitaryMonthlyPriceWithTax.text ])">
+                                              data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price', [ orderAvailable.unitaryMonthlyPrice.text, orderAvailable.unitaryMonthlyPriceWithTaxes.text ])">
                                         </span>
                                         <span data-ng-if="showPriceWithTaxOnly"
-                                              data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price_with_tax_only', [ orderAvailable.unitaryMonthlyPriceWithTax.localizedText ])">
+                                              data-ng-bind="tr('emailpro_ACTION_order_accounts_step1_price_with_tax_only', [ orderAvailable.unitaryMonthlyPriceWithTaxes.localizedText ])">
                                         </span>
                                     </strong>
                                     <span data-ng-bind="tr('emailpro_ACTION_order_accounts_per_account')"></span>
