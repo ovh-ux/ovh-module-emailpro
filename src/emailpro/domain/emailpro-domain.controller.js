@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabDomainsCtrl', ($scope, $http, $stateParams, EmailPro, EmailProDomains) => {
+angular.module('Module.emailpro.controllers').controller('EmailProTabDomainsCtrl', ($scope, $http, $stateParams, $translate, EmailPro, EmailProDomains) => {
   $scope.domainTypeAuthoritative = 'AUTHORITATIVE';
   $scope.domainTypeNonAuthoritative = 'NON_AUTHORITATIVE';
   $scope.stateCreating = EmailPro.stateCreating;
@@ -54,17 +54,17 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabDomainsCtrl
 
   function setMxTooltip(domain) {
     if (domain.mxValid) {
-      _.set(domain, 'mxTooltip', $scope.tr('emailpro_tab_domain_diagnostic_mx_toolbox_ok'));
+      _.set(domain, 'mxTooltip', $translate.instant('emailpro_tab_domain_diagnostic_mx_toolbox_ok'));
     } else {
-      _.set(domain, 'mxTooltip', $scope.tr('emailpro_tab_domain_diagnostic_mx_toolbox', [$scope.exchange.hostname]));
+      _.set(domain, 'mxTooltip', $translate.instant('emailpro_tab_domain_diagnostic_mx_toolbox', { t0: $scope.exchange.hostname }));
     }
   }
 
   function setSrvTooltip(domain) {
     if (domain.srvValid) {
-      _.set(domain, 'srvTooltip', $scope.tr('emailpro_tab_domain_diagnostic_srv_toolbox_ok'));
+      _.set(domain, 'srvTooltip', $translate.instant('emailpro_tab_domain_diagnostic_srv_toolbox_ok'));
     } else {
-      _.set(domain, 'srvTooltip', $scope.tr('emailpro_tab_domain_diagnostic_srv_toolbox', [$scope.exchange.hostname]));
+      _.set(domain, 'srvTooltip', $translate.instant('emailpro_tab_domain_diagnostic_srv_toolbox', { t0: $scope.exchange.hostname }));
     }
   }
 

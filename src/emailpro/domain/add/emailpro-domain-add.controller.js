@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProAddDomainController', ($rootScope, $scope, $timeout, $stateParams, EmailPro, EmailProDomains, Validator) => {
+angular.module('Module.emailpro.controllers').controller('EmailProAddDomainController', ($rootScope, $scope, $timeout, $stateParams, $translate, EmailPro, EmailProDomains, Validator) => {
   const Punycode = window.punycode;
 
   let timeout = null;
@@ -77,7 +77,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddDomainContr
         check2010Provider();
       }, (failure) => {
         $scope.resetAction();
-        $scope.setMessage($scope.tr('emailpro_tab_domain_add_failure'), failure);
+        $scope.setMessage($translate.instant('emailpro_tab_domain_add_failure'), failure);
       });
 
     EmailPro.getSelected()
@@ -117,9 +117,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddDomainContr
 
     EmailProDomains.addDomain($scope.model)
       .then(() => {
-        $scope.setMessage($scope.tr('emailpro_tab_domain_add_success'), { status: 'success' });
+        $scope.setMessage($translate.instant('emailpro_tab_domain_add_success'), { status: 'success' });
       }, (failure) => {
-        $scope.setMessage($scope.tr('emailpro_tab_domain_add_failure'), failure);
+        $scope.setMessage($translate.instant('emailpro_tab_domain_add_failure'), failure);
       });
   };
 

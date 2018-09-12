@@ -1,5 +1,5 @@
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProAddAccountCtrl', ($scope, $stateParams, EmailPro, EmailProPassword) => {
+  .controller('EmailProAddAccountCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
     $scope.valid = { legalWarning: false };
     $scope.accountTypeHosted = EmailPro.accountTypeHosted;
     EmailPro.getSelected().then((exchange) => {
@@ -53,11 +53,10 @@ angular.module('Module.emailpro.controllers')
           if (selectedAccount.samaccountName
             && selectedAccount.password.indexOf(selectedAccount.samaccountName) !== -1) {
             if (!$scope.containsSamAccountNameLabel) {
-              $scope.containsSamAccountNameLabel = $scope
-                .tr(
-                  'emailpro_ACTION_update_account_step1_password_contains_samaccount_name',
-                  [selectedAccount.samaccountName],
-                );
+              $scope.containsSamAccountNameLabel = $translate.instant(
+                'emailpro_ACTION_update_account_step1_password_contains_samaccount_name',
+                { t0: selectedAccount.samaccountName },
+              );
             }
             $scope.containsSamAccountNameFlag = true;
           } else {
@@ -75,8 +74,8 @@ angular.module('Module.emailpro.controllers')
     $scope.getPasswordTooltip = function () {
       if ($scope.newAccountOptions) {
         return $scope.newAccountOptions.passwordComplexityEnabled
-          ? $scope.tr('emailpro_ACTION_update_account_step1_complex_password_tooltip', [$scope.newAccountOptions.minPasswordLength])
-          : $scope.tr('emailpro_ACTION_update_account_step1_simple_password_tooltip', [$scope.newAccountOptions.minPasswordLength]);
+          ? $translate.instant('emailpro_ACTION_update_account_step1_complex_password_tooltip', { t0: $scope.newAccountOptions.minPasswordLength })
+          : $translate.instant('emailpro_ACTION_update_account_step1_simple_password_tooltip', { t0: $scope.newAccountOptions.minPasswordLength });
       }
       return null;
     };
@@ -99,7 +98,7 @@ angular.module('Module.emailpro.controllers')
         $scope.takenEmails = data.takenEmails;
 
         if (data.availableDomains.length === 0) {
-          $scope.setMessage($scope.tr('emailpro_ACTION_add_no_domains'), { status: 'error' });
+          $scope.setMessage($translate.instant('emailpro_ACTION_add_no_domains'), { status: 'error' });
           $scope.resetAction();
         } else {
           $scope.accountToAdd.completeDomain = _.first(data.availableDomains);
@@ -108,17 +107,17 @@ angular.module('Module.emailpro.controllers')
         }
 
         $scope.passwordTooltip = $scope.newAccountOptions.passwordComplexityEnabled
-          ? $scope.tr(
+          ? $translate.instant(
             'emailpro_ACTION_update_account_step1_complex_password_tooltip',
-            [$scope.newAccountOptions.minPasswordLength],
+            { t0: $scope.newAccountOptions.minPasswordLength },
           )
-          : $scope.tr(
+          : $translate.instant(
             'emailpro_ACTION_update_account_step1_simple_password_tooltip',
-            [$scope.newAccountOptions.minPasswordLength],
+            { t0: $scope.newAccountOptions.minPasswordLength },
           );
       }, (failure) => {
         $scope.resetAction();
-        $scope.setMessage($scope.tr('emailpro_ACTION_add_account_option_fail'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_add_account_option_fail'), failure.data);
       });
     };
 
@@ -152,16 +151,16 @@ angular.module('Module.emailpro.controllers')
       $scope.accountToAdd.login = $scope.accountToAdd.login.toLowerCase();
 
       EmailPro.addEmailProAccount($stateParams.productId, $scope.accountToAdd).then(() => {
-        $scope.setMessage($scope.tr('emailpro_ACTION_add_account_success_message'), { status: 'success' });
+        $scope.setMessage($translate.instant('emailpro_ACTION_add_account_success_message'), { status: 'success' });
       }, (failure) => {
-        $scope.setMessage($scope.tr('emailpro_ACTION_add_account_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_add_account_error_message'), failure.data);
       });
       $scope.resetAction();
     };
   });
 
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, EmailPro, User) => {
+  .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, $translate, EmailPro, User) => {
     // default values
     $scope.accountsToAdd = {
       duration: '12',
@@ -173,7 +172,7 @@ angular.module('Module.emailpro.controllers')
         $scope.ovhSubsidiary = ovhSubsidiary;
       })
       .catch((failure) => {
-        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_user_error'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_order_accounts_step1_user_error'), failure.data);
         $scope.ovhSubsidiary = 'FR';
       })
       .then(() => {
@@ -195,7 +194,7 @@ angular.module('Module.emailpro.controllers')
         $scope.previewOrder = data;
         $scope.url = data.url;
       }, (failure) => {
-        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step2_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_order_accounts_step2_error_message'), failure.data);
         $scope.resetAction();
       });
     };
@@ -213,7 +212,7 @@ angular.module('Module.emailpro.controllers')
           return orderAvailable;
         });
       }, (failure) => {
-        $scope.setMessage($scope.tr('emailpro_ACTION_order_accounts_step1_loading_error'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_order_accounts_step1_loading_error'), failure.data);
         $scope.resetAction();
       });
     };

@@ -1,47 +1,47 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProDisclaimerCtrl">
     <div class="alert alert-warning" role="alert"
          data-ng-if="tasksList && tasksList.list.messages.length > 0">
-        <strong data-i18n-static="emailpro_tab_TASKS_warning"></strong>
-        <span data-i18n-static="emailpro_tab_TASKS_partial"></span>
+        <strong data-translate="emailpro_tab_TASKS_warning"></strong>
+        <span data-translate="emailpro_tab_TASKS_partial"></span>
     </div>
 
     <div class="alert alert-info" role="alert"
-         data-i18n-static="emailpro_tab_DISCLAIMER_table_no_domain"
+         data-translate="emailpro_tab_DISCLAIMER_table_no_domain"
          data-ng-if="addDomainMessageFlag">
     </div>
 
     <oui-datagrid data-rows-loader="loadPaginated($config)">
-        <oui-column data-title="tr('emailpro_tab_DISCLAIMER_associated_domains')" data-property="domain.displayName"></oui-column>
-        <oui-column data-title="tr('emailpro_tab_DISCLAIMER_disclaimer_content')" data-property="strippedContent">
+        <oui-column data-title="'emailpro_tab_DISCLAIMER_associated_domains' | translate" data-property="domain.displayName"></oui-column>
+        <oui-column data-title="'emailpro_tab_DISCLAIMER_disclaimer_content' | translate" data-property="strippedContent">
             <span data-ng-bind="$row.strippedContent | sliceContent:60"></span>
         </oui-column>
-        <oui-column data-title="tr('emailpro_tab_DISCLAIMER_disclaimer_outside_only')">
-            <span data-i18n-static="emailpro_tab_DISCLAIMER_disclaimer_outside_only_true"
+        <oui-column data-title="'emailpro_tab_DISCLAIMER_disclaimer_outside_only' | translate">
+            <span data-translate="emailpro_tab_DISCLAIMER_disclaimer_outside_only_true"
                   data-ng-if="$row.outsideOnly"
-                  data-uib-tooltip="{{i18n.emailpro_tab_DISCLAIMER_disclaimer_outside_only_tooltip}}"
+                  data-uib-tooltip="{{ 'emailpro_tab_DISCLAIMER_disclaimer_outside_only_tooltip' | translate }}"
                   data-tooltip-append-to-body="true"></span>
-            <span data-i18n-static="emailpro_tab_DISCLAIMER_disclaimer_outside_only_false"
+            <span data-translate="emailpro_tab_DISCLAIMER_disclaimer_outside_only_false"
                   data-ng-if="!$row.outsideOnly"></span>
         </oui-column>
-        <oui-column data-title="tr('emailpro_tab_DISCLAIMER_state_header')">
+        <oui-column data-title="'emailpro_tab_DISCLAIMER_state_header' | translate">
             <span class="fa fa-hourglass-half"
                   data-ng-if="$row.taskPendingId"
-                  data-uib-tooltip="{{tr('emailpro_tab_DISCLAIMER_state_doing_tooltip')}}"
+                  data-uib-tooltip="{{ 'emailpro_tab_DISCLAIMER_state_doing_tooltip' | translate }}"
                   data-tooltip-append-to-body="true"></span>
             <span class="label label-warning"
-                  data-i18n-static="common_not_configurated"
+                  data-translate="common_not_configurated"
                   data-ng-if="$row.emptySlotFlag"></span>
         </oui-column>
         <oui-action-menu data-align="end" data-compact>
-            <oui-action-menu-item data-text="{{i18n.emailpro_tab_DISCLAIMER_menu_settings}}"
+            <oui-action-menu-item data-text="{{ 'emailpro_tab_DISCLAIMER_menu_settings' | translate }}"
                                   data-on-click="updateDisclaimer($row)"
                                   data-ng-if="!$row.emptySlotFlag"
                                   data-disabled="$row.taskPendingId"></oui-action-menu-item>
-            <oui-action-menu-item data-text="{{i18n.emailpro_tab_DISCLAIMER_menu_delete}}"
+            <oui-action-menu-item data-text="{{ 'emailpro_tab_DISCLAIMER_menu_delete' | translate }}"
                                   data-on-click="deleteDisclaimer($row)"
                                   data-ng-if="!$row.emptySlotFlag"
                                   data-disabled="$row.taskPendingId"></oui-action-menu-item>
-            <oui-action-menu-item data-text="{{i18n.common_configure}}"
+            <oui-action-menu-item data-text="{{ 'common_configure' | translate }}"
                                   data-on-click="addDisclaimer($row)"
                                   data-ng-if="$row.emptySlotFlag"></oui-action-menu-item>
         </oui-action-menu>
