@@ -16,8 +16,8 @@ angular.module('Module.emailpro', ['ovh-utils-angular', 'ngRoute', 'ui.bootstrap
             configurationSelected: true,
           });
         }],
-        translator: ['translator', translator => translator.load(['emailpro']).then(() => translator)],
       },
+      translations: ['exchange', 'emailpro'],
     });
   }])
   .constant('EMAILPRO_MX_CONFIG', {
@@ -133,7 +133,4 @@ angular.module('Module.emailpro', ['ovh-utils-angular', 'ngRoute', 'ui.bootstrap
         },
       },
     },
-  })
-  .run(['translator', function (translator) {
-    translator.load(['exchange', 'emailpro']);
-  }]);
+  });

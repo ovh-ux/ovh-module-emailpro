@@ -4,13 +4,14 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
   '$timeout',
   '$location',
   '$stateParams',
+  '$translate',
   'EmailPro',
   'Api.EmailPro',
   'User',
   'EMAILPRO_CONFIG',
 
   function (
-    $rootScope, $scope, $timeout, $location, $stateParams,
+    $rootScope, $scope, $timeout, $location, $stateParams, $translate,
     EmailPro, APIEmailPro, User, EMAILPRO_CONFIG,
   ) {
     let initialLoad = true;
@@ -44,32 +45,32 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
 
     const loadATooltip = function (exchange) {
       if (exchange.serverDiagnostic.ip && exchange.serverDiagnostic.isAValid) {
-        _.set(exchange, 'serverDiagnostic.aTooltip', $scope.tr('emailpro_dashboard_diag_a_tooltip_ok'));
+        _.set(exchange, 'serverDiagnostic.aTooltip', $translate.instant('emailpro_dashboard_diag_a_tooltip_ok'));
       } else {
-        _.set(exchange, 'serverDiagnostic.aTooltip', $scope.tr('emailpro_dashboard_diag_a_tooltip_error', [exchange.hostname, exchange.serverDiagnostic.ip]));
+        _.set(exchange, 'serverDiagnostic.aTooltip', $translate.instant('emailpro_dashboard_diag_a_tooltip_error', { t0: exchange.hostname, t1: exchange.serverDiagnostic.ip }));
       }
     };
 
     const loadAaaaTooltip = function (exchange) {
       if (exchange.serverDiagnostic.ipV6 && exchange.serverDiagnostic.isAaaaValid) {
-        _.set(exchange, 'serverDiagnostic.aaaaTooltip', $scope.tr('emailpro_dashboard_diag_aaaa_tooltip_ok'));
+        _.set(exchange, 'serverDiagnostic.aaaaTooltip', $translate.instant('emailpro_dashboard_diag_aaaa_tooltip_ok'));
       } else {
-        _.set(exchange, 'serverDiagnostic.aaaaTooltip', $scope.tr('emailpro_dashboard_diag_aaaa_tooltip_error', [exchange.hostname, exchange.serverDiagnostic.ipV6]));
+        _.set(exchange, 'serverDiagnostic.aaaaTooltip', $translate.instant('emailpro_dashboard_diag_aaaa_tooltip_error', { t0: exchange.hostname, t1: exchange.serverDiagnostic.ipV6 }));
       }
     };
 
     const loadPtrTooltip = function (exchange) {
       if (exchange.serverDiagnostic.isPtrValid) {
-        _.set(exchange, 'serverDiagnostic.ptrTooltip', $scope.tr('emailpro_dashboard_diag_ptr_tooltip_ok'));
+        _.set(exchange, 'serverDiagnostic.ptrTooltip', $translate.instant('emailpro_dashboard_diag_ptr_tooltip_ok'));
       } else {
-        _.set(exchange, 'serverDiagnostic.ptrTooltip', $scope.tr('emailpro_dashboard_diag_ptr_tooltip_error'));
+        _.set(exchange, 'serverDiagnostic.ptrTooltip', $translate.instant('emailpro_dashboard_diag_ptr_tooltip_error'));
       }
     };
     const loadPtrv6Tooltip = function (exchange) {
       if (exchange.serverDiagnostic.isPtrV6Valid) {
-        _.set(exchange, 'serverDiagnostic.ptrv6Tooltip', $scope.tr('emailpro_dashboard_diag_ptrv6_tooltip_ok'));
+        _.set(exchange, 'serverDiagnostic.ptrv6Tooltip', $translate.instant('emailpro_dashboard_diag_ptrv6_tooltip_ok'));
       } else {
-        _.set(exchange, 'serverDiagnostic.ptrv6Tooltip', $scope.tr('emailpro_dashboard_diag_ptrv6_tooltip_error'));
+        _.set(exchange, 'serverDiagnostic.ptrv6Tooltip', $translate.instant('emailpro_dashboard_diag_ptrv6_tooltip_error'));
       }
     };
 
@@ -89,7 +90,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
           $scope.loadingEmailProInformations = false;
 
           if (exchange.messages && exchange.messages.length > 0) {
-            $scope.setMessage($scope.tr('emailpro_dashboard_loading_error'), exchange);
+            $scope.setMessage($translate.instant('emailpro_dashboard_loading_error'), exchange);
             if (!exchange.name) {
               $scope.loadingEmailProError = true;
             }
@@ -125,9 +126,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
               messages: [{ type: 'ERROR', message: response.message, id: response.id }],
             };
             if (response.code === 460 || response.status === 460) {
-              $scope.setMessage($scope.tr('common_service_expired', [response.id]), data);
+              $scope.setMessage($translate.instant('common_service_expired', { t0: response.id }), data);
             } else {
-              $scope.setMessage($scope.tr('emailpro_dashboard_loading_error'), data);
+              $scope.setMessage($translate.instant('emailpro_dashboard_loading_error'), data);
             }
           }
         });
@@ -339,7 +340,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
       $timeout(() => {
         $scope.edit.active = false;
         if ($scope.newDisplayName.value.length < 5) {
-          $scope.setMessage($scope.tr('emailpro_dashboard_display_name_min'));
+          $scope.setMessage($translate.instant('emailpro_dashboard_display_name_min'));
         }
       }, 300);
     };
@@ -355,9 +356,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
         }).then(() => {
           $scope.exchange.displayName = $scope.newDisplayName.value;
           $rootScope.$broadcast('change.displayName', [$scope.exchange.domain, $scope.newDisplayName.value]);
-          $scope.setMessage($scope.tr('emailpro_ACTION_configure_success'), 'true');
+          $scope.setMessage($translate.instant('emailpro_ACTION_configure_success'), 'true');
         }).catch((err) => {
-          $scope.setMessage($scope.tr('emailpro_ACTION_configure_error'), _.get(err, 'data', ''));
+          $scope.setMessage($translate.instant('emailpro_ACTION_configure_error'), _.get(err, 'data', ''));
         }).finally(() => {
           $scope.edit.active = false;
         });
@@ -374,7 +375,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
 /**
  * Resiliate EmailPro service action
  */
-angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailProCtrl', ($scope, $stateParams, EmailPro) => {
+angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailProCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   const getModel = function (exchange) {
     const model = {
       exchangeType: exchange.offer,
@@ -391,7 +392,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailPro
   $scope.EmailPro2013Code = EmailPro.EmailPro2013Code;
 
   $scope.getSubmitButtonLabel = function () {
-    return $scope.exchange.deleteAtExpirationValue ? $scope.tr('emailpro_resilitation_action_button') : $scope.tr('emailpro_resilitation_cancel_action_button');
+    return $scope.exchange.deleteAtExpirationValue ? $translate.instant('emailpro_resilitation_action_button') : $translate.instant('emailpro_resilitation_cancel_action_button');
   };
 
   $scope.submit = function () {
@@ -402,15 +403,15 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailPro
 
         if ($scope.exchange.renewType.deleteAtExpiration) {
           updateRenewMessages = {
-            OK: $scope.tr('emailpro_resilitation_cancel_action_success'),
-            PARTIAL: $scope.tr('emailpro_resilitation_cancel_action_partial'),
-            ERROR: $scope.tr('emailpro_resilitation_cancel_action_failure'),
+            OK: $translate.instant('emailpro_resilitation_cancel_action_success'),
+            PARTIAL: $translate.instant('emailpro_resilitation_cancel_action_partial'),
+            ERROR: $translate.instant('emailpro_resilitation_cancel_action_failure'),
           };
         } else {
           updateRenewMessages = {
-            OK: $scope.tr('emailpro_resilitation_action_success'),
-            PARTIAL: $scope.tr('emailpro_resilitation_action_partial'),
-            ERROR: $scope.tr('emailpro_resilitation_action_failure'),
+            OK: $translate.instant('emailpro_resilitation_action_success'),
+            PARTIAL: $translate.instant('emailpro_resilitation_action_partial'),
+            ERROR: $translate.instant('emailpro_resilitation_action_failure'),
           };
         }
         $scope.setMessage(updateRenewMessages, success);
@@ -418,9 +419,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailPro
       })
       .catch((failure) => {
         if ($scope.exchange.renewType.deleteAtExpiration) {
-          $scope.setMessage($scope.tr('emailpro_resilitation_cancel_action_failure'), failure.data);
+          $scope.setMessage($translate.instant('emailpro_resilitation_cancel_action_failure'), failure.data);
         } else {
-          $scope.setMessage($scope.tr('emailpro_resilitation_action_failure'), failure.data);
+          $scope.setMessage($translate.instant('emailpro_resilitation_action_failure'), failure.data);
         }
         $scope.resetAction();
       });

@@ -45,7 +45,7 @@ module.exports = {
     },
     resources: {
         i18n: [
-            "src/resources/i18n/emailpro/**/*.xml"
+            "src/**/translations/**/*.xml"
         ]
     }
 };
