@@ -3,12 +3,12 @@
         <div class="col-md-9">
             <div class="alert alert-warning mt-3" role="alert"
                  data-ng-if="accounts && accounts.list.messages.length > 0 && !loading">
-                <strong data-i18n-static="emailpro_tab_ACCOUNTS_warning"></strong>
-                <span data-i18n-static="emailpro_tab_ACCOUNTS_partial"></span>
+                <strong data-translate="emailpro_tab_ACCOUNTS_warning"></strong>
+                <span data-translate="emailpro_tab_ACCOUNTS_partial"></span>
             </div>
             <div class="pull-left">
-                <strong data-i18n-static="emailpro_tab_INFORMATIONS_webmail"></strong> :
-                <a target="_blank" title="{{tr('emailpro_tab_INFORMATIONS_webmail')}} ({{tr('emailpro_dashboard_new_window')}})"
+                <strong data-translate="emailpro_tab_INFORMATIONS_webmail"></strong> :
+                <a target="_blank" title="{{ 'emailpro_tab_INFORMATIONS_webmail' | translate }} ({{ 'emailpro_dashboard_new_window' | translate }})"
                    data-ng-href="https://{{exchange.hostname}}">
                     <span data-ng-bind="'https://' + exchange.hostname"></span>
                     <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
@@ -25,21 +25,21 @@
                             <select class="oui-select__input"
                                     data-ng-change="setFilter()"
                                     data-ng-model="filterType"
-                                    data-ng-options="tr('emailpro_tab_ACCOUNTS_type_' + type) for type in accountTypes">
+                                    data-ng-options="('emailpro_tab_ACCOUNTS_type_' + type | translate) for type in accountTypes">
                             </select>
                             <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" for="searchAccount"
-                               data-ng-bind="i18n.table_filter + ' ' + i18n.emailpro_tab_ACCOUNTS_table_email"></label>
+                               data-ng-bind="('table_filter' | translate) + ' ' + ('emailpro_tab_ACCOUNTS_table_email' | translate)"></label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="searchAccount" name="searchAccount" placeholder="{{i18n.emailpro_tab_ACCOUNTS_table_email}}"
+                            <input type="text" class="form-control" id="searchAccount" name="searchAccount" placeholder="{{ 'emailpro_tab_ACCOUNTS_table_email' | translate }}"
                                    data-ng-disabled="loading"
                                    data-ng-model="search.value"
                                    data-ng-model-options="{debounce: 1000}">
                             <div class="input-group-btn" data-ng-if="search.value">
-                                <button class="btn btn-default" type="button" aria-label="{{i18n.common_cancel}}"
+                                <button class="btn btn-default" type="button" aria-label="{{ 'common_cancel' | translate }}"
                                         data-ng-click="search.value = null">
                                     <span class="fa fa-times" aria-hidden="true"></span>
                                 </button>
@@ -56,12 +56,12 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col" data-i18n-static="emailpro_tab_ACCOUNTS_table_email"></th>
-                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_ACCOUNTS_table_type"
+                            <th scope="col" data-translate="emailpro_tab_ACCOUNTS_table_email"></th>
+                            <th class="text-center" scope="col" data-translate="emailpro_tab_ACCOUNTS_table_type"
                                 data-ng-if="(exchange.serverDiagnostic.version === 14 && exchange.offer !== exchangeTypeHosted)"></th>
-                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_ACCOUNTS_table_size"></th>
-                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_ACCOUNTS_table_alias"></th>
-                            <th class="text-center" scope="col" data-i18n-static="emailpro_tab_ACCOUNTS_table_status"></th>
+                            <th class="text-center" scope="col" data-translate="emailpro_tab_ACCOUNTS_table_size"></th>
+                            <th class="text-center" scope="col" data-translate="emailpro_tab_ACCOUNTS_table_alias"></th>
+                            <th class="text-center" scope="col" data-translate="emailpro_tab_ACCOUNTS_table_status"></th>
                             <th class="min-width text-center" scope="col"></th>
                         </tr>
                     </thead>
@@ -76,13 +76,13 @@
                         <tr data-ng-if="!search.value">
                             <td class="text-center" colspan="6">
                                 <span data-ng-if="!filterType || filterType === 'ALL'"
-                                      data-i18n-static="emailpro_tab_ACCOUNTS_table_empty"></span>
-                                <span data-ng-bind="tr('emailpro_tab_ACCOUNTS_table_empty_type_' + filterType)"
+                                      data-translate="emailpro_tab_ACCOUNTS_table_empty"></span>
+                                <span data-ng-bind="'emailpro_tab_ACCOUNTS_table_empty_type_' + filterType | translate"
                                       data-ng-if="filterType && filterType !== 'ALL'"></span>
                             </td>
                         </tr>
                         <tr data-ng-if="search.value">
-                            <td class="text-center" colspan="6" data-i18n-static="emailpro_tab_ACCOUNTS_table_empty_search"></td>
+                            <td class="text-center" colspan="6" data-translate="emailpro_tab_ACCOUNTS_table_empty_search"></td>
                         </tr>
                     </tbody>
 
@@ -91,7 +91,7 @@
                             <th scope="row" data-ng-bind="account.primaryEmailDisplayName"></th>
 
                             <td data-ng-if="(exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted)"
-                                data-ng-bind="tr('emailpro_tab_ACCOUNTS_type_' + account.accountLicense)"></td>
+                                data-ng-bind="'emailpro_tab_ACCOUNTS_type_' + account.accountLicense | translate"></td>
 
                             <td>
                                 <div class="progress m-0">
@@ -103,7 +103,7 @@
                                                 }"
                                          data-ng-style="{'width': account.percentUse + '%'}">
                                         <span class="progress-bar-label"
-                                              data-ng-bind="(account.usedQuota.value + ' ' + tr('unit_size_' + account.usedQuota.unit)) + ' / ' + (account.totalQuota.value + ' ' + tr('unit_size_' + account.totalQuota.unit))">
+                                              data-ng-bind="(account.usedQuota.value + ' ' + ('unit_size_' + account.usedQuota.unit | translate)) + ' / ' + (account.totalQuota.value + ' ' + ('unit_size_' + account.totalQuota.unit | translate))">
                                         </span>
                                     </div>
                                 </div>
@@ -120,40 +120,40 @@
                             <td class="text-center">
                                 <span class="fa fa-hourglass-half text-danger"
                                       data-ng-if="account.state === stateTaskError"
-                                      data-uib-tooltip="{{tr('emailpro_tab_ACCOUNTS_state_TASK_ON_ERROR')}}"
+                                      data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_state_TASK_ON_ERROR' | translate }}"
                                       data-tooltip-append-to-body="true"></span>
                                 <span class="fa fa-hourglass-half text-info"
                                       data-ng-if="account.state === stateTaskDoing"
-                                      data-uib-tooltip="{{tr('emailpro_tab_ACCOUNTS_state_TASK_ON_DOING')}}"
+                                      data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_state_TASK_ON_DOING' | translate }}"
                                       data-tooltip-append-to-body="true"></span>
 
                                 <span class="label label-info"
                                       data-ng-if="account.state === stateCreating"
-                                      data-i18n-static="emailpro_tab_account_state_CREATING"></span>
+                                      data-translate="emailpro_tab_account_state_CREATING"></span>
                                 <span class="label label-danger"
                                       data-ng-if="account.state === stateDeleting"
-                                      data-i18n-static="emailpro_tab_account_state_DELETING"></span>
+                                      data-translate="emailpro_tab_account_state_DELETING"></span>
                                 <span class="label label-warning"
                                       data-ng-if="account.state === stateSuspended"
-                                      data-i18n-static="emailpro_tab_account_state_SUSPENDED"></span>
+                                      data-translate="emailpro_tab_account_state_SUSPENDED"></span>
                                 <span class="label label-info"
                                       data-ng-if="account.state === stateSuspending"
-                                      data-i18n-static="emailpro_tab_account_state_SUSPENDING"></span>
+                                      data-translate="emailpro_tab_account_state_SUSPENDING"></span>
                                 <span class="label label-info"
                                       data-ng-if="account.state === stateReopening"
-                                      data-i18n-static="emailpro_tab_account_state_REOPENING"></span>
+                                      data-translate="emailpro_tab_account_state_REOPENING"></span>
 
                                 <button class="btn btn-danger btn-xs" type="button"
-                                        data-i18n-static="emailpro_tab_account_state_SPAM"
+                                        data-translate="emailpro_tab_account_state_SPAM"
                                         data-ng-if="account.spamDetected && account.state === stateOk"
                                         data-simplepopover="{{spamTooltipContent}}"
                                         data-simplepopover-single="true"
-                                        data-simplepopover-title="{{tr('emailpro_tab_ACCOUNTS_popover_span_title')}}"
+                                        data-simplepopover-title="{{ 'emailpro_tab_ACCOUNTS_popover_span_title' | translate }}"
                                         data-simplepopover-placement="top">
                                 </button>
                             </td>
                             <td class="text-nowrap">
-                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{i18n.table_modify_entry}}"
+                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{ 'table_modify_entry' | translate }}"
                                         data-ng-click="editAccount(account)"
                                         data-ng-disabled="!isEditable(account)"
                                         data-ng-if="!noDomainFlag">
@@ -161,19 +161,19 @@
                                 </button>
                                 <span class="btn btn-icon"
                                       data-ng-if="noDomainFlag"
-                                      data-uib-tooltip="{{i18n.emailpro_tab_ACCOUNTS_menu_account_no_domain_tooltip}}"
+                                      data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_menu_account_no_domain_tooltip' | translate }}"
                                       data-tooltip-append-to-body="true">
                                     <span class="oui-icon oui-icon-pen_line oui-icon_small text-muted" aria-hidden="true"></span>
                                 </span>
-                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{i18n.table_manage_entry}}"
+                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{ 'table_manage_entry' | translate }}"
                                         data-ng-disabled="!isConfigurable(account)"
-                                        data-uib-tooltip="{{i18n.emailpro_tab_ACCOUNTS_menu_account_tooltip}}"
+                                        data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_menu_account_tooltip' | translate }}"
                                         data-tooltip-append-to-body="true"
                                         data-linkedpopover="emailpro/account/emailpro-account.popover.html"
                                         data-linkedpopover-placement="left"
                                         data-linkedpopover-single="true"
                                         data-linkedpopover-remote="true"
-                                        data-linkedpopover-title="{{i18n.common_actions}}">
+                                        data-linkedpopover-title="{{ 'common_actions' | translate }}">
                                     <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
                                 </button>
                             </td>
@@ -182,7 +182,7 @@
                         <tr data-ng-repeat="account in (accounts.list.messages | orderBy:'id':false) track by $index">
                             <td class="text-center" colspan="6">
                                 <span data-ng-bind="account.primaryEmailAddress"></span> :
-                                <span data-i18n-static="emailpro_tab_ACCOUNTS_partial_account"></span>
+                                <span data-translate="emailpro_tab_ACCOUNTS_partial_account"></span>
                             </td>
                         </tr>
                     </tbody>
@@ -202,9 +202,9 @@
             <button class="btn btn-block btn-default" type="button"
                     data-ng-click="newAccount()"
                     data-ng-disabled="addAccountOptionNotAvailable()">
-                <span data-i18n-static="emailpro_ACTION_order_accounts_button"
+                <span data-translate="emailpro_ACTION_order_accounts_button"
                       data-ng-if="(exchange.serverDiagnostic.version == 14 && is25g()) || (exchange.serverDiagnostic.version == 14 && exchange.offer == exchangeTypeHosted ) || (exchange.serverDiagnostic.version == 15 && exchange.offer != exchangeTypeDedicated) "></span>
-                <span data-i18n-static="emailpro_ACTION_add_account_button"
+                <span data-translate="emailpro_ACTION_add_account_button"
                       data-ng-if="!is25g() && ((exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted) || (exchange.serverDiagnostic.version == 15 && exchange.offer == exchangeTypeDedicated))"></span>
             </button>
         </div>

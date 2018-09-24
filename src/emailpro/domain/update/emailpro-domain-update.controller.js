@@ -1,5 +1,5 @@
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProUpdateDomainCtrl', ($scope, $stateParams, EmailPro, $rootScope, EmailProDomains, Validator) => {
+  .controller('EmailProUpdateDomainCtrl', ($scope, $stateParams, $translate, EmailPro, $rootScope, EmailProDomains, Validator) => {
     const trimMxRelay = function (mxRelay) {
       if (mxRelay && mxRelay[mxRelay.length - 1] === '.') {
         return mxRelay.substring(0, mxRelay.length - 1);
@@ -104,12 +104,12 @@ angular.module('Module.emailpro.controllers')
       EmailProDomains
         .updateDomain($stateParams.organization, $stateParams.productId, $scope.selectedDomain)
         .then(() => {
-          $scope.setMessage($scope.tr('emailpro_tab_domain_modify_success'), 'true');
+          $scope.setMessage($translate.instant('emailpro_tab_domain_modify_success'), 'true');
         })
         .catch((failure) => {
           // Make sure the type in the select widget is reset to its initial value
           $rootScope.$broadcast(EmailPro.events.domainsChanged);
-          $scope.setMessage($scope.tr('emailpro_tab_domain_modify_failure'), failure.data);
+          $scope.setMessage($translate.instant('emailpro_tab_domain_modify_failure'), failure.data);
         });
     };
 

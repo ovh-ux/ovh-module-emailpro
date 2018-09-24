@@ -1,5 +1,5 @@
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProTabTasksCtrl', ($scope, $stateParams, EmailPro) => {
+  .controller('EmailProTabTasksCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     $scope.tasksList = null;
     $scope.stateDoing = 'DOING';
     $scope.stateError = 'ERROR';
@@ -18,7 +18,7 @@ angular.module('Module.emailpro.controllers')
             },
           };
         }).catch((failure) => {
-          $scope.setMessage($scope.tr('emailpro_tab_TASKS_error_message'), failure.data);
+          $scope.setMessage($translate.instant('emailpro_tab_TASKS_error_message'), failure.data);
         });
     };
 

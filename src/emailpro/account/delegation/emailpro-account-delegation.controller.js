@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout) => {
+angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout, $translate) => {
   const init = function () {
     $scope.selectedAccount = $scope.currentActionData;
     $scope.form = { search: null };
@@ -52,16 +52,16 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
 
   const constructResult = function (data) {
     const mainMessage = {
-      OK: $scope.tr('emailpro_ACTION_delegation_success_message'),
-      PARTIAL: $scope.tr('emailpro_ACTION_delegation_partial_message'),
-      ERROR: $scope.tr('emailpro_ACTION_delegation_error_message'),
+      OK: $translate.instant('emailpro_ACTION_delegation_success_message'),
+      PARTIAL: $translate.instant('emailpro_ACTION_delegation_partial_message'),
+      ERROR: $translate.instant('emailpro_ACTION_delegation_error_message'),
     };
     let state = 'OK';
     let errors = 0;
 
     angular.forEach(data, (task) => {
       if (task.status === 'ERROR') {
-        _.set(task, 'message', $scope.tr(`emailpro_tab_TASKS_${task.function}`));
+        _.set(task, 'message', $translate.instant(`emailpro_tab_TASKS_${task.function}`));
         _.set(task, 'type', 'ERROR');
         state = 'PARTIAL';
         errors += 1;
@@ -126,7 +126,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
       })
       .catch((failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('emailpro_tab_ACCOUNTS_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), failure.data);
       });
   };
 
@@ -146,19 +146,19 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
 
   $scope.updateDelegationRight = function () {
     $scope.resetAction();
-    $scope.setMessage($scope.tr('emailpro_ACTION_delegation_doing_message'), { status: 'success' });
+    $scope.setMessage($translate.instant('emailpro_ACTION_delegation_doing_message'), { status: 'success' });
 
     EmailPro.updateAccountDelegationRights($stateParams.productId, getChanges()).then((data) => {
       constructResult(data);
     }, (failure) => {
-      $scope.setMessage($scope.tr('emailpro_ACTION_delegation_error_message'), failure.data);
+      $scope.setMessage($translate.instant('emailpro_ACTION_delegation_error_message'), failure.data);
     });
   };
 
   init();
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProMailingListDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout) => {
+angular.module('Module.emailpro.controllers').controller('EmailProMailingListDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout, $translate) => {
   const init = function () {
     $scope.selectedGroup = $scope.currentActionData;
     $scope.form = { search: null };
@@ -233,7 +233,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProMailingListDel
       })
       .catch((failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('emailpro_tab_GROUPS_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_tab_GROUPS_error_message'), failure.data);
       });
   };
 
@@ -253,15 +253,15 @@ angular.module('Module.emailpro.controllers').controller('EmailProMailingListDel
 
   $scope.updateDelegationRight = function () {
     $scope.resetAction();
-    $scope.setMessage($scope.tr('emailpro_GROUPS_delegation_doing_message'));
+    $scope.setMessage($translate.instant('emailpro_GROUPS_delegation_doing_message'));
 
     EmailPro
       .updateMailingListDelegationRights($stateParams.productId, getChanges())
       .then((data) => {
-        $scope.setMessage($scope.tr('emailpro_GROUPS_delegation_success_message'), data);
+        $scope.setMessage($translate.instant('emailpro_GROUPS_delegation_success_message'), data);
       })
       .catch((failure) => {
-        $scope.setMessage($scope.tr('emailpro_GROUPS_delegation_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_GROUPS_delegation_error_message'), failure.data);
       });
   };
 

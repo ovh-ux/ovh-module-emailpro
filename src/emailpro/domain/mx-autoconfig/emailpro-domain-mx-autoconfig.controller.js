@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProDomainMxAutoconfigCtrl', ($scope, $stateParams, EmailPro, EmailProDomains, EMAILPRO_MX_CONFIG, constants) => {
+angular.module('Module.emailpro.controllers').controller('EmailProDomainMxAutoconfigCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProDomains, EMAILPRO_MX_CONFIG, constants) => {
   $scope.domain = $scope.currentActionData;
 
   $scope.init = function () {
@@ -16,7 +16,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProDomainMxAutoco
       };
     }, (failure) => {
       $scope.resetAction();
-      $scope.setMessage($scope.tr('emailpro_tab_domain_diagnostic_add_field_failure'), failure);
+      $scope.setMessage($translate.instant('emailpro_tab_domain_diagnostic_add_field_failure'), failure);
     });
   };
 
@@ -38,12 +38,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProDomainMxAutoco
 
     EmailProDomains.addZoneDnsField($stateParams.productId, prepareModel()).then((success) => {
       if (success.state === 'OK') {
-        $scope.setMessage($scope.tr('emailpro_tab_domain_diagnostic_add_field_success'), { status: 'done' });
+        $scope.setMessage($translate.instant('emailpro_tab_domain_diagnostic_add_field_success'), { status: 'done' });
       } else {
-        $scope.setMessage($scope.tr('emailpro_tab_domain_diagnostic_add_field_failure'), { status: 'error' });
+        $scope.setMessage($translate.instant('emailpro_tab_domain_diagnostic_add_field_failure'), { status: 'error' });
       }
     }, (failure) => {
-      $scope.setMessage($scope.tr('emailpro_tab_domain_diagnostic_add_field_failure'), failure);
+      $scope.setMessage($translate.instant('emailpro_tab_domain_diagnostic_add_field_failure'), failure);
     });
   };
 });
