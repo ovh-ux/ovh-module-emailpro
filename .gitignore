@@ -2,6 +2,6 @@
 .idea/
 node_modules/
 bower_components/
-src/resources/i18n/*/*.json
+**/translations/*.json
 *.log
 tools/

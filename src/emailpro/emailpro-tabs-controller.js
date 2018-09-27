@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($scope, $stateParams, $location) => {
+angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($scope, $stateParams, $location, $translate) => {
   $scope.kebabCase = _.kebabCase;
 
   const defaultTab = 'INFORMATION';
@@ -10,15 +10,15 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($s
   ];
 
   $scope.tabMenu = {
-    title: $scope.tr('navigation_more'),
+    title: $translate.instant('navigation_more'),
     items: [
       {
-        label: $scope.tr('exchange_tab_DISCLAIMER'),
+        label: $translate.instant('emailpro_tab_DISCLAIMER'),
         target: 'DISCLAIMER',
         type: 'SWITCH_TABS',
       },
       {
-        label: $scope.tr('exchange_tab_TASKS'),
+        label: $translate.instant('emailpro_tab_TASKS'),
         target: 'TASK',
         type: 'SWITCH_TABS',
       },
@@ -26,7 +26,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($s
         type: 'SEPARATOR',
       },
       {
-        label: $scope.tr('emailpro_configuration_action_title'),
+        label: $translate.instant('emailpro_configuration_action_title'),
         type: 'ACTION',
         fn() {
           $scope.setAction('emailpro/service/configure/emailpro-service-configure', { exchange: $scope.exchange });

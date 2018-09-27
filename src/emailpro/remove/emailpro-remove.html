@@ -4,22 +4,22 @@
          data-wizard-confirm-button-text="getSubmitButtonLabel()"
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="submit"
-         data-wizard-title="i18n.emailpro_resilitation_action_title">
+         data-wizard-title="'emailpro_resilitation_action_title' | translate">
 
         <div data-wizard-step>
 
             <div data-ng-if="!exchange.renewType.deleteAtExpiration">
-                <p data-ng-bind-html="tr('emailpro_resilitation_action_intro', [exchange.displayName])"></p>
-                <p data-i18n-static="exchange_resilitation_action_hosted_warning"></p>
+                <p data-ng-bind-html="'emailpro_resilitation_action_intro' | translate: { t0: exchange.displayName }"></p>
+                <p data-translate="emailpro_resilitation_action_hosted_warning"></p>
             </div>
 
             <div data-ng-if="exchange.renewType.deleteAtExpiration">
-                <p data-ng-bind-html="tr('emailpro_resilitation_cancel_action_intro', [exchange.displayName])"></p>
+                <p data-ng-bind-html="'emailpro_resilitation_cancel_action_intro' | translate: { t0: exchange.displayName }"></p>
 
-                <p class="mt-2" data-ng-bind-html="tr('exchange_update_billing_periode_intro')"></p>
+                <p class="mt-2" data-ng-bind-html="'emailpro_update_billing_periode_intro' | translate"></p>
 
                 <form class="form-inline">
-                    <span class="mr-3" data-i18n-static="exchange_update_billing_periode_label"></span>
+                    <span class="mr-3" data-translate="emailpro_update_billing_periode_label"></span>
 
                     <div class="oui-radio oui-radio_inline">
                         <input class="oui-radio__input"
@@ -29,8 +29,8 @@
                                data-ng-model="exchange.renewPeriod"
                                data-ng-value="'MONTHLY'">
                         <label class="oui-radio__label-container" for="MONTHLY">
-                            <span class="oui-radio__label" 
-                                  data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_monthly')"></span>
+                            <span class="oui-radio__label"
+                                  data-translate="emailpro_ACTION_order_accounts_step2_pay_type_monthly"></span>
                         </label>
                     </div>
 
@@ -42,8 +42,8 @@
                                data-ng-model="exchange.renewPeriod"
                                data-ng-value="'YEARLY'">
                         <label class="oui-radio__label-container" for="YEARLY">
-                            <span class="oui-radio__label" 
-                                  data-ng-bind="tr('exchange_ACTION_order_accounts_step2_pay_type_yearly')"></span>
+                            <span class="oui-radio__label"
+                                  data-translate="emailpro_ACTION_order_accounts_step2_pay_type_yearly"></span>
                         </label>
                     </div>
                 </form>
@@ -54,12 +54,12 @@
         <div data-wizard-step>
             <div data-ng-if="!exchange.renewType.deleteAtExpiration">
                 <p data-ng-if="!exchange.deleteAtExpiration"
-                   data-ng-bind-html="tr('emailpro_resilitation_action_confirmation', [exchange.displayName, exchange.accountsNumber])"></p>
+                   data-ng-bind-html="'emailpro_resilitation_action_confirmation' | translate: { t0: exchange.displayName, t1: exchange.accountsNumber }"></p>
                 <p data-ng-if="exchange.deleteAtExpiration"
-                   data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName, exchange.accountsNumber])"></p>
+                   data-ng-bind-html="'emailpro_resilitation_cancel_action_confirmation' | translate: { t0: exchange.displayName, t1: exchange.accountsNumber }"></p>
             </div>
 
-            <p data-ng-bind-html="tr('exchange_resilitation_cancel_action_confirmation', [exchange.displayName])"
+            <p data-ng-bind-html="'emailpro_resilitation_cancel_action_confirmation' | translate: { t0: exchange.displayName }"
                data-ng-if="exchange.renewType.deleteAtExpiration"></p>
         </div>
     </div>

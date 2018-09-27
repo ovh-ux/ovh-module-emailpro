@@ -1,4 +1,4 @@
-angular.module('App').controller('EmailProServicesConfigureCtrl', ['$scope', 'Api.EmailPro', 'EmailPro', 'translator', function ($scope, APIEmailPro, EmailPro, Translator) {
+angular.module('App').controller('EmailProServicesConfigureCtrl', ['$scope', '$translate', 'Api.EmailPro', 'EmailPro', function ($scope, $translate, APIEmailPro, EmailPro) {
   const { exchange } = $scope.currentActionData;
 
   $scope.loaders = {
@@ -60,12 +60,12 @@ angular.module('App').controller('EmailProServicesConfigureCtrl', ['$scope', 'Ap
       $scope.resetAction();
       EmailPro.resetAccounts();
       $scope.loaders.put = false;
-      $scope.setMessage(Translator.tr('exchange_ACTION_configure_success'), { status: 'success' });
+      $scope.setMessage($translate.instant('emailpro_ACTION_configure_success'), { status: 'success' });
     }, (reason) => {
       $scope.resetAction();
       $scope.loaders.put = false;
       _.assign(reason.data, { type: 'ERROR' });
-      $scope.setMessage(Translator.tr('exchange_ACTION_configure_error'), reason.data);
+      $scope.setMessage($translate.instant('emailpro_ACTION_configure_error'), reason.data);
     });
   };
 

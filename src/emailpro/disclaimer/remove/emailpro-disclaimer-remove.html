@@ -2,16 +2,16 @@
     <div data-wizard
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="submit"
-         data-wizard-title="i18n.exchange_ACTION_delete_disclaimer_title">
+         data-wizard-title="'emailpro_ACTION_delete_disclaimer_title' | translate">
 
         <div data-wizard-step>
-            <p data-i18n-static="emailpro_ACTION_delete_disclaimer_question"></p>
+            <p data-translate="emailpro_ACTION_delete_disclaimer_question"></p>
 
             <dl class="dl-horizontal mt-5">
-                <dt data-i18n-static="exchange_ACTION_disclaimer_associated_domains"></dt>
+                <dt data-translate="emailpro_ACTION_disclaimer_associated_domains"></dt>
                 <dd data-ng-bind="disclaimer.domain.displayName"></dd>
 
-                <dt data-i18n-static="exchange_ACTION_add_disclaimer_content"></dt>
+                <dt data-translate="emailpro_ACTION_add_disclaimer_content"></dt>
                 <dd data-ng-bind-html="disclaimer.content | sliceContent:250"></dd>
             </dl>
         </div>

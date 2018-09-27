@@ -3,7 +3,7 @@
          data-wizard-bread-crumb
          data-wizard-on-cancel="resetAction"
          data-wizard-on-finish="addAccountAlias"
-         data-wizard-title="i18n.exchange_tab_ALIAS_add_alias_title">
+         data-wizard-title="'emailpro_tab_ALIAS_add_alias_title' | translate">
 
         <div data-wizard-step
              data-wizard-step-valid="aliasIsValid()"
@@ -16,9 +16,9 @@
             <div data-ng-if="availableDomains">
                 <div class="form-group" data-ng-class="{'has-error': takenEmailError}">
                     <label class="control-label" for="aliasInput"
-                           data-ng-bind-html="tr('exchange_tab_ALIAS_add_alias_intro', selectedAccount.primaryEmailDisplayName)"></label>
+                           data-ng-bind-html="'emailpro_tab_ALIAS_add_alias_intro' | translate: { t0: selectedAccount.primaryEmailDisplayName }"></label>
                     <div class="input-group">
-                        <input type="text" class="form-control" name="aliasInput" id="aliasInput" placeholder="{{i18n.exchange_tab_ALIAS_add_alias_placeholder}}"
+                        <input type="text" class="form-control" name="aliasInput" id="aliasInput" placeholder="{{ 'emailpro_tab_ALIAS_add_alias_placeholder' | translate }}"
                                data-ng-change="checkTakenEmails()"
                                data-ng-model="model.alias"
                                data-ng-pattern="/^[-_a-zA-z0-9]+((\.|\+)[-_a-zA-Z0-9]+)*$/">
@@ -30,20 +30,20 @@
                         </select>
                     </div>
                     <small class="help-block"
-                           data-i18n-static="exchange_tab_ALIAS_taken_error_message"
+                           data-translate="emailpro_tab_ALIAS_taken_error_message"
                            data-ng-if="takenEmailError"></small>
                 </div>
                 <div class="alert alert-info" role="alert"
-                     data-i18n-static="exchange_tab_ALIAS_add_alias_valid"></div>
+                     data-translate="emailpro_tab_ALIAS_add_alias_valid"></div>
             </div>
         </div>
 
         <div data-wizard-step>
-            <p data-i18n-static="exchange_tab_ALIAS_add_alias_step2_intro"></p>
+            <p data-translate="emailpro_tab_ALIAS_add_alias_step2_intro"></p>
             <dl class="dl-horizontal">
-                <dt data-i18n-static="exchange_tab_ALIAS_add_alias_step2_alias_label"></dt>
+                <dt data-translate="emailpro_tab_ALIAS_add_alias_step2_alias_label"></dt>
                 <dd data-ng-bind-template="{{model.alias}}@{{model.domain.displayName}}"></dd>
-                <dt data-i18n-static="exchange_tab_ALIAS_add_alias_step2_account_label"></dt>
+                <dt data-translate="emailpro_tab_ALIAS_add_alias_step2_account_label"></dt>
                 <dd data-ng-bind="selectedAccount.primaryEmailAddress"></dd>
             </dl>
         </div>

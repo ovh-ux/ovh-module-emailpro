@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $stateParams) => {
+angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $stateParams, $translate) => {
   $scope.stateCreating = EmailPro.stateCreating;
   $scope.stateDeleting = EmailPro.stateDeleting;
   $scope.stateOk = EmailPro.stateOk;
@@ -43,7 +43,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
           $scope.orderOutlookDisabled = false;
         }
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure);
+        $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), failure);
       });
 
     EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
@@ -55,9 +55,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     });
   };
 
-  $scope.spamTooltipContent = $scope.tr('exchange_tab_ACCOUNTS_popover_span_text', [
-    `#/ticket?serviceName=${$stateParams.productId}`,
-  ]);
+  $scope.spamTooltipContent = $translate.instant('emailpro_tab_ACCOUNTS_popover_span_text', { t0: `#/ticket?serviceName=${$stateParams.productId}` });
 
   $scope.$watch('search.value', (search) => {
     if ($scope.search) {
@@ -85,7 +83,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
         }
       }, (failure) => {
         $scope.loading = false;
-        $scope.setMessage($scope.tr('exchange_tab_ACCOUNTS_error_message'), failure);
+        $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), failure);
       });
   };
 

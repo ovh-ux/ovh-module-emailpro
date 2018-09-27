@@ -1,5 +1,5 @@
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProDisclaimerCtrl', ($scope, $stateParams, EmailPro) => {
+  .controller('EmailProDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     function hasEmptySlot(list) {
       let result = false;
       angular.forEach(list,
@@ -41,7 +41,7 @@ angular.module('Module.emailpro.controllers')
           }
         })
         .catch((data) => {
-          $scope.setMessage($scope.tr('exchange_tab_DISCLAIMER_error_message'), data.data);
+          $scope.setMessage($translate.instant('emailpro_tab_DISCLAIMER_error_message'), data.data);
         });
     };
 
@@ -58,7 +58,7 @@ angular.module('Module.emailpro.controllers')
             },
           };
         }).catch((data) => {
-          $scope.setMessage($scope.tr('exchange_tab_DISCLAIMER_error_message'), data.data);
+          $scope.setMessage($translate.instant('emailpro_tab_DISCLAIMER_error_message'), data.data);
         });
     };
 
@@ -108,7 +108,7 @@ angular.module('Module.emailpro.controllers')
   });
 
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProAddDisclaimerCtrl', ($scope, $stateParams, EmailPro, navigation) => {
+  .controller('EmailProAddDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro, navigation) => {
     const mceId = 'add-disclaimer-editor';
 
     $scope.data = {
@@ -134,7 +134,7 @@ angular.module('Module.emailpro.controllers')
           $scope.availableAttributes = data.availableAttributes;
         } else {
           $scope.resetAction();
-          $scope.setMessage($scope.tr('exchange_ACTION_add_disclaimer_no_domains'));
+          $scope.setMessage($translate.instant('emailpro_ACTION_add_disclaimer_no_domains'));
         }
         return $scope.data;
       });
@@ -158,18 +158,18 @@ angular.module('Module.emailpro.controllers')
         content: $scope.data.content,
       };
 
-      $scope.setMessage($scope.tr('exchange_dashboard_action_doing'), { status: 'success' });
+      $scope.setMessage($translate.instant('emailpro_dashboard_action_doing'), { status: 'success' });
       EmailPro.saveDisclaimer($stateParams.productId, model).then(() => {
-        $scope.setMessage($scope.tr('exchange_ACTION_add_disclaimer_success_message'), { status: 'success' });
+        $scope.setMessage($translate.instant('emailpro_ACTION_add_disclaimer_success_message'), { status: 'success' });
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_ACTION_add_disclaimer_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_add_disclaimer_error_message'), failure.data);
       });
       $scope.resetAction();
     };
   });
 
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProUpdateDisclaimerCtrl', ($scope, $stateParams, EmailPro) => {
+  .controller('EmailProUpdateDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     const mceId = 'update-disclaimer-editor';
 
     function loadOptions() {
@@ -214,26 +214,26 @@ angular.module('Module.emailpro.controllers')
         content: $scope.data.content,
       };
 
-      $scope.setMessage($scope.tr('exchange_dashboard_action_doing'));
+      $scope.setMessage($translate.instant('emailpro_dashboard_action_doing'));
       EmailPro.updateDisclaimer($stateParams.productId, model).then(() => {
-        $scope.setMessage($scope.tr('exchange_ACTION_update_disclaimer_success_message'), { status: 'success' });
+        $scope.setMessage($translate.instant('emailpro_ACTION_update_disclaimer_success_message'), { status: 'success' });
       }, (failure) => {
-        $scope.setMessage($scope.tr('exchange_ACTION_update_disclaimer_error_message'), failure.data);
+        $scope.setMessage($translate.instant('emailpro_ACTION_update_disclaimer_error_message'), failure.data);
       });
       $scope.resetAction();
     };
   });
 
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProRemoveDisclaimerCtrl', ($scope, $stateParams, EmailPro) => {
+  .controller('EmailProRemoveDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     $scope.disclaimer = $scope.currentActionData;
     $scope.submit = function () {
-      $scope.setMessage($scope.tr('exchange_dashboard_action_doing'), { status: 'success' });
+      $scope.setMessage($translate.instant('emailpro_dashboard_action_doing'), { status: 'success' });
       EmailPro.deleteDisclaimer($stateParams.productId, $scope.disclaimer.domain.name)
         .then(() => {
-          $scope.setMessage($scope.tr('exchange_ACTION_delete_disclaimer_success'), { status: 'success' });
+          $scope.setMessage($translate.instant('emailpro_ACTION_delete_disclaimer_success'), { status: 'success' });
         }, (failure) => {
-          $scope.setMessage($scope.tr('exchange_ACTION_delete_disclaimer_failure'), failure.data);
+          $scope.setMessage($translate.instant('emailpro_ACTION_delete_disclaimer_failure'), failure.data);
         });
       $scope.resetAction();
     };
