@@ -675,7 +675,6 @@
    <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Czy chcesz usunąć następującą domenę z usługi Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Domena zostanie usunięta z usługi Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Wystąpił błąd podczas usuwania domeny z usługi Exchange.</translation>
-
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Okres odnowienia</translation>
    <translation id="emailpro_update_billing_button_title" qtlid="190953">Sposób płatności</translation>
    <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Data wygasania</translation>
@@ -693,4 +692,75 @@
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">rocznie</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">miesięczny</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Wygasa z końcem</translation>
+   <translation id="lockoutThreshold_unit_value_0" qtlid="176713">Konto nie zostanie nigdy zablokowane</translation>
+   <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 próba</translation>
+   <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} prób(y)</translation>
+   <translation id="lockoutThreshold_min_error" qtlid="178185">Próg blokowania nie może być niższy niż 1 próba</translation>
+   <translation id="lockoutThreshold_max_error" qtlid="176635">Próg blokady nie może być większy niż 14 prób</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error" qtlid="178198">Prób blokowania musi być określony liczbą całkowitą</translation>
+   <translation id="lockoutThreshold_number_error" qtlid="178198">Prób blokowania musi być określony liczbą całkowitą</translation>
+   <translation id="lockoutThreshold_required_error" qtlid="192019">Pole obowiązkowe</translation>
+   <translation id="lockoutThreshold_pattern_error" qtlid="178198">Prób blokowania musi być określony liczbą całkowitą</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">Czas blokady nie może być niższy niż czas resetowania licznika blokowania</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">Czas blokady nie może być dłuższy niż 90 minut</translation>
+   <translation id="maxPasswordAge_unit_value_0" qtlid="178497">Hasła nigdy nie wygasają.</translation>
+   <translation id="maxPasswordAge_unit_value_1" qtlid="28807">1 dzień</translation>
+   <translation id="maxPasswordAge_unit_value_many" qtlid="178484">{0} dni</translation>
+   <translation id="maxPasswordAge_min_error" qtlid="178107">Maksymalny okres ważności hasła nie może być krótszy niż 0 dni</translation>
+   <translation id="maxPasswordAge_max_error" qtlid="176596">Maksymalna ważność hasła nie może być dłuższa niż 90 dni</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error" qtlid="178120">Maksymalny okres ważności hasła musi być liczbą całkowitą</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error" qtlid="176609">Maksymalna ważność hasła musi być dłuższa niż ważność minimalna.</translation>
+   <translation id="maxPasswordAge_pattern_error" qtlid="178120">Maksymalny okres ważności hasła musi być liczbą całkowitą</translation>
+   <translation id="maxPasswordAge_number_error" qtlid="178120">Maksymalny okres ważności hasła musi być liczbą całkowitą</translation>
+   <translation id="maxPasswordAge_required_error" qtlid="178120">Maksymalny okres ważności hasła musi być liczbą całkowitą</translation>
+   <translation id="minPasswordAge_min_error" qtlid="433992">Minimalna ważność hasła nie może być niższa niż 0 dni.</translation>
+   <translation id="minPasswordAge_max_error" qtlid="434005">Minimalna ważność hasła nie może być wyższa niż 90 dni.</translation>
+   <translation id="minPasswordAge_mustBeInteger_error" qtlid="434018">Minimalna ważność hasła musi być liczbą całkowitą.</translation>
+   <translation id="minPasswordAge_minToBigForMax_error" qtlid="178094">Minimalny okres ważności hasła musi być krótszy niż maksymalna ważność</translation>
+   <translation id="minPasswordAge_pattern_error" qtlid="434018">Minimalna ważność hasła musi być liczbą całkowitą.</translation>
+   <translation id="minPasswordAge_number_error" qtlid="434018">Minimalna ważność hasła musi być liczbą całkowitą.</translation>
+   <translation id="minPasswordAge_required_error" qtlid="434018">Minimalna ważność hasła musi być liczbą całkowitą.</translation>
+   <translation id="minPasswordAge_unit_value_0" qtlid="178471">Zmiany są natychmiast autoryzowane.</translation>
+   <translation id="minPasswordAge_unit_value_1" qtlid="28807">1 dzień</translation>
+   <translation id="minPasswordAge_unit_value_many" qtlid="178484">{0} dni</translation>
+   <translation id="lockoutObservationWindow_min_error" qtlid="178133">Minimalna wartość to 1</translation>
+   <translation id="lockoutObservationWindow_max_error" qtlid="178146">Maksymalna wartość to 90</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error" qtlid="263871">Czas resetu musi być liczbą całkowitą.</translation>
+   <translation id="lockoutObservationWindow_number_error" qtlid="263871">Czas resetu musi być liczbą całkowitą.</translation>
+   <translation id="lockoutObservationWindow_required_error" qtlid="192019">Pole obowiązkowe</translation>
+   <translation id="lockoutObservationWindow_pattern_error" qtlid="263871">Czas resetu musi być liczbą całkowitą.</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error" qtlid="178172">Wartość musi być niższa niż okres blokowania kont</translation>
+   <translation id="lockoutObservationWindow_unit_value_1" qtlid="32326">1 minuta</translation>
+   <translation id="lockoutObservationWindow_unit_value_many" qtlid="146814">{0} minut</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">Czas blokady nie może być niższy niż czas resetowania licznika blokowania</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">Czas blokady nie może być dłuższy niż 90 minut</translation>
+   <translation id="lockoutDuration_mustBeInteger_error" qtlid="178042">Czas blokady musi być liczbą całkowitą.</translation>
+   <translation id="lockoutDuration_number_error" qtlid="178250">Czas blokady musi być określony liczbą.</translation>
+   <translation id="lockoutDuration_required_error" qtlid="192019">Pole obowiązkowe</translation>
+   <translation id="lockoutDuration_pattern_error" qtlid="178042">Czas blokady musi być liczbą całkowitą.</translation>
+   <translation id="lockoutDuration_unit_value_0" qtlid="178458">Konto zostanie zablokowane aż do odblokowania przez administratora. </translation>
+   <translation id="lockoutDuration_unit_value_1" qtlid="32326">1 minuta</translation>
+   <translation id="lockoutDuration_unit_value_many" qtlid="146814">{0} minut</translation>
+   <translation id="complexityEnabled_value_true" qtlid="178406">Włączone</translation>
+   <translation id="complexityEnabled_value_false" qtlid="178419">Wyłączone</translation>
+   <translation id="minPasswordLength_unit_value_0" qtlid="178510">Hasło nie jest wymagane.</translation>
+   <translation id="minPasswordLength_unit_value_1" qtlid="178523">1 znak</translation>
+   <translation id="minPasswordLength_unit_value_many" qtlid="178536">{0} znaków</translation>
+   <translation id="minPasswordLength_min_error" qtlid="178029">Minimalna długość hasła nie może być mniejsza niż 3</translation>
+   <translation id="minPasswordLength_max_error" qtlid="176531">Minimalna długość hasła nie może być większa niż 14 </translation>
+   <translation id="minPasswordLength_required_error" qtlid="192019">Pole obowiązkowe</translation>
+   <translation id="minPasswordLength_mustBeInteger_error" qtlid="178055">Minimalna długość hasła musi być liczbą całkowitą</translation>
+   <translation id="minPasswordLength_number_error" qtlid="178055">Minimalna długość hasła musi być liczbą całkowitą</translation>
+   <translation id="minPasswordLength_pattern_error" qtlid="178055">Minimalna długość hasła musi być liczbą całkowitą</translation>
+   <translation id="exchange_tab_INFORMATION" qtlid="27115">Informacje ogólne</translation>
+   <translation id="exchange_tab_DOMAIN" qtlid="270306">Przypisane domeny</translation>
+   <translation id="exchange_tab_ACCOUNT" qtlid="74273">Konta e-mail</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Konta współdzielone</translation>
+   <translation id="exchange_tab_GROUP" qtlid="32962">Grupy</translation>
+   <translation id="exchange_tab_RESOURCES" qtlid="20227">Zasoby</translation>
+   <translation id="exchange_tab_SHARED" qtlid="136269">Podział</translation>
+   <translation id="exchange_tab_DISCLAIMER" qtlid="276324">Stopka strony</translation>
+   <translation id="exchange_tab_TASKS" qtlid="136217">Ostatnie zadania</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Zewnętrzne kontakty</translation>
+   <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostyka</translation>
 </translations>

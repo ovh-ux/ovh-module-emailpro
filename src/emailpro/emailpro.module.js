@@ -17,7 +17,7 @@ angular.module('Module.emailpro', ['ovh-utils-angular', 'ngRoute', 'ui.bootstrap
           });
         }],
       },
-      translations: ['exchange', 'emailpro'],
+      translations: ['.'],
     });
   }])
   .constant('EMAILPRO_MX_CONFIG', {

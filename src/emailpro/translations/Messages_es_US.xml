@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
-   <translation id="emailpro_tab_INFORMATION" qtlid="27115">Informations générales</translation>
+   <translation id="emailpro_tab_INFORMATION" qtlid="27115">Información general</translation>
    <translation id="emailpro_displayName_maxlength" qtlid="260208">El nombre no debe exceder los 250 caracteres.</translation>
    <translation id="emailpro_displayName_required" qtlid="88293">Le nom ne peut pas être vide.</translation>
 
@@ -672,7 +672,6 @@
    <translation id="emailpro_tab_domain_remove_title" qtlid="137946">¿Seguro que desea eliminar el siguiente dominio de su servicio Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">El dominio va a eliminarse de su servicio Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Se ha producido un error al eliminar el dominio del servicio Exchange.</translation>
-
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Période de renouvellement</translation>
    <translation id="emailpro_update_billing_button_title" qtlid="190953">Modo de facturación</translation>
    <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Expiración</translation>
@@ -690,4 +689,75 @@
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">annuel</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">mensuel</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Expira al vencimiento</translation>
+   <translation id="lockoutThreshold_unit_value_0" qtlid="176713">La cuenta no se bloqueará nunca</translation>
+   <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 intento</translation>
+   <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} intentos</translation>
+   <translation id="lockoutThreshold_min_error" qtlid="178185">El umbral de bloqueo no puede ser inferior a 1 intento</translation>
+   <translation id="lockoutThreshold_max_error" qtlid="176635">El umbral de bloqueo no puede ser superior a 14 intentos</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error" qtlid="178198">El umbral de bloqueo debe ser un número entero</translation>
+   <translation id="lockoutThreshold_number_error" qtlid="178198">El umbral de bloqueo debe ser un número entero</translation>
+   <translation id="lockoutThreshold_required_error" qtlid="192019">Campos obligatorios</translation>
+   <translation id="lockoutThreshold_pattern_error" qtlid="178198">El umbral de bloqueo debe ser un número entero</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">La duración de bloqueo no puede ser inferior a la duración de puesta a cero del contador de bloqueos</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">La duración de bloqueo no puede ser superior a 90 minutos</translation>
+   <translation id="maxPasswordAge_unit_value_0" qtlid="178497">Las contraseñas no expiran nunca.</translation>
+   <translation id="maxPasswordAge_unit_value_1" qtlid="28807">1 día</translation>
+   <translation id="maxPasswordAge_unit_value_many" qtlid="178484">{0} días</translation>
+   <translation id="maxPasswordAge_min_error" qtlid="178107">La antigüedad máxima de la contraseña no puede ser inferior a 0 días</translation>
+   <translation id="maxPasswordAge_max_error" qtlid="176596">La antigüedad máxima de la contraseña no puede ser superior a 90 días</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error" qtlid="178120">La antigüedad máxima de la contraseña debe ser un número entero</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error" qtlid="176609">La antigüedad máxima de la contraseña debe ser superior a su antigüedad mínima</translation>
+   <translation id="maxPasswordAge_pattern_error" qtlid="178120">La antigüedad máxima de la contraseña debe ser un número entero</translation>
+   <translation id="maxPasswordAge_number_error" qtlid="178120">La antigüedad máxima de la contraseña debe ser un número entero</translation>
+   <translation id="maxPasswordAge_required_error" qtlid="178120">La antigüedad máxima de la contraseña debe ser un número entero</translation>
+   <translation id="minPasswordAge_min_error" qtlid="433992">La contraseña no puede tener una antigüedad inferior a 0 días.</translation>
+   <translation id="minPasswordAge_max_error" qtlid="434005">La contraseña no puede tener una antigüedad superior a 90 días.</translation>
+   <translation id="minPasswordAge_mustBeInteger_error" qtlid="434018">La antigüedad de la contraseña debe ser un número entero. </translation>
+   <translation id="minPasswordAge_minToBigForMax_error" qtlid="178094">La antigüedad mínima de la contraseña debe ser inferior a la antigüedad máxima</translation>
+   <translation id="minPasswordAge_pattern_error" qtlid="434018">La antigüedad de la contraseña debe ser un número entero. </translation>
+   <translation id="minPasswordAge_number_error" qtlid="434018">La antigüedad de la contraseña debe ser un número entero. </translation>
+   <translation id="minPasswordAge_required_error" qtlid="434018">La antigüedad de la contraseña debe ser un número entero. </translation>
+   <translation id="minPasswordAge_unit_value_0" qtlid="178471">Los cambios se autorizan de inmediato.</translation>
+   <translation id="minPasswordAge_unit_value_1" qtlid="28807">1 día</translation>
+   <translation id="minPasswordAge_unit_value_many" qtlid="178484">{0} días</translation>
+   <translation id="lockoutObservationWindow_min_error" qtlid="178133">El valor mínimo es 1</translation>
+   <translation id="lockoutObservationWindow_max_error" qtlid="178146">El valor máximo es 90</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error" qtlid="263871">El plazo de reinicio debe ser un número entero.</translation>
+   <translation id="lockoutObservationWindow_number_error" qtlid="263871">El plazo de reinicio debe ser un número entero.</translation>
+   <translation id="lockoutObservationWindow_required_error" qtlid="192019">Campos obligatorios</translation>
+   <translation id="lockoutObservationWindow_pattern_error" qtlid="263871">El plazo de reinicio debe ser un número entero.</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error" qtlid="178172">El valor debe ser inferior a la duración de bloqueo de las cuentas</translation>
+   <translation id="lockoutObservationWindow_unit_value_1" qtlid="32326">1 minuto</translation>
+   <translation id="lockoutObservationWindow_unit_value_many" qtlid="146814">{0} minutos</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">La duración de bloqueo no puede ser inferior a la duración de puesta a cero del contador de bloqueos</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">La duración de bloqueo no puede ser superior a 90 minutos</translation>
+   <translation id="lockoutDuration_mustBeInteger_error" qtlid="178042">La duración de bloqueo debe ser un número entero.</translation>
+   <translation id="lockoutDuration_number_error" qtlid="178250">La duración de bloqueo debe ser un número.</translation>
+   <translation id="lockoutDuration_required_error" qtlid="192019">Campos obligatorios</translation>
+   <translation id="lockoutDuration_pattern_error" qtlid="178042">La duración de bloqueo debe ser un número entero.</translation>
+   <translation id="lockoutDuration_unit_value_0" qtlid="178458">La cuenta se bloqueará hasta que un administrador la desbloquee expresamente.</translation>
+   <translation id="lockoutDuration_unit_value_1" qtlid="32326">1 minuto</translation>
+   <translation id="lockoutDuration_unit_value_many" qtlid="146814">{0} minutos</translation>
+   <translation id="complexityEnabled_value_true" qtlid="178406">Activadas</translation>
+   <translation id="complexityEnabled_value_false" qtlid="178419">Desactivadas</translation>
+   <translation id="minPasswordLength_unit_value_0" qtlid="178510">No es necesaria ninguna contraseña.</translation>
+   <translation id="minPasswordLength_unit_value_1" qtlid="178523">1 caracter</translation>
+   <translation id="minPasswordLength_unit_value_many" qtlid="178536">{0} caracteres</translation>
+   <translation id="minPasswordLength_min_error" qtlid="178029">La longitud mínima de la contraseña no puede ser inferior a 3</translation>
+   <translation id="minPasswordLength_max_error" qtlid="176531">La longitud mínima de la contraseña no puede ser superior a 14</translation>
+   <translation id="minPasswordLength_required_error" qtlid="192019">Campos obligatorios</translation>
+   <translation id="minPasswordLength_mustBeInteger_error" qtlid="178055">La longitud mínima de la contraseña debe ser un número entero</translation>
+   <translation id="minPasswordLength_number_error" qtlid="178055">La longitud mínima de la contraseña debe ser un número entero</translation>
+   <translation id="minPasswordLength_pattern_error" qtlid="178055">La longitud mínima de la contraseña debe ser un número entero</translation>
+   <translation id="exchange_tab_INFORMATION" qtlid="27115">Información general</translation>
+   <translation id="exchange_tab_DOMAIN" qtlid="270306">Dominios asociados</translation>
+   <translation id="exchange_tab_ACCOUNT" qtlid="74273">Comptes e-mail</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Cuentas compartidas</translation>
+   <translation id="exchange_tab_GROUP" qtlid="32962">Groupes</translation>
+   <translation id="exchange_tab_RESOURCES" qtlid="20227">Ressources</translation>
+   <translation id="exchange_tab_SHARED" qtlid="136269">Elem. compartidos</translation>
+   <translation id="exchange_tab_DISCLAIMER" qtlid="276324">Pies de página</translation>
+   <translation id="exchange_tab_TASKS" qtlid="136217">Tareas recientes</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Contacts externes</translation>
+   <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostics</translation>
 </translations>

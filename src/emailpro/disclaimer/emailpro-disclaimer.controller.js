@@ -109,8 +109,6 @@ angular.module('Module.emailpro.controllers')
 
 angular.module('Module.emailpro.controllers')
   .controller('EmailProAddDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro, navigation) => {
-    const mceId = 'add-disclaimer-editor';
-
     $scope.data = {
       content: '',
       outsideOnly: false,
@@ -118,7 +116,7 @@ angular.module('Module.emailpro.controllers')
     };
 
     $scope.insertVariable = function () {
-      CKEDITOR.instances[mceId].insertText(`%%${$scope.data.selectedAttribute}%%`);
+      this.data.content += `%%${this.data.selectedAttribute}%%`;
     };
 
     $scope.loadAvailableDomains = function () {

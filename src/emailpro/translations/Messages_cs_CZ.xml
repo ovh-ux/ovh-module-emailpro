@@ -678,7 +678,6 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Opravdu si přejete vymazat následující doménu ze svých služeb Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Doména bude vymazána z Vašich služeb Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Při mazání domény z Vašich služeb Exchange došlo k chybě.</translation>
-
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Období obnovení</translation>
    <translation id="emailpro_update_billing_button_title" qtlid="190953">Fakturační režim</translation>
    <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Expirace</translation>
@@ -696,4 +695,75 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">ročně</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">měsíčně</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Expirace na konci</translation>
+   <translation id="lockoutThreshold_unit_value_0" qtlid="176713">Účet nebude nikdy uzamčen</translation>
+   <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 pokus</translation>
+   <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} pokusů</translation>
+   <translation id="lockoutThreshold_min_error" qtlid="178185">Omezení počtu přihlášení nesmí být menší jak 1 pokus.</translation>
+   <translation id="lockoutThreshold_max_error" qtlid="176635">Omezení počtu pokusů nesmí být větší jak 14.</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error" qtlid="178198">Omezení počtu přihlášení musí být celé číslo.</translation>
+   <translation id="lockoutThreshold_number_error" qtlid="178198">Omezení počtu přihlášení musí být celé číslo.</translation>
+   <translation id="lockoutThreshold_required_error" qtlid="192019">Povinná pole</translation>
+   <translation id="lockoutThreshold_pattern_error" qtlid="178198">Omezení počtu přihlášení musí být celé číslo.</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">Doba uzamčení účtu musí být menší nežli doba odpočtu resetu.</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">Doba uzamčení nesmí být větší jak 90 minut.</translation>
+   <translation id="maxPasswordAge_unit_value_0" qtlid="178497">Heslo nikdy neexpiruje</translation>
+   <translation id="maxPasswordAge_unit_value_1" qtlid="28807">1 den</translation>
+   <translation id="maxPasswordAge_unit_value_many" qtlid="178484">{0} dní</translation>
+   <translation id="maxPasswordAge_min_error" qtlid="178107">Maximální stáří hesla nesmí být menší jak 0 dní.</translation>
+   <translation id="maxPasswordAge_max_error" qtlid="176596">Maximální stáří hesla nesmí být větší jak 90 dní.</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error" qtlid="178120">Maximální stáří hesla musí být celé číslo.</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error" qtlid="176609">Platnost hesla nesmí být starší nežli minimální stáří hesla.</translation>
+   <translation id="maxPasswordAge_pattern_error" qtlid="178120">Maximální stáří hesla musí být celé číslo.</translation>
+   <translation id="maxPasswordAge_number_error" qtlid="178120">Maximální stáří hesla musí být celé číslo.</translation>
+   <translation id="maxPasswordAge_required_error" qtlid="178120">Maximální stáří hesla musí být celé číslo.</translation>
+   <translation id="minPasswordAge_min_error" qtlid="433992">Minimální doba platnosti hesla nesmí být menší než 1 den</translation>
+   <translation id="minPasswordAge_max_error" qtlid="434005">Maximální doba platnosti hesla nesmí být větší než 90 dní</translation>
+   <translation id="minPasswordAge_mustBeInteger_error" qtlid="434018">Minimální doba platnosti hesla musí být celé číslo</translation>
+   <translation id="minPasswordAge_minToBigForMax_error" qtlid="178094">Minimální stáří hesla musí být menší jak maximální stáří.</translation>
+   <translation id="minPasswordAge_pattern_error" qtlid="434018">Minimální doba platnosti hesla musí být celé číslo</translation>
+   <translation id="minPasswordAge_number_error" qtlid="434018">Minimální doba platnosti hesla musí být celé číslo</translation>
+   <translation id="minPasswordAge_required_error" qtlid="434018">Minimální doba platnosti hesla musí být celé číslo</translation>
+   <translation id="minPasswordAge_unit_value_0" qtlid="178471">Změny jsou provedeny okamžitě.</translation>
+   <translation id="minPasswordAge_unit_value_1" qtlid="28807">1 den</translation>
+   <translation id="minPasswordAge_unit_value_many" qtlid="178484">{0} dní</translation>
+   <translation id="lockoutObservationWindow_min_error" qtlid="178133">Minimální hodnota je 1.</translation>
+   <translation id="lockoutObservationWindow_max_error" qtlid="178146">Maximální hodnota je 90.</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error" qtlid="263871">Čas restartu musí být celé číslo</translation>
+   <translation id="lockoutObservationWindow_number_error" qtlid="263871">Čas restartu musí být celé číslo</translation>
+   <translation id="lockoutObservationWindow_required_error" qtlid="192019">Povinná pole</translation>
+   <translation id="lockoutObservationWindow_pattern_error" qtlid="263871">Čas restartu musí být celé číslo</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error" qtlid="178172">Hodnota musí být menší, nežli doba uzamčení účtu.</translation>
+   <translation id="lockoutObservationWindow_unit_value_1" qtlid="32326">1 minuta</translation>
+   <translation id="lockoutObservationWindow_unit_value_many" qtlid="146814">{0} minut</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">Doba uzamčení účtu musí být menší nežli doba odpočtu resetu.</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">Doba uzamčení nesmí být větší jak 90 minut.</translation>
+   <translation id="lockoutDuration_mustBeInteger_error" qtlid="178042">Doba uzamčení účtu musí být celé číslo.</translation>
+   <translation id="lockoutDuration_number_error" qtlid="178250">Doba uzamčení musí být číslo.</translation>
+   <translation id="lockoutDuration_required_error" qtlid="192019">Povinná pole</translation>
+   <translation id="lockoutDuration_pattern_error" qtlid="178042">Doba uzamčení účtu musí být celé číslo.</translation>
+   <translation id="lockoutDuration_unit_value_0" qtlid="178458">Účet bude uzamčen dokud ho administrátor neodblokuje.</translation>
+   <translation id="lockoutDuration_unit_value_1" qtlid="32326">1 minuta</translation>
+   <translation id="lockoutDuration_unit_value_many" qtlid="146814">{0} minut</translation>
+   <translation id="complexityEnabled_value_true" qtlid="178406">Povoleno</translation>
+   <translation id="complexityEnabled_value_false" qtlid="178419">Zakázáno</translation>
+   <translation id="minPasswordLength_unit_value_0" qtlid="178510">Žádné heslo není potřeba</translation>
+   <translation id="minPasswordLength_unit_value_1" qtlid="178523">1 znak</translation>
+   <translation id="minPasswordLength_unit_value_many" qtlid="178536">{0} znaků</translation>
+   <translation id="minPasswordLength_min_error" qtlid="178029">Minimální délka hesla nesmí být kratší jak 3 znaky.</translation>
+   <translation id="minPasswordLength_max_error" qtlid="176531">Minimální délka hesla nesmí být větší jak 14.</translation>
+   <translation id="minPasswordLength_required_error" qtlid="192019">Povinná pole</translation>
+   <translation id="minPasswordLength_mustBeInteger_error" qtlid="178055">Minimální délka musí být celé číslo.</translation>
+   <translation id="minPasswordLength_number_error" qtlid="178055">Minimální délka musí být celé číslo.</translation>
+   <translation id="minPasswordLength_pattern_error" qtlid="178055">Minimální délka musí být celé číslo.</translation>
+   <translation id="exchange_tab_INFORMATION" qtlid="27115">Základní informace</translation>
+   <translation id="exchange_tab_DOMAIN" qtlid="270306">Asociované domény</translation>
+   <translation id="exchange_tab_ACCOUNT" qtlid="74273">E-mailové účty</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Sdílené účty</translation>
+   <translation id="exchange_tab_GROUP" qtlid="32962">Skupiny</translation>
+   <translation id="exchange_tab_RESOURCES" qtlid="20227">Zdroje</translation>
+   <translation id="exchange_tab_SHARED" qtlid="136269">Akcie</translation>
+   <translation id="exchange_tab_DISCLAIMER" qtlid="276324">Patičky</translation>
+   <translation id="exchange_tab_TASKS" qtlid="136217">Nedávné úkoly</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Externí kontakt</translation>
+   <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostiky</translation>
 </translations>

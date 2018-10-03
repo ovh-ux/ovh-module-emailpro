@@ -672,7 +672,6 @@
    <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Bent u er zeker van dat u het volgende domein van uw Exchange dienst wilt verwijderen?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Het domein zal worden verwijderd van uw Exchange dienst.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Er is een fout opgetreden bij het verwijderen van het domein van uw Exchange dienst.</translation>
-
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Verlengingsperiode</translation>
    <translation id="emailpro_update_billing_button_title" qtlid="190953">Facturatie status</translation>
    <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Vervaldatum</translation>
@@ -690,4 +689,75 @@
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">jaarlijks</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">maandelijks</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Vervalt op de einddatum</translation>
+   <translation id="lockoutThreshold_unit_value_0" qtlid="176713">De account zal nooit worden afgesloten</translation>
+   <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 poging</translation>
+   <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} pogingen</translation>
+   <translation id="lockoutThreshold_min_error" qtlid="178185">De lockout drempel kan niet minder dan 1 poging zijn.</translation>
+   <translation id="lockoutThreshold_max_error" qtlid="176635">De lockout drempel mag niet groter zijn dan 14 pogingen.</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error" qtlid="178198">De lock-out drempel moet een heel nummer zijn.</translation>
+   <translation id="lockoutThreshold_number_error" qtlid="178198">De lock-out drempel moet een heel nummer zijn.</translation>
+   <translation id="lockoutThreshold_required_error" qtlid="192019">Verplichte velden  </translation>
+   <translation id="lockoutThreshold_pattern_error" qtlid="178198">De lock-out drempel moet een heel nummer zijn.</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">De lockout duur moet lager zijn dan de lockout teller reset duur.</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">De lockout duur kan niet groter zijn dan 90 minuten.</translation>
+   <translation id="maxPasswordAge_unit_value_0" qtlid="178497">De wachtwoorden vervallen nooit</translation>
+   <translation id="maxPasswordAge_unit_value_1" qtlid="28807">1 dag</translation>
+   <translation id="maxPasswordAge_unit_value_many" qtlid="178484">{0} dagen</translation>
+   <translation id="maxPasswordAge_min_error" qtlid="178107">De maximum wachtwoord levensduur mag niet minder zijn dan 0 dagen.</translation>
+   <translation id="maxPasswordAge_max_error" qtlid="176596">De maximum wachtwoord levensduur mag niet groter zijn dan 90 dagen.</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error" qtlid="178120">De maximum wachtwoord levensduur moet een heel nummer zijn.</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error" qtlid="176609">De maximum wachtwoord levensduur mag niet groter zijn dan de minimum levensduur.</translation>
+   <translation id="maxPasswordAge_pattern_error" qtlid="178120">De maximum wachtwoord levensduur moet een heel nummer zijn.</translation>
+   <translation id="maxPasswordAge_number_error" qtlid="178120">De maximum wachtwoord levensduur moet een heel nummer zijn.</translation>
+   <translation id="maxPasswordAge_required_error" qtlid="178120">De maximum wachtwoord levensduur moet een heel nummer zijn.</translation>
+   <translation id="minPasswordAge_min_error" qtlid="433992">Het wachtwoord kan niet jonger zijn dan 0 dagen</translation>
+   <translation id="minPasswordAge_max_error" qtlid="434005">Het wachtwoord kan niet ouder zijn dan 90 dagen</translation>
+   <translation id="minPasswordAge_mustBeInteger_error" qtlid="434018">De leeftijd van het wachtwoord moet een heel getal vormen</translation>
+   <translation id="minPasswordAge_minToBigForMax_error" qtlid="178094">De minimum wachtwoord levensduur moet minder zijn dan de maximum levensduur.</translation>
+   <translation id="minPasswordAge_pattern_error" qtlid="434018">De leeftijd van het wachtwoord moet een heel getal vormen</translation>
+   <translation id="minPasswordAge_number_error" qtlid="434018">De leeftijd van het wachtwoord moet een heel getal vormen</translation>
+   <translation id="minPasswordAge_required_error" qtlid="434018">De leeftijd van het wachtwoord moet een heel getal vormen</translation>
+   <translation id="minPasswordAge_unit_value_0" qtlid="178471">De wijzigingen worden direct toegelaten.</translation>
+   <translation id="minPasswordAge_unit_value_1" qtlid="28807">1 dag</translation>
+   <translation id="minPasswordAge_unit_value_many" qtlid="178484">{0} dagen</translation>
+   <translation id="lockoutObservationWindow_min_error" qtlid="178133">De minimumwaarde is 1</translation>
+   <translation id="lockoutObservationWindow_max_error" qtlid="178146">De maximumwaarde is 90</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error" qtlid="263871">Het uitstel van de herinstallatie moet een geheel getal zijn</translation>
+   <translation id="lockoutObservationWindow_number_error" qtlid="263871">Het uitstel van de herinstallatie moet een geheel getal zijn</translation>
+   <translation id="lockoutObservationWindow_required_error" qtlid="192019">Verplichte velden  </translation>
+   <translation id="lockoutObservationWindow_pattern_error" qtlid="263871">Het uitstel van de herinstallatie moet een geheel getal zijn</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error" qtlid="178172">De waarde moet minder zijn dan de account lockout duur.</translation>
+   <translation id="lockoutObservationWindow_unit_value_1" qtlid="32326">1 minuut</translation>
+   <translation id="lockoutObservationWindow_unit_value_many" qtlid="146814">{0} minuten</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">De lockout duur moet lager zijn dan de lockout teller reset duur.</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">De lockout duur kan niet groter zijn dan 90 minuten.</translation>
+   <translation id="lockoutDuration_mustBeInteger_error" qtlid="178042">De duur van de blokkering moet een geheel getal zijn.</translation>
+   <translation id="lockoutDuration_number_error" qtlid="178250">De lockout duur moet een getal zijn.</translation>
+   <translation id="lockoutDuration_required_error" qtlid="192019">Verplichte velden  </translation>
+   <translation id="lockoutDuration_pattern_error" qtlid="178042">De duur van de blokkering moet een geheel getal zijn.</translation>
+   <translation id="lockoutDuration_unit_value_0" qtlid="178458">De account wordt geblokkeerd totdat een beheerder het expliciet ontgrendelt.</translation>
+   <translation id="lockoutDuration_unit_value_1" qtlid="32326">1 minuut</translation>
+   <translation id="lockoutDuration_unit_value_many" qtlid="146814">{0} minuten</translation>
+   <translation id="complexityEnabled_value_true" qtlid="178406">Geactiveerd</translation>
+   <translation id="complexityEnabled_value_false" qtlid="178419">Gedeactiveerd</translation>
+   <translation id="minPasswordLength_unit_value_0" qtlid="178510">Geen wachtwoord nodig</translation>
+   <translation id="minPasswordLength_unit_value_1" qtlid="178523">1 teken</translation>
+   <translation id="minPasswordLength_unit_value_many" qtlid="178536">{0} tekens</translation>
+   <translation id="minPasswordLength_min_error" qtlid="178029">De minimale lengte van het wachtwoord mag niet kleiner dan 3 zijn.</translation>
+   <translation id="minPasswordLength_max_error" qtlid="176531">De minimum wachtwoord lengte mag niet groter zijn dan 14.</translation>
+   <translation id="minPasswordLength_required_error" qtlid="192019">Verplichte velden  </translation>
+   <translation id="minPasswordLength_mustBeInteger_error" qtlid="178055">De minimale lengte van het wachtwoord moet een geheel getal zijn</translation>
+   <translation id="minPasswordLength_number_error" qtlid="178055">De minimale lengte van het wachtwoord moet een geheel getal zijn</translation>
+   <translation id="minPasswordLength_pattern_error" qtlid="178055">De minimale lengte van het wachtwoord moet een geheel getal zijn</translation>
+   <translation id="exchange_tab_INFORMATION" qtlid="27115">Algemene informatie</translation>
+   <translation id="exchange_tab_DOMAIN" qtlid="270306">Geassocieerde domeinen</translation>
+   <translation id="exchange_tab_ACCOUNT" qtlid="74273">E-mail accounts</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Gedeelde accounts</translation>
+   <translation id="exchange_tab_GROUP" qtlid="32962">Groepen</translation>
+   <translation id="exchange_tab_RESOURCES" qtlid="20227">Resources</translation>
+   <translation id="exchange_tab_SHARED" qtlid="136269">Delen van data</translation>
+   <translation id="exchange_tab_DISCLAIMER" qtlid="276324">Footers</translation>
+   <translation id="exchange_tab_TASKS" qtlid="136217">Recente taken</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Externe contacten</translation>
+   <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnoses</translation>
 </translations>
