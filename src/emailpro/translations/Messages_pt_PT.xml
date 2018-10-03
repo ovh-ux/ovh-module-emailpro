@@ -690,75 +690,75 @@ Se usar o modo nonauthoritative com contas de e-mail não alojadas pela OVH, dev
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">anual</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">mensal</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Expira na data de vencimento</translation>
-   <translation id="lockoutThreshold_unit_value_0">Le compte ne sera jamais verrouillé</translation>
-   <translation id="lockoutThreshold_unit_value_1">1 essai</translation>
-   <translation id="lockoutThreshold_unit_value_many">{0} essais</translation>
-   <translation id="lockoutThreshold_min_error">Le seuil de verrouillage ne peut pas être inférieur à 1 essai</translation>
-   <translation id="lockoutThreshold_max_error">Le seuil de verrouillage ne peut pas être supérieur à 14 essais</translation>
-   <translation id="lockoutThreshold_mustBeInteger_error">Le seuil de verrouillage doit être un nombre entier</translation>
-   <translation id="lockoutThreshold_number_error">Le seuil de verrouillage doit être un nombre entier</translation>
-   <translation id="lockoutThreshold_required_error">Champs obligatoire</translation>
-   <translation id="lockoutThreshold_pattern_error">Le seuil de verrouillage doit être un nombre entier</translation>
-   <translation id="lockoutDuration_min_error">La durée du verrouillage ne peut pas être inférieure à la durée de réinitialisation du compteur de verrouillages</translation>
-   <translation id="lockoutDuration_max_error">La durée du verrouillage ne peut pas être supérieure à 90 minutes</translation>
-   <translation id="maxPasswordAge_unit_value_0">Les mots de passe n'expirent jamais.</translation>
-   <translation id="maxPasswordAge_unit_value_1">1 jour</translation>
-   <translation id="maxPasswordAge_unit_value_many">{0} jours</translation>
-   <translation id="maxPasswordAge_min_error">L'âge maximal du mot de passe ne peut pas être inférieur à 0 jours</translation>
-   <translation id="maxPasswordAge_max_error">L'âge maximal du mot de passe ne peut pas être supérieur à 90 jours</translation>
-   <translation id="maxPasswordAge_mustBeInteger_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="maxPasswordAge_maxToSmallForMin_error">L'âge maximal du mot de passe doit être supérieur à son âge minimal</translation>
-   <translation id="maxPasswordAge_pattern_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="maxPasswordAge_number_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="maxPasswordAge_required_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_min_error">L'âge minimal du mot de passe ne peut pas être inférieur à 0 jour</translation>
-   <translation id="minPasswordAge_max_error">L'âge minimal du mot de passe ne peut pas être supérieur à 90 jours</translation>
-   <translation id="minPasswordAge_mustBeInteger_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_minToBigForMax_error">L'âge minimal du mot de passe doit être inférieur à son age maximal</translation>
-   <translation id="minPasswordAge_pattern_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_number_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_required_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_unit_value_0">Les modifications sont autorisées immédiatement.</translation>
-   <translation id="minPasswordAge_unit_value_1">1 jour</translation>
-   <translation id="minPasswordAge_unit_value_many">{0} jours</translation>
-   <translation id="lockoutObservationWindow_min_error">La valeur minimale est 1</translation>
-   <translation id="lockoutObservationWindow_max_error">La valeur maximale est 90</translation>
-   <translation id="lockoutObservationWindow_mustBeInteger_error">Le délai de réinitialisation doit être un nombre entier</translation>
-   <translation id="lockoutObservationWindow_number_error">Le délai de réinitialisation doit être un nombre entier</translation>
-   <translation id="lockoutObservationWindow_required_error">Champs obligatoire</translation>
-   <translation id="lockoutObservationWindow_pattern_error">Le délai de réinitialisation doit être un nombre entier</translation>
-   <translation id="lockoutObservationWindow_toBigForDuration_error">La valeur doit être inférieure à la durée de verrouillage des comptes</translation>
-   <translation id="lockoutObservationWindow_unit_value_1">1 minute</translation>
-   <translation id="lockoutObservationWindow_unit_value_many">{0} minutes</translation>
-   <translation id="lockoutDuration_min_error">La durée du verrouillage ne peut pas être inférieure à la durée de réinitialisation du compteur de verrouillages</translation>
-   <translation id="lockoutDuration_max_error">La durée du verrouillage ne peut pas être supérieure à 90 minutes</translation>
-   <translation id="lockoutDuration_mustBeInteger_error">La durée du verrouillage doit être un nombre entier.</translation>
-   <translation id="lockoutDuration_number_error">La durée du verrouillage doit être un nombre.</translation>
-   <translation id="lockoutDuration_required_error">Champs obligatoire</translation>
-   <translation id="lockoutDuration_pattern_error">La durée du verrouillage doit être un nombre entier.</translation>
-   <translation id="lockoutDuration_unit_value_0">Le compte sera bloqué jusqu'à ce qu'un administrateur le déverrouille explicitement.</translation>
-   <translation id="lockoutDuration_unit_value_1">1 minute</translation>
-   <translation id="lockoutDuration_unit_value_many">{0} minutes</translation>
-   <translation id="complexityEnabled_value_true">Activées</translation>
-   <translation id="complexityEnabled_value_false">Désactivées</translation>
-   <translation id="minPasswordLength_unit_value_0">Aucun mot de passe n'est requis.</translation>
-   <translation id="minPasswordLength_unit_value_1">1 caractère</translation>
-   <translation id="minPasswordLength_unit_value_many">{0} caractères</translation>
-   <translation id="minPasswordLength_min_error">La longueur minimale du mot de passe ne peut pas être inférieure à 3</translation>
-   <translation id="minPasswordLength_max_error">La longueur minimale du mot de passe ne peut pas être supérieure à 14</translation>
-   <translation id="minPasswordLength_required_error">Champs obligatoire</translation>
-   <translation id="minPasswordLength_mustBeInteger_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordLength_number_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordLength_pattern_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
-   <translation id="exchange_tab_INFORMATION">Informations générales</translation>
-   <translation id="exchange_tab_DOMAIN">Domaines associés</translation>
-   <translation id="exchange_tab_ACCOUNT">Comptes e-mail</translation>
-   <translation id="exchange_tab_SHARED_ACCOUNT">Comptes partagés</translation>
-   <translation id="exchange_tab_GROUP">Groupes</translation>
-   <translation id="exchange_tab_RESOURCES">Ressources</translation>
-   <translation id="exchange_tab_SHARED">Partages</translation>
-   <translation id="exchange_tab_DISCLAIMER">Pieds de page</translation>
-   <translation id="exchange_tab_TASKS">Tâches récentes</translation>
-   <translation id="exchange_tab_EXTERNAL_CONTACT">Contacts externes</translation>
-   <translation id="exchange_tab_DIAGNOSTIC">Diagnostics</translation>
+   <translation id="lockoutThreshold_unit_value_0" qtlid="176713">A conta não será nunca desbloqueada</translation>
+   <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 tentativa</translation>
+   <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} tentativas</translation>
+   <translation id="lockoutThreshold_min_error" qtlid="178185">O limite do bloqueio não pode ser inferior a 1 tentativa</translation>
+   <translation id="lockoutThreshold_max_error" qtlid="176635">O limite do bloqueio não pode ser superior a 14 tentivas</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error" qtlid="178198">O limite do bloqueio deve ser um número inteiro</translation>
+   <translation id="lockoutThreshold_number_error" qtlid="178198">O limite do bloqueio deve ser um número inteiro</translation>
+   <translation id="lockoutThreshold_required_error" qtlid="192019">Campos obrigatórios</translation>
+   <translation id="lockoutThreshold_pattern_error" qtlid="178198">O limite do bloqueio deve ser um número inteiro</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">A duração do bloqueio não pode ser inferior à duração da reinicialização do contador de bloqueios</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">A duração do bloqueio não pode ser superior a 90 minutos</translation>
+   <translation id="maxPasswordAge_unit_value_0" qtlid="178497">As palavras-passe não expiram.</translation>
+   <translation id="maxPasswordAge_unit_value_1" qtlid="28807">1 dia</translation>
+   <translation id="maxPasswordAge_unit_value_many" qtlid="178484">{0} dias</translation>
+   <translation id="maxPasswordAge_min_error" qtlid="178107">A antiguidade máxima da palavra-passe não pode ser inferior a 0 dias</translation>
+   <translation id="maxPasswordAge_max_error" qtlid="176596">A idade máxima da palavra-passe não pode ser superior a 90 dias</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error" qtlid="178120">A antiguidade máxima da palavra-passe deve ser um número inteiro</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error" qtlid="176609">A idade máxima da palavra-passe deve ser superior à sua idade mínima</translation>
+   <translation id="maxPasswordAge_pattern_error" qtlid="178120">A antiguidade máxima da palavra-passe deve ser um número inteiro</translation>
+   <translation id="maxPasswordAge_number_error" qtlid="178120">A antiguidade máxima da palavra-passe deve ser um número inteiro</translation>
+   <translation id="maxPasswordAge_required_error" qtlid="178120">A antiguidade máxima da palavra-passe deve ser um número inteiro</translation>
+   <translation id="minPasswordAge_min_error" qtlid="433992">O período de validade da palavra-passe não pode ser inferior a 0 dias </translation>
+   <translation id="minPasswordAge_max_error" qtlid="434005">O período de validade da palavra-passe não pode ser superior a 0 dias </translation>
+   <translation id="minPasswordAge_mustBeInteger_error" qtlid="434018">O valor do período de validade da palavra-passe tem que ser um número inteiro</translation>
+   <translation id="minPasswordAge_minToBigForMax_error" qtlid="178094">A antiguidade mínima da palavra-passe deve ser inferior à sua validade máxima</translation>
+   <translation id="minPasswordAge_pattern_error" qtlid="434018">O valor do período de validade da palavra-passe tem que ser um número inteiro</translation>
+   <translation id="minPasswordAge_number_error" qtlid="434018">O valor do período de validade da palavra-passe tem que ser um número inteiro</translation>
+   <translation id="minPasswordAge_required_error" qtlid="434018">O valor do período de validade da palavra-passe tem que ser um número inteiro</translation>
+   <translation id="minPasswordAge_unit_value_0" qtlid="178471">As modificações são autorizadas de imediato.</translation>
+   <translation id="minPasswordAge_unit_value_1" qtlid="28807">1 dia</translation>
+   <translation id="minPasswordAge_unit_value_many" qtlid="178484">{0} dias</translation>
+   <translation id="lockoutObservationWindow_min_error" qtlid="178133">O valor mínimo é 1</translation>
+   <translation id="lockoutObservationWindow_max_error" qtlid="178146">O valor máximo é 90</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error" qtlid="263871">A periodicidade da reinicialização deve ser um número inteiro</translation>
+   <translation id="lockoutObservationWindow_number_error" qtlid="263871">A periodicidade da reinicialização deve ser um número inteiro</translation>
+   <translation id="lockoutObservationWindow_required_error" qtlid="192019">Campos obrigatórios</translation>
+   <translation id="lockoutObservationWindow_pattern_error" qtlid="263871">A periodicidade da reinicialização deve ser um número inteiro</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error" qtlid="178172">O valor deve ser inferior à duração do bloqueio das contas</translation>
+   <translation id="lockoutObservationWindow_unit_value_1" qtlid="32326">1 minuto</translation>
+   <translation id="lockoutObservationWindow_unit_value_many" qtlid="146814">{0} minutos</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">A duração do bloqueio não pode ser inferior à duração da reinicialização do contador de bloqueios</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">A duração do bloqueio não pode ser superior a 90 minutos</translation>
+   <translation id="lockoutDuration_mustBeInteger_error" qtlid="178042">A duração do bloqueio deve ser um número inteiro</translation>
+   <translation id="lockoutDuration_number_error" qtlid="178250">A duração do bloqueio deve ser um número.</translation>
+   <translation id="lockoutDuration_required_error" qtlid="192019">Campos obrigatórios</translation>
+   <translation id="lockoutDuration_pattern_error" qtlid="178042">A duração do bloqueio deve ser um número inteiro</translation>
+   <translation id="lockoutDuration_unit_value_0" qtlid="178458">A conta será bloqueada até que um administrador a desbloqueie.</translation>
+   <translation id="lockoutDuration_unit_value_1" qtlid="32326">1 minuto</translation>
+   <translation id="lockoutDuration_unit_value_many" qtlid="146814">{0} minutos</translation>
+   <translation id="complexityEnabled_value_true" qtlid="178406">Ativadas</translation>
+   <translation id="complexityEnabled_value_false" qtlid="178419">Desativadas</translation>
+   <translation id="minPasswordLength_unit_value_0" qtlid="178510">Não é requerida nenhuma palavra-passe.</translation>
+   <translation id="minPasswordLength_unit_value_1" qtlid="178523">1 caractere</translation>
+   <translation id="minPasswordLength_unit_value_many" qtlid="178536">{0} caracteres</translation>
+   <translation id="minPasswordLength_min_error" qtlid="178029">O comprimento mínimo da palavra-passe não pode ser inferior a 3</translation>
+   <translation id="minPasswordLength_max_error" qtlid="176531">O comprimento mínimo da palavra-passe não pode ser superior a 14</translation>
+   <translation id="minPasswordLength_required_error" qtlid="192019">Campos obrigatórios</translation>
+   <translation id="minPasswordLength_mustBeInteger_error" qtlid="178055">O comprimento mínimo da palavra-passe deve ser um número inteiro</translation>
+   <translation id="minPasswordLength_number_error" qtlid="178055">O comprimento mínimo da palavra-passe deve ser um número inteiro</translation>
+   <translation id="minPasswordLength_pattern_error" qtlid="178055">O comprimento mínimo da palavra-passe deve ser um número inteiro</translation>
+   <translation id="exchange_tab_INFORMATION" qtlid="27115">Informações gerais</translation>
+   <translation id="exchange_tab_DOMAIN" qtlid="270306">Domínios associados</translation>
+   <translation id="exchange_tab_ACCOUNT" qtlid="74273">Contas de e-mail</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Contas partilhadas</translation>
+   <translation id="exchange_tab_GROUP" qtlid="32962">Grupos</translation>
+   <translation id="exchange_tab_RESOURCES" qtlid="20227">Recursos</translation>
+   <translation id="exchange_tab_SHARED" qtlid="136269">Partilhas</translation>
+   <translation id="exchange_tab_DISCLAIMER" qtlid="276324">Rodapé</translation>
+   <translation id="exchange_tab_TASKS" qtlid="136217">Operações recentes</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Contactos externos</translation>
+   <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnósticos</translation>
 </translations>
