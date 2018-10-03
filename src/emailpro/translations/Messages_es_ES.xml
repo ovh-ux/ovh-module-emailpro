@@ -60,7 +60,7 @@
    <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">La restauración de una cuenta consiste en eliminar los datos y el nombre asociado. La cuenta se seguirá facturando. Si ya no desea que se le facture, haga clic en «Modo de facturación», marque la frecuencia de renovación «Ninguna» para la cuenta correspondiente y acepte.</translation>
    <translation id="emailpro_tab_account_reset_success" qtlid="447924">Se va a restaurar la cuenta de su servicio Email Pro.</translation>
    <translation id="emailpro_tab_account_reset_failure" qtlid="447937">Se ha producido un error al restaurar la cuenta de su servicio Email Pro.</translation>
-   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">El antispam Vade Secure es compatible con el modo no autoritario (solo si sus cuentas POP/IMAP están alojadas en OVH). En ese caso, le aconsejamos que utilice: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> y <strong>{3}</strong><br/><br/>. Si utiliza el modo no autoritario con cuentas de correo no alojadas en OVH, deberá utilizar <strong>{4}</strong> (ver dominios asociados). </translation>
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">El antispam Vade Secure es compatible con el modo no autoritario (solo si sus cuentas POP/IMAP están alojadas en OVH). En ese caso, le aconsejamos que utilice: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> y <strong>{3}</strong>.<br/><br/>Si utiliza el modo no autoritario con cuentas de correo no alojadas en OVH, deberá utilizar <strong>{4}</strong> (ver dominios asociados). </translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: gestionar</translation>
 
    <translation id="emailpro_configuration_action_title" qtlid="136243">Editar la política de seguridad</translation>
@@ -228,7 +228,7 @@
    <translation id="emailpro_ACTION_disclaimer_associated_domains" qtlid="133110">Dominio asociado</translation>
    <translation id="emailpro_ACTION_disclaimer_insert" qtlid="152336">Insertar una variable</translation>
    <translation id="emailpro_ACTION_loading" qtlid="75954">Cargando...</translation>
-   <translation id="emailpro_ACTION_order_accounts_button" qtlid="139169">Añadir cuentas de correo</translation>
+   <translation id="emailpro_ACTION_order_accounts_button" qtlid="139169">Contratar cuentas</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_loading_error" qtlid="135294">Se ha producido un error al cargar la información.</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_number" qtlid="139338">Número de cuentas:</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_number_tooltip" qtlid="144110">Introduzca un número entre 1 y 100</translation>
@@ -408,7 +408,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label" qtlid="23323">Nombre</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label" qtlid="3818">Nombre</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label" qtlid="32278">Organización</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question" qtlid="171357">Va a crear un contacto externo</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question" qtlid="171357">Va a crear un contacto externo.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_content" qtlid="174659">Los contactos externos deben cumplir los siguientes criterios:<br/><br/>- El nombre y los apellidos deben tener un máximo de 64 caracteres.<br/>- El nombre mostrado no debe superar los 255 caracteres.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_title" qtlid="171383">Condiciones sobre los contactos externos</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_display_name_label" qtlid="23515">Nombre mostrado</translation>
@@ -661,7 +661,7 @@
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Servidor de correo de destino</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Deberá realizar los cambios en los registros MX y SRV manualmente en la zona DNS. Una vez realizada la validación CNAME, podrá encontrar la información necesaria en la pestaña «Dominios asociados».</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Configurar un dominio</translation>
-   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="444667">El antispam Vade Secure es compatible con el modo no autoritario (solo si sus cuentas POP/IMAP están alojadas en OVH). En ese caso, le aconsejamos que utilice: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> y <strong>{3}</strong><br/><br/>. Si utiliza el modo no autoritario con cuentas de correo no alojadas en OVH, deberá utilizar <strong>{4}</strong> (ver dominios asociados). &#13;
+   <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="444667">El antispam Vade Secure es compatible con el modo no autoritario (solo si sus cuentas POP/IMAP están alojadas en OVH). En ese caso, le aconsejamos que utilice: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> y <strong>{3}</strong>.<br/><br/>Si utiliza el modo no autoritario con cuentas de correo no alojadas en OVH, deberá utilizar <strong>{4}</strong> (ver dominios asociados). &#13;
 </translation>
    <translation id="emailpro_tab_domain_modify_title" qtlid="137920">¿Seguro que quiere modificar el siguiente dominio de su servicio Exchange?</translation>
    <translation id="emailpro_tab_domain_modify_loop_warning" qtlid="210319">¡Atención: bucle infinito!</translation>
@@ -673,7 +673,6 @@
    <translation id="emailpro_tab_domain_remove_title" qtlid="137946">¿Seguro que quiere eliminar el siguiente dominio de su servicio Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">El dominio va a eliminarse de su servicio Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Se ha producido un error al eliminar el dominio del servicio Exchange.</translation>
-
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Período de renovación</translation>
    <translation id="emailpro_update_billing_button_title" qtlid="190953">Modo de facturación</translation>
    <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Expiración</translation>
@@ -691,4 +690,75 @@
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">anual</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">mensual</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Expira al vencimiento</translation>
+   <translation id="lockoutThreshold_unit_value_0">Le compte ne sera jamais verrouillé</translation>
+   <translation id="lockoutThreshold_unit_value_1">1 essai</translation>
+   <translation id="lockoutThreshold_unit_value_many">{0} essais</translation>
+   <translation id="lockoutThreshold_min_error">Le seuil de verrouillage ne peut pas être inférieur à 1 essai</translation>
+   <translation id="lockoutThreshold_max_error">Le seuil de verrouillage ne peut pas être supérieur à 14 essais</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error">Le seuil de verrouillage doit être un nombre entier</translation>
+   <translation id="lockoutThreshold_number_error">Le seuil de verrouillage doit être un nombre entier</translation>
+   <translation id="lockoutThreshold_required_error">Champs obligatoire</translation>
+   <translation id="lockoutThreshold_pattern_error">Le seuil de verrouillage doit être un nombre entier</translation>
+   <translation id="lockoutDuration_min_error">La durée du verrouillage ne peut pas être inférieure à la durée de réinitialisation du compteur de verrouillages</translation>
+   <translation id="lockoutDuration_max_error">La durée du verrouillage ne peut pas être supérieure à 90 minutes</translation>
+   <translation id="maxPasswordAge_unit_value_0">Les mots de passe n'expirent jamais.</translation>
+   <translation id="maxPasswordAge_unit_value_1">1 jour</translation>
+   <translation id="maxPasswordAge_unit_value_many">{0} jours</translation>
+   <translation id="maxPasswordAge_min_error">L'âge maximal du mot de passe ne peut pas être inférieur à 0 jours</translation>
+   <translation id="maxPasswordAge_max_error">L'âge maximal du mot de passe ne peut pas être supérieur à 90 jours</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error">L'âge maximal du mot de passe doit être supérieur à son âge minimal</translation>
+   <translation id="maxPasswordAge_pattern_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
+   <translation id="maxPasswordAge_number_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
+   <translation id="maxPasswordAge_required_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordAge_min_error">L'âge minimal du mot de passe ne peut pas être inférieur à 0 jour</translation>
+   <translation id="minPasswordAge_max_error">L'âge minimal du mot de passe ne peut pas être supérieur à 90 jours</translation>
+   <translation id="minPasswordAge_mustBeInteger_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordAge_minToBigForMax_error">L'âge minimal du mot de passe doit être inférieur à son age maximal</translation>
+   <translation id="minPasswordAge_pattern_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordAge_number_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordAge_required_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordAge_unit_value_0">Les modifications sont autorisées immédiatement.</translation>
+   <translation id="minPasswordAge_unit_value_1">1 jour</translation>
+   <translation id="minPasswordAge_unit_value_many">{0} jours</translation>
+   <translation id="lockoutObservationWindow_min_error">La valeur minimale est 1</translation>
+   <translation id="lockoutObservationWindow_max_error">La valeur maximale est 90</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error">Le délai de réinitialisation doit être un nombre entier</translation>
+   <translation id="lockoutObservationWindow_number_error">Le délai de réinitialisation doit être un nombre entier</translation>
+   <translation id="lockoutObservationWindow_required_error">Champs obligatoire</translation>
+   <translation id="lockoutObservationWindow_pattern_error">Le délai de réinitialisation doit être un nombre entier</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error">La valeur doit être inférieure à la durée de verrouillage des comptes</translation>
+   <translation id="lockoutObservationWindow_unit_value_1">1 minute</translation>
+   <translation id="lockoutObservationWindow_unit_value_many">{0} minutes</translation>
+   <translation id="lockoutDuration_min_error">La durée du verrouillage ne peut pas être inférieure à la durée de réinitialisation du compteur de verrouillages</translation>
+   <translation id="lockoutDuration_max_error">La durée du verrouillage ne peut pas être supérieure à 90 minutes</translation>
+   <translation id="lockoutDuration_mustBeInteger_error">La durée du verrouillage doit être un nombre entier.</translation>
+   <translation id="lockoutDuration_number_error">La durée du verrouillage doit être un nombre.</translation>
+   <translation id="lockoutDuration_required_error">Champs obligatoire</translation>
+   <translation id="lockoutDuration_pattern_error">La durée du verrouillage doit être un nombre entier.</translation>
+   <translation id="lockoutDuration_unit_value_0">Le compte sera bloqué jusqu'à ce qu'un administrateur le déverrouille explicitement.</translation>
+   <translation id="lockoutDuration_unit_value_1">1 minute</translation>
+   <translation id="lockoutDuration_unit_value_many">{0} minutes</translation>
+   <translation id="complexityEnabled_value_true">Activées</translation>
+   <translation id="complexityEnabled_value_false">Désactivées</translation>
+   <translation id="minPasswordLength_unit_value_0">Aucun mot de passe n'est requis.</translation>
+   <translation id="minPasswordLength_unit_value_1">1 caractère</translation>
+   <translation id="minPasswordLength_unit_value_many">{0} caractères</translation>
+   <translation id="minPasswordLength_min_error">La longueur minimale du mot de passe ne peut pas être inférieure à 3</translation>
+   <translation id="minPasswordLength_max_error">La longueur minimale du mot de passe ne peut pas être supérieure à 14</translation>
+   <translation id="minPasswordLength_required_error">Champs obligatoire</translation>
+   <translation id="minPasswordLength_mustBeInteger_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordLength_number_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
+   <translation id="minPasswordLength_pattern_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
+   <translation id="exchange_tab_INFORMATION">Informations générales</translation>
+   <translation id="exchange_tab_DOMAIN">Domaines associés</translation>
+   <translation id="exchange_tab_ACCOUNT">Comptes e-mail</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT">Comptes partagés</translation>
+   <translation id="exchange_tab_GROUP">Groupes</translation>
+   <translation id="exchange_tab_RESOURCES">Ressources</translation>
+   <translation id="exchange_tab_SHARED">Partages</translation>
+   <translation id="exchange_tab_DISCLAIMER">Pieds de page</translation>
+   <translation id="exchange_tab_TASKS">Tâches récentes</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT">Contacts externes</translation>
+   <translation id="exchange_tab_DIAGNOSTIC">Diagnostics</translation>
 </translations>
