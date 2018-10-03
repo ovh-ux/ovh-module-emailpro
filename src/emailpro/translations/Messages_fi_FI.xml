@@ -693,75 +693,75 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">vuosittain</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">kuukausittain</translation>
    <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Erääntyy tilausjakson päätyttyä</translation>
-   <translation id="lockoutThreshold_unit_value_0">Le compte ne sera jamais verrouillé</translation>
-   <translation id="lockoutThreshold_unit_value_1">1 essai</translation>
-   <translation id="lockoutThreshold_unit_value_many">{0} essais</translation>
-   <translation id="lockoutThreshold_min_error">Le seuil de verrouillage ne peut pas être inférieur à 1 essai</translation>
-   <translation id="lockoutThreshold_max_error">Le seuil de verrouillage ne peut pas être supérieur à 14 essais</translation>
-   <translation id="lockoutThreshold_mustBeInteger_error">Le seuil de verrouillage doit être un nombre entier</translation>
-   <translation id="lockoutThreshold_number_error">Le seuil de verrouillage doit être un nombre entier</translation>
-   <translation id="lockoutThreshold_required_error">Champs obligatoire</translation>
-   <translation id="lockoutThreshold_pattern_error">Le seuil de verrouillage doit être un nombre entier</translation>
-   <translation id="lockoutDuration_min_error">La durée du verrouillage ne peut pas être inférieure à la durée de réinitialisation du compteur de verrouillages</translation>
-   <translation id="lockoutDuration_max_error">La durée du verrouillage ne peut pas être supérieure à 90 minutes</translation>
-   <translation id="maxPasswordAge_unit_value_0">Les mots de passe n'expirent jamais.</translation>
-   <translation id="maxPasswordAge_unit_value_1">1 jour</translation>
-   <translation id="maxPasswordAge_unit_value_many">{0} jours</translation>
-   <translation id="maxPasswordAge_min_error">L'âge maximal du mot de passe ne peut pas être inférieur à 0 jours</translation>
-   <translation id="maxPasswordAge_max_error">L'âge maximal du mot de passe ne peut pas être supérieur à 90 jours</translation>
-   <translation id="maxPasswordAge_mustBeInteger_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="maxPasswordAge_maxToSmallForMin_error">L'âge maximal du mot de passe doit être supérieur à son âge minimal</translation>
-   <translation id="maxPasswordAge_pattern_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="maxPasswordAge_number_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="maxPasswordAge_required_error">L'âge maximal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_min_error">L'âge minimal du mot de passe ne peut pas être inférieur à 0 jour</translation>
-   <translation id="minPasswordAge_max_error">L'âge minimal du mot de passe ne peut pas être supérieur à 90 jours</translation>
-   <translation id="minPasswordAge_mustBeInteger_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_minToBigForMax_error">L'âge minimal du mot de passe doit être inférieur à son age maximal</translation>
-   <translation id="minPasswordAge_pattern_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_number_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_required_error">L'âge minimal du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordAge_unit_value_0">Les modifications sont autorisées immédiatement.</translation>
-   <translation id="minPasswordAge_unit_value_1">1 jour</translation>
-   <translation id="minPasswordAge_unit_value_many">{0} jours</translation>
-   <translation id="lockoutObservationWindow_min_error">La valeur minimale est 1</translation>
-   <translation id="lockoutObservationWindow_max_error">La valeur maximale est 90</translation>
-   <translation id="lockoutObservationWindow_mustBeInteger_error">Le délai de réinitialisation doit être un nombre entier</translation>
-   <translation id="lockoutObservationWindow_number_error">Le délai de réinitialisation doit être un nombre entier</translation>
-   <translation id="lockoutObservationWindow_required_error">Champs obligatoire</translation>
-   <translation id="lockoutObservationWindow_pattern_error">Le délai de réinitialisation doit être un nombre entier</translation>
-   <translation id="lockoutObservationWindow_toBigForDuration_error">La valeur doit être inférieure à la durée de verrouillage des comptes</translation>
-   <translation id="lockoutObservationWindow_unit_value_1">1 minute</translation>
-   <translation id="lockoutObservationWindow_unit_value_many">{0} minutes</translation>
-   <translation id="lockoutDuration_min_error">La durée du verrouillage ne peut pas être inférieure à la durée de réinitialisation du compteur de verrouillages</translation>
-   <translation id="lockoutDuration_max_error">La durée du verrouillage ne peut pas être supérieure à 90 minutes</translation>
-   <translation id="lockoutDuration_mustBeInteger_error">La durée du verrouillage doit être un nombre entier.</translation>
-   <translation id="lockoutDuration_number_error">La durée du verrouillage doit être un nombre.</translation>
-   <translation id="lockoutDuration_required_error">Champs obligatoire</translation>
-   <translation id="lockoutDuration_pattern_error">La durée du verrouillage doit être un nombre entier.</translation>
-   <translation id="lockoutDuration_unit_value_0">Le compte sera bloqué jusqu'à ce qu'un administrateur le déverrouille explicitement.</translation>
-   <translation id="lockoutDuration_unit_value_1">1 minute</translation>
-   <translation id="lockoutDuration_unit_value_many">{0} minutes</translation>
-   <translation id="complexityEnabled_value_true">Activées</translation>
-   <translation id="complexityEnabled_value_false">Désactivées</translation>
-   <translation id="minPasswordLength_unit_value_0">Aucun mot de passe n'est requis.</translation>
-   <translation id="minPasswordLength_unit_value_1">1 caractère</translation>
-   <translation id="minPasswordLength_unit_value_many">{0} caractères</translation>
-   <translation id="minPasswordLength_min_error">La longueur minimale du mot de passe ne peut pas être inférieure à 3</translation>
-   <translation id="minPasswordLength_max_error">La longueur minimale du mot de passe ne peut pas être supérieure à 14</translation>
-   <translation id="minPasswordLength_required_error">Champs obligatoire</translation>
-   <translation id="minPasswordLength_mustBeInteger_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordLength_number_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
-   <translation id="minPasswordLength_pattern_error">La longueur minimale du mot de passe doit être un nombre entier</translation>
-   <translation id="exchange_tab_INFORMATION">Informations générales</translation>
-   <translation id="exchange_tab_DOMAIN">Domaines associés</translation>
-   <translation id="exchange_tab_ACCOUNT">Comptes e-mail</translation>
-   <translation id="exchange_tab_SHARED_ACCOUNT">Comptes partagés</translation>
-   <translation id="exchange_tab_GROUP">Groupes</translation>
-   <translation id="exchange_tab_RESOURCES">Ressources</translation>
-   <translation id="exchange_tab_SHARED">Partages</translation>
-   <translation id="exchange_tab_DISCLAIMER">Pieds de page</translation>
-   <translation id="exchange_tab_TASKS">Tâches récentes</translation>
-   <translation id="exchange_tab_EXTERNAL_CONTACT">Contacts externes</translation>
-   <translation id="exchange_tab_DIAGNOSTIC">Diagnostics</translation>
+   <translation id="lockoutThreshold_unit_value_0" qtlid="176713">Tiliä ei lukita koskaan</translation>
+   <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 yritys</translation>
+   <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} yritystä</translation>
+   <translation id="lockoutThreshold_min_error" qtlid="178185">Lukituskynnys ei voi olla pienempi kuin 1 yritys</translation>
+   <translation id="lockoutThreshold_max_error" qtlid="176635">Lukituksen raja-arvon ei voi olla enemmän kuin 14 yrityskerta</translation>
+   <translation id="lockoutThreshold_mustBeInteger_error" qtlid="178198">Lukituskynnyksen on oltava kokonainen luku</translation>
+   <translation id="lockoutThreshold_number_error" qtlid="178198">Lukituskynnyksen on oltava kokonainen luku</translation>
+   <translation id="lockoutThreshold_required_error" qtlid="192019">Kentät ovat pakollisia</translation>
+   <translation id="lockoutThreshold_pattern_error" qtlid="178198">Lukituskynnyksen on oltava kokonainen luku</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">Lukitusaika ei voi olla pienempi kuin lukituslaskurin nollausaika</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">Lukituksen kesto ei voi olla pidempi kuin 90 minuuttia</translation>
+   <translation id="maxPasswordAge_unit_value_0" qtlid="178497">Salasanat eivät vanhene koskaan.</translation>
+   <translation id="maxPasswordAge_unit_value_1" qtlid="28807">1 päivä</translation>
+   <translation id="maxPasswordAge_unit_value_many" qtlid="178484">{0} päivää</translation>
+   <translation id="maxPasswordAge_min_error" qtlid="178107">Salasanan enimmäiselinikä ei voi olla pienempi kuin 0 päivää</translation>
+   <translation id="maxPasswordAge_max_error" qtlid="176596">Salasanan enimmäisikä ei voi olla yli 90 päivää</translation>
+   <translation id="maxPasswordAge_mustBeInteger_error" qtlid="178120">Salasanan enimmäiseliniän on oltava kokonainen luku</translation>
+   <translation id="maxPasswordAge_maxToSmallForMin_error" qtlid="176609">Salasanan enimmäisiän on oltava suurempi kuin sen vähimmäisikä</translation>
+   <translation id="maxPasswordAge_pattern_error" qtlid="178120">Salasanan enimmäiseliniän on oltava kokonainen luku</translation>
+   <translation id="maxPasswordAge_number_error" qtlid="178120">Salasanan enimmäiseliniän on oltava kokonainen luku</translation>
+   <translation id="maxPasswordAge_required_error" qtlid="178120">Salasanan enimmäiseliniän on oltava kokonainen luku</translation>
+   <translation id="minPasswordAge_min_error" qtlid="433992">L'âge minimal du mot de passe ne peut pas être inférieur à 0 jour</translation>
+   <translation id="minPasswordAge_max_error" qtlid="434005">L'âge minimal du mot de passe ne peut pas être supérieur à 90 jours</translation>
+   <translation id="minPasswordAge_mustBeInteger_error" qtlid="434018">Salasanan vähimmäisiän on oltava kokonaisluku</translation>
+   <translation id="minPasswordAge_minToBigForMax_error" qtlid="178094">Salasanan vähimmäiseliniän on oltava pienempi kuin sen enimmäiselinikä</translation>
+   <translation id="minPasswordAge_pattern_error" qtlid="434018">Salasanan vähimmäisiän on oltava kokonaisluku</translation>
+   <translation id="minPasswordAge_number_error" qtlid="434018">Salasanan vähimmäisiän on oltava kokonaisluku</translation>
+   <translation id="minPasswordAge_required_error" qtlid="434018">Salasanan vähimmäisiän on oltava kokonaisluku</translation>
+   <translation id="minPasswordAge_unit_value_0" qtlid="178471">Muutokset hyväksytään heti.</translation>
+   <translation id="minPasswordAge_unit_value_1" qtlid="28807">1 päivä</translation>
+   <translation id="minPasswordAge_unit_value_many" qtlid="178484">{0} päivää</translation>
+   <translation id="lockoutObservationWindow_min_error" qtlid="178133">Pienin arvo on 1</translation>
+   <translation id="lockoutObservationWindow_max_error" qtlid="178146">Suurin arvo on 90</translation>
+   <translation id="lockoutObservationWindow_mustBeInteger_error" qtlid="263871">Nollausviiveen on oltava kokonainen luku</translation>
+   <translation id="lockoutObservationWindow_number_error" qtlid="263871">Nollausviiveen on oltava kokonainen luku</translation>
+   <translation id="lockoutObservationWindow_required_error" qtlid="192019">Kentät ovat pakollisia</translation>
+   <translation id="lockoutObservationWindow_pattern_error" qtlid="263871">Nollausviiveen on oltava kokonainen luku</translation>
+   <translation id="lockoutObservationWindow_toBigForDuration_error" qtlid="178172">Arvon on oltava pienempi kuin tilien lukitusaika</translation>
+   <translation id="lockoutObservationWindow_unit_value_1" qtlid="32326">1 minuutti</translation>
+   <translation id="lockoutObservationWindow_unit_value_many" qtlid="146814">{0} minuuttia</translation>
+   <translation id="lockoutDuration_min_error" qtlid="178211">Lukitusaika ei voi olla pienempi kuin lukituslaskurin nollausaika</translation>
+   <translation id="lockoutDuration_max_error" qtlid="178224">Lukituksen kesto ei voi olla pidempi kuin 90 minuuttia</translation>
+   <translation id="lockoutDuration_mustBeInteger_error" qtlid="178042">Pakollinen kenttä</translation>
+   <translation id="lockoutDuration_number_error" qtlid="178250">Lukituksen keston on oltava luku.</translation>
+   <translation id="lockoutDuration_required_error" qtlid="192019">Kentät ovat pakollisia</translation>
+   <translation id="lockoutDuration_pattern_error" qtlid="178042">Pakollinen kenttä</translation>
+   <translation id="lockoutDuration_unit_value_0" qtlid="178458">Tili lukitaan kunnes admin avaa lukituksen erikseen.</translation>
+   <translation id="lockoutDuration_unit_value_1" qtlid="32326">1 minuutti</translation>
+   <translation id="lockoutDuration_unit_value_many" qtlid="146814">{0} minuuttia</translation>
+   <translation id="complexityEnabled_value_true" qtlid="178406">Aktivoitu</translation>
+   <translation id="complexityEnabled_value_false" qtlid="178419">Deaktivoitu</translation>
+   <translation id="minPasswordLength_unit_value_0" qtlid="178510">Salasanaa ei vaadita.</translation>
+   <translation id="minPasswordLength_unit_value_1" qtlid="178523">1 merkki</translation>
+   <translation id="minPasswordLength_unit_value_many" qtlid="178536">{0} merkkiä</translation>
+   <translation id="minPasswordLength_min_error" qtlid="178029">Salasanan vähimmäispituus ei voi olla pienempi kuin 3</translation>
+   <translation id="minPasswordLength_max_error" qtlid="176531">Salasanan vähimmäispituus ei voi olla yli 14</translation>
+   <translation id="minPasswordLength_required_error" qtlid="192019">Kentät ovat pakollisia</translation>
+   <translation id="minPasswordLength_mustBeInteger_error" qtlid="178055">Salasanan vähimmäispituuden on oltava kokonainen luku</translation>
+   <translation id="minPasswordLength_number_error" qtlid="178055">Salasanan vähimmäispituuden on oltava kokonainen luku</translation>
+   <translation id="minPasswordLength_pattern_error" qtlid="178055">Salasanan vähimmäispituuden on oltava kokonainen luku</translation>
+   <translation id="exchange_tab_INFORMATION" qtlid="27115">Yleiset tiedot</translation>
+   <translation id="exchange_tab_DOMAIN" qtlid="270306">Liittyvät verkkotunnukset</translation>
+   <translation id="exchange_tab_ACCOUNT" qtlid="74273">Sähköpostitilit</translation>
+   <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Jaetut tilit</translation>
+   <translation id="exchange_tab_GROUP" qtlid="32962">Ryhmät</translation>
+   <translation id="exchange_tab_RESOURCES" qtlid="20227">Resurssit</translation>
+   <translation id="exchange_tab_SHARED" qtlid="136269">Jakaminen</translation>
+   <translation id="exchange_tab_DISCLAIMER" qtlid="276324">Alatunnisteet</translation>
+   <translation id="exchange_tab_TASKS" qtlid="136217">Viimeaikaiset tehtävät</translation>
+   <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Ulkoiset yhteyshenkilöt</translation>
+   <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostiikka</translation>
 </translations>
