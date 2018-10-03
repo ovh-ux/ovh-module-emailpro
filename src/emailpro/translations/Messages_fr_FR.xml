@@ -259,7 +259,7 @@
    <translation id="emailpro_ACTION_update_account_step1_display_name_label" qtlid="23515">Nom à afficher</translation>
    <translation id="emailpro_ACTION_update_account_step1_first_name_label" qtlid="23323">Prénom</translation>
    <translation id="emailpro_ACTION_update_account_step1_last_name_label" qtlid="3818">Nom</translation>
-   <translation id="emailpro_ACTION_update_account_step1_password_confirmation_label" qtlid="9983">Confirmation</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_confirmation_label">Confirmation</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_contains_samaccount_name" qtlid="254869">Le mot de passe ne peut pas contenir "{0}", le samaccountName, un identifiant interne.</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_different" qtlid="139637">Mots de passe différents.</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_label" qtlid="2270">Mot de passe</translation>
