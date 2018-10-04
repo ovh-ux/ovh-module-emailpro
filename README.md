@@ -8,33 +8,34 @@
 
 > E-mail Pro module .
 
-## Installation
-
-### NPM
+## Install
 
 ```sh
-$ npm install ovh-module-emailpro --save
+yarn add ovh-module-emailpro
 ```
 
-## Get the sources
+## Usage
 
-```sh
-$ git clone https://github.com/ovh-ux/ovh-module-emailpro.git
-$ cd ovh-module-emailpro
-$ npm install
+```js
+angular.module('App', [
+  '…',
+  'Module.emailpro',
+  '…',
+])
 ```
 
-You've developed a new cool feature? Fixed an annoying bug? We'd be happy
-to hear from you!
+## Related
 
-Have a look in [CONTRIBUTING.md](https://github.com/ovh-ux/ovh-module-emailpro/blob/master/CONTRIBUTING.md)
+* [Web Control Panel UI](https://github.com/ovh-ux/ovh-manager-web).
+* [Exchange Module](https://github.com/ovh-ux/ovh-module-exchange).
+* [Office Module](https://github.com/ovh-ux/ovh-module-office).
+* [Sharepoint Module](https://github.com/ovh-ux/ovh-module-sharepoint).
 
-## Related links
+## Contributing
 
-* Contribute: https://github.com/ovh-ux/ovh-module-emailpro/blob/master/CONTRIBUTING.md
-* Report bugs: https://github.com/ovh-ux/ovh-module-emailpro/issues
-* Get latest version: https://github.com/ovh-ux/ovh-module-emailpro
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ovh-manager-telecom/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ovh-manager-telecom/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
+
 
 ## License
 
-See https://github.com/ovh-ux/ovh-module-emailpro/blob/master/LICENSE
+[BSD-3-Clause](LICENSE) © OVH SAS
