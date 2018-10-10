@@ -22,32 +22,32 @@
                                                 data-translate="emailpro_dashboard_diag"></strong>
                                         <span class="mt-2 d-inline-block pointer">
                                             <span data-ng-if="!exchange.offer == !accountTypeProvider"
-                                                  data-ng-class="{'label label-success': exchange.serverDiagnostic.isAValid,
-                                                                  'label label-danger': !exchange.serverDiagnostic.isAValid}"
+                                                  data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isAValid,
+                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isAValid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.aTooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_a_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="right"
                                                   data-simplepopover-single="true"
                                                   data-translate="emailpro_dashboard_diag_a_label"></span>
                                             <span data-ng-if="exchange.offer == accountTypeDedicated"
-                                                  data-ng-class="{'label label-success': exchange.serverDiagnostic.isAaaaValid,
-                                                                  'label label-danger': !exchange.serverDiagnostic.isAaaaValid}"
+                                                  data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isAaaaValid,
+                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isAaaaValid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.aaaaTooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_aaaa_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="bottom"
                                                   data-simplepopover-single="true"
                                                   data-translate="emailpro_dashboard_diag_aaaa_label"></span>
                                             <span data-ng-if="exchange.offer == accountTypeDedicated"
-                                                  data-ng-class="{'label label-success': exchange.serverDiagnostic.isPtrValid,
-                                                                  'label label-danger': !exchange.serverDiagnostic.isPtrValid}"
+                                                  data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isPtrValid,
+                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isPtrValid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.ptrTooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_ptr_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="bottom"
                                                   data-simplepopover-single="true"
                                                   data-translate="emailpro_dashboard_diag_ptr_label"></span>
                                             <span data-ng-if="exchange.offer == accountTypeDedicated"
-                                                  data-ng-class="{'label label-success': exchange.serverDiagnostic.isPtrV6Valid,
-                                                                  'label label-danger': !exchange.serverDiagnostic.isPtrV6Valid}"
+                                                  data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isPtrV6Valid,
+                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isPtrV6Valid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.ptrv6Tooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_ptrv6_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="bottom"
