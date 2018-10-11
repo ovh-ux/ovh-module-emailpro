@@ -1,3 +1,8 @@
+<a name="7.0.2"></a>
+## [7.0.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.1...v7.0.2) (2018-10-10)
+
+
+
 <a name="7.0.1"></a>
 ## [7.0.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.0...v7.0.1) (2018-10-09)
 
