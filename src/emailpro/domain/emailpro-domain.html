@@ -102,12 +102,12 @@
                             <td class="text-center"
                                 data-ng-if="!domain.partial">
                                 <div data-ng-if="domain.domainValidated">
-                                    <button class="btn btn-danger btn-xs" type="button"
+                                    <button class="oui-status oui-status_error" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_mx"
                                             data-ng-click="setAction('emailpro/domain/mx-autoconfig/emailpro-domain-mx-autoconfig', domain)"
                                             data-ng-if="domain.mxValid === false">
                                     </button>
-                                    <button class="btn btn-success btn-xs" type="button"
+                                    <button class="oui-status oui-status_success" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_mx"
                                             data-ng-if="domain.mxValid"
                                             data-simplepopover="{{domain.mxTooltip}}"
@@ -115,12 +115,12 @@
                                             data-simplepopover-placement="top"
                                             data-simplepopover-single="true">
                                     </button>
-                                    <button class="btn btn-danger btn-xs" type="button"
+                                    <button class="oui-status oui-status_error" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_srv"
                                             data-ng-click="setAction('emailpro/domain/srv-autoconfig/emailpro-domain-srv-autoconfig', domain)"
                                             data-ng-if="domain.srvValid === false">
                                     </button>
-                                    <button class="btn btn-success btn-xs" type="button"
+                                    <button class="oui-status oui-status_success" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_srv"
                                             data-ng-if="domain.srvValid"
                                             data-simplepopover="{{domain.srvTooltip}}"
@@ -129,7 +129,7 @@
                                             data-simplepopover-single="true">
                                     </button>
                                 </div>
-                                <button class="btn btn-danger btn-xs" type="button"
+                                <button class="oui-status oui-status_error" type="button"
                                         data-translate="emailpro_tab_domain_diagnostic_cname"
                                         data-ng-if="!domain.domainValidated && domain.cname"
                                         data-simplepopover="{{ 'emailpro_tab_domain_validation_cname_details' | translate: { t0: domain.cname, t1: domain.name, t2: cnameRedirection } }}"
