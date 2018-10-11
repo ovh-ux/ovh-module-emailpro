@@ -149,5 +149,27 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     $scope.selectedAccount = null;
   };
 
+  $scope.isDisabled = function (account) {
+    return account.state !== 'OK' ? 'disabled' : '';
+  };
+
+  $scope.deleteAccount = function (account) {
+    if (account.state === 'OK') {
+      $scope.setAction('emailpro/account/remove/emailpro-account-remove', angular.copy(account));
+    }
+  };
+
+  $scope.delegationSettings = function (account) {
+    if (account.state === 'OK') {
+      $scope.setAction('emailpro/account/delegation/emailpro-account-delegation', angular.copy(account));
+    }
+  };
+
+  $scope.aliasDisplay = function (account) {
+    if (account.state === 'OK') {
+      $scope.showAliases(account);
+    }
+  };
+
   init();
 });
