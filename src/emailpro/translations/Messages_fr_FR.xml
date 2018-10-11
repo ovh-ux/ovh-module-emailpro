@@ -559,8 +559,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Une erreur est survenue lors du chargement des tâches.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Politique de sécurité des comptes</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Votre service Exchange est presque prêt. Vous devez attacher un domaine à votre service. Si vous n'en avez pas, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">cliquez ici</a> pour en acheter un.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Ajoutez un domaine afin de créer des comptes e-mail Exchange. Cliquez</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">ici</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">pour ajouter un nouveau domaine.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Vous n'avez pas de domaine correspondant au terme recherché</translation>
@@ -605,7 +603,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Ajouter un domaine</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Retirer ce domaine des services Exchange</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Création</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Ce domaine ne peut pas être supprimé car il est encore utilisé par un ou plusieurs compte Exchange</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Non-autoritatif</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autoritatif</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Attention!</translation>
