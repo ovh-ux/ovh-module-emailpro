@@ -67,12 +67,12 @@
                             </td>
 
                             <td class="text-center">
-                                <span class="label"
+                                <span class="oui-status"
                                       data-ng-bind="'emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_' + element.state | translate"
                                       data-ng-class="getStateClassFor(element.state)"
                                       data-ng-if="element.state !== 'OK'">
                                 </span>
-                                <span class="label label-info"
+                                <span class="oui-status oui-status_info"
                                       data-translate="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_MODIFYING"
                                       data-ng-if="element.state === 'OK' && element.taskPendingId">
                                 </span>
