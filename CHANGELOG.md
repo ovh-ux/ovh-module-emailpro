@@ -1,3 +1,13 @@
+<a name="7.0.5"></a>
+## [7.0.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.4...v7.0.5) (2018-10-16)
+
+
+### Bug Fixes
+
+* **ckeditor:** remove ckeditor directive ([e4a8ce6](https://github.com/ovh-ux/ovh-module-emailpro/commit/e4a8ce6))
+
+
+
 <a name="7.0.4"></a>
 ## [7.0.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.3...v7.0.4) (2018-10-16)
 
