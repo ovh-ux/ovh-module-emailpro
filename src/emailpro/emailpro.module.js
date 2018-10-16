@@ -1,4 +1,9 @@
-angular.module('Module.emailpro', ['ovh-utils-angular', 'ngRoute', 'ui.bootstrap', 'ngSanitize',
+angular.module('Module.emailpro', [
+  'ovh-utils-angular',
+  'ngRoute',
+  'ui.bootstrap',
+  'ngSanitize',
+  'ng.ckeditor',
   'Module.emailpro.controllers',
   'Module.emailpro.services',
   'Module.emailpro.filters'])
