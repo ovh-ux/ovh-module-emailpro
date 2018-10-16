@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </form>
-                <textarea class="w-100" id="add-disclaimer-editor" data-emailpro-editor data-ng-model="data.content">{{data.content}}</textarea>
+                <ng-ckeditor class="w-100" id="add-disclaimer-editor" data-ng-model="data.content">{{data.content}}</ng-ckeditor>
                 <oui-checkbox id="outsideOnly" name="outsideOnly"
                     data-model="data.outsideOnly"
                     data-text="{{:: 'emailpro_ACTION_add_disclaimer_outside' | translate }}">
