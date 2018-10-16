@@ -111,11 +111,10 @@
                             <td class="text-center"
                                 data-ng-if="!account.partial">
                                 <span data-ng-if="!isConfigurable(account)">-</span>
-                                <button class="btn btn-success btn-xs" type="button"
-                                        data-ng-if="isConfigurable(account)"
-                                        data-ng-bind="account.aliases"
-                                        data-ng-click="showAliases(account)">
-                                </button>
+                                <span class="oui-status oui-status_success"
+                                      data-ng-if="isConfigurable(account)"
+                                      data-ng-bind="account.aliases">
+                                </span>
                             </td>
                             <td class="text-center">
                                 <span class="fa fa-hourglass-half text-danger"
@@ -127,23 +126,23 @@
                                       data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_state_TASK_ON_DOING' | translate }}"
                                       data-tooltip-append-to-body="true"></span>
 
-                                <span class="label label-info"
+                                <span class="oui-status oui-status_info"
                                       data-ng-if="account.state === stateCreating"
                                       data-translate="emailpro_tab_account_state_CREATING"></span>
-                                <span class="label label-danger"
+                                <span class="oui-status oui-status_error"
                                       data-ng-if="account.state === stateDeleting"
                                       data-translate="emailpro_tab_account_state_DELETING"></span>
-                                <span class="label label-warning"
+                                <span class="oui-status oui-status_warning"
                                       data-ng-if="account.state === stateSuspended"
                                       data-translate="emailpro_tab_account_state_SUSPENDED"></span>
-                                <span class="label label-info"
+                                <span class="oui-status oui-status_info"
                                       data-ng-if="account.state === stateSuspending"
                                       data-translate="emailpro_tab_account_state_SUSPENDING"></span>
-                                <span class="label label-info"
+                                <span class="oui-status oui-status_info"
                                       data-ng-if="account.state === stateReopening"
                                       data-translate="emailpro_tab_account_state_REOPENING"></span>
 
-                                <button class="btn btn-danger btn-xs" type="button"
+                                <button class="oui-status oui-status_error" type="button"
                                         data-translate="emailpro_tab_account_state_SPAM"
                                         data-ng-if="account.spamDetected && account.state === stateOk"
                                         data-simplepopover="{{spamTooltipContent}}"
@@ -153,29 +152,28 @@
                                 </button>
                             </td>
                             <td class="text-nowrap">
-                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{ 'table_modify_entry' | translate }}"
-                                        data-ng-click="editAccount(account)"
-                                        data-ng-disabled="!isEditable(account)"
-                                        data-ng-if="!noDomainFlag">
-                                    <span class="oui-icon oui-icon-pen_line oui-icon_small" aria-hidden="true"></span>
-                                </button>
-                                <span class="btn btn-icon"
-                                      data-ng-if="noDomainFlag"
-                                      data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_menu_account_no_domain_tooltip' | translate }}"
-                                      data-tooltip-append-to-body="true">
-                                    <span class="oui-icon oui-icon-pen_line oui-icon_small text-muted" aria-hidden="true"></span>
-                                </span>
-                                <button class="btn btn-icon" type="button" title="{{account.primaryEmailDisplayName}} {{ 'table_manage_entry' | translate }}"
-                                        data-ng-disabled="!isConfigurable(account)"
-                                        data-uib-tooltip="{{ 'emailpro_tab_ACCOUNTS_menu_account_tooltip' | translate }}"
-                                        data-tooltip-append-to-body="true"
-                                        data-linkedpopover="emailpro/account/emailpro-account.popover.html"
-                                        data-linkedpopover-placement="left"
-                                        data-linkedpopover-single="true"
-                                        data-linkedpopover-remote="true"
-                                        data-linkedpopover-title="{{ 'common_actions' | translate }}">
-                                    <span class="oui-icon oui-icon-gear_line oui-icon_small" aria-hidden="true"></span>
-                                </button>
+                                <oui-action-menu data-compact 
+                                                 data-align="end"
+                                                 data-disabled="noDomainFlag">
+                                    <oui-action-menu-item data-on-click="editAccount(account)"
+                                                          data-disabled="!isEditable(account)">
+                                        <span data-translate="emailpro_tab_DISCLAIMER_menu_settings"></span>
+                                    </oui-action-menu-item>
+                                    <oui-action-menu-item data-ng-if="!is25g()"
+                                                          data-on-click="aliasDisplay(account)"
+                                                          data-disabled="!isConfigurable(account)">
+                                        <span data-translate="emailpro_tab_ACCOUNTS_popover_alias"></span>
+                                    </oui-action-menu-item>
+                                    <oui-action-menu-item data-ng-if="!is25g()"
+                                                          data-on-click="delegationSettings(account)"
+                                                          data-disabled="!isConfigurable(account)">
+                                        <span data-translate="emailpro_tab_ACCOUNTS_popover_delegation"></span>
+                                    </oui-action-menu-item>
+                                    <oui-action-menu-item data-on-click="deleteAccount(account)"
+                                                          data-disabled="!isConfigurable(account)">
+                                        <span data-translate="emailpro_tab_account_popover_reset"></span>
+                                    </oui-action-menu-item>
+                                </oui-action-menu>
                             </td>
                         </tr>
 

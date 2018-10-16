@@ -22,12 +22,12 @@ angular.module('Module.emailpro.controllers')
       switch (state) {
         case 'CREATING':
         case 'REOPENING':
-          return 'label-info';
+          return 'oui-status_info';
         case 'DELETING':
-          return 'label-warning';
+          return 'oui-status_warning';
         case 'SUSPENDED':
         case 'SUSPENDING':
-          return 'label-error';
+          return 'oui-status_error';
         default:
       }
       return null;

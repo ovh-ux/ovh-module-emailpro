@@ -8,7 +8,7 @@
         <oui-datagrid data-rows-loader="getAliases($config)">
             <oui-column data-title="'emailpro_tab_ALIAS_header' | translate" data-property="displayName"></oui-column>
             <oui-column data-title="'emailpro_tab_ACCOUNTS_table_status' | translate" data-property="taskPendingId">
-                <span class="label label-info"
+                <span class="oui-status oui-status_info"
                       data-translate="emailpro_tab_ALIAS_state_TASK_ON_DOING"
                       data-ng-if="$row.taskPendingId"
                       data-uib-tooltip="{{ 'emailpro_tab_ALIAS_state_TASK_ON_DOING_tooltip' | translate }}"

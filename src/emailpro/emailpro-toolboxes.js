@@ -1,31 +1,4 @@
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProToolboxAccountsCtrl', ['$scope',
-    function ($scope) {
-      $scope.isDisabled = function (account) {
-        return account.state !== 'OK' ? 'disabled' : '';
-      };
-
-      $scope.deleteAccount = function (account) {
-        if (account.state === 'OK') {
-          $scope.setAction('emailpro/account/remove/emailpro-account-remove', angular.copy(account));
-        }
-      };
-
-      $scope.delegationSettings = function (account) {
-        if (account.state === 'OK') {
-          $scope.setAction('emailpro/account/delegation/emailpro-account-delegation', angular.copy(account));
-        }
-      };
-
-      $scope.aliasDisplay = function (account) {
-        if (account.state === 'OK') {
-          $scope.showAliases(account);
-        }
-      };
-    },
-  ]);
-
-angular.module('Module.emailpro.controllers')
   .controller('EmailProToolboxGroupsCtrl', ['$scope',
     function ($scope) {
       $scope.updateGroup = function (ml) {
