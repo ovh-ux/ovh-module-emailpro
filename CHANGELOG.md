@@ -1,3 +1,13 @@
+<a name="7.0.4"></a>
+## [7.0.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.3...v7.0.4) (2018-10-16)
+
+
+### Bug Fixes
+
+* **disclaimer:** rollback to ckeditor 4 ([78d7868](https://github.com/ovh-ux/ovh-module-emailpro/commit/78d7868))
+
+
+
 <a name="7.0.3"></a>
 ## [7.0.3](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.2...v7.0.3) (2018-10-16)
 
