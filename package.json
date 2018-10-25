@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "yarn run lint",
-    "lint": "run-p lint:css lint:js",
+    "lint": "run-p lint:html lint:css lint:js",
+    "lint:html": "htmlhint 'src/**/*.html'",
     "lint:css": "stylelint 'src/**/*.less' --fix",
     "lint:js": "eslint --quiet --fix ./src",
     "version": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
@@ -40,6 +41,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-angular": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
+    "htmlhint": "^0.10.1",
     "husky": "^1.1.0",
     "lint-staged": "^7.3.0",
     "npm-run-all": "^4.1.3",
