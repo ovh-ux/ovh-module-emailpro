@@ -96,7 +96,7 @@
                     <tr data-ng-repeat="account in (bufferedAccounts.list.results | orderBy:'primaryEmailAddress':false) track by $index">
 
                         <th class="word-break" id="primaryEmailDisplayName{{$index}}" scope="row"
-                            data-ng-bind="account.primaryEmailDisplayName | sliceContent:60"></th>
+                            data-ng-bind="account.primaryEmailDisplayName | wucSliceContent:60"></th>
 
                         <td class="text-nowrap" data-ng-bind="account.expirationDate | date:'mediumDate'"></td>
 
