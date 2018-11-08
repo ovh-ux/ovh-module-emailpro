@@ -1,3 +1,12 @@
+## [7.0.6](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.5...v7.0.6) (2018-11-08)
+
+
+### Bug Fixes
+
+* **disclaimer:** ui controls alignment signature ([832ee31](https://github.com/ovh-ux/ovh-module-emailpro/commit/832ee31))
+
+
+
 <a name="7.0.5"></a>
 ## [7.0.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.4...v7.0.5) (2018-10-16)
 
