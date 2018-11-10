@@ -29,8 +29,7 @@ angular.module('App', [
 
 ## Contributing
 
-Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ovh-manager-telecom/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ovh-manager-telecom/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
-
+Always feel free to help out! Whether it's [filing bugs and feature requests](https://github.com/ovh-ux/ovh-module-emailpro/issues/new) or working on some of the [open issues](https://github.com/ovh-ux/ovh-module-emailpro/issues), our [contributing guide](CONTRIBUTING.md) will help get you started.
 
 ## License
 
