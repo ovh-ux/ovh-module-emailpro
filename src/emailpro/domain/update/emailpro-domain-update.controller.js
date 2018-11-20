@@ -1,5 +1,13 @@
 angular.module('Module.emailpro.controllers')
-  .controller('EmailProUpdateDomainCtrl', ($scope, $stateParams, $translate, EmailPro, $rootScope, EmailProDomains, Validator) => {
+  .controller('EmailProUpdateDomainCtrl', (
+    $scope,
+    $stateParams,
+    $translate,
+    EmailPro,
+    $rootScope,
+    EmailProDomains,
+    WucValidator,
+  ) => {
     const trimMxRelay = function (mxRelay) {
       if (mxRelay && mxRelay[mxRelay.length - 1] === '.') {
         return mxRelay.substring(0, mxRelay.length - 1);
@@ -90,7 +98,7 @@ angular.module('Module.emailpro.controllers')
         mxRelayBuffer = $scope.selectedDomain.mxRelay
           .substring(0, $scope.selectedDomain.mxRelay.length - 1);
       }
-      return Validator.isValidDomain(mxRelayBuffer);
+      return WucValidator.isValidDomain(mxRelayBuffer);
     };
 
     $scope.submit = function () {
