@@ -13,7 +13,7 @@
     <oui-datagrid data-rows-loader="loadPaginated($config)">
         <oui-column data-title="'emailpro_tab_DISCLAIMER_associated_domains' | translate" data-property="domain.displayName"></oui-column>
         <oui-column data-title="'emailpro_tab_DISCLAIMER_disclaimer_content' | translate" data-property="strippedContent">
-            <span data-ng-bind="$row.strippedContent | sliceContent:60"></span>
+            <span data-ng-bind="$row.strippedContent | wucSliceContent:60"></span>
         </oui-column>
         <oui-column data-title="'emailpro_tab_DISCLAIMER_disclaimer_outside_only' | translate">
             <span data-translate="emailpro_tab_DISCLAIMER_disclaimer_outside_only_true"

@@ -1,4 +1,13 @@
-angular.module('Module.emailpro.controllers').controller('EmailProAddDomainController', ($rootScope, $scope, $timeout, $stateParams, $translate, EmailPro, EmailProDomains, Validator) => {
+angular.module('Module.emailpro.controllers').controller('EmailProAddDomainController', (
+  $rootScope,
+  $scope,
+  $timeout,
+  $stateParams,
+  $translate,
+  EmailPro,
+  EmailProDomains,
+  WucValidator,
+) => {
   const Punycode = window.punycode;
 
   let timeout = null;
@@ -143,6 +152,6 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddDomainContr
 
   $scope.isNonOvhDomainValid = function () {
     return $scope.model.domainType !== $scope.nonOvhDomain
-      || Validator.isValidDomain($scope.model.displayName);
+      || WucValidator.isValidDomain($scope.model.displayName);
   };
 });

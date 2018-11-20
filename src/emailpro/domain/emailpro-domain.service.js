@@ -1,4 +1,7 @@
-angular.module('Module.emailpro.services').service('EmailProDomains', function ($rootScope, Products, $http, $q, constants, EmailPro, OvhHttp) {
+angular.module('Module.emailpro.services').service('EmailProDomains', function (
+  EmailPro,
+  OvhHttp,
+) {
   this.getDomains = function (serviceName, pageSize, offset, searchParam) {
     const search = searchParam || undefined;
 

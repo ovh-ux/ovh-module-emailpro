@@ -47,5 +47,8 @@
   "engines": {
     "node": ">=8",
     "yarn": ">= 1.0.0"
+  },
+  "peerDependencies": {
+    "ovh-api-services": "^3.22.0"
   }
 }
