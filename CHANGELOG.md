@@ -1,3 +1,12 @@
+## [7.0.7](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.6...v7.0.7) (2018-11-20)
+
+
+### Bug Fixes
+
+* **products:** remove use of Products service ([63d36e7](https://github.com/ovh-ux/ovh-module-emailpro/commit/63d36e7))
+
+
+
 ## [7.0.6](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.5...v7.0.6) (2018-11-08)
 
 
