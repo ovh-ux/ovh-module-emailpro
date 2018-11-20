@@ -1,12 +1,20 @@
 angular.module('Module.emailpro.services').service('EmailPro', [
   '$rootScope',
-  'Products',
-  '$http',
   '$q',
+  '$stateParams',
   'constants',
   '$cacheFactory',
   'OvhHttp',
-  function ($rootScope, Products, $http, $q, constants, cache, OvhHttp) {
+  'OvhApiEmailPro',
+  function (
+    $rootScope,
+    $q,
+    $stateParams,
+    constants,
+    cache,
+    OvhHttp,
+    OvhApiEmailPro,
+  ) {
     const tasksCache = cache('UNIVERS_WEB_EMAIL_PRO_TASKS');
     const delegationRightsCache = cache('UNIVERS_WEB_EMAIL_PRO_DELEGATION_RIGHTS');
     const disclaimersCache = cache('UNIVERS_WEB_EMAIL_PRO_DISCLAIMERS');
@@ -152,6 +160,26 @@ angular.module('Module.emailpro.services').service('EmailPro', [
       externalcontactsChanged: 'emailpro.tabs.externalcontacts.changed',
     };
 
+    this.getEmailProServices = function () {
+      return OvhApiEmailPro.v7()
+        .query()
+        .expand(false)
+        .aggregate('displayName')
+        .execute({ serviceName: '*' })
+        .$promise
+        .then(services => _.filter(services, service => _.has(service, 'value.displayName')))
+        .then(services => _.map(services, service => ({
+          name: service.key,
+          displayName: service.value.displayName,
+          type: 'EMAIL_PRO',
+        })));
+    };
+
+    this.getEmailPro = function (serviceName) {
+      return this.getEmailProServices()
+        .then(service => _.find(service, { name: serviceName }));
+    };
+
     /**
      * Get Selected EmailPro
      */
@@ -159,26 +187,29 @@ angular.module('Module.emailpro.services').service('EmailPro', [
       if (forceRefresh === true) {
         resetCache();
       }
-      return Products.getSelectedProduct(true).then((product) => {
-        if (product) {
-          const selectedEmailPro = that.exchangeCache.get('exchange');
-          if (!selectedEmailPro) {
-            if (requests.exchangeDetails === null) {
-              requests.exchangeDetails = OvhHttp.get('/sws/emailpro/{exchange}', {
-                rootPath: '2api',
-                urlParams: {
-                  exchange: product.name,
-                },
-              }).then((result) => {
-                that.exchangeCache.put('exchange', result);
-              });
+
+      return this.getEmailPro($stateParams.productId)
+        .then((product) => {
+          if (product) {
+            const selectedEmailPro = that.exchangeCache.get('exchange');
+            if (!selectedEmailPro) {
+              if (requests.exchangeDetails === null) {
+                requests.exchangeDetails = OvhHttp.get('/sws/emailpro/{exchange}', {
+                  rootPath: '2api',
+                  urlParams: {
+                    exchange: product.name,
+                  },
+                }).then((result) => {
+                  that.exchangeCache.put('exchange', result);
+                });
+              }
+              return requests.exchangeDetails;
             }
-            return requests.exchangeDetails;
+            return selectedEmailPro;
           }
-          return selectedEmailPro;
-        }
-        return $q.reject(product);
-      }).then(() => that.exchangeCache.get('exchange'), reason => $q.reject(reason));
+          return $q.reject(product);
+        })
+        .then(() => that.exchangeCache.get('exchange'), reason => $q.reject(reason));
     };
 
     this.getModels = function () {
