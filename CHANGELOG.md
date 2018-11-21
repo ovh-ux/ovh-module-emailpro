@@ -1,3 +1,12 @@
+## [7.0.8](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.7...v7.0.8) (2018-11-21)
+
+
+### Bug Fixes
+
+* use the right WucApi service ([052f5b6](https://github.com/ovh-ux/ovh-module-emailpro/commit/052f5b6))
+
+
+
 ## [7.0.7](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.6...v7.0.7) (2018-11-20)
 
 
