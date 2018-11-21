@@ -82,10 +82,10 @@
                             <td data-ng-if="!domain.partial && domain.domainValidated">
                                 <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state === stateOk && domain.type === domainTypeAuthoritative"
                                       data-translate="emailpro_tab_domain_modify_in_progress"
-                                      data-translate-values="{ t0: 'emailpro_tab_domain_inverse_NON_AUTHORITATIVE' | translate }"></span>
+                                      data-translate-values="{ t0: ('emailpro_tab_domain_inverse_NON_AUTHORITATIVE' | translate) }"></span>
                                 <span data-ng-if="domain.taskInProgress && !domain.partial && domain.state === stateOk && domain.type === domainTypeNonAuthoritative"
                                       data-translate="emailpro_tab_domain_modify_in_progress"
-                                      data-translate-values="{ t0: 'emailpro_tab_domain_inverse_AUTHORITATIVE' | translate }"></span>
+                                      data-translate-values="{ t0: ('emailpro_tab_domain_inverse_AUTHORITATIVE' | translate) }"></span>
                                 <span data-ng-if="!domain.partial && (domain.state === 'DELETING' || domain.state === 'CREATING')"
                                       data-ng-bind="'emailpro_tab_domain_' + domain.type | translate"></span>
                                 <span data-ng-if="!domain.taskInProgress && !domain.partial && domain.state === stateOk"
