@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.services').service('Api.EmailPro', ['Api', '$q', 'constants', '$cacheFactory', function (Api, $q, constants, $cacheFactory) {
+angular.module('Module.emailpro.services').service('Api.EmailPro', ['WucApi', '$q', 'constants', '$cacheFactory', function (WucApi, $q, constants, $cacheFactory) {
   const self = this;
   const cache = $cacheFactory('emailPro');
 
@@ -12,7 +12,7 @@ angular.module('Module.emailpro.services').service('Api.EmailPro', ['Api', '$q',
         b.cache = cache;
         b.cache.removeAll();
 
-        return Api[operationType](`${constants.swsProxyRootPath}email/pro${a}`, b).then(data => data, reason => $q.reject(reason));
+        return WucApi[operationType](`${constants.swsProxyRootPath}email/pro${a}`, b).then(data => data, reason => $q.reject(reason));
       };
     });
   }
