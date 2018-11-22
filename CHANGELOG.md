@@ -1,3 +1,7 @@
+## [7.0.9](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.8...v7.0.9) (2018-11-22)
+
+
+
 ## [7.0.8](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.7...v7.0.8) (2018-11-21)
 
 
