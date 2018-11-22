@@ -81,12 +81,12 @@
 
 <div data-ng-controller="EmailProTabsCtrl"
      data-ng-if="!loadingEmailProInformations && !loadingEmailProError && !exchange.isExpired">
-    <ovh-tabs tabs="tabs"
+    <wuc-ovh-tabs tabs="tabs"
               selected-tab="selectedTab"
               change-tab="setSelectedTab"
               product="exchange"
               tr="tr"
-              menu="tabMenu"></ovh-tabs>
+              menu="tabMenu"></wuc-ovh-tabs>
     <div class="tab-content">
         <div class="alert alert-dismissible" role="alert"
              data-ng-class="alertType"
