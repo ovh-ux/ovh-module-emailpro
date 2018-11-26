@@ -559,8 +559,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Klaida įkeliant užduotis.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Paskyrų saugumo politika</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Jūsų Exchange paslauga beveik paruošta. Pridėkite paslaugos veikimui reikalingą domeną. Jeigu neturite domeno užsakykite jį, <a href="https://www.ovh.lt/cgi-bin/newOrder/order.cgi" target="_blank">spragtelėję čia</a>.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Norėdami sukurti Exchange el. pašto paskyras, pridėkite domeną. Spragtelėkite</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">čia</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">norėdami pridėti naują domeną.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Neturite domenų, atitinkančių paieškos kriterijų</translation>
@@ -605,7 +603,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Pridėti domeną</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Pašalinti šį domeną iš Exchange paslaugų </translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Kuriama</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Šis domenas negali būti ištrintas, nes jis naudojamas su viena ar keliomis Exchange paskyromis.</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Non-autoritative</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Dėmesio!</translation>
@@ -646,7 +643,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Paskirties el. pašto serveris</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatiškai </translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Ne</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Ar tikrai pageidaujate įtraukti šį domeną į Exchange serverį?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">Į jūsų Exchange serverį bus įtrauktas domenas.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Įvyko klaida pridedant domeną prie jūsų Exchange serverio.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">Domenas bus atnaujintas.</translation>
@@ -654,10 +650,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Pereinama prie {0} </translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non-authoritative</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Authoritative (tik Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Non-authoritative (Exchange + kita pašto paslauga)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Jei įjungtas režimas yra authoritative, kita pranešimų siuntimo sistema negali būti naudojama su Exchange paskyromis. Šis režimas leidžia įjungti Anti-spam Vade Secure apsaugą.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">Non-authoritative režimu Exchange veiks kartu su kita el. pašto paslauga. Vade Secure suderinama su  pop/imap paskyromis, esančiomis OVH (mxplan ar svetainių talpinimo pašto). Tokiu atveju MX pašto serverį nurodykite mx1.mail.ovh.net.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Paskirties el. pašto serveris</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">MX ir SRV įrašai bus keičiami rankiniu būdu jūsų DNS zonoje. Visa būtina informacija bus matoma susijusių domenų skiltyje, iš karto po CNAME patvirtinimo.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Domeno konfigūravimas</translation>
@@ -667,9 +659,7 @@
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Negaliojantis domenas.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Dėmesio: daugiausiai 255 simboliai!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Authoritative / Not authoritative: Ką turėčiau rinktis?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Pagal nutylėjimą, jums pridedant domeną prie Exchange serverio, jam priskirtas režimas yra Authoritative. T.y., jums siunčiant el. laišką serveryje valdomo domeno adresu, adreso bus ieškoma tik Exchange serveryje. <br /><br /> Tačiau jums pakeitus režimą į Non-authoritative, el. laiško siuntimo metu, mes visų pirma patikrinsime el. pašto adreso buvimą Exchange serveryje, ir jei tokio adreso nėra, jūsų pranešimas bus perduotas jūsų apibrėžtam MX serveriui. <br /><br />Jei domenui pasirinktas režimas yra Non-authoritative, jūs galite, naudodami šį domeną, valdyti dalį savo el. laiškų Exchange, o kitą dalį išoriniame serveryje. <br /><br />Dėmesio: jei norite naudoti Exchange paslaugą kartu su OVH svetainių talpinimo plano el. paštu, kairėje esančios formos „Paskirties el. pašto serveris“ laukelyje jūs turite nurodyti šią vertę: <strong>mx1.mail.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Pašalinti domeną </translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Ar tikrai pageidaujate pašalinti šį domeną iš jūsų Exchange paslaugos?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Domenas bus pašalintas iš jūsų Exchange paslaugos.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Įvyko klaida šalinant domeną iš jūsų Exchange paslaugos.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Atnaujinimo periodas</translation>

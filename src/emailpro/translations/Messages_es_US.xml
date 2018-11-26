@@ -138,7 +138,7 @@
    <translation id="emailpro_ACTION_add_disclaimer_no_domains" qtlid="155274">Sólo puede crear una firma por cada dominio validado y actualmente todos sus dominios validados tienen firma.</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_City" qtlid="33310">Ciudad</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_Company" qtlid="49022">Entreprise</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_option_Country" qtlid="25171">Pays</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_Country" qtlid="25171">País</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_Department" qtlid="30706">Département</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_DisplayName" qtlid="80922">Nom affiché</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_Email" qtlid="69509">E-mail</translation>
@@ -252,7 +252,7 @@
    <translation id="emailpro_ACTION_order_accounts_step3_generation_bc" qtlid="169511">Generando la orden de pedido...</translation>
    <translation id="emailpro_ACTION_sending" qtlid="71009">Envoi en cours...</translation>
    <translation id="emailpro_ACTION_update_account_error_message_linked" qtlid="157421">No obstante, se ha producido un error al configurar otros parámetros de la cuenta.</translation>
-   <translation id="emailpro_ACTION_update_account_helpwizard_password_title" qtlid="2270">Mot de passe</translation>
+   <translation id="emailpro_ACTION_update_account_helpwizard_password_title" qtlid="2270">Contraseña</translation>
    <translation id="emailpro_ACTION_update_account_helpwizard_password" qtlid="171240">Las contraseñas deben cumplir los siguientes criterios mínimos:<br/><br/>- No contener la totalidad o parte del nombre de la cuenta del usuario.<br/>- Tener una longitud de al menos {0} caracteres.<br/>- Contener caracteres de tres de las siguientes cuatro categorías:<br/><ul><li>letras mayúsculas (A - Z)<br/></li><li>letras minúsculas (a - z)<br/></li><li>números (0 - 9)<br/></li><li>caracteres no alfanuméricos (por ejemplo: !, $, #, %)<br/></li></ul></translation>
    <translation id="emailpro_ACTION_update_account_helpwizard_password_simple" qtlid="195139">Las contraseñas deben tener una longitud de al menos {0} caracteres</translation>
    <translation id="emailpro_ACTION_update_account_step1_complex_password_tooltip" qtlid="178822">Mínimo de {0} caracteres alfanuméricos, cifras y signos especiales.</translation>
@@ -262,7 +262,7 @@
    <translation id="emailpro_ACTION_update_account_step1_password_confirmation_label" qtlid="9983">Confirmation</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_contains_samaccount_name" qtlid="254869">La contraseña no puede contener "{0}", el sameaccountName, un nombre de usuario interno.</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_different" qtlid="139637">Contraseñas diferentes</translation>
-   <translation id="emailpro_ACTION_update_account_step1_password_label" qtlid="2270">Mot de passe</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_label" qtlid="2270">Contraseña</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_placeholder" qtlid="156745">Guardar la antigua</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_weak" qtlid="139624">Contraseña muy fácil</translation>
    <translation id="emailpro_ACTION_update_account_step1_quota_label" qtlid="6874">Límite</translation>
@@ -407,7 +407,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label" qtlid="23323">Nombre</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label" qtlid="3818">Nombre</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label" qtlid="32278">Organisation</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label" qtlid="32278">Organización</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question" qtlid="171357">Va a crear un contacto externo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_content" qtlid="174659">Los contactos externos deben cumplir los siguientes criterios:<br/><br/>- El nombre y los apellidos deben tener un máximo de 64 caracteres.<br/>- El nombre mostrado no debe superar los 255 caracteres.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_title" qtlid="171383">Condiciones sobre los contactos externos</translation>
@@ -449,8 +449,8 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress" qtlid="30430">Dirección </translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL" qtlid="28483">Annuaire</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state" qtlid="26443">Estado</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_CREATING" qtlid="26227">En création</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_DELETING" qtlid="133929">Eliminando</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_CREATING" qtlid="26227">En proceso de creación</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_DELETING" qtlid="133929">En proceso de eliminación</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_REOPENING" qtlid="171279">Reabriendo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_SUSPENDED" qtlid="136100">Suspendido</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_SUSPENDING" qtlid="171292">Suspendiendo</translation>
@@ -559,8 +559,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Se ha producido un error al cargar las tareas.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Política de seguridad de las cuentas</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Su servicio Exchange está casi listo. Solo falta asociar un nombre de dominio al servicio. Si no tiene, <a href="https://www.ovh.com/us/es/cgi-bin/newOrder/order.cgi" target="_blank">haga clic aquí</a> para registrar uno.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Añada un dominio para crear cuentas de correo Exchange. Haga clic</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">aquí</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">para añadir un nuevo dominio.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">No hay dominios que se ajusten a la búsqueda</translation>
@@ -605,7 +603,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Ajouter un domaine</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Borrar este dominio de los servicios Exchange</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Creación</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Este dominio no puede eliminarse porque aún tiene asociadas una o varias cuentas Exchange</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">No autoritario</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autoritatif</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">¡Atención!</translation>
@@ -621,7 +618,7 @@
    <translation id="emailpro_tab_domain_add_step1_new_organization_intro" qtlid="447716">El dominio de su empresa será <strong>{0}</strong></translation>
    <translation id="emailpro_tab_domain_add_step1_new_organization_placeholder" qtlid="191109">Nombre de la organización</translation>
    <translation id="emailpro_tab_domain_add_step2_main_domain" qtlid="191122">Dominio principal</translation>
-   <translation id="emailpro_tab_domain_add_step2_organization" qtlid="32278">Organisation</translation>
+   <translation id="emailpro_tab_domain_add_step2_organization" qtlid="32278">Organización</translation>
    <translation id="emailpro_tab_domain_add_step2_main_domain_true" qtlid="34776">Oui</translation>
    <translation id="emailpro_tab_domain_add_step2_main_domain_false" qtlid="34788">Non</translation>
    <translation id="emailpro_tab_domain_add_step2_mx_replay" qtlid="316931">Servidor de correo de destino</translation>
@@ -646,7 +643,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Servidor de correo de destino</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automáticamente</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Non</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">¿Seguro que desea añadir el siguiente dominio al servidor Exchange?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">El dominio va a añadirse al servidor Exchange.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Se ha producido un error al añadir el dominio a su servidor Exchange.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">El dominio va a actualizarse.</translation>
@@ -654,10 +650,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Pasando a {0}</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritatif</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">No autoritario</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autoritario (solo Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">No autoritario (Exchange + otro servicio de correo)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">El modo autoritario no permite utilizar otro sistema de correo con las cuentas Exchange. Este modo permite activar el antispam Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">El modo no autoritario permite el us simultáneo de Exchange y otro servicio de correo. La opción antispam Vade Secure es compatible si las cuentas pop/imap están alojadas en OVH (mxplan o servicio compartido), en ese caso debe indicar mx1.mail.ovh.net en servidor de destino.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Servidor de correo de destino</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Los cambios en los registros MX y SRV se deben realizar manualmente en la zona DNS. Una vez efectuada la validación CNAME, usted encontrará la información necesaria en «Dominios asociados».</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Configurar un dominio</translation>
@@ -667,9 +659,7 @@
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Dominio no válido.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">¡Atención: máximo 255 caracteres!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritario/No autoritario: ¿qué debo seleccionar?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Al añadir un dominio al servidor Exchange, este está por defecto en modo autoritario. Esto significa que cuando se envíe un mensaje de correo a la dirección del dominio gestionado por el servidor, este solo mirará si la dirección está presente en el servidor Exchange. <br /><br /> Si, por el contrario, cambia el dominio a modo no autoritario, cuando se envía un mensaje de correo primero comprobamos si la dirección de correo está presente en el servidor Exchange, y si no, este redirigirá el mensaje al servidor MX que usted haya configurado. <br /><br />El modo no autoritario del dominio puede utilizarse cuando, por ejemplo, usted desea gestionar una parte de su correo en Exchange y otra parte en un servidor externo. <br /><br />Atención: Si usted desea utilizar el servicio Exchange y el servicio de correo en alojamiento compartido de OVH, deberá introducir en el campo «Servidor de correo de destino» del formulario de la izquierda el siguiente valor: <strong>mx1.mail.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Eliminar un dominio</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">¿Seguro que desea eliminar el siguiente dominio de su servicio Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">El dominio va a eliminarse de su servicio Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Se ha producido un error al eliminar el dominio del servicio Exchange.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Période de renouvellement</translation>

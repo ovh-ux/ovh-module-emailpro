@@ -565,8 +565,6 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Při načítání úkolů došlo k chybě.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Bezpečnostní pravidla účtu</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Vaše služby Exchange je téměř připravena. Nyní musíte ke své službě připojit doménu. Pokud ještě žádnou nemáte, <a href="https://www.ovh.cz/cgi-bin/newOrder/order.cgi" target="_blank">klikněte sem</a> a objednejte si ji.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Přidat doménu pro vytvoření Exchange účtů. Klikněte</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">zde</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">pro přidání nové domény.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Nemáte žádné domény, které by odpovídaly vyhledávaným kritériím</translation>
@@ -611,7 +609,6 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Přidat doménu</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Odebrat tuto doménu ze služeb Exchange</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Vytvoření</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Tato doména nemůže být vymazána a je stále používána jedním či více účty Exchange</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Neautoritativní</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autoritativní</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Pozor!</translation>
@@ -652,7 +649,6 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Cílový mailserver</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automaticky</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Ne</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Opravdu si přejete přidat níže na exchange server?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">Doména bude přidána na Váš server Exchange.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Při přidávání domény na Váš Exchange server došlo k chybě.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">Doména bude aktualizována.</translation>
@@ -660,10 +656,6 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Probíhá přesun na {0}</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritativní</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Neautoritativní</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autoritativní (pouze Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Neautoritativní (Exchange + další e-mailové řešení)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Autoritativní režim neumožňuje použití jiných emailových služeb na doméně mimo účtů Exchange. Tento režim umožňuje aktivaci antispamu Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">Neautoritativní režim připouští koexistenci služby Exchange a dalšího e-mailového řešení. Antispam Vade Secure je kompatibilní za předpokladu, že jsou účty pop/imap hostovány u společnosti OVH (MX Plan či webhosting). V takovém případě je do kolonky "cílový server" zapotřebí zadat "mx1.mail.ovh.net".</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Cílový mailserver</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Změny záznamů MX a SRV musí být provedeny ručně, ve Vaší DNS zóně. Jakmile bude potvrzen záznam CNAME, najdete všechny potřebné informace v sekci asociovaných domén.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Úprava domény</translation>
@@ -673,9 +665,7 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Neplatná doména.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Pozor, maximálně 255 znaků.</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritativní/Neautoritativní: Co si mám zvolit?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Doména je po připojení k serveru Exchange defaultně nakonfigurována v autoritativním režimu. To znamená, že kdykoli odešlete e-mail na adresu domény spravované na serveru, server bude ověřovat pouze to, zda se daná adresa nachází na serveru Exchange. <br /><br />Pokud doménu přepnete do neautoritativního režimu a odešlete zprávu, budeme nejprve zjišťovat, zda se daná adresa nachází na Exchange serveru. Pokud ne, Exchange server zprávu přepošle na Vámi specifikovaný MX server. <br /><br />Doménu lze v neautoritativním režimu využívat například tehdy, když si přejete část e-mailů spravovat v rámci služby Exchange a další část na externím serveru. <br /><br />Upozornění: pokud si zároveň se službou Exchange přejete používat i e-mailové řešení zahrnuté v hostingu OVH, musíte do kolonky "cílový e-mailový server" zadat následující text: <strong>mx1.mail.ovh.net.</strong> </translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Vymazat doménu</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Opravdu si přejete vymazat následující doménu ze svých služeb Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Doména bude vymazána z Vašich služeb Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Při mazání domény z Vašich služeb Exchange došlo k chybě.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Období obnovení</translation>

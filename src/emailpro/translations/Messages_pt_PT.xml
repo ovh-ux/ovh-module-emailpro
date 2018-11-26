@@ -115,7 +115,7 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Ocorreu um erro aquando da adição do domínio ao seu servidor E-mail Pro.</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">O domínio introduzido não é válido</translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} s/IVA ({1} c/IVA)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} s/IVA ({1} IVA incl.)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only" qtlid="499930">{0} ({0} c/IVA)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">Ocorreu um erro ao recuperar as informações do utilizador</translation>
 
@@ -243,7 +243,7 @@
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type" qtlid="139325">Tipo de pagamento:</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_monthly" qtlid="79530">mensal</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_yearly" qtlid="79542">anual</translation>
-   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} s/IVA ({1} c/IVA)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} s/IVA ({1} IVA incl.)</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_total" qtlid="139429">Total faturado:</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_bc" qtlid="169524">Nota de encomenda gerada com sucesso.</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_continue" qtlid="169537">Para confirmar a encomenda, clique no botão "Pagar".</translation>
@@ -559,8 +559,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Erro ao processar apresentação das tarefas.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Politica de segurança das contas</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">O seu serviço Exchange está quase pronto. Deve associar agora um domínio ao seu serviço. Se ainda não possui nenhum, <a href="https://www.ovh.pt:51043/cgi-bin/newOrder/order.cgi" target="_blank">clique aqui</a> para adquirir um.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Adicione um domínio para que possa criar contas de e-mail Exchange. Clique</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">aqui</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">para adicionar um novo domínio.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Não possui domínios que correspondam ao termo procurado</translation>
@@ -605,7 +603,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Adicionar domínio</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Retirar este domínio dos serviços Exchange</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Criação</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">O domínio não pode ser eliminado uma vez que está a ser usado por uma ou várias contas Exchange</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">«Não-autoritário» (Nonauthoritative) </translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autoritário (authoritative)</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Atenção!</translation>
@@ -646,7 +643,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Servidor de e-mail alvo</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automaticamente</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Não</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Tem a certeza de que pretende adicionar este domínio ao servidor exchange?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">A adição do domínio ao seu servidor exchange vai ser efetuada.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Ocorre um erro aquando da adição do domínio ao seu servidor exchange.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">A atualização do domínio vai ser efetuada.</translation>
@@ -654,10 +650,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Passagem para {0} em curso</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritário (authoritative)</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">«Não-autoritário» (Nonauthoritative)</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autoritativo (apenas Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Nonauthoritative  (Exchange + outro sistema de e-mail)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">O modo autoritário não permite a utilização de um outro sistema de e-mails com as contas Exchange. Este modo permite a ativação do anti-spam Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">O modo nonauthoritative permite a utilização do Exchange e de outro sistema de e-mail. O sistema anti-spam Vade Secure é compatível com o modo «não-autoritário» (nonauthoritative) - para contas POP/IMAP alojadas na OVH (associadas ao mxplan ou ao alojamento web OVH). Neste caso, é necessário indicar mx1.mail.ovh.net como servidor e-mail de destino.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Servidor de e-mail alvo</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">As alterações dos registos do tipo MX e SRV devem ser realizadas de forma manual na sua secção DNS. Pode encontrar as informações necessárias na secção "Domínios associados", depois de ter efetuado a validação do CNAME.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Modificar um domínio</translation>
@@ -668,9 +660,7 @@ Se usar o modo nonauthoritative com contas de e-mail não alojadas pela OVH, dev
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Domínio inválido</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Atenção, máximo 255 caracteres!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritário/Não autoritário: O que devo escolher?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">De forma padrão, quando adiciona o seu domínio ao servidor E-mail Pro vai encontrá-lo em modo autoritário. Quer isto indicar que se enviar um e-mail a um endereço do domínio gerido pelo servidor, este ultimo vai procurar exclusivamente no servidor E-mail Pro se o endereço está presente e existe. <br /><br /> Por outro lado, se mudar o domínio para modo autoritário, aquando do envio de um e-mail iremos verificar se o endereço de e-mail está presente no serviço E-mail Pro, e se não for o caso, este último enviará a mensagem para o servidor MX que definiu. <br /><br />O domínio em modo não autoritário pode ser utilizado, por exemplo, para gerir parte dos seus e-mails no serviço E-mail Pro e outra parte num servidor externo. <br /><br />Atenção, se deseja utilizar o serviço E-mail Pro e o serviço e-mail partilhado OVH, deve indicar no "Servidor de e-mail alvo" do formulário o seguinte valor: <strong>mx1.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Eliminar um domínio</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Tem a certeza de que pretende realmente eliminar o seguinte domínio do seu serviço Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">O domínio vai ser eliminado do seu serviço Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Ocorreu um erro aquando da eliminação do domínio do seu serviço Exchange.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Período de renovação</translation>
