@@ -1,3 +1,13 @@
+## [7.0.10](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.9...v7.0.10) (2018-11-27)
+
+
+### Bug Fixes
+
+* **deps:** upgrade npm-run-all to v4.1.5 ([bead6d9](https://github.com/ovh-ux/ovh-module-emailpro/commit/bead6d9))
+* **i18n:** retrieve translations ([885e4f5](https://github.com/ovh-ux/ovh-module-emailpro/commit/885e4f5))
+
+
+
 ## [7.0.9](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.8...v7.0.9) (2018-11-22)
 
 
