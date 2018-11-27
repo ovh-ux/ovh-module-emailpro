@@ -643,7 +643,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Serveur e-mail cible</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatiquement</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Non</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Etes-vous sûr de vouloir ajouter le domaine ci-dessous au serveur exchange ?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">L'ajout du domaine à votre serveur exchange va être effectué.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Une erreur est survenue lors de l'ajout du domaine à votre serveur exchange.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">La mise à jour du domaine va être effectuée.</translation>
@@ -651,10 +650,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Passage vers {0} en cours</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritatif</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non-autoritatif</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autoritatif (Exchange uniquement)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Non-autoritatif (Exchange + autre service de messagerie)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Le mode autoritatif ne permet pas l'usage d'un autre système de messagerie avec des comptes Exchange. Ce mode permet l'activation de l'antispam Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">Le mode non-autoritatif permet une cohabitation entre Exchange et un autre service de messagerie. L'antispam Vade Secure est compatible si les comptes pop/imap sont hébergés chez OVH (mxplan ou offre mutualisée), il faut indiquer dans ce cas mx1.mail.ovh.net en serveur e-mail cible.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Serveur e-mail cible</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Les modifications MX et SRV seront à réaliser manuellement dans votre zone DNS. Vous pouvez retrouver les informations nécessaires dans la section domaines associés, une fois la validation CNAME effectuée.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Configuration domaine</translation>
@@ -664,9 +659,7 @@
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Domaine invalide.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Attention, maximum 255 caractères !</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritatif / Non-autoritatif : Que dois-je choisir ?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Par défaut, lorsque vous ajoutez votre domaine sur le serveur Exchange, il se trouve en mode autoritatif. C'est-à-dire que lorsque vous envoyez un e-mail à l'adresse du domaine géré sur le serveur, ce dernier va regarder exclusivement sur le serveur Exchange si l'adresse est présente. <br /><br /> En revanche, si vous basculez le domaine en mode non-autoritatif, lors de l'envoi du e-mail, nous allons vérifier dans un premier temps si l'adresse e-mail est présente sur le serveur Exchange, et si ce n'est pas le cas, ce dernier relayera votre message sur le serveur MX que vous avez défini. <br /><br />Le domaine en mode non-autoritatif peut être utilisé si vous souhaitez, par exemple, gérer une partie de vos e-mails sur Exchange et une autre partie sur un serveur externe. <br /><br />Attention, si vous souhaitez utiliser le service Exchange et le service e-mail mutualisé OVH, vous devez dans le champ "Serveur e-mail cible" du formulaire de gauche renseigner cette valeur : <strong>mx1.mail.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Supprimer un domaine</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Etes-vous sûr de vouloir réellement supprimer le domaine suivant de votre service Exchange ?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Le domaine va être supprimé de votre service Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Une erreur est survenue lors de la suppression du domaine de votre service Exchange.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Période de renouvellement</translation>

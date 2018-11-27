@@ -447,7 +447,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_creationDate" qtlid="4358">Erstellt am</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_displayName" qtlid="80922">Angezeigter Name</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_externalEmailAddress" qtlid="30430">Adresse</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL" qtlid="28483">Telefonbuch</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_hiddenFromGAL" qtlid="28483">Adressbuch</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state" qtlid="26443">Status</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_CREATING" qtlid="26227">Wird erstellt</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_table_headers_state_DELETING" qtlid="133929">Wird gelöscht</translation>
@@ -559,8 +559,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Beim Laden der Tasks ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Sicherheitseinstellungen der Accounts</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Ihr Exchange Dienst ist fast einsatzbereit. Sie müssen ihrem Dienst nun noch eine Domain hinzufügen. Wenn Sie keine Domain haben, klicken Sie bitte <a href="https://www.ovh.de:51043/cgi-bin/newOrder/order.cgi" target="_blank">hier</a>, um eine Domain zu bestellen.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Fügen Sie eine Domain hinzu, um Exchange E-Mail-Accounts zu erstellen. Klicken Sie</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">hier</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">um eine neue Domain hinzuzufügen.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Sie haben keine dem Suchbegriff entsprechenden Domains</translation>
@@ -605,7 +603,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Eine Domain hinzufügen</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Diese Domain aus den Exchange Dienstleistungen entfernen</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Erstellung</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Diese Domain kann nicht gelöscht werden, da sie noch von einem oder mehreren Exchange Accounts verwendet wird</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Nicht-autoritativ</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autoritativ</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Achtung!</translation>
@@ -646,7 +643,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Ziel-E-Mail-Server</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatisch</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Nein</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Sind Sie sicher, dass Sie folgende Domain zum Exchange Server hinzufügen möchten?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">Die Domain wird zu Ihrem Exchange Server hinzugefügt.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Beim Hinzufügen der Domain zu Ihrem Exchange Server ist ein Fehler auftreten.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">Das Update der Domain wird durchgeführt.</translation>
@@ -654,10 +650,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Umstellung auf {0} wird ausgeführt</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritativ</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Nicht-autoritativ</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autoritativ (nur Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Nicht-autoritativ (Exchange + anderer E-Mail-Dienst)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Der autoritative Modus erlaubt nicht die Nutzung eines anderen E-Mail-Systems mit Exchange Accounts. Dieser Modus ermöglicht die Aktivierung des Vade Secure Antispams.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">Der nicht-autoritative Modus ermöglicht die gleichzeitige Nutzung von Exchange mit einer anderen E-Mail-Dienstleistung. Die Vade Secure Antispam-Lösung ist damit kompatibel, wenn die POP/IMAP Accounts bei OVH gehostet werden (MX Plan oder Webhosting E-Mails). In diesem Fall muss mx1.mail.ovh.net als E-Mail-Zielserver angegeben werden.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Ziel-E-Mail-Server</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Die Änderungen an den MX und SRV Einträgen müssen von Hand in Ihrer DNS Zone durchgeführt werden. Sie finden die notwendigen Informationen in der Rubrik "Assoziierte Domains", sobald die CNAME Validierung durchgeführt wurde.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Eine Domain bearbeiten</translation>
@@ -667,9 +659,7 @@
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Ungültige Domain.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Achtung, maximal 255 Zeichen!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritativ / Nicht-autoritativ: was soll ich auswählen?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Wenn Sie Ihre Domain zum Exchange Server hinzufügen, wird diese standardmäßig im autoritativen Modus eingerichtet. Das heißt, wenn eine E-Mail auf dem Exchange Server eingeht, wird zunächst geprüft, ob der Ziel-Account auf dem Exchange Server konfiguriert ist. Ist dies nicht der Fall, wird die E-Mail im autoritativen Modus verworfen.<br /><br /> Wenn Sie Ihre Domain im nicht-autoritativen Modus konfigurieren, werden E-Mails, deren Ziel-Adressen nicht in Exchange konfiguriert sind, an den von Ihnen angegebenen MX Server weitergeleitet. <br /><br />Der nicht-autoritative Modus wird zum Beispiel verwendet, wenn Sie einen Teil Ihrer E-Mails mit Exchange und einen Teil auf einem externen Server verwalten möchten. <br /><br />Vorsicht: Wenn Sie Exchange parallel mit einem anderen bei OVH gehosteten E-Mail-Dienst verwenden möchten, müssen Sie in dem Feld "Ziel-E-Mail-Server" auf der linken Seite folgenden Wert angeben: <strong>mx1.mail.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Eine Domain löschen</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Sind Sie sicher, dass Sie folgende Domain aus Ihrer Exchange Dienstleistung löschen möchten?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Die Domain wird aus Ihrer Exchange Dienstleistung gelöscht.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Beim Löschen der Domain aus Ihrer Exchange Dienstleistung ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Verlängerungs-Zeitraum</translation>

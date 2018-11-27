@@ -115,7 +115,7 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">An error has occurred adding the domain to your Email Pro server. </translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">The domain entered is not valid </translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} excl. taxes ({1} incl. taxes)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} plus tax ({1} incl. tax)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only" qtlid="499930">{0} ({0} incl. taxes)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">An error has occurred while retrieving user information</translation>
 
@@ -245,7 +245,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type" qtlid="139325">Type of payment:</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_monthly" qtlid="79530">monthly</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_yearly" qtlid="79542">annually </translation>
-   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} excl. taxes ({1} incl. taxes)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} plus tax ({1} incl. tax)</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_total" qtlid="139429">Total invoiced:</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_bc" qtlid="169524">The order was successfully generated.</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_continue" qtlid="169537">To confirm your order please click on the "Pay" button below.</translation>
@@ -561,8 +561,6 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">An error occurred on loading the tasks.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Account security policy</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Your Exchange service is nearly ready. You just have to attach a domain to your service. If you do not have one, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to buy one.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Add a domain in order to create e-mail Exchange accounts. Click</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">here</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">to add a new domain.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">You don't have any domains corresponding to these search terms</translation>
@@ -607,7 +605,6 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Add a domain</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Withdraw this domain from the Exchange services</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Creation</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">This domain cannot be deleted as it is still being used by one or more Exchange accounts</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Non-authoritative</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Attention!</translation>
@@ -649,7 +646,6 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Target email server </translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatically</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">No</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Are you sure you want to add the domain below to the exchange server?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">The domain will be added to your exchange server.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">An error occurred on adding the domain to your exchange server.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">The domain will be updated.</translation>
@@ -657,10 +653,6 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Moving to {0}</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non-authoritative</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Authoritative (Only Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Non-authoritative (Exchange + other messaging service)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Authoritative mode does not let you use another messaging system with Exchange accounts. This mode lets you activate Vade Secure antispam.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">The non-authoritative mode allows Exchange to co-exist with another messaging service. The Vade Secure anti-spam is compatible if the pop/imap accounts are hosted at OVH (mxplan or shared solution). In that case, you need to put  mx1.mail.ovh.net as the target email server.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Target email server </translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">MX and SRV changes must be carried out manually in your DNS zone. You can find the necessary information in the associated domains section, once the CNAME has been validated.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Modify a domain</translation>
@@ -670,9 +662,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Invalid domain.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Warning, 255 characters maximum!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Authoritative/Nonauthoritative: What should I choose?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">By default, when you add your domain to the Exchange server, it will be in authoritative mode. This means that when you send an email to the address of the doain managed by the server, the server will only check to see if the address is on the Exchange server. <br /><br /> However if you switch the domain to nonauthoritative mode, when you send an email we will first check if the address is on the Exchange server, and if it isn't, the Exchange server will relay your message to the specified MX server. <br /><br />You can use your domain in nonauthoritative mode if, for example, you want to manage some of your emails on Exchange and some of them on an External server. <br /><br />Please note, if you want to use Exchange and OVH email, you have to enter the following value into the "Target email server" in the form on the left of the page : <strong>mx1.mail.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Delete a domain</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Are you sure you really want to delete the following domain from your Exchange service?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">The domain will be deleted from your Exchange service.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">An error occurred on deleting the domain from your Exchange service.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Renewal period</translation>

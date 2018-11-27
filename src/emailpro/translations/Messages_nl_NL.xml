@@ -115,7 +115,7 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Er is een fout opgetreden tijdens het toevoegen van het domein aan uw E-mail Pro server. </translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Het ingevoerde domein is niet geldig</translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} excl. BTW ({1} incl. BTW)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} excl. btw ({1} incl. btw)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only" qtlid="499930">{0} ({0} incl. btw)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">Fout bij het ophalen van gebruikersinformatie</translation>
 
@@ -243,7 +243,7 @@
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type" qtlid="139325">Betalingsmethode:</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_monthly" qtlid="79530">maandelijks</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_yearly" qtlid="79542">jaarlijks</translation>
-   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} excl. BTW ({1} incl. BTW)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} excl. btw ({1} incl. btw)</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_total" qtlid="139429">Totaal gefactureerd:</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_bc" qtlid="169524">De bestelbon werd aangemaakt</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_continue" qtlid="169537">Klik hieronder op "Betalen", om uw bestelling te bevestigen.</translation>
@@ -559,8 +559,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Er is een fout opgetreden tijdens het laden van de taken.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Het beveiligingsbeleid van de account</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Uw Exchange dienst is bijna gereed. U hoeft alleen maar een domein aan uw dienst te koppelen. Als u er geen heeft, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">kunt u hier klikken</a> om er een te kopen. </translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Voeg een domein toe om e-mail exchange accounts aan te maken. Klik</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">hier</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">om een ​​nieuw domein toe te voegen.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">U heeft geen domeinen die overeenkomen met deze zoekopdracht</translation>
@@ -605,7 +603,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Een domein toevoegen</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Verwijder dit domein van de Exchange diensten</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Creatie</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Dit domein kan niet worden verwijderd, omdat deze  nog steeds wordt gebruikt door een of meer Exchange accounts</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Niet-autoritief</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">autoritatief</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Let op!</translation>
@@ -646,7 +643,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Bestemming e-mail server</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatisch</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Nee</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Weet u zeker dat u het onderstaande domein aan de exchange server wilt toevoegen?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">Het domein zal worden toegevoegd aan uw exchange server.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Er is een fout opgetreden bij het toevoegen van het domein op uw exchange server.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">Het domein wordt geüpdatet</translation>
@@ -654,10 +650,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Conversie naar {0} wordt uitgevoerd</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">autoritatief</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Niet-autoritief</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Authoritative (enkel Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Niet-autoritief (Exchange + een andere e-mailservice)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">De authoritative modus staat het gebruik van een ander e-mailsysteem met Exchange accounts niet toe. Met deze modus kunt u Vade Secure anti-spam activeren. </translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">In de niet-autoritieve modus kan uw Exchange-dienst naast een andere e-maildienst worden gebruikt. Het Vade Secure anti-spamsysteem is compatibel als de POP/IMAP-accounts worden gehost bij OVH (MX-plan of gehost pakket). Als dit het geval is, moet u mx1.mail.ovh.net opgeven als doelserver voor e-mail.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Bestemming e-mail server</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">MX en SRV wijzigingen dienen handmatig uitgevoerd te worden in uw DNS-zone. U kunt de benodigde informatie vinden in het bijbehorende domeinonderdeel, zodra de CNAME gevalideerd is. </translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Een domein bewerken</translation>
@@ -667,9 +659,7 @@
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Ongeldig domein.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Let op, maximaal 255 tekens!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritatif/Non-autoritatif: wat zal ik kiezen?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Als u uw domein aan de Exchange server toevoegt dan staat deze standaard in de autoritaire modus. Dit betekent dat wanneer u een e-mail stuurt naar het adres van het domein dat door de server wordt beheerd, de server alleen controleert of het adres op de Exchange server is. <br /><br /> Maar als u het domein switcht naar een niet-autoritaire modus, dan wordt eerst gecontroleerd of het adres op de Exchange server is, wanneer u een e-mail stuurt. Als dat niet het geval is dan zal de Exchange server uw bericht verplaatsen naar de opgegeven MX server. <br /><br /> U kunt uw domein gebruiken in een niet-autoritaire modus als u bijvoorbeeld sommige van uw e-mails op Exchange wilt beheren en sommigen op een externe server. <br /><br /> Als u Exchange en OVH e-mail wilt gebruiken dan moet u de volgende waarde invoeren in de 'Target email server' in het formulier aan de linkerkant van de pagina: <strong> mx1. mail.ovh.net. </strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Een domein verwijderen</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Bent u er zeker van dat u het volgende domein van uw Exchange dienst wilt verwijderen?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Het domein zal worden verwijderd van uw Exchange dienst.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Er is een fout opgetreden bij het verwijderen van het domein van uw Exchange dienst.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Verlengingsperiode</translation>

@@ -562,8 +562,6 @@
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Wystąpił błąd podczas wyświetlania zadań.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Polityka bezpieczeństwa kont</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Usługa Exchange jest prawie gotowa. Należy przypisać domenę do usługi. Jeśli nie posiadasz domeny, <a href="https://www.ovh.pl:51043/cgi-bin/newOrder/order.cgi" target="_blank">kliknij tutaj</a>, aby ją zamówić.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Dodaj domenę, aby utworzyć konta e-mail Exchange. Kliknij</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">tutaj</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">aby dodać nową domenę.</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Nie posiadasz domen odpowiadających kryteriom wyszukiwania</translation>
@@ -600,7 +598,7 @@
    <translation id="emailpro_tab_domain_diagnostic_cname" qtlid="129847">CNAME</translation>
    <translation id="emailpro_tab_domain_status" qtlid="26443">Status</translation>
    <translation id="emailpro_tab_domain_task_in_progress" qtlid="2690">Zadania w trakcie</translation>
-   <translation id="emailpro_tab_domain_validation" qtlid="33802">Zatwierdź</translation>
+   <translation id="emailpro_tab_domain_validation" qtlid="33802">Zatwierdzenie</translation>
    <translation id="emailpro_tab_domain_validation_doing" qtlid="136646">Trwa potwierdzanie domeny</translation>
    <translation id="emailpro_tab_domain_validation_cname" qtlid="139260">Należy stworzyć wpis CNAME.</translation>
    <translation id="emailpro_tab_domain_validation_cname_title" qtlid="139273">Weryfikacja kontaktu właściciela</translation>
@@ -608,7 +606,6 @@
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Dodaj domenę</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Usuń tą domenę z usług Exchange</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Utworzenie</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Ta domena nie może zostać usunięta, ponieważ jest jeszcze używana przez jedno lub kilka kont Exchange.</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Nieautorytatywny</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autorytatywny</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Uwaga!</translation>
@@ -649,7 +646,6 @@
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Docelowy serwer e-mail</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automatycznie</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">Nie</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Czy chcesz dodać ta domenę do serwera exchange?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">Domena zostanie dodana do serwera exchange.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Wystąpił błąd podczas dodawania domeny do serwera exchange.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">Domena zostanie zaktualizowana.</translation>
@@ -657,10 +653,6 @@
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Trwa migracja na {0} </translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autorytatywny</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Nieautorytatywny</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autorytatywny (tylko Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Nieautorytatywny (Exchange + inna usługa poczty elektronicznej)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Tryb autorytatywny nie pozwala na korzystanie z innego systemu poczty elektronicznej wraz z kontami Exchange. Tryb ten pozwala na aktywację ochrony antyspamowej Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">Tryb nieautorytatywny pozwala na równoczesne korzystanie z usługi Exchange i z innej usługi poczty elektronicznej. Ochrona antyspamowa Vade Secure jest kompatybilna, jeśli konta pop/imap są zainstalowane w OVH (mxplan lub oferta hostingu). W tym przypadku należy wskazać serwer mx1.mail.ovh.net jako serwer mailowy.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Docelowy serwer e-mail</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Zmiany dotyczące MX i SRV należy wykonać ręcznie w strefie DNS. Informacje na ten temat będą dostępne w sekcji Domeny przypisane po zaakceptowaniu wpisu  CNAME.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Konfiguracja domeny</translation>
@@ -670,9 +662,7 @@
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Nieprawidłowa domena</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Uwaga: maksymalnie 255 znaków!</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autorytatywny / Nie autorytatywny: Co powinienem wybrać?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Domyślnie domena dodawana do serwera Exchange znajduje się w trybie autorytatywnym.  Oznacza to, że jeśli wysyłasz e-mail na adres domeny zarządzanej na serwerze, serwer ten będzie sprawdzał tylko serwer Exchange, jeśli adres istnieje. <br /><br /> Jeśli przełączysz domenę w tryb nieautorytatywny, podczas wysyłania e-maila w pierwszej kolejności będziemy sprawdzać, czy adres e-mail istnieje na serwerze Exchange i jeśli tak nie będzie, serwer przekieruje wiadomość na serwer MX, który zdefiniowałeś. <br /><br />Domena w trybie nieautorytatywnym może być używana w ten sposób, że część e-maili jest zarządzana na serwerze Exchange a pozostała część na serwerze zewnętrznym. <br /><br />Uwaga: Jeśli chcesz korzystać z usługi Exchange i z usługi e-mail na hostingu OVH, w polu "Docelowy serwer mail" wpisz tą wartość: <strong>mx1.mail.ovh.net.</strong></translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Usuń domenę</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Czy chcesz usunąć następującą domenę z usługi Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Domena zostanie usunięta z usługi Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Wystąpił błąd podczas usuwania domeny z usługi Exchange.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Okres odnowienia</translation>

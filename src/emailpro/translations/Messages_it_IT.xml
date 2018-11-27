@@ -136,7 +136,7 @@
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">Si è verificato un errore durante l'aggiunta del dominio al tuo server Email Pro.</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">Il dominio inserito non è valido.</translation>
-   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} IVA esc. ({1} IVA comp.)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step1_price" qtlid="139416">{0} +IVA ({1} IVA incl.)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_price_with_tax_only" qtlid="499930">{0} ({0} IVA incl.)</translation>
    <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">Si è verificato un errore durante il recupero delle informazioni dell'utente</translation>
 
@@ -265,7 +265,7 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type" qtlid="139325">Metodo di pagamento:</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_monthly" qtlid="79530">mensile</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_pay_type_yearly" qtlid="79542">annuale</translation>
-   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} IVA esc. ({1} IVA comp.)</translation>
+   <translation id="emailpro_ACTION_order_accounts_step2_price" qtlid="139416">{0} +IVA ({1} IVA incl.)</translation>
    <translation id="emailpro_ACTION_order_accounts_step2_total" qtlid="139429">Totale fatturato:</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_bc" qtlid="169524">Ordine creato correttamente</translation>
    <translation id="emailpro_ACTION_order_accounts_step3_continue" qtlid="169537">Per confermare il tuo ordine, clicca su "Pagamento"</translation>
@@ -581,8 +581,6 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Si è verificato un errore nel caricamento dei task</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Politica di sicurezza degli account</translation>
 
-   <translation id="emailpro_tab_domain_no_domain_attached" qtlid="271361">Il tuo servizio Exchange è quasi pronto. È necessario associare un dominio al tuo servizio. Se non ne hai ancora uno, <a href="https://www.ovh.com:51043/fr/cgi-bin/newOrder/order.cgi" target="_blank">clicca qui</a>.</translation>
-   <translation id="emailpro_tab_domain_no_domains_1" qtlid="137439">Aggiungi un dominio per poter creare degli account email Exchange. Clicca</translation>
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">qui</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">per aggiungere un nuovo dominio</translation>
    <translation id="emailpro_tab_domain_table_empty_search" qtlid="150034">Non hai un dominio corrispondente ai termini di ricerca</translation>
@@ -627,7 +625,6 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_domain_add_domain" qtlid="8602">Aggiungi un dominio</translation>
    <translation id="emailpro_tab_domain_delete_domain" qtlid="137556">Rimuovi questo dominio dai servizi Exchange</translation>
    <translation id="emailpro_tab_domain_creating" qtlid="26791">Crea</translation>
-   <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="148227">Questo dominio non può essere eliminato perché è utilizzato da uno o più account Exchange</translation>
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE" qtlid="447703">Non autoritativo</translation>
    <translation id="emailpro_tab_domain_AUTHORITATIVE" qtlid="58807">Autoritativo</translation>
    <translation id="emailpro_tab_domain_warning" qtlid="136347">Attenzione!</translation>
@@ -668,7 +665,6 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_domain_add_step3_mx_replay" qtlid="316957">Server di posta di destinazione</translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_true" qtlid="137842">Automaticamente </translation>
    <translation id="emailpro_tab_domain_add_step3_configuration_false" qtlid="34788">No</translation>
-   <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="137855">Sei sicuro di voler aggiungere questo dominio al tuo server Exchange?</translation>
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">L'aggiunta del dominio al tuo server Exchange sarà effettuata.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Si è verificato un errore durante l'aggiunta del dominio al tuo server Exchange</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">L'aggiornamento del dominio sarà effettuata.</translation>
@@ -676,10 +672,6 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Passaggio verso {0} in corso</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritativo</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non autoritativo</translation>
-   <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="316970">Autoritativa (solo Exchange)</translation>
-   <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="447768">Non autoritativa (Exchange + altro servizio di posta)</translation>
-   <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="324847">Con la modalità autoritativa non è possibile utilizzare contemporaneamente un account Exchange e un altro servizio di posta. Questa modalità consente l'attivazione dell'Antispam Vade Secure.</translation>
-   <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="447781">La modalità non autoritativa ti permette di utilizzare contemporaneamente la tua soluzione Exchange e un altro servizio di posta. L'Antispam Vade Secure è compatibile se i tuoi account POP/IMAP sono ospitati in OVH (MX Plan o offerta condivisa). In questo caso, indica "mx1.mail.ovh.net" come server di destinazione.</translation>
    <translation id="emailpro_tab_domain_target_mail_server_label" qtlid="316957">Server di posta di destinazione</translation>
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Le modifiche MX e SRV dovranno essere effettuate manualmente nella tua zona DNS. Una volta convalidato il record CNAME, le informazioni necessarie saranno disponibili nella sezione "Domini associati".</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Modifica un dominio</translation>
@@ -691,9 +683,7 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Dominio non valido.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Attenzione, massimo 255 caratteri !</translation>
    <translation id="emailpro_tab_domain_modify_wizard_subtitle" qtlid="210358">Autoritativo / Non-autoritativo : Cosa devo scegliere ?</translation>
-   <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="370018">Quando aggiungi il tuo dominio sul server Exchange, di default è attiva la modalità autoritativa. Significa che quando invii un'email all'indirizzo del dominio gestito sul server, quest'ultimo verifica esclusivamente che l'indirizzo sia presente sul server Exchange. <br /><br />Attivando la modalità non autoritativa, invece, quando invii l'email viene verificato che l'indirizzo sia presente sul server Exchange e, in caso contrario, il messaggio viene trasmesso al server MX che hai definito. <br /><br />Il dominio in modalità non autoritativa può essere utilizzato, ad esempio, per gestire una parte delle tue email su Exchange e l'altra parte su un server esterno. <br /><br />Attenzione: per utilizzare contemporaneamente il servizio Exchange e il servizio email OVH, è necessario inserire nel campo "Server di posta di destinazione" il valore <strong>mx1.mail.ovh.net.</strong>.</translation>
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Elimina un dominio</translation>
-   <translation id="emailpro_tab_domain_remove_title" qtlid="137946">Vuoi davvero eliminare questo dominio dal tuo servizio Exchange?</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Il dominio sarà eliminato dal tuo servizio Exchange.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Si è verificato un errore durante l'eliminazione del dominio dal tuo servizio Exchange.</translation>
    <translation id="emailpro_update_billing_action_title" qtlid="98324">Periodo di rinnovo</translation>
