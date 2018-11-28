@@ -24,6 +24,22 @@ angular.module('Module.emailpro', [
       },
       translations: ['.'],
     });
+    $stateProvider.state('app.email.emailpro-basic', {
+      url: '/configuration/email_pro/:productId?tab',
+      templateUrl: 'emailpro/emailpro.html',
+      controller: 'EmailProCtrl',
+      reloadOnSearch: false,
+      resolve: {
+        navigationInformations: ['Navigator', '$rootScope', (Navigator, $rootScope) => {
+          _.set($rootScope, 'currentSectionInformation', 'email_pro');
+          return Navigator.setNavigationInformation({
+            leftMenuVisible: true,
+            configurationSelected: true,
+          });
+        }],
+      },
+      translations: ['.'],
+    });
   }])
   .constant('EMAILPRO_MX_CONFIG', {
     EU: {
