@@ -1,6 +1,9 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabDomainsCtrl">
     <div class="row">
-        <div class="col-md-9">
+        <div data-ng-class="{
+                    'col-md-12': !canAddDomain,
+                    'col-md-9': canAddDomain
+                    }">
             <div class="alert alert-warning" role="alert"
                  data-translate="emailpro_tab_domain_partial"
                  data-ng-if="containPartial()"></div>
@@ -55,7 +58,9 @@
                         <tr>
                             <td class="text-center" colspan="6">
                                 <div data-ng-if="!search.value">
-                                    <span data-translate="emailpro_tab_domain_no_domains_1"></span>
+                                    <span data-ng-if="!exchange.isMXPlan" data-translate="emailpro_tab_domain_no_domains_1"></span>
+                                    <span data-ng-if="exchange.isMXPlan"
+                                          data-translate="emailpro-mxplan_tab_domain_no_domains_1"></span>
                                     <button class="btn btn-link p-0"
                                             type="button"
                                             style="font-size:inherit"
@@ -196,7 +201,8 @@
             </div>
         </div>
 
-        <div class="col-md-3 mt-5 mt-lg-0">
+        <div class="col-md-3 mt-5 mt-lg-0"
+             data-ng-if="canAddDomain">
             <button class="btn btn-block btn-default" type="button"
                     data-translate="emailpro_tab_domain_add_domain"
                     data-ng-click="setAction('emailpro/domain/add/emailpro-domain-add', {})">

@@ -48,6 +48,7 @@
                 </div>
             </form>
         </div>
+
         <div class="col-sm-3 text-right">
             <div class="btn-group mt-4">
                 <button class="oui-button oui-button_dropdown mb-0" type="button" aria-haspopup="true" aria-expanded="false"
@@ -56,7 +57,7 @@
                     <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right m-0 p-0">
-                  <li>
+                  <li data-ng-if="!exchange.isMXPlan">
                     <i class="oui-icon oui-icon-page_line" aria-hidden="true"></i>
                     <button class="btn btn-link" type="button"
                               data-ng-if="exchange.renewOptionAvailable || is25g()"

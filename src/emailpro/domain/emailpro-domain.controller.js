@@ -9,6 +9,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabDomainsCtrl
     $scope.loading = false;
     $scope.paginated = null;
     $scope.search = { value: null };
+    $scope.canAddDomain = true;
 
     EmailPro.getSelected().then((exchange) => {
       $scope.exchange = exchange;
@@ -86,6 +87,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabDomainsCtrl
         $scope.paginated = domains;
         $scope.domainTypes = domains.domainTypes;
         setTooltips($scope.paginated);
+        if ($scope.exchange.billingPlan === 'emailpro-mxplan') {
+          $scope.canAddDomain = domains.length < 1;
+        }
         $scope.loading = false;
       }, () => {
         $scope.loading = false;

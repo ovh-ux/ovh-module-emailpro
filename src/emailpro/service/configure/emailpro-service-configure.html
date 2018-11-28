@@ -162,7 +162,7 @@
                 </div>
             </form>
             <div data-wizard-step-help>
-                <h3 data-translate="emailpro_ACTION_configure_help_title"></h3>
+                <h3 data-translate="{{exchange.billingPlan + '_ACTION_configure_help_title'}}"></h3>
                 <h4 data-translate="emailpro_ACTION_configure_help_lockoutThreshold_title"></h4>
                 <p data-ng-bind-html="'emailpro_ACTION_configure_help_lockoutThreshold_text' | translate"></p>
                 <h4 data-translate="emailpro_ACTION_configure_help_lockoutObservationWindow_title"></h4>
@@ -181,7 +181,7 @@
         </div>
 
         <div data-wizard-step>
-            <strong data-translate="emailpro_ACTION_configure_step2_intro" data-translate-values="{ t0: service.displayName }"></strong>
+            <strong data-translate="{{exchange.billingPlan + '_ACTION_configure_step2_intro'}}" data-translate-values="{ t0: service.displayName }"></strong>
             <dl class="mt-5">
                 <dt data-translate="emailpro_ACTION_configure_step2_label_lockoutThreshold"></dt>
                 <dd>

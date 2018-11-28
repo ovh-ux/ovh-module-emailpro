@@ -52,9 +52,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
 
   const constructResult = function (data) {
     const mainMessage = {
-      OK: $translate.instant('emailpro_ACTION_delegation_success_message'),
-      PARTIAL: $translate.instant('emailpro_ACTION_delegation_partial_message'),
-      ERROR: $translate.instant('emailpro_ACTION_delegation_error_message'),
+      OK: $translate.instant(`${$scope.exchange.billingPlan}_ACTION_delegation_success_message`),
+      PARTIAL: $translate.instant(`${$scope.exchange.billingPlan}_ACTION_delegation_partial_message`),
+      ERROR: $translate.instant(`${$scope.exchange.billingPlan}_ACTION_delegation_error_message`),
     };
     let state = 'OK';
     let errors = 0;

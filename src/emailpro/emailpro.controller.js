@@ -86,8 +86,13 @@ angular.module('Module.emailpro.controllers').controller('EmailProCtrl', [
       EmailPro.getSelected(true)
         .then((exchange) => {
           $scope.exchange = exchange;
+          $scope.exchange.isMXPlan = $scope.exchange.billingPlan === 'emailpro-mxplan';
           $scope.newDisplayName.value = exchange.displayName;
           $scope.loadingEmailProInformations = false;
+
+          if ($scope.exchange.isMXPlan) {
+            $scope.displayGuides = null;
+          }
 
           if (exchange.messages && exchange.messages.length > 0) {
             $scope.setMessage($translate.instant('emailpro_dashboard_loading_error'), exchange);
