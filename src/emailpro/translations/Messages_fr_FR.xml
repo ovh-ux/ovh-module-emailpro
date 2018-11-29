@@ -128,6 +128,7 @@
 
    <translation id="emailpro_tab_account_reset_account_label" qtlid="33862">Compte</translation>
    <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, celui-ci est toujours facturé. Si vous ne souhaitez plus être facturé, cliquez sur "mode de facturation", puis cochez "Aucun" pour le compte concerné et validez.</translation>
+   <translation id="emailpro-mxplan_tab_account_reset_account_info">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, il pourra ensuite être de nouveau configuré.</translation>
    <translation id="emailpro_tab_account_reset_success" qtlid="447924">Le compte de votre service E-mail Pro va être réinitialisé.</translation>
    <translation id="emailpro-mxplan_tab_account_reset_success">Le compte de votre service E-mail MX Plan va être réinitialisé.</translation>
 
@@ -815,7 +816,8 @@
    <translation id="emailpro_tab_domain_noovh_mx_info" qtlid="317126">Les modifications MX et SRV seront à réaliser manuellement dans votre zone DNS. Vous pouvez retrouver les informations nécessaires dans la section domaines associés, une fois la validation CNAME effectuée.</translation>
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Configuration domaine</translation>
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="444667">L'antispam Vade Secure est compatible avec le mode non-autoritatif (uniquement si vos comptes POP/IMAP sont hébergés par OVH). Dans ce cas, il est conseillé d'utiliser : <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> et <strong>{3}</strong><br/><br/> Si vous utilisez le mode non-autoritatif avec des comptes e-mail non hébergés par OVH, vous devez utiliser : <strong>{4}</strong> (voir section domaines associés)</translation>
-   <translation id="emailpro_tab_domain_modify_title" qtlid="137920">Etes-vous sûr de vouloir modifier le domaine suivant de votre service Exchange ?</translation>
+   <translation id="emailpro_tab_domain_modify_title">Etes-vous sûr de vouloir modifier le domaine suivant de votre service E-mail Pro ?</translation>
+   <translation id="emailpro-mxplan_tab_domain_modify_title">Etes-vous sûr de vouloir modifier le domaine suivant de votre service MX Plan ?</translation>
    <translation id="emailpro_tab_domain_modify_loop_warning" qtlid="210319">Attention, boucle infinie !</translation>
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Domaine invalide.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Attention, maximum 255 caractères !</translation>

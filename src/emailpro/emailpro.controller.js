@@ -408,15 +408,15 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailPro
 
         if ($scope.exchange.renewType.deleteAtExpiration) {
           updateRenewMessages = {
-            OK: $translate.instant('emailpro_resilitation_cancel_action_success'),
-            PARTIAL: $translate.instant('emailpro_resilitation_cancel_action_partial'),
-            ERROR: $translate.instant('emailpro_resilitation_cancel_action_failure'),
+            OK: $translate.instant(`${$scope.exchange.billingPlan}_resilitation_cancel_action_success`),
+            PARTIAL: $translate.instant(`${$scope.exchange.billingPlan}_resilitation_cancel_action_partial`),
+            ERROR: $translate.instant(`${$scope.exchange.billingPlan}_resilitation_cancel_action_failure`),
           };
         } else {
           updateRenewMessages = {
-            OK: $translate.instant('emailpro_resilitation_action_success'),
-            PARTIAL: $translate.instant('emailpro_resilitation_action_partial'),
-            ERROR: $translate.instant('emailpro_resilitation_action_failure'),
+            OK: $translate.instant(`${$scope.exchange.billingPlan}_resilitation_action_success`),
+            PARTIAL: $translate.instant(`${$scope.exchange.billingPlan}_resilitation_action_partial`),
+            ERROR: $translate.instant(`${$scope.exchange.billingPlan}_resilitation_action_failure`),
           };
         }
         $scope.setMessage(updateRenewMessages, success);
@@ -424,9 +424,9 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveEmailPro
       })
       .catch((failure) => {
         if ($scope.exchange.renewType.deleteAtExpiration) {
-          $scope.setMessage($translate.instant('emailpro_resilitation_cancel_action_failure'), failure.data);
+          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_resilitation_cancel_action_failure`), failure.data);
         } else {
-          $scope.setMessage($translate.instant('emailpro_resilitation_action_failure'), failure.data);
+          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}__resilitation_action_failure`), failure.data);
         }
         $scope.resetAction();
       });

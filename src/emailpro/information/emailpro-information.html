@@ -153,7 +153,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="oui-tile__item">
+                        <li class="oui-tile__item" data-ng-if="!exchange.isMXPlan">
                             <div class="oui-tile__definition">
                                 <strong class="oui-tile__term d-block" data-translate="emailpro_tab_INFORMATIONS_messaging"></strong>
                                 <a data-ng-href="{{ displayGuides }}" class="d-block word-break" target="_blank" title="{{ 'emailpro_dashboard_guides_url' | translate }} ({{ 'emailpro_dashboard_new_window' | translate }})">
