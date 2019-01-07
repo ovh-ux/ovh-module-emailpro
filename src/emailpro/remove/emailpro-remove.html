@@ -9,7 +9,9 @@
         <div data-wizard-step>
 
             <div data-ng-if="!exchange.renewType.deleteAtExpiration">
-                <p data-ng-bind-html="exchange.billingPlan + '_resilitation_action_intro' | translate: { t0: exchange.displayName }"></p>
+                <p
+                    data-translate="{{ exchange.billingPlan + '_resilitation_action_intro' }}"
+                    data-translate-values="{ t0: exchange.displayName }"></p>
                 <p data-translate="emailpro_resilitation_action_hosted_warning"></p>
             </div>
 
@@ -54,13 +56,23 @@
         <div data-wizard-step>
             <div data-ng-if="!exchange.renewType.deleteAtExpiration">
                 <p data-ng-if="!exchange.deleteAtExpiration"
-                   data-ng-bind-html="exchange.billingPlan + '_resilitation_action_confirmation' | translate: { t0: exchange.displayName, t1: exchange.accountsNumber }"></p>
+                   data-translate="{{ exchange.billingPlan + '_resilitation_action_confirmation' }}"
+                   data-translate-values="{
+                       t0: exchange.displayName,
+                       t1: exchange.accountsNumber
+                    }"></p>
                 <p data-ng-if="exchange.deleteAtExpiration"
-                   data-ng-bind-html="exchange.billingPlan + '_resilitation_cancel_action_confirmation' | translate: { t0: exchange.displayName, t1: exchange.accountsNumber }"></p>
+                   data-translate="{{ exchange.billingPlan + '_resilitation_cancel_action_confirmation' }}"
+                   data-translate-values="{
+                       t0: exchange.displayName,
+                       t1: exchange.accountsNumber
+                    }"></p>
             </div>
 
-            <p data-ng-bind-html="exchange.billingPlan + '_resilitation_cancel_action_confirmation' | translate: { t0: exchange.displayName }"
-               data-ng-if="exchange.renewType.deleteAtExpiration"></p>
+            <p
+                data-ng-if="exchange.renewType.deleteAtExpiration"
+                data-translate="{{ exchange.billingPlan + '_resilitation_cancel_action_confirmation' }}"
+                data-translate-values="{ t0: exchange.displayName }"></p>
         </div>
     </div>
 </div>

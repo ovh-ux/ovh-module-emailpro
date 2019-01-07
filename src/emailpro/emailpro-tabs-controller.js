@@ -42,6 +42,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($s
     } else {
       $scope.selectedTab = defaultTab;
     }
+
     $location.search('tab', $scope.selectedTab);
   };
 

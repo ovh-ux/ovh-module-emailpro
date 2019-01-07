@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <translations>
+   <translation id="emailpro_common_yes">Oui</translation>
+   <translation id="emailpro_common_no">Non</translation>
+
+   <translation id="emailpro_tab_INFORMATION" qtlid="27115">Informations générales</translation>
    <translation id="emailpro_tab_INFORMATION" qtlid="27115">Informations générales</translation>
    <translation id="emailpro_displayName_maxlength" qtlid="260208">Le nom ne doit pas excéder 250 caractères.</translation>
    <translation id="emailpro_displayName_required" qtlid="88293">Le nom ne peut pas être vide.</translation>
@@ -7,7 +11,9 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Une erreur est survenue lors du chargement de votre compte E-mail Pro.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Comptes E-mail</translation>
+   <translation id="emailpro_dashboard_accounts_upgrade_mxPlan">Changer d'offre</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Besoin d'aide pour configurer votre service E-mail Pro ?</translation>
+   <translation id="emailpro-mxplan_dashboard_guides">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Votre service E-mail Pro est presque prêt. Vous devez attacher un domaine à votre service. Si vous n'en avez pas, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">cliquez ici</a> pour en acheter un.</translation>
    <translation id="emailpro-mxplan_tab_domain_no_domain_attached">Votre service E-mail MX Plan est presque prêt. Vous devez attacher un domaine à votre service. Si vous n'en avez pas, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">cliquez ici</a> pour en acheter un.</translation>
 
@@ -49,7 +55,7 @@
    <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_ovh">Si le domaine n'est pas géré par le même identifiant client que le service E-mail MX Plan ou si votre domaine n'est pas hébergé chez OVH, la configuration automatique n'est pas possible. Veuillez créer le champ MX sur ce domaine manuellement en donnant les mêmes informations que ci-dessous.</translation>
 
    <translation id="emailpro_tab_domain_diagnostic_srv_no_ovh" qtlid="375205">Si le domaine n'est pas géré par le même identifiant client que le service E-mail Pro ou si votre domaine n'est pas hébergé chez OVH, la configuration automatique n'est pas possible. Veuillez créer le champ SRV sur ce domaine manuellement en donnant les mêmes informations que ci-dessous.</translation>
-   <translation id="emailpro-mxplan_tab_domain_diagnostic_srv_no_ovh">Si le domaine n'est pas géré par le même identifiant client que le service E-mail Pro ou si votre domaine n'est pas hébergé chez OVH, la configuration automatique n'est pas possible. Veuillez créer le champ SRV sur ce domaine manuellement en donnant les mêmes informations que ci-dessous.</translation>
+   <translation id="emailpro-mxplan_tab_domain_diagnostic_srv_no_ovh">Si le domaine n'est pas géré par le même identifiant client que le service E-mail MX Plan ou si votre domaine n'est pas hébergé chez OVH, la configuration automatique n'est pas possible. Veuillez créer le champ SRV sur ce domaine manuellement en donnant les mêmes informations que ci-dessous.</translation>
 
    <translation id="emailpro_tab_domain_delete_domain" qtlid="375218">Retirer ce domaine des services E-mail Pro</translation>
    <translation id="emailpro-mxplan_tab_domain_delete_domain">Retirer ce domaine des services E-mail MX Plan</translation>
@@ -476,6 +482,7 @@
    <translation id="emailpro_dashboard_diag_ptrv6_tooltip_title" qtlid="143329">PTR v6</translation>
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Opération annulée. Minimum 5 caractères requises</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Domaines associés</translation>
+   <translation id="emailpro_dashboard_domain_forMXPlan">Domaine associé</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renouvellement</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="156732">Consultez nos guides en ligne.</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Une erreur s'est produite lors du chargement des informations.</translation>
@@ -483,8 +490,9 @@
    <translation id="emailpro_dashboard_name" qtlid="136165">Référence serveur</translation>
    <translation id="emailpro_dashboard_new_window" qtlid="222176">Nouvelle fenêtre</translation>
    <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">Expiration SSL</translation>
-   <translation id="emailpro_dashboard_tasks" qtlid="136217">Tâches en cours</translation>
+   <translation id="emailpro_dashboard_tasks">Tâches récentes</translation>
 
+   <translation id="emailpro_delete_action_button">Supprimer ce MX plan</translation>
 
    <translation id="emailpro_resilitation_action_button" qtlid="48646">Résilier</translation>
    <translation id="emailpro_resilitation_action_button_cancel" qtlid="211567">Annuler la resiliation</translation>
@@ -634,7 +642,7 @@
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">En attente d'activation</translation>
    <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="485697">Webmail :</translation>
 
-   <translation id="emailpro_tab_TASKS" qtlid="136217">Tâches en cours</translation>
+   <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">Vous n'avez pas de tâches</translation>
    <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Tâche</translation>
    <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Statut</translation>
@@ -808,7 +816,7 @@
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">L'ajout du domaine à votre serveur exchange va être effectué.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">Une erreur est survenue lors de l'ajout du domaine à votre serveur exchange.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">La mise à jour du domaine va être effectuée.</translation>
-   <translation id="emailpro_tab_domain_modify_failure" qtlid="137075">Une erreur est survenue lors de la mise à jour du domaine.</translation>
+   <translation id="emailpro_tab_domain_modify_failure">Une erreur est survenue lors de la mise à jour du domaine</translation>
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Passage vers {0} en cours</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Autoritatif</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non-autoritatif</translation>
@@ -905,6 +913,7 @@
    <translation id="exchange_tab_INFORMATION" qtlid="27115">Informations générales</translation>
    <translation id="exchange_tab_DOMAIN" qtlid="270306">Domaines associés</translation>
    <translation id="exchange_tab_ACCOUNT" qtlid="74273">Comptes e-mail</translation>
+   <translation id="exchange_tab_MAILING_LIST">Mailing-lists</translation>
    <translation id="exchange_tab_SHARED_ACCOUNT" qtlid="215195">Comptes partagés</translation>
    <translation id="exchange_tab_GROUP" qtlid="32962">Groupes</translation>
    <translation id="exchange_tab_RESOURCES" qtlid="20227">Ressources</translation>

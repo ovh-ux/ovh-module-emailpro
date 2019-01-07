@@ -32,8 +32,6 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
 
     EmailPro.getSelected()
       .then((exchange) => {
-        $scope.exchange = exchange;
-
         if (!$scope.is25g()) {
           $scope.orderOutlookDisabled = exchange.offer === EmailPro.accountTypeDedicated
             || (exchange.serverDiagnostic.version === 14

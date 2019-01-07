@@ -1,16 +1,16 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabAccountsCtrl">
     <div class="row" data-ng-if="!showAlias">
         <div data-ng-class="{
-                            'col-md-12': exchange.isMXPlan,
-                            'col-md-9': !exchange.isMXPlan
-                            }">
+            'col-md-12': exchange.isMXPlan,
+            'col-md-9': !exchange.isMXPlan
+        }">
             <div class="alert alert-warning mt-3" role="alert"
                  data-ng-if="accounts && accounts.list.messages.length > 0 && !loading">
                 <strong data-translate="emailpro_tab_ACCOUNTS_warning"></strong>
                 <span data-translate="emailpro_tab_ACCOUNTS_partial"></span>
             </div>
             <div class="pull-left">
-                <strong data-translate="emailpro_tab_INFORMATIONS_webmail"></strong> :
+                <strong data-translate="emailpro_tab_INFORMATIONS_webmail"></strong>
                 <a target="_blank" title="{{ 'emailpro_tab_INFORMATIONS_webmail' | translate }} ({{ 'emailpro_dashboard_new_window' | translate }})"
                    data-ng-href="https://{{exchange.hostname}}">
                     <span data-ng-bind="'https://' + exchange.hostname"></span>

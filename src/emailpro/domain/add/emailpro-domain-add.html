@@ -16,7 +16,7 @@
 
             <div class="alert alert-info" role="alert"
                  data-ng-if="!loading && noDomainAttached"
-                 data-ng-bind-html="exchange.billingPlan + '_tab_domain_no_domain_attached' | translate">
+                 data-translate="{{ exchange.billingPlan + '_tab_domain_no_domain_attached' }}">
             </div>
 
             <form name="emailProAddDomainStep1Form" data-ng-if="!loading && availableDomains">

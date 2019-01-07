@@ -23,7 +23,6 @@
                 <div class="form-group" data-ng-show="edit.active">
                     <div class="oui-input-group">
                         <input type="text" class="form-control" name="txtDisplayName" required
-                               data-event-blur="newDisplayName.value = ''"
                                data-ng-minlength="5"
                                data-ng-maxlength="250"
                                data-ng-model="newDisplayName.value">
@@ -49,7 +48,7 @@
             </form>
         </div>
 
-        <div class="col-sm-3 text-right" data-ng-if="!exchange.isMXPlan">
+        <div class="col-sm-3 text-right">
             <div class="btn-group mt-4">
                 <button class="oui-button oui-button_dropdown mb-0" type="button" aria-haspopup="true" aria-expanded="false"
                         data-toggle="dropdown">
@@ -65,7 +64,7 @@
                               data-translate="emailpro_update_billing_button_title">
                     </button>
                   </li>
-                  <li class="dropdown-divider">
+                  <li class="dropdown-divider" data-ng-if="!exchange.isMXPlan">
                       <i class="oui-icon oui-icon-power_line" aria-hidden="true"></i>
                       <button class="btn btn-link" type="button"
                               data-ng-if="exchange.deleteOptionAvailable"
@@ -73,6 +72,16 @@
                           <span data-translate="emailpro_resilitation_action_button" data-ng-if="!exchange.renewType.deleteAtExpiration"></span>
                           <span data-translate="emailpro_resilitation_action_button_cancel" data-ng-if="exchange.renewType.deleteAtExpiration"></span>
                       </button>
+                  </li>
+                  <li data-ng-if="exchange.isMXPlan">
+                    <a
+                        class="btn btn-link"
+                        target="_blank"
+                        data-ng-href="#/billing/autoRenew?selectedType=EMAIL_DOMAIN&searchText={{ exchange.associatedDomainName }}">
+                        <span data-translate="emailpro_delete_action_button"></span>
+                        <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
+                        <span class="sr-only" data-translate="common_open_new_tab"></span>
+                    </a>
                   </li>
                 </ul>
             </div>

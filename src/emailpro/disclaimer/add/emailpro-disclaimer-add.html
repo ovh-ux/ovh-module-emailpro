@@ -12,7 +12,9 @@
             </div>
 
             <div data-ng-if="!loadingData">
-                <form class="form-horizontal">
+                <form
+                    data-ng-if="!exchange.isMXPlan"
+                    class="form-horizontal">
                     <label class="oui-label" for="completeDomain"
                            data-translate="emailpro_ACTION_disclaimer_associated_domains"></label>
                     <div class="oui-select">
@@ -61,7 +63,7 @@
                 <p>
                     <span data-ng-bind-html="'emailpro_ACTION_add_disclaimer_helpwizard_details2' | translate"></span>
                     <br/>
-                    <span data-ng-bind-html="(exchange.billingPlan + '_ACTION_add_disclaimer_helpwizard_details3') | translate"></span>
+                    <span data-translate="{{ exchange.billingPlan + '_ACTION_add_disclaimer_helpwizard_details3' }}"></span>
                 </p>
                 <p data-ng-bind-html="'emailpro_ACTION_add_disclaimer_helpwizard_details4' | translate"></p>
                 <p data-ng-bind-html="'emailpro_ACTION_add_disclaimer_helpwizard_details5' | translate"></p>

@@ -1,7 +1,7 @@
 angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
   const originalValues = angular.copy($scope.currentActionData);
 
-  const accountIsValid = function () {
+  const accountIsValid = function accountIsValid() {
     const account = $scope.selectedAccount;
     if ($scope.simplePasswordFlag
       || $scope.differentPasswordFlag
@@ -46,7 +46,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     return model;
   };
 
-  const getActionMessage = function (messages) {
+  const getActionMessage = function getActionMessage(messages) {
     const updateAccountMessages = {
       OK: ' ',
       PARTIAL: ' ',
@@ -87,7 +87,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
 
   $scope.passwordTooltip = null; // set in $scope.loadAccountOptions()
 
-  $scope.checkTakenEmails = function () {
+  $scope.checkTakenEmails = function checkTakenEmails() {
     $scope.takenEmailError = false;
 
     if ($scope.takenEmails && $scope.selectedAccount.login) {
@@ -103,7 +103,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     }
   };
 
-  $scope.setPasswordsFlag = function (selectedAccount) {
+  $scope.setPasswordsFlag = function setPasswordsFlag(selectedAccount) {
     $scope.differentPasswordFlag = false;
     $scope.simplePasswordFlag = false;
     $scope.containsNameFlag = false;
@@ -158,7 +158,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     }
   };
 
-  $scope.needsUpdate = function () {
+  $scope.needsUpdate = function needsUpdate() {
     const modifiedBuffer = $scope.selectedAccount;
     const result = !(!modifiedBuffer.password
       && angular.equals(originalValues.login, modifiedBuffer.login)
@@ -172,7 +172,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     return result && accountIsValid() && !$scope.takenEmailError;
   };
 
-  $scope.setQuotaAvailable = function () {
+  $scope.setQuotaAvailable = function setQuotaAvailable() {
     $scope.newAccountOptions.quotaArray = [];
     for (let i = $scope.newAccountOptions.maxQuota;
       i >= $scope.newAccountOptions.minQuota; i -= 1) {
@@ -180,7 +180,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     }
   };
 
-  $scope.canChangePrimary = function () {
+  $scope.canChangePrimary = function canChangePrimary() {
     if ($scope.selectedAccount.is25g) {
       return $scope.selectedAccount.primaryEmailAddress.split('@')[1] === 'configureme.me';
     }
@@ -193,11 +193,11 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     quotaArray: [],
   };
 
-  $scope.getPasswordPlaceholder = function () {
+  $scope.getPasswordPlaceholder = function getPasswordPlaceholder() {
     return $scope.selectedAccount.canBeConfigured ? $translate.instant('emailpro_ACTION_update_account_step1_password_placeholder') : ' ';
   };
 
-  $scope.getCompleteDomain = function (domainName) {
+  $scope.getCompleteDomain = function getCompleteDomain(domainName) {
     let result;
     angular.forEach($scope.newAccountOptions.availableDomains, (value) => {
       if (value.name === domainName) {
@@ -213,7 +213,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     return result;
   };
 
-  $scope.loadAccountOptions = function () {
+  $scope.loadAccountOptions = function loadAccountOptions() {
     $scope.noDomainMessage = null;
     EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
       $scope.canDeleteOutlookAtExpiration = true;
@@ -249,11 +249,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     });
   };
 
-  EmailPro.getSelected().then((exchange) => {
-    $scope.exchange = exchange;
-  });
-
-  $scope.updateExchangeAccount = function () {
+  $scope.updateExchangeAccount = function updateExchangeAccount() {
     $scope.resetAction();
     $scope.setMessage($translate.instant('emailpro_dashboard_action_doing'));
 
