@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
+angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountCtrl', ($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
   const originalValues = angular.copy($scope.currentActionData);
 
   const accountIsValid = function accountIsValid() {
@@ -44,37 +44,6 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     }
     model.password = modifiedBuffer.password;
     return model;
-  };
-
-  const getActionMessage = function getActionMessage(messages) {
-    const updateAccountMessages = {
-      OK: ' ',
-      PARTIAL: ' ',
-      ERROR: ' ',
-    };
-
-    if (messages.length === 1) {
-      if (messages[0].type === 'INFO') {
-        updateAccountMessages.OK = $translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`);
-      } else if (messages[0].type === 'ERROR') {
-        updateAccountMessages.ERROR = $translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_error_message`);
-      }
-    } else if (messages.length === 2) {
-      if (messages[0].type === messages[1].type) {
-        if (messages[0].type === 'INFO') {
-          updateAccountMessages.OK = $translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`);
-        } else if (messages[0].type === 'ERROR') {
-          updateAccountMessages.ERROR = $translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_error_message`);
-        }
-      } else if (messages[0].message === EmailPro.updateAccountAction) {
-        updateAccountMessages.PARTIAL = $translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`);
-        updateAccountMessages.PARTIAL += ` ${$translate.instant(`${$scope.exchange.billingPlan}_ACTION_change_password_account_error_message_linked`)}`;
-      } else {
-        updateAccountMessages.PARTIAL = $translate.instant(`${$scope.exchange.billingPlan}_ACTION_change_password_account_success_message`);
-        updateAccountMessages.PARTIAL += ` ${$translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_error_message_linked`)}`;
-      }
-    }
-    return updateAccountMessages;
   };
 
   $scope.accountTypeProvider = EmailPro.accountTypeProvider;
@@ -254,17 +223,19 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
     $scope.setMessage($translate.instant('emailpro_dashboard_action_doing'));
 
     if ($scope.needsUpdate()) {
-      EmailPro
+      return EmailPro
         .updateAccount(
           $stateParams.productId,
           getFeaturesToUpdate(originalValues, $scope.selectedAccount),
         )
-        .then((data) => {
-          $scope.setMessage(getActionMessage(data.messages), data);
+        .then(() => {
+          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`));
         })
         .catch((failure) => {
           $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_error_message`), failure);
         });
     }
+
+    return $q.when();
   };
 });
