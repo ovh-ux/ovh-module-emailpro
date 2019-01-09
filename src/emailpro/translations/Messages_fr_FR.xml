@@ -119,6 +119,8 @@
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Modifier le compte E-mail Pro</translation>
    <translation id="emailpro-mxplan_ACTION_update_account_title">Modifier le compte E-mail MX Plan</translation>
 
+   <translation id="emailpro_ACTION_update_account_timeout">Le mot du passe du compte {{accountEmailAddress}} n'a pas été modifié. Merci de réessayer ultérieusement.</translation>
+
    <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">Le compte comporte des caractères invalides</translation>
    <translation id="emailpro_ACTION_account_error_required" qtlid="447885">Le compte est obligatoire</translation>
    <translation id="emailpro_tab_account_state_CREATING" qtlid="26791">Création</translation>

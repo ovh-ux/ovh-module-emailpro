@@ -9,6 +9,8 @@ angular
         $q,
         $rootScope,
         $stateParams,
+        $timeout,
+        $translate,
 
         constants,
         OvhHttp,
@@ -18,6 +20,8 @@ angular
         this.$q = $q;
         this.$rootScope = $rootScope;
         this.$stateParams = $stateParams;
+        this.$timeout = $timeout;
+        this.$translate = $translate;
 
         this.constants = constants;
         this.OvhHttp = OvhHttp;
@@ -402,6 +406,35 @@ angular
           });
       }
 
+      updatePassword(baseAPIPath, serviceName, accountEmailAddress, password, index = 0) {
+        if (index > 10) {
+          return this.$q.reject({
+            message: this.$translate.instant('emailpro_ACTION_update_account_timeout', { accountEmailAddress }),
+            type: 'error',
+          });
+        }
+
+        return this.OvhHttp
+          .post(`/${baseAPIPath}/{exchange}/account/{primaryEmailAddress}/changePassword`, {
+            rootPath: 'apiv6',
+            urlParams: {
+              exchange: serviceName,
+              primaryEmailAddress: accountEmailAddress,
+            },
+            data: {
+              password,
+            },
+          })
+          .catch(() => this.$timeout(1000)
+            .then(() => this.updatePassword(
+              baseAPIPath,
+              serviceName,
+              accountEmailAddress,
+              password,
+              index + 1,
+            )));
+      }
+
       updateAccount(serviceName, account) {
         const accountToUpdate = angular.copy(account);
         accountToUpdate.outlookLicense = accountToUpdate.outlook;
@@ -426,50 +459,7 @@ angular
               },
               data: accountToUpdate,
             })
-            .then(() => this.OvhHttp
-              .post(`/${baseAPIPath}/{exchange}/account/{primaryEmailAddress}/changePassword`, {
-                rootPath: 'apiv6',
-                urlParams: {
-                  exchange: serviceName,
-                  primaryEmailAddress: account.primaryEmailAddress,
-                },
-                data: {
-                  password,
-                },
-              }))
-            .catch(() => this.OvhHttp
-              .post(`/${baseAPIPath}/{exchange}/account/{primaryEmailAddress}/changePassword`, {
-                rootPath: 'apiv6',
-                urlParams: {
-                  exchange: serviceName,
-                  primaryEmailAddress: `${accountToUpdate.login}@${account.domain}`,
-                },
-                data: {
-                  password,
-                },
-              }))
-            .catch(() => this.OvhHttp
-              .post(`/${baseAPIPath}/{exchange}/account/{primaryEmailAddress}/changePassword`, {
-                rootPath: 'apiv6',
-                urlParams: {
-                  exchange: serviceName,
-                  primaryEmailAddress: account.primaryEmailAddress,
-                },
-                data: {
-                  password,
-                },
-              }))
-            .catch(() => this.OvhHttp
-              .post(`/${baseAPIPath}/{exchange}/account/{primaryEmailAddress}/changePassword`, {
-                rootPath: 'apiv6',
-                urlParams: {
-                  exchange: serviceName,
-                  primaryEmailAddress: `${accountToUpdate.login}@${account.domain}`,
-                },
-                data: {
-                  password,
-                },
-              })))
+            .then(() => this.updatePassword(baseAPIPath, serviceName, `${accountToUpdate.login}@${account.domain}`, password)))
           .finally(() => {
             this.resetAccounts();
             this.resetTasks();

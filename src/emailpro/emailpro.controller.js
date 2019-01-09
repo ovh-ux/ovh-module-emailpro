@@ -220,27 +220,29 @@ angular
          * @param message
          * @param failure
          */
-        $scope.setMessage = function setMessage(message, failure) {
+        $scope.setMessage = function setMessage(message, failure = '') {
           let messageToSend = message;
           let messageDetails = [];
-          let alertType = 'alert';
+          let alertType;
+          const type = _.get(failure, 'type', _.isString(failure) ? failure : '');
+          switch (type) {
+            case 'error':
+              alertType = 'alert alert-danger';
+              break;
+            case 'success':
+              alertType = 'alert alert-success';
+              break;
+            case 'warning':
+              alertType = 'alert alert-warning';
+              break;
+            default:
+              alertType = 'alert alert-info';
+              break;
+          }
 
           if (failure) {
             if (failure.message) {
               messageDetails.push({ id: failure.id, message: failure.message });
-              const type = _.get(failure, 'type', 'warning').toLowerCase();
-              switch (type) {
-                case 'error':
-                  alertType = 'alert alert-danger';
-                  break;
-                case 'info':
-                  alertType = 'alert alert-success';
-                  break;
-                case 'warning':
-                  alertType = 'alert alert-warning';
-                  break;
-                default:
-              }
             } else if (failure.messages) {
               if (failure.messages.length > 0) {
                 const state = _.get(failure, 'state', '').toLowerCase();

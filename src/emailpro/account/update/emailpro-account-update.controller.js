@@ -229,7 +229,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
           getFeaturesToUpdate(originalValues, $scope.selectedAccount),
         )
         .then(() => {
-          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`));
+          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`), { type: 'success' });
         })
         .catch((failure) => {
           $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_error_message`), failure);
