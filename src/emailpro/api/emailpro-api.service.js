@@ -1,5 +1,5 @@
 angular
-  .module('Module.emailpro.services')
+  .module('emailProServices')
   .service(
     'Api.EmailPro',
     function ApiEmailPro(WucApi, $q, constants, $cacheFactory, EmailPro) {

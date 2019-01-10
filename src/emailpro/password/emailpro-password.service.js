@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 angular
-  .module('Module.emailpro.services')
+  .module('emailProServices')
   .service('EmailProPassword', [function EmailProPassword() {
     /*
     * The follwing is a list of ranges between which code points fit in a given category as unicode code points.

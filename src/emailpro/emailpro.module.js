@@ -7,7 +7,7 @@ angular
     'ng.ckeditor',
     'emailProConstants',
     'emailProControllers',
-    'Module.emailpro.services',
+    'emailProServices',
     'Module.emailpro.filters'])
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider.state('app.email-pro', {
