@@ -7,8 +7,8 @@ angular
     'ng.ckeditor',
     'emailProConstants',
     'emailProControllers',
-    'emailProServices',
-    'Module.emailpro.filters'])
+    'emailProFilters',
+    'emailProServices'])
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider.state('app.email-pro', {
       url: '/configuration/email_pro/:productId?tab',

@@ -1,2 +1,2 @@
 angular
-  .module('Module.emailpro.filters', []);
+  .module('emailProFilters', []);
