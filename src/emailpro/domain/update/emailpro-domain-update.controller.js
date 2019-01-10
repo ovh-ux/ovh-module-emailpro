@@ -1,4 +1,5 @@
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProUpdateDomainCtrl', (
     $scope,
     $stateParams,

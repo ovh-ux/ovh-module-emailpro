@@ -1,4 +1,5 @@
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProAddAccountCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
     $scope.valid = { legalWarning: false };
     $scope.accountTypeHosted = EmailPro.accountTypeHosted;
@@ -156,7 +157,8 @@ angular.module('emailproControllers')
     };
   });
 
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProOrderAccountCtrl', ($scope, $stateParams, $translate, EmailPro, User) => {
     // default values
     $scope.accountsToAdd = {

@@ -1,4 +1,5 @@
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProToolboxGroupsCtrl', ['$scope',
     function ($scope) {
       $scope.updateGroup = function (ml) {
@@ -33,7 +34,8 @@ angular.module('emailproControllers')
     },
   ]);
 
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProToolboxResourcesCtrl', ['$scope', 'EmailPro',
     function ($scope, EmailPro) {
       $scope.stateOk = EmailPro.stateOk;
@@ -58,7 +60,8 @@ angular.module('emailproControllers')
     },
   ]);
 
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProToolboxDisclaimerCtrl', ['$scope',
     function ($scope) {
       $scope.updateDisclaimer = function (disclaimer) {

@@ -1,4 +1,5 @@
-angular.module('emailproControllers')
+angular
+  .module('emailproControllers')
   .controller('EmailProTabExternalContactsCtrl', ($scope, $stateParams, EmailPro, EmailProExternalContacts, $timeout) => {
     $scope.contactsLoading = false;
     $scope.contacts = null;
