@@ -1,5 +1,5 @@
 angular
-  .module('Module.emailpro.controllers')
+  .module('emailproControllers')
   .controller('EmailProRemoveAccountCtrl', class ExchangeAddAccountCtrl {
     constructor($scope, $stateParams, $translate, EmailPro) {
       this.$scope = $scope;

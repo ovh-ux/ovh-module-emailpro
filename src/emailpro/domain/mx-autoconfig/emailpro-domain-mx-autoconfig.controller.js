@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProDomainMxAutoconfigCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProDomains, EMAILPRO_MX_CONFIG, constants) => {
+angular.module('emailproControllers').controller('EmailProDomainMxAutoconfigCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProDomains, EMAILPRO_MX_CONFIG, constants) => {
   $scope.domain = $scope.currentActionData;
 
   $scope.init = function () {

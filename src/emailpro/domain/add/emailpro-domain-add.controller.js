@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProAddDomainController', (
+angular.module('emailproControllers').controller('EmailProAddDomainController', (
   $rootScope,
   $scope,
   $timeout,

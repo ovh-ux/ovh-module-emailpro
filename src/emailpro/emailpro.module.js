@@ -4,7 +4,7 @@ angular.module('Module.emailpro', [
   'ui.bootstrap',
   'ngSanitize',
   'ng.ckeditor',
-  'Module.emailpro.controllers',
+  'emailproControllers',
   'Module.emailpro.services',
   'Module.emailpro.filters'])
   .config(['$stateProvider', ($stateProvider) => {

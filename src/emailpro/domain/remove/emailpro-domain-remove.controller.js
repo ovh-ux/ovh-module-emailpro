@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProRemoveDomainCtrl', ($scope, $stateParams, $translate, EmailProDomains) => {
+angular.module('emailproControllers').controller('EmailProRemoveDomainCtrl', ($scope, $stateParams, $translate, EmailProDomains) => {
   $scope.domain = $scope.currentActionData;
   $scope.submit = function () {
     $scope.resetAction();

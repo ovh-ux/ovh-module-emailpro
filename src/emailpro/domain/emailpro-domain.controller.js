@@ -1,5 +1,5 @@
 angular
-  .module('Module.emailpro.controllers')
+  .module('emailproControllers')
   .controller(
     'EmailProTabDomainsCtrl',
     ($scope, $http, $stateParams, $translate, EmailPro, EmailProDomains) => {

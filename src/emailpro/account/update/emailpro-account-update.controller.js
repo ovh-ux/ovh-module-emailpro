@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountCtrl', ($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
+angular.module('emailproControllers').controller('EmailProUpdateAccountCtrl', ($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
   const originalValues = angular.copy($scope.currentActionData);
 
   const accountIsValid = function accountIsValid() {

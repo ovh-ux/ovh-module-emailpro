@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout, $translate) => {
+angular.module('emailproControllers').controller('EmailProAccountDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout, $translate) => {
   const init = function () {
     $scope.selectedAccount = $scope.currentActionData;
     $scope.form = { search: null };
@@ -158,7 +158,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAccountDelegat
   init();
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProMailingListDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout, $translate) => {
+angular.module('emailproControllers').controller('EmailProMailingListDelegationCtrl', ($scope, $stateParams, EmailPro, $timeout, $translate) => {
   const init = function () {
     $scope.selectedGroup = $scope.currentActionData;
     $scope.form = { search: null };

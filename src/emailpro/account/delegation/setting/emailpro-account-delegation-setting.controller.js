@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProDelegationSettingsCtrl', ['$scope', 'EmailPro', '$timeout', '$translate', function ($scope, EmailPro, $timeout, $translate) {
+angular.module('emailproControllers').controller('EmailProDelegationSettingsCtrl', ['$scope', 'EmailPro', '$timeout', '$translate', function ($scope, EmailPro, $timeout, $translate) {
   const init = function () {
     $scope.selectedAccount = $scope.currentActionData;
     $scope.form = { search: null };

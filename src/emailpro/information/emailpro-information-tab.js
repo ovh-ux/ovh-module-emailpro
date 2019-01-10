@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabInformationCtrl', [
+angular.module('emailproControllers').controller('EmailProTabInformationCtrl', [
 
   function () {
 

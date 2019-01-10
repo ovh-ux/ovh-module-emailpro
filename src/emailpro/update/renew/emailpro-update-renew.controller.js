@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProUpdateRenewCtrl', ($scope, $stateParams, EmailPro, $location, $translate) => {
+angular.module('emailproControllers').controller('EmailProUpdateRenewCtrl', ($scope, $stateParams, EmailPro, $location, $translate) => {
   $scope.exchange = angular.copy($scope.currentActionData);
   $scope.search = { value: null };
   $scope.buffer = {

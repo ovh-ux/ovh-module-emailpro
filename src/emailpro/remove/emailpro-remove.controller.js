@@ -2,7 +2,7 @@
   * Resiliate EmailPro service action
   */
 angular
-  .module('Module.emailpro.controllers')
+  .module('emailproControllers')
   .controller(
     'EmailProRemoveEmailProCtrl',
     ($scope, $stateParams, $translate, EmailPro) => {
