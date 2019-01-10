@@ -89,11 +89,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddDomainContr
         $scope.setMessage($translate.instant('emailpro_tab_domain_add_failure'), failure);
       });
 
-    EmailPro.getSelected()
-      .then((exchange) => {
-        $scope.exchange = exchange;
-        check2010Provider();
-      });
+    check2010Provider();
   };
 
   $scope.resetSearchValue = function () {

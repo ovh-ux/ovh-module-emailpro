@@ -10,7 +10,8 @@
              data-wizard-step-on-load="getAccounts">
 
             <div class="alert alert-info" role="alert"
-                 data-ng-bind-html="'emailpro_ACTION_delegation_step1_intro' | translate: { t0: selectedAccount.primaryEmailDisplayName }">
+                 data-translate="{{ exchange.billingPlan + '_ACTION_delegation_step1_intro' }}"
+                 data-translate-values="{ t0: selectedAccount.primaryEmailDisplayName }">
             </div>
 
             <div class="text-right mb-3">

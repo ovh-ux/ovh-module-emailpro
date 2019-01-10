@@ -1,10 +1,15 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabDomainsCtrl">
     <div class="row">
-        <div class="col-md-9">
+        <div data-ng-class="{
+            'col-md-12': !canAddDomain,
+            'col-md-9': canAddDomain
+        }">
             <div class="alert alert-warning" role="alert"
                  data-translate="emailpro_tab_domain_partial"
                  data-ng-if="containPartial()"></div>
-            <div class="text-right mb-3">
+            <div
+                class="text-right mb-3"
+                data-ng-if="!exchange.isMXPlan">
                 <form class="form-inline" name="searchDomainForm">
                     <div class="form-group">
                         <label class="sr-only" for="searchDomain"
@@ -55,7 +60,10 @@
                         <tr>
                             <td class="text-center" colspan="6">
                                 <div data-ng-if="!search.value">
-                                    <span data-translate="emailpro_tab_domain_no_domains_1"></span>
+                                    <span data-translate="{{:: exchange.isMXPlan
+                                        ? 'mxplan_tab_domain_no_domains_1'
+                                        : 'emailpro_tab_domain_no_domains_1'
+                                    }}"></span>
                                     <button class="btn btn-link p-0"
                                             type="button"
                                             style="font-size:inherit"
@@ -170,14 +178,14 @@
                                                           data-disabled="isEditDisabled(domain)">
                                         <span data-translate="emailpro_tab_domain_popover_update"></span>
                                     </oui-action-menu-item>
-                                    <oui-action-menu-item data-ng-if="!isDeleteDisabled(domain)"
+                                    <oui-action-menu-item data-ng-if="!exchange.isMXPlan && !isDeleteDisabled(domain)"
                                                           data-on-click="deleteDomain(domain)">
                                         <span data-translate="emailpro_tab_domain_popover_delete"></span>
                                     </oui-action-menu-item>
-                                    <oui-action-menu-item data-ng-if="isDeleteDisabled(domain)"
+                                    <oui-action-menu-item data-ng-if="!exchange.isMXPlan && isDeleteDisabled(domain)"
                                                           data-disabled="true">
                                         <span data-translate="emailpro_tab_domain_popover_delete"
-                                              data-uib-tooltip="{{:: 'emailpro_tab_domain_delete_domain_accounts_warning' | translate }}"
+                                              data-uib-tooltip="{{ exchange.billingPlan + '_tab_domain_delete_domain_accounts_warning' | translate }}"
                                               data-tooltip-append-to-body="true"></span>
                                     </oui-action-menu-item>
                                 </oui-action-menu>
@@ -188,7 +196,7 @@
             </div>
 
             <div class="clearfix"
-                 data-ng-show="!loading && paginated.domains.length > 0"
+                 data-ng-show="!exchange.isMXPlan && !loading && paginated.domains.length > 0"
                  data-pagination-server-side="domainsTable"
                  data-pagination-server-side-function="getDomains"
                  data-pagination-server-side-paginated-stuff="paginated"
@@ -196,7 +204,8 @@
             </div>
         </div>
 
-        <div class="col-md-3 mt-5 mt-lg-0">
+        <div class="col-md-3 mt-5 mt-lg-0"
+             data-ng-if="canAddDomain">
             <button class="btn btn-block btn-default" type="button"
                     data-translate="emailpro_tab_domain_add_domain"
                     data-ng-click="setAction('emailpro/domain/add/emailpro-domain-add', {})">

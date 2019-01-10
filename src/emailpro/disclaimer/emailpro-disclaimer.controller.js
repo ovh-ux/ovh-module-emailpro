@@ -168,8 +168,6 @@ angular.module('Module.emailpro.controllers')
 
 angular.module('Module.emailpro.controllers')
   .controller('EmailProUpdateDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
-    const mceId = 'update-disclaimer-editor';
-
     function loadOptions() {
       $scope.loadingData = true;
       return EmailPro.getUpdateDisclaimerOptions().then((data) => {
@@ -202,7 +200,7 @@ angular.module('Module.emailpro.controllers')
      * Insert attributes at text field current cursor position
      */
     $scope.insertAttribute = function () {
-      CKEDITOR.instances[mceId].insertText(`%%${$scope.data.selectedAttribute}%%`);
+      $scope.data.content += `%%${$scope.data.selectedAttribute}%%`;
     };
 
     $scope.saveDisclaimer = function () {

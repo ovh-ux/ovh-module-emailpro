@@ -2,9 +2,6 @@ angular.module('Module.emailpro.controllers')
   .controller('EmailProAddAccountCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
     $scope.valid = { legalWarning: false };
     $scope.accountTypeHosted = EmailPro.accountTypeHosted;
-    EmailPro.getSelected().then((exchange) => {
-      $scope.exchange = exchange;
-    });
 
     $scope.passwordTooltip = null;
 
