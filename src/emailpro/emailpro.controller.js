@@ -1,5 +1,5 @@
 angular
-  .module('Module.emailpro.controllers')
+  .module('emailProControllers')
   .controller(
     'EmailProCtrl',
     [

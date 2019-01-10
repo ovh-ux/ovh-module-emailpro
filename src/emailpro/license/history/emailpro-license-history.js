@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProLicenseHistoryCtrl', ($rootScope, $stateParams, $scope, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProLicenseHistoryCtrl', ($rootScope, $stateParams, $scope, $translate, EmailPro) => {
   $scope.loading = false;
   $scope.selectedPeriod = { period: 'LASTMONTH' };
 

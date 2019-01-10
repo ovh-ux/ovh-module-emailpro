@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProAddExternalContactCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProExternalContacts) => {
+angular.module('emailProControllers').controller('EmailProAddExternalContactCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProExternalContacts) => {
   $scope.model = {
     newAccount: {
       hiddenFromGAL: false,
@@ -80,7 +80,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddExternalCon
   };
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProExternalContactsModifyCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProExternalContacts) => {
+angular.module('emailProControllers').controller('EmailProExternalContactsModifyCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProExternalContacts) => {
   $scope.model = {
     currentAccount: $scope.currentActionData,
     newAccount: angular.copy($scope.currentActionData),
@@ -144,7 +144,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProExternalContac
   };
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProExternalContactsDeleteCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProExternalContacts) => {
+angular.module('emailProControllers').controller('EmailProExternalContactsDeleteCtrl', ($scope, $stateParams, $translate, EmailPro, EmailProExternalContacts) => {
   $scope.model = {
     externalEmailAddress: $scope.currentActionData,
   };

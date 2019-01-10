@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($scope, $stateParams, $location, $translate) => {
+angular.module('emailProControllers').controller('EmailProTabsCtrl', ($scope, $stateParams, $location, $translate) => {
   $scope.kebabCase = _.kebabCase;
 
   const defaultTab = 'INFORMATION';

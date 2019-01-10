@@ -1,5 +1,5 @@
 angular
-  .module('Module.emailpro.controllers')
+  .module('emailProControllers')
   .controller('EmailProDomainSrvAutoconfigCtrl', class EmailProDomainSrvAutoconfigCtrl {
     constructor($scope, $stateParams, $translate, EmailPro, EmailProDomains) {
       this.services = {

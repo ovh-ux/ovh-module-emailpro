@@ -1,7 +1,7 @@
 /**
  * Account alias
  */
-angular.module('Module.emailpro.controllers').controller('EmailProTabAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProTabAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   $scope.aliasMaxLimit = EmailPro.aliasMaxLimit;
   $scope.getAliasesParams = {
     pageSize: null,
@@ -87,7 +87,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAliasCtrl',
   };
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProAddAccountAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProAddAccountAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   $scope.selectedAccount = $scope.currentActionData;
 
   $scope.data = null;
@@ -142,7 +142,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddAccountAlia
   };
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProRemoveAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProRemoveAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   $scope.account = $scope.currentActionData.account;
   $scope.alias = $scope.currentActionData.alias;
 
@@ -165,7 +165,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProRemoveAliasCtr
 /**
  * Group alias
  */
-angular.module('Module.emailpro.controllers').controller('EmailProTabGroupAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProTabGroupAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   $scope.aliasMaxLimit = EmailPro.aliasMaxLimit;
 
   $scope.$on(EmailPro.events.groupsChanged, () => {
@@ -223,7 +223,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabGroupAliasC
   };
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProAddGroupAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProAddGroupAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   $scope.selectedMailingList = $scope.currentActionData;
 
   $scope.availableDomains = null;
@@ -281,7 +281,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProAddGroupAliasC
   };
 });
 
-angular.module('Module.emailpro.controllers').controller('EmailProRemoveGroupAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+angular.module('emailProControllers').controller('EmailProRemoveGroupAliasCtrl', ($scope, $stateParams, $translate, EmailPro) => {
   $scope.selectedGroup = $scope.currentActionData.selectedGroup;
   $scope.alias = $scope.currentActionData.alias;
 
