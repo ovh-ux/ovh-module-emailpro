@@ -7,6 +7,7 @@ angular
       'ui.bootstrap',
       'ngSanitize',
       'ng.ckeditor',
+      'emailProComponents',
       'emailProConstants',
       'emailProControllers',
       'emailProFilters',
