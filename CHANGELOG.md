@@ -1,3 +1,21 @@
+# [7.1.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.10...v7.1.0) (2019-01-10)
+
+
+### Bug Fixes
+
+* alert messages work better ([41f864e](https://github.com/ovh-ux/ovh-module-emailpro/commit/41f864e))
+* mxplan offer ([8dc90ef](https://github.com/ovh-ux/ovh-module-emailpro/commit/8dc90ef))
+* **account-update:** change promise order ([e19df63](https://github.com/ovh-ux/ovh-module-emailpro/commit/e19df63))
+
+
+### Features
+
+* access new MX plan API ([d943193](https://github.com/ovh-ux/ovh-module-emailpro/commit/d943193))
+* **emailpro-basic:** new offer mx plan ([2f5b280](https://github.com/ovh-ux/ovh-module-emailpro/commit/2f5b280))
+* **emailpro-basic:** new state ([b8ff9f5](https://github.com/ovh-ux/ovh-module-emailpro/commit/b8ff9f5))
+
+
+
 ## [7.0.10](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.9...v7.0.10) (2018-11-27)
 
 
