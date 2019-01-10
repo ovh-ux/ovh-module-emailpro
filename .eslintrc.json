@@ -14,6 +14,7 @@
     "_": true,
     "CKEDITOR": true,
     "moment": true,
-    "punycode": true
+    "punycode": true,
+    "validator": true
   }
 }

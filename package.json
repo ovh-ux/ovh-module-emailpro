@@ -22,7 +22,8 @@
     "angular": "~1.6.10",
     "lodash": "~3.9.3",
     "moment": "^2.16.0",
-    "punycode": "^1.2.4"
+    "punycode": "^1.2.4",
+    "validator": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

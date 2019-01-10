@@ -23,11 +23,6 @@ angular.module('Module.emailpro.controllers')
       'pro1.mail.ovh.net',
     ];
 
-    EmailPro.getSelected()
-      .then((exchange) => {
-        $scope.exchange = exchange;
-      });
-
     $scope.selectedDomain = {
       name: $scope.currentActionData.name,
       type: $scope.currentActionData.type,
@@ -117,7 +112,7 @@ angular.module('Module.emailpro.controllers')
         .catch((failure) => {
           // Make sure the type in the select widget is reset to its initial value
           $rootScope.$broadcast(EmailPro.events.domainsChanged);
-          $scope.setMessage($translate.instant('emailpro_tab_domain_modify_failure'), failure.data);
+          $scope.setMessage(`${$translate.instant('emailpro_tab_domain_modify_failure')} : ${failure.message}`, { status: 'error' });
         });
     };
 
