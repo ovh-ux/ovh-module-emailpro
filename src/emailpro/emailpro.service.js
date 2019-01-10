@@ -1,5 +1,5 @@
 angular
-  .module('Module.emailpro.services')
+  .module('emailproServices')
   .service(
     'EmailPro',
     class EmailPro {

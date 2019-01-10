@@ -1,6 +1,6 @@
 angular
   .module('App')
-  .controller('EmailProServicesConfigureCtrl', ['$scope', '$translate', 'Api.EmailPro', 'EmailPro', function ($scope, $translate, APIEmailPro, EmailPro) {
+  .controller('emailproServicesConfigureCtrl', ['$scope', '$translate', 'Api.EmailPro', 'EmailPro', function ($scope, $translate, APIEmailPro, EmailPro) {
     const { exchange } = $scope.currentActionData;
 
     $scope.loaders = {
@@ -73,7 +73,7 @@ angular
 
     getDetails();
   }])
-  .controller('EmailProServicesConfigureFormCtrl', ['$scope', function ($scope) {
+  .controller('emailproServicesConfigureFormCtrl', ['$scope', function ($scope) {
     const self = this;
     const intRegex = /^\d+$/;
 
@@ -92,7 +92,8 @@ angular
       if (value) {
         try {
           intValue = parseInt(value, 10);
-        if (intRegex.test(value) && !isNaN(intValue)) { // eslint-disable-line
+
+          if (intRegex.test(value) && !isNaN(intValue)) { // eslint-disable-line
             if (intValue !== 0) {
               input.$setValidity('min', intValue >= 3);
             }

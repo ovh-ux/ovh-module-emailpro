@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 angular
-  .module('Module.emailpro.services')
+  .module('emailproServices')
   .service(
     'EmailProPassword',
     function EmailProPassword() {

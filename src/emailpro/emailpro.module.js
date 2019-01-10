@@ -9,7 +9,7 @@ angular
       'ng.ckeditor',
       'emailproConstants',
       'emailproControllers',
-      'Module.emailpro.services',
+      'emailproServices',
       'Module.emailpro.filters',
     ],
   )
