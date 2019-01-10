@@ -1,4 +1,5 @@
-angular.module('emailProControllers')
+angular
+  .module('emailProControllers')
   .controller('EmailProTabTasksCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     $scope.tasksList = null;
     $scope.stateDoing = 'DOING';

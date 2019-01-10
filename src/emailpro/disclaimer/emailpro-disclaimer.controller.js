@@ -1,4 +1,5 @@
-angular.module('emailProControllers')
+angular
+  .module('emailProControllers')
   .controller('EmailProDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     function hasEmptySlot(list) {
       let result = false;
@@ -107,7 +108,8 @@ angular.module('emailProControllers')
     });
   });
 
-angular.module('emailProControllers')
+angular
+  .module('emailProControllers')
   .controller('EmailProAddDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro, navigation) => {
     $scope.data = {
       content: '',
@@ -166,7 +168,8 @@ angular.module('emailProControllers')
     };
   });
 
-angular.module('emailProControllers')
+angular
+  .module('emailProControllers')
   .controller('EmailProUpdateDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     function loadOptions() {
       $scope.loadingData = true;
@@ -220,7 +223,8 @@ angular.module('emailProControllers')
     };
   });
 
-angular.module('emailProControllers')
+angular
+  .module('emailProControllers')
   .controller('EmailProRemoveDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     $scope.disclaimer = $scope.currentActionData;
     $scope.submit = function () {

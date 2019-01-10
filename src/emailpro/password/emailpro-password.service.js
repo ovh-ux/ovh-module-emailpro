@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
-angular.module('Module.emailpro.services').service('EmailProPassword', [function () {
+angular
+  .module('Module.emailpro.services')
+  .service('EmailProPassword', [function () {
   let uppercase;
   let lowercase;
   let digits;

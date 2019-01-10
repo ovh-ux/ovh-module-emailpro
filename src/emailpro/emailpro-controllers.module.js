@@ -1,1 +1,2 @@
-angular.module('emailProControllers', []);
+angular
+  .module('emailProControllers', []);

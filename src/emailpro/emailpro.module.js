@@ -1,12 +1,13 @@
-angular.module('Module.emailpro', [
-  'ovh-utils-angular',
-  'ngRoute',
-  'ui.bootstrap',
-  'ngSanitize',
-  'ng.ckeditor',
-  'emailProControllers',
-  'Module.emailpro.services',
-  'Module.emailpro.filters'])
+angular
+  .module('Module.emailpro', [
+    'ovh-utils-angular',
+    'ngRoute',
+    'ui.bootstrap',
+    'ngSanitize',
+    'ng.ckeditor',
+    'emailProControllers',
+    'Module.emailpro.services',
+    'Module.emailpro.filters'])
   .config(['$stateProvider', ($stateProvider) => {
     $stateProvider.state('app.email-pro', {
       url: '/configuration/email_pro/:productId?tab',
