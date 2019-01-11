@@ -459,7 +459,15 @@ angular
               },
               data: accountToUpdate,
             })
-            .then(() => this.updatePassword(baseAPIPath, serviceName, `${accountToUpdate.login}@${account.domain}`, password)))
+            .then(() => (_.isEmpty(password)
+              ? this.$q.when()
+              : this.updatePassword(
+                baseAPIPath,
+                serviceName,
+                `${accountToUpdate.login}@${account.domain}`,
+                password,
+              )
+            )))
           .finally(() => {
             this.resetAccounts();
             this.resetTasks();
