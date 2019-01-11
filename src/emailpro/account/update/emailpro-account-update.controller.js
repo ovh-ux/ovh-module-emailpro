@@ -19,11 +19,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
 
   const getModelToUpdate = function (originalValues, modifiedBuffer) { // eslint-disable-line
     const model = { primaryEmailAddress: originalValues.primaryEmailAddress };
-    model.login = modifiedBuffer.login !== originalValues.login ? modifiedBuffer.login : undefined;
+    model.login = modifiedBuffer.login !== originalValues.login
+      ? modifiedBuffer.login : originalValues.login;
     model.displayName = modifiedBuffer.displayName !== originalValues.displayName
       ? modifiedBuffer.displayName : undefined;
     model.domain = modifiedBuffer.completeDomain.name !== originalValues.completeDomain.name
-      ? modifiedBuffer.completeDomain.name : undefined;
+      ? modifiedBuffer.completeDomain.name : originalValues.completeDomain.name;
     model.firstName = modifiedBuffer.firstName !== originalValues.firstName
       ? modifiedBuffer.firstName : undefined;
     model.lastName = modifiedBuffer.lastName !== originalValues.lastName
