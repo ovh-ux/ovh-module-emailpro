@@ -1,56 +1,83 @@
 angular
   .module('emailProControllers')
-  .controller('EmailProTabsCtrl', ($scope, $stateParams, $location, $translate) => {
-    $scope.kebabCase = _.kebabCase;
+  .controller('EmailProTabsCtrl', class {
+    constructor(
+      $location,
+      $scope,
+      $stateParams,
+      $translate,
+    ) {
+      this.$location = $location;
+      this.$scope = $scope;
+      this.$stateParams = $stateParams;
+      this.$translate = $translate;
+    }
 
-    const defaultTab = 'INFORMATION';
-    $scope.tabs = [
-      'INFORMATION',
-      'DOMAIN',
-      'ACCOUNT',
-      'EXTERNAL_CONTACT',
-    ];
+    $onInit() {
+      this.tabs = [
+        {
+          isDefault: true,
+          toString: () => 'INFORMATION',
+        },
+        {
+          toString: () => 'DOMAIN',
+        },
+        {
+          toString: () => 'ACCOUNT',
+        },
+        {
+          isComponent: true,
+          toString: () => 'MAILING_LIST',
+          name: 'emailproMailingList',
+          condition: this.$stateParams.serviceIsMXPlan,
+        },
+        {
+          toString: () => 'EXTERNAL_CONTACT',
+        },
+      ].filter(tab => !_.has(tab, 'condition') || tab.condition);
 
-    $scope.tabMenu = {
-      title: $translate.instant('navigation_more'),
-      items: [
-        {
-          label: $translate.instant('emailpro_tab_DISCLAIMER'),
-          target: 'DISCLAIMER',
-          type: 'SWITCH_TABS',
-        },
-        {
-          label: $translate.instant('emailpro_tab_TASKS'),
-          target: 'TASK',
-          type: 'SWITCH_TABS',
-        },
-        {
-          type: 'SEPARATOR',
-        },
-        {
-          label: $translate.instant('emailpro_configuration_action_title'),
-          type: 'ACTION',
-          fn() {
-            $scope.setAction('emailpro/service/configure/emailpro-service-configure', { exchange: $scope.exchange });
+      this.defaultTab = this.tabs.find(currentTab => currentTab.isDefault);
+
+      this.extraMenuItems = {
+        title: this.$translate.instant('navigation_more'),
+        items: [
+          {
+            label: this.$translate.instant('emailpro_tab_DISCLAIMER'),
+            target: 'DISCLAIMER',
+            type: 'SWITCH_TABS',
           },
-          disabled: $scope.is25g(),
-        },
-      ],
-    };
+          {
+            label: this.$translate.instant('emailpro_tab_TASKS'),
+            target: 'TASK',
+            type: 'SWITCH_TABS',
+          },
+          {
+            type: 'SEPARATOR',
+          },
+          {
+            label: this.$translate.instant('emailpro_configuration_action_title'),
+            type: 'ACTION',
+            fn() {
+              this.$scope.setAction('emailpro/service/configure/emailpro-service-configure', { exchange: this.$scope.exchange });
+            },
+            disabled: this.$scope.is25g(),
+          },
+        ],
+      };
 
-    $scope.setSelectedTab = function (tab) {
-      if (tab !== undefined && tab !== null && tab !== '') {
-        $scope.selectedTab = tab;
-      } else {
-        $scope.selectedTab = defaultTab;
-      }
+      this.changeTab(this.$stateParams.tab || this.$stateParams.tabComponent);
 
-      $location.search('tab', $scope.selectedTab);
-    };
+      this.$scope.tabs = this.tabs;
+      this.$scope.extraMenuItems = this.extraMenuItems;
+      this.$scope.changeTab = tab => this.changeTab(tab);
+    }
 
-  if ($stateParams.tab && ~$scope.tabs.indexOf(angular.uppercase($stateParams.tab))) { // eslint-disable-line
-      $scope.setSelectedTab(angular.uppercase($stateParams.tab));
-    } else {
-      $scope.setSelectedTab(defaultTab);
+    changeTab(tabToChangeTo) {
+      const matchingTab = this.tabs.find(currentTab => currentTab === tabToChangeTo);
+      const newlySelectedTab = matchingTab || this.defaultTab;
+
+      this.$scope.currentTab = newlySelectedTab;
+      this.$location.search('tab', !newlySelectedTab.isComponent ? newlySelectedTab.name || newlySelectedTab : null);
+      this.$location.search('tabComponent', newlySelectedTab.isComponent ? newlySelectedTab.name || newlySelectedTab : null);
     }
   });

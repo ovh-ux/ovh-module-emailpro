@@ -1784,6 +1784,11 @@ delayed-stream@~1.0.0:
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
   integrity sha1-3zrhmayt+31ECqrgsp4icrJOxhk=
 
+depd@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.0.tgz#e1bd82c6aab6ced965b97b88b17ed3e528ca18c3"
+  integrity sha1-4b2Cxqq2ztlluXuIsX7T5SjKGMM=
+
 depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
@@ -6371,6 +6376,13 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+validator@^4.0.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-4.9.0.tgz#082ffce2a76148ff07a8e89e9c2ba43aaf12ec4c"
+  integrity sha1-CC/84qdhSP8HqOienCukOq8S7Ew=
+  dependencies:
+    depd "1.1.0"
 
 verror@1.10.0:
   version "1.10.0"

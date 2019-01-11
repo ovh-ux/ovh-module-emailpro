@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translations>
+   <translation id="emailPro_mailingLists_home_cantCreateMoreMailingLists">Vous n'avez pas la possibilité de créer de mailing list.</translation>
+   <translation id="emailPro_mailingLists_home_offerUpgradeService">Change d'offre</translation>
+   <translation id="emailPro_mailingLists_home_fetchingQuotas_error">Une erreur est survenue lors de la récupération de vos quotas</translation>
+</translations>

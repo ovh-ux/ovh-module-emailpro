@@ -1,3 +1,5 @@
+import emailproMailingList from './components/mailingList';
+
 angular
   .module(
     'Module.emailpro',
@@ -11,6 +13,7 @@ angular
       'emailProConstants',
       'emailProControllers',
       'emailProFilters',
+      emailproMailingList,
       'emailProRoutes',
       'emailProServices',
     ],

@@ -1346,8 +1346,14 @@ angular
               rootPath: 'apiv6',
             },
           )
-          .then(() => false)
-          .catch(() => true);
+          .then(() => {
+            this.$stateParams.serviceIsMXPlan = false;
+            return false;
+          })
+          .catch(() => {
+            this.$stateParams.serviceIsMXPlan = true;
+            return true;
+          });
       }
 
       gettingBaseAPIPath() {

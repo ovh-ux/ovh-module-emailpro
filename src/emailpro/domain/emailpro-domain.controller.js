@@ -1,7 +1,7 @@
 angular
   .module('emailProControllers')
   .controller(
-    'EmailProTabDomainsCtrl',
+    'EmailProTabDomainCtrl',
     ($scope, $http, $stateParams, $translate, EmailPro, EmailProDomains) => {
       $scope.domainTypeAuthoritative = 'AUTHORITATIVE';
       $scope.domainTypeNonAuthoritative = 'NON_AUTHORITATIVE';

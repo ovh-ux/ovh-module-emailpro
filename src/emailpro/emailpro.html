@@ -89,14 +89,14 @@
     </div>
 </div>
 
-<div data-ng-controller="EmailProTabsCtrl"
+<div data-ng-controller="EmailProTabsCtrl as $ctrl"
      data-ng-if="!loadingEmailProInformations && !loadingEmailProError && !exchange.isExpired">
     <wuc-ovh-tabs tabs="tabs"
-              selected-tab="selectedTab"
-              change-tab="setSelectedTab"
+              selected-tab="currentTab"
+              change-tab="changeTab"
               product="exchange"
               tr="tr"
-              menu="tabMenu"></wuc-ovh-tabs>
+              menu="extraMenuItems"></wuc-ovh-tabs>
     <div class="tab-content">
         <div class="alert alert-dismissible" role="alert"
              data-ng-class="alertType"
@@ -113,13 +113,16 @@
                         data-ng-if="messageDetails.length > 0"></strong>
             </div>
         </div>
-        <div class="tab-pane active platform"
-             data-ng-include="selectedTab && 'emailpro/' + kebabCase(selectedTab) + '/emailpro-' + kebabCase(selectedTab) + '.html'"></div>
+
+        <section
+            class="tab-pane active platform"
+            data-ui-view></section>
     </div>
 </div>
 
-<div class="oui-message oui-message_error oui-message_l" role="alert"
-     data-ng-if="loadingEmailProError && message">
+<div
+    class="oui-message oui-message_error oui-message_l" role="alert"
+    data-ng-if="loadingEmailProError && message">
     <span class="oui-message_l-icon" aria-hidden="true"></span>
     <h1 class="oui-message__title" data-translate="emailpro_dashboard_service_expired"></h1>
     <div class="oui-message__body">
