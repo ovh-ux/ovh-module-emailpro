@@ -1,3 +1,12 @@
+## [7.1.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.0...v7.1.1) (2019-01-11)
+
+
+### Bug Fixes
+
+* restore password update for emailpro ([5d71562](https://github.com/ovh-ux/ovh-module-emailpro/commit/5d71562))
+
+
+
 # [7.1.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.10...v7.1.0) (2019-01-10)
 
 
