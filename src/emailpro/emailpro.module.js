@@ -1,17 +1,20 @@
+import emailproFeedbackMessenger from './components/feedbackMessenger';
+
 angular
   .module(
     'Module.emailpro',
     [
-      'ovh-utils-angular',
-      'ngRoute',
-      'ui.bootstrap',
-      'ngSanitize',
-      'ng.ckeditor',
       'emailproComponents',
       'emailproConstants',
       'emailproControllers',
+      emailproFeedbackMessenger,
       'emailproFilters',
       'emailproRoutes',
       'emailproServices',
+      'ng.ckeditor',
+      'ngRoute',
+      'ngSanitize',
+      'ovh-utils-angular',
+      'ui.bootstrap',
     ],
   );

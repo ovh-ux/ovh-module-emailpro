@@ -1,0 +1,16 @@
+<oui-message
+    data-type="{{ $ctrl.type }}"
+    data-dismissable>
+    <p data-ng-bind="$ctrl.message.text"></p>
+
+    <button
+        data-ng-if="$ctrl.message.details"
+        type="button"
+        class="oui-button oui-button_secondary"
+        data-linkedpopover="emailpro/components/feedbackMessenger/emailpro-feedbackMessenger-popover.html"
+        data-linkedpopover-placement="top"
+        data-linkedpopover-single="false"
+        data-linkedpopover-remote="true">
+        <span data-translate="emailpro_feedbackMessenger_moreDetails"></span>
+    </button>
+</oui-message>

@@ -16,5 +16,8 @@
     "moment": true,
     "punycode": true,
     "validator": true
+  },
+  "rules": {
+    "import/no-unresolved": 0
   }
 }

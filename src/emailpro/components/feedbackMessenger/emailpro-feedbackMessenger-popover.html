@@ -1,0 +1,8 @@
+<ul>
+    <li data-ng-repeat="detail in $ctrl.message.details track by $index">
+        <strong data-ng-if="detail.id != null">
+            <span data-ng-bind="detail.id"></span>:
+        </strong>
+        <span data-ng-bind="detail.text"></span>
+    </li>
+</ul>
