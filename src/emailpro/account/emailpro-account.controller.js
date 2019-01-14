@@ -1,6 +1,6 @@
 angular
   .module('emailproControllers')
-  .controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $stateParams, $translate) => {
+  .controller('emailproAccountCtrl', ($scope, EmailPro, $stateParams, $translate) => {
     $scope.stateCreating = EmailPro.stateCreating;
     $scope.stateDeleting = EmailPro.stateDeleting;
     $scope.stateOk = EmailPro.stateOk;

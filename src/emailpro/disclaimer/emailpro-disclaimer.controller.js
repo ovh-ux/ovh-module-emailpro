@@ -1,6 +1,6 @@
 angular
   .module('emailproControllers')
-  .controller('EmailProDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
+  .controller('emailproDisclaimerCtrl', ($scope, $stateParams, $translate, EmailPro) => {
     function hasEmptySlot(list) {
       let result = false;
       angular.forEach(list,

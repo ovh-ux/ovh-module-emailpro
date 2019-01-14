@@ -91,12 +91,13 @@
 
 <div data-ng-controller="EmailProTabsCtrl"
      data-ng-if="!loadingEmailProInformations && !loadingEmailProError && !exchange.isExpired">
-    <wuc-ovh-tabs tabs="tabs"
-              selected-tab="selectedTab"
-              change-tab="setSelectedTab"
-              product="exchange"
-              tr="tr"
-              menu="tabMenu"></wuc-ovh-tabs>
+    <wuc-ovh-tabs
+        tabs="tabs"
+        selected-tab="currentTab"
+        change-tab="changeTab"
+        product="exchange"
+        tr="tr"
+        menu="extraMenuItems"></wuc-ovh-tabs>
     <div class="tab-content">
         <div class="alert alert-dismissible" role="alert"
              data-ng-class="alertType"
@@ -113,8 +114,10 @@
                         data-ng-if="messageDetails.length > 0"></strong>
             </div>
         </div>
-        <div class="tab-pane active platform"
-             data-ng-include="selectedTab && 'emailpro/' + kebabCase(selectedTab) + '/emailpro-' + kebabCase(selectedTab) + '.html'"></div>
+
+        <section
+            class="tab-pane active platform"
+            data-ui-view></section>
     </div>
 </div>
 
