@@ -70,7 +70,7 @@
                 </tbody>
 
                 <tbody data-ng-if="!loading">
-                    <tr	data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailDisplayName':false">
+                    <tr data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailDisplayName':false">
                         <th class="word-break" scope="row"
                             data-ng-bind="account.primaryEmailDisplayName"></th>
                         <td class="text-center">
@@ -146,7 +146,7 @@
                         </td>
                     </tr>
 
-                    <tr	data-ng-repeat="account in accounts.list.results track by account.id | orderBy:'id':false">
+                    <tr data-ng-repeat="account in accounts.list.results track by account.id | orderBy:'id':false">
                         <td colspan="4">
                             <div class="text-warning">
                                 <span class="icon-warning-sign" aria-hidden="true"></span>
@@ -179,7 +179,7 @@
                 </thead>
 
                 <tbody>
-                    <tr	data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailDisplayName':false">
+                    <tr data-ng-repeat="account in accounts.list.results | orderBy:'primaryEmailDisplayName':false">
                         <th scope="row" data-ng-bind="account.primaryEmailDisplayName"></th>
                         <td class="text-center">
                             <span data-ng-if="account.newSendAsValue"

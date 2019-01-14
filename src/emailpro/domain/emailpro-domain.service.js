@@ -4,12 +4,14 @@ angular
     'EmailProDomains',
     function EmailProDomains(
       EmailPro,
+      emailproService,
       OvhHttp,
     ) {
       this.getDomains = function getDomains(serviceName, pageSize, offset, searchParam) {
         const search = searchParam || undefined;
 
-        return EmailPro.gettingIsServiceMXPlan()
+        return emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => OvhHttp.get('/sws/emailpro/{exchange}/domains', {
             rootPath: '2api',
             urlParams: {
@@ -64,8 +66,8 @@ angular
       };
 
       this.getAddDomainData = function getAddDomainData(serviceName) {
-        return EmailPro
-          .gettingIsServiceMXPlan()
+        return emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => OvhHttp.get('/sws/emailpro/{exchange}/domains/options', {
             rootPath: '2api',
             urlParams: {
@@ -119,8 +121,8 @@ angular
    * Get exchange license history
    */
       this.addZoneDnsField = function addZoneDnsField(serviceName, data) {
-        return EmailPro
-          .gettingIsServiceMXPlan()
+        return emailproService
+          .fetchingIsServiceMXPlan()
           .then((isMXPlan) => {
             Object.assign(data, { isMXPlan });
 
@@ -136,8 +138,8 @@ angular
       };
 
       this.getDnsSettings = function getDnsSettings(serviceName, domain) {
-        return EmailPro
-          .gettingIsServiceMXPlan()
+        return emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => OvhHttp.get('/sws/emailpro/{exchange}/domains/{domain}/dnsSettings', {
             rootPath: '2api',
             urlParams: {

@@ -6,7 +6,6 @@ angular
         url: '/configuration/email_pro/:productId',
         templateUrl: 'emailpro/emailpro.html',
         controller: 'EmailProCtrl',
-        reloadOnSearch: false,
         resolve: {
           navigationInformations: ['Navigator', '$rootScope', (Navigator, $rootScope) => {
             _.set($rootScope, 'currentSectionInformation', 'email_pro');
@@ -16,17 +15,20 @@ angular
             });
           }],
         },
+        onExit: (emailproService) => {
+          emailproService.resetCache();
+        },
         translations: ['.'],
       })
       .state('app.email-pro.tab', {
         url: '?tab',
+        reloadOnSearch: false,
         templateUrl: $stateParams => `emailpro/${_.kebabCase($stateParams.tab)}/emailpro-${_.kebabCase($stateParams.tab)}.html`,
       })
       .state('app.email.mxplan', {
         url: '/configuration/email_mxplan/:productId',
         templateUrl: 'emailpro/emailpro.html',
         controller: 'EmailProCtrl',
-        reloadOnSearch: false,
         resolve: {
           navigationInformations: ['Navigator', '$rootScope', (Navigator, $rootScope) => {
             _.set($rootScope, 'currentSectionInformation', 'email_mxplan');
@@ -36,14 +38,19 @@ angular
             });
           }],
         },
+        onExit: (emailproService) => {
+          emailproService.resetCache();
+        },
         translations: ['.'],
       })
       .state('app.email.mxplan.tab', {
         url: '?tab',
+        reloadOnSearch: false,
         templateUrl: $stateParams => `emailpro/${_.kebabCase($stateParams.tab)}/emailpro-${_.kebabCase($stateParams.tab)}.html`,
       })
       .state('app.email.mxplan.tabComponent', {
         url: '?tabComponent',
+        reloadOnSearch: false,
         componentProvider: $stateParams => $stateParams.tabComponent,
       });
   });

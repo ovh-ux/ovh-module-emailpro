@@ -12,6 +12,7 @@ angular
       $translate,
 
       EmailPro,
+      emailproService,
       User,
 
       EMAILPRO_CONFIG,
@@ -87,7 +88,8 @@ angular
 
         $scope.exchange = {};
 
-        return EmailPro.gettingIsServiceMXPlan()
+        return emailproService
+          .fetchingIsServiceMXPlan()
           .then((serviceIsMXPlan) => {
             $scope.exchange.isMXPlan = serviceIsMXPlan;
             $scope.exchange.billingPlan = serviceIsMXPlan ? 'emailpro-mxplan' : 'emailpro';

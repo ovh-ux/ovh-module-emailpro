@@ -2,7 +2,11 @@ angular
   .module('emailproServices')
   .service(
     'EmailProExternalContacts',
-    function EmailProExternalContacts(EmailPro, OvhHttp) {
+    function EmailProExternalContacts(
+      EmailPro,
+      emailproService,
+      OvhHttp,
+    ) {
       this.isAccountValid = function isAccountValid(account) {
         if (!account || !EmailPro.isEmailValid(account.externalEmailAddress)) {
           return false;
@@ -84,7 +88,8 @@ angular
           params.search = filter;
         }
 
-        return EmailPro.gettingIsServiceMXPlan()
+        return emailproService
+          .fetchingIsServiceMXPlan()
           .then((isMXPlan) => {
             Object.assign(params, { isMXPlan });
             return OvhHttp.get('/sws/emailpro/{exchange}/externalContacts', {

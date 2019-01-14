@@ -13,6 +13,7 @@ angular
         $translate,
 
         constants,
+        emailproService,
         OvhHttp,
       ) {
         this.$cacheFactory = $cacheFactory;
@@ -24,6 +25,7 @@ angular
         this.$translate = $translate;
 
         this.constants = constants;
+        this.emailproService = emailproService;
         this.OvhHttp = OvhHttp;
 
         this.tasksCache = $cacheFactory('UNIVERS_WEB_EMAIL_PRO_TASKS');
@@ -170,7 +172,8 @@ angular
           return this.$q.when(this.exchangeCache.get('exchange'));
         }
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}', {
               rootPath: '2api',
@@ -213,7 +216,8 @@ angular
        * Return the last 2 days task list for the selected exchange
        */
       getTasks(serviceName, pageSize, offset) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/tasks', {
               rootPath: '2api',
@@ -270,7 +274,8 @@ angular
         const configurableOnly = configurableOnlyParam || 0;
         const type = typeParam || '';
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/accounts', {
               rootPath: '2api',
@@ -305,7 +310,8 @@ angular
         const search = searchParam || undefined;
         const configurableOnly = configurableOnlyParam || 0;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/accounts/contacts', {
               rootPath: '2api',
@@ -326,7 +332,8 @@ angular
        * Data necessary for new account creation
        */
       getNewAccountOptions(serviceName) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/accounts/options', {
               rootPath: '2api',
@@ -368,7 +375,8 @@ angular
       }
 
       getOrderList(serviceName) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/accounts/orders', {
               rootPath: '2api',
@@ -475,7 +483,8 @@ angular
       }
 
       updateRenew(serviceName, accounts) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .put('/sws/emailpro/{exchange}/accounts/renew', {
               rootPath: '2api',
@@ -518,7 +527,8 @@ angular
         const offset = offsetParam || 0;
         const search = searchParam || undefined;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/accounts/{account}/rights', {
               rootPath: '2api',
@@ -539,7 +549,8 @@ angular
    * Set EmailPro accounts delegation rights
    */
       updateAccountDelegationRights(serviceName, model) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .post('/sws/emailpro/{exchange}/accounts/{account}/rights-update', {
               rootPath: '2api',
@@ -569,7 +580,8 @@ angular
         const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
         const offset = offsetParam || 0;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/accounts/{account}/alias', {
               rootPath: '2api',
@@ -591,7 +603,8 @@ angular
       getNewAliasOptions(serviceName, emailParam, type) {
         const email = emailParam || null;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/aliasOptions', {
               rootPath: '2api',
@@ -666,7 +679,8 @@ angular
         const offset = offsetParam || 0;
         const search = searchParam || undefined;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/groups', {
               rootPath: '2api',
@@ -692,7 +706,8 @@ angular
         const offset = offsetParam || 0;
         const search = searchParam || undefined;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/groups/{mailinglist}/rights', {
               rootPath: '2api',
@@ -714,7 +729,8 @@ angular
    * Set EmailPro mailing list delegation rights
    */
       updateMailingListDelegationRights(serviceName, model) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .put('/sws/emailpro/{exchange}/groups/{mailinglist}/rights-update', {
               rootPath: '2api',
@@ -795,7 +811,8 @@ angular
         const offset = offsetParam || 0;
         const search = searchParam || undefined;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/groups/{mailinglist}/accounts', {
               rootPath: '2api',
@@ -830,7 +847,8 @@ angular
         const offset = offsetParam || 0;
         const search = searchParam || undefined;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/groups/{mailinglist}/managers', {
               rootPath: '2api',
@@ -857,7 +875,8 @@ angular
         const offset = offsetParam || 0;
         const search = searchParam || undefined;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/groups/{mailinglist}/members', {
               rootPath: '2api',
@@ -938,7 +957,8 @@ angular
         const pageSize = pageSizeParam !== undefined ? pageSizeParam : 10;
         const offset = offsetParam || 0;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/group/{group}/alias', {
               rootPath: '2api',
@@ -1007,7 +1027,8 @@ angular
         const pageSize = pageSizeParam || 10;
         const offset = offsetParam || 0;
 
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/disclaimers', {
               rootPath: '2api',
@@ -1026,7 +1047,8 @@ angular
    * Return new disclaimer options
    */
       getNewDisclaimerOptions(serviceName) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(isMXPlan => this.OvhHttp
             .get('/sws/emailpro/{exchange}/disclaimers/new/options', {
               rootPath: '2api',
@@ -1228,7 +1250,8 @@ angular
    * Update EmailPro resiliation conditions
    */
       updateDeleteAtExpiration(serviceName, renewType) {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then((isMXPlan) => {
             Object.assign(renewType, { isMXPlan });
 
@@ -1349,20 +1372,9 @@ angular
       }
       /* eslint-enable class-methods-use-this */
 
-      gettingIsServiceMXPlan() {
-        return this.OvhHttp
-          .get(
-            `/email/pro/${this.$stateParams.productId}/billingMigrated`,
-            {
-              rootPath: 'apiv6',
-            },
-          )
-          .then(() => false)
-          .catch(() => true);
-      }
-
       gettingBaseAPIPath() {
-        return this.gettingIsServiceMXPlan()
+        return this.emailproService
+          .fetchingIsServiceMXPlan()
           .then(serviceIsMXPlan => `email/${serviceIsMXPlan ? 'mxplan' : 'pro'}`);
       }
     },
