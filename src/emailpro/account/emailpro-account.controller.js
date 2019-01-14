@@ -33,16 +33,10 @@ angular
       $scope.noDomainFlag = true;
 
       EmailPro.getSelected()
-        .then((exchange) => {
-          if (!$scope.is25g()) {
-            $scope.orderOutlookDisabled = exchange.offer === EmailPro.accountTypeDedicated
-            || (exchange.serverDiagnostic.version === 14
-              && exchange.offer === EmailPro.accountTypeProvider)
-            || $scope.addAccountOptionIsNotAvailable();
-          } else {
-            $scope.orderOutlookDisabled = false;
-          }
-        }, (failure) => {
+        .then(() => {
+          $scope.orderOutlookDisabled = false;
+        })
+        .catch((failure) => {
           $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), failure);
         });
 
@@ -101,9 +95,7 @@ angular
     };
 
     $scope.newAccount = function () {
-      if ($scope.is25g()) {
-        $scope.setAction('emailpro/account/order/email-pro-account-order');
-      } else if ($scope.exchange.offer === $scope.exchangeTypeDedicated) {
+      if ($scope.exchange.offer === $scope.exchangeTypeDedicated) {
         $scope.setAction('emailpro/account/add/emailpro-account-add');
       } else if ($scope.exchange.offer === $scope.exchangeTypeProvider
         && $scope.exchange.serverDiagnostic.version === EmailPro.EmailPro2010Code) {
@@ -126,20 +118,16 @@ angular
     $scope.editAccount = function (account) {
       const populateAccount = angular.copy(account);
 
-      populateAccount.is25g = $scope.is25g();
-
       if ($scope.isEditable(account)) {
         $scope.setAction('emailpro/account/update/emailpro-account-update', populateAccount);
       }
     };
 
     $scope.showAliases = function (account) {
-      if (!$scope.is25g()) {
-        $scope.selectedAccount = account;
-        $scope.showAccounts = false;
-        $scope.showAlias = true;
-        $scope.$broadcast('paginationServerSide.loadPage', 1, 'aliasTable');
-      }
+      $scope.selectedAccount = account;
+      $scope.showAccounts = false;
+      $scope.showAlias = true;
+      $scope.$broadcast('paginationServerSide.loadPage', 1, 'aliasTable');
     };
 
     $scope.displayAccounts = function () {

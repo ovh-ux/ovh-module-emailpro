@@ -166,10 +166,6 @@ angular
     $scope.submit = function () {
       $location.search('action', null);
 
-      $scope.buffer.changes.forEach((c) => {
-        _.set(c, 'is25g', $scope.is25g());
-      });
-
       EmailPro.updateRenew($stateParams.productId, $scope.buffer.changes)
         .then((data) => {
           const updateRenewMessages = {

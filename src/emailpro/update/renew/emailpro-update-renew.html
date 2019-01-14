@@ -43,7 +43,7 @@
                         <th scope="col" data-translate="emailpro_tab_ACCOUNTS_table_email"></th>
                         <th scope="col" data-translate="emailpro_update_billing_expiration_date_label"></th>
                         <th scope="col" id="monthlyStateHeader"
-                            data-ng-hide="account.partial || exchange.offer === 'PROVIDER' && !is25g()">
+                            data-ng-hide="account.partial">
                             <label class="m-0">
                                 <input class="m-0"
                                        type="checkbox"
@@ -103,7 +103,7 @@
                         <td class="text-nowrap" data-ng-bind="account.expirationDate | date:'mediumDate'"></td>
 
                         <td class="text-center"
-                            data-ng-hide="account.partial || exchange.offer === 'PROVIDER' && !is25g()">
+                            data-ng-hide="account.partial">
                             <input type="radio" title="{{ 'emailpro_update_billing_header_1M' | translate }}" aria-labelledby="monthlyStateHeader primaryEmailDisplayName{{$index}}"
                                    data-ng-change="trackSelected(account.primaryEmailAddress, account.renewPeriod);"
                                    data-ng-model="account.renewPeriod"

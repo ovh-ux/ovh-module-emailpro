@@ -155,9 +155,6 @@ angular
     };
 
     $scope.canChangePrimary = function canChangePrimary() {
-      if ($scope.selectedAccount.is25g) {
-        return $scope.selectedAccount.primaryEmailAddress.split('@')[1] === 'configureme.me';
-      }
       return $scope.newAccountOptions !== null;
     };
 

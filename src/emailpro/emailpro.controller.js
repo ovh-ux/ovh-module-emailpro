@@ -120,13 +120,6 @@ angular
                 }
               }
 
-              if ($scope.is25g()) {
-                $scope.exchange.tabs = {
-                  simple: ['ACCOUNTS'],
-                  expert: ['ACCOUNTS'],
-                };
-              }
-
               if ($scope.exchange.serverDiagnostic) {
                 loadATooltip($scope.exchange);
                 loadAaaaTooltip($scope.exchange);
@@ -169,14 +162,6 @@ angular
         $scope.$on('emailpro.dashboard.refresh', () => {
           loadEmailPro();
         });
-
-        $scope.is25g = function is25g() {
-          if ($scope.exchange) {
-            return $scope.exchange.offer === $scope.accountTypeProvider
-                        && $scope.exchange.serverDiagnostic.individual2010 === true;
-          }
-          return false;
-        };
 
         const parseLocationForEmailProData = function parseLocationForEmailProData() {
           // extract "exchange_dedicated"
@@ -355,7 +340,7 @@ angular
         $scope.displayOrderDiskSpace = function displayOrderDiskSpace() {
           return $scope.exchange
             && $scope.exchange.serverDiagnostic.version === EmailPro.EmailPro2010Code
-            && $scope.exchange.offer === $scope.accountTypeProvider && !$scope.is25g();
+            && $scope.exchange.offer === $scope.accountTypeProvider;
         };
 
         $scope.resetDisplayName = function resetDisplayName() {
