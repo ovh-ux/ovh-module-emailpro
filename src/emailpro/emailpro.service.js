@@ -1307,6 +1307,17 @@ angular
             }));
       }
 
+      updatingDisplayName(exchangeService, displayName) {
+        return this.gettingBaseAPIPath()
+          .then(baseAPIPath => this.OvhHttp
+            .put(`/${baseAPIPath}/${exchangeService}`, {
+              rootPath: 'apiv6',
+              data: {
+                displayName,
+              },
+            }));
+      }
+
       getAccount(opts) {
         return this.gettingBaseAPIPath()
           .then(baseAPIPath => this.OvhHttp
