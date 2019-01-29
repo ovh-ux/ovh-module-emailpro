@@ -486,7 +486,7 @@
    <translation id="emailpro_dashboard_domains" qtlid="276298">Domaines associés</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan">Domaine associé</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renouvellement</translation>
-   <translation id="emailpro_dashboard_guides_url" qtlid="156732">Consultez nos guides en ligne.</translation>
+   <translation id="emailpro_dashboard_guides_url">Consultez nos guides en ligne</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Une erreur s'est produite lors du chargement des informations.</translation>
    <translation id="emailpro_dashboard_message_see_more" qtlid="91645">Voir les détails</translation>
    <translation id="emailpro_dashboard_name" qtlid="136165">Référence serveur</translation>
@@ -506,6 +506,7 @@
    <translation id="emailpro_resilitation_cancel_action_partial" qtlid="191031">Une partie des changements de la période de renouvellement sont en erreur.</translation>
    <translation id="emailpro_tab_ACCOUNTS_error_message" qtlid="143915">Une erreur est survenue lors du chargement de vos comptes.</translation>
 
+   <translation id="emailpro_tab_ACCOUNTS_webmails">Webmail :</translation>
    <translation id="emailpro_tab_ACCOUNTS_menu_account_tooltip" qtlid="19075">Plus d'actions</translation>
    <translation id="emailpro_tab_ACCOUNTS_partial" qtlid="143889">Certains comptes n'ont pu être chargés correctement. Veuillez rafraîchir la page afin de résoudre le problème.</translation>
    <translation id="emailpro_tab_ACCOUNTS_partial_account" qtlid="139208">Ce compte n'a pas été chargé correctement.</translation>
@@ -642,7 +643,7 @@
    <translation id="emailpro_tab_INFORMATIONS_stats" qtlid="26671">Statistiques</translation>
    <translation id="emailpro_tab_INFORMATIONS_summary" qtlid="4082">Résumé</translation>
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">En attente d'activation</translation>
-   <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="485697">Webmail :</translation>
+   <translation id="emailpro_tab_INFORMATIONS_webmail">Webmail</translation>
 
    <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">Vous n'avez pas de tâches</translation>

@@ -10,11 +10,15 @@
                 <span data-translate="emailpro_tab_ACCOUNTS_partial"></span>
             </div>
             <div class="pull-left">
-                <strong data-translate="emailpro_tab_INFORMATIONS_webmail"></strong>
-                <a target="_blank" title="{{ 'emailpro_tab_INFORMATIONS_webmail' | translate }} ({{ 'emailpro_dashboard_new_window' | translate }})"
-                   data-ng-href="https://{{exchange.hostname}}">
-                    <span data-ng-bind="'https://' + exchange.hostname"></span>
-                    <span class="fa fa-external-link ml-2" aria-hidden="true"></span>
+                <strong data-translate="emailpro_tab_ACCOUNTS_webmails"></strong>
+                <a
+                    data-ng-href="https://{{exchange.webUrl}}"
+                    target="_blank"
+                    rel="noopener"
+                    class="oui-link_icon">
+                    <span data-ng-bind="'https://' + exchange.webUrl"></span>
+                    <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
+                    <span class="sr-only" data-translate="common_newtab"></span>
                 </a>
             </div>
             <div class="text-right mb-3">
