@@ -1,3 +1,14 @@
+## [7.1.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.1...v7.1.2) (2019-01-29)
+
+
+### Bug Fixes
+
+* can access webmails again ([#163](https://github.com/ovh-ux/ovh-module-emailpro/issues/163)) ([d71f1f7](https://github.com/ovh-ux/ovh-module-emailpro/commit/d71f1f7))
+* **i18n:** retrieve translations ([f06ad90](https://github.com/ovh-ux/ovh-module-emailpro/commit/f06ad90))
+* **i18n:** submit translations ([acb256d](https://github.com/ovh-ux/ovh-module-emailpro/commit/acb256d))
+
+
+
 ## [7.1.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.0...v7.1.1) (2019-01-11)
 
 
