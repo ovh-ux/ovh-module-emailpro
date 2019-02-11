@@ -5,7 +5,6 @@ angular.module('App').controller(
      * Constructor
      * @param $scope
      * @param $filter
-     * @param $stateParams
      * @param $translate
      * @param Alerter
      * @param EmailProMXPlanMailingLists
@@ -14,7 +13,6 @@ angular.module('App').controller(
     constructor(
       $scope,
       $filter,
-      $stateParams,
       $translate,
       Alerter,
       EmailProMXPlanMailingLists,
@@ -22,7 +20,6 @@ angular.module('App').controller(
     ) {
       this.$scope = $scope;
       this.$filter = $filter;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -58,7 +55,7 @@ angular.module('App').controller(
         (pollObject, task) => {
           if (task.account === this.mailingList.name) {
             const action = task.action.split(':')[0];
-            if (_.indexOf(['add', 'del'], action) !== -1) {
+            if (_.indexOf(['mailinglist/addSubscriber', 'mailinglist/deleteSubscriber'], action) !== -1) {
               this.runPolling().then((hasPolling) => {
                 if (!hasPolling) {
                   this.subscribers.updating = false;
@@ -155,7 +152,7 @@ angular.module('App').controller(
       this.subscribers.ids = null;
       this.subscribers.selected = [];
 
-      return this.EmailProMXPlanMailingLists.getSubscribers(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.getSubscribers(_.get(this.$scope, 'exchange.associatedDomainName'), {
         name: this.mailingList.name,
         email: this.search.subscribers ? `%${this.search.subscribers}%` : null,
         forceRefresh,
@@ -177,7 +174,7 @@ angular.module('App').controller(
 
     transformItemSubscriber(item) {
       return this.EmailProMXPlanMailingLists.getSubscriber(
-        this.$stateParams.productId,
+        this.$scope.exchange.associatedDomainName,
         this.mailingList.name,
         item,
       );
@@ -190,12 +187,12 @@ angular.module('App').controller(
     }
 
     runPolling() {
-      return this.EmailProMXPlanMailingLists.getTaskIds(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.getTaskIds(this.$scope.exchange.associatedDomainName, {
         account: this.mailingList.name,
       })
         .then((tasks) => {
           if (tasks.length > 0) {
-            this.EmailProMXPlanMailingLists.pollState(this.$stateParams.productId, {
+            this.EmailProMXPlanMailingLists.pollState(this.$scope.exchange.associatedDomainName, {
               id: _.max(tasks),
               mailingList: this.mailingList,
               successStates: ['noState'],

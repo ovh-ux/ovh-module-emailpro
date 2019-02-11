@@ -1,9 +1,6 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabAccountsCtrl">
     <div class="row" data-ng-if="!showAlias">
-        <div data-ng-class="{
-            'col-md-12': exchange.isMXPlan,
-            'col-md-9': !exchange.isMXPlan
-        }">
+        <div class="col-md-9">
             <div class="alert alert-warning mt-3" role="alert"
                  data-ng-if="accounts && accounts.list.messages.length > 0 && !loading">
                 <strong data-translate="emailpro_tab_ACCOUNTS_warning"></strong>
@@ -52,7 +49,7 @@
                                 </button>
                             </div>
                             <span class="input-group-addon"
-                                   data-ng-if="!search.value">
+                                  data-ng-if="!search.value">
                                 <span class="fa fa-search" aria-hidden="true"></span>
                             </span>
                         </div>
@@ -106,9 +103,9 @@
                                 <div class="progress m-0">
                                     <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{account.percentUse}}"
                                          data-ng-class="{
-                                                    'progress-bar-success': account.percentUse < 51,
-                                                    'progress-bar-warning': account.percentUse > 50 && account.percentUse < 81,
-                                                    'progress-bar-danger': account.percentUse > 80
+                                                'progress-bar-success': account.percentUse < 51,
+                                                'progress-bar-warning': account.percentUse > 50 && account.percentUse < 81,
+                                                'progress-bar-danger': account.percentUse > 80
                                                 }"
                                          data-ng-style="{'width': account.percentUse + '%'}">
                                         <span class="progress-bar-label"
@@ -214,6 +211,16 @@
                       data-ng-if="(exchange.serverDiagnostic.version == 14 && is25g()) || (exchange.serverDiagnostic.version == 14 && exchange.offer == exchangeTypeHosted ) || (exchange.serverDiagnostic.version == 15 && exchange.offer != exchangeTypeDedicated) "></span>
                 <span data-translate="emailpro_ACTION_add_account_button"
                       data-ng-if="!is25g() && ((exchange.serverDiagnostic.version == 14 && exchange.offer != exchangeTypeHosted) || (exchange.serverDiagnostic.version == 15 && exchange.offer == exchangeTypeDedicated))"></span>
+            </button>
+        </div>
+
+        <div class="col-md-3 mt-5 mt-lg-0"
+             data-ng-if="exchange.isMXPlan">
+            <button class="btn btn-block btn-default" type="button"
+                        data-ng-click="addNewConfigureAccount()" 
+                        data-ng-disabled="loadingNewConfiguredAccount">
+                <oui-spinner size="s" data-ng-show="loadingNewConfiguredAccount"></oui-spinner>
+                <span data-translate="emailpro_ACTION_add_account_button"></span>
             </button>
         </div>
     </div>

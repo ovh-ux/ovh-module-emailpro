@@ -23,6 +23,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
   const init = function () {
     $scope.loading = false;
     $scope.accounts = null;
+    $scope.loadingNewConfiguredAccount = false;
     $scope.displayAccounts();
 
     $scope.showAccounts = true;
@@ -67,7 +68,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     $scope.setMessage(null);
     $scope.loading = true;
 
-    EmailPro.getAccounts(count, offset, $scope.search.value, false, $scope.filterType === 'ALL' ? null : $scope.filterType)
+    EmailPro.getAccounts(count, offset, $scope.search.value, $scope.exchange.isMXPlan ? 1 : 0, $scope.filterType === 'ALL' ? null : $scope.filterType)
       .then((accounts) => {
         $scope.loading = false;
         $scope.accounts = accounts;
@@ -167,6 +168,17 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     if (account.state === 'OK') {
       $scope.showAliases(account);
     }
+  };
+
+  $scope.addNewConfigureAccount = function () {
+    $scope.loadingNewConfiguredAccount = true;
+    EmailPro.getAccounts().then((accounts) => {
+      const newConfiguredAccount = _.find(accounts.list.results, account => /.*configureme\.me$/.test(account.domain));
+      $scope.setAction('emailpro/account/update/emailpro-account-update', newConfiguredAccount);
+    }).catch(err => $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), err))
+      .finally(() => {
+        $scope.loadingNewConfiguredAccount = false;
+      });
   };
 
   init();

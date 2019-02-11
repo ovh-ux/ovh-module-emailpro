@@ -4,14 +4,12 @@ angular.module('App').controller(
     /**
      * Constructor
      * @param $scope
-     * @param $stateParams
      * @param $translate
      * @param Alerter
      * @param EmailProMXPlanMailingLists
      */
-    constructor($scope, $stateParams, $translate, Alerter, EmailProMXPlanMailingLists) {
+    constructor($scope, $translate, Alerter, EmailProMXPlanMailingLists) {
       this.$scope = $scope;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -28,7 +26,7 @@ angular.module('App').controller(
     deleteSubscribers() {
       this.loading = true;
 
-      return this.EmailProMXPlanMailingLists.deleteSubscribers(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.deleteSubscribers(_.get(this.$scope, 'exchange.associatedDomainName'), {
         mailingList: this.mailingList.name,
         users: this.subscribers,
         type: 'subscriber',
@@ -48,7 +46,7 @@ angular.module('App').controller(
             this.$scope.alerts.main,
           );
 
-          this.EmailProMXPlanMailingLists.pollState(this.$stateParams.productId, {
+          this.EmailProMXPlanMailingLists.pollState(this.$scope.exchange.associatedDomainName, {
             id: task.task,
             mailingList: this.mailingList,
             successStates: ['noState'],
