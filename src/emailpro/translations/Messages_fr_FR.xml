@@ -201,8 +201,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">Le compte de ressource va être supprimé de votre service E-mail Pro.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">Le compte de ressource va être supprimé de votre service E-mail MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur une la ressource {0}</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="518804">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur une la ressource {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">La réception n'est pas impactée. Lorsque votre compte est bloqué pour spam, celui-ci est visible depuis votre service E-mail Pro section compte e-mail. Un tag SPAM est indiqué. Vous pouvez cliquer dessus afin d'être redirigé vers l'e-mail reçu suite au blocage.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La réception n'est pas impactée. Lorsque votre compte est bloqué pour spam, celui-ci est visible depuis votre service E-mail MX Plan section compte e-mail. Un tag SPAM est indiqué. Vous pouvez cliquer dessus afin d'être redirigé vers l'e-mail reçu suite au blocage.</translation>
