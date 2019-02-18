@@ -1,3 +1,14 @@
+## [7.1.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.4...v7.1.5) (2019-02-18)
+
+
+### Bug Fixes
+
+* **i18n:** correct typo in translations ([8094b27](https://github.com/ovh-ux/ovh-module-emailpro/commit/8094b27))
+* **i18n:** retrieve translations ([98b23d9](https://github.com/ovh-ux/ovh-module-emailpro/commit/98b23d9))
+* **i18n:** submit translations ([0847a42](https://github.com/ovh-ux/ovh-module-emailpro/commit/0847a42))
+
+
+
 ## [7.1.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.3...v7.1.4) (2019-02-18)
 
 
