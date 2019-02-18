@@ -222,10 +222,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">L'account risorsa verrà eliminato dal tuo servizio Email Pro.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">L'account risorsa verrà eliminato dal tuo servizio MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Una delega permette ad altri account Email Pro di avere alcuni diritti su una risorsa {0}&#13;
-&#13;
-</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="518804">Una delega permette ad altri account MX Plan di avere alcuni diritti sulla risorsa {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">La ricezione non subirà alcun impatto. Quando il tuo account viene bloccato per Spam, il tag SPAM è visibile nella sezione "Account email" del tuo servizio Email Pro. Cliccando sul tag vieni reindirizzato al messaggio ricevuto in seguito al blocco.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La ricezione non subirà alcun impatto. Quando il tuo account viene bloccato per Spam, il tag SPAM è visibile nella sezione "Account email" del tuo servizio MX Plan. Cliccando sul tag vieni reindirizzato al messaggio ricevuto in seguito al blocco.</translation>
@@ -522,7 +520,7 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_dashboard_name" qtlid="136165">Referenza server</translation>
    <translation id="emailpro_dashboard_new_window" qtlid="222176">Nuova finestra</translation>
    <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">Scadenza SSL</translation>
-   <translation id="emailpro_dashboard_tasks">Tâches récentes</translation>
+   <translation id="emailpro_dashboard_tasks" qtlid="136217">Task recenti</translation>
 
    <translation id="emailpro_delete_action_button" qtlid="519103">Elimina questo MX Plan</translation>
 
@@ -675,7 +673,7 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">In attesa di attivazione</translation>
    <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="15473">Webmail</translation>
 
-   <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
+   <translation id="emailpro_tab_TASKS" qtlid="136217">Task recenti</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">Non hai task</translation>
    <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Operazione</translation>
    <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Stato</translation>
