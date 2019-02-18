@@ -204,8 +204,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">Konto zasobów zostanie usunięte z usługi E-mail Pro.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">Konto zasobów zostanie usunięte z Twojej usługi E-mail MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Delegacja pozwala innym kontom E-mail Pro na posiadanie pewnych uprawnień do zasobu {0}.</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="518804">Delegacja pozwala innym kontom E-mail MX Plan na posiadanie pewnych uprawnień do zasobu {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Nie dotyczy to odbierania wiadomości. Gdy Twoje konto jest zablokowane z powodu spamu, jest ono widoczne z poziomu usługi E-mail Pro w sekcji Konto e-mail. Wskazany jest tag SPAM. Możesz kliknąć na to oznaczenie, aby zobaczyć e-mail otrzymany po zablokowaniu konta.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">Odbiór e-maili nie zostaje zakłócony. Kiedy Twoje konto jest zablokowane z powodu spamu, pozostaje widoczne w sekcji konto e-mail w Twojej usłudze E-mail MX Plan. Pojawia się tag SPAM. Możesz kliknąć tag, aby zostać przekierowanym do wiadomości e-mail otrzymanej po zablokowaniu konta.</translation>
@@ -495,7 +495,7 @@
    <translation id="emailpro_dashboard_name" qtlid="136165">Informacje o serwerze</translation>
    <translation id="emailpro_dashboard_new_window" qtlid="222176">Nowe okno</translation>
    <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">Zakończenie usługi SSL</translation>
-   <translation id="emailpro_dashboard_tasks">Tâches récentes</translation>
+   <translation id="emailpro_dashboard_tasks" qtlid="136217">Ostatnie zadania</translation>
 
    <translation id="emailpro_delete_action_button" qtlid="519103">Usuń ten MX Plan.</translation>
 
@@ -648,7 +648,7 @@
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">W trakcie aktywacji</translation>
    <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="15473">Webmail</translation>
 
-   <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
+   <translation id="emailpro_tab_TASKS" qtlid="136217">Ostatnie zadania</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">Brak zadań</translation>
    <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Zadanie</translation>
    <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Status</translation>

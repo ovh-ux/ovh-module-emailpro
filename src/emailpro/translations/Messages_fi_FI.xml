@@ -201,8 +201,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">Resurssitili poistetaan E-mail Pro -palvelustasi.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">Le compte de ressource va être supprimé de votre service E-mail MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Oikeuksien jakaminen antaa toisille E-mail Pro -tileille joitain oikeuksia resurssiin {0}</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="518804">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur une la ressource {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Sähköpostiviestejä voidaan vastaanottaa normaalisti. Kun tilisi on jäädytetty roskapostin vuoksi, tämä näkyy E-mail Pro -palvelussasi osiossa sähköpostitili. Sieltä löytyy merkintä SPAM. Voit klikata sitä, niin pääset jäädyttämisen johdosta sinulle lähetettyyn viestiin.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La réception n'est pas impactée. Lorsque votre compte est bloqué pour spam, celui-ci est visible depuis votre service E-mail MX Plan section compte e-mail. Un tag SPAM est indiqué. Vous pouvez cliquer dessus afin d'être redirigé vers l'e-mail reçu suite au blocage.</translation>
@@ -495,7 +495,7 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="emailpro_dashboard_name" qtlid="136165">Palvelimen referenssi</translation>
    <translation id="emailpro_dashboard_new_window" qtlid="222176">Uusi ikkuna</translation>
    <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">SSL:n erääntyminen</translation>
-   <translation id="emailpro_dashboard_tasks">Tâches récentes</translation>
+   <translation id="emailpro_dashboard_tasks" qtlid="136217">Viimeaikaiset tehtävät</translation>
 
    <translation id="emailpro_delete_action_button" qtlid="519103">Supprimer ce MX plan</translation>
 
@@ -648,7 +648,7 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">Odottaa aktivointia</translation>
    <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="15473">Webmail</translation>
 
-   <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
+   <translation id="emailpro_tab_TASKS" qtlid="136217">Viimeaikaiset tehtävät</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">Ei tehtäviä</translation>
    <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Tehtävä</translation>
    <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Tila</translation>
