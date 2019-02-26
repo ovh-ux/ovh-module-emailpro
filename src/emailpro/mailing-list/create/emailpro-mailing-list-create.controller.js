@@ -22,7 +22,7 @@ angular.module('App').controller(
     }
 
     $onInit() {
-      this.domain = this.$stateParams.productId;
+      this.domain = _.get(this.$scope, 'exchange.associatedDomainName');
       this.mailingLists = this.$scope.currentActionData;
 
       this.constants = {

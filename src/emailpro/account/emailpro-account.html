@@ -6,55 +6,82 @@
                 <strong data-translate="emailpro_tab_ACCOUNTS_warning"></strong>
                 <span data-translate="emailpro_tab_ACCOUNTS_partial"></span>
             </div>
-            <div class="pull-left">
-                <strong data-translate="emailpro_tab_ACCOUNTS_webmails"></strong>
-                <a
-                    data-ng-href="https://{{exchange.webUrl}}"
-                    target="_blank"
-                    rel="noopener"
-                    class="oui-link_icon">
-                    <span data-ng-bind="'https://' + exchange.webUrl"></span>
-                    <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
-                    <span class="sr-only" data-translate="common_newtab"></span>
-                </a>
-            </div>
-            <div class="text-right mb-3">
-                <form class="form-inline" name="searchAccountForm">
-                    <div class="form-group"
-                         data-ng-if="exchange.serverDiagnostic.version === 14">
-                        <div class="oui-select">
-                            <span class="input-group-addon">
-                                <span class="fa fa-filter" aria-hidden="true"></span>
-                            </span>
-                            <select class="oui-select__input"
-                                    data-ng-change="setFilter()"
-                                    data-ng-model="filterType"
-                                    data-ng-options="('emailpro_tab_ACCOUNTS_type_' + type | translate) for type in accountTypes">
-                            </select>
-                            <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="searchAccount"
-                               data-ng-bind="('table_filter' | translate) + ' ' + ('emailpro_tab_ACCOUNTS_table_email' | translate)"></label>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="searchAccount" name="searchAccount" placeholder="{{ 'emailpro_tab_ACCOUNTS_table_email' | translate }}"
-                                   data-ng-disabled="loading"
-                                   data-ng-model="search.value"
-                                   data-ng-model-options="{debounce: 1000}">
-                            <div class="input-group-btn" data-ng-if="search.value">
-                                <button class="btn btn-default" type="button" aria-label="{{ 'common_cancel' | translate }}"
-                                        data-ng-click="search.value = null">
-                                    <span class="fa fa-times" aria-hidden="true"></span>
-                                </button>
+            <div class="row">
+                <div class="col-md-9">
+                    <dl>
+                        <dt data-translate="emailpro_tab_ACCOUNTS_webmails"></dt>
+                        <dd>
+                            <a
+                                data-ng-href="https://{{exchange.webUrl}}"
+                                target="_blank"
+                                rel="noopener"
+                                class="oui-link_icon">
+                                <span data-ng-bind="'https://' + exchange.webUrl"></span>
+                                <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
+                                <span class="sr-only" data-translate="common_newtab"></span>
+                            </a>
+                        </dd>
+
+                        <dt data-translate="emailpro_tab_ACCOUNTS_table_email"></dt>
+                        <dd>{{accountsConfigured.length}} / {{exchange.accountsNumber}}</dd>
+                    </dl>
+                    <!--
+                    <p>
+                        <strong data-translate="emailpro_tab_ACCOUNTS_webmails"></strong>
+                        <a
+                            data-ng-href="https://{{exchange.webUrl}}"
+                            target="_blank"
+                            rel="noopener"
+                            class="oui-link_icon">
+                            <span data-ng-bind="'https://' + exchange.webUrl"></span>
+                            <span class="oui-icon oui-icon-external_link" aria-hidden="true"></span>
+                            <span class="sr-only" data-translate="common_newtab"></span>
+                        </a>
+                    </p>
+                    <p>
+                        <strong data-translate="emailpro_tab_ACCOUNTS_table_email"></strong>
+                        {{accountsConfigured.length}} / {{exchange.accountsNumber}}
+                    </p>
+                    -->
+                </div>
+                <div class="col-md-3 mb-3">
+                    <form class="form-inline" name="searchAccountForm">
+                        <div class="form-group"
+                             data-ng-if="exchange.serverDiagnostic.version === 14">
+                            <div class="oui-select">
+                                <span class="input-group-addon">
+                                    <span class="fa fa-filter" aria-hidden="true"></span>
+                                </span>
+                                <select class="oui-select__input"
+                                        data-ng-change="setFilter()"
+                                        data-ng-model="filterType"
+                                        data-ng-options="('emailpro_tab_ACCOUNTS_type_' + type | translate) for type in accountTypes">
+                                </select>
+                                <span class="oui-icon oui-icon-chevron-down" aria-hidden="true"></span>
                             </div>
-                            <span class="input-group-addon"
-                                  data-ng-if="!search.value">
-                                <span class="fa fa-search" aria-hidden="true"></span>
-                            </span>
                         </div>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label class="sr-only" for="searchAccount"
+                                   data-ng-bind="('table_filter' | translate) + ' ' + ('emailpro_tab_ACCOUNTS_table_email' | translate)"></label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="searchAccount" name="searchAccount" placeholder="{{ 'emailpro_tab_ACCOUNTS_table_email' | translate }}"
+                                       data-ng-disabled="loading"
+                                       data-ng-model="search.value"
+                                       data-ng-model-options="{debounce: 1000}">
+                                <div class="input-group-btn" data-ng-if="search.value">
+                                    <button class="btn btn-default" type="button" aria-label="{{ 'common_cancel' | translate }}"
+                                            data-ng-click="search.value = null">
+                                        <span class="fa fa-times" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <span class="input-group-addon"
+                                      data-ng-if="!search.value">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="table-responsive">
                 <table class="table table-hover">
@@ -217,7 +244,7 @@
         <div class="col-md-3 mt-5 mt-lg-0"
              data-ng-if="exchange.isMXPlan">
             <button class="btn btn-block btn-default" type="button"
-                        data-ng-click="addNewConfigureAccount()" 
+                        data-ng-click="addNewConfigureAccount()"
                         data-ng-disabled="loadingNewConfiguredAccount">
                 <oui-spinner size="s" data-ng-show="loadingNewConfiguredAccount"></oui-spinner>
                 <span data-translate="emailpro_ACTION_add_account_button"></span>

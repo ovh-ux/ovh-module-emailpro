@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $stateParams, $translate) => {
+angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate) => {
   $scope.stateCreating = EmailPro.stateCreating;
   $scope.stateDeleting = EmailPro.stateDeleting;
   $scope.stateOk = EmailPro.stateOk;
@@ -30,27 +30,33 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     $scope.showAlias = false;
     $scope.selectedAccount = null;
     $scope.noDomainFlag = true;
+    $scope.newConfiguredAccount = [];
 
-    EmailPro.getSelected()
-      .then((exchange) => {
-        if (!$scope.is25g()) {
-          $scope.orderOutlookDisabled = exchange.offer === EmailPro.accountTypeDedicated
-            || (exchange.serverDiagnostic.version === 14
-              && exchange.offer === EmailPro.accountTypeProvider)
-            || $scope.addAccountOptionIsNotAvailable();
-        } else {
-          $scope.orderOutlookDisabled = false;
-        }
-      }, (failure) => {
-        $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), failure);
-      });
+    return $q.all({
+      exchange: EmailPro.getSelected(),
+      newAccountOptions: EmailPro.getNewAccountOptions($stateParams.productId),
+      accounts: EmailPro.getAccountIds({
+        exchangeService: $stateParams.productId,
+      }),
+    }).then(({ exchange, newAccountOptions, accounts }) => {
+      if (!$scope.is25g()) {
+        $scope.orderOutlookDisabled = exchange.offer === EmailPro.accountTypeDedicated
+          || (exchange.serverDiagnostic.version === 14
+            && exchange.offer === EmailPro.accountTypeProvider)
+          || $scope.addAccountOptionIsNotAvailable();
+      } else {
+        $scope.orderOutlookDisabled = false;
+      }
 
-    EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
-      if (data.availableDomains.length === 0) {
+      if (newAccountOptions.availableDomains.length === 0) {
         $scope.noDomainFlag = true;
       } else {
         $scope.noDomainFlag = false;
       }
+
+      $scope.accountsConfigured = _.filter(accounts, account => !/.*configureme\.me$/.test(account));
+    }).catch((err) => {
+      $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), err);
     });
   };
 

@@ -1,6 +1,7 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabInformationCtrl">
     <div class="row">
         <div class="col-md-9">
+            <div data-ovh-alert="{{alerts.main}}"></div>
             <h2 class="sr-only" data-translate="emailpro_tab_INFORMATION"></h2>
             <div class="row d-md-flex">
                 <div class="col-sm-6 mb-5">
@@ -76,8 +77,28 @@
                                     <div class="oui-tile__definition">
                                         <strong
                                             class="oui-tile__term d-block"
+                                            data-translate="emailpro_dashboard_domain_offer"></strong>
+                                        <span data-ng-bind="emailDomain.offer"></span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong
+                                            class="oui-tile__term d-block"
                                             data-translate="emailpro_dashboard_domain_forMXPlan"></strong>
                                         <span data-translate="{{:: exchange.associatedDomainName }}"></span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong
+                                            class="oui-tile__term d-block"
+                                            data-translate="emailpro_dashboard_domain_filer"></strong>
+                                        <span data-ng-bind="emailDomain.filerz"></span>
                                     </div>
                                 </li>
                             </ul>
@@ -115,6 +136,21 @@
                                                 </oui-action-menu-item>
                                             </oui-action-menu>
                                         </div>
+                                    </div>
+                                </li>
+                                <li class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong class="oui-tile__term d-block" data-translate="emailpro_dashboard_redirections"></strong>
+                                        <span data-ng-bind="redirections.length + ' / ' + quotas.redirection"></span>
+                                    </div>
+                                </li>
+
+                                <li class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong class="oui-tile__term d-block" data-translate="emailpro_dashboard_mailingLists"></strong>
+                                        <span data-ng-bind="mailingLists.length + ' / ' + quotas.mailingList"></span>
                                     </div>
                                 </li>
                                 <li class="oui-tile__item">

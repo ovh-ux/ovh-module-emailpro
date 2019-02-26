@@ -22,7 +22,8 @@ angular.module('App').controller(
     $onInit() {
       this.loading = {
         exportCSV: false,
-        redirections: false,
+        quotas: true,
+        redirections: true,
       };
       this.redirectionsDetails = [];
 
@@ -32,7 +33,7 @@ angular.module('App').controller(
 
     getQuotas() {
       this.loading.quotas = true;
-      return this.WucEmails.getQuotas(this.$scope.exchange.associatedDomainName)
+      return this.WucEmails.getQuotas(_.get(this.$scope, 'exchange.associatedDomainName'))
         .then((quotas) => {
           this.quotas = quotas;
         })
@@ -62,7 +63,7 @@ angular.module('App').controller(
       return this.$q
         .all(_.map(
           this.redirections,
-          ({ id }) => this.WucEmails.getRedirection(this.$scope.exchange.associatedDomainName, id),
+          ({ id }) => this.WucEmails.getRedirection(_.get(this.$scope, 'exchange.associatedDomainName'), id),
         ))
         .then(data => dataToExport.concat(_.map(data, d => [d.from, d.to])))
         .finally(() => {
@@ -74,7 +75,7 @@ angular.module('App').controller(
       this.loading.redirections = true;
       this.redirections = null;
 
-      return this.WucEmails.getRedirections(this.$scope.exchange.associatedDomainName)
+      return this.WucEmails.getRedirections(_.get(this.$scope, 'exchange.associatedDomainName'))
         .then((data) => {
           this.redirections = data.map(id => ({ id }));
         })
@@ -89,7 +90,7 @@ angular.module('App').controller(
     }
 
     transformItem({ id }) {
-      return this.WucEmails.getRedirection(this.$scope.exchange.associatedDomainName, id);
+      return this.WucEmails.getRedirection(_.get(this.$scope, 'exchange.associatedDomainName'), id);
     }
   },
 );

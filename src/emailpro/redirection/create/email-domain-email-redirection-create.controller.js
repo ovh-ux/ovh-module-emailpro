@@ -24,7 +24,7 @@ angular.module('App').controller(
         nameRegexPattern: /^\w+[\w.-]+\w*$/,
       };
       this.copyChoices = ['local', 'none'];
-      this.domain = this.$stateParams.productId;
+      this.domain = this.$scope.exchange.associatedDomainName;
       this.loading = false;
       this.model = {
         redirectionFrom: '',
