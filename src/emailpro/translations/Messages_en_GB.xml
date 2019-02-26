@@ -9,39 +9,39 @@
    <translation id="emailpro_displayName_required" qtlid="88293">The name cannot be empty.</translation>
 
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">An error has occurred loading your Email Pro account. </translation>
-   <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
-   <translation id="emailpro_dashboard_accounts" qtlid="374984">Email Pro accounts </translation>
+   <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">An error has occurred loading your MX Plan account.</translation>
+   <translation id="emailpro_dashboard_accounts" qtlid="374984">Professional email accounts</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Upgrade</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Do you need help configuring your Email Pro service? </translation>
-   <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Need help configuring your MX Plan email service?</translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Your Email Pro service is almost ready. You have to attach a domain to your service. If you don't have one, <a href="https://www.ovh.co.uk:51043/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to buy one.</translation>
-   <translation id="emailpro-mxplan_tab_domain_no_domain_attached" qtlid="518102">Votre service E-mail MX Plan est presque prêt. Vous devez attacher un domaine à votre service. Si vous n'en avez pas, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">cliquez ici</a> pour en acheter un.</translation>
+   <translation id="emailpro-mxplan_tab_domain_no_domain_attached" qtlid="518102">Your MX Plan email service is almost ready. You can link a domain name to your service. If you don't have a domain name, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to buy one.</translation>
 
    <translation id="emailpro_tab_ALIAS_remove_alias_intro" qtlid="375023">Are you sure you want to delete the following alias for your Email Pro service? </translation>
-   <translation id="emailpro-mxplan_tab_ALIAS_remove_alias_intro" qtlid="518115">Voulez-vous réellement supprimer l’alias suivant de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_ALIAS_remove_alias_intro" qtlid="518115">Are you sure you want to delete the following alias from your MX Plan email service?</translation>
    <translation id="emailpro_tab_ALIAS_add_no_domains" qtlid="375036">Either you have not yet added a domain or it has not yet been validated. <br/>You first have to add a domain and then wait until it is validated in order to create an alias for your Email Pro account. </translation>
    <translation id="emailpro_tab_ALIAS_add_alias_limit_tooltip" qtlid="375049">You have reached the 1000 alias limit per Email Pro account. </translation>
-   <translation id="emailpro-mxplan_tab_ALIAS_add_alias_limit_tooltip" qtlid="518128">Vous avez atteint la limite de 1000 alias par compte E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_ALIAS_add_alias_limit_tooltip" qtlid="518128">You have reached the limit of 1,000 aliases per MX Plan email account.</translation>
 
    <translation id="emailpro_resilitation_action_title" qtlid="375062">Cancellation of your Email Pro service </translation>
-   <translation id="emailpro-mxplan_resilitation_action_title" qtlid="518141">Résiliation de votre service E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_resilitation_action_title" qtlid="518141">Cancel your MX Plan email service</translation>
    <translation id="emailpro_resilitation_action_intro" qtlid="375075">Are you sure you want to delete the "{0}" Email Pro service? <br />If you do so, automatic renewal will be cancelled at the end of the expiry period, which means the solution will be blocked .<br /><br /> You can continue to use this service as normal until this date. </translation>
-   <translation id="emailpro-mxplan_resilitation_action_intro" qtlid="518154">Etes-vous sûr(e) de vouloir résilier le service E-mail MX Plan "{0}" ? <br />Cette action annulera le renouvellement automatique à la fin de la période d'expiration, entrainant le blocage du service.<br /><br /> Vous pouvez utiliser normalement le service jusqu'à cette date.</translation>
+   <translation id="emailpro-mxplan_resilitation_action_intro" qtlid="518154">Are you sure you want to close the "{0}" MX Plan email service? <br />This action will cancel automatic renewal after the expiry date, and the service will no longer be available after this point.<br /><br /> You can use your service normally until this date.</translation>
 
    <translation id="emailpro_resilitation_action_confirmation" qtlid="375088">Warning: you are about to cancel your "{0}" service as well as the attached {1} Email Pro accounts. <br />Are you sure you want to do this?</translation>
-   <translation id="emailpro-mxplan_resilitation_action_confirmation" qtlid="518167">Attention, vous êtes sur le point de résilier intégralement le service "{0}" ainsi que les {1} comptes E-mail MX Plan qui y sont associés. <br />Souhaitez-vous réellement procéder à cette opération ?</translation>
+   <translation id="emailpro-mxplan_resilitation_action_confirmation" qtlid="518167">Please note that you are about to close the "{0}" service, as well as the {1} MX Plan email accounts associated with it. <br />Are you sure you want to do this?</translation>
 
    <translation id="emailpro_resilitation_action_success" qtlid="375101">The Email Pro service will be deleted on the expiry date. </translation>
-   <translation id="emailpro-mxplan_resilitation_action_success" qtlid="518180">Le service E-mail MX Plan va être supprimé à la date d'expiration.</translation>
+   <translation id="emailpro-mxplan_resilitation_action_success" qtlid="518180">The MX Plan email service will be closed on its expiry date.</translation>
 
    <translation id="emailpro_resilitation_action_failure" qtlid="375114">An error has occurred deleting your Email Pro service. </translation>
-   <translation id="emailpro-mxplan_resilitation_action_failure" qtlid="518193">Une erreur est survenue lors de la suppression de votre service E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_resilitation_action_failure" qtlid="518193">An error has occurred closing your MX Plan email service.</translation>
 
    <translation id="emailpro_resilitation_cancel_action_success" qtlid="375127">Email Pro service will be renewed on the expiry date. </translation>
-   <translation id="emailpro-mxplan_resilitation_cancel_action_success" qtlid="518206">Le service E-mail MX Plan va être renouvelé à la date d'expiration.</translation>
+   <translation id="emailpro-mxplan_resilitation_cancel_action_success" qtlid="518206">The MX Plan email service will be renewed on its expiry date.</translation>
 
    <translation id="emailpro_resilitation_cancel_action_intro" qtlid="375140">Cancellation of the "{0}" Email Pro service is planned for the expiry date. <br /><br />Are you sure that you no longer wish to cancel? The service will then go into automatic renewal. </translation>
-   <translation id="emailpro-mxplan_resilitation_cancel_action_intro" qtlid="518219">La résiliation du service E-mail MX Plan "{0}" est programmée à la date d'expiration. <br /><br />Etes-vous sûr(e) de vouloir annuler cette résiliation ? Le service passera alors en renouvellement automatique.</translation>
+   <translation id="emailpro-mxplan_resilitation_cancel_action_intro" qtlid="518219">Your "{0}" MX Plan email service is scheduled to close on its expiry date. <br /><br />Are you sure you want to cancel this service closure? If so, your email service will be switched to automatic renewal.</translation>
 
    <translation id="emailpro_tab_domain_no_domains_1" qtlid="375153">Add a domain to create Email Pro accounts. Click </translation>
    <translation id="emailpro-mxplan_tab_domain_no_domains_1" qtlid="518232">Ajoutez un domaine afin de créer des comptes MX Plan. Cliquez</translation>
@@ -201,8 +201,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">The resource account will be deleted from your Email Pro service. </translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">Le compte de ressource va être supprimé de votre service E-mail MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="520689">A delegation allows other Pro e-mail accounts to have certain rights on the resource {0}</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="520702">A delegation allows other MX Plan e-mail accounts to have certain rights on the resource {0}</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Email reception is not affected. When your account is blocked due to spam, this is visible in the email account section or your Email Pro service. A SPAM tag is displayed. Click on it to be redirected to the email received following the block. </translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La réception n'est pas impactée. Lorsque votre compte est bloqué pour spam, celui-ci est visible depuis votre service E-mail MX Plan section compte e-mail. Un tag SPAM est indiqué. Vous pouvez cliquer dessus afin d'être redirigé vers l'e-mail reçu suite au blocage.</translation>
@@ -488,7 +488,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_dashboard_domains" qtlid="276298">Associated domains </translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Associated domain</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renewal</translation>
-   <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consultez nos guides en ligne</translation>
+   <translation id="emailpro_dashboard_guides_url" qtlid="519090">View guides online</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">An error has occurred loading the information.</translation>
    <translation id="emailpro_dashboard_message_see_more" qtlid="91645">Display details </translation>
    <translation id="emailpro_dashboard_name" qtlid="136165">Server reference</translation>
