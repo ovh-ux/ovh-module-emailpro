@@ -204,8 +204,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">Konto zasobów zostanie usunięte z usługi E-mail Pro.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">Konto zasobów zostanie usunięte z Twojej usługi E-mail MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="520689">Delegacja pozwala innym kontom E-mail Pro na posiadanie pewnych uprawnień do zasobu {0}.</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="520702">Delegacja pozwala innym kontom E-mail MX Plan na posiadanie pewnych uprawnień do zasobu {0}.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Nie dotyczy to odbierania wiadomości. Gdy Twoje konto jest zablokowane z powodu spamu, jest ono widoczne z poziomu usługi E-mail Pro w sekcji Konto e-mail. Wskazany jest tag SPAM. Możesz kliknąć na to oznaczenie, aby zobaczyć e-mail otrzymany po zablokowaniu konta.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">Odbiór e-maili nie zostaje zakłócony. Kiedy Twoje konto jest zablokowane z powodu spamu, pozostaje widoczne w sekcji konto e-mail w Twojej usłudze E-mail MX Plan. Pojawia się tag SPAM. Możesz kliknąć tag, aby zostać przekierowanym do wiadomości e-mail otrzymanej po zablokowaniu konta.</translation>
@@ -262,7 +262,7 @@
    <translation id="emailpro-mxplan_GROUPS_delegation_step1_intro" qtlid="518986">Delegacja pozwala innym kontom E-mail MX Plan na posiadanie pewnych uprawnień do grupy {0}</translation>
 
    <translation id="emailpro_GROUPS_add_group_help_intro" qtlid="375881">Grupa pozwala kilku użytkownikom E-mail Pro na otrzymywanie e-maili wysłanych na unikalny adres e-mail: adres grupy. Adres ten musi być unikalny a wysłane na ten adres wiadomości są przesyłane do wczystkich użytkowników grupy.</translation>
-   <translation id="emailpro-mxplan_GROUPS_add_group_help_intro" qtlid="518999">Grupa umożliwia wielu użytkownikom usługi E-mail MX Plan odbieranie wiadomości e-mail wysyłanych na wspólny adres grupy. Adres musi być jeden, a wiadomości, które trafią do skrzynki, zostaną przesłane do wszystkich członków grupy.</translation>
+   <translation id="emailpro-mxplan_GROUPS_add_group_help_intro" qtlid="518999">Grupa umożliwia wielu użytkownikom usługi E-mail MX Plan odbieranie wiadomości e-mail wysyłanych na jeden wspólny adres grupy. Wiadomości, które trafią do skrzynki, zostaną przesłane do wszystkich członków grupy.</translation>
 
    <translation id="emailpro_ACTION_configure_step2_intro" qtlid="375894">Podsumowanie konfiguracji dla usługi E-mail Pro {0}</translation>
    <translation id="emailpro-mxplan_ACTION_configure_step2_intro" qtlid="519012">Podsumowanie konfiguracji Twojej usługi E-mail MX Plan {0}</translation>

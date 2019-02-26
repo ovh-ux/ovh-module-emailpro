@@ -222,8 +222,12 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">L'account risorsa verrà eliminato dal tuo servizio Email Pro.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">L'account risorsa verrà eliminato dal tuo servizio MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail Pro d'avoir certains droits sur la ressource {0}</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur la ressource {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="520689">Una delega permette ad altri account Email Pro di avere alcuni diritti sulla risorsa {0}&#13;
+&#13;
+</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="520702">Una delega permette ad altri account MX Plan di avere alcuni diritti sulla risorsa {0}&#13;
+&#13;
+ </translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">La ricezione non subirà alcun impatto. Quando il tuo account viene bloccato per Spam, il tag SPAM è visibile nella sezione "Account email" del tuo servizio Email Pro. Cliccando sul tag vieni reindirizzato al messaggio ricevuto in seguito al blocco.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La ricezione non subirà alcun impatto. Quando il tuo account viene bloccato per Spam, il tag SPAM è visibile nella sezione "Account email" del tuo servizio MX Plan. Cliccando sul tag vieni reindirizzato al messaggio ricevuto in seguito al blocco.</translation>
