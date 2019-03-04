@@ -1,3 +1,12 @@
+## [7.1.7](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.6...v7.1.7) (2019-03-04)
+
+
+### Bug Fixes
+
+* **i18n:** retrieve transaltions ([fb39d1f](https://github.com/ovh-ux/ovh-module-emailpro/commit/fb39d1f))
+
+
+
 ## [7.1.6](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.5...v7.1.6) (2019-02-26)
 
 
