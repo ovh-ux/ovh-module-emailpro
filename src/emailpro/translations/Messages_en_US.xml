@@ -9,117 +9,117 @@
    <translation id="emailpro_displayName_required" qtlid="88293">The name cannot be empty.</translation>
 
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">An error has occurred loading your Email Pro account. </translation>
-   <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
-   <translation id="emailpro_dashboard_accounts" qtlid="374984">Email Pro accounts </translation>
+   <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">An error has occurred loading your MX Plan account.</translation>
+   <translation id="emailpro_dashboard_accounts" qtlid="374984">Email accounts</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Upgrade</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Do you need help configuring your Email Pro service? </translation>
-   <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Need help configuring your MX Plan email service?</translation>
    <translation id="emailpro_tab_domain_no_domain_attached" qtlid="375010">Your Email Pro service is almost ready. You have to attach a domain to your service. If you don't have one, <a href="https://www.ovh.co.uk:51043/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to buy one.</translation>
-   <translation id="emailpro-mxplan_tab_domain_no_domain_attached" qtlid="518102">Votre service E-mail MX Plan est presque prêt. Vous devez attacher un domaine à votre service. Si vous n'en avez pas, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">cliquez ici</a> pour en acheter un.</translation>
+   <translation id="emailpro-mxplan_tab_domain_no_domain_attached" qtlid="518102">Your MX Plan email service is almost ready. You can link a domain name to your service. If you don't have a domain name, <a href="https://www.ovh.com/fr/cgi-bin/newOrder/order.cgi" target="_blank">click here</a> to order one.</translation>
 
    <translation id="emailpro_tab_ALIAS_remove_alias_intro" qtlid="375023">Are you sure you want to delete the following alias for your Email Pro service? </translation>
-   <translation id="emailpro-mxplan_tab_ALIAS_remove_alias_intro" qtlid="518115">Voulez-vous réellement supprimer l’alias suivant de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_ALIAS_remove_alias_intro" qtlid="518115">Are you sure you want to delete the following alias from your MX Plan email service?</translation>
    <translation id="emailpro_tab_ALIAS_add_no_domains" qtlid="375036">Either you have not yet added a domain or it has not yet been validated. <br/>You first have to add a domain and then wait until it is validated in order to create an alias for your Email Pro account. </translation>
    <translation id="emailpro_tab_ALIAS_add_alias_limit_tooltip" qtlid="375049">You have reached the 1000 alias limit per Email Pro account. </translation>
-   <translation id="emailpro-mxplan_tab_ALIAS_add_alias_limit_tooltip" qtlid="518128">Vous avez atteint la limite de 1000 alias par compte E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_ALIAS_add_alias_limit_tooltip" qtlid="518128">You have reached the limit of 1,000 aliases per MX Plan email account.</translation>
 
    <translation id="emailpro_resilitation_action_title" qtlid="375062">Cancellation of your Email Pro service </translation>
-   <translation id="emailpro-mxplan_resilitation_action_title" qtlid="518141">Résiliation de votre service E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_resilitation_action_title" qtlid="518141">Cancel your MX Plan email service</translation>
    <translation id="emailpro_resilitation_action_intro" qtlid="375075">Are you sure you want to delete the "{0}" Email Pro service? <br />If you do so, automatic renewal will be cancelled at the end of the expiry period, which means the solution will be blocked .<br /><br /> You can continue to use this service as normal until this date. </translation>
-   <translation id="emailpro-mxplan_resilitation_action_intro" qtlid="518154">Etes-vous sûr(e) de vouloir résilier le service E-mail MX Plan "{0}" ? <br />Cette action annulera le renouvellement automatique à la fin de la période d'expiration, entrainant le blocage du service.<br /><br /> Vous pouvez utiliser normalement le service jusqu'à cette date.</translation>
+   <translation id="emailpro-mxplan_resilitation_action_intro" qtlid="518154">Are you sure you want to close the "{0}" MX Plan email service? <br />This action will cancel automatic renewal after the expiry date, and the service will no longer be available after this point.<br /><br /> You can use your service normally until this date.</translation>
 
    <translation id="emailpro_resilitation_action_confirmation" qtlid="375088">Warning: you are about to cancel your "{0}" service as well as the attached {1} Email Pro accounts. <br />Are you sure you want to do this?</translation>
-   <translation id="emailpro-mxplan_resilitation_action_confirmation" qtlid="518167">Attention, vous êtes sur le point de résilier intégralement le service "{0}" ainsi que les {1} comptes E-mail MX Plan qui y sont associés. <br />Souhaitez-vous réellement procéder à cette opération ?</translation>
+   <translation id="emailpro-mxplan_resilitation_action_confirmation" qtlid="518167">Please note that you are about to close the "{0}" service, as well as the {1} MX Plan email accounts associated with it. <br />Are you sure you want to do this?</translation>
 
    <translation id="emailpro_resilitation_action_success" qtlid="375101">The Email Pro service will be deleted on the expiry date. </translation>
-   <translation id="emailpro-mxplan_resilitation_action_success" qtlid="518180">Le service E-mail MX Plan va être supprimé à la date d'expiration.</translation>
+   <translation id="emailpro-mxplan_resilitation_action_success" qtlid="518180">The MX Plan email service will be closed on its expiry date.</translation>
 
    <translation id="emailpro_resilitation_action_failure" qtlid="375114">An error has occurred deleting your Email Pro service. </translation>
-   <translation id="emailpro-mxplan_resilitation_action_failure" qtlid="518193">Une erreur est survenue lors de la suppression de votre service E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_resilitation_action_failure" qtlid="518193">An error has occurred closing your MX Plan email service.</translation>
 
    <translation id="emailpro_resilitation_cancel_action_success" qtlid="375127">Email Pro service will be renewed on the expiry date. </translation>
-   <translation id="emailpro-mxplan_resilitation_cancel_action_success" qtlid="518206">Le service E-mail MX Plan va être renouvelé à la date d'expiration.</translation>
+   <translation id="emailpro-mxplan_resilitation_cancel_action_success" qtlid="518206">The MX Plan email service will be renewed on its expiry date.</translation>
 
    <translation id="emailpro_resilitation_cancel_action_intro" qtlid="375140">Cancellation of the "{0}" Email Pro service is planned for the expiry date. <br /><br />Are you sure that you no longer wish to cancel? The service will then go into automatic renewal. </translation>
-   <translation id="emailpro-mxplan_resilitation_cancel_action_intro" qtlid="518219">La résiliation du service E-mail MX Plan "{0}" est programmée à la date d'expiration. <br /><br />Etes-vous sûr(e) de vouloir annuler cette résiliation ? Le service passera alors en renouvellement automatique.</translation>
+   <translation id="emailpro-mxplan_resilitation_cancel_action_intro" qtlid="518219">Your "{0}" MX Plan email service is scheduled to close on its expiry date. <br /><br />Are you sure you want to cancel this service closure? If so, your email service will be switched to automatic renewal.</translation>
 
    <translation id="emailpro_tab_domain_no_domains_1" qtlid="375153">Add a domain to create Email Pro accounts. Click </translation>
-   <translation id="emailpro-mxplan_tab_domain_no_domains_1" qtlid="518232">Ajoutez un domaine afin de créer des comptes MX Plan. Cliquez</translation>
+   <translation id="emailpro-mxplan_tab_domain_no_domains_1" qtlid="518232">Add a domain to create MX Plan accounts. Click</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam" qtlid="375166">If you are using nonauthoritative mode (Email Pro + another email system) with another email system not hosted by OVH:</translation>
-   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_antispam" qtlid="518245">Si vous utilisez le mode non autoritatif (E-mail MX Plan + autre système de messagerie) avec un système de messagerie non hébergé par OVH :</translation>
+   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_antispam" qtlid="518245">If you use non-authoritative mode (MX Plan email + another email solution) with an email solution that is not hosted by OVH:</translation>
 
    <translation id="emailpro_tab_domain_diagnostic_mx_antispam" qtlid="375179">If you are using authoritative mode (only Email Pro) or nonauthoritative with an email system hosted by OVH:</translation>
-   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_antispam" qtlid="518258">Si vous utilisez le mode autoritatif (E-mail MX Plan uniquement) ou non autoritatif avec un système de messagerie hébergé (e-mail mutualisé) par OVH :</translation>
+   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_antispam" qtlid="518258">If you use authoritative mode (MX Plan email only) or non-authoritative mode with a hosted email service (hosted email) from OVH:</translation>
 
    <translation id="emailpro_tab_domain_diagnostic_mx_no_ovh" qtlid="375192">If the domain is managed by a different NIC handle to the Email Pro solution, or if your domain is not hosted at OVH, you cannot configure it automatically. Please manually create the MX record for this domain using the details below. </translation>
-   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_ovh" qtlid="518271">Si le domaine n'est pas géré par le même identifiant client que le service E-mail MX Plan ou si votre domaine n'est pas hébergé chez OVH, la configuration automatique n'est pas possible. Veuillez créer le champ MX sur ce domaine manuellement en donnant les mêmes informations que ci-dessous.</translation>
+   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_ovh" qtlid="518271">If the domain is not managed by the same NIC handle as the MX Plan email service, or if your domain is not hosted at OVH, automatic configuration is unavailable. Please add an MX record to this domain manually, using the same information as below.</translation>
 
    <translation id="emailpro_tab_domain_diagnostic_srv_no_ovh" qtlid="375205">If the domain is managed by a different NIC handle to the Email Pro solution, or if your domain is not hosted at OVH, you cannot configure it automatically. Please manually create the SRV record for this domain using the details below. </translation>
-   <translation id="emailpro-mxplan_tab_domain_diagnostic_srv_no_ovh" qtlid="518284">Si le domaine n'est pas géré par le même identifiant client que le service E-mail MX Plan ou si votre domaine n'est pas hébergé chez OVH, la configuration automatique n'est pas possible. Veuillez créer le champ SRV sur ce domaine manuellement en donnant les mêmes informations que ci-dessous.</translation>
+   <translation id="emailpro-mxplan_tab_domain_diagnostic_srv_no_ovh" qtlid="518284">If the domain is not managed by the same NIC handle as the MX Plan email service, or if your domain is not hosted at OVH, automatic configuration is unavailable. Please add an SRV record to this domain manually, using the same information as below.</translation>
 
    <translation id="emailpro_tab_domain_delete_domain" qtlid="375218">Withdraw this domain from Email Pro services </translation>
-   <translation id="emailpro-mxplan_tab_domain_delete_domain" qtlid="518297">Retirer ce domaine des services E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_tab_domain_delete_domain" qtlid="518297">Remove this domain from MX Plan email services</translation>
 
    <translation id="emailpro_tab_domain_delete_domain_accounts_warning" qtlid="375231">This domain cannot be deleted because it is still being used by one or more Email Pro accounts </translation>
-   <translation id="emailpro-mxplan_tab_domain_delete_domain_accounts_warning" qtlid="518310">Ce domaine ne peut pas être supprimé car il est encore utilisé par un ou plusieurs compte E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_tab_domain_delete_domain_accounts_warning" qtlid="518310">This domain cannot be removed as it is still being used by one or more MX Plan email accounts.</translation>
 
    <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Order Email Pro accounts </translation>
-   <translation id="emailpro-mxplan_ACTION_order_accounts_title" qtlid="518323">Commander des comptes E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_order_accounts_title" qtlid="518323">Order MX Plan email accounts</translation>
 
    <translation id="emailpro_ACTION_order_accounts_step1_intro" qtlid="375257">Please choose the type of payment and the number of Email Pro accounts to order. </translation>
-   <translation id="emailpro-mxplan_ACTION_order_accounts_step1_intro" qtlid="518336">Veuillez choisir le type de paiement puis le nombre de comptes E-mail MX Plan à commander.</translation>
+   <translation id="emailpro-mxplan_ACTION_order_accounts_step1_intro" qtlid="518336">Please select the payment type, then the number of MX Plan email accounts you would like to order.</translation>
 
    <translation id="emailpro_ACTION_order_accounts_step2_doing_message" qtlid="375270">Ordering Email Pro accounts...</translation>
-   <translation id="emailpro-mxplan_ACTION_order_accounts_step2_doing_message" qtlid="518349">Commande de comptes E-mail MX Plan en cours...</translation>
+   <translation id="emailpro-mxplan_ACTION_order_accounts_step2_doing_message" qtlid="518349">Processing MX Plan account order...</translation>
    <translation id="emailpro_ACTION_order_accounts_per_account" qtlid="375283">per account </translation>
 
    <translation id="emailpro_ACTION_add_account_title" qtlid="375296">Add an Email Pro account </translation>
-   <translation id="emailpro-mxplan_ACTION_add_account_title" qtlid="518362">Ajouter un compte E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_add_account_title" qtlid="518362">Add an MX Plan email account</translation>
 
    <translation id="emailpro_ACTION_add_account_step1_option_fail" qtlid="375309">An error has occurred loading Email Pro account options.</translation>
-   <translation id="emailpro-mxplan_ACTION_add_account_step1_option_fail" qtlid="518375">Une erreur est survenue lors du chargement des options du compte E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_ACTION_add_account_step1_option_fail" qtlid="518375">An error has occurred loading MX Plan email account options.</translation>
 
    <translation id="emailpro_ACTION_add_account_helpwizard_title" qtlid="375322">Creating Email Pro account </translation>
-   <translation id="emailpro-mxplan_ACTION_add_account_helpwizard_title" qtlid="518388">Création compte E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_add_account_helpwizard_title" qtlid="518388">Create an MX Plan email account</translation>
 
    <translation id="emailpro_ACTION_add_no_domains" qtlid="375335">You have not yet added a domain, or it has not yet been validated. <br/>First, you need to add a domain, and then wait for it to be validated in order to create an Email Pro account. </translation>
-   <translation id="emailpro-mxplan_ACTION_add_no_domains" qtlid="518401">Vous n'avez pas encore ajouté de domaine ou il n'a pas encore été validé. <br/>Vous devez d'abord ajouter un domaine et attendre qu'il soit validé pour créer un compte E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_ACTION_add_no_domains" qtlid="518401">You have not added a domain yet, or it has not been validated. <br/>Please add a domain first, and wait for it to be validated in order to create an MX Plan email account.</translation>
 
    <translation id="emailpro_ACTION_add_account_error_message" qtlid="375348">An error has occurred creating the Email Pro account </translation>
-   <translation id="emailpro-mxplan_ACTION_add_account_error_message" qtlid="518414">Une erreur est survenue lors de la création du compte E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_ACTION_add_account_error_message" qtlid="518414">An error has occurred creating the MX Plan email account.</translation>
 
    <translation id="emailpro_ACTION_update_account_step1_password_contains_name" qtlid="375361">The password must not contain all or part of the display name or Email Pro username.  </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_step1_password_contains_name" qtlid="518427">Le mot de passe ne peut pas contenir tout ou une partie du nom à afficher ou du login E-mail MX Plan.</translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_step1_password_contains_name" qtlid="518440">Le mot de passe ne peut pas contenir tout ou une partie du nom à afficher ou du login Mx Plan.</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_step1_password_contains_name" qtlid="518427">Password cannot contain all or part of the MX Plan email display name or login.</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_step1_password_contains_name" qtlid="518440">Password cannot contain all or part of the MX Plan display name or login.</translation>
 
    <translation id="emailpro_ACTION_update_account_step1_exchange_guid_label" qtlid="375374">Email Pro GUID</translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_step1_exchange_guid_label" qtlid="518453">E-mail MX Plan GUID</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_step1_exchange_guid_label" qtlid="518453">MX Plan email GUID</translation>
 
    <translation id="emailpro_ACTION_update_account_helpwizard_title" qtlid="375387">Change the Email Pro account </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_title" qtlid="518466">Modifier le compte E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_title" qtlid="518466">Modify MX Plan email account</translation>
 
    <translation id="emailpro_ACTION_update_account_helpwizard_intro" qtlid="375400">You can change the Email Pro account security policy by imposing a minimum level of complexity for passwords. <br/>To do this, click the<strong>"Manage the security policy"</strong> button on your service's dashboard. </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_intro" qtlid="518479">Vous pouvez modifier la politique de sécurité des comptes E-mail MX Plan en imposant, par exemple, un niveau de compléxité minimal pour les mots de passe. <br/>Pour ce faire, cliquez sur le bouton <strong>"Gérer la politique de sécurité"</strong> sur le tableau de bord de votre service.</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_intro" qtlid="518479">You can modify the security policy for MX Plan email accounts by setting a minimum complexity level for passwords, for example. <br/>To do this, click <strong>"Manage security policy"</strong> on your service's dashboard.</translation>
 
    <translation id="emailpro_ACTION_update_account_helpwizard_guid_title" qtlid="375374">Email Pro GUID</translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_guid_title" qtlid="518453">E-mail MX Plan GUID</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_guid_title" qtlid="518453">MX Plan email GUID</translation>
 
    <translation id="emailpro_ACTION_update_account_helpwizard_guid" qtlid="375413">The Email Pro GUID is the unique internal ID for your mailbox </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_guid" qtlid="518492">L'E-mail MX Plan GUID est l'identifiant unique interne de votre boîte aux lettres</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_helpwizard_guid" qtlid="518492">The MX Plan email GUID is a unique internal identifier for your mailbox.</translation>
 
    <translation id="emailpro_ACTION_update_account_success_message" qtlid="375426">The Email Pro configuration is going to be modified. </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_success_message" qtlid="518505">La configuration du compte E-mail MX Plan va être modifiée.</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_success_message" qtlid="518505">The configuration for your MX Plan email account will be modified.</translation>
 
    <translation id="emailpro_ACTION_update_account_error_message" qtlid="375439">We were unable to customise the Email Pro email address. There could be another configuration (email, redirection, answering machine) with the same name. </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_error_message" qtlid="518518">L'adresse e-mail E-mail MX Plan n'a pas pu être personnalisée. Il est possible qu'une configuration mutualisée (mail, redirection, répondeur) existe avec le même nom.</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_error_message" qtlid="518518">The MX Plan email address could not be customised. This may be due to a hosted configuration (email, redirection, auto-reply) existing with the same name.</translation>
 
    <translation id="emailpro_ACTION_change_password_account_success_message" qtlid="375452">The password for the Email Pro account will change.</translation>
-   <translation id="emailpro-mxplan_ACTION_change_password_account_success_message" qtlid="518531">Le mot de passe du compte E-mail MX Plan va être modifié.</translation>
+   <translation id="emailpro-mxplan_ACTION_change_password_account_success_message" qtlid="518531">The password for your MX Plan email account will be changed.</translation>
 
    <translation id="emailpro_ACTION_update_account_title" qtlid="375387">Change the Email Pro account </translation>
-   <translation id="emailpro-mxplan_ACTION_update_account_title" qtlid="518466">Modifier le compte E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_update_account_title" qtlid="518466">Modify MX Plan email account</translation>
 
-   <translation id="emailpro_ACTION_update_account_timeout" qtlid="518544">Le mot du passe du compte {{accountEmailAddress}} n'a pas été modifié. Merci de réessayer ultérieusement.</translation>
+   <translation id="emailpro_ACTION_update_account_timeout" qtlid="518544">The password for the account {{accountEmailAddress}} has not been changed. Please try again later.</translation>
 
    <translation id="emailpro_ACTION_account_error_pattern" qtlid="447872">The account contains invalid characters</translation>
    <translation id="emailpro_ACTION_account_error_required" qtlid="447885">The account is mandatory</translation>
@@ -132,16 +132,16 @@
    <translation id="emailpro_tab_account_popover_reset" qtlid="376011">Reset this account </translation>
    <translation id="emailpro_tab_account_reset_account" qtlid="376024">Reset an account </translation>
    <translation id="emailpro_tab_account_reset_title" qtlid="447911">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail Pro ?</translation>
-   <translation id="emailpro-mxplan_tab_account_reset_title" qtlid="518557">Voulez-vous réellement réinitialiser le compte suivant de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_account_reset_title" qtlid="518557">Are you sure you want to reset the following account on your MX Plan email service?</translation>
 
    <translation id="emailpro_tab_account_reset_account_label" qtlid="33862">Account</translation>
    <translation id="emailpro_tab_account_reset_account_info" qtlid="376037">Resetting an account deletes the data and associated name, but you will continue to be charged for this account. If you no longer want to be billed, click "billing mode", then click "none" for the account in question, and confirm. </translation>
-   <translation id="emailpro-mxplan_tab_account_reset_account_info" qtlid="518570">La réinitialisation d'un compte consiste à supprimer les données et le nom associé, il pourra ensuite être de nouveau configuré.</translation>
+   <translation id="emailpro-mxplan_tab_account_reset_account_info" qtlid="518570">An account reset will delete the data and the name associated with the account. It can then be reconfigured.</translation>
    <translation id="emailpro_tab_account_reset_success" qtlid="447924">The account on your Email Pro service will be reset.</translation>
-   <translation id="emailpro-mxplan_tab_account_reset_success" qtlid="518583">Le compte de votre service E-mail MX Plan va être réinitialisé.</translation>
+   <translation id="emailpro-mxplan_tab_account_reset_success" qtlid="518583">The account on your MX Plan email service will be reset.</translation>
 
    <translation id="emailpro_tab_account_reset_failure" qtlid="447937">An error has occurred resetting the account on your Email Pro service.</translation>
-   <translation id="emailpro-mxplan_tab_account_reset_failure" qtlid="518596">Une erreur est survenue lors de la réinitialisation du compte de votre service E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_account_reset_failure" qtlid="518596">An error has occurred resetting the account on your MX Plan email service.</translation>
 
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="447950">Vade Secure anti-spam is compatible with nonauthoritative mode (only if your POP/IMAP accounts are hosted at OVH). If this is the case, we would recommend that you use: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> and <strong>{3}</strong><br/><br/> If you use nonauthoritative mode with email accounts that are not hosted at OVH, you must use: <strong>{4}</strong> (see associated domains section)</translation>
    <translation id="emailpro_tab_domain_manage" qtlid="404395">: manage</translation>
@@ -149,139 +149,139 @@
    <translation id="emailpro_configuration_action_title" qtlid="136243">Configure your Exchange services </translation>
 
    <translation id="emailpro_tab_domain_mode_AUTHORITATIVE" qtlid="375491">Authoritative (Only Email Pro)</translation>
-   <translation id="emailpro-mxplan_tab_domain_mode_AUTHORITATIVE" qtlid="518609">Autoritatif (E-mail MX Plan uniquement)</translation>
+   <translation id="emailpro-mxplan_tab_domain_mode_AUTHORITATIVE" qtlid="518609">Authoritative (MX Plan email only)</translation>
 
    <translation id="emailpro_tab_domain_mode_NON_AUTHORITATIVE" qtlid="375504">Nonauthoritative mode (Email Pro + another email service)</translation>
-   <translation id="emailpro-mxplan_tab_domain_mode_NON_AUTHORITATIVE" qtlid="518622">Non-autoritatif (E-mail MX Plan + autre service de messagerie)</translation>
+   <translation id="emailpro-mxplan_tab_domain_mode_NON_AUTHORITATIVE" qtlid="518622">Non-authoritative (MX Plan email + another email service)</translation>
 
    <translation id="emailpro_tab_domain_AUTHORITATIVE_info" qtlid="375517">Authoritative mode means you cannot use another emailing system with Email Pro accounts. This mode enables antispam Vade Secure activation. </translation>
-   <translation id="emailpro-mxplan_tab_domain_AUTHORITATIVE_info" qtlid="518635">Le mode autoritatif ne permet pas l'usage d'un autre système de messagerie avec des comptes E-mail MX Plan. Ce mode permet l'activation de l'antispam Vade Secure.</translation>
+   <translation id="emailpro-mxplan_tab_domain_AUTHORITATIVE_info" qtlid="518635">In authoritative mode, you cannot use another email service with MX Plan email accounts. You can activate Vade Secure anti-spam in this mode.</translation>
 
    <translation id="emailpro_tab_domain_NON_AUTHORITATIVE_info" qtlid="375530">In nonauthoritative mode, you can use Email Pro alongside another email solution. Vade Secure anti-spam is compatible if the POP/IMAP accounts are hosted at OVH (MX Plan or web hosting). In this instance, you must enter mx1.mail.ovh.net as the target email server.</translation>
-   <translation id="emailpro-mxplan_tab_domain_NON_AUTHORITATIVE_info" qtlid="518648">Le mode non-autoritatif permet une cohabitation entre E-mail MX Plan et un autre service de messagerie. L'antispam Vade Secure est compatible si les comptes pop/imap sont hébergés chez OVH (mxplan ou offre mutualisée), il faut indiquer dans ce cas mx1.mail.ovh.net en serveur e-mail cible.</translation>
+   <translation id="emailpro-mxplan_tab_domain_NON_AUTHORITATIVE_info" qtlid="518648">In non-authoritative mode, you can use an MX Plan email service alongside another email service. The Vade Secure anti-spam solution is compatible if the POP/IMAP accounts are hosted at OVH (MX Plan or hosted email solution). If this is the case, you will need to enter mx1.mail.ovh.net as a target email server.</translation>
 
    <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Are you sure you want to change the following domain for your Email Pro service? </translation>
-   <translation id="emailpro-mxplan_tab_domain_modify_title" qtlid="518661">Etes-vous sûr de vouloir modifier le domaine suivant de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_domain_modify_title" qtlid="518661">Are you sure you want to modify the following domain on your MX Plan email service?</translation>
 
    <translation id="emailpro_tab_domain_modify_wizard_text" qtlid="375556">By default, when adding a domain to the Email Pro server, it is configured in authoritative mode. This means that when you send an email to the address of the domain managed on the server, the server will only look to see if the address is on the Email Pro server. <br /><br />On the other hand, if you switch the domain to nonauthoritative mode, when you send an email, we will first check if the address is on the Email Pro server, and if it isn't, the Email Pro server will redirect the message to the MX server that you have configured. <br /><br /> You can use the domain in nonauthoritarian mode if, for example, you want to manage one part of your email on the Email Pro service and another part on an external server. <br /><br />Please note, If you want to use the Email Pro service and the OVH email hosting service, you must enter the value <strong>mx1.ovh.net.</strong> in the "Target email server" field in the box to the left of this message. </translation>
-   <translation id="emailpro-mxplan_tab_domain_modify_wizard_text" qtlid="518674">Par défaut, lorsque vous ajoutez votre domaine sur le serveur E-mail MX Plan, il se trouve en mode autoritatif. C'est-à-dire que lorsque vous envoyez un e-mail à l'adresse du domaine géré sur le serveur, ce dernier va regarder exclusivement sur le serveur E-mail MX Plan si l'adresse est présente. <br /><br /> En revanche, si vous basculez le domaine en mode non-autoritatif, lors de l'envoi du e-mail, nous allons vérifier dans un premier temps si l'adresse e-mail est présente sur le serveur E-mail MX Plan, et si ce n'est pas le cas, ce dernier relayera votre message sur le serveur MX que vous avez défini. <br /><br />Le domaine en mode non-autoritatif peut être utilisé si vous souhaitez, par exemple, gérer une partie de vos e-mails sur E-mail MX Plan et une autre partie sur un serveur externe. <br /><br />Attention, si vous souhaitez utiliser le service E-mail MX Plan et le service e-mail mutualisé OVH, vous devez dans le champ "Serveur e-mail cible" du formulaire de gauche renseigner cette valeur : <strong>mx1.ovh.net.</strong></translation>
+   <translation id="emailpro-mxplan_tab_domain_modify_wizard_text" qtlid="518674">When you add your domain to the MX Plan email service, it will be in authoritative mode by default. This means that when you send an email to the address of the domain managed by the server, it will only check the MX Plan email server if the address is present. <br /><br /> However, if you switch the domain to non-authoritative mode, when an email is sent, we will check first of all if the email address is present on the MX Plan email server. If not, the address will relay your email to the MX server you have defined. <br /><br />The domain in non-authoritative mode can be used to manage a portion of your emails on the MX Plan email server, and manage another portion using an external server, for example. <br /><br />Important: please note that if you want to use the MX Plan email service alongside another email service hosted by OVH, you must enter the following value into "Target email server" in the form on the left-hand side: <strong>mx1.ovh.net.</strong></translation>
 
 
    <translation id="emailpro_tab_domain_remove_title" qtlid="375569">Are you sure you want to delete the following domain from your Email Pro service?</translation>
-   <translation id="emailpro-mxplan_tab_domain_remove_title" qtlid="518687">Etes-vous sûr de vouloir réellement supprimer le domaine suivant de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_domain_remove_title" qtlid="518687">Are you sure you want to remove the following domain from your MX Plan email service?</translation>
 
    <translation id="emailpro_tab_domain_remove_success" qtlid="375582">The domain will be deleted from your Email Pro service. </translation>
-   <translation id="emailpro-mxplan_tab_domain_remove_success" qtlid="518700">Le domaine va être supprimé de votre service E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_domain_remove_success" qtlid="518700">The domain will be removed from your MX Plan email service.</translation>
 
    <translation id="emailpro_tab_domain_remove_failure" qtlid="375595">An error has occurred deleting the domain from your Email Pro service. </translation>
-   <translation id="emailpro-mxplan_tab_domain_remove_failure" qtlid="518713">Une erreur est survenue lors de la suppression du domaine de votre service E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_domain_remove_failure" qtlid="518713">An error has occurred removing the domain from your MX Plan email service.</translation>
 
    <translation id="emailpro_ACTION_delegation_step1_intro" qtlid="375608">Delegation grants other Email Pro accounts some rights on the {0} account </translation>
-   <translation id="emailpro-mxplan_ACTION_delegation_step1_intro" qtlid="518726">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur le compte {0}</translation>
+   <translation id="emailpro-mxplan_ACTION_delegation_step1_intro" qtlid="518726">With a delegation, you can grant certain rights to other MX Plan email account holders, for the account {0}</translation>
 
    <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details1" qtlid="468291">You can create one signature per validated domain.</translation>
    <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details2" qtlid="468304">Please use the formatting tools in the toolbar above the text box to customise and format your signature.</translation>
    <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details3" qtlid="468317">This signature will be included automatically at the bottom of all emails sent from email addresses associated with your Email Pro domain.</translation>
-   <translation id="emailpro-mxplan_ACTION_add_disclaimer_helpwizard_details3" qtlid="518739">Cette signature sera intégrée automatiquement au bas de chaque message envoyé depuis les adresses associées à votre domaine E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_ACTION_add_disclaimer_helpwizard_details3" qtlid="518739">This signature will be included automatically at the bottom of each email sent from addresses linked to your MX Plan email domain.</translation>
 
    <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details4" qtlid="468330">You can also use variables to customise the generic signature, with details for individual employees.</translation>
    <translation id="emailpro_ACTION_add_disclaimer_helpwizard_details5" qtlid="468343">To add an image or logo, click on the "image" button (landscape icon in the toolbar), and insert the URL of the image or logo.</translation>
    <translation id="emailpro_ACTION_delete_disclaimer_question" qtlid="375634">Are you sure you want to delete the following Email Pro signature?</translation>
-   <translation id="emailpro-mxplan_ACTION_delete_disclaimer_question" qtlid="518752">Etes-vous sûr de vouloir supprimer la signature suivante de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_ACTION_delete_disclaimer_question" qtlid="518752">Are you sure you want to delete the following signature from your MX Plan email service?</translation>
 
    <translation id="emailpro_tab_RESOURCES_add_resource_step2_title" qtlid="375647">Are you sure you want to add the resource account below to the Email Pro server?</translation>
-   <translation id="emailpro-mxplan_tab_RESOURCES_add_resource_step2_title" qtlid="518765">Etes-vous sûr de vouloir ajouter le compte de ressource ci-dessous au serveur E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_RESOURCES_add_resource_step2_title" qtlid="518765">Are you sure you want to add the resource account below to your MX Plan email service?</translation>
 
    <translation id="emailpro_tab_RESOURCES_no_domain_warning" qtlid="375335">You have not yet added a domain, or it has not yet been validated. <br/>First, you need to add a domain, and then wait for it to be validated in order to create an Email Pro account. </translation>
-   <translation id="emailpro-mxplan_tab_RESOURCES_no_domain_warning" qtlid="518401">Vous n'avez pas encore ajouté de domaine ou il n'a pas encore été validé. <br/>Vous devez d'abord ajouter un domaine et attendre qu'il soit validé pour créer un compte E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_RESOURCES_no_domain_warning" qtlid="518401">You have not added a domain yet, or it has not been validated. <br/>Please add a domain first, and wait for it to be validated in order to create an MX Plan email account.</translation>
 
    <translation id="emailpro_tab_RESOURCES_remove_resource_title" qtlid="375660">Do you want to delete the following resource account from your Email Pro service?</translation>
-   <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_title" qtlid="518778">Voulez-vous supprimer le compte de ressource suivant de votre service E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_title" qtlid="518778">Do you want to remove the following resource account from your MX Plan email service?</translation>
 
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">The resource account will be deleted from your Email Pro service. </translation>
-   <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">Le compte de ressource va être supprimé de votre service E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">The resource account will be removed from your MX Plan email service.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">A delegation allows other Email Pro accounts to have certain rights to a {0} resource</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="518804">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur une la ressource {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="520689">A delegation allows other Pro e-mail accounts to have certain rights on the resource {0}</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="520702">A delegation allows other MX Plan e-mail accounts to have certain rights on the resource {0}</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">Email reception is not affected. When your account is blocked due to spam, this is visible in the email account section or your Email Pro service. A SPAM tag is displayed. Click on it to be redirected to the email received following the block. </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La réception n'est pas impactée. Lorsque votre compte est bloqué pour spam, celui-ci est visible depuis votre service E-mail MX Plan section compte e-mail. Un tag SPAM est indiqué. Vous pouvez cliquer dessus afin d'être redirigé vers l'e-mail reçu suite au blocage.</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">Your ability to receive emails will not be affected. When your account is blocked for spam, you will be able to see this via your MX Plan email service, in the email account section. A SPAM tag will be present. You can click on the tag to be redirected to the email received following the account block.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSuspended_help" qtlid="375712">In this instance your subscription is no longer active, email delivery and reception is disabled. Please contact our Email Pro support team on <strong>0333 370 0425</strong> to re-enable the service. </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSuspended_help" qtlid="518830">Dans ce cas votre abonnement n'est plus actif, la réception et l'envoi sont désactivés. Il est nécessaire de contacter notre support E-mail MX Plan au <strong>1007</strong> afin de réactiver votre service.</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSuspended_help" qtlid="518830">If your subscription is no longer active, sending and receiving emails will be disabled. You will need to contact our MX Plan email support team on <strong>0333 370 0425</strong> to reactivate your service.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isLocked_help1" qtlid="375725">You can set up a security policy from your Email Pro service. Your account may be blocked for a certain time period while this policy is being configured. </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isLocked_help1" qtlid="518843">Depuis votre service E-mail MX Plan, il est possible de définir une politique de sécurité. Cela peut entrainer un blocage du compte pendant un délai déterminé lors de la configuration de cette politique.</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isLocked_help1" qtlid="518843">You can define a security policy via your MX Plan email service. Once you configure this policy, it may result in your account being locked for a set time period.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isLocked_help3" qtlid="375738">If your account is blocked during this process, you can either wait until the specified time has elapsed so that the account is unblocked or contact our Email Pro support by creating a support request.</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isLocked_help3" qtlid="518856">Si vous rencontrez un blocage à ce niveau, vous pouvez soit patienter que le délai indiqué soit écoulé afin que le compte se débloque ou contacter notre support E-mail MX Plan en créant une demande d’assistance.</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isLocked_help3" qtlid="518856">If your account is locked as a result of this, you can either wait until the specified time period has passed for the account to be unlocked, or you can get in touch with our MX Plan email support team by opening a support ticket.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_connectiveOWA_help2" qtlid="375751">You can also update your password from the Email Pro solution > email account tab > restart your diagnostic. If the problem continues, please open a support ticket. </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_connectiveOWA_help2" qtlid="518869">Vous pouvez aussi mettre à jour le mot de passe depuis votre service E-mail MX Plan, onglet compte e-mail puis relancer votre diagnostic et si le souci persiste vous pouvez créer une demande d’assistance.</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_connectiveOWA_help2" qtlid="518869">You can also update the password from your MX Plan email service in the email account tab, then relaunch your diagnostic. If the issue persists, you can open a support ticket.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help2" qtlid="375764">Here are the correct MX servers for the Email Pro service:</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help2" qtlid="518882">Voici les serveurs MX valides pour l'offre E-mail MX Plan :</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help2" qtlid="518882">The valid MX servers for the MX Plan email solution are as follows.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li1" qtlid="375777">Email Pro: mx1.mail.ovh.net</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help_li1" qtlid="518895">E-mail MX Plan seul : mx1.mail.ovh.net</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help_li1" qtlid="518895">MX Plan email solution only: mx1.mail.ovh.net</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li2" qtlid="375790">Email Pro + POP/IMAP email hosted at OVH: mx1.mail.ovh.net</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help_li2" qtlid="518908">E-mail MX Plan + E-mail pop/imap hébergé par OVH : mx1.mail.ovh.net</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help_li2" qtlid="518908">MX Plan email solution + POP/IMAP email solution hosted by OVH: mx1.mail.ovh.net</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isMxValid_help_li3" qtlid="375803">Email Pro + POP/IMAP email not hosted at OVH: ex.mail.ovh.net ou ex2.mail.ovh.net</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help_li3" qtlid="518921">E-mail MX Plan + E-mail pop/imap non hébergé par OVH : ex.mail.ovh.net ou ex2.mail.ovh.net</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isMxValid_help_li3" qtlid="518921">MX Plan email solution + POP/IMAP email solution not hosted by OVH: ex.mail.ovh.net or ex2.mail.ovh.net</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help2" qtlid="375764">Here are the correct MX servers for the Email Pro service:</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help2" qtlid="518882">Voici les serveurs MX valides pour l'offre E-mail MX Plan :</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help2" qtlid="518882">The valid MX servers for the MX Plan email solution are as follows.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li1" qtlid="375777">Email Pro: mx1.mail.ovh.net</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help_li1" qtlid="518895">E-mail MX Plan seul : mx1.mail.ovh.net</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help_li1" qtlid="518895">MX Plan email solution only: mx1.mail.ovh.net</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li2" qtlid="375790">Email Pro + POP/IMAP email hosted at OVH: mx1.mail.ovh.net</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help_li2" qtlid="518908">E-mail MX Plan + E-mail pop/imap hébergé par OVH : mx1.mail.ovh.net</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help_li2" qtlid="518908">MX Plan email solution + POP/IMAP email solution hosted by OVH: mx1.mail.ovh.net</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_canReceiveEmail_help_li3" qtlid="375803">Email Pro + POP/IMAP email not hosted at OVH: ex.mail.ovh.net ou ex2.mail.ovh.net</translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help_li3" qtlid="518921">E-mail MX Plan + E-mail pop/imap non hébergé par OVH : ex.mail.ovh.net ou ex2.mail.ovh.net</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canReceiveEmail_help_li3" qtlid="518921">MX Plan email solution + POP/IMAP email solution not hosted by OVH: ex.mail.ovh.net or ex2.mail.ovh.net</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSrvValid_help1" qtlid="375816">An SRV record is needed in order to automatically configure your Email Pro account on a compatible email client </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSrvValid_help1" qtlid="518934">L'enregistrement SRV est nécessaire pour la configuration automatique de votre compte E-mail MX Plan sur un logiciel de messagerie compatible</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSrvValid_help1" qtlid="518934">An SRV record is required for your MX Plan email account to be automatically configured on a compatible email software program.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSrvValid_help3" qtlid="375829">Here is the SRV record required for an Email Pro service: </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSrvValid_help3" qtlid="518947">Voici le champ SRV requis pour une offre E-mail MX Plan :</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSrvValid_help3" qtlid="518947">This is the SRV record required for the MX Plan email solution:</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_canSendEmail_help_li4" qtlid="375842">Email Pro infrastructure incident </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canSendEmail_help_li4" qtlid="518960">Un incident sur l'infrastructure E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_canSendEmail_help_li4" qtlid="518960">An incident on the MX Plan email infrastructure</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_support_ticket_subject" qtlid="375855">Email Pro diagnostic </translation>
-   <translation id="emailpro-mxplan_DIAGNOSTICS_status_support_ticket_subject" qtlid="518973">Diagnostic E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_DIAGNOSTICS_status_support_ticket_subject" qtlid="518973">MX Plan email diagnostic</translation>
 
    <translation id="emailpro_GROUPS_delegation_step1_intro" qtlid="375868">Delegation grants other Email Pro accounts certain rights on the {0} group </translation>
-   <translation id="emailpro-mxplan_GROUPS_delegation_step1_intro" qtlid="518986">Une délégation permet à d'autres comptes E-mail MX Plan d'avoir certains droits sur le groupe {0}</translation>
+   <translation id="emailpro-mxplan_GROUPS_delegation_step1_intro" qtlid="518986">With a delegation, other MX Plan email account holders can be granted certain rights for the group {0}</translation>
 
    <translation id="emailpro_GROUPS_add_group_help_intro" qtlid="375881">The group enables multiple Email Pro users to receive emails sent to a single address: the group address. The address must be unique and emails sent to it will be transferred to all members of the group. </translation>
-   <translation id="emailpro-mxplan_GROUPS_add_group_help_intro" qtlid="518999">Le groupe permet à plusieurs utilisateurs E-mail MX Plan de recevoir les e-mails envoyés à&#160; une adresse unique : l’adresse du groupe. Cette adresse doit être unique et les messages qui y seront envoyés seront transférés à tous les membres du groupe.</translation>
+   <translation id="emailpro-mxplan_GROUPS_add_group_help_intro" qtlid="518999">With a group, multiple MX Plan email account holders can receive emails sent to a single email address: the group address. This address must be unique, and the emails sent to it will be received by all members of the group.</translation>
 
    <translation id="emailpro_ACTION_configure_step2_intro" qtlid="375894">Summary of your {0} Email Pro service configuration </translation>
-   <translation id="emailpro-mxplan_ACTION_configure_step2_intro" qtlid="519012">Récapitulatif de configuration pour votre service E-mail MX Plan {0}</translation>
+   <translation id="emailpro-mxplan_ACTION_configure_step2_intro" qtlid="519012">{0} MX Plan email service configuration summary</translation>
 
    <translation id="emailpro_ACTION_configure_help_title" qtlid="375907">Email Pro service configuration </translation>
-   <translation id="emailpro-mxplan_ACTION_configure_help_title" qtlid="519025">Configuration service E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_configure_help_title" qtlid="519025">MX Plan email service configuration</translation>
 
    <translation id="emailpro_action_order_space_disk_tooltip" qtlid="375920">The quota specified takes into account the backups and files needed for the Email Pro system to work. </translation>
-   <translation id="emailpro-mxplan_action_order_space_disk_tooltip" qtlid="519038">Le quota indiqué prend en compte les sauvegardes et les fichiers nécessaires au fonctionnement du système E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_action_order_space_disk_tooltip" qtlid="519038">The quota displayed also includes backups and the files required for your MX Plan email service to work.</translation>
 
    <translation id="emailpro_tab_RESOURCES_wizard_intro" qtlid="375933">The resource accounts feature lets you plan the needs of your associates. <br /> You can create as many resource accounts as you need.</translation>
    <translation id="emailpro_ACTION_order_accounts_title" qtlid="375244">Order Email Pro accounts </translation>
-   <translation id="emailpro-mxplan_ACTION_order_accounts_title" qtlid="518323">Commander des comptes E-mail MX Plan</translation>
+   <translation id="emailpro-mxplan_ACTION_order_accounts_title" qtlid="518323">Order MX Plan email accounts</translation>
 
    <translation id="emailpro_tab_domain_add_step3_confirmation" qtlid="375946">Are you sure you want to add the domain below to your Email Pro server? </translation>
-   <translation id="emailpro-mxplan_tab_domain_add_step3_confirmation" qtlid="519051">Etes-vous sûr de vouloir ajouter le domaine ci-dessous au serveur E-mail MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_domain_add_step3_confirmation" qtlid="519051">Are you sure you want to add the domain below to your MX Plan email server?</translation>
 
    <translation id="emailpro_tab_domain_add_success" qtlid="375959">The domain will be added to your Email Pro server. </translation>
-   <translation id="emailpro-mxplan_tab_domain_add_success" qtlid="519064">L'ajout du domaine à votre serveur E-mail MX Plan va être effectué.</translation>
+   <translation id="emailpro-mxplan_tab_domain_add_success" qtlid="519064">The domain will be added to your MX Plan email server.</translation>
 
    <translation id="emailpro_tab_domain_add_failure" qtlid="375972">An error has occurred adding the domain to your Email Pro server. </translation>
-   <translation id="emailpro-mxplan_tab_domain_add_failure" qtlid="519077">Une erreur est survenue lors de l'ajout du domaine à votre serveur E-mail MX Plan.</translation>
+   <translation id="emailpro-mxplan_tab_domain_add_failure" qtlid="519077">An error has occurred adding the domain to your MX Plan.</translation>
 
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam_config" qtlid="375985">pro1.mail.ovh.net</translation>
    <translation id="emailpro_ACTION_add_domain_invalid_domain" qtlid="375998">The domain entered is not valid </translation>
@@ -488,15 +488,15 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_dashboard_domains" qtlid="276298">Associated domains </translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Associated domain</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renewal</translation>
-   <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consultez nos guides en ligne</translation>
+   <translation id="emailpro_dashboard_guides_url" qtlid="519090">View guides online</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">An error occurred while loading the information.</translation>
    <translation id="emailpro_dashboard_message_see_more" qtlid="91645">See details</translation>
    <translation id="emailpro_dashboard_name" qtlid="136165">Server reference</translation>
    <translation id="emailpro_dashboard_new_window" qtlid="222176">New window</translation>
    <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">SSL expiry</translation>
-   <translation id="emailpro_dashboard_tasks">Tâches récentes</translation>
+   <translation id="emailpro_dashboard_tasks" qtlid="136217">Recent tasks</translation>
 
-   <translation id="emailpro_delete_action_button" qtlid="519103">Supprimer ce MX plan</translation>
+   <translation id="emailpro_delete_action_button" qtlid="519103">Delete this MX Plan</translation>
 
    <translation id="emailpro_resilitation_action_button" qtlid="48646">Cancel</translation>
    <translation id="emailpro_resilitation_action_button_cancel" qtlid="211567">Cancel the termination</translation>
@@ -647,7 +647,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">Waiting for activation </translation>
    <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="15473">Webmail</translation>
 
-   <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
+   <translation id="emailpro_tab_TASKS" qtlid="136217">Recent tasks</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">You don't have any tasks</translation>
    <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Task</translation>
    <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Status</translation>
@@ -822,7 +822,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_domain_add_success" qtlid="137868">The domain will be added to your exchange server.</translation>
    <translation id="emailpro_tab_domain_add_failure" qtlid="137049">An error occurred on adding the domain to your exchange server.</translation>
    <translation id="emailpro_tab_domain_modify_success" qtlid="137907">The domain will be updated.</translation>
-   <translation id="emailpro_tab_domain_modify_failure" qtlid="519116">Une erreur est survenue lors de la mise à jour du domaine</translation>
+   <translation id="emailpro_tab_domain_modify_failure" qtlid="519116">An error has occurred updating the domain.</translation>
    <translation id="emailpro_tab_domain_modify_in_progress" qtlid="137088">Moving to {0}</translation>
    <translation id="emailpro_tab_domain_inverse_NON_AUTHORITATIVE" qtlid="58807">Authoritative</translation>
    <translation id="emailpro_tab_domain_inverse_AUTHORITATIVE" qtlid="447755">Non-authoritative</translation>
@@ -831,7 +831,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_domain_modify_domain" qtlid="137101">Modify a domain</translation>
    <translation id="emailpro_tab_domain_modify_domain_tooltip" qtlid="444667">Vade Secure anti-spam is compatible with nonauthoritative mode (only if your POP/IMAP accounts are hosted by OVH). If this is the case, we recommend that you use: <strong>{0}</strong>, <strong>{1}</strong>, <strong>{2}</strong> and <strong>{3}</strong><br/><br/> If you use nonauthoritative mode with email accounts that are not hosted by OVH, you must use: <strong>{4}</strong> (see the "Associated domains" section)</translation>
    <translation id="emailpro_tab_domain_modify_title" qtlid="375543">Are you sure you want to change the following domain for your Email Pro service? </translation>
-   <translation id="emailpro-mxplan_tab_domain_modify_title" qtlid="519129">Etes-vous sûr de vouloir modifier le domaine suivant de votre service MX Plan ?</translation>
+   <translation id="emailpro-mxplan_tab_domain_modify_title" qtlid="519129">Are you sure you want to modify the following domain on your MX Plan service?</translation>
    <translation id="emailpro_tab_domain_modify_loop_warning" qtlid="210319">Warning, infinite loop!</translation>
    <translation id="emailpro_tab_domain_modify_domain_warning" qtlid="210332">Invalid domain.</translation>
    <translation id="emailpro_tab_domain_modify_length_warning" qtlid="210345">Warning, 255 characters maximum!</translation>

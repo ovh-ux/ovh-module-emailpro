@@ -201,8 +201,8 @@
    <translation id="emailpro_tab_RESOURCES_remove_resource_success" qtlid="375673">La cuenta de recursos va a eliminarse del servicio Email Pro.</translation>
    <translation id="emailpro-mxplan_tab_RESOURCES_remove_resource_success" qtlid="518791">La cuenta de recursos va a eliminarse del servicio MX Plan.</translation>
 
-   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="375686">Una delegación permite que otras cuentas Email Pro tengan determinados permisos sobre el recurso {0}</translation>
-   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="518804">Una delegación permite que otras cuentas MX Plan tengan determinados permisos sobre el recurso {0}</translation>
+   <translation id="emailpro_RESOURCES_delegation_step1_intro" qtlid="520689">Una delegación otorga a otras cuentas de Email Pro determinados permisos sobre el recurso {0}.</translation>
+   <translation id="emailpro-mxplan_RESOURCES_delegation_step1_intro" qtlid="520702">Una delegación otorga a otras cuentas de correo MX Plan determinados permisos sobre el recurso {0}.</translation>
 
    <translation id="emailpro_DIAGNOSTICS_status_isSpammer_help2" qtlid="375699">La recepción no se ve afectada. Cuando se bloquea su cuenta por spam, puede verlo en su servicio Email Pro, en la pestaña «Cuenta de correo». Aparecerá una etiqueta «SPAM». Haga clic en ella para ir al email de notificación del bloqueo.</translation>
    <translation id="emailpro-mxplan_DIAGNOSTICS_status_isSpammer_help2" qtlid="518817">La recepción no se ve afectada. Cuando se bloquea su cuenta por spam, puede verlo en su servicio MX Plan, en la pestaña «Cuenta de correo». Aparecerá una etiqueta «SPAM». Haga clic en ella para ir al email de notificación del bloqueo.</translation>
@@ -259,7 +259,7 @@
    <translation id="emailpro-mxplan_GROUPS_delegation_step1_intro" qtlid="518986">Las delegaciones otorgan a otras cuentas de MX Plan determinados permisos sobre el grupo {0}.</translation>
 
    <translation id="emailpro_GROUPS_add_group_help_intro" qtlid="375881">Los grupos permiten que varios usuarios de Email Pro reciban los mensajes enviados a una única dirección: la del grupo. Esa dirección debe ser única y los mensajes que se envíen a ella se transferirán a todos los miembros del grupo.</translation>
-   <translation id="emailpro-mxplan_GROUPS_add_group_help_intro" qtlid="518999">Los grupos permiten que varios usuarios de MX Plan reciban los mensajes enviados a una única dirección: la del grupo. Esa dirección debe ser única y los mensajes que se envíen a ella se transferirán a todos los miembros del grupo.</translation>
+   <translation id="emailpro-mxplan_GROUPS_add_group_help_intro" qtlid="518999">Los grupos permiten que varios usuarios de MX Plan reciban los mensajes de correo enviados a una única dirección: la del grupo. Esa dirección debe ser única y los mensajes que se envíen a ella se transferirán a todos los miembros del grupo.</translation>
 
    <translation id="emailpro_ACTION_configure_step2_intro" qtlid="375894">Resumen de configuración de su servicio Email Pro {0}</translation>
    <translation id="emailpro-mxplan_ACTION_configure_step2_intro" qtlid="519012">Resumen de configuración de su servicio MX Plan {0}</translation>
@@ -296,12 +296,12 @@
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Nombre mostrado</translation>
    <translation id="emailpro_ACTION_add_account_step1_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_ACTION_add_account_step1_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_ACTION_add_account_step1_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_ACTION_add_account_step1_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_ACTION_add_account_step2_confirmation_intro" qtlid="136841">Su cuenta:</translation>
    <translation id="emailpro_ACTION_add_account_step2_display_name_label" qtlid="23515">Nombre mostrado</translation>
    <translation id="emailpro_ACTION_add_account_step2_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_ACTION_add_account_step2_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_ACTION_add_account_step2_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_ACTION_add_account_step2_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_ACTION_add_disclaimer_content" qtlid="152271">Contenido</translation>
    <translation id="emailpro_ACTION_add_disclaimer_error_message" qtlid="152375">Se ha producido un error al crear la firma.</translation>
    <translation id="emailpro_ACTION_add_disclaimer_helpwizard_title" qtlid="152531">La firma</translation>
@@ -316,7 +316,7 @@
    <translation id="emailpro_ACTION_add_disclaimer_option_FirstName" qtlid="23323">Nombre</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_HomePhoneNumber" qtlid="152401">Teléfono fijo</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_Initials" qtlid="152414">Iniciales</translation>
-   <translation id="emailpro_ACTION_add_disclaimer_option_LastName" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_ACTION_add_disclaimer_option_LastName" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_Manager" qtlid="152427">Responsable</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_MobileNumber" qtlid="152440">Teléfono móvil</translation>
    <translation id="emailpro_ACTION_add_disclaimer_option_Name" qtlid="109614">No completo</translation>
@@ -428,7 +428,7 @@
    <translation id="emailpro_ACTION_update_account_step1_complex_password_tooltip" qtlid="178822">Mínimo {0} caracteres alfanuméricos o especiales.</translation>
    <translation id="emailpro_ACTION_update_account_step1_display_name_label" qtlid="23515">Nombre mostrado</translation>
    <translation id="emailpro_ACTION_update_account_step1_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_ACTION_update_account_step1_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_ACTION_update_account_step1_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_confirmation_label" qtlid="9983">Confirmar</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_contains_samaccount_name" qtlid="254869">La contraseña no puede contener «{0}», el samaccountName (un identificador interno).</translation>
    <translation id="emailpro_ACTION_update_account_step1_password_different" qtlid="139637">Contraseñas diferentes.</translation>
@@ -447,7 +447,7 @@
    <translation id="emailpro_ACTION_update_account_step2_display_name_label" qtlid="23515">Nombre mostrado</translation>
    <translation id="emailpro_ACTION_update_account_step2_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_ACTION_update_account_step2_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_ACTION_update_account_step2_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_ACTION_update_account_step2_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_ACTION_update_account_step2_password_label" qtlid="139650">Contraseña</translation>
    <translation id="emailpro_ACTION_update_disclaimer_error_message" qtlid="152635">Se ha producido un error al modificar la firma.</translation>
    <translation id="emailpro_ACTION_update_disclaimer_info" qtlid="152609">Modificar la firma asociada al dominio {0}</translation>
@@ -492,7 +492,7 @@
    <translation id="emailpro_dashboard_name" qtlid="136165">Referencia del servidor</translation>
    <translation id="emailpro_dashboard_new_window" qtlid="222176">Nueva ventana</translation>
    <translation id="emailpro_dashboard_ssl_expiration" qtlid="190797">Expiración SSL</translation>
-   <translation id="emailpro_dashboard_tasks">Tâches récentes</translation>
+   <translation id="emailpro_dashboard_tasks" qtlid="136217">Tareas recientes</translation>
 
    <translation id="emailpro_delete_action_button" qtlid="519103">Eliminar este MX Plan</translation>
 
@@ -579,7 +579,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_invalid" qtlid="171370">La dirección de correo electrónico introducida no es válida</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label" qtlid="32278">Organización</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_question" qtlid="171357">Va a crear un contacto externo.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_content" qtlid="174659">Los contactos externos deben cumplir los siguientes criterios:<br/><br/>- El nombre y los apellidos deben tener un máximo de 64 caracteres.<br/>- El nombre mostrado no debe superar los 255 caracteres.</translation>
@@ -587,7 +587,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_display_name_label" qtlid="23515">Nombre mostrado</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_question" qtlid="171435">¿Seguro que quiere añadir el siguiente contacto externo?</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_success" qtlid="171448">La solicitud de adición de un contacto externo se ha enviado y será efectiva en unos minutos.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_title" qtlid="136334">Añadir un contacto externo</translation>
@@ -602,14 +602,14 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_invalid" qtlid="171370">La dirección de correo electrónico introducida no es válida</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_question" qtlid="171487">Va a modificar un contacto externo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_wizardhelp_requirements_content" qtlid="174659">Los contactos externos deben cumplir los siguientes criterios:<br/><br/>- El nombre y los apellidos deben tener un máximo de 64 caracteres.<br/>- El nombre mostrado no debe superar los 255 caracteres.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_wizardhelp_requirements_title" qtlid="171383">Condiciones sobre los contactos externos</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_display_name_label" qtlid="23515">Nombre mostrado</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_email_label" qtlid="137244">Cuenta de correo</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_first_name_label" qtlid="23323">Nombre</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_last_name_label" qtlid="3818">Nombre</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_last_name_label" qtlid="3818">Apellidos</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_question" qtlid="171500">¿Seguro que quiere modificar el siguiente contacto externo?</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_success" qtlid="171513">La solicitud de modificación de un contacto externo se ha enviado y será efectiva en unos minutos.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_title" qtlid="171474">Modificar un contacto externo</translation>
@@ -645,7 +645,7 @@
    <translation id="emailpro_tab_INFORMATIONS_wait_activation" qtlid="297943">Pendiente de activación</translation>
    <translation id="emailpro_tab_INFORMATIONS_webmail" qtlid="15473">Webmail</translation>
 
-   <translation id="emailpro_tab_TASKS">Tâches récentes</translation>
+   <translation id="emailpro_tab_TASKS" qtlid="136217">Tareas recientes</translation>
    <translation id="emailpro_tab_TASKS_table_empty" qtlid="144058">No hay tareas</translation>
    <translation id="emailpro_tab_TASKS_table_function" qtlid="61872">Tarea</translation>
    <translation id="emailpro_tab_TASKS_table_state" qtlid="167912">Estado</translation>
