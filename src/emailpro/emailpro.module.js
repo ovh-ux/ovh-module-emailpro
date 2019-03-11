@@ -1,4 +1,3 @@
-
 angular.module('Module.emailpro', [
   'ovh-utils-angular',
   'ngRoute',

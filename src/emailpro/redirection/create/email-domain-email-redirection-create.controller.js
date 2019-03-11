@@ -36,15 +36,6 @@ angular.module('App').controller(
       this.$scope.createRedirection = () => this.createRedirection();
     }
 
-    isAccountNameValid(name) {
-      return (
-        !name
-        || (name.length >= this.constants.nameMinLength
-          && name.length <= this.constants.nameMaxLength
-          && this.constants.nameRegexPattern.test(name))
-      );
-    }
-
     redirectionToCheck(input) {
       input.$setValidity(
         'redirectionTo',
