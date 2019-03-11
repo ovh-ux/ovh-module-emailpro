@@ -1,3 +1,18 @@
+# [7.2.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.7...v7.2.0) (2019-03-11)
+
+
+### Bug Fixes
+
+* **i18n:** retrieve translations ([f108d5e](https://github.com/ovh-ux/ovh-module-emailpro/commit/f108d5e))
+* **i18n:** submit translations ([ca47860](https://github.com/ovh-ux/ovh-module-emailpro/commit/ca47860))
+
+
+### Features
+
+* add some features for new MX Plan products ([#191](https://github.com/ovh-ux/ovh-module-emailpro/issues/191)) ([e57b6b1](https://github.com/ovh-ux/ovh-module-emailpro/commit/e57b6b1))
+
+
+
 ## [7.1.7](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.1.6...v7.1.7) (2019-03-04)
 
 
