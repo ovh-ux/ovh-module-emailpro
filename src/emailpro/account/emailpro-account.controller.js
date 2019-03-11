@@ -1,4 +1,4 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $stateParams, $translate) => {
+angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate) => {
   $scope.stateCreating = EmailPro.stateCreating;
   $scope.stateDeleting = EmailPro.stateDeleting;
   $scope.stateOk = EmailPro.stateOk;
@@ -23,33 +23,40 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
   const init = function () {
     $scope.loading = false;
     $scope.accounts = null;
+    $scope.loadingNewConfiguredAccount = false;
     $scope.displayAccounts();
 
     $scope.showAccounts = true;
     $scope.showAlias = false;
     $scope.selectedAccount = null;
     $scope.noDomainFlag = true;
+    $scope.newConfiguredAccount = [];
 
-    EmailPro.getSelected()
-      .then((exchange) => {
-        if (!$scope.is25g()) {
-          $scope.orderOutlookDisabled = exchange.offer === EmailPro.accountTypeDedicated
-            || (exchange.serverDiagnostic.version === 14
-              && exchange.offer === EmailPro.accountTypeProvider)
-            || $scope.addAccountOptionIsNotAvailable();
-        } else {
-          $scope.orderOutlookDisabled = false;
-        }
-      }, (failure) => {
-        $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), failure);
-      });
+    return $q.all({
+      exchange: EmailPro.getSelected(),
+      newAccountOptions: EmailPro.getNewAccountOptions($stateParams.productId),
+      accounts: EmailPro.getAccountIds({
+        exchangeService: $stateParams.productId,
+      }),
+    }).then(({ exchange, newAccountOptions, accounts }) => {
+      if (!$scope.is25g()) {
+        $scope.orderOutlookDisabled = exchange.offer === EmailPro.accountTypeDedicated
+          || (exchange.serverDiagnostic.version === 14
+            && exchange.offer === EmailPro.accountTypeProvider)
+          || $scope.addAccountOptionIsNotAvailable();
+      } else {
+        $scope.orderOutlookDisabled = false;
+      }
 
-    EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
-      if (data.availableDomains.length === 0) {
+      if (newAccountOptions.availableDomains.length === 0) {
         $scope.noDomainFlag = true;
       } else {
         $scope.noDomainFlag = false;
       }
+
+      $scope.accountsConfigured = _.filter(accounts, account => !/.*configureme\.me$/.test(account));
+    }).catch((err) => {
+      $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), err);
     });
   };
 
@@ -67,7 +74,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     $scope.setMessage(null);
     $scope.loading = true;
 
-    EmailPro.getAccounts(count, offset, $scope.search.value, false, $scope.filterType === 'ALL' ? null : $scope.filterType)
+    EmailPro.getAccounts(count, offset, $scope.search.value, $scope.exchange.isMXPlan ? 1 : 0, $scope.filterType === 'ALL' ? null : $scope.filterType)
       .then((accounts) => {
         $scope.loading = false;
         $scope.accounts = accounts;
@@ -167,6 +174,17 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
     if (account.state === 'OK') {
       $scope.showAliases(account);
     }
+  };
+
+  $scope.addNewConfigureAccount = function () {
+    $scope.loadingNewConfiguredAccount = true;
+    EmailPro.getAccounts().then((accounts) => {
+      const newConfiguredAccount = _.find(accounts.list.results, account => /.*configureme\.me$/.test(account.domain));
+      $scope.setAction('emailpro/account/update/emailpro-account-update', newConfiguredAccount);
+    }).catch(err => $scope.setMessage($translate.instant('emailpro_tab_ACCOUNTS_error_message'), err))
+      .finally(() => {
+        $scope.loadingNewConfiguredAccount = false;
+      });
   };
 
   init();

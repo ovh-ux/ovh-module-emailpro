@@ -14,6 +14,7 @@ angular.module('App').controller(
     constructor(
       $scope,
       $filter,
+      $http,
       $stateParams,
       $translate,
       Alerter,
@@ -22,6 +23,7 @@ angular.module('App').controller(
     ) {
       this.$scope = $scope;
       this.$filter = $filter;
+      this.$http = $http;
       this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
@@ -30,14 +32,14 @@ angular.module('App').controller(
     }
 
     $onInit() {
-      this.$http.get(`/hosting/web/${this.$scope.exchange.domain}`)
+      this.$http.get(`/hosting/web/${this.$scope.exchange.associatedDomainName}`)
         .then((hosting) => {
           this.$scope.hosting = hosting;
         });
 
-      this.EmailProMXPlanMailingListsDetails = [];
+      this.mailingListsDetails = [];
       this.loading = {
-        EmailProMXPlanMailingLists: false,
+        mailingLists: false,
         pager: false,
         quotas: false,
       };
@@ -76,7 +78,7 @@ angular.module('App').controller(
 
     getQuotas() {
       this.loading.quotas = true;
-      return this.WucEmails.getQuotas(this.$stateParams.productId)
+      return this.WucEmails.getQuotas(this.$scope.exchange.associatedDomainName)
         .then((quotas) => {
           this.quotas = quotas;
         })
@@ -94,16 +96,15 @@ angular.module('App').controller(
     }
 
     refreshTableEmailProMXPlanMailingLists(forceRefresh) {
-      this.loading.EmailProMXPlanMailingLists = true;
-      this.EmailProMXPlanMailingLists = null;
-
+      this.loading.mailingLists = true;
+      this.mailingLists = null;
       return this.EmailProMXPlanMailingLists
-        .getEmailProMXPlanMailingLists(this.$stateParams.productId, {
+        .getEmailProMXPlanMailingLists(this.$scope.exchange.associatedDomainName, {
           name: `%${this.search.EmailProMXPlanMailingLists}%`,
           forceRefresh,
         })
         .then((data) => {
-          this.EmailProMXPlanMailingLists = this.$filter('orderBy')(data);
+          this.mailingLists = this.$filter('orderBy')(data);
         })
         .catch((err) => {
           _.set(err, 'type', err.type || 'ERROR');
@@ -114,21 +115,21 @@ angular.module('App').controller(
           );
         })
         .finally(() => {
-          if (_.isEmpty(this.EmailProMXPlanMailingLists)) {
-            this.loading.EmailProMXPlanMailingLists = false;
+          if (_.isEmpty(this.emailProMXPlanMailingLists)) {
+            this.loading.mailingLists = false;
           }
         });
     }
 
     transformItem(item) {
       return this.EmailProMXPlanMailingLists.getMailingList(
-        this.$stateParams.productId,
+        this.$scope.exchange.associatedDomainName,
         item,
       );
     }
 
     onTransformItemDone() {
-      this.loading.EmailProMXPlanMailingLists = false;
+      this.loading.mailingLists = false;
       this.loading.pager = false;
     }
   },

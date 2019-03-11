@@ -4,14 +4,12 @@ angular.module('App').controller(
     /**
      * Constructor
      * @param $scope
-     * @param $stateParams
      * @param $translate
      * @param Alerter
      * @param EmailProMXPlanMailingLists
      */
-    constructor($scope, $stateParams, $translate, Alerter, EmailProMXPlanMailingLists) {
+    constructor($scope, $translate, Alerter, EmailProMXPlanMailingLists) {
       this.$scope = $scope;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -26,7 +24,7 @@ angular.module('App').controller(
     deleteMailingList() {
       this.loading = true;
       return this.EmailProMXPlanMailingLists.deleteMailingList(
-        this.$stateParams.productId,
+        this.$scope.exchange.associatedDomainName,
         this.mailingList.name,
       )
         .then(() => this.Alerter.success(

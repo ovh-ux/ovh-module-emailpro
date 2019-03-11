@@ -22,8 +22,8 @@ angular.module('App').controller(
     }
 
     $onInit() {
-      this.domain = this.$stateParams.productId;
-      this.EmailProMXPlanMailingLists = this.$scope.currentActionData;
+      this.domain = _.get(this.$scope, 'exchange.associatedDomainName');
+      this.mailingLists = this.$scope.currentActionData;
 
       this.constants = {
         nameMinLength: 2,
@@ -82,8 +82,8 @@ angular.module('App').controller(
     mlNameCheck(input) {
       input.$setValidity(
         'unique',
-        this.EmailProMXPlanMailingLists.length === 0
-          || _.indexOf(this.EmailProMXPlanMailingLists, this.model.mlName) === -1,
+        this.mailingLists.length === 0
+          || _.indexOf(this.mailingLists, this.model.mlName) === -1,
       );
     }
 
@@ -134,7 +134,7 @@ angular.module('App').controller(
     //------------------------
 
     createMailingList() {
-      return this.EmailProMXPlanMailingLists.createMailingList(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.createMailingList(_.get(this.$scope, 'exchange.associatedDomainName'), {
         name: this.model.mlName,
         language: this.model.mlLanguage,
         ownerEmail: this.model.mlOwner,

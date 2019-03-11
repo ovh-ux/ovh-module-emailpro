@@ -38,7 +38,7 @@ angular.module('Module.emailpro', [
           });
         }],
       },
-      translations: ['.'],
+      translations: ['.', 'mailing-list'],
     });
   }])
   .constant('EMAILPRO_MX_CONFIG', {

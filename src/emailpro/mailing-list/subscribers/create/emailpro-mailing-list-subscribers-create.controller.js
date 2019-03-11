@@ -4,14 +4,12 @@ angular.module('App').controller(
     /**
      * Constructor
      * @param $scope
-     * @param $stateParams
      * @param $translate
      * @param Alerter
      * @param EmailProMXPlanMailingLists
      */
-    constructor($scope, $stateParams, $translate, Alerter, EmailProMXPlanMailingLists) {
+    constructor($scope, $translate, Alerter, EmailProMXPlanMailingLists) {
       this.$scope = $scope;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -35,7 +33,7 @@ angular.module('App').controller(
       this.loading = true;
       const subscribersToAdd = _.uniq(this.selection);
 
-      return this.EmailProMXPlanMailingLists.addSubscribers(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.addSubscribers(_.get(this.$scope, 'exchange.associatedDomainName'), {
         mailingList: this.mailingList.name,
         users: subscribersToAdd,
         type: 'subscriber',
@@ -55,7 +53,7 @@ angular.module('App').controller(
             this.$scope.alerts.main,
           );
 
-          this.EmailProMXPlanMailingLists.pollState(this.$stateParams.productId, {
+          this.EmailProMXPlanMailingLists.pollState(this.$scope.exchange.associatedDomainName, {
             id: task.task,
             successStates: ['noState'],
             namespace: 'EmailProMXPlanMailingLists.subscribers.poll',

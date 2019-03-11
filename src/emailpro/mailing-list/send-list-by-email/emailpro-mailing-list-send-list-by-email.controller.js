@@ -1,9 +1,8 @@
 angular.module('App').controller(
   'EmailProMXPlanMailingListsSendListByEmailCtrl',
   class EmailProMXPlanMailingListsSendListByEmailCtrl {
-    constructor($scope, $stateParams, $translate, Alerter, EmailProMXPlanMailingLists) {
+    constructor($scope, $translate, Alerter, EmailProMXPlanMailingLists) {
       this.$scope = $scope;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -25,7 +24,7 @@ angular.module('App').controller(
 
     sendListByEmail() {
       this.loading = true;
-      return this.EmailProMXPlanMailingLists.sendListByEmail(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.sendListByEmail(_.get(this.$scope, 'exchange.associatedDomainName'), {
         name: this.mailingList.name,
         email: this.email,
       })
@@ -39,7 +38,7 @@ angular.module('App').controller(
           );
 
           // no return here
-          this.EmailProMXPlanMailingLists.pollState(this.$stateParams.productId, {
+          this.EmailProMXPlanMailingLists.pollState(this.$scope.exchange.associatedDomainName, {
             id: task.id,
             successStates: ['noState'],
             namespace: 'EmailProMXPlanMailingLists.subscribers.sendListByEmail.poll',
