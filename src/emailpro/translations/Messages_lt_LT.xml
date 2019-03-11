@@ -11,6 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Įvyko klaida keičiant jūsų E-mail Pro paskyrą.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro paskyros</translation>
+   <translation id="emailpro_dashboard_redirections">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Keisti planą</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Reikia pagalbos konfigūruojant E-mail Pro paslaugą?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
@@ -485,6 +487,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operacija atšaukta. Reikia įvesti bent 5 simbolius</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Susiję domenai</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Susietas domenas </translation>
+   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
+   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Atnaujinimas</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consultez nos guides en ligne</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Klaida įkeliant duomenis.</translation>
@@ -925,4 +929,50 @@
    <translation id="exchange_tab_TASKS" qtlid="136217">Paskutinės užduotys</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Išoriniai kontaktai</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostika</translation>
+   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+
+   <translation id="emails_common_from" qtlid="69077">Nuo</translation>
+   <translation id="emails_common_to" qtlid="175972">Į</translation>
+   <translation id="email_tab_redirections_quota" qtlid="224828">Nukreipimų kvota</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Pridėti nukreipimą</translation>
+   <translation id="email_tab_button_emails_export_CSV" qtlid="231773">Eksportuoti CSV formatu</translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Keisti nukreipimą</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Ištrinti nukreipimą</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Jokio nukreipimo</translation>
+   <translation id="email_tab_modal_update_redirection_title" qtlid="269799">Keisti nukreipimą</translation>
+   <translation id="email_tab_modal_update_redirection_heading" qtlid="269812">Nukreipimas bus pakeistas</translation>
+   <translation id="email_tab_modal_update_redirection_success" qtlid="269825">Nukreipimas sėkmingai pakeistas. Keitimai įsigalios po kelių minučių.</translation>
+   <translation id="email_tab_modal_update_redirection_error" qtlid="269838">Klaida keičiant nukreipimą:</translation>
+   <translation id="email_tab_redirections_management_title" qtlid="98948">Nukreipimų valdymas</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Paskyros nukreipimų valdymas</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Pridėti nukreipimą</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Jokio nukreipimo</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Paskyros nukreipimų valdymas</translation>
+   <translation id="email_tab_modal_create_redirection_title" qtlid="219030">Sukurti nukreipimą</translation>
+   <translation id="email_tab_modal_create_redirection_heading" qtlid="219043">Sukursite nukreipimą paskyrai {0}</translation>
+   <translation id="email_tab_modal_create_redirection_type" qtlid="220304">Nukreipimo tipas:</translation>
+   <translation id="email_tab_modal_create_redirection_type_classic" qtlid="221318">Normalus nukreipimas</translation>
+   <translation id="email_tab_modal_create_redirection_type_sub_domain" qtlid="221331">Subdomeno nukreipimas</translation>
+   <translation id="email_tab_modal_redirection_create_from" qtlid="219056">Iš adreso:</translation>
+   <translation id="email_tab_modal_redirection_create_subdomain_optional" qtlid="272825">subdomenas (pasirinktinai)</translation>
+   <translation id="email_tab_modal_redirection_create_to" qtlid="219069">Į adresą:</translation>
+   <translation id="email_tab_modal_create_redirection_info" qtlid="219082">Prašome įvesti nukreipimo informaciją</translation>
+   <translation id="email_tab_modal_redirection_create_keep_copy_title" qtlid="302067">Pasirinkite kopijos režimą:</translation>
+   <translation id="email_tab_modal_redirection_create_email_error" qtlid="212036">El. pašto adresas negaliojantis</translation>
+   <translation id="email_tab_modal_redirection_create_copy_local" qtlid="302080">Išsaugoti el. laiško kopiją OVH</translation>
+   <translation id="email_tab_modal_redirection_create_copy_none" qtlid="302093">Nesaugoti el. laiško kopijos</translation>
+   <translation id="email_tab_modal_redirection_create_copy_select" qtlid="302106">Prašome pasirinkti parinktį</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Ištrinti nukreipimą</translation>
+   <translation id="email_tab_modal_create_redirection_success" qtlid="262960">Peradresavimas yra kuriamas. Operacija turi būti atlikta per kelias minutes.</translation>
+   <translation id="email_tab_modal_create_redirection_error" qtlid="219134">Klaida kuriant nukreipimą.</translation>
+   <translation id="email_tab_modal_delete_redirection_success" qtlid="262973">Peradresavimas yra šalinamas. Operacija turi būti atlikta per kelias minutes.</translation>
+   <translation id="email_tab_modal_delete_redirection_error" qtlid="213466">Trinant nukreipimą įvyko klaida.</translation>
+   <translation id="email_tab_table_redirections_error" qtlid="219160">Klaida nuskaitant nukreipimus:</translation>
+   <translation id="email_tab_modal_delete_redirection_title" qtlid="221344">Ištrinti nukreipimą</translation>
+   <translation id="email_tab_modal_delete_redirection_heading" qtlid="221357">Ištrinsite nukreipimą:</translation>
+   <translation id="email_tab_modal_delete_redirection_accounts" qtlid="221370"><strong>{0}</strong> į <strong>{1}</strong></translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Keisti nukreipimą</translation>
+   <translation id="emails_common_continue_question" qtlid="351844">Ar norite tęsti?</translation>
+   <translation id="emails_common_account_name_conditions" qtlid="222787">Dėmesio, paskyros pavadinimas turi atitikti šias taisykles: <br/>- Mažiausiai simbolių: {0}<br/>- Daugiausiai simbolių {1}<br/>- be tarpų<br/>- Be diakritinių simbolių<br/>- Galimi tik šie specialūs simboliai: ".", "-" ir "_".</translation>
+
 </translations>

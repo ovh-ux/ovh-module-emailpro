@@ -11,6 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Tapahtui virhe E-mail Pro -tilisi lataamisessa.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro -tilit</translation>
+   <translation id="emailpro_dashboard_redirections">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Päivitys</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Tarvitsetko apua E-mail Pro -palvelun konfiguroinnissa?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
@@ -488,6 +490,8 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operaatio peruutettu. Vähintään 5 merkkiä vaaditaan.</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Liitetyt verkkotunnukset</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Liitettävä verkkotunnus</translation>
+   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
+   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Uusinta</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consultez nos guides en ligne</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Tapahtui virhe ladattaessa tietoja.</translation>
@@ -929,4 +933,50 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="exchange_tab_TASKS" qtlid="136217">Viimeaikaiset tehtävät</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Ulkoiset yhteyshenkilöt</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostiikka</translation>
+   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+
+   <translation id="emails_common_from" qtlid="69077">Mistä</translation>
+   <translation id="emails_common_to" qtlid="175972">Kohti</translation>
+   <translation id="email_tab_redirections_quota" qtlid="224828">Uudelleenohjausten kiintiö</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Lisää ohjaus</translation>
+   <translation id="email_tab_button_emails_export_CSV" qtlid="231773">CSV-vienti</translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Muokkaa uudelleenohjauksia</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Poista uudelleenohjaus</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Ei uudelleenohjauksia</translation>
+   <translation id="email_tab_modal_update_redirection_title" qtlid="269799">Uudelleenohjauksen muokkaus</translation>
+   <translation id="email_tab_modal_update_redirection_heading" qtlid="269812">Muokkaat tätä uudelleenohjausta</translation>
+   <translation id="email_tab_modal_update_redirection_success" qtlid="269825">Uudelleenohjaus on muokattu. Muutos astuu voimaan muutamassa minuutissa.</translation>
+   <translation id="email_tab_modal_update_redirection_error" qtlid="269838">Uudelleenohjauksen muokkauksessa tapahtui virhe:</translation>
+   <translation id="email_tab_redirections_management_title" qtlid="98948">Hallitse ohjauksia</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Tilin uudelleenohjauksien hallinta</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Lisää ohjaus</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Ei uudelleenohjauksia</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Tilin uudelleenohjauksien hallinta</translation>
+   <translation id="email_tab_modal_create_redirection_title" qtlid="219030">Luo uudelleenohjaus</translation>
+   <translation id="email_tab_modal_create_redirection_heading" qtlid="219043">Olet luomassa uudelleenohjausta tilille {0}</translation>
+   <translation id="email_tab_modal_create_redirection_type" qtlid="220304">Uudelleenohjauksen tyyppi:</translation>
+   <translation id="email_tab_modal_create_redirection_type_classic" qtlid="221318">Normaali uudelleenohjaus</translation>
+   <translation id="email_tab_modal_create_redirection_type_sub_domain" qtlid="221331">Aliverkkotunnuksen uudelleenohjaus</translation>
+   <translation id="email_tab_modal_redirection_create_from" qtlid="219056">Osoitteesta:</translation>
+   <translation id="email_tab_modal_redirection_create_subdomain_optional" qtlid="272825">aliverkkotunnus (valinnainen)</translation>
+   <translation id="email_tab_modal_redirection_create_to" qtlid="219069">Osoitteeseen:</translation>
+   <translation id="email_tab_modal_create_redirection_info" qtlid="219082">Syötä uudelleenohjauksen tiedot</translation>
+   <translation id="email_tab_modal_redirection_create_keep_copy_title" qtlid="302067">Valitse kopioimisen tila:</translation>
+   <translation id="email_tab_modal_redirection_create_email_error" qtlid="212036">Sähköpostiosoite on virheellinen</translation>
+   <translation id="email_tab_modal_redirection_create_copy_local" qtlid="302080">Säilytä viestin kopio OVH:lla</translation>
+   <translation id="email_tab_modal_redirection_create_copy_none" qtlid="302093">Älä säilytä viestin kopiota</translation>
+   <translation id="email_tab_modal_redirection_create_copy_select" qtlid="302106">Valitse yksi vaihtoehto</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Poista uudelleenohjaus</translation>
+   <translation id="email_tab_modal_create_redirection_success" qtlid="262960">Uudelleenohjausta luodaan. Toimenpide on valmis muutamassa minuutissa.</translation>
+   <translation id="email_tab_modal_create_redirection_error" qtlid="219134">Virhe luotaessa uudelleenohjausta.</translation>
+   <translation id="email_tab_modal_delete_redirection_success" qtlid="262973">Uudelleenohjausta poistetaan. Toimenpide on valmis muutamassa minuutissa.</translation>
+   <translation id="email_tab_modal_delete_redirection_error" qtlid="213466">Virhe poistettaessa uudelleenohjausta.</translation>
+   <translation id="email_tab_table_redirections_error" qtlid="219160">Virhe uudelleenohjauksia haettaessa:</translation>
+   <translation id="email_tab_modal_delete_redirection_title" qtlid="221344">Uudelleenohjauksen poisto</translation>
+   <translation id="email_tab_modal_delete_redirection_heading" qtlid="221357">Olet poistamassa uudelleenohjausta:</translation>
+   <translation id="email_tab_modal_delete_redirection_accounts" qtlid="221370"><strong>{0}</strong> kohteeseen <strong>{1}</strong></translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Muokkaa uudelleenohjauksia</translation>
+   <translation id="emails_common_continue_question" qtlid="351844">Haluatko jatkaa?</translation>
+   <translation id="emails_common_account_name_conditions" qtlid="222787">Huomio, tilin nimen on noudatettava seuraavia ehtoja: <br/>- Vähintään {0} merkkiä<br/>- Enintään {1} merkkiä<br/>- Ei välilyöntejä<br/>- Ei ääkkösiä tai aksentteja<br/>- Ei erikoismerkkejä paitsi . , - ja _.</translation>
+
 </translations>
