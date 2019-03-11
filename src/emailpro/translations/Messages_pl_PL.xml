@@ -11,6 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Wystąpił błąd podczas pobierania konta E-mail Pro.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Wystąpił błąd podczas ładowania Twojego konta MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Konta E-mail Pro</translation>
+   <translation id="emailpro_dashboard_redirections">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Zmień ofertę</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Potrzebujesz pomocy w skonfigurowaniu usługi E-mail Pro?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Potrzebujesz pomocy w procesie konfiguracji Twojej usługi E-mail MX Plan?</translation>
@@ -488,6 +490,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operacja anulowana. Wymagane jest minimum 5 znaków</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Przypisane domeny</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Dotyczy domeny</translation>
+   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
+   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Odnowienie</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Zapoznaj się z naszymi przewodnikami online.</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Wystąpił błąd podczas ładowania informacji.</translation>
@@ -928,4 +932,50 @@
    <translation id="exchange_tab_TASKS" qtlid="136217">Ostatnie zadania</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Zewnętrzne kontakty</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostyka</translation>
+   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+
+   <translation id="emails_common_from" qtlid="69077">Od</translation>
+   <translation id="emails_common_to" qtlid="175972">Na</translation>
+   <translation id="email_tab_redirections_quota" qtlid="224828">Liczba przekierowań</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Dodaj przekierowanie</translation>
+   <translation id="email_tab_button_emails_export_CSV" qtlid="231773">Eksportuj w formacie CSV</translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Zmień przekierowanie</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Usuń przekierowanie</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Brak przekierowań</translation>
+   <translation id="email_tab_modal_update_redirection_title" qtlid="269799">Zmodyfikuj przekierowanie</translation>
+   <translation id="email_tab_modal_update_redirection_heading" qtlid="269812">Chcesz zmodyfikować to przekierowanie.</translation>
+   <translation id="email_tab_modal_update_redirection_success" qtlid="269825">Przekierowanie zostało zmodyfikowane. Operacja może zająć kilka minut.</translation>
+   <translation id="email_tab_modal_update_redirection_error" qtlid="269838">Wystąpił błąd podczas modyfikowania przekierowania:</translation>
+   <translation id="email_tab_redirections_management_title" qtlid="98948">Zarządzaj przekierowaniami</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Zarządzanie przekierowaniami konta</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Dodaj przekierowanie</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Brak przekierowań</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Zarządzanie przekierowaniami konta</translation>
+   <translation id="email_tab_modal_create_redirection_title" qtlid="219030">Utwórz przekierowanie</translation>
+   <translation id="email_tab_modal_create_redirection_heading" qtlid="219043">Chcesz utworzyć przekierowanie dla konta {0}</translation>
+   <translation id="email_tab_modal_create_redirection_type" qtlid="220304">Typ przekierowania:</translation>
+   <translation id="email_tab_modal_create_redirection_type_classic" qtlid="221318">Normalne przekierowanie</translation>
+   <translation id="email_tab_modal_create_redirection_type_sub_domain" qtlid="221331">Przekierowanie na subdomenę</translation>
+   <translation id="email_tab_modal_redirection_create_from" qtlid="219056">Z adresu:</translation>
+   <translation id="email_tab_modal_redirection_create_subdomain_optional" qtlid="272825">subdomena (opcjonalnie)</translation>
+   <translation id="email_tab_modal_redirection_create_to" qtlid="219069">Na adres:</translation>
+   <translation id="email_tab_modal_create_redirection_info" qtlid="219082">Wpisz informacje dotyczące przekierowania</translation>
+   <translation id="email_tab_modal_redirection_create_keep_copy_title" qtlid="302067">Wybierz tryb kopii:</translation>
+   <translation id="email_tab_modal_redirection_create_email_error" qtlid="212036">Adres e-mail nie jest prawidłowy.</translation>
+   <translation id="email_tab_modal_redirection_create_copy_local" qtlid="302080">Zachowaj kopię e-maila w OVH</translation>
+   <translation id="email_tab_modal_redirection_create_copy_none" qtlid="302093">Nie zachowuj kopii e-maila</translation>
+   <translation id="email_tab_modal_redirection_create_copy_select" qtlid="302106">Wybierz opcję</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Usuń przekierowanie</translation>
+   <translation id="email_tab_modal_create_redirection_success" qtlid="262960">Trwa tworzenie przekierowania. Operacja może trwać kilka minut.</translation>
+   <translation id="email_tab_modal_create_redirection_error" qtlid="219134">Wystąpił błąd podczas tworzenia przekierowania.</translation>
+   <translation id="email_tab_modal_delete_redirection_success" qtlid="262973">Trwa usuwanie przekierowania. Operacja może trwać kilka minut.</translation>
+   <translation id="email_tab_modal_delete_redirection_error" qtlid="213466">Wystąpił błąd podczas usuwania przekierowania.</translation>
+   <translation id="email_tab_table_redirections_error" qtlid="219160">Wystąpił błąd podczas pobierania informacji o przekierowaniach:</translation>
+   <translation id="email_tab_modal_delete_redirection_title" qtlid="221344">Usuń przekierowanie</translation>
+   <translation id="email_tab_modal_delete_redirection_heading" qtlid="221357">Chcesz usunąć przekierowanie:</translation>
+   <translation id="email_tab_modal_delete_redirection_accounts" qtlid="221370"><strong>{0}</strong> na <strong>{1}</strong></translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Zmień przekierowanie</translation>
+   <translation id="emails_common_continue_question" qtlid="351844">Czy chcesz kontynuować?</translation>
+   <translation id="emails_common_account_name_conditions" qtlid="222787">Uwaga, nazwa konta musi spełniać następujące wymagania: <br/>- Minimum {0} znaki<br/>- Maksimum {1} znaki<br/>- Brak spacji<br/>- Brak znaków akcentowanych<br/>- Brak znaków specjalnych za wyjątkiem ., - i _.</translation>
+
 </translations>
