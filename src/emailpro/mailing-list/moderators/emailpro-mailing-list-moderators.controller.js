@@ -5,15 +5,13 @@ angular.module('App').controller(
      * Constructor
      * @param $scope
      * @param $filter
-     * @param $stateParams
      * @param $translate
      * @param Alerter
      * @param EmailProMXPlanMailingLists
      */
-    constructor($scope, $filter, $stateParams, $translate, Alerter, EmailProMXPlanMailingLists) {
+    constructor($scope, $filter, $translate, Alerter, EmailProMXPlanMailingLists) {
       this.$scope = $scope;
       this.$filter = $filter;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -37,7 +35,7 @@ angular.module('App').controller(
         (pollObject, task) => {
           if (task.account === this.mailingList.name) {
             const action = task.action.split(':')[0];
-            if (_.indexOf(['addm', 'delm'], action) !== -1) {
+            if (_.indexOf(['mailinglist/addModerator', 'mailinglist/deleteModerator'], action) !== -1) {
               this.moderators.updating = true;
             }
           }
@@ -48,7 +46,7 @@ angular.module('App').controller(
         (pollObject, task) => {
           if (task.account === this.mailingList.name) {
             const action = task.action.split(':')[0];
-            if (_.indexOf(['addm', 'delm'], action) !== -1) {
+            if (_.indexOf(['mailinglist/addModerator', 'mailinglist/deleteModerator'], action) !== -1) {
               this.runPolling().then((hasPolling) => {
                 if (!hasPolling) {
                   this.moderators.updating = false;
@@ -128,7 +126,7 @@ angular.module('App').controller(
       this.moderators.ids = null;
       this.moderators.selected = [];
 
-      return this.EmailProMXPlanMailingLists.getModerators(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.getModerators(_.get(this.$scope, 'exchange.associatedDomainName'), {
         name: this.mailingList.name,
         email: this.search.moderators ? `%${this.search.moderators}%` : null,
         forceRefresh,
@@ -150,7 +148,7 @@ angular.module('App').controller(
 
     transformItemModerator(item) {
       return this.EmailProMXPlanMailingLists.getModerator(
-        this.$stateParams.productId,
+        this.$scope.exchange.associatedDomainName,
         this.mailingList.name,
         item,
       );
@@ -163,12 +161,12 @@ angular.module('App').controller(
     }
 
     runPolling() {
-      return this.EmailProMXPlanMailingLists.getTaskIds(this.$stateParams.productId, {
+      return this.EmailProMXPlanMailingLists.getTaskIds(this.$scope.exchange.associatedDomainName, {
         account: this.mailingList.name,
       })
         .then((tasks) => {
           if (tasks.length > 0) {
-            this.EmailProMXPlanMailingLists.pollState(this.$stateParams.productId, {
+            this.EmailProMXPlanMailingLists.pollState(this.$scope.exchange.associatedDomainName, {
               id: _.max(tasks),
               mailingList: this.mailingList,
               successStates: ['noState'],

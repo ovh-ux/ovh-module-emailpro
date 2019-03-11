@@ -11,6 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Beim Laden Ihres E-Mail Pro Accounts ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Beim Laden Ihres MX Plan Accounts ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-Mail-Accounts</translation>
+   <translation id="emailpro_dashboard_redirections">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Upgraden</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Brauchen Sie Hilfe bei der Konfiguration Ihres E-Mail Pro Accounts?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Sie brauchen Hilfe bei der Konfiguration Ihres MX Plan E-Mail-Dienstes?</translation>
@@ -485,6 +487,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operation abgebrochen, es sind mindestens 5 Zeichen erforderlich</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Assoziierte Domains</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Zugewiesene Domain</translation>
+   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
+   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Verlängerung</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Zu den Online-Anleitungen</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Beim Laden der Informationen ist ein Fehler aufgetreten.</translation>
@@ -925,4 +929,50 @@
    <translation id="exchange_tab_TASKS" qtlid="136217">Aktuelle Tasks</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Externe Kontakte</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnosen</translation>
+   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+
+   <translation id="emails_common_from" qtlid="69077">Von</translation>
+   <translation id="emails_common_to" qtlid="175972">auf</translation>
+   <translation id="email_tab_redirections_quota" qtlid="224828">Quota der Weiterleitungen</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Weiterleitung hinzufügen</translation>
+   <translation id="email_tab_button_emails_export_CSV" qtlid="231773">Export als CSV Datei</translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Weiterleitung bearbeiten</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Die Weiterleitung löschen</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Keine Weiterleitungen</translation>
+   <translation id="email_tab_modal_update_redirection_title" qtlid="269799">Eine Weiterleitung bearbeiten</translation>
+   <translation id="email_tab_modal_update_redirection_heading" qtlid="269812">Sie sind im Begriff, diese Weiterleitung zu bearbeiten</translation>
+   <translation id="email_tab_modal_update_redirection_success" qtlid="269825">Die Weiterleitung wurde erfolgreich bearbeitet. Die Änderung wird in wenigen Minuten aktiv sein.</translation>
+   <translation id="email_tab_modal_update_redirection_error" qtlid="269838">Bei der Änderung der Weiterleitung ist ein Fehler aufgetreten:</translation>
+   <translation id="email_tab_redirections_management_title" qtlid="98948">Verwaltung der Weiterleitungen</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Verwaltung der Weiterleitungen des Accounts</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Weiterleitung hinzufügen</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Keine Weiterleitungen</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Verwaltung der Weiterleitungen des Accounts</translation>
+   <translation id="email_tab_modal_create_redirection_title" qtlid="219030">Eine Weiterleitung erstellen</translation>
+   <translation id="email_tab_modal_create_redirection_heading" qtlid="219043">Sie sind im Begriff, eine Weiterleitung für den Account {0} zu erstellen</translation>
+   <translation id="email_tab_modal_create_redirection_type" qtlid="220304">Typ der Weiterleitung:</translation>
+   <translation id="email_tab_modal_create_redirection_type_classic" qtlid="221318">Normale Weiterleitung</translation>
+   <translation id="email_tab_modal_create_redirection_type_sub_domain" qtlid="221331">Weiterleitung einer Subdomain</translation>
+   <translation id="email_tab_modal_redirection_create_from" qtlid="219056">Von der Adresse:</translation>
+   <translation id="email_tab_modal_redirection_create_subdomain_optional" qtlid="272825">Subdomain (optional)</translation>
+   <translation id="email_tab_modal_redirection_create_to" qtlid="219069">Zur Adresse:</translation>
+   <translation id="email_tab_modal_create_redirection_info" qtlid="219082">Bitte tragen Sie die Angaben zur Weiterleitung ein</translation>
+   <translation id="email_tab_modal_redirection_create_keep_copy_title" qtlid="302067">Wählen Sie einen Kopiermodus aus:</translation>
+   <translation id="email_tab_modal_redirection_create_email_error" qtlid="212036">Ungültige E-Mail-Adresse</translation>
+   <translation id="email_tab_modal_redirection_create_copy_local" qtlid="302080">Eine Kopie der Mail bei OVH aufbewahren</translation>
+   <translation id="email_tab_modal_redirection_create_copy_none" qtlid="302093">Keine Kopie der Mail aufbewahren</translation>
+   <translation id="email_tab_modal_redirection_create_copy_select" qtlid="302106">Bitte wählen Sie eine Option aus</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Die Weiterleitung löschen</translation>
+   <translation id="email_tab_modal_create_redirection_success" qtlid="262960">Die Weiterleitung wird erstellt, die Änderung wird in wenigen Minuten aktiv.</translation>
+   <translation id="email_tab_modal_create_redirection_error" qtlid="219134">Bei der Erstellung der Weiterleitung ist ein Fehler aufgetreten.</translation>
+   <translation id="email_tab_modal_delete_redirection_success" qtlid="262973">Die Weiterleitung wird gelöscht, die Änderung wird in wenigen Minuten aktiv.</translation>
+   <translation id="email_tab_modal_delete_redirection_error" qtlid="213466">Bei der Löschung der Weiterleitung ist ein Fehler aufgetreten.</translation>
+   <translation id="email_tab_table_redirections_error" qtlid="219160">Beim Abruf der Weiterleitungen ist ein Fehler aufgetreten:</translation>
+   <translation id="email_tab_modal_delete_redirection_title" qtlid="221344">Eine Weiterleitung löschen</translation>
+   <translation id="email_tab_modal_delete_redirection_heading" qtlid="221357">Sie sind im Begriff, folgende Weiterleitung zu löschen:</translation>
+   <translation id="email_tab_modal_delete_redirection_accounts" qtlid="221370"><strong>{0}</strong> auf <strong>{1}</strong></translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Weiterleitung bearbeiten</translation>
+   <translation id="emails_common_continue_question" qtlid="351844">Möchten Sie fortfahren? </translation>
+   <translation id="emails_common_account_name_conditions" qtlid="222787">Achtung, der Name des Accounts muss folgende Bedingungen erfüllen: <br/>- Mindestens {0} Zeichen<br/>- Höchstens {1} Zeichen<br/>- Keine Leerzeichen<br/>- Keine Zeichen mit Akzent oder Umlaute<br/>- Keine Sonderzeichen außer . und - und _.</translation>
+
 </translations>

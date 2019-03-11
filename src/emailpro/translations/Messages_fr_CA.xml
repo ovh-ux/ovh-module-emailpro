@@ -11,6 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Une erreur est survenue lors du chargement de votre compte E-mail Pro.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Comptes E-mail</translation>
+   <translation id="emailpro_dashboard_redirections">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Changer d'offre</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Besoin d'aide pour configurer votre service E-mail Pro ?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
@@ -485,6 +487,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Opération annulée. Minimum 5 caractères requises</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Domaines associés</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Domaine associé</translation>
+   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
+   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renouvellement</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consultez nos guides en ligne</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Une erreur s'est produite lors du chargement des informations.</translation>
@@ -925,4 +929,50 @@
    <translation id="exchange_tab_TASKS" qtlid="136217">Tâches récentes</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Contacts externes</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostics</translation>
+   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+
+   <translation id="emails_common_from" qtlid="69077">De</translation>
+   <translation id="emails_common_to" qtlid="175972">Vers</translation>
+   <translation id="email_tab_redirections_quota" qtlid="224828">Quota des redirections</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Ajouter une redirection</translation>
+   <translation id="email_tab_button_emails_export_CSV" qtlid="231773">Exporter en CSV</translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Modifier la redirection</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Supprimer la redirection</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Aucune redirection</translation>
+   <translation id="email_tab_modal_update_redirection_title" qtlid="269799">Modifier une redirection</translation>
+   <translation id="email_tab_modal_update_redirection_heading" qtlid="269812">Vous allez modifier cette redirection</translation>
+   <translation id="email_tab_modal_update_redirection_success" qtlid="269825">La redirection a été modifiée avec succès. L'opération sera effective dans quelques minutes.</translation>
+   <translation id="email_tab_modal_update_redirection_error" qtlid="269838">Une erreur est survenue lors de la modification de la redirection :</translation>
+   <translation id="email_tab_redirections_management_title" qtlid="98948">Gestion des redirections</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Gestion des redirections du compte</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Ajouter une redirection</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Aucune redirection</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Gestion des redirections du compte</translation>
+   <translation id="email_tab_modal_create_redirection_title" qtlid="219030">Créer une redirection</translation>
+   <translation id="email_tab_modal_create_redirection_heading" qtlid="219043">Vous allez créer une redirection pour le compte {0}</translation>
+   <translation id="email_tab_modal_create_redirection_type" qtlid="220304">Type de redirection :</translation>
+   <translation id="email_tab_modal_create_redirection_type_classic" qtlid="221318">Redirection normale</translation>
+   <translation id="email_tab_modal_create_redirection_type_sub_domain" qtlid="221331">Redirection d'un sous-domaine</translation>
+   <translation id="email_tab_modal_redirection_create_from" qtlid="219056">De l'adresse :</translation>
+   <translation id="email_tab_modal_redirection_create_subdomain_optional" qtlid="272825">sous-domaine (facultatif)</translation>
+   <translation id="email_tab_modal_redirection_create_to" qtlid="219069">Vers l'adresse :</translation>
+   <translation id="email_tab_modal_create_redirection_info" qtlid="219082">Veuillez renseigner les informations de redirection</translation>
+   <translation id="email_tab_modal_redirection_create_keep_copy_title" qtlid="302067">Choisissez un mode de copie :</translation>
+   <translation id="email_tab_modal_redirection_create_email_error" qtlid="212036">L'adresse courriel n'est pas valide</translation>
+   <translation id="email_tab_modal_redirection_create_copy_local" qtlid="302080">Conserver une copie du courriel chez OVH</translation>
+   <translation id="email_tab_modal_redirection_create_copy_none" qtlid="302093">Ne pas conserver de copie du courriel</translation>
+   <translation id="email_tab_modal_redirection_create_copy_select" qtlid="302106">Veuillez sélectionner une option</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Supprimer la redirection</translation>
+   <translation id="email_tab_modal_create_redirection_success" qtlid="262960">La redirection est en cours de création. L'opération sera effective d'ici quelques minutes.</translation>
+   <translation id="email_tab_modal_create_redirection_error" qtlid="219134">Une erreur est survenue lors de la création de la redirection.</translation>
+   <translation id="email_tab_modal_delete_redirection_success" qtlid="262973">La redirection est en cours de suppression. L'opération sera effective d'ici quelques minutes.</translation>
+   <translation id="email_tab_modal_delete_redirection_error" qtlid="213466">Une erreur est survenue lors de la suppression de la redirection.</translation>
+   <translation id="email_tab_table_redirections_error" qtlid="219160">Une erreur s'est produite lors de la récupération des redirections :</translation>
+   <translation id="email_tab_modal_delete_redirection_title" qtlid="221344">Supprimer une redirection</translation>
+   <translation id="email_tab_modal_delete_redirection_heading" qtlid="221357">Vous allez supprimer la redirection :</translation>
+   <translation id="email_tab_modal_delete_redirection_accounts" qtlid="221370"><strong>{0}</strong> vers <strong>{1}</strong></translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Modifier la redirection</translation>
+   <translation id="emails_common_continue_question" qtlid="351844">Voulez-vous continuer?</translation>
+   <translation id="emails_common_account_name_conditions" qtlid="222787">Attention, le nom du compte doit respecter les conditions suivantes : <br/>- Minimum {0} caractères<br/>- Maximum {1} caractères<br/>- Aucun espace<br/>- Aucun caractère accentué<br/>- Aucun caractère spécial à l'exception de ., - et _.</translation>
+
 </translations>

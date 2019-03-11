@@ -5,16 +5,14 @@ angular.module('App').controller(
      * Constructor
      * @param $scope
      * @param $q
-     * @param $stateParams
      * @param $translate
      * @param Alerter
      * @param EmailProMXPlanMailingLists
      * @param User
      */
-    constructor($scope, $q, $stateParams, $translate, Alerter, EmailProMXPlanMailingLists, User) {
+    constructor($scope, $q, $translate, Alerter, EmailProMXPlanMailingLists, User) {
       this.$scope = $scope;
       this.$q = $q;
-      this.$stateParams = $stateParams;
       this.$translate = $translate;
       this.Alerter = Alerter;
       this.EmailProMXPlanMailingLists = EmailProMXPlanMailingLists;
@@ -92,7 +90,7 @@ angular.module('App').controller(
       this.loading = true;
 
       return this.EmailProMXPlanMailingLists.updateMailingList(
-        this.$stateParams.productId,
+        this.$scope.exchange.associatedDomainName,
         this.mailingList.name,
         {
           infos: {

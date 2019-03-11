@@ -6,8 +6,10 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabsCtrl', ($s
     'INFORMATION',
     'DOMAIN',
     'ACCOUNT',
+    $scope.exchange.isMXPlan ? 'MAILING_LIST' : null,
+    $scope.exchange.isMXPlan ? 'REDIRECTION' : null,
     'EXTERNAL_CONTACT',
-  ];
+  ].filter(tab => !_.isNull(tab));
 
   $scope.tabMenu = {
     title: $translate.instant('navigation_more'),

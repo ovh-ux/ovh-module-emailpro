@@ -1,6 +1,7 @@
 <div class="container-fluid px-0" data-ng-controller="EmailProTabInformationCtrl">
     <div class="row">
         <div class="col-md-9">
+            <div data-ovh-alert="{{alerts.main}}"></div>
             <h2 class="sr-only" data-translate="emailpro_tab_INFORMATION"></h2>
             <div class="row d-md-flex">
                 <div class="col-sm-6 mb-5">
@@ -23,7 +24,7 @@
                                         <span class="mt-2 d-inline-block pointer">
                                             <span data-ng-if="!exchange.offer == !accountTypeProvider"
                                                   data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isAValid,
-                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isAValid}"
+                                                              'oui-status oui-status_error': !exchange.serverDiagnostic.isAValid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.aTooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_a_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="right"
@@ -31,7 +32,7 @@
                                                   data-translate="emailpro_dashboard_diag_a_label"></span>
                                             <span data-ng-if="exchange.offer == accountTypeDedicated"
                                                   data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isAaaaValid,
-                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isAaaaValid}"
+                                                              'oui-status oui-status_error': !exchange.serverDiagnostic.isAaaaValid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.aaaaTooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_aaaa_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="bottom"
@@ -39,7 +40,7 @@
                                                   data-translate="emailpro_dashboard_diag_aaaa_label"></span>
                                             <span data-ng-if="exchange.offer == accountTypeDedicated"
                                                   data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isPtrValid,
-                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isPtrValid}"
+                                                              'oui-status oui-status_error': !exchange.serverDiagnostic.isPtrValid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.ptrTooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_ptr_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="bottom"
@@ -47,7 +48,7 @@
                                                   data-translate="emailpro_dashboard_diag_ptr_label"></span>
                                             <span data-ng-if="exchange.offer == accountTypeDedicated"
                                                   data-ng-class="{'oui-status oui-status_success': exchange.serverDiagnostic.isPtrV6Valid,
-                                                                  'oui-status oui-status_error': !exchange.serverDiagnostic.isPtrV6Valid}"
+                                                              'oui-status oui-status_error': !exchange.serverDiagnostic.isPtrV6Valid}"
                                                   data-simplepopover="{{exchange.serverDiagnostic.ptrv6Tooltip}}"
                                                   data-simplepopover-title="{{ 'emailpro_dashboard_diag_ptrv6_tooltip_title' | translate }}"
                                                   data-simplepopover-placement="bottom"
@@ -76,8 +77,28 @@
                                     <div class="oui-tile__definition">
                                         <strong
                                             class="oui-tile__term d-block"
+                                            data-translate="emailpro_dashboard_domain_offer"></strong>
+                                        <span data-ng-bind="emailDomain.offer"></span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong
+                                            class="oui-tile__term d-block"
                                             data-translate="emailpro_dashboard_domain_forMXPlan"></strong>
                                         <span data-translate="{{:: exchange.associatedDomainName }}"></span>
+                                    </div>
+                                </li>
+                                <li
+                                    class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong
+                                            class="oui-tile__term d-block"
+                                            data-translate="emailpro_dashboard_domain_filer"></strong>
+                                        <span data-ng-bind="emailDomain.filerz"></span>
                                     </div>
                                 </li>
                             </ul>
@@ -103,7 +124,10 @@
                                     <div class="oui-tile__definition">
                                         <strong class="oui-tile__term d-block" data-translate="emailpro_dashboard_accounts"></strong>
                                         <div class="d-flex justify-content-between">
-                                            <span data-ng-bind="exchange.accountsNumber"></span>
+                                            <span data-ng-if="exchange.isMXPlan"
+                                                  data-ng-bind="accountsConfigured.length + ' / ' + exchange.accountsNumber"></span>
+                                            <span data-ng-if="!exchange.isMXPlan"
+                                                  data-ng-bind="exchange.accountsNumber"></span>
                                             <oui-action-menu
                                                 data-ng-if="exchange.isMXPlan && exchange.accountsNumber <= 100"
                                                 data-compact
@@ -115,6 +139,21 @@
                                                 </oui-action-menu-item>
                                             </oui-action-menu>
                                         </div>
+                                    </div>
+                                </li>
+                                <li class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong class="oui-tile__term d-block" data-translate="emailpro_dashboard_redirections"></strong>
+                                        <span data-ng-bind="redirections.length + ' / ' + quotas.redirection"></span>
+                                    </div>
+                                </li>
+
+                                <li class="oui-tile__item"
+                                    data-ng-if="exchange.isMXPlan">
+                                    <div class="oui-tile__definition">
+                                        <strong class="oui-tile__term d-block" data-translate="emailpro_dashboard_mailingLists"></strong>
+                                        <span data-ng-bind="mailingLists.length + ' / ' + quotas.mailingList"></span>
                                     </div>
                                 </li>
                                 <li class="oui-tile__item">
@@ -229,7 +268,7 @@
                     </ul>
                 </div>
             </div>
-            <div data-ng-if="displayGuides !== null && !loadingEmailProInformations && !loadingEmailProError">
+            <div data-ng-if="!exchange.isMXPlan && displayGuides !== null && !loadingEmailProInformations && !loadingEmailProError">
                 <span data-translate="emailpro_dashboard_guides"></span>
                 <a data-ng-href="{{ displayGuides }}"
                    target="_blank"

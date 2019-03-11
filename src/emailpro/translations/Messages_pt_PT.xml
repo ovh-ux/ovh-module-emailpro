@@ -11,6 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Erro no acesso à sua conta E-mail Pro. </translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Ocorreu um erro ao carregar a conta MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Contas de E-mail</translation>
+   <translation id="emailpro_dashboard_redirections">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Mudar de oferta</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Necessita de ajuda para configurar o seu E-mail Pro?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Precisa de ajuda para configurar o serviço E-mail MX Plan?</translation>
@@ -485,6 +487,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operação anulada. São necessários, pelo menos, 5 caracteres</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Domínios associados</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Domínio associado</translation>
+   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
+   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renovação</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consulte os nossos manuais online</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Erro ao carregar a informação.</translation>
@@ -926,4 +930,53 @@ Se usar o modo nonauthoritative com contas de e-mail não alojadas pela OVH, dev
    <translation id="exchange_tab_TASKS" qtlid="136217">Operações recentes</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Contactos externos</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnósticos</translation>
+   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+
+   <translation id="emails_common_from" qtlid="69077">De</translation>
+   <translation id="emails_common_to" qtlid="175972">Para</translation>
+   <translation id="email_tab_redirections_quota" qtlid="224828">Quota dos reencaminhamentos</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Adicionar um reencaminhamento</translation>
+   <translation id="email_tab_button_emails_export_CSV" qtlid="231773">Exportar em CSV</translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Modificar o reencaminhamento</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Eliminar o reencaminhamento</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Nenhum reencaminhamento</translation>
+   <translation id="email_tab_modal_update_redirection_title" qtlid="269799">Modificar um reencaminhamento</translation>
+   <translation id="email_tab_modal_update_redirection_heading" qtlid="269812">Vai modificar este reencaminhamento</translation>
+   <translation id="email_tab_modal_update_redirection_success" qtlid="269825">O reencaminhamento foi modificado com sucesso.&#13;
+A operação terminará dentro de alguns minutos.</translation>
+   <translation id="email_tab_modal_update_redirection_error" qtlid="269838">Ocorreu um erro aquando da modificação de um reencaminhamento:</translation>
+   <translation id="email_tab_redirections_management_title" qtlid="98948">Gestão dos reencaminhamentos</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Gestão dos reencaminhamentos da conta</translation>
+   <translation id="email_tab_button_emails_create_redirection" qtlid="213713">Adicionar um reencaminhamento</translation>
+   <translation id="email_tab_table_redirections_empty" qtlid="219017">Nenhum reencaminhamento</translation>
+   <translation id="email_tab_redirections_management_heading" qtlid="219004">Gestão dos reencaminhamentos da conta</translation>
+   <translation id="email_tab_modal_create_redirection_title" qtlid="219030">Criar um reencaminhamento</translation>
+   <translation id="email_tab_modal_create_redirection_heading" qtlid="219043">Vai criar um reencaminhamento para a conta {0}</translation>
+   <translation id="email_tab_modal_create_redirection_type" qtlid="220304">Tipo de reencaminhamento:</translation>
+   <translation id="email_tab_modal_create_redirection_type_classic" qtlid="221318">Reencaminhamento normal</translation>
+   <translation id="email_tab_modal_create_redirection_type_sub_domain" qtlid="221331">Reencaminhamento de um subdomínio</translation>
+   <translation id="email_tab_modal_redirection_create_from" qtlid="219056">Do endereço:</translation>
+   <translation id="email_tab_modal_redirection_create_subdomain_optional" qtlid="272825">subdomínio (facultativo)</translation>
+   <translation id="email_tab_modal_redirection_create_to" qtlid="219069">Para o endereço:</translation>
+   <translation id="email_tab_modal_create_redirection_info" qtlid="219082">Queira introduzir as informações do reencaminhamento</translation>
+   <translation id="email_tab_modal_redirection_create_keep_copy_title" qtlid="302067">Escolha o modo de cópia:</translation>
+   <translation id="email_tab_modal_redirection_create_email_error" qtlid="212036">O endereço de e-mail não é válido</translation>
+   <translation id="email_tab_modal_redirection_create_copy_local" qtlid="302080">Manter uma cópia do e-mail na OVH</translation>
+   <translation id="email_tab_modal_redirection_create_copy_none" qtlid="302093">Não manter uma cópia do e-mail</translation>
+   <translation id="email_tab_modal_redirection_create_copy_select" qtlid="302106">Queira selecionar uma opção</translation>
+   <translation id="email_tab_popover_redirection_delete" qtlid="219108">Eliminar o reencaminhamento</translation>
+   <translation id="email_tab_modal_create_redirection_success" qtlid="262960">O reencaminhamento está em curso de criação.&#13;
+A operação será efetiva dentro de alguns minutos.</translation>
+   <translation id="email_tab_modal_create_redirection_error" qtlid="219134">Ocorreu um erro aquando da criação do reencaminhamento.</translation>
+   <translation id="email_tab_modal_delete_redirection_success" qtlid="262973">O reencaminhamento está em curso de eliminação.&#13;
+A operação será efetiva dentro de alguns minutos.</translation>
+   <translation id="email_tab_modal_delete_redirection_error" qtlid="213466">Ocorreu um erro aquando da eliminação do reencaminhamento.</translation>
+   <translation id="email_tab_table_redirections_error" qtlid="219160">Ocorreu um erro aquando da recuperação dos reencaminhamentos:</translation>
+   <translation id="email_tab_modal_delete_redirection_title" qtlid="221344">Eliminar um reencaminhamento</translation>
+   <translation id="email_tab_modal_delete_redirection_heading" qtlid="221357">Vai eliminar o reencaminhamento:</translation>
+   <translation id="email_tab_modal_delete_redirection_accounts" qtlid="221370"><strong>{0}</strong> para <strong>{1}</strong></translation>
+   <translation id="email_tab_popover_redirection_update" qtlid="99224">Modificar o reencaminhamento</translation>
+   <translation id="emails_common_continue_question" qtlid="351844">Deseja continuar?</translation>
+   <translation id="emails_common_account_name_conditions" qtlid="222787">Atenção, o nome da conta deve respeitar as seguintes condições: <br/>- Mínimo {0} caracteres<br/>- Máximo {1} caracteres<br/>- Sem espaço<br/>- Sem caracteres acentuados<br/>- Sem caracteres especiais com exceção de ., - e _.</translation>
+
 </translations>
