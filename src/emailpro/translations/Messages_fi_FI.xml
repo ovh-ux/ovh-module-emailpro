@@ -11,8 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Tapahtui virhe E-mail Pro -tilisi lataamisessa.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Une erreur est survenue lors du chargement de votre compte MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">E-mail Pro -tilit</translation>
-   <translation id="emailpro_dashboard_redirections">Redirections</translation>
-   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
+   <translation id="emailpro_dashboard_redirections" qtlid="46204">Uudelleenohjaukset</translation>
+   <translation id="emailpro_dashboard_mailingLists" qtlid="50182">Postituslistat</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Päivitys</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Tarvitsetko apua E-mail Pro -palvelun konfiguroinnissa?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Besoin d'aide pour configurer votre service E-mail MX Plan ?</translation>
@@ -490,8 +490,8 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operaatio peruutettu. Vähintään 5 merkkiä vaaditaan.</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Liitetyt verkkotunnukset</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Liitettävä verkkotunnus</translation>
-   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
-   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
+   <translation id="emailpro_dashboard_domain_offer" qtlid="38217">Palvelu</translation>
+   <translation id="emailpro_dashboard_domain_filer" qtlid="222761">Tiedostopalvelin</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Uusinta</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consultez nos guides en ligne</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Tapahtui virhe ladattaessa tietoja.</translation>
@@ -933,7 +933,7 @@ Valitse: <br /> Tyyppi: <span class="bold">A</span> <br /> Aliverkkotunnus: <spa
    <translation id="exchange_tab_TASKS" qtlid="136217">Viimeaikaiset tehtävät</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Ulkoiset yhteyshenkilöt</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostiikka</translation>
-   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+   <translation id="exchange_tab_REDIRECTION" qtlid="46204">Uudelleenohjaukset</translation>
 
    <translation id="emails_common_from" qtlid="69077">Mistä</translation>
    <translation id="emails_common_to" qtlid="175972">Kohti</translation>

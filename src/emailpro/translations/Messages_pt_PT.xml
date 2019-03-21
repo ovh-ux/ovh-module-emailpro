@@ -11,8 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Erro no acesso à sua conta E-mail Pro. </translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Ocorreu um erro ao carregar a conta MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Contas de E-mail</translation>
-   <translation id="emailpro_dashboard_redirections">Redirections</translation>
-   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
+   <translation id="emailpro_dashboard_redirections" qtlid="46204">Reencaminhamentos</translation>
+   <translation id="emailpro_dashboard_mailingLists" qtlid="50182">Mailing lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Mudar de oferta</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Necessita de ajuda para configurar o seu E-mail Pro?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Precisa de ajuda para configurar o serviço E-mail MX Plan?</translation>
@@ -487,8 +487,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operação anulada. São necessários, pelo menos, 5 caracteres</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Domínios associados</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Domínio associado</translation>
-   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
-   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
+   <translation id="emailpro_dashboard_domain_offer" qtlid="38217">Oferta</translation>
+   <translation id="emailpro_dashboard_domain_filer" qtlid="222761">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renovação</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consulte os nossos manuais online</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Erro ao carregar a informação.</translation>
@@ -930,7 +930,7 @@ Se usar o modo nonauthoritative com contas de e-mail não alojadas pela OVH, dev
    <translation id="exchange_tab_TASKS" qtlid="136217">Operações recentes</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Contactos externos</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnósticos</translation>
-   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+   <translation id="exchange_tab_REDIRECTION" qtlid="46204">Reencaminhamentos</translation>
 
    <translation id="emails_common_from" qtlid="69077">De</translation>
    <translation id="emails_common_to" qtlid="175972">Para</translation>

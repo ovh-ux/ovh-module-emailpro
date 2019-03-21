@@ -11,8 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">An error has occurred loading your Email Pro account. </translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">An error has occurred loading your MX Plan account.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Email accounts</translation>
-   <translation id="emailpro_dashboard_redirections">Redirections</translation>
-   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
+   <translation id="emailpro_dashboard_redirections" qtlid="46204">Redirections</translation>
+   <translation id="emailpro_dashboard_mailingLists" qtlid="50182">Mailing-lists</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Upgrade</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Do you need help configuring your Email Pro service? </translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Need help configuring your MX Plan email service?</translation>
@@ -489,8 +489,8 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operation cancelled. Minimum 5 characters required.</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Associated domains </translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Associated domain</translation>
-   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
-   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
+   <translation id="emailpro_dashboard_domain_offer" qtlid="38217">Solution </translation>
+   <translation id="emailpro_dashboard_domain_filer" qtlid="222761">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Renewal</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">View guides online</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">An error occurred while loading the information.</translation>
@@ -932,7 +932,7 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="exchange_tab_TASKS" qtlid="136217">Recent tasks</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">External contacts </translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostics</translation>
-   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+   <translation id="exchange_tab_REDIRECTION" qtlid="46204">Redirections</translation>
 
    <translation id="emails_common_from" qtlid="69077">From</translation>
    <translation id="emails_common_to" qtlid="175972">To</translation>
