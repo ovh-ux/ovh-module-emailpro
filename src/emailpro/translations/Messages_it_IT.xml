@@ -11,8 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Si è verificato un errore durante il caricamento del tuo account Email Pro.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Si è verificato un errore durante il caricamento del tuo account MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Account Email</translation>
-   <translation id="emailpro_dashboard_redirections">Redirections</translation>
-   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
+   <translation id="emailpro_dashboard_redirections" qtlid="46204">Reindirizzamenti</translation>
+   <translation id="emailpro_dashboard_mailingLists" qtlid="50182">Mailing list</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Cambia piano</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Bisogno di aiuto per configurare il tuo servizio Email Pro?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Hai bisogno di aiuto per configurare il tuo servizio MX Plan?</translation>
@@ -519,8 +519,8 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operazione annullata. Minimo 5 caratteri necessari</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Domini associati</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Dominio associato</translation>
-   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
-   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
+   <translation id="emailpro_dashboard_domain_offer" qtlid="38217">Servizio</translation>
+   <translation id="emailpro_dashboard_domain_filer" qtlid="222761">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Rinnovo</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Consulta le nostre guide</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Si è verificato un errore nel caricamento delle informazioni</translation>
@@ -963,7 +963,7 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="exchange_tab_TASKS" qtlid="136217">Task recenti</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Contatti esterni</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostiche</translation>
-   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+   <translation id="exchange_tab_REDIRECTION" qtlid="46204">Reindirizzamenti</translation>
 
    <translation id="emails_common_from" qtlid="69077">Da</translation>
    <translation id="emails_common_to" qtlid="175972">Verso</translation>

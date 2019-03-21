@@ -11,8 +11,8 @@
    <translation id="emailpro_dashboard_service_expired" qtlid="433706">Wystąpił błąd podczas pobierania konta E-mail Pro.</translation>
    <translation id="emailpro-mxplan_dashboard_service_expired" qtlid="518076">Wystąpił błąd podczas ładowania Twojego konta MX Plan.</translation>
    <translation id="emailpro_dashboard_accounts" qtlid="374984">Konta E-mail Pro</translation>
-   <translation id="emailpro_dashboard_redirections">Redirections</translation>
-   <translation id="emailpro_dashboard_mailingLists">Mailing-lists</translation>
+   <translation id="emailpro_dashboard_redirections" qtlid="46204">Przekierowania</translation>
+   <translation id="emailpro_dashboard_mailingLists" qtlid="50182">Listy mailingowe</translation>
    <translation id="emailpro_dashboard_accounts_upgrade_mxPlan" qtlid="25783">Zmień ofertę</translation>
    <translation id="emailpro_dashboard_guides" qtlid="374997">Potrzebujesz pomocy w skonfigurowaniu usługi E-mail Pro?</translation>
    <translation id="emailpro-mxplan_dashboard_guides" qtlid="518089">Potrzebujesz pomocy w procesie konfiguracji Twojej usługi E-mail MX Plan?</translation>
@@ -490,8 +490,8 @@
    <translation id="emailpro_dashboard_display_name_min" qtlid="177925">Operacja anulowana. Wymagane jest minimum 5 znaków</translation>
    <translation id="emailpro_dashboard_domains" qtlid="276298">Przypisane domeny</translation>
    <translation id="emailpro_dashboard_domain_forMXPlan" qtlid="133110">Dotyczy domeny</translation>
-   <translation id="emailpro_dashboard_domain_offer">Offre</translation>
-   <translation id="emailpro_dashboard_domain_filer">Filer</translation>
+   <translation id="emailpro_dashboard_domain_offer" qtlid="38217">Pakiet</translation>
+   <translation id="emailpro_dashboard_domain_filer" qtlid="222761">Filer</translation>
    <translation id="emailpro_dashboard_expiration" qtlid="168172">Odnowienie</translation>
    <translation id="emailpro_dashboard_guides_url" qtlid="519090">Zapoznaj się z naszymi przewodnikami online.</translation>
    <translation id="emailpro_dashboard_loading_error" qtlid="168120">Wystąpił błąd podczas ładowania informacji.</translation>
@@ -932,7 +932,7 @@
    <translation id="exchange_tab_TASKS" qtlid="136217">Ostatnie zadania</translation>
    <translation id="exchange_tab_EXTERNAL_CONTACT" qtlid="82015">Zewnętrzne kontakty</translation>
    <translation id="exchange_tab_DIAGNOSTIC" qtlid="36351">Diagnostyka</translation>
-   <translation id="exchange_tab_REDIRECTION">Redirections</translation>
+   <translation id="exchange_tab_REDIRECTION" qtlid="46204">Przekierowania</translation>
 
    <translation id="emails_common_from" qtlid="69077">Od</translation>
    <translation id="emails_common_to" qtlid="175972">Na</translation>
