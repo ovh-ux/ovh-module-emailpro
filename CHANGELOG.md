@@ -1,3 +1,12 @@
+## [7.2.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.1...v7.2.2) (2019-04-23)
+
+
+### Bug Fixes
+
+* **redirection:** delete redirection bad request ([be69b68](https://github.com/ovh-ux/ovh-module-emailpro/commit/be69b68))
+
+
+
 ## [7.2.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.0...v7.2.1) (2019-03-21)
 
 
