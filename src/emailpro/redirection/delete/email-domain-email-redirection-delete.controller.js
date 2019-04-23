@@ -24,7 +24,7 @@ angular.module('App').controller(
 
     deleteRedirection() {
       return this.WucEmails.deleteRedirection(
-        this.$stateParams.productId,
+        this.$scope.exchange.associatedDomainName,
         this.redirection.id,
       )
         .then(() => this.Alerter.success(
