@@ -1,3 +1,12 @@
+## [7.2.3](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.2...v7.2.3) (2019-04-24)
+
+
+### Bug Fixes
+
+* **redirection:** rename delete controller due to conflict ([f25c6b6](https://github.com/ovh-ux/ovh-module-emailpro/commit/f25c6b6))
+
+
+
 ## [7.2.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.1...v7.2.2) (2019-04-23)
 
 
