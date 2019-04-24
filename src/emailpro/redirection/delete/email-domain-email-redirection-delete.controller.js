@@ -1,6 +1,6 @@
 angular.module('App').controller(
-  'EmailsDeleteRedirectionCtrl',
-  class EmailsDeleteRedirectionCtrl {
+  'EmailMXPlanDeleteRedirectionCtrl',
+  class EmailMXPlanDeleteRedirectionCtrl {
     /**
      * Constructor
      * @param $scope
