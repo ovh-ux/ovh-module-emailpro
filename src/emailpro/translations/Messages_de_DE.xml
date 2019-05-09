@@ -840,7 +840,7 @@
    <translation id="emailpro_tab_domain_remove_domain" qtlid="137933">Eine Domain löschen</translation>
    <translation id="emailpro_tab_domain_remove_success" qtlid="137959">Die Domain wird aus Ihrer Exchange Dienstleistung gelöscht.</translation>
    <translation id="emailpro_tab_domain_remove_failure" qtlid="137972">Beim Löschen der Domain aus Ihrer Exchange Dienstleistung ist ein Fehler aufgetreten.</translation>
-   <translation id="emailpro_update_billing_action_title" qtlid="98324">Verlängerungs-Zeitraum</translation>
+   <translation id="emailpro_update_billing_action_title" qtlid="98324">Verlängerungszeitraum</translation>
    <translation id="emailpro_update_billing_button_title" qtlid="190953">Abrechnungsmodus</translation>
    <translation id="emailpro_update_billing_expiration_date_label" qtlid="30406">Ablaufdatum</translation>
    <translation id="emailpro_update_billing_header_1M" qtlid="60378">Monatlich</translation>
