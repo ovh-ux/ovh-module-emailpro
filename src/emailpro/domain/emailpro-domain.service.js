@@ -59,7 +59,8 @@ angular
               EmailPro.resetAccounts();
               EmailPro.resetTasks();
               return response;
-            }, err => EmailPro.constructor.getSuccessDataOrReject(err));
+            })
+            .catch(err => EmailPro.getSuccessDataOrReject(err));
         });
       };
 
