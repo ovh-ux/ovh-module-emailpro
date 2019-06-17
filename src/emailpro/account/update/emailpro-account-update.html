@@ -137,6 +137,19 @@
                         <span class="vertical-middle ml-3" data-translate="unit_size_GB"></span>
                     </div>
                 </div>
+                <div class="form-group"
+                     data-ng-show="isMxPlan()">
+                    <label for="quota" class="col-md-3 control-label"
+                           data-translate="emailpro_ACTION_update_account_step1_quota_label"></label>
+                    <div class="col-md-9">
+                        <select class="form-control w-75 pull-left" id="quota" required
+                                data-ng-options="quota for quota in mxPlan.quotaArray"
+                                data-ng-model="selectedAccount.quota">
+                            <option value="quota" data-ng-bind="quota"></option>
+                        </select>
+                        <span class="vertical-middle ml-3" data-translate="unit_size_GB"></span>
+                    </div>
+                </div>
             </form>
             <div data-wizard-step-help>
                 <h3 data-translate="{{ exchange.billingPlan + '_ACTION_update_account_helpwizard_title' }}"></h3>
@@ -184,6 +197,12 @@
                 <dt data-translate="emailpro_ACTION_update_account_step1_quota_label"
                     data-ng-if="!selectedAccount.is25g && exchange.offer == accountTypeProvider"></dt>
                 <dd data-ng-if="!selectedAccount.is25g && exchange.offer == accountTypeProvider">
+                    <span data-ng-bind="selectedAccount.quota"></span> <span data-translate="unit_size_GB"></span>
+                </dd>
+
+                <dt data-translate="emailpro_ACTION_update_account_step1_quota_label"
+                    data-ng-if="isMxPlan()"></dt>
+                <dd data-ng-if="isMxPlan()">
                     <span data-ng-bind="selectedAccount.quota"></span> <span data-translate="unit_size_GB"></span>
                 </dd>
             </dl>

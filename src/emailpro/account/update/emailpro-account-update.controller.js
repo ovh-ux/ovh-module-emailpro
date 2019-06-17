@@ -1,5 +1,6 @@
 angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountCtrl', ($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
   const originalValues = angular.copy($scope.currentActionData);
+  $scope.mxPlan = {};
 
   const accountIsValid = function accountIsValid() {
     const account = $scope.selectedAccount;
@@ -15,6 +16,10 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
       return false;
     }
     return true;
+  };
+
+  $scope.isMxPlan = function() {
+    return $scope.exchange.isMXPlan;
   };
 
   const getModelToUpdate = function (originalValues, modifiedBuffer) { // eslint-disable-line
@@ -33,6 +38,10 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
       ? modifiedBuffer.hiddenFromGAL : undefined;
     model.accountLicense = modifiedBuffer.accountLicense !== originalValues.accountLicense
       ? modifiedBuffer.accountLicense : undefined;
+    if($scope.exchange.isMXPlan) {
+      model.quota = modifiedBuffer.quota !== originalValues.quota
+      ? modifiedBuffer.quota : undefined;
+    }
     return model;
   };
 
@@ -185,6 +194,12 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountC
 
   $scope.loadAccountOptions = function loadAccountOptions() {
     $scope.noDomainMessage = null;
+    if($scope.isMxPlan()) {
+      EmailPro.getCapabilities($stateParams.productId, $scope.selectedAccount.primaryEmailAddress)
+        .then(result => {
+          $scope.mxPlan.quotaArray = result.quotas;
+        });
+    }
     EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
       $scope.canDeleteOutlookAtExpiration = true;
 

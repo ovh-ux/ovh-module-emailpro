@@ -8,13 +8,13 @@ angular.module('Module.emailpro.controllers')
     $scope.stateTodo = 'TODO';
 
     $scope.loadPaginated = function ({ pageSize, offset }) {
-      return EmailPro.getTasks($stateParams.productId, pageSize, offset - 1)
+      return EmailPro.getTasks($stateParams.productId, pageSize, offset - 1, $scope.exchange.associatedDomainName)
         .then((tasks) => {
-          $scope.tasksList = tasks;
+          $scope.tasksList = _.flatten(tasks);
           return {
-            data: tasks.list.results,
+            data: $scope.tasksList,
             meta: {
-              totalCount: tasks.count,
+              totalCount: $scope.tasksList.count,
             },
           };
         }).catch((failure) => {

@@ -212,22 +212,98 @@ angular
       /**
        * Return the last 2 days task list for the selected exchange
        */
-      getTasks(serviceName, pageSize, offset) {
+      getTasks(serviceName, pageSize, offset, domainName) {
         return this.gettingIsServiceMXPlan()
-          .then(isMXPlan => this.OvhHttp
-            .get('/sws/emailpro/{exchange}/tasks', {
-              rootPath: '2api',
-              urlParams: {
-                exchange: serviceName,
-              },
-              params: {
-                count: pageSize || 10,
-                offset: offset || 0,
-                isMXPlan,
-              },
-            }));
+          .then(isMXPlan => {
+            if(isMXPlan) {
+              return this.$q.all([
+                this.getRedirectionTasks(domainName),
+                this.getMailingListTasks(domainName),
+                this.getMxTasks(serviceName),
+              ]);
+            } else {
+              return this.getRegularTasks(serviceName, pageSize, offset)
+                .then(res => res.list.results);
+            }
+          });
       }
 
+      getRedirectionTasks(domainName) {
+        return this.OvhHttp.get('/email/domain/{domain}/task/redirection', {
+            rootPath: 'apiv6',
+            urlParams: {
+              domain: domainName,
+            }
+        }).then(ids => {
+          const promises = _.map(ids, id => this.getTaskDetails(true, domainName, id));
+          return this.$q.all(promises);
+        });
+      }
+
+      getMailingListTasks(domainName) {
+        return this.OvhHttp.get('/email/domain/{domain}/task/mailinglist', {
+            rootPath: 'apiv6',
+            urlParams: {
+              domain: domainName,
+            }
+          }).then(ids => {
+            const promises = _.map(ids, id => this.getTaskDetails(false, domainName, id));
+            return this.$q.all(promises);
+          });
+      }
+
+      getTaskDetails(redirection, domainName, taskId) {
+        redirection === true ? url = '/email/domain/{domain}/task/redirection/{id}' : '/email/domain/{domain}/task/mailinglist/{id}';
+        return this.OvhHttp.get(url, {
+          rootPath: 'apiv6',
+          urlParams: {
+            domain: domainName,
+            id: taskId,
+          }
+        });
+      }
+
+      getMxTasks(serviceName) {
+        return this.OvhHttp
+          .get('/sws/emailpro/{exchange}/tasks', {
+            rootPath: '2api',
+            urlParams: {
+              exchange: serviceName,
+            },
+            params: {
+              isMXPlan: true,
+            },
+          }).then(res => res.list.results);
+      }
+
+      getRegularTasks(serviceName, pageSize, offset) {
+        return this.OvhHttp
+          .get('/sws/emailpro/{exchange}/tasks', {
+            rootPath: '2api',
+            urlParams: {
+              exchange: serviceName,
+            },
+            params: {
+              count: pageSize || 10,
+              offset: offset || 0,
+            },
+          }).then(res => res.list.results);
+      }
+
+      /**
+       * Data needed for quota availability
+       */
+      getCapabilities(serviceName, accountEmailAddress) {
+        return this.gettingBaseAPIPath()
+        .then(baseAPIPath => this.OvhHttp
+          .get(`/${baseAPIPath}/{exchange}/account/{accountEmailAddress}/capabilities`, {
+            rootPath: 'apiv6',
+            urlParams: {
+              exchange: serviceName,
+              accountEmailAddress,
+            },
+          }));
+      }
       /**
        * Return paginated exchange accounts list
        * @param pageSize - the size of page([10, 20, 40])
