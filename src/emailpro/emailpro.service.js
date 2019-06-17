@@ -150,7 +150,7 @@ angular
         this.$rootScope.$broadcast(this.events.externalcontactsChanged);
       }
 
-      static getSuccessDataOrReject(response) {
+      getSuccessDataOrReject(response) {
         return response.status < 300 ? response.data : this.$q.reject(response);
       }
 
