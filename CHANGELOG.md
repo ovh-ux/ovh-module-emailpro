@@ -1,3 +1,12 @@
+## [7.2.6](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.5...v7.2.6) (2019-06-17)
+
+
+### Bug Fixes
+
+* **domain:** this. undefined due to static methode ([#212](https://github.com/ovh-ux/ovh-module-emailpro/issues/212)) ([0533e11](https://github.com/ovh-ux/ovh-module-emailpro/commit/0533e11))
+
+
+
 ## [7.2.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.4...v7.2.5) (2019-05-31)
 
 
