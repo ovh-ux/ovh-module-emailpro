@@ -235,7 +235,7 @@ angular
               domain: domainName,
             }
         }).then(ids => {
-          const promises = _.map(ids, id => this.getTaskDetails(true, domainName, id));
+          const promises = _.map(ids, id => this.getSubTaskDetails(true, domainName, id));
           return this.$q.all(promises);
         });
       }
@@ -247,13 +247,16 @@ angular
               domain: domainName,
             }
           }).then(ids => {
-            const promises = _.map(ids, id => this.getTaskDetails(false, domainName, id));
+            const promises = _.map(ids, id => this.getSubTaskDetails(false, domainName, id));
             return this.$q.all(promises);
           });
       }
 
-      getTaskDetails(redirection, domainName, taskId) {
-        redirection === true ? url = '/email/domain/{domain}/task/redirection/{id}' : '/email/domain/{domain}/task/mailinglist/{id}';
+      getSubTaskDetails(redirection, domainName, taskId) {
+        var url = '/email/domain/{domain}/task/mailinglist/{id}';
+        if(redirection) {
+          url = '/email/domain/{domain}/task/redirection/{id}';
+        }
         return this.OvhHttp.get(url, {
           rootPath: 'apiv6',
           urlParams: {

@@ -1,10 +1,11 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate) => {
+angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate, WucConverterService) => {
   $scope.stateCreating = EmailPro.stateCreating;
   $scope.stateDeleting = EmailPro.stateDeleting;
   $scope.stateOk = EmailPro.stateOk;
   $scope.stateReopening = EmailPro.stateReopening;
   $scope.stateSuspended = EmailPro.stateSuspended;
   $scope.stateSuspending = EmailPro.stateSuspending;
+  $scope.WucConverterService = WucConverterService;
 
   $scope.stateTaskError = 'TASK_ON_ERROR';
   $scope.stateTaskDoing = 'TASK_ON_DOING';
@@ -186,6 +187,16 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
         $scope.loadingNewConfiguredAccount = false;
       });
   };
+
+  $scope.convertBytesSize = function(nb, unit, decimalWanted = 0) {
+    const res = filesize($scope.WucConverterService.convertToOctet(nb, unit), {
+      output: 'object',
+      round: decimalWanted,
+      base: -1,
+    });
+    const resUnit = $translate.instant(`unit_size_${res.symbol}`);
+    return `${res.value} ${resUnit}`;
+  }
 
   init();
 });

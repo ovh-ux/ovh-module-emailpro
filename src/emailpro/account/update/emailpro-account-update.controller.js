@@ -1,257 +1,282 @@
-angular.module('Module.emailpro.controllers').controller('EmailProUpdateAccountCtrl', ($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword) => {
-  const originalValues = angular.copy($scope.currentActionData);
-  $scope.mxPlan = {};
+angular.module('Module.emailpro.controllers').controller(
+  'EmailProUpdateAccountCtrl',
+  class EmailProUpdateAccountCtrl {
 
-  const accountIsValid = function accountIsValid() {
-    const account = $scope.selectedAccount;
-    if ($scope.simplePasswordFlag
-      || $scope.differentPasswordFlag
-      || $scope.containsNameFlag) {
-      return false;
-    } if (account && /\s/.test(account.password)) {
-      return false;
-    } if (!account.canBeConfigured && !account.password) {
-      return false;
-    } if (!account.domain || !account.login) {
-      return false;
+    constructor($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword, WucConverterService) {
+      this.$q = $q;
+      this.$scope = $scope;
+      this.$stateParams = $stateParams;
+      this.$translate = $translate;
+      this.exchange = this.$scope.exchange;
+
+      this.EmailPro = EmailPro;
+      this.EmailProPassword = EmailProPassword;
+      this.WucConverterService = WucConverterService;
+
+      this.mxPlan = {};
+      this.originalValues = angular.copy(this.$scope.currentActionData);
+
+      this.selectedAccount = this.$scope.currentActionData;
+      this.selectedAccount.quota = this.$scope.currentActionData.quota
+        ? this.$scope.currentActionData.quota : this.selectedAccount.totalQuota.value;
+
+      this.passwordTooltip = null; // set in this.loadAccountOptions()
+      this.newAccountOptions = {
+        availableDomains: [this.selectedAccount.domain],
+        availableTypes: [this.selectedAccount.accountLicense],
+        quotaArray: [],
+      };
+      this.accountTypeProvider = this.EmailPro.accountTypeProvider;
+      this.accountTypeDedicated = this.EmailPro.accountTypeDedicated;
+      this.accountTypeHosted = this.EmailPro.accountTypeHosted;
+      this.$scope.updateExchangeAccount = () => this.updateExchangeAccount();
+
     }
-    return true;
-  };
 
-  $scope.isMxPlan = function() {
-    return $scope.exchange.isMXPlan;
-  };
+    accountIsValid() {
+      const account = this.selectedAccount;
+      if (this.simplePasswordFlag
+        || this.differentPasswordFlag
+        || this.containsNameFlag) {
+        return false;
+      } if (account && /\s/.test(account.password)) {
+        return false;
+      } if (!account.canBeConfigured && !account.password) {
+        return false;
+      } if (!account.domain || !account.login) {
+        return false;
+      }
+      return true;
+    };
 
-  const getModelToUpdate = function (originalValues, modifiedBuffer) { // eslint-disable-line
-    const model = { primaryEmailAddress: originalValues.primaryEmailAddress };
-    model.login = modifiedBuffer.login !== originalValues.login
-      ? modifiedBuffer.login : originalValues.login;
-    model.displayName = modifiedBuffer.displayName !== originalValues.displayName
-      ? modifiedBuffer.displayName : undefined;
-    model.domain = modifiedBuffer.completeDomain.name !== originalValues.completeDomain.name
-      ? modifiedBuffer.completeDomain.name : originalValues.completeDomain.name;
-    model.firstName = modifiedBuffer.firstName !== originalValues.firstName
-      ? modifiedBuffer.firstName : undefined;
-    model.lastName = modifiedBuffer.lastName !== originalValues.lastName
-      ? modifiedBuffer.lastName : undefined;
-    model.hiddenFromGAL = modifiedBuffer.hiddenFromGAL !== originalValues.hiddenFromGAL
-      ? modifiedBuffer.hiddenFromGAL : undefined;
-    model.accountLicense = modifiedBuffer.accountLicense !== originalValues.accountLicense
-      ? modifiedBuffer.accountLicense : undefined;
-    if($scope.exchange.isMXPlan) {
-      model.quota = modifiedBuffer.quota !== originalValues.quota
-      ? modifiedBuffer.quota : undefined;
-    }
-    return model;
-  };
+    isMxPlan() {
+      return this.exchange.isMXPlan;
+    };
 
-  const getFeaturesToUpdate = function (originalValues, modifiedBuffer) { // eslint-disable-line
-    const model = getModelToUpdate(originalValues, modifiedBuffer);
-
-    if ($scope.exchange.offer === $scope.accountTypeProvider) {
-      model.quota = originalValues.totalQuota.value && modifiedBuffer.quota !== originalValues.quota
+    getModelToUpdate(originalValues, modifiedBuffer) {
+      const model = { primaryEmailAddress: originalValues.primaryEmailAddress };
+      model.login = modifiedBuffer.login !== originalValues.login
+        ? modifiedBuffer.login : originalValues.login;
+      model.displayName = modifiedBuffer.displayName !== originalValues.displayName
+        ? modifiedBuffer.displayName : undefined;
+      model.domain = modifiedBuffer.completeDomain.name !== originalValues.completeDomain.name
+        ? modifiedBuffer.completeDomain.name : originalValues.completeDomain.name;
+      model.firstName = modifiedBuffer.firstName !== originalValues.firstName
+        ? modifiedBuffer.firstName : undefined;
+      model.lastName = modifiedBuffer.lastName !== originalValues.lastName
+        ? modifiedBuffer.lastName : undefined;
+      model.hiddenFromGAL = modifiedBuffer.hiddenFromGAL !== originalValues.hiddenFromGAL
+        ? modifiedBuffer.hiddenFromGAL : undefined;
+      model.accountLicense = modifiedBuffer.accountLicense !== originalValues.accountLicense
+        ? modifiedBuffer.accountLicense : undefined;
+      if(this.exchange.isMXPlan) {
+        model.quota = modifiedBuffer.quota !== originalValues.quota
         ? modifiedBuffer.quota : undefined;
-    }
-    model.password = modifiedBuffer.password;
-    return model;
-  };
+      }
+      return model;
+    };
 
-  $scope.accountTypeProvider = EmailPro.accountTypeProvider;
-  $scope.accountTypeDedicated = EmailPro.accountTypeDedicated;
-  $scope.accountTypeHosted = EmailPro.accountTypeHosted;
+    getFeaturesToUpdate(originalValues, modifiedBuffer) {
+      const model = this.getModelToUpdate(originalValues, modifiedBuffer);
 
-  $scope.selectedAccount = $scope.currentActionData;
-  $scope.selectedAccount.quota = $scope.currentActionData.quota
-    ? $scope.currentActionData.quota : $scope.selectedAccount.totalQuota.value;
+      if (this.exchange.offer === this.accountTypeProvider) {
+        model.quota = originalValues.totalQuota.value && modifiedBuffer.quota !== originalValues.quota
+          ? modifiedBuffer.quota : undefined;
+      }
+      model.password = modifiedBuffer.password;
+      return model;
+    };
 
-  $scope.passwordTooltip = null; // set in $scope.loadAccountOptions()
 
-  $scope.checkTakenEmails = function checkTakenEmails() {
-    $scope.takenEmailError = false;
+    checkTakenEmails() {
+      this.takenEmailError = false;
 
-    if ($scope.takenEmails && $scope.selectedAccount.login) {
-      angular.forEach($scope.takenEmails, (value) => {
-        if (`${$scope.selectedAccount.login.toLowerCase()}@${$scope.selectedAccount.completeDomain.name}` === value.toLowerCase()) {
-          $scope.takenEmailError = true;
+      if (this.takenEmails && this.selectedAccount.login) {
+        angular.forEach(globalThis.takenEmails, (value) => {
+          if (`${this.selectedAccount.login.toLowerCase()}@${this.selectedAccount.completeDomain.name}` === value.toLowerCase()) {
+            this.takenEmailError = true;
+          }
+        });
+      }
+
+      if (this.originalValues.primaryEmailAddress === `${this.selectedAccount.login}@${this.selectedAccount.completeDomain.name}`) {
+        this.takenEmailError = false;
+      }
+    };
+
+    setPasswordsFlag(selectedAccount) {
+      this.differentPasswordFlag = false;
+      this.simplePasswordFlag = false;
+      this.containsNameFlag = false;
+      this.containsSameAccountNameFlag = false;
+
+      _.set(selectedAccount, 'password', selectedAccount.password || '');
+      _.set(selectedAccount, 'passwordConfirmation', selectedAccount.passwordConfirmation || '');
+
+      if (selectedAccount.password !== selectedAccount.passwordConfirmation) {
+        this.differentPasswordFlag = true;
+      }
+
+      if (selectedAccount.password.length > 0) {
+        this.simplePasswordFlag = !this.EmailProPassword.passwordSimpleCheck(
+          selectedAccount.password,
+          true,
+          this.newAccountOptions.minPasswordLength,
+        );
+
+        /*
+          see the password complexity requirements of Microsoft Windows Server (like EmailPro)
+          https://technet.microsoft.com/en-us/library/hh994562%28v=ws.10%29.aspx
+        */
+        if (this.newAccountOptions.passwordComplexityEnabled) {
+          this.simplePasswordFlag = this.simplePasswordFlag
+            || !this.EmailProPassword.passwordComplexityCheck(selectedAccount.password);
+
+          if (selectedAccount.displayName) {
+            this.containsNameFlag = this.EmailProPassword.passwordContainsName(
+              selectedAccount.password,
+              selectedAccount.displayName,
+            );
+          }
+
+          if (!this.containsNameFlag && selectedAccount.login) {
+            if (selectedAccount.password.indexOf(selectedAccount.login) !== -1) {
+              this.containsNameFlag = true;
+            }
+          }
+
+          if (selectedAccount.samaccountName
+            && selectedAccount.password.indexOf(selectedAccount.samaccountName) !== -1) {
+            if (!this.containsSamAccountNameLabel) {
+              this.containsSamAccountNameLabel = this.$translate.instant('emailpro_ACTION_update_account_step1_password_contains_samaccount_name',
+                { t0: selectedAccount.samaccountName });
+            }
+            this.containsSamAccountNameFlag = true;
+          } else {
+            this.containsSamAccountNameFlag = false;
+          }
+        }
+      }
+    };
+
+    needsUpdate() {
+      const modifiedBuffer = this.selectedAccount;
+      const result = !(!modifiedBuffer.password
+        && angular.equals(this.originalValues.login, modifiedBuffer.login)
+        && angular.equals(this.originalValues.displayName, modifiedBuffer.displayName)
+        && angular.equals(this.originalValues.completeDomain.name, modifiedBuffer.completeDomain.name)
+        && angular.equals(this.originalValues.firstName, modifiedBuffer.firstName)
+        && angular.equals(this.originalValues.lastName, modifiedBuffer.lastName)
+        && angular.equals(this.originalValues.hiddenFromGAL, modifiedBuffer.hiddenFromGAL)
+        && angular.equals(this.originalValues.accountLicense, modifiedBuffer.accountLicense)
+        && angular.equals(this.originalValues.quota, modifiedBuffer.quota));
+      return result && this.accountIsValid() && !this.takenEmailError;
+    };
+
+    setQuotaAvailable() {
+      this.newAccountOptions.quotaArray = [];
+      for (let i = this.newAccountOptions.maxQuota;
+        i >= this.newAccountOptions.minQuota; i -= 1) {
+        this.newAccountOptions.quotaArray.push(i);
+      }
+    };
+
+    canChangePrimary() {
+      if (this.selectedAccount.is25g) {
+        return this.selectedAccount.primaryEmailAddress.split('@')[1] === 'configureme.me';
+      }
+      return this.newAccountOptions !== null;
+    };
+
+    getPasswordPlaceholder() {
+      return this.selectedAccount.canBeConfigured ? this.$translate.instant('emailpro_ACTION_update_account_step1_password_placeholder') : ' ';
+    };
+
+    getCompleteDomain(domainName) {
+      let result;
+      angular.forEach(this.newAccountOptions.availableDomains, (value) => {
+        if (value.name === domainName) {
+          result = value;
         }
       });
-    }
 
-    if (originalValues.primaryEmailAddress === `${$scope.selectedAccount.login}@${$scope.selectedAccount.completeDomain.name}`) {
-      $scope.takenEmailError = false;
-    }
-  };
+      // if the current domain is not in the domain's list (dummy account)
+      // select by default the first available
+      if (result === undefined) {
+        result = _.first(this.newAccountOptions.availableDomains);
+      }
+      return result;
+    };
 
-  $scope.setPasswordsFlag = function setPasswordsFlag(selectedAccount) {
-    $scope.differentPasswordFlag = false;
-    $scope.simplePasswordFlag = false;
-    $scope.containsNameFlag = false;
-    $scope.containsSameAccountNameFlag = false;
+    loadAccountOptions() {
+      this.noDomainMessage = null;
+      if(this.isMxPlan()) {
+        this.EmailPro.getCapabilities(this.$stateParams.productId, this.selectedAccount.primaryEmailAddress)
+          .then(result => {
+            this.mxPlan.quotaArray = result.quotas;
+          });
+      }
+      this.EmailPro.getNewAccountOptions(this.$stateParams.productId).then((data) => {
+        this.canDeleteOutlookAtExpiration = true;
 
-    _.set(selectedAccount, 'password', selectedAccount.password || '');
-    _.set(selectedAccount, 'passwordConfirmation', selectedAccount.passwordConfirmation || '');
+        // No restrictions for Outlook suppression,
+        this.newAccountOptions = data;
+        this.setQuotaAvailable();
+        this.takenEmails = data.takenEmails;
 
-    if (selectedAccount.password !== selectedAccount.passwordConfirmation) {
-      $scope.differentPasswordFlag = true;
-    }
+        if (data.availableDomains.length === 0) {
+          this.setMessage(this.$translate.instant('emailpro_ACTION_add_no_domains'), { status: 'error' });
+          this.resetAction();
+          this.noDomainMessage = this.$translate.instant('emailpro_ACTION_add_no_domains');
 
-    if (selectedAccount.password.length > 0) {
-      $scope.simplePasswordFlag = !EmailProPassword.passwordSimpleCheck(
-        selectedAccount.password,
-        true,
-        $scope.newAccountOptions.minPasswordLength,
-      );
-
-      /*
-        see the password complexity requirements of Microsoft Windows Server (like EmailPro)
-        https://technet.microsoft.com/en-us/library/hh994562%28v=ws.10%29.aspx
-      */
-      if ($scope.newAccountOptions.passwordComplexityEnabled) {
-        $scope.simplePasswordFlag = $scope.simplePasswordFlag
-          || !EmailProPassword.passwordComplexityCheck(selectedAccount.password);
-
-        if (selectedAccount.displayName) {
-          $scope.containsNameFlag = EmailProPassword.passwordContainsName(
-            selectedAccount.password,
-            selectedAccount.displayName,
+          this.error = true;
+          this.setMessage(this.$translate.instant('emailpro_ACTION_add_no_domains'));
+        } else {
+          this.accountIsValid();
+          this.selectedAccount.completeDomain = this.getCompleteDomain(
+            this.selectedAccount.completeDomain.name,
           );
         }
 
-        if (!$scope.containsNameFlag && selectedAccount.login) {
-          if (selectedAccount.password.indexOf(selectedAccount.login) !== -1) {
-            $scope.containsNameFlag = true;
-          }
-        }
+        this.passwordTooltip = this.newAccountOptions.passwordComplexityEnabled
+          ? this.$translate.instant('emailpro_ACTION_update_account_step1_complex_password_tooltip',
+            { t0: this.newAccountOptions.minPasswordLength })
+          : this.$translate.instant('emailpro_ACTION_update_account_step1_simple_password_tooltip',
+            { t0: this.newAccountOptions.minPasswordLength });
+      }, (failure) => {
+        this.setMessage(this.$translate.instant('emailpro_ACTION_add_account_option_fail'), failure.data);
+        this.resetAction();
+      });
+    };
 
-        if (selectedAccount.samaccountName
-          && selectedAccount.password.indexOf(selectedAccount.samaccountName) !== -1) {
-          if (!$scope.containsSamAccountNameLabel) {
-            $scope.containsSamAccountNameLabel = $translate.instant('emailpro_ACTION_update_account_step1_password_contains_samaccount_name',
-              { t0: selectedAccount.samaccountName });
-          }
-          $scope.containsSamAccountNameFlag = true;
-        } else {
-          $scope.containsSamAccountNameFlag = false;
-        }
-      }
-    }
-  };
+    updateExchangeAccount() {
+      this.$scope.resetAction();
+      this.$scope.setMessage(this.$translate.instant('emailpro_dashboard_action_doing'));
 
-  $scope.needsUpdate = function needsUpdate() {
-    const modifiedBuffer = $scope.selectedAccount;
-    const result = !(!modifiedBuffer.password
-      && angular.equals(originalValues.login, modifiedBuffer.login)
-      && angular.equals(originalValues.displayName, modifiedBuffer.displayName)
-      && angular.equals(originalValues.completeDomain.name, modifiedBuffer.completeDomain.name)
-      && angular.equals(originalValues.firstName, modifiedBuffer.firstName)
-      && angular.equals(originalValues.lastName, modifiedBuffer.lastName)
-      && angular.equals(originalValues.hiddenFromGAL, modifiedBuffer.hiddenFromGAL)
-      && angular.equals(originalValues.accountLicense, modifiedBuffer.accountLicense)
-      && angular.equals(originalValues.quota, modifiedBuffer.quota));
-    return result && accountIsValid() && !$scope.takenEmailError;
-  };
-
-  $scope.setQuotaAvailable = function setQuotaAvailable() {
-    $scope.newAccountOptions.quotaArray = [];
-    for (let i = $scope.newAccountOptions.maxQuota;
-      i >= $scope.newAccountOptions.minQuota; i -= 1) {
-      $scope.newAccountOptions.quotaArray.push(i);
-    }
-  };
-
-  $scope.canChangePrimary = function canChangePrimary() {
-    if ($scope.selectedAccount.is25g) {
-      return $scope.selectedAccount.primaryEmailAddress.split('@')[1] === 'configureme.me';
-    }
-    return $scope.newAccountOptions !== null;
-  };
-
-  $scope.newAccountOptions = {
-    availableDomains: [$scope.selectedAccount.domain],
-    availableTypes: [$scope.selectedAccount.accountLicense],
-    quotaArray: [],
-  };
-
-  $scope.getPasswordPlaceholder = function getPasswordPlaceholder() {
-    return $scope.selectedAccount.canBeConfigured ? $translate.instant('emailpro_ACTION_update_account_step1_password_placeholder') : ' ';
-  };
-
-  $scope.getCompleteDomain = function getCompleteDomain(domainName) {
-    let result;
-    angular.forEach($scope.newAccountOptions.availableDomains, (value) => {
-      if (value.name === domainName) {
-        result = value;
-      }
-    });
-
-    // if the current domain is not in the domain's list (dummy account)
-    // select by default the first available
-    if (result === undefined) {
-      result = _.first($scope.newAccountOptions.availableDomains);
-    }
-    return result;
-  };
-
-  $scope.loadAccountOptions = function loadAccountOptions() {
-    $scope.noDomainMessage = null;
-    if($scope.isMxPlan()) {
-      EmailPro.getCapabilities($stateParams.productId, $scope.selectedAccount.primaryEmailAddress)
-        .then(result => {
-          $scope.mxPlan.quotaArray = result.quotas;
-        });
-    }
-    EmailPro.getNewAccountOptions($stateParams.productId).then((data) => {
-      $scope.canDeleteOutlookAtExpiration = true;
-
-      // No restrictions for Outlook suppression,
-      $scope.newAccountOptions = data;
-
-      $scope.setQuotaAvailable();
-      $scope.takenEmails = data.takenEmails;
-
-      if (data.availableDomains.length === 0) {
-        $scope.setMessage($translate.instant('emailpro_ACTION_add_no_domains'), { status: 'error' });
-        $scope.resetAction();
-        $scope.noDomainMessage = $translate.instant('emailpro_ACTION_add_no_domains');
-
-        $scope.error = true;
-        $scope.setMessage($translate.instant('emailpro_ACTION_add_no_domains'));
-      } else {
-        accountIsValid();
-        $scope.selectedAccount.completeDomain = $scope.getCompleteDomain(
-          $scope.selectedAccount.completeDomain.name,
-        );
+      if (this.needsUpdate()) {
+        return this.EmailPro
+          .updateAccount(
+            this.$stateParams.productId,
+            this.getFeaturesToUpdate(this.originalValues, this.selectedAccount),
+          )
+          .then(() => {
+            this.$scope.setMessage(this.$translate.instant(`${this.exchange.billingPlan}_ACTION_update_account_success_message`), { type: 'success' });
+          })
+          .catch((failure) => {
+            this.$scope.setMessage(this.$translate.instant(`${this.exchange.billingPlan}_ACTION_update_account_error_message`), failure);
+          });
       }
 
-      $scope.passwordTooltip = $scope.newAccountOptions.passwordComplexityEnabled
-        ? $translate.instant('emailpro_ACTION_update_account_step1_complex_password_tooltip',
-          { t0: $scope.newAccountOptions.minPasswordLength })
-        : $translate.instant('emailpro_ACTION_update_account_step1_simple_password_tooltip',
-          { t0: $scope.newAccountOptions.minPasswordLength });
-    }, (failure) => {
-      $scope.setMessage($translate.instant('emailpro_ACTION_add_account_option_fail'), failure.data);
-      $scope.resetAction();
-    });
-  };
+      return this.$q.when();
+    };
 
-  $scope.updateExchangeAccount = function updateExchangeAccount() {
-    $scope.resetAction();
-    $scope.setMessage($translate.instant('emailpro_dashboard_action_doing'));
-
-    if ($scope.needsUpdate()) {
-      return EmailPro
-        .updateAccount(
-          $stateParams.productId,
-          getFeaturesToUpdate(originalValues, $scope.selectedAccount),
-        )
-        .then(() => {
-          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_success_message`), { type: 'success' });
-        })
-        .catch((failure) => {
-          $scope.setMessage($translate.instant(`${$scope.exchange.billingPlan}_ACTION_update_account_error_message`), failure);
-        });
+    convertBytesSize(nb, unit, decimalWanted = 0) {
+      const res = filesize(this.WucConverterService.convertToOctet(nb, unit), {
+        output: 'object',
+        round: decimalWanted,
+        base: -1,
+      });
+      const resUnit = this.$translate.instant(`unit_size_${res.symbol}`);
+      return `${res.value} ${resUnit}`;
     }
-
-    return $q.when();
-  };
 });

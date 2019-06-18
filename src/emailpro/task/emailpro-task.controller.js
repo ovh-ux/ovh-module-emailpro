@@ -14,11 +14,12 @@ angular.module('Module.emailpro.controllers')
           return {
             data: $scope.tasksList,
             meta: {
-              totalCount: $scope.tasksList.count,
+              totalCount: $scope.tasksList.length,
             },
           };
         }).catch((failure) => {
           $scope.setMessage($translate.instant('emailpro_tab_TASKS_error_message'), failure.data);
+          return { data: null, meta: { totalCount: 0 }};
         });
     };
 
