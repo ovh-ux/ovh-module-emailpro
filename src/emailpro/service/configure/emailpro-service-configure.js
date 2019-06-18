@@ -160,6 +160,10 @@ angular.module('App').controller('EmailProServicesConfigureCtrl', ['$scope', '$t
   };
 
   this.lockoutThresholdCheck = function (input) {
+    if (!input) {
+      return null;
+    }
+
     let intValue;
     const value = input.$viewValue;
 
@@ -186,6 +190,10 @@ angular.module('App').controller('EmailProServicesConfigureCtrl', ['$scope', '$t
   };
 
   this.lockoutObservationWindowCheck = function (input) {
+    if (!input) {
+      return null;
+    }
+
     let intValue;
     const value = input.$viewValue;
 
@@ -221,6 +229,10 @@ angular.module('App').controller('EmailProServicesConfigureCtrl', ['$scope', '$t
   };
 
   this.lockoutDurationCheck = function (input) {
+    if (!input) {
+      return null;
+    }
+
     let intValue;
     const value = input.$viewValue;
 
