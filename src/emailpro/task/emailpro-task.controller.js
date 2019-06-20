@@ -6,6 +6,8 @@ angular.module('Module.emailpro.controllers')
     $scope.stateDone = 'DONE';
     $scope.stateCancelled = 'CANCELLED';
     $scope.stateTodo = 'TODO';
+    $scope.mailinglist = "mailinglist";
+    $scope.redirection = "redirection";
 
     $scope.loadPaginated = function ({ pageSize, offset }) {
       return EmailPro.getTasks($stateParams.productId, pageSize, offset - 1, $scope.exchange.associatedDomainName)

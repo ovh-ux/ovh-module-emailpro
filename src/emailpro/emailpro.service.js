@@ -263,7 +263,11 @@ angular
             domain: domainName,
             id: taskId,
           }
-        });
+        }).then(res => {
+          res.todoDate = res.date;
+          res.finishDate = res.date;
+          return res;
+        })
       }
 
       getMxTasks(serviceName) {

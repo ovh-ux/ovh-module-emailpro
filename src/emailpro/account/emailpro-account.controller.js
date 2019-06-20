@@ -9,6 +9,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
 
   $scope.stateTaskError = 'TASK_ON_ERROR';
   $scope.stateTaskDoing = 'TASK_ON_DOING';
+  $scope.GB = 'GB';
 
   $scope.exchangeTypeHosted = EmailPro.accountTypeHosted;
   $scope.exchangeTypeDedicated = EmailPro.accountTypeDedicated;
