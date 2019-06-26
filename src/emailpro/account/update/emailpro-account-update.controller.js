@@ -1,8 +1,15 @@
 angular.module('Module.emailpro.controllers').controller(
   'EmailProUpdateAccountCtrl',
   class EmailProUpdateAccountCtrl {
-
-    constructor($q, $scope, $stateParams, $translate, EmailPro, EmailProPassword, WucConverterService) {
+    constructor(
+      $q,
+      $scope,
+      $stateParams,
+      $translate,
+      EmailPro,
+      EmailProPassword,
+      WucConverterService,
+    ) {
       this.$q = $q;
       this.$scope = $scope;
       this.$stateParams = $stateParams;
@@ -30,7 +37,6 @@ angular.module('Module.emailpro.controllers').controller(
       this.accountTypeDedicated = this.EmailPro.accountTypeDedicated;
       this.accountTypeHosted = this.EmailPro.accountTypeHosted;
       this.$scope.updateExchangeAccount = () => this.updateExchangeAccount();
-
     }
 
     accountIsValid() {
@@ -47,11 +53,11 @@ angular.module('Module.emailpro.controllers').controller(
         return false;
       }
       return true;
-    };
+    }
 
     isMxPlan() {
       return this.exchange.isMXPlan;
-    };
+    }
 
     getModelToUpdate(originalValues, modifiedBuffer) {
       const model = { primaryEmailAddress: originalValues.primaryEmailAddress };
@@ -69,30 +75,31 @@ angular.module('Module.emailpro.controllers').controller(
         ? modifiedBuffer.hiddenFromGAL : undefined;
       model.accountLicense = modifiedBuffer.accountLicense !== originalValues.accountLicense
         ? modifiedBuffer.accountLicense : undefined;
-      if(this.exchange.isMXPlan) {
+      if (this.exchange.isMXPlan) {
         model.quota = modifiedBuffer.quota !== originalValues.quota
-        ? modifiedBuffer.quota : undefined;
+          ? modifiedBuffer.quota : undefined;
       }
       return model;
-    };
+    }
 
     getFeaturesToUpdate(originalValues, modifiedBuffer) {
       const model = this.getModelToUpdate(originalValues, modifiedBuffer);
 
       if (this.exchange.offer === this.accountTypeProvider) {
-        model.quota = originalValues.totalQuota.value && modifiedBuffer.quota !== originalValues.quota
+        model.quota = originalValues.totalQuota.value
+          && modifiedBuffer.quota !== originalValues.quota
           ? modifiedBuffer.quota : undefined;
       }
       model.password = modifiedBuffer.password;
       return model;
-    };
+    }
 
 
     checkTakenEmails() {
       this.takenEmailError = false;
 
       if (this.takenEmails && this.selectedAccount.login) {
-        angular.forEach(globalThis.takenEmails, (value) => {
+        angular.forEach(this.$scope.takenEmails, (value) => {
           if (`${this.selectedAccount.login.toLowerCase()}@${this.selectedAccount.completeDomain.name}` === value.toLowerCase()) {
             this.takenEmailError = true;
           }
@@ -102,7 +109,7 @@ angular.module('Module.emailpro.controllers').controller(
       if (this.originalValues.primaryEmailAddress === `${this.selectedAccount.login}@${this.selectedAccount.completeDomain.name}`) {
         this.takenEmailError = false;
       }
-    };
+    }
 
     setPasswordsFlag(selectedAccount) {
       this.differentPasswordFlag = false;
@@ -157,21 +164,24 @@ angular.module('Module.emailpro.controllers').controller(
           }
         }
       }
-    };
+    }
 
     needsUpdate() {
       const modifiedBuffer = this.selectedAccount;
       const result = !(!modifiedBuffer.password
         && angular.equals(this.originalValues.login, modifiedBuffer.login)
         && angular.equals(this.originalValues.displayName, modifiedBuffer.displayName)
-        && angular.equals(this.originalValues.completeDomain.name, modifiedBuffer.completeDomain.name)
+        && angular.equals(
+          this.originalValues.completeDomain.name,
+          modifiedBuffer.completeDomain.name,
+        )
         && angular.equals(this.originalValues.firstName, modifiedBuffer.firstName)
         && angular.equals(this.originalValues.lastName, modifiedBuffer.lastName)
         && angular.equals(this.originalValues.hiddenFromGAL, modifiedBuffer.hiddenFromGAL)
         && angular.equals(this.originalValues.accountLicense, modifiedBuffer.accountLicense)
         && angular.equals(this.originalValues.quota, modifiedBuffer.quota));
       return result && this.accountIsValid() && !this.takenEmailError;
-    };
+    }
 
     setQuotaAvailable() {
       this.newAccountOptions.quotaArray = [];
@@ -179,18 +189,18 @@ angular.module('Module.emailpro.controllers').controller(
         i >= this.newAccountOptions.minQuota; i -= 1) {
         this.newAccountOptions.quotaArray.push(i);
       }
-    };
+    }
 
     canChangePrimary() {
       if (this.selectedAccount.is25g) {
         return this.selectedAccount.primaryEmailAddress.split('@')[1] === 'configureme.me';
       }
       return this.newAccountOptions !== null;
-    };
+    }
 
     getPasswordPlaceholder() {
       return this.selectedAccount.canBeConfigured ? this.$translate.instant('emailpro_ACTION_update_account_step1_password_placeholder') : ' ';
-    };
+    }
 
     getCompleteDomain(domainName) {
       let result;
@@ -206,15 +216,17 @@ angular.module('Module.emailpro.controllers').controller(
         result = _.first(this.newAccountOptions.availableDomains);
       }
       return result;
-    };
+    }
 
     loadAccountOptions() {
       this.noDomainMessage = null;
-      if(this.isMxPlan()) {
-        this.EmailPro.getCapabilities(this.$stateParams.productId, this.selectedAccount.primaryEmailAddress)
-          .then(result => {
-            this.mxPlan.quotaArray = result.quotas;
-          });
+      if (this.isMxPlan()) {
+        this.EmailPro.getCapabilities(
+          this.$stateParams.productId,
+          this.selectedAccount.primaryEmailAddress,
+        ).then((result) => {
+          this.mxPlan.quotaArray = result.quotas;
+        });
       }
       this.EmailPro.getNewAccountOptions(this.$stateParams.productId).then((data) => {
         this.canDeleteOutlookAtExpiration = true;
@@ -247,7 +259,7 @@ angular.module('Module.emailpro.controllers').controller(
         this.setMessage(this.$translate.instant('emailpro_ACTION_add_account_option_fail'), failure.data);
         this.resetAction();
       });
-    };
+    }
 
     updateExchangeAccount() {
       this.$scope.resetAction();
@@ -268,10 +280,10 @@ angular.module('Module.emailpro.controllers').controller(
       }
 
       return this.$q.when();
-    };
+    }
 
     convertBytesSize(nb, unit, decimalWanted = 0) {
-      const res = filesize(this.WucConverterService.convertToOctet(nb, unit), {
+      const res = window.filesize(this.WucConverterService.convertToOctet(nb, unit), {
         output: 'object',
         round: decimalWanted,
         base: -1,
@@ -279,4 +291,5 @@ angular.module('Module.emailpro.controllers').controller(
       const resUnit = this.$translate.instant(`unit_size_${res.symbol}`);
       return `${res.value} ${resUnit}`;
     }
-});
+  },
+);

@@ -189,15 +189,14 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
       });
   };
 
-  $scope.convertBytesSize = function(nb, unit, decimalWanted = 0) {
-    const res = filesize($scope.WucConverterService.convertToOctet(nb, unit), {
+  $scope.convertBytesSize = function (nb, unit, decimalWanted = 0) {
+    const res = window.filesize($scope.WucConverterService.convertToOctet(nb, unit), {
       output: 'object',
       round: decimalWanted,
       base: -1,
     });
     const resUnit = $translate.instant(`unit_size_${res.symbol}`);
     return `${res.value} ${resUnit}`;
-  }
-
+  };
   init();
 });
