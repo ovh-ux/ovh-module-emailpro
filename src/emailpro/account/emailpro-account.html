@@ -118,7 +118,7 @@
                                                 }"
                                          data-ng-style="{'width': account.percentUse + '%'}">
                                         <span class="progress-bar-label"
-                                              data-ng-bind="(account.usedQuota.value + ' ' + ('unit_size_' + account.usedQuota.unit | translate) + ' / ' + convertBytesSize(account.totalQuota.value , GB, 2))">
+                                              data-ng-bind="(account.usedQuota.value + ' ' + ('unit_size_' + account.usedQuota.unit | translate) + ' / ' + convertBytesSize(account.totalQuota.value , SIZE_UNIT, 2))">
                                         </span>
                                     </div>
                                 </div>

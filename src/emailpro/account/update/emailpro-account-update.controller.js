@@ -1,6 +1,7 @@
 angular.module('Module.emailpro.controllers').controller(
   'EmailProUpdateAccountCtrl',
   class EmailProUpdateAccountCtrl {
+    /* @ngInject */
     constructor(
       $q,
       $scope,
