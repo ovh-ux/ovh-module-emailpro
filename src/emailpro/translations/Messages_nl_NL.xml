@@ -735,6 +735,8 @@
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">De getoonde lijst is niet compleet, sommige taken konden niet juist worden geladen.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Er is een fout opgetreden tijdens het laden van de taken.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Het beveiligingsbeleid van de account</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">hier</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">om een ​​nieuw domein toe te voegen.</translation>
