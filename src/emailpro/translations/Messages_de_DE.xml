@@ -292,7 +292,7 @@
    <translation id="emailpro_ACTION_order_accounts_step1_user_error" qtlid="499943">Fehler beim Laden der Informationen des Benutzers</translation>
 
 
-   <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Einen Account hinzufügen</translation>
+   <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Account hinzufügen</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Ich möchte, dass OVH die sofortige Lieferung der Dienstleistung nach Validierung der Bestellung durchführt, und bestätige, dass ich in diesem Fall auf mein Widerrufsrecht verzichte.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Beim Laden Ihrer Domains ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Anzeigename</translation>
@@ -735,6 +735,8 @@
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">Die angezeigte Liste ist nicht vollständig, einige Aufgaben konnten nicht korrekt geladen werden.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Beim Laden der Tasks ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Sicherheitseinstellungen der Accounts</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">hier</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">um eine neue Domain hinzuzufügen.</translation>

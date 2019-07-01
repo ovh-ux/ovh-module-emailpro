@@ -741,6 +741,8 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">Zobrazený seznam není kompletní, některé úkoly se nenačetli správně.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Při načítání úkolů došlo k chybě.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Bezpečnostní pravidla účtu</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">zde</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">pro přidání nové domény.</translation>
