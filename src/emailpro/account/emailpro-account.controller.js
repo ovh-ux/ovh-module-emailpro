@@ -1,20 +1,24 @@
-angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate) => {
+import {
+  SIZE_UNIT, STATE_TASK_DOING, STATE_TASK_ERROR, ACCOUNT_TYPES, FILTER_TYPE,
+} from './emailpro-constants';
+
+angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate, WucConverterService) => {
   $scope.stateCreating = EmailPro.stateCreating;
   $scope.stateDeleting = EmailPro.stateDeleting;
   $scope.stateOk = EmailPro.stateOk;
   $scope.stateReopening = EmailPro.stateReopening;
   $scope.stateSuspended = EmailPro.stateSuspended;
   $scope.stateSuspending = EmailPro.stateSuspending;
-
-  $scope.stateTaskError = 'TASK_ON_ERROR';
-  $scope.stateTaskDoing = 'TASK_ON_DOING';
+  $scope.stateTaskError = STATE_TASK_ERROR;
+  $scope.stateTaskDoing = STATE_TASK_DOING;
+  $scope.SIZE_UNIT = SIZE_UNIT;
 
   $scope.exchangeTypeHosted = EmailPro.accountTypeHosted;
   $scope.exchangeTypeDedicated = EmailPro.accountTypeDedicated;
   $scope.exchangeTypeProvider = EmailPro.accountTypeProvider;
 
-  $scope.accountTypes = ['ALL', 'BASIC', 'STANDARD', 'ENTERPRISE'];
-  $scope.filterType = 'ALL';
+  $scope.accountTypes = ACCOUNT_TYPES;
+  $scope.filterType = FILTER_TYPE;
 
   $scope.setFilter = function () {
     $scope.$broadcast('paginationServerSide.loadPage', 1, 'accountsTable');
@@ -187,5 +191,14 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
       });
   };
 
+  $scope.convertBytesSize = function (nb, unit, decimalWanted = 0) {
+    const res = window.filesize(WucConverterService.convertToOctet(nb, unit), {
+      output: 'object',
+      round: decimalWanted,
+      base: -1,
+    });
+    const resUnit = $translate.instant(`unit_size_${res.symbol}`);
+    return `${res.value} ${resUnit}`;
+  };
   init();
 });
