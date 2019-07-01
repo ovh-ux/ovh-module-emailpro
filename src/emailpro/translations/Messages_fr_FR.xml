@@ -735,8 +735,8 @@
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">La liste affichée n'est pas complète, certaines tâches n'ont pu être chargées correctement.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Une erreur est survenue lors du chargement des tâches.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Politique de sécurité des comptes</translation>
-   <translation id="emailpro_tab_TASKS_mailinglist">Modification mailing-list</translation>
-   <translation id="emailpro_tab_TASKS_redirection">Modification redirection</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">ici</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">pour ajouter un nouveau domaine.</translation>
