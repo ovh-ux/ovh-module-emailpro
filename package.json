@@ -1,6 +1,6 @@
 {
   "name": "ovh-module-emailpro",
-  "version": "7.2.7",
+  "version": "7.2.8",
   "description": "E-mail Pro module.",
   "keywords": [
     "angular",
