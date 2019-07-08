@@ -1,3 +1,15 @@
+## [7.2.8](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.7...v7.2.8) (2019-07-08)
+
+
+### Bug Fixes
+
+* add quota for mx plans  ([#215](https://github.com/ovh-ux/ovh-module-emailpro/issues/215)) ([489eecf](https://github.com/ovh-ux/ovh-module-emailpro/commit/489eecf))
+* **i18n:** retrieve translations ([63a444e](https://github.com/ovh-ux/ovh-module-emailpro/commit/63a444e))
+* **i18n:** retrieve translations ([#221](https://github.com/ovh-ux/ovh-module-emailpro/issues/221)) ([6cbf0f8](https://github.com/ovh-ux/ovh-module-emailpro/commit/6cbf0f8))
+* **i18n:** submit translations ([9224aa6](https://github.com/ovh-ux/ovh-module-emailpro/commit/9224aa6))
+
+
+
 ## [7.2.7](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.6...v7.2.7) (2019-06-18)
 
 
