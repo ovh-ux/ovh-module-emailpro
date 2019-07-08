@@ -767,8 +767,8 @@ Definisci un valore compreso fra 3 e 14 caratteri o evita di inserire una passwo
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">La lista visualizzata non è completa, non è stato possibile modificare alcuni task in modo corretto.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Si è verificato un errore nel caricamento dei task</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Politica di sicurezza degli account</translation>
-   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
-   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modifica mailing list</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modifica reindirizzamento</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">qui</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">per aggiungere un nuovo dominio</translation>
