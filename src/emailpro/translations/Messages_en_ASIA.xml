@@ -737,8 +737,8 @@ I therefore explicitly renounce my right to cancel under the provisions of Artic
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">The list displayed is incomplete, some tasks did not load correctly.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">An error has occurred loading the tasks.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Account security policy</translation>
-   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
-   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Mailing list modification</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Redirection modification</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">here</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">to add a new domain.</translation>
