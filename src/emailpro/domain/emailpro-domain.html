@@ -115,7 +115,7 @@
                                     <button class="oui-status oui-status_error" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_mx"
                                             data-ng-click="setAction('emailpro/domain/mx-autoconfig/emailpro-domain-mx-autoconfig', domain)"
-                                            data-ng-if="domain.mxValid === false">
+                                            data-ng-if="!domain.mxValid">
                                     </button>
                                     <button class="oui-status oui-status_success" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_mx"
@@ -128,11 +128,11 @@
                                     <button class="oui-status oui-status_error" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_srv"
                                             data-ng-click="setAction('emailpro/domain/srv-autoconfig/emailpro-domain-srv-autoconfig', domain)"
-                                            data-ng-if="domain.srvValid === false">
+                                            data-ng-if="!domain.srvValid && !exchange.isMXPlan">
                                     </button>
                                     <button class="oui-status oui-status_success" type="button"
                                             data-translate="emailpro_tab_domain_diagnostic_srv"
-                                            data-ng-if="domain.srvValid"
+                                            data-ng-if="domain.srvValid && !exchange.isMXPlan"
                                             data-simplepopover="{{domain.srvTooltip}}"
                                             data-simplepopover-title="{{ 'emailpro_tab_domain_diagnostic_srv_title' | translate }}"
                                             data-simplepopover-placement="top"

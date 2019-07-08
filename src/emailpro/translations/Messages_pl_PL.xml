@@ -738,6 +738,8 @@
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">Lista jest niekompletna. Niektóre zadania nie zostały poprawnie załadowane.</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Wystąpił błąd podczas wyświetlania zadań.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Polityka bezpieczeństwa kont</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Zmiana listy mailingowej </translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Zmiana przekierowania</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">tutaj</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">aby dodać nową domenę.</translation>
