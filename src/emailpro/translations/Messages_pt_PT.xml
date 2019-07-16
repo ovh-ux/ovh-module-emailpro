@@ -40,7 +40,7 @@
    <translation id="emailpro-mxplan_resilitation_action_failure" qtlid="518193">Ocorreu um erro ao eliminar o serviço E-mail MX Plan.</translation>
 
    <translation id="emailpro_resilitation_cancel_action_success" qtlid="375127">O serviço e-mail Pro será renovado no final do período de subscrição.</translation>
-   <translation id="emailpro-mxplan_resilitation_cancel_action_success" qtlid="518206">o serviço E-mail MX Plan será renovado na data de expiração.</translation>
+   <translation id="emailpro-mxplan_resilitation_cancel_action_success" qtlid="518206">O serviço E-mail MX Plan será renovado na data de expiração.</translation>
 
    <translation id="emailpro_resilitation_cancel_action_intro" qtlid="375140">O cancelamento do serviço E-mail Pro "{0}" está programado para o final do período de subscrição. <br /><br />Tem a certeza que deseja anular este cancelamento? A renovação automática do serviço será novamente ativada.</translation>
    <translation id="emailpro-mxplan_resilitation_cancel_action_intro" qtlid="518219">A rescisão do serviço E-mail MX Plan "{0}" está programado para a data de expiração. <br /><br />Tem a certeza de que quer anular esta rescisão? O serviço passará para a renovação automática.</translation>
@@ -48,7 +48,7 @@
    <translation id="emailpro_tab_domain_no_domains_1" qtlid="375153">Adicione um domínio para poder criar contas de E-mail Pro. Clique</translation>
    <translation id="emailpro-mxplan_tab_domain_no_domains_1" qtlid="518232">Adicione um domínio para criar contas MX Plan. Clique</translation>
    <translation id="emailpro_tab_domain_diagnostic_mx_no_antispam" qtlid="375166">Se usar o modo «não-autoritário» / nonauthoritative (E-mail Pro + outro sistema de e-mail) com um sistema de e-mail não alojado na OVH:</translation>
-   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_antispam" qtlid="518245">Se utilizar o modo autoritário (E-mail MX Plan + outro sistema de correio) com um sistema de correioa não alojado pela OVH:</translation>
+   <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_no_antispam" qtlid="518245">Se utilizar o modo não autoritário (E-mail MX Plan + outro sistema de correio) com um sistema de correioa não alojado pela OVH:</translation>
 
    <translation id="emailpro_tab_domain_diagnostic_mx_antispam" qtlid="375179">Se usar o modo «autoritário» / authoritative (só com E-mail Pro) ou nonauthoritative com um sistema de e-mail alojado na OVH:</translation>
    <translation id="emailpro-mxplan_tab_domain_diagnostic_mx_antispam" qtlid="518258">Se utilizar o modo autoritário (E-mail MX Plan apenas) ou não autoritário com um sistema de mensagens alojado (e-mail partilhado) pela OVH:</translation>
@@ -293,6 +293,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Adicionar uma conta</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Encomendar contas</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Reconheço que a OVH procederá a execução imediata da prestação a contar a partir da validação do pagamento e, a este título, renuncio expressamente o exercício do meu direito de resolução, de acordo com o DL n.º 24/2014 de 14 de Fevereiro.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Ocorreu um erro aquando do carregamento dos seus domínios.</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Nome a mostrar</translation>
@@ -735,8 +736,8 @@
    <translation id="emailpro_tab_TASKS_partial" qtlid="137426">A lista não está completa, não é possível mostrar algumas operações</translation>
    <translation id="emailpro_tab_TASKS_error_message" qtlid="144097">Erro ao processar apresentação das tarefas.</translation>
    <translation id="emailpro_tab_TASKS_SET_SERVICE" qtlid="174841">Politica de segurança das contas</translation>
-   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modification mailing-list</translation>
-   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modification redirection</translation>
+   <translation id="emailpro_tab_TASKS_mailinglist" qtlid="525184">Modificação da mailing-list</translation>
+   <translation id="emailpro_tab_TASKS_redirection" qtlid="525197">Modificação do redirecionamento</translation>
 
    <translation id="emailpro_tab_domain_no_domains_2" qtlid="137452">aqui</translation>
    <translation id="emailpro_tab_domain_no_domains_3" qtlid="137465">para adicionar um novo domínio.</translation>

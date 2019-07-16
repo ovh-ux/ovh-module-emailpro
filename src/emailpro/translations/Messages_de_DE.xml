@@ -293,6 +293,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Account hinzufügen</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Accounts bestellen</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Ich möchte, dass OVH die sofortige Lieferung der Dienstleistung nach Validierung der Bestellung durchführt, und bestätige, dass ich in diesem Fall auf mein Widerrufsrecht verzichte.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Beim Laden Ihrer Domains ist ein Fehler aufgetreten.</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Anzeigename</translation>

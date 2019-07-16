@@ -324,6 +324,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Aggiungi un account</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Ordina account</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Riconosco che OVH procederà all'esecuzione immediata della prestazione a contare dalla conferma del mio ordine e a questo titolo rinuncio espressamente a esercitare il mio diritto di recesso, conformemente alle disposizione dell'articolo L.121-21-8 del "Code de la Consommation" (codice del consumo francese).</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Si è verificato un errore nel caricamento dei tuoi domini</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Nome da visualizzare</translation>

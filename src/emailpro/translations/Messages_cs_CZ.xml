@@ -298,6 +298,7 @@ V takovém případě prosím vytvořte MX záznam pro svou doménu manuálně (
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Přidat účet</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Objednávka účtů</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Souhlasím, že OVH nastaví službu okamžitě po schválení objednávky a vzdávám se proto práva na zrušení služby podle Článku L.121-21-8.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Při načítání Vašich domén došlo k chybě</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Zobrazit název</translation>

@@ -293,6 +293,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Lisää tili</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Tilaa tilejä</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Hyväksyn, että OVH laittaa palvelun pystyyn välittömästi hyväksyttyään tilaukseni, ja täten yksiselitteisesti luovun oikeudestani perumiseen Kuluttajansuojalain 6:16. §:n mukaisesti, Asiakkaalla ei ole oikeutta peruuttaa Palvelun tilausta tai uusintaa.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Tapahtui virhe ladattaessa verkkotunnuksiasi</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Näyttönimi</translation>
