@@ -293,6 +293,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Add an account</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Order accounts</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">I accept that OVH will set up the service immediately on validating my order, and &#13;
 I therefore explicitly renounce my right to cancel under the provisions of Article L.121-21-8 of the Consumer Code.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">An error occurred when loading your domains</translation>
