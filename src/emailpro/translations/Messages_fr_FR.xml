@@ -293,6 +293,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Ajouter un compte</translation>
+   <translation id="emailpro_ACTION_add_order_button">Commander des comptes</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Je reconnais qu'OVH procédera à l’exécution immédiate de la prestation à compter de la validation de ma commande et à ce titre je renonce expressément à exercer mon droit de rétractation conformément aux dispositions de l’article L.121-21-8 du code de la consommation.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Une erreur est survenue lors du chargement de vos domaines.</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Nom à afficher</translation>

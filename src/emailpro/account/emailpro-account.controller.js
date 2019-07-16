@@ -1,5 +1,5 @@
 import {
-  SIZE_UNIT, STATE_TASK_DOING, STATE_TASK_ERROR, ACCOUNT_TYPES, FILTER_TYPE,
+  SIZE_UNIT, STATE_TASK_DOING, STATE_TASK_ERROR, ACCOUNT_TYPES, FILTER_TYPE, ORDER,
 } from './emailpro-constants';
 
 angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtrl', ($scope, EmailPro, $q, $stateParams, $translate, WucConverterService) => {
@@ -56,6 +56,7 @@ angular.module('Module.emailpro.controllers').controller('EmailProTabAccountsCtr
         $scope.noDomainFlag = true;
       } else {
         $scope.noDomainFlag = false;
+        $scope.accountOrder = `${ORDER}${newAccountOptions.availableDomains[0].name}`;
       }
 
       $scope.accountsConfigured = _.filter(accounts, account => !/.*configureme\.me$/.test(account));
