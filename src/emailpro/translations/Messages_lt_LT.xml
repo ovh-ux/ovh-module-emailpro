@@ -293,6 +293,7 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Sukurti abonementą</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Užsakyti paskyras</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Sutinku, kad OVH pradės teikti paslaugą nedelsiant nuo mano užsakymo patvirtinimo momento, todėl negalėsiu pasinaudoti paslaugos atsisakymo teise.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Klaida įkeliant domenus.</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Rodomas vardas</translation>

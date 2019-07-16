@@ -296,15 +296,16 @@
 
 
    <translation id="emailpro_ACTION_add_account_button" qtlid="21487">Dodaj konto</translation>
+   <translation id="emailpro_ACTION_add_order_button" qtlid="139169">Zamówienie kont</translation>
    <translation id="emailpro_ACTION_add_account_legal_warning" qtlid="209099">Przyjmuję do wiadomości, że OVH przystąpi do świadczenia usługi natychmiast po zatwierdzeniu mojego zamówienia i w związku z tym świadomie rezygnuję z mojego prawa do odstąpienia od umowy zgodnie z postanowieniami artykułu 27 Ustawy o prawach konsumenta.</translation>
    <translation id="emailpro_ACTION_add_account_option_fail" qtlid="144045">Wystąpił błąd podczas wyświetlania domen.</translation>
    <translation id="emailpro_ACTION_add_account_step1_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
-   <translation id="emailpro_ACTION_add_account_step1_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_ACTION_add_account_step1_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_ACTION_add_account_step1_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_ACTION_add_account_step1_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_ACTION_add_account_step2_confirmation_intro" qtlid="136841">Twoje konto:</translation>
    <translation id="emailpro_ACTION_add_account_step2_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
-   <translation id="emailpro_ACTION_add_account_step2_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_ACTION_add_account_step2_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_ACTION_add_account_step2_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_ACTION_add_account_step2_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_ACTION_add_disclaimer_content" qtlid="152271">Treść</translation>
@@ -382,12 +383,12 @@
    <translation id="emailpro_ACTION_delegation_error_message" qtlid="144279">Wystąpił błąd podczas aktualizacji uprawnień delegacji.</translation>
    <translation id="emailpro_ACTION_delegation_partial_message" qtlid="156758">Wystąpił bład podczas zmiany uprawnień.</translation>
    <translation id="emailpro_ACTION_delegation_sendas_tooltip" qtlid="181539">Najpierw wyłącz uprawnienia do wysyłki.</translation>
-   <translation id="emailpro_ACTION_delegation_step1_email_header" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_ACTION_delegation_step1_email_header" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_ACTION_delegation_step1_full_header" qtlid="181500">Pełne prawa dostępu</translation>
    <translation id="emailpro_ACTION_delegation_step1_sendOnBehalfTo_header" qtlid="181487">Uprawnienia do wysyłki jako (Send as)</translation>
    <translation id="emailpro_ACTION_delegation_step1_send_header" qtlid="181474">Uprawnienia do wysyłki</translation>
    <translation id="emailpro_ACTION_delegation_step1_task_on_doing" qtlid="201458">Zadanie w trakcie</translation>
-   <translation id="emailpro_ACTION_delegation_step2_email_header" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_ACTION_delegation_step2_email_header" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_ACTION_delegation_step2_full_header" qtlid="144253">Uprawnienie dostępowe</translation>
    <translation id="emailpro_ACTION_delegation_step2_intro" qtlid="434564">Uprawnienia delegacji przypisane do konta <strong>{0}</strong>:</translation>
    <translation id="emailpro_ACTION_delegation_step2_right_true" qtlid="34776">Tak</translation>
@@ -450,7 +451,7 @@
    <translation id="emailpro_ACTION_update_account_step1_exchange_guid_label" qtlid="174633">Exchange GUID</translation>
    <translation id="emailpro_ACTION_update_account_step2_confirmation_intro" qtlid="136841">Twoje konto:</translation>
    <translation id="emailpro_ACTION_update_account_step2_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
-   <translation id="emailpro_ACTION_update_account_step2_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_ACTION_update_account_step2_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_ACTION_update_account_step2_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_ACTION_update_account_step2_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_ACTION_update_account_step2_password_label" qtlid="139650">Hasło</translation>
@@ -527,7 +528,7 @@
    <translation id="emailpro_tab_ACCOUNTS_state_TASK_ON_DOING" qtlid="485632">Zadanie zaplanowane lub w toku</translation>
    <translation id="emailpro_tab_ACCOUNTS_state_TASK_ON_ERROR" qtlid="485788">Błąd zadania</translation>
    <translation id="emailpro_tab_ACCOUNTS_table_alias" qtlid="9466">Alias</translation>
-   <translation id="emailpro_tab_ACCOUNTS_table_email" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_tab_ACCOUNTS_table_email" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_tab_ACCOUNTS_table_empty" qtlid="149800">Nie posiadasz kont</translation>
    <translation id="emailpro_tab_ACCOUNTS_table_empty_type_BASIC" qtlid="190810">Nie posiadasz konta typu Basic.</translation>
    <translation id="emailpro_tab_ACCOUNTS_table_empty_type_STANDARD" qtlid="190823">Nie posiadasz konta typu Standard.</translation>
@@ -584,7 +585,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_fail" qtlid="171461">Wystąpił błąd podczas zlecania dodania kontaktu zewnętrznego.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_invalid" qtlid="171370">Wprowadzony adres e-mail jest nieprawidłowy</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_organization2010_label" qtlid="32278">Organizacja</translation>
@@ -592,7 +593,7 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_content" qtlid="174659">Kontakty zewnętrzne muszą spełniać następujące wymagania:<br/><br/>- Imię i nazwisko mogą zawierać maksymalnie 64 znaki.<br/>- Nazwa do wyświetlenia może zawierać maksymalnie 255 znaków.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step1_wizardhelp_requirements_title" qtlid="171383">Warunki dla kontaktów zewnętrznych</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_add_step2_question" qtlid="171435">Czy chcesz dodać następujący zewnętrzny kontakt?</translation>
@@ -607,14 +608,14 @@
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_fail" qtlid="171526">Wystąpił błąd podczas zlecania zmiany kontaktu zewnętrznego.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_invalid" qtlid="171370">Wprowadzony adres e-mail jest nieprawidłowy</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_question" qtlid="171487">Zmienisz kontakt zewnętrzny</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_wizardhelp_requirements_content" qtlid="174659">Kontakty zewnętrzne muszą spełniać następujące wymagania:<br/><br/>- Imię i nazwisko mogą zawierać maksymalnie 64 znaki.<br/>- Nazwa do wyświetlenia może zawierać maksymalnie 255 znaków.</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step1_wizardhelp_requirements_title" qtlid="171383">Warunki dla kontaktów zewnętrznych</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_display_name_label" qtlid="23515">Nazwa do wyświetlenia</translation>
-   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_email_label" qtlid="137244">Konto e-mail</translation>
+   <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_email_label" qtlid="137244">Konta e-mail</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_first_name_label" qtlid="23323">Imię</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_last_name_label" qtlid="3818">Nazwa</translation>
    <translation id="emailpro_tab_EXTERNAL_CONTACTS_configuration_contact_modify_step2_question" qtlid="171500">Czy chcesz zmienić ten kontakt zewnętrzny?</translation>
