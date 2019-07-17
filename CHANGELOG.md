@@ -1,3 +1,14 @@
+## [7.2.9](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.8...v7.2.9) (2019-07-16)
+
+
+### Bug Fixes
+
+* **account:** redirect to order when all accounts are configured ([#225](https://github.com/ovh-ux/ovh-module-emailpro/issues/225)) ([0ae9756](https://github.com/ovh-ux/ovh-module-emailpro/commit/0ae9756))
+* **i18n:** retrieve translations ([a06d636](https://github.com/ovh-ux/ovh-module-emailpro/commit/a06d636))
+* **i18n:** submit translations ([488120f](https://github.com/ovh-ux/ovh-module-emailpro/commit/488120f))
+
+
+
 ## [7.2.8](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.7...v7.2.8) (2019-07-08)
 
 
@@ -132,8 +143,6 @@
 ### Bug Fixes
 
 * **i18n:** retrieve translations ([46d831c](https://github.com/ovh-ux/ovh-module-emailpro/commit/46d831c))
-* **i18n:** retrieve translations ([d2d7f4d](https://github.com/ovh-ux/ovh-module-emailpro/commit/d2d7f4d))
-* **i18n:** submit translations ([ebbd8b6](https://github.com/ovh-ux/ovh-module-emailpro/commit/ebbd8b6))
 
 
 
@@ -144,7 +153,9 @@
 
 * can access webmails again ([#163](https://github.com/ovh-ux/ovh-module-emailpro/issues/163)) ([d71f1f7](https://github.com/ovh-ux/ovh-module-emailpro/commit/d71f1f7))
 * **i18n:** retrieve translations ([f06ad90](https://github.com/ovh-ux/ovh-module-emailpro/commit/f06ad90))
+* **i18n:** retrieve translations ([d2d7f4d](https://github.com/ovh-ux/ovh-module-emailpro/commit/d2d7f4d))
 * **i18n:** submit translations ([acb256d](https://github.com/ovh-ux/ovh-module-emailpro/commit/acb256d))
+* **i18n:** submit translations ([ebbd8b6](https://github.com/ovh-ux/ovh-module-emailpro/commit/ebbd8b6))
 
 
 
@@ -216,7 +227,6 @@
 
 
 
-<a name="7.0.5"></a>
 ## [7.0.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.4...v7.0.5) (2018-10-16)
 
 
@@ -226,7 +236,6 @@
 
 
 
-<a name="7.0.4"></a>
 ## [7.0.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.3...v7.0.4) (2018-10-16)
 
 
@@ -236,7 +245,6 @@
 
 
 
-<a name="7.0.3"></a>
 ## [7.0.3](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.2...v7.0.3) (2018-10-16)
 
 
@@ -246,12 +254,10 @@
 
 
 
-<a name="7.0.2"></a>
 ## [7.0.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.1...v7.0.2) (2018-10-10)
 
 
 
-<a name="7.0.1"></a>
 ## [7.0.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.0.0...v7.0.1) (2018-10-09)
 
 
@@ -261,7 +267,6 @@
 
 
 
-<a name="7.0.0"></a>
 # [7.0.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v6.0.0...v7.0.0) (2018-10-03)
 
 
@@ -279,6 +284,144 @@
 ### Features
 
 * upgrade stack ([45b06d2](https://github.com/ovh-ux/ovh-module-emailpro/commit/45b06d2))
+
+
+
+# [6.0.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.2.5...v6.0.0) (2018-09-24)
+
+
+
+## [5.2.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.2.4...v5.2.5) (2018-09-11)
+
+
+### Bug Fixes
+
+* **account.order:** rewording ([a4175f3](https://github.com/ovh-ux/ovh-module-emailpro/commit/a4175f3))
+* **order:** price with tax addition ([#50](https://github.com/ovh-ux/ovh-module-emailpro/issues/50)) ([b9359b4](https://github.com/ovh-ux/ovh-module-emailpro/commit/b9359b4))
+
+
+
+## [5.2.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.2.3...v5.2.4) (2018-07-31)
+
+
+### Bug Fixes
+
+* **account:** improve progress label position ([44d1975](https://github.com/ovh-ux/ovh-module-emailpro/commit/44d1975))
+* **external-domain-nonauth:** add unatuoritative external domain name ([66be4b1](https://github.com/ovh-ux/ovh-module-emailpro/commit/66be4b1))
+
+
+
+## [5.2.3](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.2.2...v5.2.3) (2018-07-30)
+
+
+
+## [5.2.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.2.1...v5.2.2) (2018-07-30)
+
+
+### Bug Fixes
+
+* **emailpro.dashboard:** popover placement set right ([2d83fc3](https://github.com/ovh-ux/ovh-module-emailpro/commit/2d83fc3))
+
+
+
+## [5.2.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.2.0...v5.2.1) (2018-07-23)
+
+
+
+# [5.2.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.1.1...v5.2.0) (2018-07-18)
+
+
+### Bug Fixes
+
+* **disclaimer:** remove unnecessary strippedContent tooltip ([7a46d57](https://github.com/ovh-ux/ovh-module-emailpro/commit/7a46d57))
+
+
+
+## [5.1.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.1.0...v5.1.1) (2018-05-04)
+
+
+
+# [5.1.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v5.0.0...v5.1.0) (2018-02-22)
+
+
+### Bug Fixes
+
+* **emailpro:** disclaimer refresh ([d45e023](https://github.com/ovh-ux/ovh-module-emailpro/commit/d45e023))
+* **emailpro:** filter on disclaimer ([32e9709](https://github.com/ovh-ux/ovh-module-emailpro/commit/32e9709))
+
+
+### Features
+
+* **disclaimer:** add config buttton and remove add btn ([04caa89](https://github.com/ovh-ux/ovh-module-emailpro/commit/04caa89))
+* **emailpro:** alias datagrid ([22021b5](https://github.com/ovh-ux/ovh-module-emailpro/commit/22021b5))
+* **emailpro:** oui-datagrid disclaimer ([891ec5c](https://github.com/ovh-ux/ovh-module-emailpro/commit/891ec5c))
+* **emailpro:** oui-datagrid tasks ([103a198](https://github.com/ovh-ux/ovh-module-emailpro/commit/103a198))
+* **emailpro:** review ([1d37751](https://github.com/ovh-ux/ovh-module-emailpro/commit/1d37751))
+
+
+
+# [5.0.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v4.0.4...v5.0.0) (2018-01-29)
+
+
+
+## [4.0.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v4.0.3...v4.0.4) (2018-01-23)
+
+
+
+## [4.0.3](https://github.com/ovh-ux/ovh-module-emailpro/compare/v4.0.2...v4.0.3) (2017-12-07)
+
+
+
+## [4.0.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v4.0.1...v4.0.2) (2017-11-22)
+
+
+
+## [4.0.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v4.0.0...v4.0.1) (2017-11-13)
+
+
+
+# [4.0.0](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.8...v4.0.0) (2017-11-02)
+
+
+
+## [3.0.8](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.7...v3.0.8) (2017-10-09)
+
+
+
+## [3.0.7](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.6...v3.0.7) (2017-10-09)
+
+
+
+## [3.0.6](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.5...v3.0.6) (2017-10-05)
+
+
+
+## [3.0.5](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.4...v3.0.5) (2017-10-02)
+
+
+### Bug Fixes
+
+* **app:** Remove piwik ([1f12c7b](https://github.com/ovh-ux/ovh-module-emailpro/commit/1f12c7b))
+
+
+
+## [3.0.4](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.3...v3.0.4) (2017-09-14)
+
+
+
+## [3.0.3](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.2...v3.0.3) (2017-09-11)
+
+
+
+## [3.0.2](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.1...v3.0.2) (2017-09-11)
+
+
+
+## [3.0.1](https://github.com/ovh-ux/ovh-module-emailpro/compare/v3.0.0...v3.0.1) (2017-09-08)
+
+
+
+# 3.0.0 (2017-09-07)
 
 
 
