@@ -1,3 +1,12 @@
+## [7.2.10](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.9...v7.2.10) (2019-07-19)
+
+
+### Bug Fixes
+
+* **emailpro.account:** display modal to add account ([#232](https://github.com/ovh-ux/ovh-module-emailpro/issues/232)) ([f8670f2](https://github.com/ovh-ux/ovh-module-emailpro/commit/f8670f2))
+
+
+
 ## [7.2.9](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.8...v7.2.9) (2019-07-16)
 
 
