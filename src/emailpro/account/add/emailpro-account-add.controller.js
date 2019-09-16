@@ -10,6 +10,7 @@ angular.module('Module.emailpro.controllers')
       $scope.simplePasswordFlag = false;
       $scope.containsNameFlag = false;
       $scope.containsSameAccountNameFlag = false;
+      $scope.containsSpace = false;
 
       _.set(selectedAccount, 'password', selectedAccount.password || '');
       _.set(selectedAccount, 'passwordConfirmation', selectedAccount.passwordConfirmation || '');
@@ -25,6 +26,8 @@ angular.module('Module.emailpro.controllers')
             && selectedAccount.password !== selectedAccount.passwordConfirmation) {
           $scope.differentPasswordFlag = true;
         }
+
+        $scope.containsSpace = _.includes(selectedAccount.password, ' ');
 
         /*
           see the password complexity requirements of Microsoft Windows Server (like EmailPro)
@@ -122,7 +125,10 @@ angular.module('Module.emailpro.controllers')
       // $scope.setPasswordsFlag($scope.accountToAdd);
       if (!$scope.valid.legalWarning) {
         return false;
-      } if ($scope.simplePasswordFlag || $scope.differentPasswordFlag || $scope.containsNameFlag) {
+      } if ($scope.simplePasswordFlag
+        || $scope.differentPasswordFlag
+        || $scope.containsNameFlag
+        || $scope.containsSpace) {
         return false;
       } if (!$scope.accountToAdd.completeDomain
         || $scope.accountToAdd.completeDomain.name === undefined) {

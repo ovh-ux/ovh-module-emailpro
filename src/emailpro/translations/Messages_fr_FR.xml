@@ -91,6 +91,7 @@
    <translation id="emailpro-mxplan_ACTION_add_account_error_message" qtlid="518414">Une erreur est survenue lors de la création du compte E-mail MX Plan.</translation>
 
    <translation id="emailpro_ACTION_update_account_step1_password_contains_name" qtlid="375361">Le mot de passe ne peut pas contenir tout ou une partie du nom à afficher ou du login E-mail Pro.</translation>
+   <translation id="emailpro_ACTION_update_account_step1_password_contains_space">Le mot de passe ne peut pas contenir d'espaces.</translation>
    <translation id="emailpro-mxplan_ACTION_update_account_step1_password_contains_name" qtlid="518427">Le mot de passe ne peut pas contenir tout ou une partie du nom à afficher ou du login E-mail MX Plan.</translation>
    <translation id="emailpro-mxplan_ACTION_update_account_step1_password_contains_name" qtlid="518440">Le mot de passe ne peut pas contenir tout ou une partie du nom à afficher ou du login Mx Plan.</translation>
 

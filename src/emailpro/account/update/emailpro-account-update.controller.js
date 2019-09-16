@@ -44,7 +44,8 @@ angular.module('Module.emailpro.controllers').controller(
       const account = this.selectedAccount;
       if (this.simplePasswordFlag
         || this.differentPasswordFlag
-        || this.containsNameFlag) {
+        || this.containsNameFlag
+        || this.containsSpace) {
         return false;
       } if (account && /\s/.test(account.password)) {
         return false;
@@ -117,6 +118,7 @@ angular.module('Module.emailpro.controllers').controller(
       this.simplePasswordFlag = false;
       this.containsNameFlag = false;
       this.containsSameAccountNameFlag = false;
+      this.containsSpace = false;
 
       _.set(selectedAccount, 'password', selectedAccount.password || '');
       _.set(selectedAccount, 'passwordConfirmation', selectedAccount.passwordConfirmation || '');
@@ -131,6 +133,8 @@ angular.module('Module.emailpro.controllers').controller(
           true,
           this.newAccountOptions.minPasswordLength,
         );
+
+        this.containsSpace = _.includes(selectedAccount.password, ' ');
 
         /*
           see the password complexity requirements of Microsoft Windows Server (like EmailPro)
