@@ -859,7 +859,7 @@
    <translation id="emailpro_update_billing_periode_success" qtlid="191018">Die Änderung des Zeitraums der automatischen Verlängerung wurde erfolgreich durchgeführt.</translation>
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">jährlich</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">monatlich</translation>
-   <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Läuft ab zum Ablaufdatum</translation>
+   <translation id="emailpro_update_billing_periode_value_DELETE_AT_EXPIRATION" qtlid="201406">Läuft zum Ablaufdatum ab</translation>
    <translation id="lockoutThreshold_unit_value_0" qtlid="176713">Der Account wird niemals gesperrt</translation>
    <translation id="lockoutThreshold_unit_value_1" qtlid="178432">1 Versuch</translation>
    <translation id="lockoutThreshold_unit_value_many" qtlid="178445">{0} Versuche</translation>
