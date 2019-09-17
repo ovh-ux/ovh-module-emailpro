@@ -10,7 +10,7 @@ angular
         const search = searchParam || undefined;
 
         return EmailPro.gettingIsServiceMXPlan()
-          .then(isMXPlan => OvhHttp.get('/sws/emailpro/{exchange}/domains', {
+          .then((isMXPlan) => OvhHttp.get('/sws/emailpro/{exchange}/domains', {
             rootPath: '2api',
             urlParams: {
               exchange: serviceName,
@@ -47,7 +47,7 @@ angular
           }
 
           return EmailPro.gettingBaseAPIPath()
-            .then(baseAPIPath => OvhHttp.post(`/${baseAPIPath}/{exchangeService}/domain`, {
+            .then((baseAPIPath) => OvhHttp.post(`/${baseAPIPath}/{exchangeService}/domain`, {
               rootPath: 'apiv6',
               urlParams: {
                 exchangeService: exchange.domain,
@@ -60,14 +60,14 @@ angular
               EmailPro.resetTasks();
               return response;
             })
-            .catch(err => EmailPro.getSuccessDataOrReject(err));
+            .catch((err) => EmailPro.getSuccessDataOrReject(err));
         });
       };
 
       this.getAddDomainData = function getAddDomainData(serviceName) {
         return EmailPro
           .gettingIsServiceMXPlan()
-          .then(isMXPlan => OvhHttp.get('/sws/emailpro/{exchange}/domains/options', {
+          .then((isMXPlan) => OvhHttp.get('/sws/emailpro/{exchange}/domains/options', {
             rootPath: '2api',
             urlParams: {
               exchange: serviceName,
@@ -80,7 +80,7 @@ angular
 
       this.updateDomain = function updateDomain(organization, productId, domain) {
         return EmailPro.gettingBaseAPIPath()
-          .then(baseAPIPath => OvhHttp.put(`/${baseAPIPath}/{exchange}/domain/{domainName}`, {
+          .then((baseAPIPath) => OvhHttp.put(`/${baseAPIPath}/{exchange}/domain/{domainName}`, {
             rootPath: 'apiv6',
             urlParams: {
               organization,
@@ -101,7 +101,7 @@ angular
 
       this.removeDomain = function removeDomain(serviceName, name) {
         return EmailPro.gettingBaseAPIPath()
-          .then(baseAPIPath => OvhHttp.delete(`/${baseAPIPath}/{exchange}/domain/{domainName}`, {
+          .then((baseAPIPath) => OvhHttp.delete(`/${baseAPIPath}/{exchange}/domain/{domainName}`, {
             rootPath: 'apiv6',
             urlParams: {
               exchange: serviceName,
@@ -139,7 +139,7 @@ angular
       this.getDnsSettings = function getDnsSettings(serviceName, domain) {
         return EmailPro
           .gettingIsServiceMXPlan()
-          .then(isMXPlan => OvhHttp.get('/sws/emailpro/{exchange}/domains/{domain}/dnsSettings', {
+          .then((isMXPlan) => OvhHttp.get('/sws/emailpro/{exchange}/domains/{domain}/dnsSettings', {
             rootPath: '2api',
             urlParams: {
               exchange: serviceName,

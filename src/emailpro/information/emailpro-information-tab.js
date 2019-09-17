@@ -54,7 +54,7 @@ angular.module('Module.emailpro.controllers').controller(
       this.EmailPro.getAccountIds({
         exchangeService: this.$scope.exchange.domain,
       }).then((accounts) => {
-        const accountsConfigured = _.filter(accounts, account => !/.*configureme\.me$/.test(account));
+        const accountsConfigured = _.filter(accounts, (account) => !/.*configureme\.me$/.test(account));
         this.$scope.accountsConfigured = accountsConfigured;
       }).catch((err) => {
         _.set(err, 'type', err.type || 'ERROR');
@@ -96,9 +96,9 @@ angular.module('Module.emailpro.controllers').controller(
       this.loading.redirections = true;
       return this.WucEmails.getRedirections(_.get(this.$scope, 'exchange.associatedDomainName'))
         .then((data) => {
-          this.$scope.redirections = data.map(id => ({ id }));
+          this.$scope.redirections = data.map((id) => ({ id }));
         })
-        .catch(err => this.Alerter.alertFromSWS(
+        .catch((err) => this.Alerter.alertFromSWS(
           this.$translate.instant('mailing_list_tab_modal_get_lists_error'),
           _.set(err, 'type', err.type || 'ERROR'),
           this.$scope.alerts.main,
@@ -114,7 +114,7 @@ angular.module('Module.emailpro.controllers').controller(
         .then((data) => {
           this.$scope.emailDomain = data;
         })
-        .catch(err => this.Alerter.alertFromSWS(
+        .catch((err) => this.Alerter.alertFromSWS(
           this.$translate.instant('mailing_list_tab_modal_get_lists_error'),
           _.set(err, 'type', err.type || 'ERROR'),
           this.$scope.alerts.main,

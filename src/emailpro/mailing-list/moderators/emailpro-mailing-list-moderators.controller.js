@@ -94,7 +94,7 @@ angular.module('App').controller(
           case 1:
             this.moderators.selected = _.filter(
               _.map(this.moderators.details, 'email'),
-              result => !_.some(this.moderators.selected, result.email),
+              (result) => !_.some(this.moderators.selected, result.email),
             );
             break;
           case 2:
@@ -134,7 +134,7 @@ angular.module('App').controller(
         .then((data) => {
           this.moderators.ids = this.$filter('orderBy')(data);
         })
-        .catch(err => this.Alerter.alertFromSWS(
+        .catch((err) => this.Alerter.alertFromSWS(
           this.$translate.instant('mailing_list_tab_modal_get_lists_error'),
           err,
           this.$scope.alerts.main,

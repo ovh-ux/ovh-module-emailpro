@@ -65,7 +65,7 @@ angular.module('App').controller(
           this.redirections,
           ({ id }) => this.WucEmails.getRedirection(_.get(this.$scope, 'exchange.associatedDomainName'), id),
         ))
-        .then(data => dataToExport.concat(_.map(data, d => [d.from, d.to])))
+        .then((data) => dataToExport.concat(_.map(data, (d) => [d.from, d.to])))
         .finally(() => {
           this.loading.exportCSV = false;
         });
@@ -77,9 +77,9 @@ angular.module('App').controller(
 
       return this.WucEmails.getRedirections(_.get(this.$scope, 'exchange.associatedDomainName'))
         .then((data) => {
-          this.redirections = data.map(id => ({ id }));
+          this.redirections = data.map((id) => ({ id }));
         })
-        .catch(err => this.Alerter.alertFromSWS(
+        .catch((err) => this.Alerter.alertFromSWS(
           this.$translate.instant('email_tab_table_redirections_error'),
           err,
           this.$scope.alerts.main,
