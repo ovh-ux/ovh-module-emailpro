@@ -856,7 +856,7 @@ Se usar o modo nonauthoritative com contas de e-mail não alojadas pela OVH, dev
    <translation id="emailpro_update_billing_periode_intro" qtlid="190966">Escolha a periodicidade desejada para a renovação automática de cada conta. <br />Esta será aplicada a partir da próxima renovação.</translation>
    <translation id="emailpro_update_billing_periode_label" qtlid="168172">Renovação</translation>
    <translation id="emailpro_update_billing_periode_partial" qtlid="191031">Uma parte das alterações do período de renovação estão em erro.</translation>
-   <translation id="emailpro_update_billing_periode_resume" qtlid="191005">Queira alterar o período de renovação das suas contas:</translation>
+   <translation id="emailpro_update_billing_periode_resume" qtlid="191005">Altere o período de renovação das suas contas:</translation>
    <translation id="emailpro_update_billing_periode_success" qtlid="191018">A alteração do período de renovação automática foi efetuada.</translation>
    <translation id="emailpro_update_billing_periode_value_YEARLY" qtlid="79542">anual</translation>
    <translation id="emailpro_update_billing_periode_value_MONTHLY" qtlid="79530">mensal</translation>
