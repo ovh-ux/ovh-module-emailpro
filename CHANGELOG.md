@@ -1,3 +1,12 @@
+## [7.2.13](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.12...v7.2.13) (2019-09-20)
+
+
+### Bug Fixes
+
+* **account:** fix task constants typo ([#247](https://github.com/ovh-ux/ovh-module-emailpro/issues/247)) ([e3cdebe](https://github.com/ovh-ux/ovh-module-emailpro/commit/e3cdebe))
+
+
+
 ## [7.2.12](https://github.com/ovh-ux/ovh-module-emailpro/compare/v7.2.11...v7.2.12) (2019-09-17)
 
 
