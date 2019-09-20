@@ -54,6 +54,6 @@ angular
           } else {
             this.services.$scope.setMessage(this.services.$translate.instant('emailpro_tab_domain_diagnostic_add_field_failure'), { status: 'error' });
           }
-        }, failure => this.services.$scope.setMessage(this.services.$translate.instant('emailpro_tab_domain_diagnostic_add_field_failure'), failure));
+        }, (failure) => this.services.$scope.setMessage(this.services.$translate.instant('emailpro_tab_domain_diagnostic_add_field_failure'), failure));
     }
   });

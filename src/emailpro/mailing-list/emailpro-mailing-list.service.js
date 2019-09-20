@@ -154,7 +154,7 @@ angular.module('services').service(
 
           if (_.size(users) > 0) {
             return this.addSubscribers(serviceName, _.assign(opts, { users }))
-              .then(d => [data].concat(d));
+              .then((d) => [data].concat(d));
           }
 
           return [data];
@@ -175,7 +175,7 @@ angular.module('services').service(
 
           if (_.size(users) > 0) {
             return this.deleteSubscribers(serviceName, _.assign(opts, { users }))
-              .then(d => [data].concat(d));
+              .then((d) => [data].concat(d));
           }
 
           return [data];
@@ -206,19 +206,19 @@ angular.module('services').service(
 
     addModerators(serviceName, opts) {
       return this.$q
-        .all(_.chunk(opts.users, 500).map(moderators => this.OvhHttp.post(`/email/domain/${serviceName}/mailinglist/${opts.mailingList}/users/add`, {
+        .all(_.chunk(opts.users, 500).map((moderators) => this.OvhHttp.post(`/email/domain/${serviceName}/mailinglist/${opts.mailingList}/users/add`, {
           rootPath: '2api',
           data: {
             users: moderators,
             type: opts.type,
           },
         })))
-        .then(data => data.pop());
+        .then((data) => data.pop());
     }
 
     deleteModerators(serviceName, opts) {
       return this.$q
-        .all(_.chunk(opts.users, 500).map(moderators => this.OvhHttp
+        .all(_.chunk(opts.users, 500).map((moderators) => this.OvhHttp
           .delete(`/email/domain/${serviceName}/mailinglist/${opts.mailingList}/users/delete`, {
             rootPath: '2api',
             headers: { 'Content-Type': 'application/json;charset=utf-8' },
@@ -227,8 +227,8 @@ angular.module('services').service(
               type: opts.type,
             },
           })
-          .then(resp => resp)))
-        .then(data => data.pop());
+          .then((resp) => resp)))
+        .then((data) => data.pop());
     }
 
     getTaskIds(serviceName, opts) {
@@ -261,13 +261,13 @@ angular.module('services').service(
         .poll(`apiv6/email/domain/${serviceName}/task/mailinglist/${opts.id}`, null, {
           interval: 7000,
           successRule: {
-            state: task => opts.successStates.indexOf(task.state) !== -1,
+            state: (task) => opts.successStates.indexOf(task.state) !== -1,
           },
           namespace: opts.namespace,
         })
         .then((pollObject, task) => this.$rootScope.$broadcast(`${opts.namespace}.done`, pollObject, task))
-        .catch(err => this.$rootScope.$broadcast(`${opts.namespace}.error`, err))
-        .finally(null, task => this.$rootScope.$broadcast(`${opts.namespace}.start`, task));
+        .catch((err) => this.$rootScope.$broadcast(`${opts.namespace}.error`, err))
+        .finally(null, (task) => this.$rootScope.$broadcast(`${opts.namespace}.start`, task));
     }
 
     killAllPolling(opts) {

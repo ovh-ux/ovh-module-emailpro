@@ -16,8 +16,8 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateRenewCtr
     if ($scope.buffer.selectedMonthly.indexOf(account.primaryEmailAddress) === -1) {
       $scope.buffer.selectedMonthly.push(account.primaryEmailAddress);
     }
-    _.remove($scope.buffer.selectedYearly, num => num === account.primaryEmailAddress);
-    _.remove($scope.buffer.selectedDelete, num => num === account.primaryEmailAddress);
+    _.remove($scope.buffer.selectedYearly, (num) => num === account.primaryEmailAddress);
+    _.remove($scope.buffer.selectedDelete, (num) => num === account.primaryEmailAddress);
   };
 
   const setYearly = function (account) {
@@ -25,8 +25,8 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateRenewCtr
     if ($scope.buffer.selectedYearly.indexOf(account.primaryEmailAddress) === -1) {
       $scope.buffer.selectedYearly.push(account.primaryEmailAddress);
     }
-    _.remove($scope.buffer.selectedMonthly, num => num === account.primaryEmailAddress);
-    _.remove($scope.buffer.selectedDelete, num => num === account.primaryEmailAddress);
+    _.remove($scope.buffer.selectedMonthly, (num) => num === account.primaryEmailAddress);
+    _.remove($scope.buffer.selectedDelete, (num) => num === account.primaryEmailAddress);
   };
 
   const setDeleteAtExpiration = function (account) {
@@ -34,8 +34,8 @@ angular.module('Module.emailpro.controllers').controller('EmailProUpdateRenewCtr
     if ($scope.buffer.selectedDelete.indexOf(account.primaryEmailAddress) === -1) {
       $scope.buffer.selectedDelete.push(account.primaryEmailAddress);
     }
-    _.remove($scope.buffer.selectedMonthly, num => num === account.primaryEmailAddress);
-    _.remove($scope.buffer.selectedYearly, num => num === account.primaryEmailAddress);
+    _.remove($scope.buffer.selectedMonthly, (num) => num === account.primaryEmailAddress);
+    _.remove($scope.buffer.selectedYearly, (num) => num === account.primaryEmailAddress);
   };
 
   const bufferChanges = function (account) {
